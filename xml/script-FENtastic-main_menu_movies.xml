@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="MoviesMainMenu">
+        <item>
+            <label>$LOCALIZE[342]</label>
+            <onclick>ActivateWindow(Videos,plugin://plugin.video.fen/?action=trakt_collection&amp;iconImage=trakt&amp;mode=build_movie_list&amp;name=All+movies,return)</onclick>
+            <property name="menu_id">$NUMBER[19000]</property>
+            <thumb>icons/sidemenu/movies.png</thumb>
+            <property name="id">movies</property>
+            <visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
+        </item>
+    </include>
+</includes>

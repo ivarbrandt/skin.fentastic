@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="TVShowsMainMenu">
+        <item>
+            <label>Shows</label>
+            <onclick>ActivateWindow(Videos,plugin://plugin.video.fen/?action=trakt_collection&amp;iconImage=trakt&amp;mode=build_tvshow_list&amp;name=All+shows,return)</onclick>
+            <property name="menu_id">$NUMBER[22000]</property>
+            <thumb>icons/sidemenu/tv.png</thumb>
+            <property name="id">tvshows</property>
+            <visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+        </item>
+    </include>
+</includes>
