@@ -368,6 +368,14 @@
 		<value condition="!String.IsEmpty(Skin.String(OSDAutoCloseTime))">$INFO[Skin.String(OSDAutoCloseTime)]</value>
 		<value condition="String.IsEmpty(Skin.String(OSDAutoCloseTime))">4</value> <!-- Default value -->
 	</variable>
+	<variable name="SkinSettingWidgetLimitMain">
+		<value condition="!String.IsEmpty(Skin.String(WidgetLimitMain))">$INFO[Skin.String(WidgetLimitMain)]</value>
+		<value condition="String.IsEmpty(Skin.String(WidgetLimitMain))">20</value> <!-- Default value -->
+	</variable>
+	<variable name="SkinSettingWidgetLimitEpisodes">
+		<value condition="!String.IsEmpty(Skin.String(WidgetLimitEpisodes))">$INFO[Skin.String(WidgetLimitEpisodes)]</value>
+		<value condition="String.IsEmpty(Skin.String(WidgetLimitEpisodes))">10</value> <!-- Default value -->
+	</variable>
 	<variable name="VolumeIconVar">
 		<value condition="Player.Muted">dialogs/volume/mute.png</value>
 		<value condition="Integer.IsGreater(Player.Volume,66)">dialogs/volume/volume.png</value>
