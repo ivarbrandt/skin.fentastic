@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.FENtastic" version="1.0.0" name="FENtastic"
+<addon id="skin.FENtastic" version="1.0.1" name="FENtastic"
 	provider-name="phil65, Ichabod Fletchman, Ivar Brandt">
 	<requires>
 		<import addon="xbmc.gui" version="5.16.0" />
@@ -30,7 +30,6 @@
 			<screenshot>resources/screenshot-05.jpg</screenshot>
 			<screenshot>resources/screenshot-06.jpg</screenshot>
 			<screenshot>resources/screenshot-07.jpg</screenshot>
-			<screenshot>resources/screenshot-08.jpg</screenshot>
 		</assets>
 		<summary lang="af_ZA">Estuary oortreksel deur phil65. (Kodi se bestek oortreksel)</summary>
 		<summary lang="ar_SA">مظهر Estuary بواسطة phil65. ( مظهر كودي الافتراضي )</summary>
@@ -108,9 +107,9 @@
 		<description lang="el_GR">Το Estuary είναι η προεπιλεγμένη αμφίεση για τις εκδόσεις Kodi 17.0
 			και άνω. Επιχειρεί να είναι προσιτό στους αρχάριους χρήστες του Kodi για να το κατανοήσουν και
 			να το χρησιμοποιήσουν.</description>
-		<description lang="en_GB">FENtastic is a modified version of the default Estuary skin for Kodi Nexus. It is intended for use only with FEN.</description>
-		<description lang="en_NZ">FENtastic is a modified version of the default Estuary skin for Kodi Nexus. It is intended for use only with FEN.</description>
-		<description lang="en_US">FENtastic is a modified version of the default Estuary skin for Kodi Nexus. It is intended for use only with FEN.</description>
+		<description lang="en_GB">FENtastic is a modified version of the default Estuary skin for Kodi Nexus. It is intended for use only with FEN.[CR][CR]See [B]changelog[/B] for latest changes.</description>
+		<description lang="en_NZ">FENtastic is a modified version of the default Estuary skin for Kodi Nexus. It is intended for use only with FEN.[CR][CR]See [B]changelog[/B] for latest changes.</description>
+		<description lang="en_US">FENtastic is a modified version of the default Estuary skin for Kodi Nexus. It is intended for use only with FEN.[CR][CR]See [B]changelog[/B] for latest changes.</description>
 		<description lang="es_AR">Estuary es el skin por defecto para Kodi 17.0 y posteriores. Intenta
 			ser fácil de entender y utilizar para los usuarios Kodi primerizos.</description>
 		<description lang="es_ES">Estuary es el skin por defecto para Kodi 17.0 o superior. Su objetivo

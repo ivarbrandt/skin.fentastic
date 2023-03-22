@@ -31,56 +31,62 @@
 				<pagecontrol>60</pagecontrol>
 				<ondown>610</ondown>
 				<visible>Container(9000).HasFocus(1)</visible>
-				<!-- MOVIES -->
 				<control type="button" id="624">
 					<label>Remake menus and widgets</label>
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.FENtastic.helper,mode=remake_all_cpaths)</onclick>
 				</control>
-				<control type="button" id="6240">
+				<control type="radiobutton" id="6240">
+					<label>Startup video (Lower volume recommended)</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(Enable.StartupVideo)</onclick>
+					<selected>Skin.HasSetting(Enable.StartupVideo)</selected>
+				</control>
+				<!-- MOVIES -->
+				<control type="button" id="6241">
 					<label>Widget limit (movies/shows)</label>
 					<label2>$VAR[SkinSettingWidgetLimitMain]</label2>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.SetNumeric(WidgetLimitMain)</onclick>
 				</control>
-				<control type="button" id="6241">
+				<control type="button" id="6242">
 					<label>Widget limit (episodes)</label>
 					<label2>$VAR[SkinSettingWidgetLimitEpisodes]</label2>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.SetNumeric(WidgetLimitEpisodes)</onclick>
 				</control>
-				<control type="radiobutton" id="6242">
+				<control type="radiobutton" id="6243">
 					<label>$LOCALIZE[342]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(HomeMenuNoMoviesButton)</selected>
 					<onclick>Skin.ToggleSetting(HomeMenuNoMoviesButton)</onclick>
 				</control>
-				<control type="button" id="6243">
+				<control type="button" id="6244">
 					<label>   - Set main menu path</label>
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.FENtastic.helper,mode=manage_main_menu_path&amp;cpath_setting=movie.main_menu)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</control>
-				<control type="button" id="6244">
+				<control type="button" id="6245">
 					<label>   - Set widgets</label>
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.FENtastic.helper,mode=manage_widgets&amp;cpath_setting=movie.widget)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</control>
-				<control type="radiobutton" id="6245">
+				<control type="radiobutton" id="6246">
 					<label>   - $LOCALIZE[31008]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(HomeMenuNoMoviesCategories)</selected>
 					<onclick>Skin.ToggleSetting(HomeMenuNoMoviesCategories)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</control>
-				<control type="button" id="6246">
+				<control type="button" id="6247">
 					<label>       - Set category widget (top)</label>
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.FENtastic.helper,mode=manage_category_top_widget&amp;cpath_setting=movie.category_top_widget)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + !Skin.HasSetting(HomeMenuNoMoviesCategories)</visible>
 				</control>
-				<control type="button" id="6247">
+				<control type="button" id="6248">
 					<label>       - Set category widget (bottom)</label>
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.FENtastic.helper,mode=manage_category_bottom_widget&amp;cpath_setting=movie.category_bottom_widget)</onclick>

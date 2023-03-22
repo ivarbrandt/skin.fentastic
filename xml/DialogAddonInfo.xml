@@ -256,6 +256,8 @@
 						<height>140</height>
 						<align>center</align>
 						<aligny>top</aligny>
+						<texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+						<texturenofocus border="21" colordiffuse="button_focus">buttons/button-nofo.png</texturenofocus>
 						<textoffsetx>35</textoffsetx>
 						<textoffsety>76</textoffsety>
 						<radioposx>81</radioposx>
