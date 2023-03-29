@@ -371,6 +371,10 @@
 				<label>
 [B]CHANGELOG: FENtastic[/B]
 
+[B][COLOR button_focus]Version 1.0.3[/COLOR][/B]
+- Added new InfoPanel for home screen movie, show, and episode widgets
+- Moved startup video and widget limit settings to Skin options tab in Skin settings
+
 [B][COLOR button_focus]Version 1.0.2[/COLOR][/B]
 - Added changelog to Skin settings menu
 

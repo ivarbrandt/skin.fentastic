@@ -752,10 +752,9 @@
 					<param name="width" value="522" />
 				</include>
 				<control type="group">
-					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">Visible</animation>
-					<animation effect="slide" time="300" start="0,0" end="-492,0" tween="sine" easing="inout">Hidden</animation>
+					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 					<!-- <visible allowhiddenfocus="true">[!ControlGroup(19000).HasFocus + !ControlGroup(22000).HasFocus]</visible> -->
-					<visible allowhiddenfocus="true">[!String.IsEqual(ListItem.DBtype,movie) + !String.IsEqual(ListItem.DBtype,tvshow) + !String.IsEqual(ListItem.DBtype,season) + !String.IsEqual(ListItem.DBtype,episode)]</visible>
+					<visible allowhiddenfocus="true">![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)]</visible>
 					<control type="fixedlist" id="9000">
 						<left>0</left>
 						<top>240</top>
@@ -973,8 +972,7 @@
 
 
 				<control type="group">
-					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">Visible</animation>
-					<animation effect="slide" time="300" start="0,0" end="-492,0" tween="sine" easing="inout">Hidden</animation>
+					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 					<width>550</width>
 					<visible>String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)</visible>
 					<!-- <visible allowhiddenfocus="true">!Control.HasFocus(19009) + !Control.HasFocus(22009)</visible> -->
@@ -982,16 +980,13 @@
 					<control type="image">
 						<left>30</left>
 						<top>50</top>
-						<!-- 515 -->
 						<width>395</width>
-						<!-- 200 -->
-						<!-- 165 -->
 						<height>153</height>
-						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+						<texture background="true">$VAR[ClearlogoVar]</texture>
 						<aspectratio align="center">keep</aspectratio>
 					</control>
 					<control type="textbox">
-						<top>60</top>
+						<top>75</top>
 						<left>30</left>
 						<width>430</width>
 						<aligny>center</aligny>
@@ -1000,59 +995,22 @@
 						<label>$INFO[ListItem.Label]</label>
 						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
-					<!-- <control type="textbox">
-						<left>30</left>
-						<top>320</top>
-						<width>525</width>
-						<bottom>100</bottom>
-						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
-						<label>$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control> -->
 					<control type="textbox">
 						<left>30</left>
 						<top>239</top>
 						<width>410</width>
 						<bottom>60</bottom>
-						<visible>String.IsEqual(ListItem.DBtype,movie)</visible>
-						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
-						<label>[COLOR button_focus]Genre: [/COLOR]$INFO[ListItem.Genre][CR][COLOR button_focus]Director: [/COLOR]$INFO[ListItem.Director][CR]$INFO[ListItem.EndTime,[COLOR button_focus]$LOCALIZE[31080]:[/COLOR] ][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
+						<label>$VAR[InfoPanelPlot]</label>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
-	
-					<control type="textbox">
-						<left>30</left>
-						<top>239</top>
-						<width>410</width>
-						<bottom>60</bottom>
-						<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
-						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
-						<label>[COLOR button_focus]Genre: [/COLOR]$INFO[ListItem.Genre][CR][COLOR button_focus]Status: [/COLOR]$INFO[ListItem.Status][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control>
-	
-					<control type="textbox">
-						<left>30</left>
-						<top>239</top>
-						<width>410</width>
-						<bottom>60</bottom>
-						<visible>String.IsEqual(ListItem.DBtype,season)</visible>
-						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
-						<label>[COLOR button_focus]Genre: [/COLOR]$INFO[ListItem.Genre][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control>
-	
 					<control type="textbox">
 						<left>30</left>
 						<top>323</top>
 						<width>410</width>
 						<bottom>60</bottom>
-						<visible>String.IsEqual(ListItem.DBtype,episode)</visible>
-						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
-						<label>$INFO[ListItem.Plot][CR][CR]</label>
+						<label>$VAR[InfoPanelPlotEpisode]</label>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
-	
 					<control type="textbox">
 						<left>30</left>
 						<top>213</top>
@@ -1064,9 +1022,6 @@
 						<label>Season $INFO[ListItem.Season], Episode $INFO[ListItem.Episode]</label>
 						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 					</control>
-	
-	
-	
 					<control type="textbox">
 						<left>30</left>
 						<top>467</top>
@@ -1127,9 +1082,8 @@
 			</control>
 			
 			<control type="group">
-        <animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">Visible</animation>
-        <animation effect="slide" time="300" start="0,0" end="-492,0" tween="sine" easing="inout">Hidden</animation>
-        <visible>[!String.IsEqual(ListItem.DBtype,movie) + !String.IsEqual(ListItem.DBtype,tvshow) + !String.IsEqual(ListItem.DBtype,season) + !String.IsEqual(ListItem.DBtype,episode)]</visible>
+        <animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
+        <visible>![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)]</visible>
 				<depth>DepthBars</depth>
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
