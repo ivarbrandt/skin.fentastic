@@ -183,8 +183,6 @@
 					<selected>!Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
 					<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
 				</control>
-				
-				
 			</control>
 
 			<control type="grouplist" id="637">
@@ -216,7 +214,6 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.SetNumeric(WidgetLimitEpisodes)</onclick>
 				</control>
-
 			</control>
 
 			<control type="grouplist" id="700">
@@ -229,11 +226,6 @@
 				<onup>700</onup>
 				<ondown>700</ondown>
 				<visible>Container(9000).HasFocus(3)</visible>
-				<!-- <control type="button" id="708">
-					<label>Remake menus and widgets</label>
-					<include>DefaultSettingButton</include>
-					<onclick>RunScript(script.FENtastic.helper,mode=remake_all_cpaths)</onclick>
-				</control> -->
 				<control type="radiobutton" id="702">
 					<label>$LOCALIZE[31095]</label>
 					<include>DefaultSettingButton</include>
@@ -387,8 +379,11 @@
 [B]CHANGELOG: FENtastic[/B]
 
 [B][COLOR button_focus]Version 1.0.3[/COLOR][/B]
-- Added new InfoPanel for home screen movie, show, and episode widgets
+- Added new InfoPanel for movie, show, and episode widgets
 - Moved startup video and widget limit settings to new Options tab in Skin settings
+- Small adjustments to most views
+- Cleaned up collections info panel
+- Small fixes/changes
 
 [B][COLOR button_focus]Version 1.0.2[/COLOR][/B]
 - Added changelog to Skin settings menu
