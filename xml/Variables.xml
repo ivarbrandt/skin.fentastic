@@ -693,11 +693,17 @@
 	</variable>
 
 	<variable name="InfoPanelPlot">
-		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)] + String.IsEqual(ListItem.DBtype,movie)">[COLOR button_focus]Genre: [/COLOR]$INFO[ListItem.Genre][CR][COLOR button_focus]Director: [/COLOR]$INFO[ListItem.Director][CR]$INFO[ListItem.EndTime,[COLOR button_focus]$LOCALIZE[31080]:[/COLOR] ][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>
+		<!-- COLLECTIONS -->
+		<value condition="String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>
+		<!-- MOVIES -->
+		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot) + String.IsEmpty(ListItem.Genre)] + String.IsEqual(ListItem.DBtype,movie)">[COLOR button_focus]Genre: [/COLOR]$INFO[ListItem.Genre][CR][COLOR button_focus]Director: [/COLOR]$INFO[ListItem.Director][CR]$INFO[ListItem.EndTime,[COLOR button_focus]$LOCALIZE[31080]:[/COLOR] ][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>
+		<!-- SHOWS -->
 		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)] + String.IsEqual(ListItem.DBtype,tvshow)">[COLOR button_focus]Genre: [/COLOR]$INFO[ListItem.Genre][CR][COLOR button_focus]Status: [/COLOR]$INFO[ListItem.Status][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>
+		<!-- SEASONS -->
 		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)] + String.IsEqual(ListItem.DBtype,season)">[COLOR button_focus]Genre: [/COLOR]$INFO[ListItem.Genre][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>
 	</variable>
 
+	<!-- EPISODES -->
 	<variable name="InfoPanelPlotEpisode">
 		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)] + String.IsEqual(ListItem.DBtype,episode)">$INFO[ListItem.Plot][CR][CR]</value>
 	</variable>
