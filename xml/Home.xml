@@ -975,7 +975,6 @@
 					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 					<width>550</width>
 					<visible>String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)</visible>
-					<!-- <visible allowhiddenfocus="true">!Control.HasFocus(19009) + !Control.HasFocus(22009)</visible> -->
 					<include>OpenClose_Left</include>
 					<control type="image">
 						<left>30</left>

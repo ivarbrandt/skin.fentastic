@@ -356,24 +356,7 @@
 						<top>460</top>
 						<width>540</width>
 						<bottom>80</bottom>
-						<visible>String.IsEqual(ListItem.DBtype,movie)</visible>
-						<label>[COLOR button_focus]Genre: [/COLOR]$INFO[ListItem.Genre][CR][COLOR button_focus]Director: [/COLOR]$INFO[ListItem.Director][CR]$INFO[ListItem.EndTime,[COLOR button_focus]$LOCALIZE[31080]:[/COLOR] ][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
-						<autoscroll time="3000" delay="10000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-					</control>
-					<control type="textbox">
-						<top>460</top>
-						<width>540</width>
-						<bottom>80</bottom>
-						<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
-						<label>[COLOR button_focus]Genre: [/COLOR]$INFO[ListItem.Genre][CR][COLOR button_focus]Status: [/COLOR]$INFO[ListItem.Status][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
-						<autoscroll time="3000" delay="10000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-					</control>
-					<control type="textbox">
-						<top>460</top>
-						<width>540</width>
-						<bottom>80</bottom>
-						<visible>String.IsEqual(ListItem.DBtype,season)</visible>
-						<label>[COLOR button_focus]Genre: [/COLOR]$INFO[ListItem.Genre][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
+						<label>$VAR[InfoPanelPlot]</label>
 						<autoscroll time="3000" delay="10000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 					<control type="textbox" id="15500">
@@ -384,15 +367,13 @@
 						<label>$VAR[ListBoxInfoVar]</label>
 						<visible>!String.IsEqual(ListItem.DbType,movie) + !String.IsEqual(ListItem.DbType,tvshow) + !String.IsEqual(ListItem.DbType,season) + !String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song)</visible>
 					</control>
-					
 					<!-- Plot control episodes -->
 					<control type="textbox" id="15501">
 						<top>550</top>
 						<width>540</width>
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>$INFO[ListItem.Plot]</label>
-						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+						<label>$VAR[InfoPanelPlotEpisode]</label>
 					</control>
 					<control type="textbox">
 						<top>445</top>

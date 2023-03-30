@@ -41,7 +41,7 @@
 						<top>120</top>
 						<width>515</width>
 						<height>200</height>
-						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+						<texture background="true">$VAR[ClearlogoVar]</texture>
 						<aspectratio align="center">keep</aspectratio>
 					</control>
 					<control type="textbox">
@@ -54,59 +54,22 @@
 						<label>$INFO[ListItem.Label]</label>
 						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
-					<!-- <control type="textbox">
-						<left>30</left>
-						<top>320</top>
-						<width>525</width>
-						<bottom>100</bottom>
-						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
-						<label>$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control> -->
 					<control type="textbox">
 						<left>30</left>
 						<top>346</top>
 						<width>525</width>
 						<bottom>115</bottom>
-						<visible>String.IsEqual(ListItem.DBtype,movie)</visible>
-						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
-						<label>[COLOR button_focus]Genre: [/COLOR]$INFO[ListItem.Genre][CR][COLOR button_focus]Director: [/COLOR]$INFO[ListItem.Director][CR]$INFO[ListItem.EndTime,[COLOR button_focus]$LOCALIZE[31080]:[/COLOR] ][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
+						<label>$VAR[InfoPanelPlot]</label>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
-
-					<control type="textbox">
-						<left>30</left>
-						<top>346</top>
-						<width>525</width>
-						<bottom>115</bottom>
-						<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
-						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
-						<label>[COLOR button_focus]Genre: [/COLOR]$INFO[ListItem.Genre][CR][COLOR button_focus]Status: [/COLOR]$INFO[ListItem.Status][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control>
-
-					<control type="textbox">
-						<left>30</left>
-						<top>346</top>
-						<width>525</width>
-						<bottom>115</bottom>
-						<visible>String.IsEqual(ListItem.DBtype,season)</visible>
-						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
-						<label>[COLOR button_focus]Genre: [/COLOR]$INFO[ListItem.Genre][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control>
-
 					<control type="textbox">
 						<left>30</left>
 						<top>440</top>
 						<width>525</width>
 						<bottom>105</bottom>
-						<visible>String.IsEqual(ListItem.DBtype,episode)</visible>
-						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
-						<label>$INFO[ListItem.Plot][CR][CR]</label>
+						<label>$VAR[InfoPanelPlotEpisode]</label>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
-
 					<control type="textbox">
 						<left>30</left>
 						<top>330</top>
@@ -118,9 +81,6 @@
 						<label>Season $INFO[ListItem.Season], Episode $INFO[ListItem.Episode]</label>
 						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 					</control>
-
-
-
 					<control type="textbox">
 						<left>30</left>
 						<top>467</top>
