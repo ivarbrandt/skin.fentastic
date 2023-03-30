@@ -36,57 +36,39 @@
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.FENtastic.helper,mode=remake_all_cpaths)</onclick>
 				</control>
-				<control type="radiobutton" id="6240">
-					<label>Startup video (Lower volume recommended)</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(Enable.StartupVideo)</onclick>
-					<selected>Skin.HasSetting(Enable.StartupVideo)</selected>
-				</control>
 				<!-- MOVIES -->
-				<control type="button" id="6241">
-					<label>Widget limit (movies/shows)</label>
-					<label2>$VAR[SkinSettingWidgetLimitMain]</label2>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.SetNumeric(WidgetLimitMain)</onclick>
-				</control>
-				<control type="button" id="6242">
-					<label>Widget limit (episodes)</label>
-					<label2>$VAR[SkinSettingWidgetLimitEpisodes]</label2>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.SetNumeric(WidgetLimitEpisodes)</onclick>
-				</control>
-				<control type="radiobutton" id="6243">
+				<control type="radiobutton" id="6240">
 					<label>$LOCALIZE[342]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(HomeMenuNoMoviesButton)</selected>
 					<onclick>Skin.ToggleSetting(HomeMenuNoMoviesButton)</onclick>
 				</control>
-				<control type="button" id="6244">
+				<control type="button" id="6241">
 					<label>   - Set main menu path</label>
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.FENtastic.helper,mode=manage_main_menu_path&amp;cpath_setting=movie.main_menu)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</control>
-				<control type="button" id="6245">
+				<control type="button" id="6242">
 					<label>   - Set widgets</label>
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.FENtastic.helper,mode=manage_widgets&amp;cpath_setting=movie.widget)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</control>
-				<control type="radiobutton" id="6246">
+				<control type="radiobutton" id="6243">
 					<label>   - $LOCALIZE[31008]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(HomeMenuNoMoviesCategories)</selected>
 					<onclick>Skin.ToggleSetting(HomeMenuNoMoviesCategories)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</control>
-				<control type="button" id="6247">
+				<control type="button" id="6244">
 					<label>       - Set category widget (top)</label>
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.FENtastic.helper,mode=manage_category_top_widget&amp;cpath_setting=movie.category_top_widget)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + !Skin.HasSetting(HomeMenuNoMoviesCategories)</visible>
 				</control>
-				<control type="button" id="6248">
+				<control type="button" id="6245">
 					<label>       - Set category widget (bottom)</label>
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.FENtastic.helper,mode=manage_category_bottom_widget&amp;cpath_setting=movie.category_bottom_widget)</onclick>
@@ -204,6 +186,39 @@
 				
 				
 			</control>
+
+			<control type="grouplist" id="637">
+				<top>133</top>
+				<left>0</left>
+				<right>0</right>
+				<bottom>140</bottom>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>637</onup>
+				<pagecontrol>60</pagecontrol>
+				<ondown>637</ondown>
+				<visible>Container(9000).HasFocus(2)</visible>
+				<control type="radiobutton" id="6371">
+					<label>Startup video (Lower volume recommended)</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(Enable.StartupVideo)</onclick>
+					<selected>Skin.HasSetting(Enable.StartupVideo)</selected>
+				</control>
+				<control type="button" id="6372">
+					<label>Widget limit (movies/shows)</label>
+					<label2>$VAR[SkinSettingWidgetLimitMain]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SetNumeric(WidgetLimitMain)</onclick>
+				</control>
+				<control type="button" id="6373">
+					<label>Widget limit (episodes)</label>
+					<label2>$VAR[SkinSettingWidgetLimitEpisodes]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SetNumeric(WidgetLimitEpisodes)</onclick>
+				</control>
+
+			</control>
+
 			<control type="grouplist" id="700">
 				<top>133</top>
 				<left>0</left>
@@ -213,7 +228,7 @@
 				<onright>60</onright>
 				<onup>700</onup>
 				<ondown>700</ondown>
-				<visible>Container(9000).HasFocus(2)</visible>
+				<visible>Container(9000).HasFocus(3)</visible>
 				<!-- <control type="button" id="708">
 					<label>Remake menus and widgets</label>
 					<include>DefaultSettingButton</include>
@@ -272,7 +287,7 @@
 				<onright>60</onright>
 				<onup>600</onup>
 				<ondown>600</ondown>
-				<visible>Container(9000).HasFocus(3)</visible>
+				<visible>Container(9000).HasFocus(4)</visible>
 				<control type="radiobutton" id="605">
 					<label>$LOCALIZE[31002]</label>
 					<include>DefaultSettingButton</include>
@@ -336,7 +351,7 @@
 				<onup>610</onup>
 				<pagecontrol>60</pagecontrol>
 				<ondown>610</ondown>
-				<visible>Container(9000).HasFocus(4)</visible>
+				<visible>Container(9000).HasFocus(5)</visible>
 				<control type="radiobutton" id="623">
 					<label>$LOCALIZE[31172]</label>
 					<include>DefaultSettingButton</include>
@@ -366,14 +381,14 @@
 				<onup>610</onup>
 				<pagecontrol>60</pagecontrol>
 				<ondown>610</ondown>
-				<visible>Container(9000).HasFocus(5)</visible>
+				<visible>Container(9000).HasFocus(6)</visible>
 				<!-- <label>$ADDON[plugin.video.fen 29996]</label> -->
 				<label>
 [B]CHANGELOG: FENtastic[/B]
 
 [B][COLOR button_focus]Version 1.0.3[/COLOR][/B]
 - Added new InfoPanel for home screen movie, show, and episode widgets
-- Moved startup video and widget limit settings to Skin options tab in Skin settings
+- Moved startup video and widget limit settings to new Options tab in Skin settings
 
 [B][COLOR button_focus]Version 1.0.2[/COLOR][/B]
 - Added changelog to Skin settings menu
@@ -476,18 +491,22 @@ Main changes from default Estuary include:
 						<onclick>noop</onclick>
 					</item>
 					<item id="2">
-						<label>$LOCALIZE[128]</label>
+						<label>Options</label>
 						<onclick>noop</onclick>
 					</item>
 					<item id="3">
-						<label>$LOCALIZE[31159]</label>
+						<label>$LOCALIZE[128]</label>
 						<onclick>noop</onclick>
 					</item>
 					<item id="4">
-						<label>$LOCALIZE[31170]</label>
+						<label>$LOCALIZE[31159]</label>
 						<onclick>noop</onclick>
 					</item>
 					<item id="5">
+						<label>$LOCALIZE[31170]</label>
+						<onclick>noop</onclick>
+					</item>
+					<item id="6">
 						<label>Changelog</label>
 						<onclick>noop</onclick>
 					</item>
