@@ -196,11 +196,17 @@
 				<pagecontrol>60</pagecontrol>
 				<ondown>637</ondown>
 				<visible>Container(9000).HasFocus(2)</visible>
-				<control type="radiobutton" id="6371">
+				<control type="radiobutton" id="6370">
 					<label>Startup video (Lower volume recommended)</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(Enable.StartupVideo)</onclick>
 					<selected>Skin.HasSetting(Enable.StartupVideo)</selected>
+				</control>
+				<control type="radiobutton" id="6371">
+					<label>Alternate format (InfoPanel)</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(Enable.AlternateInfo)</onclick>
+					<selected>Skin.HasSetting(Enable.AlternateInfo)</selected>
 				</control>
 				<control type="button" id="6372">
 					<label>Widget limit (movies/shows)</label>
