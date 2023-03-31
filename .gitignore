@@ -1,1 +1,9 @@
 .DS_Store
+xml/script-FENtastic-main_menu_movies.xml
+xml/script-FENtastic-main_menu_tvshows.xml
+xml/script-FENtastic-widget_movie_category_bottom.xml
+xml/script-FENtastic-widget_movie_category_top.xml
+xml/script-FENtastic-widget_movies.xml
+xml/script-FENtastic-widget_tvshow_category_bottom.xml
+xml/script-FENtastic-widget_tvshow_category_top.xml
+xml/script-FENtastic-widget_tvshows.xml
