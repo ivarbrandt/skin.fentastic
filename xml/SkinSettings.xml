@@ -367,21 +367,31 @@
 
 			<!-- BEGINNING OF CHANGELOG -->
 			
-			<control type="textbox" id="625">
+			<control type="grouplist" id="623">
 				<top>133</top>
-				<left>67</left>
+				<left>0</left>
 				<right>0</right>
 				<bottom>140</bottom>
-				<width>1340</width>
-				<height>810</height>
 				<onleft>9000</onleft>
 				<onright>60</onright>
 				<onup>610</onup>
 				<pagecontrol>60</pagecontrol>
 				<ondown>610</ondown>
 				<visible>Container(9000).HasFocus(6)</visible>
-				<include>changelog</include>
-				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+				<control type="button" id="6230">
+					<include>DefaultSettingButton</include>
+					<label>[B]CHANGELOG: FENtastic[COLOR limegreen]  »  IMPORTANT NOTICE for Version 1.0.4[/COLOR][/B]</label>
+					<onclick>SetProperty(Changelog,True)</onclick>
+					<onclick>SetProperty(TextViewerHeader,[B]CHANGELOG: FENtastic[/B],Home)</onclick>
+					<onclick>ActivateWindow(1102)</onclick>
+				</control>
+				<control type="button" id="6231">
+					<include>DefaultSettingButton</include>
+					<label>[B]Setup Guide[/B]</label>
+					<onclick>SetProperty(SetupGuide,True)</onclick>
+					<onclick>SetProperty(TextViewerHeader,[B]Setup Guide[/B],Home)</onclick>
+					<onclick>ActivateWindow(1102)</onclick>
+				</control>
 			</control>
 
 
@@ -467,7 +477,7 @@
 						<onclick>noop</onclick>
 					</item>
 					<item id="6">
-						<label>Changelog</label>
+						<label>Extra info</label>
 						<onclick>noop</onclick>
 					</item>
 				</content>
