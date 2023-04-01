@@ -694,7 +694,7 @@
 		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)] + String.IsEqual(ListItem.DBtype,tvshow) + !Skin.HasSetting(Enable.AlternateInfo">$INFO[ListItem.Year] [COLOR button_focus][B]•[/B][/COLOR] $INFO[ListItem.Genre] [COLOR button_focus][B]•[/B][/COLOR] $INFO[ListItem.Status][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>
 		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)] + String.IsEqual(ListItem.DBtype,tvshow) + Skin.HasSetting(Enable.AlternateInfo">[COLOR button_focus]Released: [/COLOR]$INFO[ListItem.Year][CR][COLOR button_focus]Genre: [/COLOR]$INFO[ListItem.Genre][CR][COLOR button_focus]Status: [/COLOR]$INFO[ListItem.Status][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>
 		<!-- SEASONS -->
-		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)] + String.IsEqual(ListItem.DBtype,season)">[COLOR button_focus]Genre: [/COLOR]$INFO[ListItem.Genre][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>
+		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)] + String.IsEqual(ListItem.DBtype,season)">$INFO[ListItem.Genre][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>
 	</variable>
 
 	<!-- EPISODES -->

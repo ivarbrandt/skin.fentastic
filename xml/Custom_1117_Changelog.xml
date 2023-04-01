@@ -10,7 +10,7 @@ In this version the default widgets that you may have seen on first install have
 [B][COLOR button_focus]Version 1.0.4[/COLOR][/B]
 - Added release year to InfoPanel
 - Changed default format of InfoPanel. You can switch back to the previous format by going into Skin settings » Options » Alternate Format (InfoPanel)
-- Changed Changelog tab in Skin settings to Extra info
+- Renamed Changelog tab in Skin settings to Extra info
 - Added Setup Guide to Extra info
 
 [B][COLOR button_focus]Version 1.0.3[/COLOR][/B]
