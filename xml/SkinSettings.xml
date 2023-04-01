@@ -346,17 +346,17 @@
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
 				<onright>60</onright>
-				<onup>610</onup>
+				<onup>622</onup>
 				<pagecontrol>60</pagecontrol>
-				<ondown>610</ondown>
+				<ondown>622</ondown>
 				<visible>Container(9000).HasFocus(5)</visible>
-				<control type="radiobutton" id="623">
+				<control type="radiobutton" id="6220">
 					<label>$LOCALIZE[31172]</label>
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(OSDAutoClose)</selected>
 					<onclick>Skin.ToggleSetting(OSDAutoClose)</onclick>
 				</control>
-				<control type="button" id="624">
+				<control type="button" id="6221">
 					<label>- $LOCALIZE[31173]</label>
 					<label2>$VAR[SkinSettingOSDAutoCloseTime]</label2>
 					<include>DefaultSettingButton</include>
@@ -374,9 +374,9 @@
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
 				<onright>60</onright>
-				<onup>610</onup>
+				<onup>623</onup>
 				<pagecontrol>60</pagecontrol>
-				<ondown>610</ondown>
+				<ondown>623</ondown>
 				<visible>Container(9000).HasFocus(6)</visible>
 				<control type="button" id="6230">
 					<include>DefaultSettingButton</include>

@@ -98,7 +98,7 @@
 				<font>font37</font>
 				<include>SetupGuide</include>
 				<visible>!String.IsEmpty(Window(skinsettings).Property(SetupGuide))</visible>
-				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+				<autoscroll delay="15000" time="4000" repeat="15000">Skin.HasSetting(autoscroll)</autoscroll>
 			</control>
 			<control type="button" id="1000">
 				<include>HiddenObject</include>
