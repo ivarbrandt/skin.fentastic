@@ -1,7 +1,5 @@
 # Guidelines for Reporting Issues
 
----
-
 - On **FIRST** install go to Settings » Interface » in the Skin section click Configure skin... » Extra info » Setup Guide. Here you will find some tips on setting up your main menu items, widgets, and category widgets.
 - Read the **CHANGELOG**. As new updates get released features are added, changed, modified or removed. *Before opening an Issue* related to this make sure you read the changelog (located at the bottom of Skin settings in Extra info) as it will contain information for all the changes made to each update. It is also a good way to stay current with what is new with the skin.
 - **Pre-made builds** of any kind are *not supported*. If you installed someone else's build, you need to go to them to troubleshoot issues. These builds often contain a plethora of addons so any number of things could go wrong. Keep in mind this skin was designed exclusively for use with **FEN**.
