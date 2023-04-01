@@ -369,10 +369,10 @@
 			
 			<control type="textbox" id="625">
 				<top>133</top>
-				<left>37</left>
+				<left>67</left>
 				<right>0</right>
 				<bottom>140</bottom>
-				<width>1370</width>
+				<width>1340</width>
 				<height>810</height>
 				<onleft>9000</onleft>
 				<onright>60</onright>
@@ -380,49 +380,8 @@
 				<pagecontrol>60</pagecontrol>
 				<ondown>610</ondown>
 				<visible>Container(9000).HasFocus(6)</visible>
-				<!-- <label>$ADDON[plugin.video.fen 29996]</label> -->
-				<label>
-[B]CHANGELOG: FENtastic[/B]
-
-[B][COLOR button_focus]Version 1.0.3[/COLOR][/B]
-- Added new InfoPanel for movie, show, and episode widgets
-- Moved startup video and widget limit settings to new Options tab in Skin settings
-- Small adjustments to most views
-- Cleaned up collections info panel
-- Small fixes/changes
-
-[B][COLOR button_focus]Version 1.0.2[/COLOR][/B]
-- Added changelog to Skin settings menu
-
-[B][COLOR button_focus]Version 1.0.1[/COLOR][/B]
-- Re-added startup video (Recommended to test with lower volume)
-- Made startup video optional
-- Added screenshots
-
-[B][COLOR button_focus]Version 1.0.0[/COLOR][/B]
-- Added adjustable widget limits for movies/shows and episodes
-
-[B][COLOR button_focus]Version 0.0.9[/COLOR][/B]
-- Small fixes/changes
-
-[B][COLOR button_focus]Version 0.0.8[/COLOR][/B]
-- Removed startup video
-
-[B][COLOR button_focus]Version 0.0.7 (Initial release)[/COLOR][/B]
-Main changes from default Estuary include:
-- 2 NEW viewtypes ("WideWall" and "WideInfoWall")
-- Plenty of adjustments to pre-existing views
-- New default Colors theme
-- New Color theme 'purple'
-- Skin-wide adjustments to dialog and menu colors for every Color theme
-- Progress displayed for movies, shows, seasons and episodes
-- Customizable movie and show main menu items
-- Customizable widgets and category widgets for movies, shows, and episodes
-- Custom Search options from Home window
-- PVR guide adjustments
-- Nexus themed startup video
-				</label>
-					<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+				<include>changelog</include>
+				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 			</control>
 
 

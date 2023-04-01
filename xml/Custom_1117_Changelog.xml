@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <include name="changelog">
+    <label>
+
+[B]CHANGELOG: FENtastic[/B]
+
+[B][COLOR red]IMPORTANT NOTICE for Version 1.0.4
+
+IF YOUR WIDGETS WERE DELETED AFTER THIS UPDATE PLEASE READ INFO BELOW
+
+In this version the default widgets that you may have seen on first install have been removed. In order to avoid possible future conflicts and/or errors, please go to Skin settings » Main menu items » click Remake Menus and Widgets. This will remove the default widgets if any and remake the ones you have already set up. If you didn't set up any widgets on first install, and all of your widgets were deleted, go back into Skin settings » Main menu items in order to set up your widgets. This is a one-time thing and will not be necessary for future releases.[/COLOR][/B]
+
+[B][COLOR button_focus]Version 1.0.4[/COLOR][/B]
+- Added release year to InfoPanel
+- Changed default format of InfoPanel. You can switch back to the previous format by going into Skin settings » Options » Alternate Format (InfoPanel)
+
+[B][COLOR button_focus]Version 1.0.3[/COLOR][/B]
+- Added new InfoPanel for movie, show, and episode widgets
+- Moved startup video and widget limit settings to new Options tab in Skin settings
+- Small adjustments to most views
+- Cleaned up collections info panel
+- Small fixes/changes
+
+[B][COLOR button_focus]Version 1.0.2[/COLOR][/B]
+- Added changelog to Skin settings menu
+
+[B][COLOR button_focus]Version 1.0.1[/COLOR][/B]
+- Re-added startup video (Recommended to test with lower volume)
+- Made startup video optional
+- Added screenshots
+
+[B][COLOR button_focus]Version 1.0.0[/COLOR][/B]
+- Added adjustable widget limits for movies/shows and episodes
+
+[B][COLOR button_focus]Version 0.0.9[/COLOR][/B]
+- Small fixes/changes
+
+[B][COLOR button_focus]Version 0.0.8[/COLOR][/B]
+- Removed startup video
+
+[B][COLOR button_focus]Version 0.0.7 (Initial release)[/COLOR][/B]
+Main changes from default Estuary include:
+- 2 NEW viewtypes ("WideWall" and "WideInfoWall")
+- Plenty of adjustments to pre-existing views
+- New default Colors theme
+- New Color theme 'purple'
+- Skin-wide adjustments to dialog and menu colors for every Color theme
+- Progress displayed for movies, shows, seasons and episodes
+- Customizable movie and show main menu items
+- Customizable widgets and category widgets for movies, shows, and episodes
+- Custom Search options from Home window
+- PVR guide adjustments
+- Nexus themed startup video
+
+    </label>
+  </include>
+</includes>
