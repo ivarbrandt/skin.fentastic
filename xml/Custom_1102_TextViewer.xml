@@ -9,7 +9,7 @@
 	<onunload>ClearProperty(SetupGuide,skinsettings)</onunload>
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
-		<control type="group">
+		<control type="group" id="33">
 			<left>13%</left>
 			<centertop>45%</centertop>
 			<height>870</height>
@@ -19,6 +19,23 @@
 				<param name="header_label" value="$INFO[Window(home).Property(TextViewer_Header)]" />
 				<param name="header_id" value="1" />
 			</include>
+			<control type="button" id="1000">
+				<include>HiddenObject</include>
+				<onclick>Action(Close)</onclick>
+				<onup>PageUp(3000)</onup>
+				<ondown>PageDown(3000)</ondown>
+			</control>
+			<!-- <control type="button" id="3005">
+				<oninfo>Dialog.Close(1102)</oninfo>
+				<onclick>Dialog.Close(1102)</onclick>
+				<onleft>Dialog.Close(1102)</onleft>
+				<onright>Dialog.Close(1102)</onright>
+				<onup condition="String.IsEmpty(Window(skinsettings).Property(FAQ))">PageUp(61)</onup>
+				<ondown condition="String.IsEmpty(Window(skinsettings).Property(FAQ))">PageDown(61)</ondown>
+				<onup condition="!String.IsEmpty(Window(skinsettings).Property(FAQ))">PageUp(62)</onup>
+				<ondown condition="!String.IsEmpty(Window(skinsettings).Property(FAQ))">PageDown(62)</ondown>
+				<include>HiddenObject</include>
+			</control> -->
 			<!-- <control type="textbox" id="2000">
 				<left>1%</left>
 				<top>85</top>
@@ -40,7 +57,7 @@
 					<width>82%</width>
 					<height>675</height>
 					<shadowcolor>black</shadowcolor>
-					<pagecontrol>3000</pagecontrol>
+					<!-- <pagecontrol>3000</pagecontrol> -->
 					<font>font37</font>
 				<label>$INFO[Window(Home).Property(TextViewerHeader)]</label>
 			</control>
@@ -50,7 +67,7 @@
 					<width>82%</width>
 					<height>675</height>
 					<shadowcolor>black</shadowcolor>
-					<pagecontrol>3000</pagecontrol>
+					<!-- <pagecontrol>3000</pagecontrol> -->
 					<font>font37</font>
 				<label>$INFO[Window(Home).Property(TextViewerSubHeader)]</label>
 			</control>
@@ -66,17 +83,6 @@
 				<visible>String.IsEmpty(Window(skinsettings).Property(Changelog))</visible>
 			</control>
 			<control type="textbox">
-				<left>1%</left>
-					<top>85</top>
-					<width>82%</width>
-					<height>675</height>
-					<shadowcolor>black</shadowcolor>
-					<pagecontrol>3000</pagecontrol>
-					<font>font37</font>
-				<label>$INFO[Window(Home).Property(TextViewerContent)]</label>
-				<visible>String.IsEmpty(Window(skinsettings).Property(SetupGuide))</visible>
-			</control>
-			<control type="textbox">
 				<left>3%</left>
 				<top>105</top>
 				<width>79%</width>
@@ -88,7 +94,18 @@
 				<visible>!String.IsEmpty(Window(skinsettings).Property(Changelog))</visible>
 				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 			</control>
-			<control type="textbox">
+			<!-- <control type="textbox">
+				<left>1%</left>
+					<top>85</top>
+					<width>82%</width>
+					<height>675</height>
+					<shadowcolor>black</shadowcolor>
+					<pagecontrol>3000</pagecontrol>
+					<font>font37</font>
+				<label>$INFO[Window(Home).Property(TextViewerContent)]</label>
+				<visible>String.IsEmpty(Window(skinsettings).Property(SetupGuide))</visible>
+			</control> -->
+			<!-- <control type="textbox">
 				<left>3%</left>
 				<top>105</top>
 				<width>79%</width>
@@ -99,19 +116,19 @@
 				<include>SetupGuide</include>
 				<visible>!String.IsEmpty(Window(skinsettings).Property(SetupGuide))</visible>
 				<autoscroll delay="15000" time="4000" repeat="15000">Skin.HasSetting(autoscroll)</autoscroll>
-			</control>
-			<control type="button" id="1000">
+			</control> -->
+			<!-- <control type="button" id="1000">
 				<include>HiddenObject</include>
 				<onclick>Action(Close)</onclick>
 				<onup>PageUp(3000)</onup>
 				<ondown>PageDown(3000)</ondown>
-			</control>
+			</control> -->
 			<control type="button">
 				<centerleft>50%</centerleft>
 				<top>113</top>
 				<width>48</width>
 				<height>20</height>
-				<onclick>SetFocus(3000)</onclick>
+				<onclick>SetFocus(1000)</onclick>
 				<onclick>Up</onclick>
 				<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
 				<texturenofocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturenofocus>
@@ -123,7 +140,7 @@
 				<top>940</top>
 				<width>48</width>
 				<height>20</height>
-				<onclick>SetFocus(3000)</onclick>
+				<onclick>SetFocus(1000)</onclick>
 				<onclick>Down</onclick>
 				<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>
 				<texturenofocus colordiffuse="button_focus">overlays/arrowdown.png</texturenofocus>
