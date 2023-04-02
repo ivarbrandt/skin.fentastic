@@ -390,7 +390,7 @@
 					<label>[B]Setup Guide[/B]</label>
 					<onclick>SetProperty(SetupGuide,True)</onclick>
 					<onclick>SetProperty(TextViewerHeader,[B]Setup Guide[/B],Home)</onclick>
-					<onclick>ActivateWindow(1102)</onclick>
+					<onclick>ActivateWindow(1119)</onclick>
 				</control>
 			</control>
 

@@ -31,6 +31,7 @@
 	<include file="View_504_WideWall.xml" />
 	<include file="Custom_1117_Changelog.xml"/>
 	<include file="Custom_1118_SetupGuide.xml"/>
+	<include file="Custom_1119_SetupGuideViewer.xml"/>
 	<include file="Variables.xml" />
 	<constant name="DepthDialog">0.50</constant>
 	<constant name="DepthDialog+">0.52</constant>
