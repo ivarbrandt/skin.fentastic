@@ -4,6 +4,7 @@
 	<onunload>ClearProperty(TextViewerHeader,Home)</onunload>
 	<onunload>ClearProperty(TextViewerSubHeader,Home)</onunload>
 	<onunload>ClearProperty(TextViewerContent,Home)</onunload>
+  <onunload>ClearProperty(AddonVersion,Home)</onunload>
 	<onunload>ClearProperty(SetupGuide,skinsettings)</onunload>
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>

@@ -4,6 +4,9 @@
 	<onload condition="!ListItem.Property(addon.isinstalled) + Window.IsActive(addonbrowser)">SetFocus(6)</onload>
 	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
 	<onunload>ClearProperty(infobackground,home)</onunload>
+	<onunload>ClearProperty(AddonNews,Home)</onunload>
+	<onunload>ClearProperty(TextViewer_Header,Home)</onunload>
+	<onunload>ClearProperty(AddonVersion,Home)</onunload>
 	<controls>
 		<control type="group">
 			<centertop>50%</centertop>
