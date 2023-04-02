@@ -840,7 +840,7 @@
 				<aligny>center</aligny>
 				<shadowcolor>black</shadowcolor>
 			</control>
-			<control type="button" id="22002">
+			<!-- <control type="button" id="22002">
 				<description>button overlay to avoid closing in dialog area</description>
 				<left>0</left>
 				<top>0</top>
@@ -849,7 +849,7 @@
 				<texturefocus />
 				<texturenofocus />
 				<onclick>noop</onclick>
-			</control>
+			</control> -->
 			<control type="radiobutton">
 				<right>10</right>
 				<top>11</top>
