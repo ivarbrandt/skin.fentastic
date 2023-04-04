@@ -69,6 +69,7 @@
 			<include>OpenClose_Right</include>
 			<itemgap>-160</itemgap>
 			<control type="group" id="567">
+				<include>RainDropAnimationBackground</include>
 				<description>Weather info</description>
 				<height>410</height>
 				<left>22</left>

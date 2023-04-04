@@ -208,13 +208,19 @@
 					<onclick>Skin.ToggleSetting(Enable.AlternateInfo)</onclick>
 					<selected>Skin.HasSetting(Enable.AlternateInfo)</selected>
 				</control>
-				<control type="button" id="6372">
+				<control type="radiobutton" id="6372">
+					<label>Raindrops</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(HideRainDrops)</onclick>
+					<selected>Skin.HasSetting(HideRainDrops)</selected>
+				</control>
+				<control type="button" id="6373">
 					<label>Widget limit (movies/shows)</label>
 					<label2>$VAR[SkinSettingWidgetLimitMain]</label2>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.SetNumeric(WidgetLimitMain)</onclick>
 				</control>
-				<control type="button" id="6373">
+				<control type="button" id="6374">
 					<label>Widget limit (episodes)</label>
 					<label2>$VAR[SkinSettingWidgetLimitEpisodes]</label2>
 					<include>DefaultSettingButton</include>
@@ -380,9 +386,9 @@
 				<visible>Container(9000).HasFocus(6)</visible>
 				<control type="button" id="6230">
 					<include>DefaultSettingButton</include>
-					<label>[B]CHANGELOG: FENtastic[COLOR limegreen]  »  IMPORTANT NOTICE for Version 1.0.4[/COLOR][/B]</label>
+					<label>[B]CHANGELOG: FENtastic[/B]</label>
 					<onclick>SetProperty(Changelog,True)</onclick>
-					<onclick>SetProperty(TextViewerHeader,[B]CHANGELOG: FENtastic[/B],Home)</onclick>
+					<onclick>SetProperty(TextViewerHeader,[B]CHANGELOG: FENtastic v1.0.6[/B],Home)</onclick>
 					<onclick>ActivateWindow(1102)</onclick>
 				</control>
 				<control type="button" id="6231">

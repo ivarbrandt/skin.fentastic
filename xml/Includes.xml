@@ -1177,6 +1177,7 @@
 					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="!Control.IsVisible(31111)">Conditional</animation>
 					<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(FullscreenGame) | Window.Previous(startup)">WindowOpen</animation>
 					<include>ColoredBackgroundImages</include>
+					<include>RainDropAnimationBackground</include>
 				</control>
 				<control type="group" id="31111">
 					<visible>!Window.IsActive(Home) + [![Player.HasVideo | [Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name)]] | !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))]</visible>
@@ -1602,5 +1603,141 @@
 				</control>
 			</control>
 		</focusedlayout>
+	</include>
+	<include name="VisibleFadeEffect">
+		<animation effect="fade" time="1300">VisibleChange</animation>
+	</include>
+	<include name="RainDropAnimationBackground">
+		<control type="group">
+			<visible>Skin.HasSetting(HideRainDrops) + ![Player.HasVideo + Player.HasAudio] + Skin.HasSetting(no_fanart)</visible>
+			<!-- <visible>Skin.HasSetting(HideRainDrops) + !Player.HasVideo + Skin.HasSetting(no_fanart)</visible> -->
+			<include>VisibleFadeEffect</include>
+			<control type="image">
+				<description>Raindrop 9 animation</description>
+				<left>1600</left>
+				<top>400</top>
+				<width>128</width>
+				<height>128</height>
+				<texture colordiffuse="primary_background" background="true">rain-drop.png</texture>
+				<visible>true</visible>
+				<animation type="conditional" reversible="false" loop="true" condition="true">
+					<effect type="fade" delay="2000" start="0" end="100" time="200"/>
+					<effect type="fade" delay="2500" start="100" end="0" time="500"/>
+					<effect type="zoom" delay="2000" start="30" end="500" time="1000" center="auto" tween="quadratic"/>
+				</animation>
+			</control>
+			<control type="image">
+				<description>Raindrop 1 animation</description>
+				<left>250</left>
+				<top>200</top>
+				<width>128</width>
+				<height>128</height>
+				<texture colordiffuse="primary_background" background="true">rain-drop.png</texture>
+				<visible>true</visible>
+				<animation type="conditional" reversible="false" loop="true" condition="true">
+					<effect type="fade" start="0" end="100" time="200"/>
+					<effect type="fade" start="100" end="0" delay="2500" time="1000"/>
+					<effect type="zoom" center="auto" start="30" end="1500" delay="0" time="3500" tween="quadratic"/>
+				</animation>
+			</control>
+			<control type="image">
+				<description>Raindrop 2 animation</description>
+				<left>700</left>
+				<top>130</top>
+				<width>128</width>
+				<height>128</height>
+				<texture colordiffuse="primary_background" background="true">rain-drop.png</texture>
+				<visible>true</visible>
+				<animation type="conditional" reversible="false" loop="true" condition="true">
+					<effect type="fade" delay="400" start="0" end="100" time="200"/>
+					<effect type="fade" delay="1000" start="100" end="0" time="1600"/>
+					<effect type="zoom" delay="400" start="30" end="700" time="3000" center="auto" tween="quadratic"/>
+				</animation>
+			</control>
+			<control type="image">
+				<description>Raindrop 3 animation</description>
+				<left>300</left>
+				<top>700</top>
+				<width>128</width>
+				<height>128</height>
+				<texture colordiffuse="primary_background" background="true">rain-drop.png</texture>
+				<visible>true</visible>
+				<animation type="conditional" reversible="false" loop="true" condition="true">
+					<effect type="fade" delay="800" start="0" end="100" time="200"/>
+					<effect type="fade" delay="2400" start="100" end="0" time="2000"/>
+					<effect type="zoom" delay="800" start="30" end="1000" time="2500" center="auto" tween="quadratic"/>
+				</animation>
+			</control>
+			<control type="image">
+				<description>Raindrop 4 animation</description>
+				<left>1550</left>
+				<top>800</top>
+				<width>128</width>
+				<height>128</height>
+				<texture colordiffuse="primary_background" background="true">rain-drop.png</texture>
+				<visible>true</visible>
+				<animation type="conditional" reversible="false" loop="true" condition="true">
+					<effect type="fade" delay="1500" start="0" end="100" time="200"/>
+					<effect type="fade" delay="2100" start="100" end="0" time="800"/>
+					<effect type="zoom" delay="1500" start="30" end="1200" time="2500" center="auto" tween="quadratic"/>
+				</animation>
+			</control>
+			<control type="image">
+				<description>Raindrop 5 animation</description>
+				<left>700</left>
+				<top>550</top>
+				<width>128</width>
+				<height>128</height>
+				<texture colordiffuse="primary_background" background="true">rain-drop.png</texture>
+				<visible>true</visible>
+				<animation type="conditional" reversible="false" loop="true" condition="true">
+					<effect type="fade" delay="2200" start="0" end="100" time="200"/>
+					<effect type="fade" delay="2400" start="100" end="0" time="3000"/>
+					<effect type="zoom" delay="2200" start="30" end="1400" time="3700" center="auto" tween="quadratic"/>
+				</animation>
+			</control>
+			<control type="image">
+				<description>Raindrop 6 animation</description>
+				<left>1400</left>
+				<top>100</top>
+				<width>128</width>
+				<height>128</height>
+				<texture colordiffuse="primary_background" background="true">rain-drop.png</texture>
+				<visible>true</visible>
+				<animation type="conditional" reversible="false" loop="true" condition="true">
+					<effect type="fade" delay="1500" start="0" end="100" time="200"/>
+					<effect type="fade" delay="2100" start="100" end="0" time="2000"/>
+					<effect type="zoom" delay="1500" start="30" end="1200" time="3000" center="auto" tween="quadratic"/>
+				</animation>
+			</control>
+			<control type="image">
+				<description>Raindrop 7 animation</description>
+				<left>1150</left>
+				<top>450</top>
+				<width>128</width>
+				<height>128</height>
+				<texture colordiffuse="primary_background" background="true">rain-drop.png</texture>
+				<visible>true</visible>
+				<animation type="conditional" reversible="false" loop="true" condition="true">
+					<effect type="fade" delay="1000" start="0" end="100" time="200"/>
+					<effect type="fade" delay="700" start="100" end="0" time="3500"/>
+					<effect type="zoom" delay="1000" start="30" end="700" time="1500" center="auto" tween="quadratic"/>
+				</animation>
+			</control>
+			<control type="image">
+				<description>Raindrop 8 animation</description>
+				<left>1000</left>
+				<top>800</top>
+				<width>128</width>
+				<height>128</height>
+				<texture colordiffuse="primary_background" background="true">rain-drop.png</texture>
+				<visible>true</visible>
+				<animation type="conditional" reversible="false" loop="true" condition="true">
+					<effect type="fade" delay="700" start="0" end="100" time="200"/>
+					<effect type="fade" delay="300" start="100" end="0" time="4000"/>
+					<effect type="zoom" delay="700" start="30" end="900" time="3000" center="auto" tween="quadratic"/>
+				</animation>
+			</control>
+		</control>
 	</include>
 </includes>
