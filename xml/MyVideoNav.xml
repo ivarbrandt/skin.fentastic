@@ -59,7 +59,7 @@
 						<top>346</top>
 						<width>525</width>
 						<bottom>115</bottom>
-						<label>$VAR[InfoPanelPlot]</label>
+						<label>$VAR[InfoPanel]</label>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">
@@ -67,7 +67,7 @@
 						<top>440</top>
 						<width>525</width>
 						<bottom>105</bottom>
-						<label>$VAR[InfoPanelPlotEpisode]</label>
+						<label>$VAR[InfoPanelEpisode]</label>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">

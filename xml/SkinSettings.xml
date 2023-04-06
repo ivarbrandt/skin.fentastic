@@ -209,7 +209,7 @@
 					<selected>Skin.HasSetting(Enable.AlternateInfo)</selected>
 				</control>
 				<control type="radiobutton" id="6372">
-					<label>Raindrops</label>
+					<label>Raindrop background</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(HideRainDrops)</onclick>
 					<selected>Skin.HasSetting(HideRainDrops)</selected>

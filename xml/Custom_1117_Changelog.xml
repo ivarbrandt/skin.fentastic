@@ -8,7 +8,9 @@ IF YOUR WIDGETS WERE DELETED AFTER THIS UPDATE PLEASE READ INFO BELOW
 In this version the default widgets that you may have seen on first install have been removed. In order to avoid possible future conflicts and/or errors, please go to Skin settings » Main menu items » click Remake Menus and Widgets. This will remove the default widgets if any and remake the ones you have already set up. If you didn't set up any widgets on first install, and all of your widgets were deleted, go back into Skin settings » Main menu items in order to set up your widgets. See Setup Guide for help setting up your widgets. This is a one-time thing and will not be necessary for future updates.[/COLOR][/B]
 
 [B][COLOR button_focus]Version 1.0.6[/COLOR][/B]
-- Added Raindrop Animated Background. You can turn this off in Skin settings » Options » Raindrops. This only works when you have Show media background toggled to 'off' in Skin settings » Artwork
+- Added optional Raindrop Animated Background. You can turn this off in Skin settings » Options » Raindrops. Note: Only works when you have Show media background toggled to 'off' in Skin settings » Artwork
+- Moved progress for movie, tvshow, and episode widgets to InfoPanel
+- Changed widget scrolling behavior
 
 [B][COLOR button_focus]Version 1.0.5[/COLOR][/B]
 - Fixed scrolling in changelog and setup guide windows

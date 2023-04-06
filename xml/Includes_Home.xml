@@ -37,10 +37,11 @@
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="posy" value="250"/>
 			</include>
-			<control type="panel" id="$PARAM[list_id]">
+			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>115</top>
 				<onback>9000</onback>
+				<onright>$PARAM[list_id]</onright>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
 				<height>528</height>
@@ -53,7 +54,6 @@
 						<left>68</left>
 						<top>15</top>
 						<include content="InfoWallMovieLayout">
-							<param name="focused" value="false" />
 						</include>
 					</control>
 				</itemlayout>
@@ -63,13 +63,12 @@
 						<left>68</left>
 						<top>15</top>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="214,155" />
+							<effect type="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="214,155" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="214,155" />
+							<effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="214,155" />
 						</animation>
 						<include content="InfoWallMovieLayout">
-							<param name="focused" value="true" />
 						</include>
 					</control>
 				</focusedlayout>

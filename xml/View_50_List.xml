@@ -356,7 +356,7 @@
 						<top>460</top>
 						<width>540</width>
 						<bottom>80</bottom>
-						<label>$VAR[InfoPanelPlot]</label>
+						<label>$VAR[InfoPanel]</label>
 						<autoscroll time="3000" delay="10000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 					<control type="textbox" id="15500">
@@ -373,7 +373,7 @@
 						<width>540</width>
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
-						<label>$VAR[InfoPanelPlotEpisode]</label>
+						<label>$VAR[InfoPanelEpisode]</label>
 					</control>
 					<control type="textbox">
 						<top>445</top>
