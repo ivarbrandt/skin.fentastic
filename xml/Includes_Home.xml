@@ -42,6 +42,9 @@
 				<top>115</top>
 				<onback>9000</onback>
 				<onright>$PARAM[list_id]</onright>
+				<orientation>horizontal</orientation>
+				<focusposition>0</focusposition>
+				<movement>3</movement>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
 				<height>528</height>
@@ -88,10 +91,14 @@
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="posy" value="200"/>
 			</include>
-			<control type="panel" id="$PARAM[list_id]">
+			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>115</top>
 				<onback>9000</onback>
+				<onright>$PARAM[list_id]</onright>
+				<orientation>horizontal</orientation>
+				<focusposition>0</focusposition>
+				<movement>2</movement>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
 				<height>370</height>
@@ -104,7 +111,6 @@
 						<left>68</left>
 						<top>15</top>
 						<include content="WideInfoWallMovieLayout">
-							<param name="focused" value="false" />
 						</include>
 					</control>
 				</itemlayout>
@@ -120,7 +126,6 @@
 							<effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="280,198" />
 						</animation>
 						<include content="WideInfoWallMovieLayout">
-							<param name="focused" value="true" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -219,12 +224,16 @@
 				<param name="posy" value="220"/>
 			</include>
 			<!-- Widget Height Spacing -->
-			<control type="panel" id="$PARAM[list_id]">
+			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>105</top>
-				<onback>9000</onback>
 				<right>0</right>
 				<height>410</height>
+				<onback>9000</onback>
+				<onright>$PARAM[list_id]</onright>
+				<orientation>horizontal</orientation>
+				<focusposition>0</focusposition>
+				<movement>2</movement>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -238,7 +247,6 @@
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
-							<param name="focused" value="false" />
 						</include>
 					</control>
 				</itemlayout>
@@ -248,16 +256,15 @@
 						<left>70</left>
 						<top>5</top>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="280,170" />
+							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="280,170" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="280,170" />
+							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="280,170" />
 						</animation>
 						<include content="InfoWallEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
-							<param name="focused" value="true" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -284,12 +291,16 @@
 				<param name="posy" value="220"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
-			<control type="panel" id="$PARAM[list_id]">
+			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>120</top>
-				<onback>9000</onback>
 				<right>0</right>
 				<height>500</height>
+				<onback>9000</onback>
+				<onright>$PARAM[list_id]</onright>
+				<orientation>horizontal</orientation>
+				<focusposition>0</focusposition>
+				<movement>3</movement>
 				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
@@ -303,7 +314,6 @@
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="single_label" value="$PARAM[single_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="focused" value="false" />
 						</include>
 					</control>
 				</itemlayout>
@@ -321,7 +331,6 @@
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="single_label" value="$PARAM[single_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
-							<param name="focused" value="true" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -347,12 +356,16 @@
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
-			<control type="panel" id="$PARAM[list_id]">
+			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>110</top>
-				<onback>9000</onback>
 				<right>0</right>
 				<height>240</height>
+				<onback>9000</onback>
+				<onright>$PARAM[list_id]</onright>
+				<orientation>horizontal</orientation>
+				<focusposition>0</focusposition>
+				<movement>3</movement>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -406,13 +419,13 @@
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
-						<control type="image">
+						<!-- <control type="image">
 							<width>310</width>
 							<height>150</height>
 							<texture colordiffuse="button_focus">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
-						</control>
+						</control> -->
 						<!-- <control type="image">
 							<centertop>74</centertop>
 							<left>58</left>
@@ -482,12 +495,16 @@
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="posy" value="200"/>
 			</include>
-			<control type="panel" id="$PARAM[list_id]">
+			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>120</top>
-				<onback>9000</onback>
 				<right>0</right>
 				<height>430</height>
+				<onback>9000</onback>
+				<onright>$PARAM[list_id]</onright>
+				<orientation>horizontal</orientation>
+				<focusposition>0</focusposition>
+				<movement>3</movement>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -578,13 +595,13 @@
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
-						<control type="image">
+						<!-- <control type="image">
 							<width>319</width>
 							<height>340</height>
 							<texture colordiffuse="button_focus">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
-						</control>
+						</control> -->
 						<control type="image">
 							<top>43</top>
 							<left>38</left>
@@ -658,12 +675,16 @@
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
-			<control type="panel" id="$PARAM[list_id]">
+			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>90</top>
-				<onback>9000</onback>
 				<right>0</right>
 				<height>396</height>
+				<onback>9000</onback>
+				<onright>$PARAM[list_id]</onright>
+				<orientation>horizontal</orientation>
+				<focusposition>0</focusposition>
+				<movement>4</movement>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -731,7 +752,7 @@
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
-						<control type="image">
+						<!-- <control type="image">
 							<left>0</left>
 							<top>20</top>
 							<width>254</width>
@@ -739,7 +760,7 @@
 							<texture colordiffuse="button_focus">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
-						</control>
+						</control> -->
 						<control type="image">
 							<left>60</left>
 							<top>108</top>

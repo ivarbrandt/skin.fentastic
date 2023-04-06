@@ -458,7 +458,6 @@
 								<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="170,320">UnFocus</animation>
 								<include content="InfoWallMusicLayout">
 									<param name="fallback_image" value="DefaultFavourites.png" />
-									<param name="focused" value="true" />
 								</include>
 							</control>
 						</focusedlayout>
