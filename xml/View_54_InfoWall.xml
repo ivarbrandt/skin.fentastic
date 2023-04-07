@@ -122,6 +122,7 @@
 	<include name="InfoWallEpisodeLayout">
 		<param name="main_label">$INFO[ListItem.Title]</param>
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
+		<param name="networks_label">$INFO[ListItem.Label]</param>
 		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
 		<param name="fallback_image">DefaultTVShows.png</param>
 		<param name="focused">false</param>
@@ -129,7 +130,7 @@
 			<control type="image">
 				<top>10</top>
 				<width>416</width>
-				<height>305</height>
+				<height>325</height>
 				<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
@@ -138,7 +139,7 @@
 				<top>6</top>
 				<left>-4</left>
 				<width>424</width>
-				<height>313</height>
+				<height>333</height>
 				<texture colordiffuse="button_focus">colors/grey.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
@@ -147,25 +148,38 @@
 			</control>
 			<!-- Widget Image -->
 			<control type="image">
+				<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)</visible>
 				<left>0</left>
 				<top>10</top>
 				<width>416</width>
-				<height>234</height>
-				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[FanartThumbVar]</texture>
+				<!-- 234 -->
+				<height>254</height>
+				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
 				<aspectratio>scale</aspectratio>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
+				<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
+				<left>0</left>
+				<top>10</top>
+				<width>416</width>
+				<height>254</height>
+				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
+				<aspectratio>keep</aspectratio>
+				<align>center</align>
+				<bordersize>20</bordersize>
+			</control>
+			<!-- <control type="image">
 				<left>20</left>
-				<top>155</top>
+				<top>175</top>
 				<width>376</width>
 				<height>70</height>
 				<texture>overlays/overlayfade.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
-			</control>
+			</control> -->
 			<control type="label">
 				<left>131</left>
-				<top>195</top>
+				<top>215</top>
 				<width>260</width>
 				<label>$PARAM[thumb_label]</label>
 				<font>font20_title</font>
@@ -174,14 +188,14 @@
 			</control>
 			<control type="image">
 				<left>20</left>
-				<top>192</top>
+				<top>212</top>
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
 			</control>
 			<control type="textbox">
 				<left>11%</left>
-				<top>119</top>
+				<top>139</top>
 				<width>90%</width>
 				<height>80</height>
 				<font>font12</font>
@@ -193,8 +207,9 @@
 			<control type="group">
 				<visible>!Window.IsActive(videos)</visible>
 				<control type="label">
+					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 					<left>11%</left>
-					<top>227</top>
+					<top>247</top>
 					<width>90%</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
@@ -203,11 +218,34 @@
 					<align>center</align>
 				</control>
 				<control type="label">
+					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 					<left>11%</left>
-					<top>257</top>
+					<top>277</top>
 					<width>90%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<scroll>$PARAM[focused]</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)</visible>
+					<left>11%</left>
+					<top>259</top>
+					<width>90%</width>
+					<label>$PARAM[main_label]</label>
+					<font>font12</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<scroll>$PARAM[focused]</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
+					<left>11%</left>
+					<top>259</top>
+					<width>90%</width>
+					<label>$PARAM[networks_label]</label>
+					<font>font12</font>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused]</scroll>
 					<align>center</align>
@@ -225,7 +263,7 @@
 			</control> -->
 			<control type="progress">
 				<left>20</left>
-				<top>272</top>
+				<top>292</top>
 				<width>416</width>
 				<height>1</height>
 				<texturebg></texturebg>
@@ -236,7 +274,7 @@
 			</control>
 			<control type="label">
 				<left>51</left>
-				<top>195</top>
+				<top>215</top>
 				<width>100</width>
 				<label>$INFO[ListItem.Property(WatchedProgress)]%</label>
 				<font>font20_title</font>

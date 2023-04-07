@@ -29,6 +29,7 @@
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
+						<!-- IMAGE CONTROL -->
 						<control type="image">
 							<left>120</left>
 							<top>20</top>

@@ -209,6 +209,7 @@
 	<include name="WidgetListEpisodes">
 		<param name="main_label">$INFO[ListItem.Title]</param>
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
+		<param name="networks_label">$INFO[ListItem.Label]</param>
 		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
 		<param name="sortby"></param>
 		<param name="visible">True</param>
@@ -239,18 +240,19 @@
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="440" height="550">
+				<itemlayout width="440" height="700">
 					<control type="group">
 						<left>70</left>
 						<top>5</top>
 						<include content="InfoWallEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="networks_label" value="$PARAM[networks_label]"/>
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="440" height="550">
+				<focusedlayout width="440" height="700">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -264,6 +266,7 @@
 						<include content="InfoWallEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="networks_label" value="$PARAM[networks_label]"/>
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
 						</include>
 					</control>

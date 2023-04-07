@@ -684,26 +684,6 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<variable name="HomeInfoPanel">
 		<!-- COLLECTIONS -->
 		<value condition="String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>
@@ -728,33 +708,6 @@
 		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)] + String.IsEqual(ListItem.DBtype,episode)">$INFO[ListItem.Plot][CR][CR]</value>
 	</variable>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<variable name="InfoPanel">
 		<!-- COLLECTIONS -->
 		<value condition="String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>
@@ -772,7 +725,6 @@
 	<variable name="InfoPanelEpisode">
 		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)] + String.IsEqual(ListItem.DBtype,episode)">$INFO[ListItem.Plot][CR][CR]</value>
 	</variable>
-
 
 	<!-- WIDGET LIMITS -->
 	<variable name="SkinSettingWidgetLimitMain">
