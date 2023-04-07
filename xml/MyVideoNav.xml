@@ -55,6 +55,7 @@
 						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 					<control type="textbox">
+						<visible>!String.IsEqual(System.Language,Hebrew)</visible>
 						<left>30</left>
 						<top>346</top>
 						<width>525</width>
@@ -63,10 +64,31 @@
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">
+						<visible>String.IsEqual(System.Language,Hebrew)</visible>
+						<left>30</left>
+						<top>346</top>
+						<width>525</width>
+						<bottom>115</bottom>
+						<align>right</align>
+						<label>$VAR[InfoPanel]</label>
+						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+					</control>
+					<control type="textbox">
+						<visible>!String.IsEqual(System.Language,Hebrew)</visible>
 						<left>30</left>
 						<top>440</top>
 						<width>525</width>
 						<bottom>105</bottom>
+						<label>$VAR[InfoPanelEpisode]</label>
+						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+					</control>
+					<control type="textbox">
+						<visible>String.IsEqual(System.Language,Hebrew)</visible>
+						<left>30</left>
+						<top>440</top>
+						<width>525</width>
+						<bottom>105</bottom>
+						<align>right</align>
 						<label>$VAR[InfoPanelEpisode]</label>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>

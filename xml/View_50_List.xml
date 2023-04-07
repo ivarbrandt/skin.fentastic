@@ -353,9 +353,19 @@
 					<left>30</left>
 					<!-- Plot control -->
 					<control type="textbox">
+						<visible>!String.IsEqual(System.Language,Hebrew)</visible>
 						<top>460</top>
 						<width>540</width>
 						<bottom>80</bottom>
+						<label>$VAR[InfoPanel]</label>
+						<autoscroll time="3000" delay="10000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+					</control>
+					<control type="textbox">
+						<visible>String.IsEqual(System.Language,Hebrew)</visible>
+						<top>460</top>
+						<width>540</width>
+						<bottom>80</bottom>
+						<align>right</align>
 						<label>$VAR[InfoPanel]</label>
 						<autoscroll time="3000" delay="10000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
@@ -369,9 +379,19 @@
 					</control>
 					<!-- Plot control episodes -->
 					<control type="textbox" id="15501">
+						<visible>!String.IsEqual(System.Language,Hebrew)</visible>
 						<top>550</top>
 						<width>540</width>
 						<bottom>70</bottom>
+						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>$VAR[InfoPanelEpisode]</label>
+					</control>
+					<control type="textbox" id="15502">
+						<visible>String.IsEqual(System.Language,Hebrew)</visible>
+						<top>550</top>
+						<width>540</width>
+						<bottom>70</bottom>
+						<align>right</align>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[InfoPanelEpisode]</label>
 					</control>
@@ -385,7 +405,7 @@
 						<label>Season $INFO[ListItem.Season], Episode $INFO[ListItem.Episode]</label>
 						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 					</control>
-					<control type="textbox" id="15502">
+					<control type="textbox" id="15503">
 						<top>600</top>
 						<width>540</width>
 						<bottom>70</bottom>

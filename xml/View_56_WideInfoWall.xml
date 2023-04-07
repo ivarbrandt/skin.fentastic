@@ -315,19 +315,26 @@
 					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
+				<control type="image">
+					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
+					<left>20</left>
+					<top>180</top>
+					<width>395</width>
+					<height>70</height>
+					<texture>overlays/overlayfade.png</texture>
+					<visible>!ListItem.IsParentFolder</visible>
+				</control>
 
 				
 
 
 				<control type="image">
-          <!-- <left>35</left>
-          <top>163</top> -->
 					<left>20</left>
           <top>170</top>
 					<width>80</width>
 					<height>80</height>
 					<texture>overlays/overlay-bg.png</texture>
-					<visible>Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
+					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)] + [Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)]</visible>
 				</control>
 
 				<control type="image">
@@ -389,6 +396,15 @@
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
 			</control>
+			<control type="label">
+				<left>150</left>
+				<top>220</top>
+				<width>260</width>
+				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
+				<font>font20_title</font>
+				<shadowcolor>text_shadow</shadowcolor>
+				<align>right</align>
+			</control>
 			<control type="image">
         <left>20</left>
         <top>218</top>
@@ -420,6 +436,17 @@
 				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
 				<visible>![$PARAM[focused]] + Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
+			</control>
+			<control type="progress">
+				<left>20</left>
+				<top>227</top>
+				<width>396</width>
+				<height>1</height>
+				<texturebg></texturebg>
+				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
+				<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
+				<visible>![$PARAM[focused]] + String.IsEqual(ListItem.DBtype,episode) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
+				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
 		</definition>
 	</include>
