@@ -9,7 +9,7 @@ In this version the default widgets that you may have seen on first install have
 
 [B][COLOR button_focus]Version 1.0.6[/COLOR][/B]
 - Added optional Raindrop Animated Background. You can turn this off in Skin settings » Options » Raindrop background. Note: Only works when you have Show media background toggled to 'off' in Skin settings » Artwork
-- Moved progress for widgets to InfoPanel
+- Moved percent progress for widgets to InfoPanel
 - Changed widget scrolling behavior
 - Fixed Landscape widget for episodes
 - Fixed Episode widget for movies and tvshows
