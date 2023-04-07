@@ -14,6 +14,7 @@ In this version the default widgets that you may have seen on first install have
 - Fixed Landscape widget for episodes
 - Fixed Episode widget for movies and tvshows
 - Renamed Episode widget to LandscapeInfo
+- Other small fixes/changes
 
 [B][COLOR button_focus]Version 1.0.5[/COLOR][/B]
 - Fixed scrolling in changelog and setup guide windows

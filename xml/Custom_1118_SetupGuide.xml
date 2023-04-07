@@ -14,7 +14,7 @@ Click a menu item to toggle the display of a section on and off. This will show 
 
 [B][COLOR deeppink]- Set main menu path[/COLOR][/B] is for setting up the path when clicking on the Movie/Show section in the main menu on the left side of the home screen. You can set this to whatever you path you like within FEN. I like to set mine to my Trakt movie/tvshow collection.
 
-[B][COLOR deeppink]- Set widgets[/COLOR][/B] is for setting up the movie/tvshow widgets. These are the main widgets that you'll set up. You can configure up to 10 movie and 10 TV show widgets. After choosing a path you'll have the option to set the label and display type (Poster or Landscape) for each widget. There is also a custom display type for episodes.
+[B][COLOR deeppink]- Set widgets[/COLOR][/B] is for setting up the movie/tvshow widgets. These are the main widgets that you'll set up. You can configure up to 10 movie and 10 TV show widgets. After choosing a path you'll have the option to set the label and display type (Poster, Landscape, or LandscapeInfo) for each widget.
 
 [B][COLOR deeppink]- Set category widget (top/bottom)[/COLOR][/B] is for setting up the category widgets. These are submenu-like widgets that point to a list of shortcuts for FEN. These widgets will sandwich your main movie/tvshow widgets. You can choose one submenu for the top and one for the bottom for both movies and tvshows. I recommend setting these to folders within FEN such as Genres, Years, etc. For greater flexibility you can also display custom curated Shortcut folders from FEN. This way you'll be able to set every single item in the submenu. To learn how to set these up go to the FEN addon » Tools » Tips for Fen Use » Shortcut Folders.
 
