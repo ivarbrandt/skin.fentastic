@@ -227,9 +227,9 @@
 			<!-- Widget Height Spacing -->
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>105</top>
+				<top>106</top>
 				<right>0</right>
-				<height>410</height>
+				<height>431</height>
 				<onback>9000</onback>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
@@ -240,7 +240,7 @@
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="440" height="700">
+				<itemlayout width="440" height="550">
 					<control type="group">
 						<left>70</left>
 						<top>5</top>
@@ -249,10 +249,11 @@
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="networks_label" value="$PARAM[networks_label]"/>
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
+							<!-- <param name="focused" value="flase" /> -->
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="440" height="700">
+				<focusedlayout width="440" height="550">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -268,6 +269,7 @@
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="networks_label" value="$PARAM[networks_label]"/>
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
+							<!-- <param name="focused" value="true" /> -->
 						</include>
 					</control>
 				</focusedlayout>

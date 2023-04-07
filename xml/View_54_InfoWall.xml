@@ -169,14 +169,15 @@
 				<align>center</align>
 				<bordersize>20</bordersize>
 			</control>
-			<!-- <control type="image">
+			<control type="image">
+				<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 				<left>20</left>
 				<top>175</top>
 				<width>376</width>
 				<height>70</height>
 				<texture>overlays/overlayfade.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
-			</control> -->
+			</control>
 			<control type="label">
 				<left>131</left>
 				<top>215</top>
@@ -185,6 +186,15 @@
 				<font>font20_title</font>
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>right</align>
+			</control>
+			<control type="image">
+				<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)] + [Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)]</visible>
+				<left>20</left>
+				<top>164</top>
+				<width>80</width>
+				<height>80</height>
+				<texture>overlays/overlay-bg.png</texture>
+				<visible></visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -270,6 +280,28 @@
 				<fadetime>200</fadetime>
 				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
+				<visible>String.IsEqual(ListItem.DBtype,movie) + ![$PARAM[focused]] + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
+			</control>
+			<control type="progress">
+				<left>20</left>
+				<top>292</top>
+				<width>416</width>
+				<height>1</height>
+				<texturebg></texturebg>
+				<fadetime>200</fadetime>
+				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
+				<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
+				<visible>![$PARAM[focused]] + Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
+			</control>
+			<control type="progress">
+				<left>20</left>
+				<top>292</top>
+				<width>416</width>
+				<height>1</height>
+				<texturebg></texturebg>
+				<fadetime>200</fadetime>
+				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
+				<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
 				<visible>![$PARAM[focused]] + String.IsEqual(ListItem.DBtype,episode) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
 			</control>
 			<control type="label">
@@ -284,7 +316,7 @@
 			</control>
 			<control type="group">
 				<left>50%</left>
-				<top>8</top>
+				<top>12</top>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>
 		</definition>
