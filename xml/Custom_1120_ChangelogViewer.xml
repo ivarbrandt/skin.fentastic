@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<window type="dialog" id="1119">
-	<defaultcontrol always="true">70</defaultcontrol>
+<window type="dialog" id="1120">
+	<defaultcontrol always="true">64</defaultcontrol>
 	<onunload>ClearProperty(TextViewerHeader,Home)</onunload>
 	<onunload>ClearProperty(TextViewerSubHeader,Home)</onunload>
 	<onunload>ClearProperty(TextViewerContent,Home)</onunload>
-	<onunload>ClearProperty(SetupGuide,skinsettings)</onunload>
+	<onunload>ClearProperty(Changelog,skinsettings)</onunload>
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
-		<control type="button" id="70">
-			<oninfo>Dialog.Close(1119)</oninfo>
-			<onclick>Dialog.Close(1119)</onclick>
-			<onleft>Dialog.Close(1119)</onleft>
-			<onright>Dialog.Close(1119)</onright>
-			<onup condition="String.IsEmpty(Window(skinsettings).Property(SetupGuide))">PageUp(68)</onup>
-			<ondown condition="String.IsEmpty(Window(skinsettings).Property(SetupGuide))">PageDown(68)</ondown>
-			<onup condition="!String.IsEmpty(Window(skinsettings).Property(SetupGuide))">PageUp(69)</onup>
-			<ondown condition="!String.IsEmpty(Window(skinsettings).Property(SetupGuide))">PageDown(69)</ondown>
+		<control type="button" id="64">
+			<oninfo>Dialog.Close(1120)</oninfo>
+			<onclick>Dialog.Close(1120)</onclick>
+			<onleft>Dialog.Close(1120)</onleft>
+			<onright>Dialog.Close(1120)</onright>
+			<onup condition="String.IsEmpty(Window(skinsettings).Property(Changelog))">PageUp(61)</onup>
+			<ondown condition="String.IsEmpty(Window(skinsettings).Property(Changelog))">PageDown(61)</ondown>
+			<onup condition="!String.IsEmpty(Window(skinsettings).Property(Changelog))">PageUp(62)</onup>
+			<ondown condition="!String.IsEmpty(Window(skinsettings).Property(Changelog))">PageDown(62)</ondown>
 			<include>HiddenObject</include>
 		</control>
-		<control type="group" id="35">
+		<control type="group">
 			<left>13%</left>
 			<centertop>45%</centertop>
 			<height>870</height>
@@ -52,42 +52,42 @@
 					<width>82%</width>
 					<height>675</height>
 					<shadowcolor>black</shadowcolor>
-					<pagecontrol>68</pagecontrol>
+					<pagecontrol>61</pagecontrol>
 					<font>font37</font>
 				<label>$INFO[Window(Home).Property(TextViewerContent)]</label>
-				<visible>String.IsEmpty(Window(skinsettings).Property(SetupGuide))</visible>
+				<visible>String.IsEmpty(Window(skinsettings).Property(Changelog))</visible>
 			</control>
 			<control type="textbox">
-				<left>3%</left>
+				<left>2%</left>
 				<top>105</top>
 				<width>79%</width>
 				<height>820</height>
 				<shadowcolor>black</shadowcolor>
-				<pagecontrol>69</pagecontrol>
+				<pagecontrol>62</pagecontrol>
 				<font>font37</font>
-				<include>SetupGuide</include>
-				<visible>!String.IsEmpty(Window(skinsettings).Property(SetupGuide))</visible>
-				<autoscroll delay="15000" time="4000" repeat="15000">Skin.HasSetting(autoscroll)</autoscroll>
+				<include>Changelog</include>
+				<visible>!String.IsEmpty(Window(skinsettings).Property(Changelog))</visible>
+				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 			</control>
-			<control type="scrollbar" id="68">
+			<control type="scrollbar" id="61">
 				<left>1390</left>
 				<top>70</top>
 				<bottom>-104</bottom>
 				<width>13</width>
-				<ondown>68</ondown>
-				<onup>68</onup>
+				<ondown>61</ondown>
+				<onup>61</onup>
 				<texturesliderbackground />
-				<visible>String.IsEmpty(Window(skinsettings).Property(SetupGuide))</visible>
+				<visible>String.IsEmpty(Window(skinsettings).Property(Changelog))</visible>
 			</control>
-			<control type="scrollbar" id="69">
+			<control type="scrollbar" id="62">
 				<left>1390</left>
 				<top>70</top>
 				<bottom>-104</bottom>
 				<width>13</width>
-				<ondown>68</ondown>
-				<onup>68</onup>
+				<ondown>61</ondown>
+				<onup>61</onup>
 				<texturesliderbackground />
-				<visible>!String.IsEmpty(Window(skinsettings).Property(SetupGuide))</visible>
+				<visible>!String.IsEmpty(Window(skinsettings).Property(Changelog))</visible>
 			</control>
 		</control>
 	</controls>
