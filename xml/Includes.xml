@@ -1605,13 +1605,16 @@
 			</control>
 		</focusedlayout>
 	</include>
+
+	<!-- MY INCLUDES -->
+
 	<include name="VisibleFadeEffect">
 		<animation effect="fade" time="1300">VisibleChange</animation>
 	</include>
+	
 	<include name="RainDropAnimationBackground">
 		<control type="group">
 			<visible>Skin.HasSetting(HideRainDrops) + ![Player.HasVideo + Player.HasAudio] + Skin.HasSetting(no_fanart)</visible>
-			<!-- <visible>Skin.HasSetting(HideRainDrops) + !Player.HasVideo + Skin.HasSetting(no_fanart)</visible> -->
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<description>Raindrop 9 animation</description>

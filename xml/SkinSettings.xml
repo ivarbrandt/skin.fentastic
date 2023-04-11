@@ -388,7 +388,7 @@
 					<include>DefaultSettingButton</include>
 					<label>[B]CHANGELOG: FENtastic[/B]</label>
 					<onclick>SetProperty(Changelog,True)</onclick>
-					<onclick>SetProperty(TextViewerHeader,[B]CHANGELOG: FENtastic v1.0.6[/B],Home)</onclick>
+					<onclick>SetProperty(TextViewerHeader,[B]CHANGELOG: FENtastic v1.0.7[/B],Home)</onclick>
 					<onclick>ActivateWindow(1120)</onclick>
 				</control>
 				<control type="button" id="6231">

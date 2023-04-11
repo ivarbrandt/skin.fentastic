@@ -40,7 +40,6 @@
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>115</top>
-				<onback>9000</onback>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
@@ -94,7 +93,6 @@
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>115</top>
-				<onback>9000</onback>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
@@ -230,7 +228,6 @@
 				<top>106</top>
 				<right>0</right>
 				<height>431</height>
-				<onback>9000</onback>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
@@ -296,16 +293,14 @@
 				<param name="posy" value="220"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
-			<control type="fixedlist" id="$PARAM[list_id]">
+			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
 				<height>500</height>
-				<onback>9000</onback>
 				<onright>$PARAM[list_id]</onright>
-				<orientation>horizontal</orientation>
-				<focusposition>0</focusposition>
-				<movement>3</movement>
+				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
+				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
 				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
@@ -319,6 +314,7 @@
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="single_label" value="$PARAM[single_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="focused" value="false" />
 						</include>
 					</control>
 				</itemlayout>
@@ -336,6 +332,7 @@
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="single_label" value="$PARAM[single_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="focused" value="true" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -361,16 +358,14 @@
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
-			<control type="fixedlist" id="$PARAM[list_id]">
+			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>110</top>
 				<right>0</right>
 				<height>240</height>
-				<onback>9000</onback>
 				<onright>$PARAM[list_id]</onright>
-				<orientation>horizontal</orientation>
-				<focusposition>0</focusposition>
-				<movement>3</movement>
+				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
+				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -424,13 +419,13 @@
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
-						<!-- <control type="image">
+						<control type="image">
 							<width>310</width>
 							<height>150</height>
 							<texture colordiffuse="button_focus">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
-						</control> -->
+						</control>
 						<!-- <control type="image">
 							<centertop>74</centertop>
 							<left>58</left>
@@ -500,16 +495,12 @@
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="posy" value="200"/>
 			</include>
-			<control type="fixedlist" id="$PARAM[list_id]">
+			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
 				<height>430</height>
-				<onback>9000</onback>
 				<onright>$PARAM[list_id]</onright>
-				<orientation>horizontal</orientation>
-				<focusposition>0</focusposition>
-				<movement>3</movement>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -600,13 +591,13 @@
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
-						<!-- <control type="image">
+						<control type="image">
 							<width>319</width>
 							<height>340</height>
 							<texture colordiffuse="button_focus">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
-						</control> -->
+						</control>
 						<control type="image">
 							<top>43</top>
 							<left>38</left>
@@ -680,16 +671,14 @@
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
-			<control type="fixedlist" id="$PARAM[list_id]">
+			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>90</top>
 				<right>0</right>
 				<height>396</height>
-				<onback>9000</onback>
 				<onright>$PARAM[list_id]</onright>
-				<orientation>horizontal</orientation>
-				<focusposition>0</focusposition>
-				<movement>4</movement>
+				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
+				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -757,7 +746,7 @@
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
-						<!-- <control type="image">
+						<control type="image">
 							<left>0</left>
 							<top>20</top>
 							<width>254</width>
@@ -765,7 +754,7 @@
 							<texture colordiffuse="button_focus">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
-						</control> -->
+						</control>
 						<control type="image">
 							<left>60</left>
 							<top>108</top>
@@ -1072,9 +1061,10 @@
 		<orientation>horizontal</orientation>
 		<onleft>9000</onleft>
 		<onright>noop</onright>
+		<onback>9000</onback>
 		<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
-		<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
-		<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
+		<!-- <onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus> -->
+		<!-- <onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus> -->
 		<onback>SetFocus($PARAM[list_id],0,absolute)</onback>
 		<preloaditems>2</preloaditems>
 	</include>
