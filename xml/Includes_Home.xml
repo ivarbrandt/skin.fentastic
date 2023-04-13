@@ -390,11 +390,24 @@
 							<aspectratio>keep</aspectratio>
 						</control> -->
 						<control type="textbox">
+							<visible>!String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
 							<left>38</left>
 							<top>41</top>
 							<width>234</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label]</label>
+							<font>font25_narrow</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="textbox">
+							<visible>String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
+							<left>38</left>
+							<top>41</top>
+							<width>234</width>
+							<height>70</height>
+							<label>$INFO[ListItem.Label] ($INFO[System.AddonUpdateCount])</label>
 							<font>font25_narrow</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
@@ -435,11 +448,24 @@
 							<aspectratio>keep</aspectratio>
 						</control> -->
 						<control type="textbox">
+							<visible>!String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
 							<left>38</left>
 							<top>41</top>
 							<width>234</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label]</label>
+							<font>font25_narrow</font>
+							<shadowcolor>text_shadow</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="textbox">
+							<visible>String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
+							<left>38</left>
+							<top>41</top>
+							<width>234</width>
+							<height>70</height>
+							<label>$INFO[ListItem.Label] ($INFO[System.AddonUpdateCount])</label>
 							<font>font25_narrow</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
