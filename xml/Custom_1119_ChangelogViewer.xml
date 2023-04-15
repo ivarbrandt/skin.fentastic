@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<window type="dialog" id="1120">
+<window type="dialog" id="1119">
 	<defaultcontrol always="true">64</defaultcontrol>
 	<onunload>ClearProperty(TextViewerHeader,Home)</onunload>
 	<onunload>ClearProperty(TextViewerSubHeader,Home)</onunload>
@@ -8,10 +8,10 @@
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
 		<control type="button" id="64">
-			<oninfo>Dialog.Close(1120)</oninfo>
-			<onclick>Dialog.Close(1120)</onclick>
-			<onleft>Dialog.Close(1120)</onleft>
-			<onright>Dialog.Close(1120)</onright>
+			<oninfo>Dialog.Close(1119)</oninfo>
+			<onclick>Dialog.Close(1119)</onclick>
+			<onleft>Dialog.Close(1119)</onleft>
+			<onright>Dialog.Close(1119)</onright>
 			<onup condition="String.IsEmpty(Window(skinsettings).Property(Changelog))">PageUp(61)</onup>
 			<ondown condition="String.IsEmpty(Window(skinsettings).Property(Changelog))">PageDown(61)</ondown>
 			<onup condition="!String.IsEmpty(Window(skinsettings).Property(Changelog))">PageUp(62)</onup>

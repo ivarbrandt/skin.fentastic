@@ -256,10 +256,10 @@
 						<left>70</left>
 						<top>5</top>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="280,170" />
+							<effect type="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="280,170" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="280,170" />
+							<effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="280,170" />
 						</animation>
 						<include content="InfoWallEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
