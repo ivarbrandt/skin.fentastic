@@ -99,7 +99,7 @@ That's it! You're all set to go. Enjoy the skin!
 
 If you are experiencing random or semi-random crashes when either returning to the home screen after playback or returning to the home screen after an extended period of time away from the home screen, go into the FEN addon » Tools » click [B]TOOLS:[/B] Set Language Invoker (ADVANCED!!) » Set it to FALSE.
 
-This should alleviate the crashing on your device. The tradeoff for this is that you'll lose some speed when navigating FEN.
+This should alleviate the crashing on your device. The trade off for this is that you'll lose some speed when navigating FEN.
     </label>
   </include>
 </includes>
