@@ -20,6 +20,11 @@
 - Fixed scrolling in changelog and setup guide windows
 
 [B][COLOR button_focus]Version 1.0.4[/COLOR][/B]
+
+[B]IMPORTANT NOTICE: IF YOUR WIDGETS WERE DELETED AFTER THIS UPDATE PLEASE READ INFO BELOW
+
+In this version the default widgets that you may have seen on first install have been removed. In order to avoid possible future conflicts and/or errors, please go to Skin settings » Main menu items » click Remake Menus and Widgets. This will remove the default widgets if any and remake the ones you have already set up. If you didn't set up any widgets on first install, and all of your widgets were deleted, go back into Skin settings » Main menu items in order to set up your widgets. See Setup Guide for help setting up your widgets. This is a one-time thing and will not be necessary for future updates.[/B]
+
 - Added release year to InfoPanel
 - Changed default format of InfoPanel. You can switch back to the previous format by going into Skin settings » Options » Alternate Format (InfoPanel)
 - Renamed Changelog tab in Skin settings to Extra info
