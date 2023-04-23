@@ -66,8 +66,8 @@
 						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar]</texture>
 					</control>
 					<control type="group">
-						<left>291</left>
-						<top>143</top>
+						<left>541</left>
+						<top>142</top>
 						<include content="RatingCircle">
 							<param name="animation" value="True" />
 						</include>

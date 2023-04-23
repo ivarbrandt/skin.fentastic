@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
   <include name="Changelog">
-    <label>[B][COLOR button_focus]Version 1.0.7[/COLOR][/B]
+    <label>[B][COLOR button_focus]Version 1.0.8[/COLOR][/B]
+- Moved ratings to upper right corner
+    
+[B][COLOR button_focus]Version 1.0.7[/COLOR][/B]
 - Re-added changelog viewing for other addons
 - Reverted focus and scrolling behavior for widgets that don't use the InfoPanel
 - Added details to Available updates category widget. You can now see how many addon updates are pending directly from the Addon section on the home screen.

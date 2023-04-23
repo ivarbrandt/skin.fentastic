@@ -315,7 +315,7 @@
 				<visible>$PARAM[focused] + String.IsEqual(ListItem.DBtype,episode) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
 			</control>
 			<control type="group">
-				<left>50%</left>
+				<left>349</left>
 				<top>12</top>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>
@@ -468,7 +468,7 @@
 				<texture>$VAR[WallWatchedIconVar]</texture>
 			</control>
 			<control type="group">
-				<left>133</left>
+				<left>243</left>
 				<top>-8</top>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>

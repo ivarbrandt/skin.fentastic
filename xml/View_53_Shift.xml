@@ -133,7 +133,7 @@
 							<texture>$VAR[WallWatchedIconVar]</texture>
 						</control>
 						<control type="group">
-							<left>158</left>
+							<left>285</left>
 							<top>92</top>
 							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 						</control>
@@ -235,7 +235,7 @@
 							<texture>$VAR[WallWatchedIconVar]</texture>
 						</control>
 						<control type="group">
-							<left>158</left>
+							<left>285</left>
 							<top>92</top>
 							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 						</control>

@@ -168,6 +168,13 @@
 					<visible>String.IsEqual(ListItem.DBtype,movie) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
+				<control type="group">
+				<left>433</left>
+				<top>-14</top>
+				<include content="RatingCircle">
+					<param name="animation" value="True" />
+				</include>
+			</control>
 			</control>
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
@@ -218,13 +225,6 @@
 				<visible>Control.HasFocus(51)</visible>
 				<animation effect="fade" time="100">VisibleChange</animation>
 				<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
-			</control>
-			<control type="group">
-				<left>216</left>
-				<top>-18</top>
-				<include content="RatingCircle">
-					<param name="animation" value="True" />
-				</include>
 			</control>
 		</control>
 	</include>

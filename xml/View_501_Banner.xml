@@ -46,7 +46,8 @@
 							<visible>String.IsEmpty(ListItem.Art(banner)) + !Listitem.IsParentFolder</visible>
 						</control>
 						<control type="group">
-							<left>405</left>
+							<top>2</top>
+							<left>793</left>
 							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 						</control>
 
@@ -101,16 +102,9 @@
 						<control type="group">
 							<include>Animation_FocusTextureFade</include>
 							<control type="image">
-								<left>18</left>
-								<top>18</top>
-								<width>824</width>
-								<height>160</height>
-								<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
-							</control>
-							<control type="image">
-								<left>22</left>
+								<left>21</left>
 								<top>115</top>
-								<width>816</width>
+								<width>818</width>
 								<height>60</height>
 								<texture>overlays/overlayfade.png</texture>
 								<animation effect="fade" start="0" end="80" time="50">Focus</animation>
@@ -170,18 +164,21 @@
 								<aligny>center</aligny>
 								<label>$VAR[BannerLabel2Var]</label>
 							</control>
+							<!-- <control type="group">
+								<top>2</top>
+								<left>793</left>
+								<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+							</control> -->
+							<control type="image">
+								<left>18</left>
+								<top>18</top>
+								<width>824</width>
+								<height>160</height>
+								<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+							</control>
 						</control>
-						<control type="group">
-							<left>405</left>
-							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
-						</control>
-
-						
-
-
 					</control>
 				</focusedlayout>
-				
 			</control>
 		</control>
 	</include>

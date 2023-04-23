@@ -135,6 +135,24 @@
 	<include name="UserRatingContent">
 		<visible>!String.IsEmpty($PARAM[infolabel])</visible>
 		<control type="image">
+			<left>-72</left>
+			<top>18</top>
+			<width>119</width>
+			<height>119</height>
+			<aspectratio>keep</aspectratio>
+			<texture>overlays/overlay-bg3.png</texture>
+		</control>
+		<control type="label">
+			<left>3</left>
+			<top>13</top>
+			<align>center</align>
+			<aligny>center</aligny>
+			<width>44</width>
+			<height>44</height>
+			<font>font20_title</font>
+			<label>$INFO[$PARAM[infolabel]]</label>
+		</control>
+		<!-- <control type="image">
 			<left>3</left>
 			<top>-3</top>
 			<width>44</width>
@@ -151,7 +169,7 @@
 			<height>44</height>
 			<font>font20_title</font>
 			<label>$INFO[$PARAM[infolabel]]</label>
-		</control>
+		</control> -->
 	</include>
 	<include name="InfoList">
 		<param name="item_label">$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]</param>

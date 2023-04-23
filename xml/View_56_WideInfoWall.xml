@@ -238,11 +238,11 @@
 					<visible>![$PARAM[focused]] + String.IsEqual(ListItem.DBtype,episode) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
-			<control type="group">
-				<left>50%</left>
-				<top>8</top>
-				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
-			</control>
+				<!-- <control type="group">
+					<left>50%</left>
+					<top>8</top>
+					<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+				</control> -->
 		</definition>
 	</include>
 	<include name="WideInfoWallMovieLayout">
@@ -397,6 +397,7 @@
 				</control>
 			</control>
 			<control type="label">
+				<visible>![Control.IsVisible(56) | Control.IsVisible(504)]</visible>
 				<left>150</left>
 				<top>220</top>
 				<width>260</width>
@@ -413,7 +414,7 @@
 				<texture>$VAR[WallWatchedIconVar]</texture>
 			</control>
 			<control type="group">
-        <left>197</left>
+        <left>368</left>
 				<top>-8</top>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>
