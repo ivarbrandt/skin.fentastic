@@ -225,7 +225,7 @@
 						<textoffsetx>40</textoffsetx>
 						<align>center</align>
 						<label>$LOCALIZE[19041]</label>
-						<texturenofocus border="40" colordiffuse="button_focus">buttons/dialogbutton-nofo.png</texturenofocus>
+						<texturenofocus border="40" colordiffuse="button_focus2">buttons/dialogbutton-nofo.png</texturenofocus>
 					</control>
 					<control type="button" id="31">
 						<description>New channel Button</description>
@@ -234,7 +234,7 @@
 						<textoffsetx>40</textoffsetx>
 						<align>center</align>
 						<label>$LOCALIZE[19204]</label>
-						<texturenofocus border="40" colordiffuse="button_focus">buttons/dialogbutton-nofo.png</texturenofocus>
+						<texturenofocus border="40" colordiffuse="button_focus2">buttons/dialogbutton-nofo.png</texturenofocus>
 					</control>
 					<control type="button" id="30">
 						<description>Group Manager Button</description>
@@ -243,7 +243,7 @@
 						<textoffsetx>40</textoffsetx>
 						<align>center</align>
 						<label>$LOCALIZE[19205]</label>
-						<texturenofocus border="40" colordiffuse="button_focus">buttons/dialogbutton-nofo.png</texturenofocus>
+						<texturenofocus border="40" colordiffuse="button_focus2">buttons/dialogbutton-nofo.png</texturenofocus>
 					</control>
 					<control type="togglebutton" id="34">
 						<description>TV/Radio toggle</description>
@@ -255,7 +255,7 @@
 						<label>$LOCALIZE[19024]</label>
 						<altlabel>$LOCALIZE[19023]</altlabel>
 						<usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
-						<texturenofocus border="40" colordiffuse="button_focus">buttons/dialogbutton-nofo.png</texturenofocus>
+						<texturenofocus border="40" colordiffuse="button_focus2">buttons/dialogbutton-nofo.png</texturenofocus>
 					</control>
 				</control>
 			</control>

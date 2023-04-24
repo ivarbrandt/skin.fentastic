@@ -20,7 +20,7 @@
 				<top>80</top>
 				<width>1200</width>
 				<height>790</height>
-				<texture colordiffuse="button_focus" border="40">buttons/dialogbutton-nofo.png</texture>
+				<texture colordiffuse="button_focus2" border="40">buttons/dialogbutton-nofo.png</texture>
 			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>

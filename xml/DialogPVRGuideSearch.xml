@@ -26,7 +26,7 @@
 				<onright>9000</onright>
 				<onup>24</onup>
 				<ondown>10</ondown>
-				<colordiffuse>button_focus</colordiffuse>
+				<colordiffuse>button_focus2</colordiffuse>
 			</control>
 			<control type="textbox">
 				<description>Search help</description>
@@ -43,7 +43,7 @@
 				<top>210</top>
 				<width>1460</width>
 				<height>675</height>
-				<texture colordiffuse="button_focus" border="40">buttons/dialogbutton-nofo.png</texture>
+				<texture colordiffuse="button_focus2" border="40">buttons/dialogbutton-nofo.png</texture>
 			</control>
 			<control type="grouplist" id="5000">
 				<left>30</left>

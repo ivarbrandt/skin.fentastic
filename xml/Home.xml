@@ -495,7 +495,7 @@
 							<control type="image">
 								<bottom>90</bottom>
 								<width>100%</width>
-								<texture colordiffuse="button_focus" border="21">dialogs/dialog-bg.png</texture>
+								<texture colordiffuse="button_focus2" border="21">dialogs/dialog-bg.png</texture>
 							</control>
 							<control type="label">
 								<left>840</left>
@@ -783,7 +783,7 @@
 									<top>1</top>
 									<width>95</width>
 									<height>95</height>
-									<texture colordiffuse="button_focus">$INFO[ListItem.Art(thumb)]</texture>
+									<texture colordiffuse="button_focus2">$INFO[ListItem.Art(thumb)]</texture>
 									<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 								</control>
 								<!-- <control type="image">

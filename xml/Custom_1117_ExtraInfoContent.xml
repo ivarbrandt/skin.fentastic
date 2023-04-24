@@ -2,7 +2,7 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR button_focus]Version 1.0.8[/COLOR][/B]
-- Moved ratings to upper right corner
+- Moved ratings to upper right corner of artwork
     
 [B][COLOR button_focus]Version 1.0.7[/COLOR][/B]
 - Re-added changelog viewing for other addons

@@ -96,7 +96,7 @@
 						<onleft>4000</onleft>
 						<onright>4000</onright>
 						<ondown>5000</ondown>
-						<texturenofocus colordiffuse="button_focus" border="21">dialogs/dialog-bg.png</texturenofocus>
+						<texturenofocus colordiffuse="button_focus2" border="21">dialogs/dialog-bg.png</texturenofocus>
 						<visible>Integer.IsGreater(Container(4000).NumItems,0)</visible>
 					</control>
 					<control type="image">
@@ -104,7 +104,7 @@
 						<width>512</width>
 						<height>418</height>
 						<aligny>bottom</aligny>
-						<texture colordiffuse="button_focus" border="21">dialogs/dialog-bg.png</texture>
+						<texture colordiffuse="button_focus2" border="21">dialogs/dialog-bg.png</texture>
 						<visible>Integer.IsGreater(Container(4000).NumItems,0)</visible>
 					</control>
 					<control type="button" id="139">
@@ -205,7 +205,7 @@
 					</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="155" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[31048]: [/COLOR]$INFO[ListItem.Season,, $LOCALIZE[36905]]$INFO[ListItem.Episode, (, $LOCALIZE[20453])]" />
+						<param name="label" value="[COLOR button_focs2]$LOCALIZE[31048]: [/COLOR]$INFO[ListItem.Season,, $LOCALIZE[36905]]$INFO[ListItem.Episode, (, $LOCALIZE[20453])]" />
 						<param name="altlabel" value="$LOCALIZE[31048]: $INFO[ListItem.Season,, $LOCALIZE[36905]]$INFO[ListItem.Episode, (, $LOCALIZE[20453])]" />
 						<param name="visible" value="!String.IsEmpty(ListItem.Season) + !String.IsEqual(ListItem.DBType,episode)" />
 					</include>
@@ -229,7 +229,7 @@
 					</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="159" />
-						<param name="label" value="[COLOR button_focus]$LOCALIZE[126]: [/COLOR]$INFO[ListItem.Status]" />
+						<param name="label" value="[COLOR button_focus2]$LOCALIZE[126]: [/COLOR]$INFO[ListItem.Status]" />
 						<param name="altlabel" value="$LOCALIZE[126]: $INFO[ListItem.Status]" />
 						<param name="visible" value="!String.IsEmpty(ListItem.Status)" />
 					</include>

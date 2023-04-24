@@ -21,7 +21,7 @@
 					<width>755</width>
 					<height>435</height>
 					<label></label>
-					<texturenofocus colordiffuse="primary_background" border="21">dialogs/dialog-bg.png</texturenofocus>
+					<texturenofocus colordiffuse="button_focus2" border="21">dialogs/dialog-bg.png</texturenofocus>
 					<onup>50</onup>
 					<ondown>9000</ondown>
 					<onclick>SetProperty(TextViewer_Header,$LOCALIZE[31141] $INFO[ListItem.AddonVersion],home)</onclick>
@@ -133,12 +133,13 @@
 				</include>
 				<control type="group">
 					<control type="image">
-						<left>1370</left>
+						<left>1345</left>
 						<top>420</top>
-						<width>450</width>
+						<width>494</width>
 						<height>396</height>
 						<aspectratio>scale</aspectratio>
-						<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
+						<!-- <texture colordiffuse="AAFFFFFF">colors/black.png</texture> -->
+						<texture colordiffuse="button_focus2" border="21">dialogs/dialog-bg.png</texture>
 					</control>
 					<control type="group">
 						<left>1340</left>
@@ -260,7 +261,7 @@
 						<align>center</align>
 						<aligny>top</aligny>
 						<texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
-						<texturenofocus border="21" colordiffuse="button_focus">buttons/button-nofo.png</texturenofocus>
+						<texturenofocus border="21" colordiffuse="button_focus2">buttons/button-nofo.png</texturenofocus>
 						<textoffsetx>35</textoffsetx>
 						<textoffsety>76</textoffsety>
 						<radioposx>81</radioposx>
@@ -311,7 +312,7 @@
 					<width>540</width>
 					<height>540</height>
 					<aspectratio>scale</aspectratio>
-					<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+					<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>

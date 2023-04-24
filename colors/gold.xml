@@ -2,7 +2,8 @@
 <colors>
 	<color name="primary_background">FF966300</color>
 	<color name="secondary_background">33FFFF00</color>
-	<color name="dialog_tint">FF322000</color>
+	<color name="dialog_tint">E6322000</color>
 	<color name="button_focus">FFCFA700</color>
+	<color name="button_focus2">B3CFA700</color>
 	<color name="selected">FFFFF000</color>
 </colors>

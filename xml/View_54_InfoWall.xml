@@ -54,7 +54,7 @@
 				<top>0</top>
 				<width>316</width>
 				<height>386</height>
-				<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>
@@ -131,7 +131,7 @@
 				<top>10</top>
 				<width>416</width>
 				<height>325</height>
-				<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>
@@ -267,7 +267,7 @@
 				<width>416</width>
 				<height>1</height>
 				<texturebg></texturebg>
-				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
+				<midtexture colordiffuse="button_focus2" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
 				<visible>String.IsEqual(ListItem.DBtype,movie) + ![$PARAM[focused]] + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
 			</control> -->

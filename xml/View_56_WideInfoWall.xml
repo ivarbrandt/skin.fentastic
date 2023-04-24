@@ -130,7 +130,7 @@
 				<top>10</top>
 				<width>416</width>
 				<height>286</height>
-				<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>

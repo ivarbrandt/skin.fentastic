@@ -30,7 +30,7 @@
 			<top>145</top>
 			<width>860</width>
 			<height>285</height>
-			<texture colordiffuse="button_focus" border="40">buttons/dialogbutton-nofo.png</texture>
+			<texture colordiffuse="button_focus2" border="40">buttons/dialogbutton-nofo.png</texture>
 		</control>
 		<control type="list" id="10">
 			<left>45</left>

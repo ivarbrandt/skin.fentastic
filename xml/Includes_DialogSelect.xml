@@ -17,7 +17,7 @@
 				<top>80</top>
 				<width>920</width>
 				<bottom>2</bottom>
-				<texture colordiffuse="button_focus" border="40">buttons/dialogbutton-nofo.png</texture>
+				<texture colordiffuse="button_focus2" border="40">buttons/dialogbutton-nofo.png</texture>
 			</control>
 			<control type="list" id="3">
 				<left>20</left>

@@ -16,14 +16,14 @@
 					<top>760</top>
 					<width>100%</width>
 					<height>110</height>
-					<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+					<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
 					<top>35</top>
 					<width>100%</width>
 					<height>190</height>
-					<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+					<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 				</control>
 			</control>
 			<control type="group">

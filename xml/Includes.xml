@@ -158,7 +158,7 @@
 			<width>44</width>
 			<height>44</height>
 			<aspectratio>keep</aspectratio>
-			<texture colordiffuse="button_focus">overlays/badge.png</texture>
+			<texture colordiffuse="button_focus2">overlays/badge.png</texture>
 		</control>
 		<control type="label">
 			<left>3</left>
@@ -1416,7 +1416,7 @@
 		<definition>
 			<!-- Content Panel Background -->
 			<control type="image">
-				<texture flipx="$PARAM[flipx]" colordiffuse="button_focus">lists/panel.png</texture>
+				<texture flipx="$PARAM[flipx]" colordiffuse="button_focus2">lists/panel.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<width>$PARAM[width]</width>
@@ -1556,7 +1556,7 @@
 				<left>-5</left>
 				<width>410</width>
 				<height>270</height>
-				<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>
@@ -1591,7 +1591,7 @@
 					<left>-5</left>
 					<width>410</width>
 					<height>270</height>
-					<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+					<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>

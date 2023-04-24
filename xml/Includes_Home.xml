@@ -183,7 +183,7 @@
 							<onclick>$PARAM[button2_onclick]</onclick>
 							<onclick>SetFocus(9000)</onclick>
 							<align>center</align>
-							<texturefocus border="23" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texturefocus>
+							<texturefocus border="23" colordiffuse="">buttons/dialogbutton-fo.png</texturefocus>
 							<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 							<visible>$PARAM[visible_2]</visible>
 						</control>
@@ -377,7 +377,7 @@
 						<control type="image">
 							<width>310</width>
 							<height>150</height>
-							<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
@@ -428,7 +428,7 @@
 						<control type="image">
 							<width>310</width>
 							<height>150</height>
-							<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
@@ -537,7 +537,7 @@
 						<control type="image">
 							<width>319</width>
 							<height>340</height>
-							<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
@@ -613,7 +613,7 @@
 						<control type="image">
 							<width>319</width>
 							<height>340</height>
-							<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
@@ -717,7 +717,7 @@
 							<top>20</top>
 							<width>254</width>
 							<height>280</height>
-							<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
@@ -768,7 +768,7 @@
 							<top>20</top>
 							<width>254</width>
 							<height>280</height>
-							<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>

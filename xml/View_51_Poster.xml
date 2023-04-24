@@ -21,7 +21,7 @@
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 				<visible>Control.IsVisible(51)</visible>
 			</control>
 			<control type="group">
@@ -213,7 +213,7 @@
 				<width>476</width>
 				<height>1</height>
 				<texturebg></texturebg>
-				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
+				<midtexture colordiffuse="button_focus2" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 			</control>
@@ -224,7 +224,7 @@
 				<height>721</height>
 				<visible>Control.HasFocus(51)</visible>
 				<animation effect="fade" time="100">VisibleChange</animation>
-				<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+				<texture border="8" colordiffuse="button_focus2">buttons/thumbnail_focused.png</texture>
 			</control>
 		</control>
 	</include>

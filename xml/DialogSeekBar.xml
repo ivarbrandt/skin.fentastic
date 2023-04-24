@@ -313,7 +313,7 @@
 				<left>0</left>
 				<width>100%</width>
 				<height>240</height>
-				<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -382,7 +382,7 @@
 				<left>0</left>
 				<width>100%</width>
 				<height>330</height>
-				<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 			</control>
 
 			<control type="image">

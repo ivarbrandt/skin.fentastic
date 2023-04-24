@@ -21,7 +21,7 @@
 						<top>-10</top>
 						<width>100%</width>
 						<bottom>336</bottom>
-						<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+						<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 					</control>
 					<control type="group">
 						<visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>

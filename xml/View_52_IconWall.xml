@@ -25,7 +25,7 @@
 						<control type="image">
 							<width>396</width>
 							<height>245</height>
-							<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
@@ -71,14 +71,14 @@
 						<control type="image">
 							<width>396</width>
 							<height>245</height>
-							<texture colordiffuse="button_focus">dialogs/dialog-bg-nobo.png</texture>
+							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
 							<width>396</width>
 							<height>245</height>
-							<texture colordiffuse="button_focus">colors/grey.png</texture>
+							<texture colordiffuse="button_focus2">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
 						</control>
@@ -151,7 +151,7 @@
 						<control type="image">
 							<width>330</width>
 							<height>140</height>
-							<texture colordiffuse="button_focus">colors/grey.png</texture>
+							<texture colordiffuse="button_focus2">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
 						</control>

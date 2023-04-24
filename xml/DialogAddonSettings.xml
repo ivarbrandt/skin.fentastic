@@ -35,7 +35,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font25_title</font>
-				<texturenofocus colordiffuse="button_focus" border="40">buttons/dialogbutton-nofo.png</texturenofocus>
+				<texturenofocus colordiffuse="button_focus2" border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 			</control>
 			<control type="image">
 				<left>410</left>
