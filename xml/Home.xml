@@ -34,6 +34,7 @@
 		</control>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+			<!-- WIDGETS GROUP -->
 			<control type="group" id="2000">
 				<left>462</left>
 				<animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
@@ -54,9 +55,7 @@
 					<control type="grouplist" id="19001">
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>19099</pagecontrol>
-						<include content="MovieCategoryWidgetTop" condition="!Skin.HasSetting(HomeMenuNoMoviesCategories) + !Skin.HasSetting(HomeMenuNoMoviesButton)" />
 						<include content="MovieWidgets" condition="!Skin.HasSetting(HomeMenuNoMoviesButton)" />
-						<include content="MovieCategoryWidgetBottom" condition="!Skin.HasSetting(HomeMenuNoMoviesCategories) + !Skin.HasSetting(HomeMenuNoMoviesButton)" />
 					</control>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="19099"/>
@@ -71,9 +70,7 @@
 					<control type="grouplist" id="22001">
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>22099</pagecontrol>
-						<include content="TVShowCategoryWidgetTop" condition="!Skin.HasSetting(HomeMenuNoTVShowsCategories) + !Skin.HasSetting(HomeMenuNoTVShowsButton)" />
 						<include content="TVShowWidgets" condition="!Skin.HasSetting(HomeMenuNoTVShowsButton)" />
-						<include content="TVShowCategoryWidgetBottom" condition="!Skin.HasSetting(HomeMenuNoTVShowsCategories) + !Skin.HasSetting(HomeMenuNoTVShowsButton)" />
 					</control>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="22099"/>
@@ -755,6 +752,7 @@
 					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 					<!-- <visible allowhiddenfocus="true">[!ControlGroup(19000).HasFocus + !ControlGroup(22000).HasFocus]</visible> -->
 					<visible allowhiddenfocus="true">![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)]</visible>
+					<!-- <visible>Control.HasFocus(9000)</visible> -->
 					<control type="fixedlist" id="9000">
 						<left>0</left>
 						<top>240</top>
@@ -975,6 +973,7 @@
 					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 					<width>550</width>
 					<visible>String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)</visible>
+					<!-- <visible>!Control.HasFocus(9000)</visible> -->
 					<include>OpenClose_Left</include>
 					<control type="image">
 						<left>30</left>
