@@ -621,8 +621,8 @@
 						<texture colordiffuse="primary_background" border="3" fallback="windows/pvr/epg-genres/0.png">$INFO[ListItem.Property(GenreType),windows/pvr/epg-genres/,.png]</texture>
 					</control>
 					<control type="label" id="1">
-						<left>6</left>
-						<top>0</top>
+						<left>15</left>
+						<top>12</top>
 						<height>36</height>
 						<aligny>center</aligny>
 						<font>font13</font>
@@ -669,8 +669,8 @@
 						<visible>!Control.HasFocus($PARAM[control_id])</visible>
 					</control> -->
 					<control type="label" id="1">
-						<left>6</left>
-						<top>0</top>
+						<left>15</left>
+						<top>12</top>
 						<height>36</height>
 						<aligny>center</aligny>
 						<font>font13</font>

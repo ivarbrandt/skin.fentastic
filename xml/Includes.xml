@@ -143,10 +143,10 @@
 			<texture>overlays/overlay-bg3.png</texture>
 		</control>
 		<control type="label">
-			<left>3</left>
-			<top>13</top>
-			<align>center</align>
-			<aligny>center</aligny>
+			<left>-3</left>
+			<top>19</top>
+			<align>right</align>
+			<!-- <aligny>center</aligny> -->
 			<width>44</width>
 			<height>44</height>
 			<font>font20_title</font>

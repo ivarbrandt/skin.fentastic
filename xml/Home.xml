@@ -985,12 +985,25 @@
 						<aspectratio align="center">keep</aspectratio>
 					</control>
 					<control type="textbox">
+						<visible>!String.IsEqual(System.Language,Hebrew)</visible>
 						<top>75</top>
 						<left>30</left>
 						<width>430</width>
 						<aligny>center</aligny>
 						<height>98</height>
 						<font>font36_title</font>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
+					</control>
+					<control type="textbox">
+						<visible>String.IsEqual(System.Language,Hebrew)</visible>
+						<top>75</top>
+						<left>10</left>
+						<width>430</width>
+						<aligny>center</aligny>
+						<height>98</height>
+						<font>font36_title</font>
+						<align>right</align>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>

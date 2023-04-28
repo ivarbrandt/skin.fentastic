@@ -3,11 +3,15 @@
   <include name="Changelog">
     <label>[B][COLOR button_focus]Version 1.0.8[/COLOR][/B]
 - Moved ratings to upper right corner of artwork
-    
+- Cleaned up season views
+- Adjusted background transparency skin-wide. I don't use all parts of the skin so if some colors look off in a particular area of the skin please let me know by opening on issue on my Github
+- Small text alignment changes to PVR guide
+- Other small fixes/changes
+
 [B][COLOR button_focus]Version 1.0.7[/COLOR][/B]
 - Re-added changelog viewing for other addons
 - Reverted focus and scrolling behavior for widgets that don't use the InfoPanel
-- Added details to Available updates category widget. You can now see how many addon updates are pending directly from the Addon section on the home screen.
+- Added details to Available updates category widget. You can now see how many addon updates are pending directly from the Addon section on the home screen
 - Added tip to Extra info to help with Kodi crashes
 
 [B][COLOR button_focus]Version 1.0.6[/COLOR][/B]
