@@ -26,59 +26,59 @@
 			</control>
 		</definition>
 	</include>
-    <include name="CategoryLabelWidget">
-        <param name="visible">true</param>
-        <param name="item_treshold">0</param>
-        <definition>
-            <control type="label" id="$PARAM[list_id]666">
-                <left>55</left>
-                <top>80</top>
-                <onback>9000</onback>
-                <width>900</width>
-                <height>90</height>
-                <label>$PARAM[label]</label>
-                <shadowcolor>text_shadow</shadowcolor>
-                <visible>$PARAM[visible]</visible>
-                <visible>!Container($PARAM[list_id]).IsUpdating</visible>
-            </control>
-        </definition>
-    </include>
-    <include name="PVRWidget">
-        <control type="image">
-            <top>80</top>
-            <left>16</left>
-            <width>670</width>
-            <height>225</height>
-            <texture border="21">dialogs/dialog-bg.png</texture>
-        </control>
-        <control type="image">
-            <left>55</left>
-            <top>122</top>
-            <width>140</width>
-            <height>140</height>
-            <aspectratio>keep</aspectratio>
-            <texture background="true" fallback="DefaultVideo.png">$PARAM[icon]</texture>
-        </control>
-        <control type="label">
-            <left>225</left>
-            <top>127</top>
-            <height>25</height>
-            <width>420</width>
-            <label>$PARAM[header]</label>
-            <aligny>center</aligny>
-            <font>font36_title</font>
-            <shadowcolor>black</shadowcolor>
-        </control>
-        <control type="label">
-            <left>225</left>
-            <top>172</top>
-            <height>105</height>
-            <width>420</width>
-            <label>$PARAM[label1][CR]$PARAM[label2]</label>
-            <font>font12</font>
-            <shadowcolor>black</shadowcolor>
-        </control>
-    </include>
+	<include name="CategoryLabelWidget">
+		<param name="visible">true</param>
+		<param name="item_treshold">0</param>
+		<definition>
+			<control type="label" id="$PARAM[list_id]666">
+				<left>55</left>
+				<top>80</top>
+				<onback>9000</onback>
+				<width>900</width>
+				<height>90</height>
+				<label>$PARAM[label]</label>
+				<shadowcolor>text_shadow</shadowcolor>
+				<visible>$PARAM[visible]</visible>
+				<visible>!Container($PARAM[list_id]).IsUpdating</visible>
+				</control>
+		</definition>
+	</include>
+	<include name="PVRWidget">
+			<control type="image">
+					<top>80</top>
+					<left>16</left>
+					<width>670</width>
+					<height>225</height>
+					<texture border="21">dialogs/dialog-bg.png</texture>
+			</control>
+			<control type="image">
+					<left>55</left>
+					<top>122</top>
+					<width>140</width>
+					<height>140</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true" fallback="DefaultVideo.png">$PARAM[icon]</texture>
+			</control>
+			<control type="label">
+					<left>225</left>
+					<top>127</top>
+					<height>25</height>
+					<width>420</width>
+					<label>$PARAM[header]</label>
+					<aligny>center</aligny>
+					<font>font36_title</font>
+					<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+					<left>225</left>
+					<top>172</top>
+					<height>105</height>
+					<width>420</width>
+					<label>$PARAM[label1][CR]$PARAM[label2]</label>
+					<font>font12</font>
+					<shadowcolor>black</shadowcolor>
+			</control>
+	</include>
 	<include name="WidgetListPoster">
 		<param name="onclick_condition">false</param>
 		<definition>
@@ -132,55 +132,55 @@
 	</include>
 
 	<include name="WidgetListPosterStacked">
-        <definition>
-            <include content="CategoryLabelWidget">
-                <param name="label">$PARAM[widget_header]</param>
-                <param name="list_id" value="$PARAM[list_id]" />
+    <definition>
+      <include content="CategoryLabelWidget">
+        <param name="label">$PARAM[widget_header]</param>
+        <param name="list_id" value="$PARAM[list_id]" />
+      </include>
+      <include content="BusyListSpinnerWidget">
+        <param name="list_id" value="$PARAM[list_id]" />
+      </include>
+      <control type="fixedlist" id="$PARAM[list_id]">
+        <left>0</left>
+        <top>115</top> 
+        <right>0</right>
+        <height>528</height>
+				<onright>$PARAM[list_id]</onright>
+				<orientation>horizontal</orientation>
+				<focusposition>0</focusposition>
+				<movement>3</movement>
+        <include content="WidgetListCommonStacked">
+          <param name="list_id" value="$PARAM[list_id]" />
+        </include>
+        <itemlayout width="330" height="496">
+          <control type="group">
+            <left>68</left>
+            <top>15</top>
+            <include content="InfoWallMovieLayout">
+              <!-- <param name="focused" value="false" /> -->
             </include>
-            <include content="BusyListSpinnerWidget">
-                <param name="list_id" value="$PARAM[list_id]" />
+          </control>
+        </itemlayout>
+        <focusedlayout width="330" height="496">
+          <control type="group">
+            <depth>DepthContentPopout</depth>
+            <left>68</left>
+            <top>15</top>
+            <animation type="Focus">
+            <effect type="zoom" start="100" end="108" time="200" tween="sine" easing="inout" center="230,130" />
+            </animation>
+            <animation type="Unfocus">
+            <effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="230,130" />
+            </animation>
+            <include content="InfoWallMovieLayout">
+              <!-- <param name="focused" value="true" /> -->
             </include>
-            <control type="fixedlist" id="$PARAM[list_id]">
-                <left>0</left>
-                <top>115</top> 
-                <right>0</right>
-                <height>528</height>
-								<onright>$PARAM[list_id]</onright>
-								<orientation>horizontal</orientation>
-								<focusposition>0</focusposition>
-								<movement>3</movement>
-                <include content="WidgetListCommonStacked">
-                    <param name="list_id" value="$PARAM[list_id]" />
-                </include>
-                <itemlayout width="330" height="496">
-                    <control type="group">
-                        <left>68</left>
-                        <top>15</top>
-                        <include content="InfoWallMovieLayout">
-                            <param name="focused" value="false" />
-                        </include>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="330" height="496">
-                    <control type="group">
-                        <depth>DepthContentPopout</depth>
-                        <left>68</left>
-                        <top>15</top>
-                        <animation type="Focus">
-                            <effect type="zoom" start="100" end="108" time="200" tween="sine" easing="inout" center="230,130" />
-                        </animation>
-                        <animation type="Unfocus">
-                            <effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="230,130" />
-                        </animation>
-                        <include content="InfoWallMovieLayout">
-                            <param name="focused" value="true" />
-                        </include>
-                    </control>
-                </focusedlayout>
-                <content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" limit="$PARAM[limit]" target="$PARAM[widget_target]">$PARAM[content_path]</content>
-            </control>
-        </definition>
-    </include>
+          </control>
+        </focusedlayout>
+        <content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" limit="$PARAM[limit]" target="$PARAM[widget_target]">$PARAM[content_path]</content>
+      </control>
+    </definition>
+  </include>
 
 	<include name="WidgetListLandscape">
 		<param name="onclick_condition">false</param>
@@ -398,7 +398,7 @@
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="networks_label" value="$PARAM[networks_label]"/>
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
-							<!-- <param name="focused" value="flase" /> -->
+							<!-- <param name="focused" value="false" /> -->
 						</include>
 					</control>
 				</itemlayout>
@@ -1461,15 +1461,15 @@
 		<preloaditems>2</preloaditems>
 	</include>
 	<include name="WidgetListCommonStacked">
-      <scrolltime tween="cubic" easing="out">500</scrolltime>
-      <orientation>horizontal</orientation>
-      <onleft>9000</onleft>
-      <onright>$PARAM[list_id]</onright>
-      <onfocus>SetProperty(FENtastic_stacked_list_id,$PARAM[list_id],home)</onfocus>
-      <onunfocus>ClearProperty(FENtastic_stacked_list_id,home)</onunfocus>
-      <onback>SetFocus($PARAM[list_id],0,absolute)</onback>
-      <preloaditems>2</preloaditems>
-    </include>
+    <scrolltime tween="cubic" easing="out">500</scrolltime>
+    <orientation>horizontal</orientation>
+    <onleft>9000</onleft>
+    <onright>$PARAM[list_id]</onright>
+    <onfocus>SetProperty(FENtastic_stacked_list_id,$PARAM[list_id],home)</onfocus>
+    <onunfocus>ClearProperty(FENtastic_stacked_list_id,home)</onunfocus>
+    <onback>SetFocus($PARAM[list_id],0,absolute)</onback>
+    <preloaditems>2</preloaditems>
+  </include>
 	<include name="BusyListSpinner">
 		<param name="posy">160</param>
 		<param name="visible">true</param>
@@ -1498,31 +1498,31 @@
 		</definition>
 	</include>
   <include name="BusyListSpinnerWidget">
-      <param name="posy">75</param>
-      <param name="visible">true</param>
-      <definition>
-        <control type="group" id="$PARAM[list_id]599">
-          <height>170</height>
-          <left>55</left>
-          <visible>Container($PARAM[list_id]).IsUpdating</visible>
-          <control type="image">
-            <top>$PARAM[posy]</top>
-            <width>50</width>
-            <height>50</height>
-            <aspectratio aligny="center">keep</aspectratio>
-            <texture colordiffuse="black">dialogs/extendedprogress/loading-back.png</texture>
-          </control>
-          <control type="image">
-            <top>$PARAM[posy]</top>
-            <width>50</width>
-            <height>50</height>
-            <aspectratio aligny="center">keep</aspectratio>
-            <texture>dialogs/extendedprogress/loading.png</texture>
-            <animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
-          </control>
+    <param name="posy">75</param>
+    <param name="visible">true</param>
+    <definition>
+      <control type="group" id="$PARAM[list_id]599">
+        <height>170</height>
+        <left>55</left>
+        <visible>Container($PARAM[list_id]).IsUpdating</visible>
+        <control type="image">
+          <top>$PARAM[posy]</top>
+          <width>50</width>
+          <height>50</height>
+          <aspectratio aligny="center">keep</aspectratio>
+          <texture colordiffuse="black">dialogs/extendedprogress/loading-back.png</texture>
         </control>
-      </definition>
-    </include>
+        <control type="image">
+          <top>$PARAM[posy]</top>
+          <width>50</width>
+          <height>50</height>
+          <aspectratio aligny="center">keep</aspectratio>
+          <texture>dialogs/extendedprogress/loading.png</texture>
+          <animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
+        </control>
+      </control>
+    </definition>
+  </include>
 	<include name="WidgetScrollbar">
 		<control type="group">
 			<right>0</right>

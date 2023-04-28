@@ -55,25 +55,13 @@
 					<onclick>RunScript(script.FENtastic.helper,mode=manage_widgets&amp;cpath_setting=movie.widget)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</control>
-				<control type="radiobutton" id="6243">
+				<!-- <control type="radiobutton" id="6243">
 					<label>   - $LOCALIZE[31008]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(HomeMenuNoMoviesCategories)</selected>
 					<onclick>Skin.ToggleSetting(HomeMenuNoMoviesCategories)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
-				</control>
-				<control type="button" id="6244">
-					<label>       - Set category widget (top)</label>
-					<include>DefaultSettingButton</include>
-					<onclick>RunScript(script.FENtastic.helper,mode=manage_category_top_widget&amp;cpath_setting=movie.category_top_widget)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + !Skin.HasSetting(HomeMenuNoMoviesCategories)</visible>
-				</control>
-				<control type="button" id="6245">
-					<label>       - Set category widget (bottom)</label>
-					<include>DefaultSettingButton</include>
-					<onclick>RunScript(script.FENtastic.helper,mode=manage_category_bottom_widget&amp;cpath_setting=movie.category_bottom_widget)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + !Skin.HasSetting(HomeMenuNoMoviesCategories)</visible>
-				</control>
+				</control> -->
 				<!-- TV SHOWS -->
 				<control type="radiobutton" id="625">
 					<label>$LOCALIZE[20343]</label>
@@ -93,25 +81,13 @@
 					<onclick>RunScript(script.FENtastic.helper,mode=manage_widgets&amp;cpath_setting=tvshow.widget)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
 				</control>
-				<control type="radiobutton" id="6252">
+				<!-- <control type="radiobutton" id="6252">
 					<label>   - $LOCALIZE[31008]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(HomeMenuNoTVShowsCategories)</selected>
 					<onclick>Skin.ToggleSetting(HomeMenuNoTVShowsCategories)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
-				</control>
-				<control type="button" id="6253">
-					<label>       - Set category widget (top)</label>
-					<include>DefaultSettingButton</include>
-					<onclick>RunScript(script.FENtastic.helper,mode=manage_category_top_widget&amp;cpath_setting=tvshow.category_top_widget)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + !Skin.HasSetting(HomeMenuNoTVShowsCategories)</visible>
-				</control>
-				<control type="button" id="6254">
-					<label>       - Set category widget (bottom)</label>
-					<include>DefaultSettingButton</include>
-					<onclick>RunScript(script.FENtastic.helper,mode=manage_category_bottom_widget&amp;cpath_setting=tvshow.category_bottom_widget)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + !Skin.HasSetting(HomeMenuNoTVShowsCategories)</visible>
-				</control>
+				</control> -->
 				<!-- MUSIC -->
 				<control type="radiobutton" id="627">
 					<label>$LOCALIZE[2]</label>
