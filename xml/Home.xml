@@ -3,7 +3,7 @@
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<onload condition="!Skin.HasSetting(firsttimerun)">ActivateWindow(1112)</onload>
-    <onload condition="Skin.HasSetting(firsttimerun)">RunScript(script.FENtastic.helper,mode=check_for_update&amp;skin_id=skin.FENtastic)</onload>
+    <onload condition="Skin.HasSetting(firsttimerun)">RunScript(script.fentastic.helper,mode=check_for_update&amp;skin_id=skin.fentastic)</onload>
 	<controls>
 		<control type="button" id="20000">
 			<include>HiddenObject</include>

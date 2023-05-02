@@ -1466,8 +1466,8 @@
     <onleft>9000</onleft>
 		<onback>9000</onback>
     <onright>$PARAM[list_id]</onright>
-    <onfocus>SetProperty(FENtastic_stacked_list_id,$PARAM[list_id],home)</onfocus>
-    <onunfocus>ClearProperty(FENtastic_stacked_list_id,home)</onunfocus>
+    <onfocus>SetProperty(fentastic_stacked_list_id,$PARAM[list_id],home)</onfocus>
+    <onunfocus>ClearProperty(fentastic_stacked_list_id,home)</onunfocus>
     <onback>SetFocus($PARAM[list_id],0,absolute)</onback>
     <preloaditems>2</preloaditems>
   </include>

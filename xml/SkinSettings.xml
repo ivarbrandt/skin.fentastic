@@ -34,7 +34,7 @@
 				<control type="button" id="624">
 					<label>Remake menus and widgets</label>
 					<include>DefaultSettingButton</include>
-					<onclick>RunScript(script.FENtastic.helper,mode=remake_all_cpaths)</onclick>
+					<onclick>RunScript(script.fentastic.helper,mode=remake_all_cpaths)</onclick>
 				</control>
 				<!-- MOVIES -->
 				<control type="radiobutton" id="6240">
@@ -46,13 +46,13 @@
 				<control type="button" id="6241">
 					<label>   - Set main menu path</label>
 					<include>DefaultSettingButton</include>
-					<onclick>RunScript(script.FENtastic.helper,mode=manage_main_menu_path&amp;cpath_setting=movie.main_menu)</onclick>
+					<onclick>RunScript(script.fentastic.helper,mode=manage_main_menu_path&amp;cpath_setting=movie.main_menu)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</control>
 				<control type="button" id="6242">
 					<label>   - Set widgets</label>
 					<include>DefaultSettingButton</include>
-					<onclick>RunScript(script.FENtastic.helper,mode=manage_widgets&amp;cpath_setting=movie.widget)</onclick>
+					<onclick>RunScript(script.fentastic.helper,mode=manage_widgets&amp;cpath_setting=movie.widget)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</control>
 				<!-- <control type="radiobutton" id="6243">
@@ -72,13 +72,13 @@
 				<control type="button" id="6250">
 					<label>   - Set main menu path</label>
 					<include>DefaultSettingButton</include>
-					<onclick>RunScript(script.FENtastic.helper,mode=manage_main_menu_path&amp;cpath_setting=tvshow.main_menu)</onclick>
+					<onclick>RunScript(script.fentastic.helper,mode=manage_main_menu_path&amp;cpath_setting=tvshow.main_menu)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
 				</control>
 				<control type="button" id="6251">
 					<label>   - Set widgets</label>
 					<include>DefaultSettingButton</include>
-					<onclick>RunScript(script.FENtastic.helper,mode=manage_widgets&amp;cpath_setting=tvshow.widget)</onclick>
+					<onclick>RunScript(script.fentastic.helper,mode=manage_widgets&amp;cpath_setting=tvshow.widget)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
 				</control>
 				<!-- <control type="radiobutton" id="6252">
