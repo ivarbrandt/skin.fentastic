@@ -427,7 +427,7 @@
 		</definition>
 	</include>
 
-	<include name="WidgetListCategories">
+	<include name="WidgetListCategory">
 		<param name="item_limit">30</param>
 		<param name="icon">$INFO[ListItem.Icon]</param>
 		<param name="icon_height">120</param>
@@ -448,7 +448,7 @@
 				<left>0</left>
 				<top>110</top>
 				<right>0</right>
-				<height>240</height>
+				<height>230</height>
 				<onright>$PARAM[list_id]</onright>
 				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
@@ -566,7 +566,7 @@
 		</definition>
 	</include>
 
-	<include name="WidgetListCategoriesStacked">
+	<include name="WidgetListCategoryStacked">
 		<param name="item_limit">30</param>
 		<param name="icon">$INFO[ListItem.Icon]</param>
 		<param name="icon_height">120</param>
@@ -587,7 +587,7 @@
 				<left>0</left>
 				<top>110</top>
 				<right>0</right>
-				<height>240</height>
+				<height>230</height>
 				<onright>$PARAM[list_id]</onright>
 				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
@@ -1464,6 +1464,7 @@
     <scrolltime tween="cubic" easing="out">500</scrolltime>
     <orientation>horizontal</orientation>
     <onleft>9000</onleft>
+		<onback>9000</onback>
     <onright>$PARAM[list_id]</onright>
     <onfocus>SetProperty(FENtastic_stacked_list_id,$PARAM[list_id],home)</onfocus>
     <onunfocus>ClearProperty(FENtastic_stacked_list_id,home)</onunfocus>
