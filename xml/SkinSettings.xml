@@ -89,6 +89,12 @@
 					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
 				</control> -->
 				<!-- MUSIC -->
+				<control type="radiobutton" id="6252">
+					<label>$LOCALIZE[31008]</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(home_no_categories_widget)</selected>
+					<onclick>Skin.ToggleSetting(home_no_categories_widget)</onclick>
+				</control>
 				<control type="radiobutton" id="627">
 					<label>$LOCALIZE[2]</label>
 					<include>DefaultSettingButton</include>

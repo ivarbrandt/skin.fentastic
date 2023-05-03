@@ -84,7 +84,7 @@
 					<control type="grouplist" id="7001">
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>7010</pagecontrol>
-						<include content="WidgetListCategories" condition="Library.HasContent(music) + !Skin.HasSetting(home_no_categories_widget)">
+						<include content="WidgetListCategory" condition="Library.HasContent(music) + !Skin.HasSetting(home_no_categories_widget)">
 							<param name="content_path" value="library://music/"/>
 							<param name="widget_header" value="$LOCALIZE[31148]"/>
 							<param name="widget_target" value="music"/>
@@ -164,7 +164,7 @@
 					<control type="grouplist" id="8001">
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>8010</pagecontrol>
-						<include content="WidgetListCategories" condition="!Skin.HasSetting(home_no_categories_widget)" >
+						<include content="WidgetListCategory" condition="!Skin.HasSetting(home_no_categories_widget)" >
 							<param name="content_path" value="addons://"/>
 							<param name="widget_header" value="$LOCALIZE[31148]"/>
 							<param name="widget_target" value="addonbrowser"/>
@@ -247,19 +247,19 @@
 					<control type="grouplist" id="11001">
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>11010</pagecontrol>
-						<include content="WidgetListCategories">
+						<include content="WidgetListCategory">
 							<param name="content_path" value="library://video/"/>
 							<param name="widget_header" value="$LOCALIZE[31148]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="11900"/>
 						</include>
-						<include content="WidgetListCategories">
+						<include content="WidgetListCategory">
 							<param name="content_path" value="sources://video/"/>
 							<param name="widget_header" value="$LOCALIZE[20094]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="11100"/>
 						</include>
-						<include content="WidgetListCategories">
+						<include content="WidgetListCategory">
 							<param name="content_path" value="special://videoplaylists/"/>
 							<param name="widget_header" value="$LOCALIZE[136]"/>
 							<param name="widget_target" value="videos"/>
@@ -287,7 +287,7 @@
 					<control type="grouplist" id="12001">
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>12010</pagecontrol>
-						<include content="WidgetListCategories" condition="System.HasPVRAddon">
+						<include content="WidgetListCategory" condition="System.HasPVRAddon + !Skin.HasSetting(home_no_categories_widget)">
 							<param name="content_path" value="pvr://tv/"/>
 							<param name="widget_header" value="$LOCALIZE[31148]"/>
 							<param name="list_id" value="12900"/>
@@ -357,7 +357,7 @@
 					<control type="grouplist" id="13001">
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>13010</pagecontrol>
-						<include content="WidgetListCategories" condition="System.HasPVRAddon">
+						<include content="WidgetListCategory" condition="System.HasPVRAddon">
 							<param name="content_path" value="pvr://radio/"/>
 							<param name="widget_header" value="$LOCALIZE[31148]"/>
 							<param name="list_id" value="13900"/>
@@ -589,7 +589,7 @@
 					</include>
 					<control type="grouplist" id="16001">
 						<pagecontrol>16010</pagecontrol>
-						<include content="WidgetListCategories" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(home_no_categories_widget)">
+						<include content="WidgetListCategory" condition="Library.HasContent(musicvideos) + !Skin.HasSetting(home_no_categories_widget)">
 							<param name="content_path" value="library://video/musicvideos/"/>
 							<param name="widget_header" value="$LOCALIZE[31148]"/>
 							<param name="widget_target" value="videos"/>
@@ -653,7 +653,7 @@
 							<param name="fallback_image" value="DefaultMusicSongs.png" />
 							<param name="list_id" value="16500"/>
 						</include>
-						<include content="WidgetListCategories" condition="Library.HasContent(musicvideos)">
+						<include content="WidgetListCategory" condition="Library.HasContent(musicvideos)">
 							<param name="content_path" value="videodb://musicvideos/studios/"/>
 							<param name="widget_header" value="$LOCALIZE[20388]"/>
 							<param name="widget_target" value="music"/>
@@ -680,7 +680,7 @@
 					</include>
 					<control type="grouplist" id="4001">
 						<include>WidgetGroupListCommon</include>
-						<include content="WidgetListCategories" condition="!Skin.HasSetting(HomeMenuNoPicturesButton)">
+						<include content="WidgetListCategory" condition="!Skin.HasSetting(HomeMenuNoPicturesButton)">
 							<param name="content_path" value="sources://pictures/"/>
 							<param name="widget_header" value="$LOCALIZE[20094]"/>
 							<param name="widget_target" value="pictures"/>
