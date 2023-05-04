@@ -2,8 +2,7 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR button_focus]Version 1.0.8[/COLOR][/B]
-
-- Added custom category widgets. You are no longer limited to top and bottom category widgets. Add as many as you like
+- Added custom category widgets. You are no longer limited to top and bottom category widgets
 - Added optional stacked category widgets
 - Added Clear Path option for Main Menu paths and category widgets
 - Updated Setup Guide
@@ -98,6 +97,8 @@ Click a menu item to toggle the display of a section on and off. This will show 
 [B][COLOR deeppink]- Set main menu path[/COLOR][/B] is for setting up the path when clicking on the Movie/Show section in the main menu on the left side of the home screen. You can set this to whatever you path you like within FEN. I like to set mine to my Trakt movie/tvshow collection.
 
 [B][COLOR deeppink]- Set widgets[/COLOR][/B] is for setting up the movie/tvshow widgets. These are the main widgets that you'll set up. You can configure up to 10 movie and 10 TV show widgets. After choosing a path you'll have the option to set the label and display type (Poster, Landscape, LandscapeInfo, and Category) for each widget. If you choose the Category display type, you'll have the option to set it up as a stacked widget. After that you can choose the display type for the stacked widget as well.
+
+[B][COLOR button_focus]Stacked widgets[/COLOR][/B] contain a category widget and a normal widget beneath. The category widget "communicates" with the normal widget in order to load the new widget list according to the focused item in the category widget. If the stacked widget that you set up has 20 items in it, then that means you'll be able to have all 20 widgets available from just one widget on the home screen.
 
 That's it! You're all set to go. Enjoy the skin!
     </label>
