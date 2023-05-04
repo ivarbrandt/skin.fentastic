@@ -10,6 +10,7 @@
 - Cleaned up season views
 - Adjusted background transparency skin-wide. I don't use all parts of the skin so if some colors look off in a particular area of the skin please let me know by opening an issue on my Github
 - Small text alignment changes to PVR guide
+- Removed widget limits (Set limits for addon and widgets in FEN settings)
 - Other small fixes/changes
 
 [B][COLOR button_focus]Version 1.0.7[/COLOR][/B]

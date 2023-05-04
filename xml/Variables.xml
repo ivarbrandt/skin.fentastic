@@ -725,14 +725,5 @@
 	<variable name="InfoPanelEpisode">
 		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)] + String.IsEqual(ListItem.DBtype,episode)">$INFO[ListItem.Plot][CR][CR]</value>
 	</variable>
-
-	<!-- WIDGET LIMITS -->
-	<variable name="SkinSettingWidgetLimitMain">
-		<value condition="!String.IsEmpty(Skin.String(WidgetLimitMain))">$INFO[Skin.String(WidgetLimitMain)]</value>
-		<value condition="String.IsEmpty(Skin.String(WidgetLimitMain))">20</value> <!-- Default value -->
-	</variable>
-	<variable name="SkinSettingWidgetLimitEpisodes">
-		<value condition="!String.IsEmpty(Skin.String(WidgetLimitEpisodes))">$INFO[Skin.String(WidgetLimitEpisodes)]</value>
-		<value condition="String.IsEmpty(Skin.String(WidgetLimitEpisodes))">10</value> <!-- Default value -->
-	</variable>
+	
 </includes>

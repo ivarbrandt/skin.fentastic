@@ -196,18 +196,6 @@
 					<onclick>Skin.ToggleSetting(HideRainDrops)</onclick>
 					<selected>Skin.HasSetting(HideRainDrops)</selected>
 				</control>
-				<control type="button" id="6373">
-					<label>Widget limit (movies/shows)</label>
-					<label2>$VAR[SkinSettingWidgetLimitMain]</label2>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.SetNumeric(WidgetLimitMain)</onclick>
-				</control>
-				<control type="button" id="6374">
-					<label>Widget limit (episodes)</label>
-					<label2>$VAR[SkinSettingWidgetLimitEpisodes]</label2>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.SetNumeric(WidgetLimitEpisodes)</onclick>
-				</control>
 			</control>
 
 			<control type="grouplist" id="700">
