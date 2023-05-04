@@ -1,6 +1,6 @@
 **Kodi File Manager Source** : https://ivarbrandt.github.io/repository.ivarbrandt/
 
-On **FIRST** install go to Settings » Interface » in the Skin section click Configure skin... » Extra info » Setup Guide. Here you will find some tips on setting up your main menu paths, widgets, and category widgets.
+On **FIRST** install go to Settings » Interface » in the Skin section click Configure skin... » Extra info » Setup Guide. Here you will find some tips on setting up your main menu paths and widgets.
 # Guidelines for Reporting Issues
 
 - Read the **CHANGELOG**. As new updates get released features are added, changed, modified or removed. *Before opening an Issue* related to this make sure you read the changelog (located at the bottom of Skin settings in Extra info) as it will contain information for all the changes made to each update. It is also a good way to stay current with what is new with the skin.
