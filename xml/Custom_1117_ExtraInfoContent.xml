@@ -4,9 +4,6 @@
     <label>[B][COLOR button_focus]Version 1.0.8[/COLOR][/B]
 
 - Added custom category widgets. You are no longer limited to top and bottom category widgets. Add as many as you like
-
-[B](NOTE:[/B] This addition deletes old category widgets as the logic handles them differently now. You can set these back up in [COLOR button_focus]- Set widgets[/COLOR])
-
 - Added optional stacked category widgets
 - Added Clear Path option for Main Menu paths and category widgets
 - Updated Setup Guide
