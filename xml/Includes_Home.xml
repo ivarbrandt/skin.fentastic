@@ -92,14 +92,12 @@
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>115</top>
-				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
 				<movement>3</movement>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
 				<height>528</height>
-				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -126,7 +124,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[limit]">$PARAM[content_path]</content>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]"  target="$PARAM[widget_target]" >$PARAM[content_path]</content>
 			</control>
 		</definition>
 	</include>
@@ -145,7 +143,6 @@
         <top>115</top> 
         <right>0</right>
         <height>528</height>
-				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
 				<movement>3</movement>
@@ -183,7 +180,6 @@
   </include>
 
 	<include name="WidgetListLandscape">
-		<param name="onclick_condition">false</param>
 		<definition>
 			<include content="CategoryLabelWidget">
 				<param name="label">$PARAM[widget_header]</param>
@@ -196,14 +192,12 @@
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>115</top>
-				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
 				<movement>2</movement>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
 				<height>370</height>
-				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -230,13 +224,12 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[limit]">$PARAM[content_path]</content>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]"  target="$PARAM[widget_target]" >$PARAM[content_path]</content>
 			</control>
 		</definition>
 	</include>
 
 	<include name="WidgetListLandscapeStacked">
-		<param name="onclick_condition">false</param>
 		<definition>
 			<include content="CategoryLabelWidget">
 				<param name="label">$PARAM[widget_header]</param>
@@ -248,7 +241,6 @@
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>115</top>
-				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
 				<movement>2</movement>
@@ -257,7 +249,6 @@
 				<include content="WidgetListCommonStacked">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
-				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
 				<itemlayout width="440" height="347">
 					<control type="group">
 						<left>68</left>
@@ -281,7 +272,7 @@
 						</include>
 					</control>
 				</focusedlayout>
-				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[limit]">$PARAM[content_path]</content>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" limit="$PARAM[limit]" target="$PARAM[widget_target]" >$PARAM[content_path]</content>
 			</control>
 		</definition>
 	</include>
@@ -291,9 +282,6 @@
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
 		<param name="networks_label">$INFO[ListItem.Label]</param>
 		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
-		<param name="sortby"></param>
-		<param name="visible">True</param>
-		<param name="sortorder">ascending</param>
 		<definition>
 			<include content="CategoryLabelWidget">
 				<param name="label">$PARAM[widget_header]</param>
@@ -310,15 +298,12 @@
 				<top>106</top>
 				<right>0</right>
 				<height>431</height>
-				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
 				<movement>2</movement>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
-				<visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<itemlayout width="440" height="550">
 					<control type="group">
 						<left>70</left>
@@ -362,9 +347,6 @@
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
 		<param name="networks_label">$INFO[ListItem.Label]</param>
 		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
-		<param name="sortby"></param>
-		<param name="visible">True</param>
-		<param name="sortorder">ascending</param>
 		<definition>
 			<include content="CategoryLabelWidget">
 				<param name="label">$PARAM[widget_header]</param>
@@ -379,14 +361,12 @@
 				<top>106</top>
 				<right>0</right>
 				<height>431</height>
-				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
 				<movement>2</movement>
 				<include content="WidgetListCommonStacked">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
-				<visible>$PARAM[visible]</visible>
 				<itemlayout width="440" height="550">
 					<control type="group">
 						<left>70</left>
@@ -428,25 +408,20 @@
 	<include name="WidgetListCategory">
 		<param name="icon">$INFO[ListItem.Icon]</param>
 		<param name="icon_height">120</param>
-		<param name="additional_movie_items">false</param>
-		<param name="additional_tvshow_items">false</param>
 		<param name="visible">true</param>
 		<definition>
 			<include content="CategoryLabelWidget">
 				<param name="label">$PARAM[widget_header]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<include content="BusyListSpinnerWidget">
 				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>110</top>
 				<right>0</right>
 				<height>230</height>
-				<onright>$PARAM[list_id]</onright>
 				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
 				<include content="WidgetListCommon">
@@ -557,8 +532,6 @@
 					</control>
 				</focusedlayout>
 				<content target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
-				<include condition="$PARAM[additional_movie_items]" content="MovieSubmenuItems" />
-				<include condition="$PARAM[additional_tvshow_items]" content="TVShowSubmenuItems" />
 			</control>
 		</definition>
 	</include>
@@ -566,32 +539,26 @@
 	<include name="WidgetListCategoryStacked">
 		<param name="icon">$INFO[ListItem.Icon]</param>
 		<param name="icon_height">120</param>
-		<param name="additional_movie_items">false</param>
-		<param name="additional_tvshow_items">false</param>
 		<param name="visible">true</param>
 		<definition>
 			<include content="CategoryLabelWidget">
 				<param name="label">$PARAM[widget_header]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<include content="BusyListSpinnerWidget">
 				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>110</top>
 				<right>0</right>
 				<height>230</height>
-				<onright>$PARAM[list_id]</onright>
 				<!-- <onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus> -->
 				<include content="WidgetListCommonStacked">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<itemlayout width="330" height="340">
 					<control type="group">
 						<left>70</left>
@@ -695,8 +662,6 @@
 					</control>
 				</focusedlayout>
 				<content target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
-				<include condition="$PARAM[additional_movie_items]" content="MovieSubmenuItems" />
-				<include condition="$PARAM[additional_tvshow_items]" content="TVShowSubmenuItems" />
 			</control>
 		</definition>
 	</include>
@@ -781,7 +746,6 @@
 		<param name="sortorder">ascending</param>
 		<param name="widget_limit">15</param>
 		<param name="fallback_icon">DefaultAudio.png</param>
-		<param name="onclick_condition">false</param>
 		<definition>
 			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
@@ -798,7 +762,6 @@
 				<top>120</top>
 				<right>0</right>
 				<height>500</height>
-				<onright>$PARAM[list_id]</onright>
 				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
 				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
@@ -840,33 +803,6 @@
 			</control>
 		</definition>
 	</include>
-	
-	<include name="MovieSubmenuItems">
-		<content>
-			<item>
-				<label>$LOCALIZE[31146]</label>
-				<onclick>ActivateWindow(videos,plugin://script.embuary.info/movie/now_playing,return)</onclick>
-				<thumb>DefaultStudios.png</thumb>
-				<visible>System.AddonIsEnabled(script.embuary.info)</visible>
-			</item>
-			<item>
-				<label>$LOCALIZE[31147]</label>
-				<onclick>ActivateWindow(videos,plugin://script.embuary.info/movie/upcoming,return)</onclick>
-				<thumb>DefaultYear.png</thumb>
-				<visible>System.AddonIsEnabled(script.embuary.info)</visible>
-			</item>
-		</content>
-	</include>
-	<include name="TVShowSubmenuItems">
-		<content>
-			<item>
-				<label>$LOCALIZE[31027]</label>
-				<onclick>ActivateWindow(videos,plugin://script.embuary.info/nextaired,return)</onclick>
-				<thumb>DefaultYear.png</thumb>
-				<visible>System.AddonIsEnabled(script.embuary.info)</visible>
-			</item>
-		</content>
-	</include>
 	<include name="WidgetListPVR">
 		<param name="item_treshold">0</param>
 		<param name="icon">$INFO[ListItem.Icon]</param>
@@ -888,7 +824,6 @@
 				<top>120</top>
 				<right>0</right>
 				<height>430</height>
-				<onright>$PARAM[list_id]</onright>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -1064,7 +999,6 @@
 				<top>90</top>
 				<right>0</right>
 				<height>396</height>
-				<onright>$PARAM[list_id]</onright>
 				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
 				<include content="WidgetListCommon">
@@ -1448,8 +1382,7 @@
 		<scrolltime tween="cubic" easing="out">500</scrolltime>
 		<orientation>horizontal</orientation>
 		<onleft>9000</onleft>
-		<onright>noop</onright>
-		<onback>9000</onback>
+    <onright>$PARAM[list_id]</onright>
 		<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
 		<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 		<!-- <onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus> -->
