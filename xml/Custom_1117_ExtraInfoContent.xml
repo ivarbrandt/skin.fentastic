@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
   <include name="Changelog">
-    <label>[B][COLOR button_focus]Version 1.0.8[/COLOR][/B]
+    <label>[B][COLOR button_focus]Version 1.0.9[/COLOR][/B]
+    - Small fixes
+
+[B][COLOR button_focus]Version 1.0.8[/COLOR][/B]
 - Added custom category widgets. You are no longer limited to top and bottom category widgets
 - Added optional stacked category widgets
 - Added Clear Path option for Main Menu paths and category widgets
