@@ -297,8 +297,8 @@
 				<control type="image">
           <left>-4</left>
 					<top>-14</top>
-          <width>443</width>
-          <height>288</height>
+          <width>353</width>
+          <height>230</height>
 					<texture colordiffuse="button_focus">colors/grey.png</texture>
 					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -308,8 +308,10 @@
 				<control type="image">
 					<!-- <left>15</left> -->
 					<top>-10</top>
-					<width>435</width>
-					<height>280</height>
+					<!-- 435 -->
+					<width>345</width>
+					<!-- 280 -->
+					<height>222</height>
 					<texture background="true">$VAR[IconWallThumbVar]</texture>
 					<!-- <aspectratio aligny="center">keep</aspectratio> -->
 					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
@@ -330,7 +332,7 @@
 
 				<control type="image">
 					<left>20</left>
-          <top>170</top>
+          <top>112</top>
 					<width>80</width>
 					<height>80</height>
 					<texture>overlays/overlay-bg.png</texture>
@@ -338,8 +340,8 @@
 				</control>
 
 				<control type="image">
-					<left>275</left>
-					<top>170</top>
+					<left>185</left>
+					<top>112</top>
 					<width>140</width>
 					<height>80</height>
 					<texture>overlays/overlay-bg2.png</texture>
@@ -349,8 +351,8 @@
 
 				<control type="label">
 					<left>5</left>
-					<top>222</top>
-					<width>405</width>
+					<top>164</top>
+					<width>315</width>
 					<label>$INFO[ListItem.Property(WatchedProgress)]%</label>
 					<font>font20_title</font>
 					<shadowcolor>text_shadow</shadowcolor>
@@ -366,8 +368,8 @@
 				<top>320</top>
 				<control type="image">
 					<left>20</left>
-					<top>-120</top>
-					<width>395</width>
+					<top>-178</top>
+					<width>305</width>
 					<height>50</height>
 					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
 					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
@@ -377,8 +379,8 @@
 				</control>
 				<control type="label">
           <left>130</left>
-          <top>-100</top>
-					<width>244</width>
+          <top>-158</top>
+					<width>154</width>
 					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
 					<font>font20_title</font>
 					<shadowcolor>text_shadow</shadowcolor>
@@ -387,8 +389,8 @@
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
 				<control type="image">
-          <left>384</left>
-          <top>-97</top>
+          <left>294</left>
+          <top>-155</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>lists/played-total.png</texture>
@@ -408,20 +410,20 @@
 			</control>
 			<control type="image">
         <left>20</left>
-        <top>218</top>
+        <top>160</top>
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
 			</control>
 			<control type="group">
-        <left>368</left>
+        <left>278</left>
 				<top>-8</top>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>
 			<control type="progress">
 				<left>20</left>
-				<top>227</top>
-				<width>396</width>
+				<top>169</top>
+				<width>306</width>
 				<height>1</height>
 				<texturebg></texturebg>
 				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
@@ -430,8 +432,8 @@
 			</control>
 			<control type="progress">
 				<left>20</left>
-				<top>227</top>
-				<width>396</width>
+				<top>169</top>
+				<width>306</width>
 				<height>1</height>
 				<texturebg></texturebg>
 				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
@@ -440,8 +442,8 @@
 			</control>
 			<control type="progress">
 				<left>20</left>
-				<top>227</top>
-				<width>396</width>
+				<top>169</top>
+				<width>306</width>
 				<height>1</height>
 				<texturebg></texturebg>
 				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
@@ -459,7 +461,7 @@
 			<visible>Control.IsVisible(56)</visible>
 			<include>Visible_Right</include>
 			<control type="panel" id="56">
-				<left>570</left>
+				<left>565</left>
 				<top>0</top>
 				<right>15</right>
 				<height>100%</height>
@@ -473,19 +475,21 @@
 				<pagecontrol>531</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(images) | Container.Content(videos) | Container.Content(games)</visible>
-				<itemlayout height="290" width="437" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
+				<itemlayout height="217" width="327" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<left>30</left>
 						<top>120</top>
-						<include>WideInfoWallMovieLayout</include>
+						<include content="WideInfoWallMovieLayout">
+						<param name="focused" value="false" />
+						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="445" width="320" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
+				<focusedlayout height="217" width="327" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>30</left>
-						<animation effect="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="250,270">Focus</animation>
-						<animation effect="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="250,270">UnFocus</animation>
+						<animation effect="zoom" start="100" end="101" time="200" tween="sine" easing="inout" center="250,270">Focus</animation>
+						<animation effect="zoom" start="101" end="100" time="200" tween="sine" easing="inout" center="250,270">UnFocus</animation>
 						<top>120</top>
 						<include content="WideInfoWallMovieLayout">
 							<param name="focused" value="true" />

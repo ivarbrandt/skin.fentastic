@@ -62,7 +62,7 @@
 						<height>850</height>
 						<bottom>124</bottom>
 						<fadetime>200</fadetime>
-						<aspectratio aligny="bottom">keep</aspectratio>
+						<aspectratio aligny="top">keep</aspectratio>
 						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar]</texture>
 					</control>
 					<control type="group">

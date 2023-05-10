@@ -14,7 +14,7 @@
 		<param name="item_treshold">0</param>
 		<definition>
 			<control type="label" id="$PARAM[list_id]666">
-				<left>55</left>
+				<left>75</left>
 				<top>80</top>
 				<onback>9000</onback>
 				<width>900</width>
@@ -31,7 +31,7 @@
 		<param name="item_treshold">0</param>
 		<definition>
 			<control type="label" id="$PARAM[list_id]666">
-				<left>55</left>
+				<left>75</left>
 				<top>80</top>
 				<onback>9000</onback>
 				<width>900</width>
@@ -82,12 +82,13 @@
 	<include name="WidgetListPoster">
 		<param name="onclick_condition">false</param>
 		<definition>
-			<include content="CategoryLabelWidget">
+			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
 			</include>
-			<include content="BusyListSpinnerWidget">
+			<include content="BusyListSpinner">
 				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="posy" value="240"/>
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
@@ -95,15 +96,15 @@
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
-				<movement>3</movement>
+				<movement>5</movement>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
-				<height>528</height>
+				<height>425</height>
 				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
-				<itemlayout width="330" height="496">
+				<itemlayout width="225" height="393">
 					<control type="group">
 						<left>68</left>
 						<top>15</top>
@@ -111,7 +112,7 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="330" height="496">
+				<focusedlayout width="225" height="393">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
@@ -144,15 +145,15 @@
         <left>0</left>
         <top>115</top> 
         <right>0</right>
-        <height>528</height>
+        <height>425</height>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
-				<movement>3</movement>
+				<movement>5</movement>
         <include content="WidgetListCommonStacked">
           <param name="list_id" value="$PARAM[list_id]" />
         </include>
-        <itemlayout width="330" height="496">
+        <itemlayout width="225" height="393">
           <control type="group">
             <left>68</left>
             <top>15</top>
@@ -161,16 +162,16 @@
             </include>
           </control>
         </itemlayout>
-        <focusedlayout width="330" height="496">
+        <focusedlayout width="225" height="393">
           <control type="group">
             <depth>DepthContentPopout</depth>
             <left>68</left>
             <top>15</top>
             <animation type="Focus">
-            <effect type="zoom" start="100" end="108" time="200" tween="sine" easing="inout" center="230,130" />
+            <effect type="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="230,130" />
             </animation>
             <animation type="Unfocus">
-            <effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="230,130" />
+            <effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="230,130" />
             </animation>
             <include content="InfoWallMovieLayout">
               <!-- <param name="focused" value="true" /> -->
@@ -185,13 +186,13 @@
 	<include name="WidgetListLandscape">
 		<param name="onclick_condition">false</param>
 		<definition>
-			<include content="CategoryLabelWidget">
+			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
 			</include>
 			<include content="BusyListSpinner">
 				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="posy" value="200"/>
+				<param name="posy" value="185"/>
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
@@ -199,15 +200,15 @@
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
-				<movement>2</movement>
+				<movement>3</movement>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
-				<height>370</height>
+				<height>312</height>
 				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
-				<itemlayout width="440" height="347">
+				<itemlayout width="337" height="347">
 					<control type="group">
 						<left>68</left>
 						<top>15</top>
@@ -215,16 +216,16 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="440" height="347">
+				<focusedlayout width="337" height="347">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
 						<top>15</top>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="280,198" />
+							<effect type="zoom" start="100" end="104" time="200" tween="sine" easing="inout" center="280,198" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="280,198" />
+							<effect type="zoom" start="104" end="100" time="200" tween="sine" easing="inout" center="280,198" />
 						</animation>
 						<include content="WideInfoWallMovieLayout">
 						</include>
@@ -251,14 +252,14 @@
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
-				<movement>2</movement>
+				<movement>3</movement>
 				<right>0</right>
-				<height>370</height>
+				<height>312</height>
 				<include content="WidgetListCommonStacked">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
-				<itemlayout width="440" height="347">
+				<itemlayout width="337" height="347">
 					<control type="group">
 						<left>68</left>
 						<top>15</top>
@@ -266,16 +267,16 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="440" height="347">
+				<focusedlayout width="337" height="347">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
 						<top>15</top>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="280,198" />
+							<effect type="zoom" start="100" end="104" time="200" tween="sine" easing="inout" center="280,198" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="280,198" />
+							<effect type="zoom" start="104" end="100" time="200" tween="sine" easing="inout" center="280,198" />
 						</animation>
 						<include content="WideInfoWallMovieLayout">
 						</include>
@@ -296,13 +297,13 @@
 		<param name="sortorder">ascending</param>
 		<!-- <param name="widget_limit">10</param> -->
 		<definition>
-			<include content="CategoryLabelWidget">
+			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
 			</include>
-			<include content="BusyListSpinnerWidget">
+			<include content="BusyListSpinner">
 				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="posy" value="220"/>
+				<param name="posy" value="210"/>
 			</include>
 			<!-- Widget Height Spacing -->
 			<control type="fixedlist" id="$PARAM[list_id]">
@@ -310,17 +311,17 @@
 				<left>0</left>
 				<top>106</top>
 				<right>0</right>
-				<height>431</height>
+				<height>389</height>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
-				<movement>2</movement>
+				<movement>3</movement>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="440" height="550">
+				<itemlayout width="337" height="550">
 					<control type="group">
 						<left>70</left>
 						<top>5</top>
@@ -329,20 +330,20 @@
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="networks_label" value="$PARAM[networks_label]"/>
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
-							<!-- <param name="focused" value="flase" /> -->
+							<!-- <param name="focused" value="false" /> -->
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="440" height="550">
+				<focusedlayout width="337" height="550">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>5</top>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="280,170" />
+							<effect type="zoom" start="100" end="104" time="200" tween="sine" easing="inout" center="280,170" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="280,170" />
+							<effect type="zoom" start="104" end="100" time="200" tween="sine" easing="inout" center="280,170" />
 						</animation>
 						<include content="InfoWallEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
@@ -380,16 +381,16 @@
 				<left>0</left>
 				<top>106</top>
 				<right>0</right>
-				<height>431</height>
+				<height>389</height>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
-				<movement>2</movement>
+				<movement>3</movement>
 				<include content="WidgetListCommonStacked">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>$PARAM[visible]</visible>
-				<itemlayout width="440" height="550">
+				<itemlayout width="337" height="550">
 					<control type="group">
 						<left>70</left>
 						<top>5</top>
@@ -402,16 +403,16 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="440" height="550">
+				<focusedlayout width="337" height="550">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>5</top>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="280,170" />
+							<effect type="zoom" start="100" end="104" time="200" tween="sine" easing="inout" center="280,170" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="280,170" />
+							<effect type="zoom" start="104" end="100" time="200" tween="sine" easing="inout" center="280,170" />
 						</animation>
 						<include content="InfoWallEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
@@ -435,20 +436,21 @@
 		<param name="additional_tvshow_items">false</param>
 		<param name="visible">true</param>
 		<definition>
-			<include content="CategoryLabelWidget">
+			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
-			<include content="BusyListSpinnerWidget">
+			<include content="BusyListSpinner">
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="visible" value="$PARAM[visible]"/>
+				<param name="posy" value="140"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>110</top>
 				<right>0</right>
-				<height>230</height>
+				<height>200</height>
 				<onright>$PARAM[list_id]</onright>
 				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
@@ -457,12 +459,12 @@
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="330" height="340">
+				<itemlayout width="337" height="340">
 					<control type="group">
 						<left>70</left>
 						<control type="image">
-							<width>310</width>
-							<height>150</height>
+							<width>347</width>
+							<height>120</height>
 							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
@@ -477,9 +479,9 @@
 						</control> -->
 						<control type="textbox">
 							<visible>!String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
-							<left>38</left>
-							<top>41</top>
-							<width>234</width>
+							<left>47</left>
+							<top>25</top>
+							<width>254</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font25_narrow</font>
@@ -489,9 +491,9 @@
 						</control>
 						<control type="textbox">
 							<visible>String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
-							<left>38</left>
-							<top>41</top>
-							<width>234</width>
+							<left>47</left>
+							<top>25</top>
+							<width>254</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label] ($INFO[System.AddonUpdateCount])</label>
 							<font>font25_narrow</font>
@@ -501,26 +503,26 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout width="330" height="340">
+				<focusedlayout width="337" height="340">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="228,70" />
+							<effect type="zoom" start="100" end="104" time="200" tween="sine" easing="inout" center="228,70" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="228,70" />
+							<effect type="zoom" start="104" end="100" time="200" tween="sine" easing="inout" center="228,70" />
 						</animation>
 						<control type="image">
-							<width>310</width>
-							<height>150</height>
+							<width>347</width>
+							<height>120</height>
 							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
-							<width>310</width>
-							<height>150</height>
+							<width>347</width>
+							<height>120</height>
 							<texture colordiffuse="button_focus">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
@@ -535,9 +537,9 @@
 						</control> -->
 						<control type="textbox">
 							<visible>!String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
-							<left>38</left>
-							<top>41</top>
-							<width>234</width>
+							<left>47</left>
+							<top>25</top>
+							<width>254</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font25_narrow</font>
@@ -547,9 +549,9 @@
 						</control>
 						<control type="textbox">
 							<visible>String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
-							<left>38</left>
-							<top>41</top>
-							<width>234</width>
+							<left>47</left>
+							<top>25</top>
+							<width>254</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label] ($INFO[System.AddonUpdateCount])</label>
 							<font>font25_narrow</font>
@@ -586,7 +588,7 @@
 				<left>0</left>
 				<top>110</top>
 				<right>0</right>
-				<height>230</height>
+				<height>200</height>
 				<onright>$PARAM[list_id]</onright>
 				<!-- <onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus> -->
@@ -595,12 +597,12 @@
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="330" height="340">
+				<itemlayout width="337" height="340">
 					<control type="group">
 						<left>70</left>
 						<control type="image">
-							<width>310</width>
-							<height>150</height>
+							<width>347</width>
+							<height>120</height>
 							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
@@ -615,9 +617,9 @@
 						</control> -->
 						<control type="textbox">
 							<visible>!String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
-							<left>38</left>
-							<top>41</top>
-							<width>234</width>
+							<left>47</left>
+							<top>25</top>
+							<width>254</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font25_narrow</font>
@@ -627,9 +629,9 @@
 						</control>
 						<control type="textbox">
 							<visible>String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
-							<left>38</left>
-							<top>41</top>
-							<width>234</width>
+							<left>47</left>
+							<top>25</top>
+							<width>254</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label] ($INFO[System.AddonUpdateCount])</label>
 							<font>font25_narrow</font>
@@ -639,26 +641,27 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout width="330" height="340">
+				<focusedlayout width="337" height="340">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="228,70" />
+							<effect type="zoom" start="100" end="104" time="200" tween="sine" easing="inout" center="228,70" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="228,70" />
+							<effect type="zoom" start="104" end="100" time="200" tween="sine" easing="inout" center="228,70" />
 						</animation>
 						<control type="image">
-							<width>310</width>
-							<height>150</height>
+							<width>347</width>
+							<height>120</height>
 							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
-							<width>310</width>
-							<height>150</height>
+						<param name="visible" value="$PARAM[list_id]"/>
+							<width>347</width>
+							<height>120</height>
 							<texture colordiffuse="button_focus">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
@@ -673,9 +676,9 @@
 						</control> -->
 						<control type="textbox">
 							<visible>!String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
-							<left>38</left>
-							<top>41</top>
-							<width>234</width>
+							<left>47</left>
+							<top>25</top>
+							<width>254</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font25_narrow</font>
@@ -685,9 +688,9 @@
 						</control>
 						<control type="textbox">
 							<visible>String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
-							<left>38</left>
-							<top>41</top>
-							<width>234</width>
+							<left>47</left>
+							<top>25</top>
+							<width>254</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label] ($INFO[System.AddonUpdateCount])</label>
 							<font>font25_narrow</font>
@@ -800,7 +803,7 @@
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
-				<height>500</height>
+				<height>450</height>
 				<onright>$PARAM[list_id]</onright>
 				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
@@ -810,7 +813,7 @@
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="330" height="500">
+				<itemlayout width="270" height="500">
 					<control type="group">
 						<left>70</left>
 						<include content="InfoWallMusicLayout">
@@ -821,15 +824,15 @@
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="330" height="500">
+				<focusedlayout width="270" height="500">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="240,120" />
+							<effect type="zoom" start="100" end="104" time="200" tween="sine" easing="inout" center="240,120" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="240,120" />
+							<effect type="zoom" start="104" end="100" time="200" tween="sine" easing="inout" center="240,120" />
 						</animation>
 						<include content="InfoWallMusicLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
@@ -890,18 +893,20 @@
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
-				<height>430</height>
+				<height>387</height>
 				<onright>$PARAM[list_id]</onright>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,$PARAM[item_treshold]) | [Container($PARAM[list_id]).IsUpdating + Integer.IsEqual(Container($PARAM[list_id]).NumItems,0)]</visible>
-				<itemlayout width="330" height="500" infoupdate="$PARAM[info_update]">
+				<itemlayout width="267" height="500" infoupdate="$PARAM[info_update]">
 					<control type="group">
 						<left>70</left>
 						<control type="image">
-							<width>319</width>
-							<height>340</height>
+							<!-- 319 -->
+							<width>279</width>
+							<!-- 340 -->
+							<height>297</height>
 							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
@@ -909,15 +914,15 @@
 						<control type="image">
 							<top>43</top>
 							<left>38</left>
-							<width>245</width>
-							<height>190</height>
+							<width>205</width>
+							<height>147</height>
 							<texture fallback="DefaultTVShows.png">$PARAM[icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
 							<left>42</left>
-							<top>247</top>
-							<width>245</width>
+							<top>204</top>
+							<width>205</width>
 							<height>70</height>
 							<label>$PARAM[label]</label>
 							<font>font12</font>
@@ -927,8 +932,8 @@
 						</control>
 						<control type="label">
 							<left>42</left>
-							<top>277</top>
-							<width>245</width>
+							<top>234</top>
+							<width>205</width>
 							<height>65</height>
 							<label>$PARAM[label2]</label>
 							<font>font12</font>
@@ -945,8 +950,8 @@
 						</control>
 						<control type="progress">
 							<left>20</left>
-							<top>300</top>
-							<width>280</width>
+							<top>257</top>
+							<width>240</width>
 							<height>1</height>
 							<texturebg></texturebg>
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
@@ -955,8 +960,8 @@
 						</control>
 						<control type="progress">
 							<left>20</left>
-							<top>300</top>
-							<width>280</width>
+							<top>257</top>
+							<width>240</width>
 							<height>1</height>
 							<texturebg></texturebg>
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
@@ -965,7 +970,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout width="330" height="500" infoupdate="$PARAM[info_update]">
+				<focusedlayout width="267" height="500" infoupdate="$PARAM[info_update]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -976,15 +981,15 @@
 							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="240,100" />
 						</animation>
 						<control type="image">
-							<width>319</width>
-							<height>340</height>
+							<width>279</width>
+							<height>297</height>
 							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
-							<width>319</width>
-							<height>340</height>
+							<width>279</width>
+							<height>297</height>
 							<texture colordiffuse="button_focus">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
@@ -992,15 +997,15 @@
 						<control type="image">
 							<top>43</top>
 							<left>38</left>
-							<width>245</width>
-							<height>190</height>
+							<width>205</width>
+							<height>147</height>
 							<texture fallback="DefaultTVShows.png">$PARAM[icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
 							<left>42</left>
-							<top>247</top>
-							<width>245</width>
+							<top>204</top>
+							<width>205</width>
 							<height>70</height>
 							<label>$PARAM[label]</label>
 							<font>font12</font>
@@ -1011,8 +1016,8 @@
 						</control>
 						<control type="label">
 							<left>42</left>
-							<top>277</top>
-							<width>245</width>
+							<top>234</top>
+							<width>205</width>
 							<height>65</height>
 							<label>$PARAM[label2]</label>
 							<font>font12</font>
@@ -1030,8 +1035,8 @@
 						</control>
 						<control type="progress">
 							<left>20</left>
-							<top>300</top>
-							<width>280</width>
+							<top>257</top>
+							<width>240</width>
 							<height>1</height>
 							<texturebg></texturebg>
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
@@ -1040,8 +1045,8 @@
 						</control>
 						<control type="progress">
 							<left>20</left>
-							<top>300</top>
-							<width>280</width>
+							<top>257</top>
+							<width>240</width>
 							<height>1</height>
 							<texturebg></texturebg>
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
@@ -1473,27 +1478,28 @@
   </include>
 	<include name="BusyListSpinner">
 		<param name="posy">160</param>
+		<param name="posx">180</param>
 		<param name="visible">true</param>
 		<definition>
 			<control type="group" id="$PARAM[list_id]599">
 				<height>160</height>
-				<left>180</left>
+				<left>$PARAM[posx]</left>
 				<visible>Container($PARAM[list_id]).IsUpdating + !Integer.IsGreater(Container($PARAM[list_id]).NumItems,0)</visible>
 				<visible>$PARAM[visible]</visible>
 				<control type="image">
 					<top>$PARAM[posy]</top>
-					<width>100</width>
-					<height>100</height>
+					<width>80</width>
+					<height>80</height>
 					<aspectratio aligny="center">keep</aspectratio>
-					<texture colordiffuse="black">dialogs/extendedprogress/loading-back.png</texture>
+					<texture colordiffuse="button_focus2">dialogs/extendedprogress/loading-back.png</texture>
 				</control>
 				<control type="image">
 					<top>$PARAM[posy]</top>
-					<width>100</width>
-					<height>100</height>
+					<width>80</width>
+					<height>80</height>
 					<aspectratio aligny="center">keep</aspectratio>
-					<texture>dialogs/extendedprogress/loading.png</texture>
-					<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
+					<texture colordiffuse="button_focus2">dialogs/extendedprogress/loading.png</texture>
+					<animation effect="rotate" center="auto" start="360" end="0" time="750" loop="true" condition="true">Conditional</animation>
 				</control>
 			</control>
 		</definition>
@@ -1511,15 +1517,15 @@
           <width>50</width>
           <height>50</height>
           <aspectratio aligny="center">keep</aspectratio>
-          <texture colordiffuse="black">dialogs/extendedprogress/loading-back.png</texture>
+          <texture colordiffuse="button_focus2">dialogs/extendedprogress/loading-back.png</texture>
         </control>
         <control type="image">
           <top>$PARAM[posy]</top>
           <width>50</width>
           <height>50</height>
           <aspectratio aligny="center">keep</aspectratio>
-          <texture>dialogs/extendedprogress/loading.png</texture>
-          <animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
+          <texture colordiffuse="button_focus2">dialogs/extendedprogress/loading.png</texture>
+          <animation effect="rotate" center="auto" start="360" end="0" time="750" loop="true" condition="true">Conditional</animation>
         </control>
       </control>
     </definition>

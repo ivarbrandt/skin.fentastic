@@ -17,7 +17,7 @@
 				<left>0</left>
 				<top>4</top>
 				<width>100%</width>
-				<height>435</height>
+				<height>332</height>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 				<animation effect="fade" time="200">VisibleChange</animation>
@@ -46,9 +46,9 @@
 					<visible>Container.Content(movies) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(games)</visible>
 					<preloaditems>1</preloaditems>
 					<viewtype label="20021">icon</viewtype>
-					<itemlayout width="317">
+					<itemlayout width="215">
 						<control type="group">
-							<left>-220</left>
+							<left>-118</left>
 							<top>18</top>
 							<include>InfoWallMovieLayout</include>
 						</control>
@@ -94,14 +94,14 @@
 					</control>
 					<control type="image">
 						<left>645</left>
-						<top>440</top>
+						<top>337</top>
 						<width>32</width>
 						<height>32</height>
 						<texture>$VAR[ListWatchedIconVar]</texture>
 					</control>
 					<control type="label">
 						<left>695</left>
-						<top>425</top>
+						<top>322</top>
 						<right>50</right>
 						<height>40</height>
 						<label>$INFO[ListItem.Label]$VAR[ListSubLabelVar]</label>
@@ -110,8 +110,8 @@
 					</control>
 					<control type="textbox">
 						<left>645</left>
-						<top>505</top>
-						<height>250</height>
+						<top>402</top>
+						<height>335</height>
 						<right>115</right>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[PlotTextBoxVar]</label>

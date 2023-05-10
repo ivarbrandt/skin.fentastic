@@ -440,7 +440,7 @@
 						<orientation>vertical</orientation>
 						<pagecontrol>14010</pagecontrol>
 						<visible>Integer.IsGreater(Container(14100).NumItems,0) | Container(14100).IsUpdating</visible>
-						<itemlayout width="330" height="401">
+						<itemlayout width="270" height="350">
 							<control type="group">
 								<top>130</top>
 								<include content="InfoWallMusicLayout">
@@ -449,12 +449,12 @@
 								</include>
 							</control>
 						</itemlayout>
-						<focusedlayout width="330" height="401">
+						<focusedlayout width="270" height="350">
 							<control type="group">
 								<depth>DepthContentPopout</depth>
 								<top>130</top>
-								<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="170,320">Focus</animation>
-								<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="170,320">UnFocus</animation>
+								<animation effect="zoom" start="100" end="103" time="200" tween="sine" easing="inout" center="170,320">Focus</animation>
+								<animation effect="zoom" start="103" end="100" time="200" tween="sine" easing="inout" center="170,320">UnFocus</animation>
 								<include content="InfoWallMusicLayout">
 									<param name="fallback_image" value="DefaultFavourites.png" />
 									<param name="focused" value="true" />
@@ -745,7 +745,7 @@
 			</include>
 			<include>BottomBar</include>
 			<control type="group">
-				<depth>DepthContentPanel</depth>
+				<!-- <depth>DepthContentPanel</depth> -->
 				<include>OpenClose_Left</include>
 				<include content="ContentPanel">
 					<param name="width" value="522" />
