@@ -57,7 +57,7 @@
 					<control type="image">
 						<depth>DepthContentPopout</depth>
 						<left>48</left>
-						<top>120</top>
+						<top>160</top>
 						<width>540</width>
 						<height>850</height>
 						<bottom>124</bottom>
@@ -75,7 +75,7 @@
 
 					<control type="progress">
 						<left>48</left>
-						<top>947</top>
+						<top>120</top>
 						<width>540</width>
 						<height>1</height>
 						<texturebg></texturebg>
@@ -85,7 +85,7 @@
 					</control>
 					<control type="progress">
 						<left>48</left>
-						<top>947</top>
+						<top>120</top>
 						<width>540</width>
 						<height>1</height>
 						<texturebg></texturebg>

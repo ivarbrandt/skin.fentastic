@@ -427,7 +427,7 @@
 						<param name="id" value="favorites"/>
 					</include>
 					<control type="panel" id="14100">
-						<left>65</left>
+						<left>33</left>
 						<top>0</top>
 						<right>0</right>
 						<bottom>0</bottom>
@@ -440,7 +440,7 @@
 						<orientation>vertical</orientation>
 						<pagecontrol>14010</pagecontrol>
 						<visible>Integer.IsGreater(Container(14100).NumItems,0) | Container(14100).IsUpdating</visible>
-						<itemlayout width="270" height="350">
+						<itemlayout width="280" height="365">
 							<control type="group">
 								<top>130</top>
 								<include content="InfoWallMusicLayout">
@@ -449,7 +449,7 @@
 								</include>
 							</control>
 						</itemlayout>
-						<focusedlayout width="270" height="350">
+						<focusedlayout width="280" height="365">
 							<control type="group">
 								<depth>DepthContentPopout</depth>
 								<top>130</top>

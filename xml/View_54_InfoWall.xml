@@ -55,7 +55,7 @@
 				<!-- 316 -->
 				<width>280</width>
 				<!-- 386 -->
-				<height>357</height>
+				<height>345</height>
 				<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
@@ -64,7 +64,7 @@
 				<top>-4</top>
 				<left>-4</left>
 				<width>288</width>
-				<height>363</height>
+				<height>351</height>
 				<texture colordiffuse="button_focus">colors/grey.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
@@ -82,7 +82,7 @@
 			</control>
 			<control type="textbox">
 				<left>28</left>
-				<top>258</top>
+				<top>252</top>
 				<width>226</width>
 				<height>80</height>
 				<font>font12</font>
@@ -556,8 +556,8 @@
 				<focusedlayout height="301" width="410" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="220,250">Focus</animation>
-						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="220,250">UnFocus</animation>
+						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="180,100">Focus</animation>
+						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="180,100">UnFocus</animation>
 						<left>64</left>
 						<top>110</top>
 						<include content="InfoWallEpisodeLayout">

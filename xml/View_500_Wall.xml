@@ -31,8 +31,8 @@
 				<focusedlayout height="303" width="211" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<animation effect="zoom" start="100" end="101" time="200" tween="sine" easing="inout" center="160,300">Focus</animation>
-						<animation effect="zoom" start="101" end="100" time="200" tween="sine" easing="inout" center="160,300">UnFocus</animation>
+						<animation effect="zoom" start="100" end="101" time="200" tween="sine" easing="inout" center="180,100">Focus</animation>
+						<animation effect="zoom" start="101" end="100" time="200" tween="sine" easing="inout" center="180,100">UnFocus</animation>
 						<top>120</top>
 						<include content="InfoWallMovieLayout">
 							<param name="focused" value="true" />
