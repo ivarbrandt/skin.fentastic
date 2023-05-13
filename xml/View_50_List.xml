@@ -72,30 +72,11 @@
 							<param name="animation" value="True" />
 						</include>
 					</control>
-
-					<control type="progress">
-						<left>48</left>
-						<top>120</top>
-						<width>540</width>
-						<height>1</height>
-						<texturebg></texturebg>
-						<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-						<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-						<visible>String.IsEqual(ListItem.DBtype,movie) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-					</control>
-					<control type="progress">
-						<left>48</left>
-						<top>120</top>
-						<width>540</width>
-						<height>1</height>
-						<texturebg></texturebg>
-						<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-						<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-						<visible>Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-					</control>
-
-
-					
+					<include content="ProgressBar">
+						<param name="left" value="48"/>
+						<param name="top" value="120"/>
+						<param name="width" value="540"/>
+					</include>
 				</control>
 				<control type="group">
 					<visible>Control.IsVisible(503) + Window.IsActive(musicplaylist)</visible>
@@ -274,7 +255,7 @@
 					<left>30</left>
 					<top>110</top>
 					<width>540</width>
-					<height>330</height>
+					<height>303</height>
 					<aspectratio aligny="top">scale</aspectratio>
 					<fadetime>300</fadetime>
 					<texture>$INFO[ListItem.Icon]</texture>
@@ -292,7 +273,7 @@
 				</control>
 				<control type="image">
 					<left>30</left>
-					<top>320</top>
+					<top>293</top>
 					<width>540</width>
 					<height>120</height>
 					<texture>overlays/overlayfade.png</texture>
@@ -301,7 +282,7 @@
 				</control>
 				<control type="image">
 					<left>50</left>
-					<top>350</top>
+					<top>323</top>
 					<width>181</width>
 					<height>70</height>
 					<texture>$INFO[ListItem.Art(clearlogo)]</texture>
@@ -315,39 +296,11 @@
 					<animation effect="slide" end="0,-140" time="0" condition="String.IsEqual(ListItem.DbType,episode)">conditional</animation>
 					<visible>!String.IsEqual(ListItem.DbType,episode)</visible>
 				</control> -->
-				<control type="progress">
-					<left>30</left>
-					<top>390</top>
-					<width>540</width>
-					<height>1</height>
-					<fadetime>300</fadetime>
-					<texturebg></texturebg>
-					<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-					<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-					<visible>String.IsEqual(ListItem.DBtype,movie) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-				</control>
-				<control type="progress">
-					<left>30</left>
-					<top>390</top>
-					<width>540</width>
-					<height>1</height>
-					<texturebg></texturebg>
-					<fadetime>300</fadetime>
-					<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-					<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-					<visible>Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-				</control>
-				<control type="progress">
-					<left>30</left>
-					<top>417</top>
-					<width>540</width>
-					<height>1</height>
-					<texturebg></texturebg>
-					<fadetime>300</fadetime>
-					<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-					<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-					<visible>String.IsEqual(ListItem.DBtype,episode) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-				</control>
+				<include content="ProgressBar">
+					<param name="left" value="30"/>
+					<param name="top" value="390"/>
+					<param name="width" value="540"/>
+				</include>
 				<control type="group">
 					<visible>!Container.Content() | !String.isempty(ListItem.Plot)</visible>
 					<left>30</left>
@@ -380,23 +333,23 @@
 					<!-- Plot control episodes -->
 					<control type="textbox" id="15501">
 						<visible>!String.IsEqual(System.Language,Hebrew)</visible>
-						<top>550</top>
+						<top>523</top>
 						<width>540</width>
-						<bottom>70</bottom>
+						<bottom>100</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[InfoPanelEpisode]</label>
 					</control>
 					<control type="textbox" id="15502">
 						<visible>String.IsEqual(System.Language,Hebrew)</visible>
-						<top>550</top>
+						<top>523</top>
 						<width>540</width>
-						<bottom>70</bottom>
+						<bottom>100</bottom>
 						<align>right</align>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[InfoPanelEpisode]</label>
 					</control>
 					<control type="textbox">
-						<top>445</top>
+						<top>418</top>
 						<width>550</width>
 						<aligny>center</aligny>
 						<height>110</height>

@@ -139,7 +139,7 @@
 						</control>
 						
 
-						<control type="progress">
+						<!-- <control type="progress">
 							<left>31</left>
 							<top>525</top>
 							<width>285</width>
@@ -158,7 +158,12 @@
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
 							<visible>Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-						</control>
+						</control> -->
+						<include content="ProgressBar">
+							<param name="left" value="31"/>
+							<param name="top" value="525"/>
+							<param name="width" value="285"/>
+						</include>
 
 
 					</itemlayout>

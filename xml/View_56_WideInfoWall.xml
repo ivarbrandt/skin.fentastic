@@ -226,18 +226,11 @@
 					<align>center</align>
 				</control>
 			</control>
-			<control type="progress">
-					<left>20</left>
-					<top>253</top>
-					<width>416</width>
-					<height>1</height>
-					<texturebg></texturebg>
-					<fadetime>200</fadetime>
-					<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-					<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-					<visible>![$PARAM[focused]] + String.IsEqual(ListItem.DBtype,episode) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
-				</control>
+				<include content="ProgressBar" condition="![$PARAM[focused]]">
+					<param name="left" value="20"/>
+					<param name="top" value="253"/>
+					<param name="width" value="416"/>
+				</include>
 				<!-- <control type="group">
 					<left>50%</left>
 					<top>8</top>
@@ -420,37 +413,11 @@
 				<top>-8</top>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>
-			<control type="progress">
-				<left>20</left>
-				<top>169</top>
-				<width>306</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-				<visible>String.IsEqual(ListItem.DBtype,movie) + ![$PARAM[focused]] + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-			</control>
-			<control type="progress">
-				<left>20</left>
-				<top>169</top>
-				<width>306</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-				<visible>![$PARAM[focused]] + Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-			</control>
-			<control type="progress">
-				<left>20</left>
-				<top>169</top>
-				<width>306</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-				<visible>![$PARAM[focused]] + String.IsEqual(ListItem.DBtype,episode) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
-			</control>
+			<include content="ProgressBar" condition="![$PARAM[focused]]">
+				<param name="left" value="20"/>
+				<param name="top" value="169"/>
+				<param name="width" value="306"/>
+			</include>
 		</definition>
 	</include>
 	<include name="View_56_WideInfoWall">
@@ -510,8 +477,8 @@
 				<focusedlayout height="301" width="430" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="240,130">Focus</animation>
-						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,130">UnFocus</animation>
+						<animation effect="zoom" start="100" end="101" time="200" tween="sine" easing="inout" center="240,130">Focus</animation>
+						<animation effect="zoom" start="101" end="100" time="200" tween="sine" easing="inout" center="240,130">UnFocus</animation>
 						<left>44</left>
 						<top>110</top>
 						<include content="WideInfoWallEpisodeLayout">

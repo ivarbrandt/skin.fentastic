@@ -6,7 +6,8 @@
 - Resized PVR, Addon, and Favorites widgets
 - Resized artwork for InfoWall, WideInfoWall, Wall, WideWall, and Poster views
 - Moved progress for List view to top of poster
-- Cleaned up Shift view
+- Removed Shift view from movie/tvshow content
+- Refactored progress bars across all views
     
 [B][COLOR button_focus]Version 1.0.9[/COLOR][/B]
 - Small fixes

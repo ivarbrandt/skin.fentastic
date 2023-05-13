@@ -264,49 +264,11 @@
 					<align>center</align>
 				</control>
 			</control>
-			<!-- <control type="progress">
-				<left>20</left>
-				<top>272</top>
-				<width>416</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="button_focus2" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-				<visible>String.IsEqual(ListItem.DBtype,movie) + ![$PARAM[focused]] + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-			</control> -->
-			<control type="progress">
-				<left>20</left>
-				<top>250</top>
-				<width>307</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<fadetime>200</fadetime>
-				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-				<visible>String.IsEqual(ListItem.DBtype,movie) + ![$PARAM[focused]] + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-			</control>
-			<control type="progress">
-				<left>20</left>
-				<top>250</top>
-				<width>307</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<fadetime>200</fadetime>
-				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-				<visible>![$PARAM[focused]] + Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-			</control>
-			<control type="progress">
-				<left>20</left>
-				<top>250</top>
-				<width>307</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<fadetime>200</fadetime>
-				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-				<visible>![$PARAM[focused]] + String.IsEqual(ListItem.DBtype,episode) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-			</control>
+			<include content="ProgressBar" condition="![$PARAM[focused]]">
+				<param name="left" value="20"/>
+				<param name="top" value="250"/>
+				<param name="width" value="307"/>
+			</include>
 			<control type="label">
 				<left>51</left>
 				<top>173</top>
@@ -477,28 +439,11 @@
 				<top>-8</top>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>
-			<control type="progress">
-				<left>21</left>
-				<top>269</top>
-				<width>195</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-				<visible>String.IsEqual(ListItem.DBtype,movie) + ![$PARAM[focused]] + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
-			</control>
-			<control type="progress">
-				<left>21</left>
-				<top>269</top>
-				<width>195</width>
-				<height>1</height>
-				<texturebg></texturebg>
-				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-				<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-				<visible>![$PARAM[focused]] + Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
-			</control>
+			<include content="ProgressBar" condition="![$PARAM[focused]]">
+				<param name="left" value="21"/>
+				<param name="top" value="269"/>
+				<param name="width" value="195"/>
+			</include>
 		</definition>
 	</include>
 	<include name="View_54_InfoWall">

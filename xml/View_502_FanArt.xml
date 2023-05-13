@@ -48,29 +48,11 @@
 					<label>$VAR[PlotTextBoxVar]</label>
 					<autoscroll time="3000" delay="7000" repeat="5000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
-
-				<control type="progress">
-					<left>38</left>
-					<top>737</top>
-					<width>1161</width>
-					<height>1</height>
-					<texturebg></texturebg>
-					<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-					<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-					<visible>String.IsEqual(ListItem.DBtype,movie) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-				</control>
-				<control type="progress">
-					<left>38</left>
-					<top>737</top>
-					<width>1161</width>
-					<height>1</height>
-					<texturebg></texturebg>
-					<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-					<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-					<visible>Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-				</control>
-
-
+				<include content="ProgressBar">
+					<param name="left" value="38"/>
+					<param name="top" value="737"/>
+					<param name="width" value="1161"/>
+				</include>
 				<control type="scrollbar" id="502600">
 					<left>20</left>
 					<top>list_top_offset</top>
