@@ -1470,9 +1470,7 @@
     <onleft>9000</onleft>
 		<onback>9000</onback>
     <onright>$PARAM[list_id]</onright>
-    <onfocus>SetProperty(fentastic.widget_monitor,true)</onfocus>
-    <onfocus>RunScript(script.fentastic.helper,mode=widget_monitor)</onfocus>
-    <onunfocus>SetProperty(fentastic.widget_monitor,false)</onunfocus>
+    <onfocus>RunScript(script.fentastic.helper,mode=widget_monitor&amp;list_id=$PARAM[list_id])</onfocus>
     <onback>SetFocus($PARAM[list_id],0,absolute)</onback>
     <preloaditems>2</preloaditems>
   </include>
