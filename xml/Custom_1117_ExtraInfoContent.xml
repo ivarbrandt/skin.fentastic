@@ -8,9 +8,11 @@
 - Moved progress for List view to top of poster
 - Removed Shift view from movie/tvshow content
 - Refactored progress bars across all views
-- Added thumbnails to Helper
-- Longer titles now scroll in LandscapeInfo widgets
+- Added thumbnails to Path selection in Helper
+- Fixed label still showing when empty widget was collapsed
+- Fixed longer titles not scrolling in LandscapeInfo widgets
 - Fixed widget sorting behavior
+- Added new detailed documentation for skin setup to Github repo
     
 [B][COLOR button_focus]Version 1.0.9[/COLOR][/B]
 - Small fixes
@@ -117,6 +119,8 @@ Click a menu item to toggle the display of a section on and off. This will show 
 [B][COLOR button_focus]Stacked widgets[/COLOR][/B] contain a category widget and a normal widget beneath. The category widget "communicates" with the normal widget in order to load the new widget list according to the focused item in the category widget. If the stacked widget that you set up has 20 items in it, then that means you'll be able to have all 20 widgets available from just one widget on the home screen.
 
 That's it! You're all set to go. Enjoy the skin!
+
+If you would like to see a more detailed version of this Setup Guide, please visit my Github repo at https://github.com/ivarbrandt/skin.fentastic
     </label>
   </include>
 
