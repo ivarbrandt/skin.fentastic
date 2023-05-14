@@ -8,6 +8,9 @@
 - Moved progress for List view to top of poster
 - Removed Shift view from movie/tvshow content
 - Refactored progress bars across all views
+- Added thumbnails to Helper
+- Longer titles now scroll in LandscapeInfo widgets
+- Fixed widget sorting behavior
     
 [B][COLOR button_focus]Version 1.0.9[/COLOR][/B]
 - Small fixes
