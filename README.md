@@ -75,7 +75,11 @@ To set up the widgets, follow these steps:
 
    ![Step 1](resources/images/step_1.jpg)
 
-2. Click a menu item to toggle the display of a section on and off. This will show or hide the section on the home screen. Toggle the Movie/Show section to 'on'. You'll see a couple of menu items drop down.
+2. Click a menu item to toggle the display of a section on and off. This will show or hide the section on the home screen.
+
+   **NOTE:** Even if you have the Movie/Show section toggled on, you won't see them on the home screen until you set a main menu path for them.
+
+   Toggle the Movie/Show section to 'on'. You'll see a couple of menu items drop down.
 
    ![Step 2](resources/images/step_2.jpg)
 
