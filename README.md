@@ -10,7 +10,7 @@ Here are some of the key differences between FENtastic and the default Estuary s
 
   ![Viewtypes](resources/images/viewtypes.jpg)
 
-* **Customizable Widgets**: FENtastic allows you to customize widgets and category widgets for movies, shows, and episodes.
+* **Customizable Widgets**: FENtastic allows you to customize widgets and category widgets for movies, tvshows, and episodes.
 
   ![Customizable Widgets](resources/images/customizable_widgets.jpg)
 
@@ -30,10 +30,10 @@ Here are some of the key differences between FENtastic and the default Estuary s
 * 2 NEW viewtypes ("WideWall" and "WideInfoWall")
 * Plenty of adjustments to pre-existing views
 * Customizable movie and show main menu items
-* Customizable widgets and category widgets for movies, shows, and episodes
-* Custom stacked widgets for movies, shows, and episodes
+* Customizable widgets and category widgets for movies, tvshows, and episodes
+* Custom stacked widgets for movies, tvshows, and episodes
 * New InfoPanel for widgets
-* Progress displayed for movies, shows, seasons and episodes
+* Progress displayed for movies, tvshows, seasons and episodes
 * New default Colors theme
 * New Color theme 'purple'
 * Skin-wide adjustments to dialog and menu colors for every color theme
