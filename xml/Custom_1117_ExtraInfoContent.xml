@@ -2,7 +2,7 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR button_focus]Version 1.0.11[/COLOR][/B]
-- Fixed stacked widgets not loading on startup
+- Quick fix for stacked widgets not loading on startup
     
 [B][COLOR button_focus]Version 1.0.10[/COLOR][/B]
 - Resized all Poster, Landscape, and LandscapeInfo widgets
