@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
   <include name="Changelog">
-    <label>[B][COLOR button_focus]Version 1.0.10[/COLOR][/B]
+    <label>[B][COLOR button_focus]Version 1.0.11[/COLOR][/B]
+- Fixed stacked widgets not loading on startup
+    
+[B][COLOR button_focus]Version 1.0.10[/COLOR][/B]
 - Resized all Poster, Landscape, and LandscapeInfo widgets
 - Resized PVR, Addon, and Favorites widgets
 - Resized artwork for InfoWall, WideInfoWall, Wall, WideWall, and Poster views
