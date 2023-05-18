@@ -313,8 +313,8 @@
 				<control type="image">
 					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 					<left>20</left>
-					<top>180</top>
-					<width>395</width>
+					<top>122</top>
+					<width>305</width>
 					<height>70</height>
 					<texture>overlays/overlayfade.png</texture>
 					<visible>!ListItem.IsParentFolder</visible>
@@ -393,8 +393,8 @@
 			</control>
 			<control type="label">
 				<visible>![Control.IsVisible(56) | Control.IsVisible(504)]</visible>
-				<left>150</left>
-				<top>220</top>
+				<left>60</left>
+				<top>162</top>
 				<width>260</width>
 				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 				<font>font20_title</font>
