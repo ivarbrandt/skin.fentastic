@@ -13,7 +13,7 @@
 		<param name="visible">true</param>
 		<param name="item_treshold">0</param>
 		<definition>
-			<control type="label" id="$PARAM[list_id]666">
+			<control type="label" id="$PARAM[list_id]665">
 				<left>75</left>
 				<top>80</top>
 				<onback>9000</onback>
