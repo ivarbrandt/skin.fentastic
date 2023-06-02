@@ -201,17 +201,17 @@
         </control>
 				<!-- COUNTDOWN TIMER -->
 				<control type="radiobutton" id="6373">
-					<label>Show countdown timer for stacked widget delay?</label>
+					<label>Show countdown timer for stacked widget delay</label>
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(category_widget_display_delay)</selected>
 					<onclick>Skin.ToggleSetting(category_widget_display_delay)</onclick>
 				</control>
-				<!-- COUNTDOWN TIMER -->
-				<control type="radiobutton" id="6373">
-					<label>Show countdown timer for stacked widget delay?</label>
+				<!-- SCROLLING TITLES -->
+				<control type="radiobutton" id="6374">
+					<label>Autoscroll LandscapeInfo widget labels</label>
 					<include>DefaultSettingButton</include>
-					<selected>Skin.HasSetting(category_widget_display_delay)</selected>
-					<onclick>Skin.ToggleSetting(category_widget_display_delay)</onclick>
+					<selected>Skin.HasSetting(LandscapeInfoScroll)</selected>
+					<onclick>Skin.ToggleSetting(LandscapeInfoScroll)</onclick>
 				</control>
 			</control>
 

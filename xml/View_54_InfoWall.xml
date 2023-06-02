@@ -220,7 +220,7 @@
 			<control type="group">
 				<visible>!Window.IsActive(videos)</visible>
 				<control type="label">
-					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
+					<visible>String.IsEqual(ListItem.DBType,episode) + Skin.HasSetting(LandscapeInfoScroll)</visible>
 					<left>15%</left>
 					<top>205</top>
 					<width>100%</width>
@@ -231,7 +231,7 @@
 					<align>center</align>
 				</control>
 				<control type="label">
-					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
+					<visible>String.IsEqual(ListItem.DBType,episode) + Skin.HasSetting(LandscapeInfoScroll)</visible>
 					<left>15%</left>
 					<top>235</top>
 					<width>100%</width>
@@ -242,7 +242,29 @@
 					<align>center</align>
 				</control>
 				<control type="label">
-					<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)</visible>
+					<visible>String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(LandscapeInfoScroll)</visible>
+					<left>15%</left>
+					<top>205</top>
+					<width>100%</width>
+					<label>$PARAM[sub_label]</label>
+					<font>font12</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(LandscapeInfoScroll)</visible>
+					<left>15%</left>
+					<top>235</top>
+					<width>100%</width>
+					<label>$PARAM[main_label]</label>
+					<font>font10</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + Skin.HasSetting(LandscapeInfoScroll)</visible>
 					<left>15%</left>
 					<top>217</top>
 					<width>100%</width>
@@ -253,7 +275,18 @@
 					<align>center</align>
 				</control>
 				<control type="label">
-					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
+					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + !Skin.HasSetting(LandscapeInfoScroll)</visible>
+					<left>15%</left>
+					<top>217</top>
+					<width>100%</width>
+					<label>$PARAM[main_label]</label>
+					<font>font12</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] + Skin.HasSetting(LandscapeInfoScroll)</visible>
 					<left>15%</left>
 					<top>217</top>
 					<width>100%</width>
@@ -261,6 +294,17 @@
 					<font>font12</font>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>true</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] + !Skin.HasSetting(LandscapeInfoScroll)</visible>
+					<left>15%</left>
+					<top>217</top>
+					<width>100%</width>
+					<label>$PARAM[networks_label]</label>
+					<font>font12</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<scroll>false</scroll>
 					<align>center</align>
 				</control>
 			</control>
