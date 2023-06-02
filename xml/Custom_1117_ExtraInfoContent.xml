@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
   <include name="Changelog">
-    <label>[B][COLOR button_focus]Version 1.0.11[/COLOR][/B]
+    <label>[B][COLOR button_focus]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
+- Added customizable widget load delay for stacked widgets. You can find this new setting in Skin settings » Options
+- Added optional display of countdown timer for use with the widget load delay
+- Added toggle for auto-scrolling labels on LandscapeInfo widgets
+    
+[B][COLOR button_focus]Version 1.0.11[/COLOR][/B]
 - Quick fix for stacked widgets not loading on startup
     
 [B][COLOR button_focus]Version 1.0.10[/COLOR][/B]
