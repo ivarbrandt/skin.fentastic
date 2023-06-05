@@ -2,8 +2,8 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR button_focus]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
-- Added customizable delay for stacked widgets. You can find this new setting in Skin settings » Options
-- Added optional display of countdown timer for use with the stacked widget delay
+- Added customizable load delay for stacked widgets. You can find this new setting in Skin settings » Options
+- Added optional display of countdown timer for use with the stacked widget load delay
 - Added toggle for auto-scrolling labels on LandscapeInfo widgets
 - Cleaned up LandscapeInfo widget for episodes
 
