@@ -2,13 +2,14 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR button_focus]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
-- Added customizable widget load delay for stacked widgets. You can find this new setting in Skin settings » Options
-- Added optional display of countdown timer for use with the widget load delay
+- Added customizable delay for stacked widgets. You can find this new setting in Skin settings » Options
+- Added optional display of countdown timer for use with the stacked widget delay
 - Added toggle for auto-scrolling labels on LandscapeInfo widgets
-    
+- Cleaned up LandscapeInfo widget for episodes
+
 [B][COLOR button_focus]Version 1.0.11[/COLOR][/B]
 - Quick fix for stacked widgets not loading on startup
-    
+
 [B][COLOR button_focus]Version 1.0.10[/COLOR][/B]
 - Resized all Poster, Landscape, and LandscapeInfo widgets
 - Resized PVR, Addon, and Favorites widgets
@@ -21,7 +22,7 @@
 - Fixed longer titles not scrolling in LandscapeInfo widgets
 - Fixed widget sorting behavior
 - Added new detailed documentation for skin setup to Github repo
-    
+
 [B][COLOR button_focus]Version 1.0.9[/COLOR][/B]
 - Small fixes
 

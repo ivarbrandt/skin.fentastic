@@ -194,7 +194,7 @@
 				</control>
 				<!-- STACKED WIDGET DELAY -->
 				<control type="button" id="6372">
-					<label>Stacked widget load delay in milliseconds (1000ms = 1 second)</label>
+					<label>Stacked widget delay in milliseconds (1000ms = 1 second)</label>
 					<label2>$INFO[Skin.String(category_widget_delay),, milliseconds]</label2>
 					<include>DefaultSettingButton</include>
           <onclick>Skin.SetNumeric(category_widget_delay)</onclick>
