@@ -180,21 +180,21 @@
 				<visible>Container(9000).HasFocus(2)</visible>
 				<!-- ALTERNATE INFOPANEL -->
 				<control type="radiobutton" id="6370">
-					<label>Alternate format (InfoPanel)</label>
+					<label>Use alternate format for InfoPanel</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(Enable.AlternateInfo)</onclick>
 					<selected>Skin.HasSetting(Enable.AlternateInfo)</selected>
 				</control>
 				<!-- RAINDROP BACKGROUND -->
 				<control type="radiobutton" id="6371">
-					<label>Raindrop background</label>
+					<label>Show raindrop background</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(HideRainDrops)</onclick>
 					<selected>Skin.HasSetting(HideRainDrops)</selected>
 				</control>
 				<!-- STACKED WIDGET DELAY -->
 				<control type="button" id="6372">
-					<label>Stacked widget load delay in milliseconds (1000ms = 1 second)</label>
+					<label>Set stacked widget load delay in milliseconds (1000ms = 1 second)</label>
 					<label2>$INFO[Skin.String(category_widget_delay),, milliseconds]</label2>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.SetNumeric(category_widget_delay)</onclick>
