@@ -197,8 +197,8 @@
 					<label>Stacked widget load delay in milliseconds (1000ms = 1 second)</label>
 					<label2>$INFO[Skin.String(category_widget_delay),, milliseconds]</label2>
 					<include>DefaultSettingButton</include>
-          <onclick>Skin.SetNumeric(category_widget_delay)</onclick>
-        </control>
+					<onclick>Skin.SetNumeric(category_widget_delay)</onclick>
+				</control>
 				<!-- COUNTDOWN TIMER -->
 				<control type="radiobutton" id="6373">
 					<label>Show countdown timer for stacked widget load delay</label>
