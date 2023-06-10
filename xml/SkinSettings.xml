@@ -38,7 +38,7 @@
 				</control>
 				<!-- MOVIES -->
 				<control type="radiobutton" id="6240">
-					<label>$LOCALIZE[342]</label>
+					<label>$INFO[Skin.String(MenuMovieLabel)]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(HomeMenuNoMoviesButton)</selected>
 					<onclick>Skin.ToggleSetting(HomeMenuNoMoviesButton)</onclick>
@@ -64,7 +64,7 @@
 				</control> -->
 				<!-- TV SHOWS -->
 				<control type="radiobutton" id="625">
-					<label>$LOCALIZE[20343]</label>
+					<label>$INFO[Skin.String(MenuTVShowLabel)]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(HomeMenuNoTVShowsButton)</selected>
 					<onclick>Skin.ToggleSetting(HomeMenuNoTVShowsButton)</onclick>

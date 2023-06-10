@@ -2,6 +2,20 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR button_focus]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
+- Added functionality for the following actions:
+    [B]Action[/B]                                                  [B]Setting name[/B]
+  • Rearranging widgets                          (Move up, Move down)
+  • Renaming main menu paths             (Rename)
+  • Renaming widgets                             (Rename)
+  • Changing widget display type           (Type)
+
+Apart from the ability to rearrange widgets and set labels for the main menu paths, these are all actions that could previously be only set when setting up a widget or main menu path. Now you don't have to go through the full process of setting it up just to rename or change the widget display type. These are now all available as separate actions. Just click a currently configured widget or - Set main menu path to see these options.
+
+- Added dynamic setting labels for Movies and TV Shows in Skin settings
+- Cleaned up dialog headers when configuring widgets and main menu items
+- Other changes/fixes
+
+[B][COLOR button_focus]Version 1.0.12[/COLOR][/B]
 - Added customizable load delay for stacked widgets. You can find this new setting in Skin settings » Options
 - Added optional display of countdown timer for use with the stacked widget load delay
 - Added toggle for auto-scrolling labels on LandscapeInfo widgets
