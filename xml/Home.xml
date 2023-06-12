@@ -954,9 +954,16 @@
 							<param name="icon" value="icons/settings.png" />
 							<param name="label" value="$LOCALIZE[21417]" />
 						</include>
-						<include content="IconButton">
+						<!-- <include content="IconButton">
 							<param name="control_id" value="801" />
 							<param name="onclick" value="ActivateWindow(1107)" />
+							<param name="icon" value="icons/search.png" />
+							<param name="label" value="$LOCALIZE[137]" />
+						</include> -->
+						<include content="IconButton">
+							<param name="control_id" value="801" />
+							<!-- <param name="onclick" value="ActivateWindow(1121)" /> -->
+							<param name="onclick" value="RunScript(script.fentastic.helper,mode=get_search_input)" />
 							<param name="icon" value="icons/search.png" />
 							<param name="label" value="$LOCALIZE[137]" />
 						</include>
