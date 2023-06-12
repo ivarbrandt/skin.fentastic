@@ -3,11 +3,10 @@
   <include name="Changelog">
     <label>[B][COLOR button_focus]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
 - Added functionality for the following actions:
-    [B]Action[/B]                                                  [B]Setting name[/B]
-  • Rearranging widgets                          (Move up, Move down)
-  • Renaming main menu paths             (Rename)
-  • Renaming widgets                             (Rename)
-  • Changing widget display type           (Type)
+  • Rearranging widgets
+  • Renaming main menu paths
+  • Renaming widgets
+  • Changing widget display type
 
 Apart from the ability to rearrange widgets and set labels for the main menu paths, these are all actions that could previously be only set when setting up a widget or main menu path. Now you don't have to go through the full process of setting it up just to rename or change the widget display type. These are now all available as separate actions. Just click a currently configured widget or - Set main menu path to see these options.
 
