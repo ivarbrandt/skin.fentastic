@@ -8,7 +8,7 @@
   • Renaming widgets
   • Changing widget display type
 
-Apart from the ability to rearrange widgets and set labels for the main menu paths, these are all actions that could previously be only set when setting up a widget or main menu path. Now you don't have to go through the full process of setting it up just to rename or change the widget display type. These are now all available as separate actions. Just click a currently configured widget or - Set main menu path to see these options.
+Click a currently configured widget or - Set main menu path to see these options.
 
 - Added dynamic setting labels for Movies and TV Shows in Skin settings
 - Cleaned up dialog headers when configuring widgets and main menu items

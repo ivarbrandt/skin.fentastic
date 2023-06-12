@@ -31,11 +31,11 @@
 			<visible>!Player.HasMedia</visible>
 		</control>
 		<control type="group">
+      <!-- <height>50%</height> -->
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<!-- WIDGETS GROUP -->
 			<control type="group" id="2000">
 				<left>462</left>
-				<top>80</top>
 				<animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
 					<effect type="slide" end="0,20" time="60" tween="sine" />
 					<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
@@ -50,7 +50,7 @@
 					<include content="Visible_Right_Delayed">
 						<param name="id" value="movies"/>
 					</include>
-					<onback>ReplaceWindow(1121,10000)</onback>
+					<!-- <onback>ReplaceWindow(1121,10000)</onback> -->
 					<control type="grouplist" id="27001">
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>27099</pagecontrol>
@@ -74,22 +74,20 @@
               <param name="widget_target" value="videos"/>
               <param name="list_id" value="27013"/>
             </include>
-            <include content="WidgetListSquare">
+            <!-- <include content="WidgetListSquare">
               <param name="content_path" value="plugin://plugin.video.fen/?mode=people&amp;action=tmdb_people_search&amp;query=$INFO[Skin.String(SearchInput)]"/>
               <param name="widget_header" value="Actors/Actresses"/>
               <param name="widget_target" value="videos"/>
               <param name="list_id" value="27014"/>
-            </include>
+            </include> -->
             <include content="WidgetListPoster">
-              <!-- <param name="content_path" value="plugin://plugin.video.fen/?mode=build_movie_list&amp;action=imdb_keywords_list_contents&amp;query=alien"/> -->
-							<param name="content_path" value="plugin://plugin.video.fen/?mode=build_movie_list&amp;action=imdb_build_keywords_results&amp;query=$INFO[Skin.String(SearchInput)]"/>
+							<param name="content_path" value="plugin://plugin.video.fen/?mode=build_movie_list&amp;action=imdb_keywords_list_contents&amp;list_id=$INFO[Skin.String(SearchInput)]"/>
               <param name="widget_header" value="IMDB Keywords (Movies)"/>
               <param name="widget_target" value="videos"/>
               <param name="list_id" value="27015"/>
             </include>
             <include content="WidgetListPoster">
-              <!-- <param name="content_path" value="plugin://plugin.video.fen/?mode=build_tvshow_list&amp;action=imdb_keywords_list_contents&amp;query=alien"/> -->
-							<param name="content_path" value="plugin://plugin.video.fen/?mode=build_tvshow_list&amp;action=imdb_build_keywords_results&amp;query=$INFO[Skin.String(SearchInput)]"/>
+							<param name="content_path" value="plugin://plugin.video.fen/?mode=build_tvshow_list&amp;action=imdb_keywords_list_contents&amp;list_id=$INFO[Skin.String(SearchInput)]"/>
               <param name="widget_header" value="IMDb Keywords (TV Shows)"/>
               <param name="widget_target" value="videos"/>
               <param name="list_id" value="27016"/>
@@ -426,7 +424,7 @@
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<control type="label">
 					<visible>!String.IsEqual(System.Language,Hebrew)</visible>
-					<top>55</top>
+					<top>-5</top>
 					<left>525</left>
 					<width>1085</width>
 					<aligny>center</aligny>
