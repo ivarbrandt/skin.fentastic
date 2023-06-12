@@ -213,6 +213,55 @@
 					<selected>Skin.HasSetting(LandscapeInfoScroll)</selected>
 					<onclick>Skin.ToggleSetting(LandscapeInfoScroll)</onclick>
 				</control>
+				<!-- SEARCH OPTIONS -->
+				<control type="radiobutton" id="638">
+					<label>Enable search results window</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(NoSearchResultsWindow)</selected>
+					<onclick>Skin.ToggleSetting(NoSearchResultsWindow)</onclick>
+				</control>
+				<control type="radiobutton" id="6380">
+					<label>   - $LOCALIZE[342]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(MovieResults)</onclick>
+					<selected>Skin.HasSetting(MovieResults)</selected>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
+				</control>
+				<control type="radiobutton" id="6381">
+					<label>   - $LOCALIZE[20343]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(TVShowResults)</onclick>
+					<selected>Skin.HasSetting(TVShowResults)</selected>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
+				</control>
+				<control type="radiobutton" id="6382">
+					<label>   - Collections</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(CollectionsResults)</onclick>
+					<selected>Skin.HasSetting(CollectionsResults)</selected>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
+				</control>
+				<control type="radiobutton" id="6383">
+					<label>   - Actors/Actresses</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(PeopleResults)</onclick>
+					<selected>Skin.HasSetting(PeopleResults)</selected>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
+				</control>
+				<control type="radiobutton" id="6384">
+					<label>   - IMDb Keywords (Movies)</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(MovieKeywordResults)</onclick>
+					<selected>Skin.HasSetting(MovieKeywordResults)</selected>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
+				</control>
+				<control type="radiobutton" id="6385">
+					<label>   - IMDb Keywords (TV Shows)</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(TVShowKeywordResults)</onclick>
+					<selected>Skin.HasSetting(TVShowKeywordResults)</selected>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
+				</control>
 			</control>
 
 			<control type="grouplist" id="700">

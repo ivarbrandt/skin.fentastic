@@ -12,6 +12,7 @@ Click a currently configured widget or - Set main menu path to see these options
 
 - Added dynamic setting labels for Movies and TV Shows in Skin settings
 - Cleaned up dialog headers when configuring widgets and main menu items
+- Added optional Search results window. Enable it in Skin settings » Options
 - Other changes/fixes
 
 [B][COLOR button_focus]Version 1.0.12[/COLOR][/B]
