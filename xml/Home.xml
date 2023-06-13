@@ -962,7 +962,7 @@
 						</include>
 						<include content="IconButton" condition="!Skin.HasSetting(NoSearchResultsWindow)">
 							<param name="control_id" value="801" />
-							<param name="onclick" value="RunScript(script.fentastic.helper,mode=get_search_input)" />
+							<param name="onclick" value="RunScript(script.fentastic.helper,mode=search_input)" />
 							<param name="icon" value="icons/search.png" />
 							<param name="label" value="$LOCALIZE[137]" />
 						</include>

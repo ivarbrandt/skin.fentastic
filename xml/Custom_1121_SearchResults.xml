@@ -194,10 +194,10 @@
 						</itemlayout>
 						<content>
 							<!-- MOVIES 19000 -->
-							<!-- <include content="MoviesMainMenu" condition="Skin.HasSetting(HomeMenuNoMoviesButton)" /> -->
+							<include content="MoviesMainMenu" condition="!Skin.HasSetting(HomeMenuNoMoviesButton)" />
 						</content>
 					</control>
-					<!-- <control type="grouplist" id="700">
+					<control type="grouplist" id="700">
 						<orientation>horizontal</orientation>
 						<itemgap>0</itemgap>
             <left>-13</left>
@@ -222,7 +222,7 @@
 						</include>
 						<include content="IconButton">
 							<param name="control_id" value="801" />
-							<param name="onclick" value="ActivateWindow(1121)" />
+							<param name="onclick" value="RunScript(script.fentastic.helper,mode=search_input)" />
 							<param name="icon" value="icons/search.png" />
 							<param name="label" value="$LOCALIZE[137]" />
 						</include>
@@ -233,7 +233,7 @@
 							<param name="label" value="$LOCALIZE[31000]" />
 							<param name="visible" value="Player.HasMedia" />
 						</include>
-					</control> -->
+					</control>
 				</control>
 
 
