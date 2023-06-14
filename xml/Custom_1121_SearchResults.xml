@@ -422,14 +422,13 @@
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<control type="label">
-					<visible>!String.IsEqual(System.Language,Hebrew)</visible>
 					<top>-5</top>
 					<left>525</left>
 					<width>1085</width>
 					<aligny>center</aligny>
 					<height>98</height>
 					<font>font37</font>
-					<label>Search results for: [B][COLOR button_focus]$INFO[Skin.String(SearchInput)][/B][/COLOR]</label>
+					<label>Search results for: [COLOR button_focus][B]$INFO[Skin.String(SearchInput)][/B][/COLOR]</label>
 				</control>
 			</control>
 		</control>
