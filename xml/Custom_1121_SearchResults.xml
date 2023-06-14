@@ -116,7 +116,7 @@
 					<!-- <visible>Control.HasFocus(9000)</visible> -->
 					<control type="fixedlist" id="9000">
 						<left>0</left>
-						<top>240</top>
+						<top>230</top>
             <width>492</width>
 						<bottom>-10</bottom>
 						<movement>7</movement>
@@ -126,25 +126,25 @@
 						<onup>700</onup>
 						<ondown>700</ondown>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
-						<focusedlayout height="95">
+						<focusedlayout height="83">
 							<control type="group">
 								<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 								<control type="image">
 									<left>0</left>
 									<top>0</top>
 									<width>462</width>
-									<height>95</height>
+									<height>83</height>
 									<texture colordiffuse="button_focus">lists/focus.png</texture>
 									<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasActiveModalDialog">Conditional</animation>
 								</control>
-								<control type="image">
+								<!-- <control type="image">
 									<left>-3</left>
 									<top>1</top>
 									<width>95</width>
-									<height>95</height>
+									<height>85</height>
 									<texture colordiffuse="button_focus2">$INFO[ListItem.Art(thumb)]</texture>
 									<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
-								</control>
+								</control> -->
 								<!-- <control type="image">
 									<left>0</left>
 									<top>0</top>
@@ -155,46 +155,92 @@
 								</control> -->
 							</control>
 							<!-- SideMenu Focused Icons -->
-							<control type="image">
+							<!-- <control type="image">
 								<left>-3</left>
 								<top>1</top>
-								<width>95</width>
-								<height>95</height>
+								<width>85</width>
+								<height>85</height>
 								<texture>$INFO[ListItem.Art(thumb)]</texture>
-							</control>
+							</control> -->
 							<control type="label">
-								<left>104</left>
+								<left>45</left>
 								<top>0</top>
-								<height>95</height>
-								<width>560</width>
+								<height>83</height>
+								<width>380</width>
 								<aligny>center</aligny>
-								<font>font37</font>
+								<font>font32</font>
 								<label>$INFO[ListItem.Label]</label>
 								<shadowcolor>text_shadow</shadowcolor>
+								<scroll>true</scroll>
 							</control>
 						</focusedlayout>
-						<itemlayout height="95">
-							<control type="image">
+						<itemlayout height="83">
+							<!-- <control type="image">
 								<left>-3</left>
 								<top>1</top>
-								<width>95</width>
-								<height>95</height>
+								<width>85</width>
+								<height>85</height>
 								<texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
-							</control>
+							</control> -->
 							<control type="label">
-								<left>104</left>
+								<left>45</left>
 								<top>0</top>
-								<height>95</height>
-								<width>560</width>
+								<height>83</height>
+								<width>380</width>
 								<aligny>center</aligny>
-								<font>font37</font>
+								<font>font32</font>
 								<label>$INFO[ListItem.Label]</label>
 								<shadowcolor>text_shadow</shadowcolor>
 							</control>
 						</itemlayout>
 						<content>
 							<!-- MOVIES 19000 -->
-							<include content="MoviesMainMenu" condition="!Skin.HasSetting(HomeMenuNoMoviesButton)" />
+							<!-- <include content="MoviesMainMenu" condition="!Skin.HasSetting(HomeMenuNoMoviesButton)" /> -->
+
+							<item>
+								<label>alien</label>
+								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
+							</item>
+							<item>
+								<label>avengers</label>
+								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
+							</item>
+							<item>
+								<label>the shawshank redemption</label>
+								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
+							</item>
+							<item>
+								<label>luck</label>
+								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
+							</item>
+							<item>
+								<label>meet the croods</label>
+								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
+							</item>
+							<item>
+								<label>harry potter and the half blood prince</label>
+								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
+							</item>
+							<item>
+								<label>munich</label>
+								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
+							</item>
+							<item>
+								<label>dark waters</label>
+								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
+							</item>
+							<item>
+								<label>black hawk down</label>
+								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
+							</item>
+							<item>
+								<label>john wick</label>
+								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
+							</item>
+							<item>
+								<label>the day after tomorrow</label>
+								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
+							</item>
 						</content>
 					</control>
 					<control type="grouplist" id="700">
@@ -203,7 +249,7 @@
             <left>-13</left>
 						<width>480</width>
 						<height>110</height>
-						<top>100</top>
+						<top>15</top>
 						<onup>SetFocus(9000,99,absolute)</onup>
 						<ondown>SetFocus(9000,0,absolute)</ondown>
 						<onright>SetFocus(2000)</onright>
@@ -216,15 +262,15 @@
 						</include>
 						<include content="IconButton">
 							<param name="control_id" value="802" />
-							<param name="onclick" value="ActivateWindow(settings)" />
-							<param name="icon" value="icons/settings.png" />
-							<param name="label" value="$LOCALIZE[21417]" />
-						</include>
-						<include content="IconButton">
-							<param name="control_id" value="801" />
 							<param name="onclick" value="RunScript(script.fentastic.helper,mode=search_input)" />
 							<param name="icon" value="icons/search.png" />
 							<param name="label" value="$LOCALIZE[137]" />
+						</include>
+						<include content="IconButton">
+							<param name="control_id" value="801" />
+							<param name="onclick" value="RunScript(script.fentastic.helper,mode=remove_all_spaths)" />
+							<param name="icon" value="icons/infodialogs/uninstall.png" />
+							<param name="label" value="Clear" />
 						</include>
 						<include content="IconButton">
 							<param name="control_id" value="803" />
@@ -242,7 +288,7 @@
 					<width>550</width>
 					<visible>String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)</visible>
 					<!-- <visible>!Control.HasFocus(9000)</visible> -->
-					<include>OpenClose_Left</include>
+					
 					<control type="image">
 						<left>30</left>
 						<top>50</top>
@@ -384,6 +430,7 @@
 			
 			<control type="group">
         <animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
+				<include>OpenClose_Left</include>
         <visible>![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)]</visible>
 				<depth>DepthBars</depth>
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
@@ -415,8 +462,18 @@
 					<height>56</height>
 					<texture>special://xbmc/media/vendor_logo.png</texture>
 				</control> -->
+				<control type="label">
+					<top>90</top>
+					<left>-45</left>
+					<width>1085</width>
+					<aligny>center</aligny>
+					<height>98</height>
+					<font>font36_title</font>
+					<label>Recent searches</label>
+				</control>
 			</control>
 			<control type="group">
+				<include>OpenClose_Right</include>
 				<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
