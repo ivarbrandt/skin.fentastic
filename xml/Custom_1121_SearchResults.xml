@@ -73,7 +73,7 @@
               <param name="widget_target" value="videos"/>
               <param name="list_id" value="27013"/>
             </include>
-            <include content="WidgetListSquare" condition="Skin.HasSetting(PeopleResults)">
+            <include content="WidgetListPoster" condition="Skin.HasSetting(PeopleResults)">
               <param name="content_path" value="plugin://plugin.video.fen/?mode=person_direct.search&amp;query=$INFO[Skin.String(SearchInputEncoded)]"/>
               <param name="widget_header" value="Actors/Actresses"/>
               <param name="widget_target" value="videos"/>
