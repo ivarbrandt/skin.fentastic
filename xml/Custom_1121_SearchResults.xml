@@ -194,53 +194,8 @@
 							</control>
 						</itemlayout>
 						<content>
-							<!-- MOVIES 19000 -->
-							<!-- <include content="MoviesMainMenu" condition="!Skin.HasSetting(HomeMenuNoMoviesButton)" /> -->
-
-							<item>
-								<label>alien</label>
-								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
-							</item>
-							<item>
-								<label>avengers</label>
-								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
-							</item>
-							<item>
-								<label>the shawshank redemption</label>
-								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
-							</item>
-							<item>
-								<label>luck</label>
-								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
-							</item>
-							<item>
-								<label>meet the croods</label>
-								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
-							</item>
-							<item>
-								<label>harry potter and the half blood prince</label>
-								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
-							</item>
-							<item>
-								<label>munich</label>
-								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
-							</item>
-							<item>
-								<label>dark waters</label>
-								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
-							</item>
-							<item>
-								<label>black hawk down</label>
-								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
-							</item>
-							<item>
-								<label>john wick</label>
-								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
-							</item>
-							<item>
-								<label>the day after tomorrow</label>
-								<onclick>RunScript(script.fentastic.helper,mode=re_search)</onclick>
-							</item>
+							<!-- SEARCH HISTORY -->
+							<include content="SearchHistory" />
 						</content>
 					</control>
 					<control type="grouplist" id="700">
