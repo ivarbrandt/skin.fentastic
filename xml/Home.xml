@@ -745,16 +745,14 @@
 			</include>
 			<include>BottomBar</include>
 			<control type="group">
-				<!-- <depth>DepthContentPanel</depth> -->
+				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
 				<include content="ContentPanel">
 					<param name="width" value="522" />
 				</include>
 				<control type="group">
 					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
-					<!-- <visible allowhiddenfocus="true">[!ControlGroup(19000).HasFocus + !ControlGroup(22000).HasFocus]</visible> -->
 					<visible allowhiddenfocus="true">![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)]</visible>
-					<!-- <visible>Control.HasFocus(9000)</visible> -->
 					<control type="fixedlist" id="9000">
 						<left>0</left>
 						<top>240</top>
@@ -786,14 +784,6 @@
 									<texture colordiffuse="button_focus2">$INFO[ListItem.Art(thumb)]</texture>
 									<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 								</control>
-								<!-- <control type="image">
-									<left>0</left>
-									<top>0</top>
-									<width>95</width>
-									<height>95</height>
-									<texture colordiffuse="51FFFFFF">colors/black.png</texture>
-									<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasActiveModalDialog">Conditional</animation>
-								</control> -->
 							</control>
 							<!-- SideMenu Focused Icons -->
 							<control type="image">
@@ -862,8 +852,6 @@
 								<property name="id">musicvideos</property>
 								<visible>!Skin.HasSetting(HomeMenuNoMusicVideoButton)</visible>
 							</item>
-							
-							
 							<item>
 								<label>Live TV</label>
 								<property name="menu_id">$NUMBER[12000]</property>
@@ -981,7 +969,6 @@
 					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 					<width>550</width>
 					<visible>String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)</visible>
-					<!-- <visible>!Control.HasFocus(9000)</visible> -->
 					<include>OpenClose_Left</include>
 					<control type="image">
 						<left>30</left>
@@ -1075,23 +1062,7 @@
 						<label>$LOCALIZE[19055]</label>
 						<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
 					</control>
-					<!-- <control type="group">
-						<left>20</left>
-						<top>245</top>
-						<visible>ListItem.IsCollection + String.IsEmpty(ListItem.Plot)</visible>
-						<include content="InfoList">
-							<param name="bottom" value="108" />
-							<param name="width" value="540" />
-							<param name="sortby" value="year" />
-							<param name="sortorder" value="ascending" />
-							<param name="font" value="font13" />
-						</include>
-					</control> -->
 				</control>
-
-
-
-
 			</control>
 			
 			<control type="group">
@@ -1147,14 +1118,6 @@
           <height>56</height>
           <texture>special://skin/media/logos/letters.png</texture>
         </control>
-				<!-- <control type="image">
-					<left>49</left>
-					<top>0</top>
-					<aspectratio>keep</aspectratio>
-					<width>192</width>
-					<height>56</height>
-					<texture>special://xbmc/media/vendor_logo.png</texture>
-				</control> -->
 			</control>
 		</control>
 	</controls>

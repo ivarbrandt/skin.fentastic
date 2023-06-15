@@ -44,13 +44,13 @@
 					<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
 				</animation>
 				<include>OpenClose_Right</include>
-				<!-- MOVIES -->
+				<!-- SEARCH RESULTS -->
 				<control type="group" id="27000">
 					<include content="Visible_Right_Delayed">
 						<param name="id" value="movies"/>
 					</include>
-					<!-- <onback>ReplaceWindow(1121,10000)</onback> -->
 					<control type="grouplist" id="27001">
+					<visible>!String.IsEmpty(Skin.String(SearchInput))</visible>
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>27099</pagecontrol>
 						<include content="WidgetListPoster" condition="Skin.HasSetting(MovieResults)">
@@ -92,28 +92,33 @@
               <param name="list_id" value="27016"/>
             </include>
 					</control>
+					<include content="ImageWidget" condition="String.IsEmpty(Skin.String(SearchInput))">
+						<param name="text_label" value="Your search history is empty. Would you like to perform a new search or return to the home screen?" />
+						<param name="button_label" value="New search" />
+						<param name="button_onclick" value="RunScript(script.fentastic.helper,mode=re_search)"/>
+						<param name="button3_onclick" value="ActivateWindow(home)"/>
+						<param name="button_id" value="27400"/>
+					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="27099"/>
 					</include>
 				</control>
 			</control>
 
-
 			<include content="TopBar">
 				<param name="breadcrumbs_label" value="" />
 			</include>
 			<include>BottomBar</include>
+			
 			<control type="group">
-				<!-- <depth>DepthContentPanel</depth> -->
+				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
 				<include content="ContentPanel">
 					<param name="width" value="522" />
 				</include>
 				<control type="group">
 					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
-					<!-- <visible allowhiddenfocus="true">[!ControlGroup(19000).HasFocus + !ControlGroup(22000).HasFocus]</visible> -->
 					<visible allowhiddenfocus="true">![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)]</visible>
-					<!-- <visible>Control.HasFocus(9000)</visible> -->
 					<control type="fixedlist" id="9000">
 						<left>0</left>
 						<top>230</top>
@@ -137,31 +142,8 @@
 									<texture colordiffuse="button_focus">lists/focus.png</texture>
 									<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasActiveModalDialog">Conditional</animation>
 								</control>
-								<!-- <control type="image">
-									<left>-3</left>
-									<top>1</top>
-									<width>95</width>
-									<height>85</height>
-									<texture colordiffuse="button_focus2">$INFO[ListItem.Art(thumb)]</texture>
-									<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
-								</control> -->
-								<!-- <control type="image">
-									<left>0</left>
-									<top>0</top>
-									<width>95</width>
-									<height>95</height>
-									<texture colordiffuse="51FFFFFF">colors/black.png</texture>
-									<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasActiveModalDialog">Conditional</animation>
-								</control> -->
 							</control>
 							<!-- SideMenu Focused Icons -->
-							<!-- <control type="image">
-								<left>-3</left>
-								<top>1</top>
-								<width>85</width>
-								<height>85</height>
-								<texture>$INFO[ListItem.Art(thumb)]</texture>
-							</control> -->
 							<control type="label">
 								<left>45</left>
 								<top>0</top>
@@ -175,13 +157,6 @@
 							</control>
 						</focusedlayout>
 						<itemlayout height="83">
-							<!-- <control type="image">
-								<left>-3</left>
-								<top>1</top>
-								<width>85</width>
-								<height>85</height>
-								<texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
-							</control> -->
 							<control type="label">
 								<left>45</left>
 								<top>0</top>
@@ -198,7 +173,9 @@
 							<include content="SearchHistory" />
 						</content>
 					</control>
+
 					<control type="grouplist" id="700">
+						<visible>!String.IsEmpty(Skin.String(SearchInput))</visible>
 						<orientation>horizontal</orientation>
 						<itemgap>0</itemgap>
             <left>-13</left>
@@ -237,13 +214,10 @@
 					</control>
 				</control>
 
-
 				<control type="group">
 					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 					<width>550</width>
-					<visible>String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)</visible>
-					<!-- <visible>!Control.HasFocus(9000)</visible> -->
-					
+					<visible allowhiddenfocus="true">[String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)]</visible>
 					<control type="image">
 						<left>30</left>
 						<top>50</top>
@@ -295,36 +269,6 @@
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">
-						<visible>!String.IsEqual(System.Language,Hebrew)</visible>
-						<left>30</left>
-						<top>323</top>
-						<width>410</width>
-						<bottom>60</bottom>
-						<label>$VAR[HomeInfoPanelEpisode]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control>
-					<control type="textbox">
-						<visible>String.IsEqual(System.Language,Hebrew)</visible>
-						<left>30</left>
-						<top>323</top>
-						<width>410</width>
-						<bottom>60</bottom>
-						<align>right</align>
-						<label>$VAR[HomeInfoPanelEpisode]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control>
-					<control type="textbox">
-						<left>30</left>
-						<top>213</top>
-						<width>410</width>
-						<aligny>center</aligny>
-						<height>110</height>
-						<bottom>60</bottom>
-						<font>font36_title</font>
-						<label>Season $INFO[ListItem.Season], Episode $INFO[ListItem.Episode]</label>
-						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
-					</control>
-					<control type="textbox">
 						<left>30</left>
 						<top>467</top>
 						<width>530</width>
@@ -336,25 +280,9 @@
 						<label>$LOCALIZE[19055]</label>
 						<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
 					</control>
-					<!-- <control type="group">
-						<left>20</left>
-						<top>245</top>
-						<visible>ListItem.IsCollection + String.IsEmpty(ListItem.Plot)</visible>
-						<include content="InfoList">
-							<param name="bottom" value="108" />
-							<param name="width" value="540" />
-							<param name="sortby" value="year" />
-							<param name="sortorder" value="ascending" />
-							<param name="font" value="font13" />
-						</include>
-					</control> -->
 				</control>
-
-
-
-
 			</control>
-			
+
 			<control type="group">
 				<depth>DepthBars</depth>
 				<bottom>0</bottom>
@@ -382,41 +310,17 @@
 					<animation effect="fade" time="300">VisibleChange</animation>
 				</control>
 			</control>
-			
+
 			<control type="group">
         <animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 				<include>OpenClose_Left</include>
-        <visible>![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)]</visible>
+        <visible allowhiddenfocus="true">![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(Skin.String(SearchInput))</visible>
 				<depth>DepthBars</depth>
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<top>30</top>
 				<left>90</left>
-        <!-- <control type="image">
-          <left>-6</left>
-          <top>0</top>
-          <aspectratio>keep</aspectratio>
-          <width>130</width>
-          <height>56</height>
-          <texture colordiffuse="button_focus">special://skin/media/logos/K-logo.png</texture>
-        </control>
-        <control type="image">
-          <left>34</left>
-          <top>0</top>
-          <aspectratio>keep</aspectratio>
-          <width>192</width>
-          <height>56</height>
-          <texture>special://skin/media/logos/letters.png</texture>
-        </control> -->
-				<!-- <control type="image">
-					<left>49</left>
-					<top>0</top>
-					<aspectratio>keep</aspectratio>
-					<width>192</width>
-					<height>56</height>
-					<texture>special://xbmc/media/vendor_logo.png</texture>
-				</control> -->
 				<control type="label">
 					<top>90</top>
 					<left>-45</left>
@@ -427,6 +331,7 @@
 					<label>Recent searches</label>
 				</control>
 			</control>
+
 			<control type="group">
 				<include>OpenClose_Right</include>
 				<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
@@ -434,6 +339,7 @@
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<control type="label">
+				<visible>!String.IsEmpty(Skin.String(SearchInput))</visible>
 					<top>-5</top>
 					<left>525</left>
 					<width>1085</width>

@@ -712,8 +712,9 @@
 		<param name="visible">true</param>
 		<param name="visible_1">true</param>
 		<param name="visible_2">true</param>
-		<param name="visible_3">false</param>
+		<param name="visible_3">true</param>
 		<param name="button2_label">$LOCALIZE[31116]</param>
+		<param name="button3_label">Return to the home screen</param>
 		<param name="button2_onclick">true</param>
 		<definition>
 			<control type="group" id="$PARAM[button_id]889">
@@ -758,9 +759,9 @@
 							<onclick>$PARAM[button2_onclick]</onclick>
 							<onclick>SetFocus(9000)</onclick>
 							<align>center</align>
-							<texturefocus border="23" colordiffuse="">buttons/dialogbutton-fo.png</texturefocus>
+							<texturefocus border="23" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texturefocus>
 							<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
-							<visible>$PARAM[visible_2]</visible>
+							<visible>$PARAM[visible_2] + Window.IsActive(home)</visible>
 						</control>
 						<control type="button" id="$PARAM[button_id]569">
 							<width>auto</width>
@@ -772,7 +773,7 @@
 							<align>center</align>
 							<texturefocus border="23" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texturefocus>
 							<texturenofocus border="40">buttons/dialogbutton-nofo.png</texturenofocus>
-							<visible>$PARAM[visible_3]</visible>
+							<visible>$PARAM[visible_3] + Window.IsActive(1121)</visible>
 						</control>
 					</control>
 				</control>
