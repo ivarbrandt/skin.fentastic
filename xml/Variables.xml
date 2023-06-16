@@ -684,6 +684,11 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
+	<variable name="DefaultSearchWindowBehaviorVar">
+    <value condition="Skin.HasSetting(DefaultSearchWindowBehavior)">Open keyboard</value>
+    <value>Open search window</value>
+	</variable>
+
 	<variable name="HomeInfoPanel">
 		<!-- COLLECTIONS -->
 		<value condition="String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>

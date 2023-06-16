@@ -50,7 +50,7 @@
 						<param name="id" value="movies"/>
 					</include>
 					<control type="grouplist" id="27001">
-					<visible>!String.IsEmpty(Skin.String(SearchInput))</visible>
+					<visible>!String.IsEmpty(Skin.String(SearchInput)) + String.IsEmpty(Skin.String(DatabaseStatus))</visible>
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>27099</pagecontrol>
 						<include content="WidgetListPoster" condition="Skin.HasSetting(MovieResults)">
@@ -92,7 +92,7 @@
               <param name="list_id" value="27016"/>
             </include>
 					</control>
-					<include content="ImageWidget" condition="String.IsEmpty(Skin.String(SearchInput))">
+					<include content="ImageWidget" condition="!String.IsEmpty(Skin.String(DatabaseStatus))">
 						<param name="text_label" value="Your search history is empty. Would you like to perform a new search or return to the home screen?" />
 						<param name="button_label" value="New search" />
 						<param name="button_onclick" value="RunScript(script.fentastic.helper,mode=re_search)"/>
@@ -118,7 +118,7 @@
 				</include>
 				<control type="group">
 					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
-					<visible allowhiddenfocus="true">![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)]</visible>
+					<visible allowhiddenfocus="true">![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + String.IsEmpty(Skin.String(DatabaseStatus))</visible>
 					<control type="fixedlist" id="9000">
 						<left>0</left>
 						<top>230</top>
@@ -175,7 +175,7 @@
 					</control>
 
 					<control type="grouplist" id="700">
-						<visible>!String.IsEmpty(Skin.String(SearchInput))</visible>
+						<visible>String.IsEmpty(Skin.String(DatabaseStatus))</visible>
 						<orientation>horizontal</orientation>
 						<itemgap>0</itemgap>
             <left>-13</left>
@@ -314,7 +314,7 @@
 			<control type="group">
         <animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 				<include>OpenClose_Left</include>
-        <visible allowhiddenfocus="true">![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(Skin.String(SearchInput))</visible>
+        <visible allowhiddenfocus="true">![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + String.IsEmpty(Skin.String(DatabaseStatus))</visible>
 				<depth>DepthBars</depth>
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
@@ -339,7 +339,7 @@
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<control type="label">
-				<visible>!String.IsEmpty(Skin.String(SearchInput))</visible>
+				<visible>!String.IsEmpty(Skin.String(SearchInput)) + String.IsEmpty(Skin.String(DatabaseStatus))</visible>
 					<top>-5</top>
 					<left>525</left>
 					<width>1085</width>

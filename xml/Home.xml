@@ -948,9 +948,15 @@
 							<param name="icon" value="icons/search.png" />
 							<param name="label" value="$LOCALIZE[137]" />
 						</include>
-						<include content="IconButton" condition="!Skin.HasSetting(NoSearchResultsWindow)">
+						<include content="IconButton" condition="!Skin.HasSetting(NoSearchResultsWindow) + Skin.HasSetting(DefaultSearchWindowBehavior)">
 							<param name="control_id" value="801" />
 							<param name="onclick" value="RunScript(script.fentastic.helper,mode=search_input)" />
+							<param name="icon" value="icons/search.png" />
+							<param name="label" value="$LOCALIZE[137]" />
+						</include>
+						<include content="IconButton" condition="!Skin.HasSetting(NoSearchResultsWindow) + !Skin.HasSetting(DefaultSearchWindowBehavior)">
+							<param name="control_id" value="801" />
+							<param name="onclick" value="RunScript(script.fentastic.helper,mode=open_search_window)" />
 							<param name="icon" value="icons/search.png" />
 							<param name="label" value="$LOCALIZE[137]" />
 						</include>
