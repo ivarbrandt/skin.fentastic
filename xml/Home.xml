@@ -931,7 +931,7 @@
 						<onright>2000</onright>
 						<align>justify</align>
 						<include content="IconButton">
-							<param name="control_id" value="804" />
+							<param name="control_id" value="801" />
 							<param name="onclick" value="ActivateWindow(shutdownmenu)" />
 							<param name="icon" value="icons/power.png" />
 							<param name="label" value="$LOCALIZE[33060]" />
@@ -943,25 +943,25 @@
 							<param name="label" value="$LOCALIZE[21417]" />
 						</include>
 						<include content="IconButton" condition="Skin.HasSetting(NoSearchResultsWindow)">
-							<param name="control_id" value="801" />
+							<param name="control_id" value="803" />
 							<param name="onclick" value="ActivateWindow(1107)" />
 							<param name="icon" value="icons/search.png" />
 							<param name="label" value="$LOCALIZE[137]" />
 						</include>
 						<include content="IconButton" condition="!Skin.HasSetting(NoSearchResultsWindow) + Skin.HasSetting(DefaultSearchWindowBehavior)">
-							<param name="control_id" value="801" />
+							<param name="control_id" value="804" />
 							<param name="onclick" value="RunScript(script.fentastic.helper,mode=search_input)" />
 							<param name="icon" value="icons/search.png" />
 							<param name="label" value="$LOCALIZE[137]" />
 						</include>
 						<include content="IconButton" condition="!Skin.HasSetting(NoSearchResultsWindow) + !Skin.HasSetting(DefaultSearchWindowBehavior)">
-							<param name="control_id" value="801" />
+							<param name="control_id" value="805" />
 							<param name="onclick" value="RunScript(script.fentastic.helper,mode=open_search_window)" />
 							<param name="icon" value="icons/search.png" />
 							<param name="label" value="$LOCALIZE[137]" />
 						</include>
 						<include content="IconButton">
-							<param name="control_id" value="803" />
+							<param name="control_id" value="806" />
 							<param name="onclick" value="Fullscreen" />
 							<param name="icon" value="icons/now-playing/fullscreen.png" />
 							<param name="label" value="$LOCALIZE[31000]" />

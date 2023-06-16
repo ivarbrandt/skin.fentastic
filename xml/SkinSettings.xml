@@ -221,7 +221,7 @@
 					<onclick>Skin.ToggleSetting(NoSearchResultsWindow)</onclick>
 				</control>
 				<control type="button" id="6380">
-					<label>Default search window behavior</label>
+					<label>Default home screen search icon behavior</label>
 					<label2>$VAR[DefaultSearchWindowBehaviorVar]</label2>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(DefaultSearchWindowBehavior)</onclick>
