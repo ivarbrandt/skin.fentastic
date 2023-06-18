@@ -271,6 +271,13 @@
 					<selected>Skin.HasSetting(TVShowKeywordResults)</selected>
 					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
 				</control>
+				<control type="radiobutton" id="6387">
+					<label>   - TRAKT Lists</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(TraktResults)</onclick>
+					<selected>Skin.HasSetting(TraktResults)</selected>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
+				</control>
 			</control>
 
 			<control type="grouplist" id="700">

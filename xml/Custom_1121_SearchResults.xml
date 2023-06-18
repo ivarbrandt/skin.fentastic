@@ -91,6 +91,12 @@
               <param name="widget_target" value="videos"/>
               <param name="list_id" value="27016"/>
             </include>
+						<include content="WidgetListItems" condition="Skin.HasSetting(TraktResults)">
+              <param name="content_path" value="plugin://plugin.video.fen/?mode=trakt.list.search_trakt_lists&amp;query=$INFO[Skin.String(SearchInputEncoded)]"/>
+              <param name="widget_header" value="TRAKT Lists"/>
+              <param name="widget_target" value="videos"/>
+              <param name="list_id" value="27017"/>
+            </include>
 					</control>
 					<include content="ImageWidget" condition="!String.IsEmpty(Skin.String(DatabaseStatus))">
 						<param name="text_label" value="Your search history is empty. Would you like to perform a new search or return to the home screen?" />
