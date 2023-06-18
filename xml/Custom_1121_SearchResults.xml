@@ -188,21 +188,21 @@
 						<align>justify</align>
 						<include content="IconButton">
 							<param name="control_id" value="801" />
-							<param name="onclick" value="ActivateWindow(shutdownmenu)" />
-							<param name="icon" value="icons/power.png" />
-							<param name="label" value="$LOCALIZE[33060]" />
+							<param name="onclick" value="RunScript(script.fentastic.helper,mode=remove_all_spaths)" />
+							<param name="icon" value="icons/infodialogs/uninstall.png" />
+							<param name="label" value="Clear search history" />
 						</include>
 						<include content="IconButton">
 							<param name="control_id" value="802" />
-							<param name="onclick" value="RunScript(script.fentastic.helper,mode=search_input)" />
-							<param name="icon" value="icons/search.png" />
-							<param name="label" value="$LOCALIZE[137]" />
+							<param name="onclick" value="RunScript(script.fentastic.helper,mode=trakt_lists_search)" />
+							<param name="icon" value="icons/trakt-icon-white.png" />
+							<param name="label" value="TRAKT Lists Search" />
 						</include>
 						<include content="IconButton">
 							<param name="control_id" value="803" />
-							<param name="onclick" value="RunScript(script.fentastic.helper,mode=remove_all_spaths)" />
-							<param name="icon" value="icons/infodialogs/uninstall.png" />
-							<param name="label" value="Clear" />
+							<param name="onclick" value="RunScript(script.fentastic.helper,mode=search_input)" />
+							<param name="icon" value="icons/search.png" />
+							<param name="label" value="$LOCALIZE[137]" />
 						</include>
 						<include content="IconButton">
 							<param name="control_id" value="804" />
@@ -358,7 +358,7 @@
 					<height>98</height>
 					<font>font14</font>
 					<wrapmultiline>true</wrapmultiline>
-					<label>Explore your past searches on the left or click the search icon to initiate a new search.</label>
+					<label>Explore your past searches on the left, delve into TRAKT lists using the TRAKT button, or click the search icon to initiate a new search.</label>
 				</control>
 			</control>
 		</control>
