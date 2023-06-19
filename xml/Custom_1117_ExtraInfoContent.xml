@@ -6,15 +6,16 @@
   • Rearranging and renaming widgets
   • Renaming main menu labels
   • Changing widget display types
-  • Click a currently configured widget or the main menu paths to see these options.
-- Added dynamic setting labels for movies/tvshows in Skin settings
-- Cleaned up dialog headers when configuring widgets and main menu items
-- Added optional Search results window with custom search history. 
-  • Search movies, tvshows, movie collections, people, IMDb keywords (movies/tvshows), and TRAKT lists all at the same time
-  • Added opening options for Search results window. Choose between Open keyboard and Open search window
-  • Added TRAKT button in Search results window for quick access to TRAKT lists.
-  • Enable the new Search results window in Skin settings » Options. You can leave this disabled to use the default Search dialog.
-- Reactivated Shift view for movies and tvshows
+  • Click a current widget/menu path for options
+- Dynamic labels for movies/TV shows in Skin settings
+- Simplified widget/menu dialog headers
+- Optional Search results window with custom search history. 
+  • Search multiple categories simultaneously
+  • Added opening options for Search results window
+    - Choose between Open keyboard and Open search window
+    - Activate in Skin settings » Options
+  • Quick access to TRAKT lists via button
+- Reactivated Shift view
 - Other changes/fixes
 
 [B][COLOR button_focus]Version 1.0.12[/COLOR][/B]
