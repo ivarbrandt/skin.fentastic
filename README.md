@@ -18,6 +18,10 @@ Here are some of the key differences between FENtastic and the default Estuary s
 
   ![Stacked Widgets](resources/images/stacked_widgets.jpg)
 
+* **Custom Search Window**: FENtastic introduces a search window to simultaneously search multiple categories.
+
+  ![Search Window](resources/images/search_window.jpg)
+
 * **InfoPanel**: FENtastic introduces a new InfoPanel for widgets.
 
   ![InfoPanel](resources/images/infopanel.jpg)
@@ -33,6 +37,7 @@ Here are some of the key differences between FENtastic and the default Estuary s
 * Customizable widgets and category widgets for movies, tvshows, and episodes
 * Custom stacked widgets for movies, tvshows, and episodes
 * New InfoPanel for widgets
+* New custom search window
 * Progress displayed for movies, tvshows, seasons and episodes
 * New default Colors theme
 * New Color theme 'purple'
@@ -91,7 +96,7 @@ To set up the widgets, follow these steps:
 
    ![Step 4](resources/images/step_4.jpg)
 
-5. If you would like to remove a widget after you have set it up, click the widget then click "Clear Current Path". If you would like to configure it to point to a different path, click "Remake Path". You can Clear and Remake paths as many times as you'd like. You can also clear the path for the main menu items.
+5. If you would like to rearrange, rename, remake, change display type, or remove a widget after you have set it up, click the widget. You'll see a list of options pop up. Click the desired option. You can reconfigure your widgets as many times as you'd like. You can also rename, remake, or remove the main menu items.
 
    ![Step 4](resources/images/step_5.jpg)
 
