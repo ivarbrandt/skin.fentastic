@@ -1067,7 +1067,7 @@
 							<aligny>top</aligny>
 						</control>
 						<control type="image">
-							<left>260</left>
+							<left>220</left>
 							<top>30</top>
 							<width>32</width>
 							<height>32</height>
@@ -1152,7 +1152,7 @@
 							<aligny>top</aligny>
 						</control>
 						<control type="image">
-							<left>260</left>
+							<left>220</left>
 							<top>30</top>
 							<width>32</width>
 							<height>32</height>

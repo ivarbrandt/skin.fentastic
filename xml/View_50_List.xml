@@ -17,12 +17,12 @@
 					<right>-20</right>
 					<width>634</width>
 					<!-- right content panel -->
-					<include content="ContentPanel">
+					<!-- <include content="ContentPanel">
 						<param name="left" value="0" />
 						<param name="top" value="-20" />
 						<param name="width" value="656" />
 						<param name="flipx" value="true" />
-					</include>
+					</include> -->
 					<include content="RightListPanel">
 						<param name="list_id" value="50" />
 					</include>
