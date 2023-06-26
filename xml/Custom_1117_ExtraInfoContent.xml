@@ -2,6 +2,12 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR button_focus]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
+- Fixed empty Search window on new Kodi installs
+- Fixed stacked widget renaming
+- Updated widget list to circular ordering; topmost widget will now cycle to the bottom when moved up and vice versa
+- Other fixes/changes
+
+[B][COLOR button_focus]Version 1.0.13[/COLOR][/B]
 - Added functionality for:
   • Rearranging and renaming widgets
   • Renaming main menu labels

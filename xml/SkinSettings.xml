@@ -272,7 +272,7 @@
 					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
 				</control>
 				<control type="radiobutton" id="6387">
-					<label>   - TRAKT Lists (requires TRAKT account, configure in FEN settings)</label>
+					<label>   - TRAKT Lists</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(TraktResults)</onclick>
 					<selected>Skin.HasSetting(TraktResults)</selected>
