@@ -6,6 +6,7 @@
   <onload condition="Skin.HasSetting(firsttimerun)">RunScript(script.fentastic.helper,mode=check_for_update&amp;skin_id=skin.fentastic)</onload>
   <onload condition="String.IsEmpty(Window(Home).Property(fentastic.starting_widgets))">RunScript(script.fentastic.helper,mode=starting_widgets)</onload>
   <onload condition="String.IsEmpty(Window(Home).Property(fentastic.starting_widgets))">SetProperty(fentastic.starting_widgets,true)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(fentastic.initialize_spaths))">RunScript(script.fentastic.helper,mode=initialize_spaths)</onload>
 	<controls>
 		<control type="button" id="20000">
 			<include>HiddenObject</include>
