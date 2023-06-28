@@ -92,7 +92,7 @@
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>115</top>
+				<top>120</top>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
@@ -118,10 +118,10 @@
 						<left>68</left>
 						<top>15</top>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="180,100" />
+							<effect type="zoom" start="100" end="113" time="200" tween="sine" easing="inout" center="185,162" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="180,100" />
+							<effect type="zoom" start="113" end="100" time="200" tween="sine" easing="inout" center="185,162" />
 						</animation>
 						<include content="InfoWallMovieLayout">
 						</include>
@@ -143,7 +143,7 @@
       </include>
       <control type="fixedlist" id="$PARAM[list_id]">
         <left>0</left>
-        <top>115</top> 
+        <top>120</top> 
         <right>0</right>
         <height>425</height>
 				<onright>$PARAM[list_id]</onright>
@@ -168,10 +168,10 @@
             <left>68</left>
             <top>15</top>
             <animation type="Focus">
-            <effect type="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="180,100" />
+            <effect type="zoom" start="100" end="113" time="200" tween="sine" easing="inout" center="185,162" />
             </animation>
             <animation type="Unfocus">
-            <effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="180,100" />
+            <effect type="zoom" start="113" end="100" time="200" tween="sine" easing="inout" center="185,162" />
             </animation>
             <include content="InfoWallMovieLayout">
               <!-- <param name="focused" value="true" /> -->
@@ -196,7 +196,7 @@
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>115</top>
+				<top>110</top>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
@@ -222,10 +222,10 @@
 						<left>68</left>
 						<top>15</top>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="240,130" />
+							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="240,111" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="240,130" />
+							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,111" />
 						</animation>
 						<include content="WideInfoWallMovieLayout">
 						</include>
@@ -248,7 +248,7 @@
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>115</top>
+				<top>110</top>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
@@ -273,10 +273,10 @@
 						<left>68</left>
 						<top>15</top>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="240,130" />
+							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="240,111" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="240,130" />
+							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,111" />
 						</animation>
 						<include content="WideInfoWallMovieLayout">
 						</include>
@@ -340,10 +340,10 @@
 						<left>70</left>
 						<top>5</top>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="250,170" />
+							<effect type="zoom" start="100" end="109" time="200" tween="sine" easing="inout" center="245,150" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="250,170" />
+							<effect type="zoom" start="109" end="100" time="200" tween="sine" easing="inout" center="245,150" />
 						</animation>
 						<include content="InfoWallEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
@@ -409,10 +409,10 @@
 						<left>70</left>
 						<top>5</top>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="250,170" />
+							<effect type="zoom" start="100" end="109" time="200" tween="sine" easing="inout" center="245,150" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="250,170" />
+							<effect type="zoom" start="109" end="100" time="200" tween="sine" easing="inout" center="245,150" />
 						</animation>
 						<include content="InfoWallEpisodeLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
@@ -448,7 +448,7 @@
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>110</top>
+				<top>115</top>
 				<right>0</right>
 				<height>200</height>
 				<onright>$PARAM[list_id]</onright>
@@ -508,10 +508,10 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="104" time="200" tween="sine" easing="inout" center="261,70" />
+							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="245,60" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="104" end="100" time="200" tween="sine" easing="inout" center="261,70" />
+							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="245,60" />
 						</animation>
 						<control type="image">
 							<width>347</width>
@@ -586,7 +586,7 @@
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>110</top>
+				<top>115</top>
 				<right>0</right>
 				<height>200</height>
 				<onright>$PARAM[list_id]</onright>
@@ -646,10 +646,10 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="104" time="200" tween="sine" easing="inout" center="261,70" />
+							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="245,60" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="104" end="100" time="200" tween="sine" easing="inout" center="261,70" />
+							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="245,60" />
 						</animation>
 						<control type="image">
 							<width>347</width>
@@ -926,7 +926,7 @@
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>120</top>
+				<top>125</top>
 				<right>0</right>
 				<height>435</height>
 				<onright>$PARAM[list_id]</onright>
@@ -954,10 +954,10 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="104" time="200" tween="sine" easing="inout" center="210,120" />
+							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="210,170" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="104" end="100" time="200" tween="sine" easing="inout" center="210,120" />
+							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="210,170" />
 						</animation>
 						<include content="InfoWallMusicLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
@@ -1016,9 +1016,9 @@
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>120</top>
+				<top>125</top>
 				<right>0</right>
-				<height>387</height>
+				<height>397</height>
 				<onright>$PARAM[list_id]</onright>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
@@ -1100,10 +1100,10 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="210,100" />
+							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="210,145" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="210,100" />
+							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="210,145" />
 						</animation>
 						<control type="image">
 							<width>279</width>
@@ -1194,7 +1194,7 @@
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>90</top>
+				<top>105</top>
 				<right>0</right>
 				<height>396</height>
 				<onright>$PARAM[list_id]</onright>
@@ -1253,10 +1253,10 @@
 						<left>70</left>
 						<depth>DepthContentPopout</depth>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="180,140" />
+							<effect type="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="200,150" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="180,140" />
+							<effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="200,150" />
 						</animation>
 						<control type="image">
 							<left>0</left>
