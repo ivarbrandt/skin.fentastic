@@ -5,6 +5,7 @@
 - Fixed empty Search window on new Kodi installs
 - Fixed stacked widget renaming
 - Updated widget list to circular ordering; topmost widget will now cycle to the bottom when moved up and vice versa
+- Increased widget zoom for focused items
 - Other fixes/changes
 
 [B][COLOR button_focus]Version 1.0.13[/COLOR][/B]
