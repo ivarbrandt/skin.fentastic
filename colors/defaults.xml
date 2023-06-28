@@ -13,7 +13,7 @@
 	<color name="blue">FF7ACAFE</color>
 	<color name="red">FFCE4421</color>
 	<color name="button_focus">FF448AFF</color>
-	<color name="button_focus2">B3448AFF</color>
+	<color name="button_focus2">99448AFF</color>
 	<color name="text_shadow">22000000</color>
 	<color name="border_alpha">60FFFFFF</color>
 	<color name="disabled">40FFFFFF</color>
