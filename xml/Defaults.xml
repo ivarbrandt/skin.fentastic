@@ -129,7 +129,7 @@
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="scrollbar">
-		<texturesliderbackground colordiffuse="29FFFFFF">colors/white.png</texturesliderbackground>
+		<!-- <texturesliderbackground colordiffuse="29FFFFFF">colors/white.png</texturesliderbackground> -->
 		<texturesliderbar colordiffuse="FFAAAAAA">colors/white.png</texturesliderbar>
 		<texturesliderbarfocus colordiffuse="button_focus">colors/white.png</texturesliderbarfocus>
 		<textureslidernib></textureslidernib>

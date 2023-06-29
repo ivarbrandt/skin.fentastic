@@ -32,13 +32,21 @@
 					<top>115</top>
 					<height>644</height>
 					<fadetime>300</fadetime>
-					<texture border="2" fallback="special://skin/extras/home-images/movie.jpg" background="true">$VAR[FanartImageVar]</texture>
+					<texture diffuse="masks/landscape-502.png" border="2" fallback="special://skin/extras/home-images/movie.jpg" background="true">$VAR[FanartImageVar]</texture>
 					<aspectratio align="center" aligny="bottom">scale</aspectratio>
 				</control>
 				<control type="group">
 					<left>1152</left>
 					<top>97</top>
-					<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+					<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">
+						<param name="left">-72</param>
+						<param name="top">17</param>
+						<param name="width">119</param>
+						<param name="height">119</param>
+						<param name="label-left">-18</param>
+						<param name="label-top">32</param>
+						<param name="cornerdiffuse">overlays/overlay-bg4.png</param>
+					</include>
 				</control>
 				<control type="textbox">
 					<left>50</left>

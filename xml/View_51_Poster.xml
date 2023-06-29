@@ -129,7 +129,7 @@
 			<visible>Control.IsVisible(51)</visible>
 			<include>OpenClose_Left</include>
 			<include>Visible_Left</include>
-			<control type="image">
+			<!-- <control type="image">
 				<top>-16</top>
 				<left>-16</left>
 				<width>516</width>
@@ -137,7 +137,7 @@
 				<texture>colors/black.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-			</control>
+			</control> -->
 			<control type="group">
 				<control type="image">
 					<left>4</left>
@@ -145,8 +145,8 @@
 					<width>476</width>
 					<height>716</height>
 					<fadetime>200</fadetime>
-					<aspectratio>scale</aspectratio>
-					<texture fallback="DefaultMovies.png" background="true">$VAR[PosterThumbVar]</texture>
+					<!-- <aspectratio>scale</aspectratio> -->
+					<texture diffuse="masks/poster-50.png" fallback="DefaultMovies.png" background="true">$VAR[PosterThumbVar]</texture>
 				</control>
 				<control type="image">
 					<left>340</left>
@@ -173,6 +173,13 @@
 				<top>-14</top>
 				<include content="RatingCircle">
 					<param name="animation" value="True" />
+					<param name="left">-73</param>
+					<param name="top">18</param>
+					<param name="width">119</param>
+					<param name="height">119</param>
+					<param name="label-left">-16</param>
+					<param name="label-top">38</param>
+					<param name="cornerdiffuse">overlays/overlay-bg4.png</param>
 				</include>
 			</control>
 			</control>
@@ -180,15 +187,15 @@
 				<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
 				<control type="image">
 					<left>4</left>
-					<top>670</top>
+					<top>570</top>
 					<width>476</width>
-					<height>50</height>
-					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
+					<height>150</height>
+					<texture colordiffuse="CCFFFFFF">overlays/overlayfade-51.png</texture>
 					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>690</top>
+					<left>-20</left>
+					<top>684</top>
 					<width>435</width>
 					<height>24</height>
 					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
@@ -198,8 +205,8 @@
 					<aligny>center</aligny>
 				</control>
 				<control type="image">
-					<left>445</left>
-					<top>690</top>
+					<left>425</left>
+					<top>684</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>lists/played-total.png</texture>
@@ -217,15 +224,15 @@
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 			</control>
-			<control type="image">
+			<!-- <control type="image">
 				<left>1</left>
 				<top>1</top>
 				<width>482</width>
 				<height>721</height>
 				<visible>Control.HasFocus(51)</visible>
 				<animation effect="fade" time="100">VisibleChange</animation>
-				<texture border="8" colordiffuse="button_focus2">buttons/thumbnail_focused.png</texture>
-			</control>
+				<texture border="8" colordiffuse="button_focus2">masks/poster-50.png</texture>
+			</control> -->
 		</control>
 	</include>
 </includes>

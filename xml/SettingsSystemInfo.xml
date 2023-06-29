@@ -105,9 +105,9 @@
 				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
 			</control>
 			<control type="image">
-				<left>380</left>
+				<left>405</left>
 				<top>-3</top>
-				<right>0</right>
+				<right>25</right>
 				<height>3</height>
 				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
 			</control>
@@ -196,9 +196,9 @@
 			<height>370</height>
 			<include>OpenClose_Right</include>
 			<control type="image">
-				<left>380</left>
+				<left>405</left>
 				<top>30</top>
-				<right>0</right>
+				<right>25</right>
 				<height>3</height>
 				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
 			</control>

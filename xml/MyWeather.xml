@@ -75,10 +75,10 @@
 				<left>22</left>
 				<control type="image">
 					<left>2.5%</left>
-					<top>100</top>
+					<top>120</top>
 					<width>95%</width>
-					<height>220</height>
-					<texture colordiffuse="button_focus2" border="21">dialogs/dialog-bg.png</texture>
+					<height>180</height>
+					<texture colordiffuse="button_focus2" border="21">masks/settingspanel-unfocused.png</texture>
 				</control>
 				<control type="label">
 					<top>310</top>
@@ -93,14 +93,14 @@
 				</control>
 				<control type="button" id="20">
 					<left>2.5%</left>
-					<top>100</top>
+					<top>125</top>
 					<width>95%</width>
-					<height>220</height>
+					<height>180</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textoffsetx>40</textoffsetx>
 					<textoffsety>0</textoffsety>
-					<texturefocus border="40" colordiffuse="button_focus2">buttons/button-fo.png</texturefocus>
+					<texturefocus border="40" colordiffuse="button_focus">masks/settingspanel.png</texturefocus>
 					<texturenofocus />
 					<onup>20000</onup>
 					<ondown>15100</ondown>

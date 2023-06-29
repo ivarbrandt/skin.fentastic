@@ -51,7 +51,7 @@
 						<height>80</height>
 						<align>left</align>
 						<aligny>center</aligny>
-						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+						<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 						<texturenofocus />
 						<radioposx>280</radioposx>
 						<textoffsetx>20</textoffsetx>
@@ -61,7 +61,7 @@
 						<height>80</height>
 						<align>left</align>
 						<aligny>center</aligny>
-						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+						<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 						<texturenofocus />
 						<textoffsetx>20</textoffsetx>
 						<label></label>
@@ -70,7 +70,7 @@
 						<height>80</height>
 						<align>left</align>
 						<aligny>center</aligny>
-						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+						<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 						<texturenofocus />
 						<textoffsetx>20</textoffsetx>
 						<label>$LOCALIZE[190]</label>
@@ -79,7 +79,7 @@
 						<height>80</height>
 						<align>left</align>
 						<aligny>center</aligny>
-						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+						<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 						<texturenofocus />
 						<textoffsetx>20</textoffsetx>
 						<label>$LOCALIZE[192]</label>

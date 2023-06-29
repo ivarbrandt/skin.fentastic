@@ -21,6 +21,7 @@
 				<pagecontrol>531</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<visible>Container.Content(tvshows)</visible>
+				
 				<itemlayout height="220" width="900">
 					<control type="group">
 						<top>100</top>
@@ -29,9 +30,9 @@
 							<top>0</top>
 							<width>860</width>
 							<height>195</height>
-							<texture fallback="dialogs/dialog-bg-nobo.png" background="true">$VAR[BannerArtVar]</texture>
-							<aspectratio aligny="center">scale</aspectratio>
-							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+							<texture diffuse="masks/banner.png" fallback="dialogs/dialog-bg-nobo.png" background="true">$VAR[BannerArtVar]</texture>
+							<!-- <aspectratio aligny="center">scale</aspectratio> -->
+							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 							<bordersize>20</bordersize>
 						</control>
 						<control type="label">
@@ -48,7 +49,15 @@
 						<control type="group">
 							<top>2</top>
 							<left>793</left>
-							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+							<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">
+								<param name="left">-72</param>
+								<param name="top">17</param>
+								<param name="width">119</param>
+								<param name="height">119</param>
+								<param name="label-left">-12</param>
+								<param name="label-top">28</param>
+								<param name="cornerdiffuse">overlays/overlayfade-bg5.png</param>
+							</include>
 						</control>
 						<include content="ProgressBar">
 							<param name="left" value="20"/>
@@ -68,13 +77,20 @@
 						</animation>
 						<top>100</top>
 						<control type="image">
+								<left>15</left>
+								<top>15</top>
+								<width>830</width>
+								<height>166</height>
+								<texture border="8" colordiffuse="button_focus">masks/banner.png</texture>
+							</control>
+						<control type="image">
 							<left>0</left>
 							<top>0</top>
 							<width>860</width>
 							<height>195</height>
-							<texture fallback="dialogs/dialog-bg-nobo.png" background="true">$VAR[BannerArtVar]</texture>
-							<aspectratio aligny="center">scale</aspectratio>
-							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+							<texture diffuse="masks/banner.png" fallback="dialogs/dialog-bg-nobo.png" background="true">$VAR[BannerArtVar]</texture>
+							<!-- <aspectratio aligny="center">scale</aspectratio>
+							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 							<bordersize>20</bordersize>
 						</control>
 						<control type="label">
@@ -92,10 +108,10 @@
 							<include>Animation_FocusTextureFade</include>
 							<control type="image">
 								<left>21</left>
-								<top>115</top>
+								<top>75</top>
 								<width>818</width>
-								<height>60</height>
-								<texture>overlays/overlayfade.png</texture>
+								<height>100</height>
+								<texture>overlays/overlayfade-banner.png</texture>
 								<animation effect="fade" start="0" end="80" time="50">Focus</animation>
 								<visible>!Listitem.IsParentFolder</visible>
 							</control>
@@ -136,7 +152,7 @@
 								<visible>!String.IsEmpty(ListItem.Rating)</visible>
 							</control>
 							<control type="image">
-								<right>73</right>
+								<right>85</right>
 								<top>143</top>
 								<width>22</width>
 								<height>22</height>
@@ -144,7 +160,7 @@
 								<visible>String.IsEqual(Listitem.dbtype,tvshow) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 							</control>
 							<control type="label">
-								<right>103</right>
+								<right>118</right>
 								<top>144</top>
 								<width>800</width>
 								<height>20</height>
@@ -158,13 +174,7 @@
 								<left>793</left>
 								<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 							</control> -->
-							<control type="image">
-								<left>18</left>
-								<top>18</top>
-								<width>824</width>
-								<height>160</height>
-								<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
-							</control>
+							
 						</control>
 					</control>
 				</focusedlayout>

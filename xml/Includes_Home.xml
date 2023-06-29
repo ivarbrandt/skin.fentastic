@@ -311,7 +311,7 @@
 				<left>0</left>
 				<top>106</top>
 				<right>0</right>
-				<height>389</height>
+				<height>372</height>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
@@ -381,7 +381,7 @@
 				<left>0</left>
 				<top>106</top>
 				<right>0</right>
-				<height>389</height>
+				<height>372</height>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
@@ -465,8 +465,8 @@
 						<control type="image">
 							<width>347</width>
 							<height>120</height>
-							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+							<texture colordiffuse="button_focus2">masks/categorywidget-unfocused.png</texture>
+							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 							<bordersize>20</bordersize>
 						</control>
 						<!-- <control type="image">
@@ -516,14 +516,14 @@
 						<control type="image">
 							<width>347</width>
 							<height>120</height>
-							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+							<texture colordiffuse="button_focus2">masks/categorywidget-unfocused.png</texture>
+							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
 							<width>347</width>
 							<height>120</height>
-							<texture colordiffuse="button_focus">colors/grey.png</texture>
+							<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
 						</control>
@@ -603,8 +603,8 @@
 						<control type="image">
 							<width>347</width>
 							<height>120</height>
-							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+							<texture colordiffuse="button_focus2">masks/categorywidget-unfocused.png</texture>
+							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 							<bordersize>20</bordersize>
 						</control>
 						<!-- <control type="image">
@@ -654,15 +654,15 @@
 						<control type="image">
 							<width>347</width>
 							<height>120</height>
-							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+							<texture colordiffuse="button_focus2">masks/categorywidget-unfocused.png</texture>
+							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
 						<param name="visible" value="$PARAM[list_id]"/>
 							<width>347</width>
 							<height>120</height>
-							<texture colordiffuse="button_focus">colors/grey.png</texture>
+							<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
 						</control>
@@ -1032,8 +1032,7 @@
 							<width>279</width>
 							<!-- 340 -->
 							<height>297</height>
-							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+							<texture diffuse="masks/addons.png" colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
@@ -1108,14 +1107,13 @@
 						<control type="image">
 							<width>279</width>
 							<height>297</height>
-							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+							<texture diffuse="masks/addons.png" colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
 							<width>279</width>
 							<height>297</height>
-							<texture colordiffuse="button_focus">colors/grey.png</texture>
+							<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
 						</control>
@@ -1212,8 +1210,7 @@
 							<top>20</top>
 							<width>254</width>
 							<height>280</height>
-							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+							<texture diffuse="masks/addons.png" colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
@@ -1263,8 +1260,7 @@
 							<top>20</top>
 							<width>254</width>
 							<height>280</height>
-							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+							<texture diffuse="masks/addons.png" colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
@@ -1272,7 +1268,7 @@
 							<top>20</top>
 							<width>254</width>
 							<height>280</height>
-							<texture colordiffuse="button_focus">colors/grey.png</texture>
+							<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
 						</control>

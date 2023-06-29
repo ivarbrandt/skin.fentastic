@@ -8,17 +8,10 @@
 			<width>1220</width>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1220" />
-				<param name="height" value="750" />
+				<param name="height" value="775" />
 				<param name="header_label" value="" />
 				<param name="header_id" value="1" />
 			</include>
-			<control type="image">
-				<left>0</left>
-				<top>80</top>
-				<width>920</width>
-				<bottom>2</bottom>
-				<texture colordiffuse="button_focus2" border="40">buttons/dialogbutton-nofo.png</texture>
-			</control>
 			<control type="list" id="3">
 				<left>20</left>
 				<top>100</top>
@@ -101,7 +94,7 @@
 						<top>0</top>
 						<right>0</right>
 						<bottom>0</bottom>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="button_focus">masks/focus.png</texture>
 						<visible>Control.HasFocus(6)</visible>
 					</control>
 					<control type="image">
@@ -164,7 +157,7 @@
 				<orientation>vertical</orientation>
 			</control>
 			<control type="label">
-				<left>925</left>
+				<left>880</left>
 				<bottom>10</bottom>
 				<width>275</width>
 				<height>35</height>
@@ -263,7 +256,7 @@
 						</itemlayout>
 						<focusedlayout width="408" height="374">
 							<control type="image">
-								<texture colordiffuse="button_focus">lists/focus.png</texture>
+								<texture colordiffuse="button_focus">masks/focus.png</texture>
 								<visible>Control.HasFocus(3)</visible>
 							</control>
 							<control type="image">

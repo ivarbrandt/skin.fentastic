@@ -6,6 +6,7 @@
   <onload condition="Skin.HasSetting(firsttimerun)">RunScript(script.fentastic.helper,mode=check_for_update&amp;skin_id=skin.fentastic)</onload>
   <onload condition="String.IsEmpty(Window(Home).Property(fentastic.starting_widgets))">RunScript(script.fentastic.helper,mode=starting_widgets)</onload>
   <onload condition="String.IsEmpty(Window(Home).Property(fentastic.starting_widgets))">SetProperty(fentastic.starting_widgets,true)</onload>
+	<!-- <onload condition="String.IsEmpty(Window(Home).Property(fentastic.initialize_spaths))">RunScript(script.fentastic.helper,mode=initialize_spaths)</onload> -->
 	<controls>
 		<control type="button" id="20000">
 			<include>HiddenObject</include>
@@ -492,9 +493,12 @@
 							<height>360</height>
 							<visible>!String.IsEmpty(Weather.plugin)</visible>
 							<control type="image">
+								<top>20</top>
+								<left>20</left>
+								<height>220</height>
 								<bottom>90</bottom>
 								<width>100%</width>
-								<texture colordiffuse="button_focus2" border="21">dialogs/dialog-bg.png</texture>
+								<texture colordiffuse="button_focus2" border="21">masks/settingspanel-unfocused.png</texture>
 							</control>
 							<control type="label">
 								<left>840</left>
@@ -748,7 +752,7 @@
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
 				<include content="ContentPanel">
-					<param name="width" value="522" />
+					<param name="width" value="622" />
 				</include>
 				<control type="group">
 					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
@@ -771,9 +775,9 @@
 								<control type="image">
 									<left>0</left>
 									<top>0</top>
-									<width>462</width>
+									<width>437</width>
 									<height>95</height>
-									<texture colordiffuse="button_focus">lists/focus.png</texture>
+									<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
 									<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasActiveModalDialog">Conditional</animation>
 								</control>
 								<control type="image">

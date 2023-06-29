@@ -160,7 +160,7 @@
 				<top>155</top>
 				<width>376</width>
 				<height>70</height>
-				<texture>overlays/overlayfade.png</texture>
+				<texture>overlays/overlayfade1.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
@@ -292,8 +292,7 @@
 					<top>-14</top>
           <width>353</width>
           <height>230</height>
-					<texture colordiffuse="button_focus">colors/grey.png</texture>
-					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+					<texture colordiffuse="button_focus">masks/landscape.png</texture>
 					<bordersize>20</bordersize>
 					<visible>$PARAM[focused]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
@@ -305,17 +304,16 @@
 					<width>345</width>
 					<!-- 280 -->
 					<height>222</height>
-					<texture background="true">$VAR[IconWallThumbVar]</texture>
+					<texture diffuse="masks/landscape.png" background="true">$VAR[IconWallThumbVar]</texture>
 					<!-- <aspectratio aligny="center">keep</aspectratio> -->
-					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 					<left>20</left>
-					<top>122</top>
+					<top>45</top>
 					<width>305</width>
-					<height>70</height>
+					<height>150</height>
 					<texture>overlays/overlayfade.png</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
@@ -343,8 +341,8 @@
 				</control>
 
 				<control type="label">
-					<left>5</left>
-					<top>164</top>
+					<left>2</left>
+					<top>161</top>
 					<width>315</width>
 					<label>$INFO[ListItem.Property(WatchedProgress)]%</label>
 					<font>font20_title</font>
@@ -361,15 +359,16 @@
 				<top>320</top>
 				<control type="image">
 					<left>20</left>
-					<top>-178</top>
+					<top>-277</top>
 					<width>305</width>
-					<height>50</height>
+					<height>150</height>
 					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
 					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 					<visible>$PARAM[focused]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 					
 				</control>
+				<!-- 6 -->
 				<control type="label">
           <left>130</left>
           <top>-158</top>
@@ -382,7 +381,7 @@
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
 				<control type="image">
-          <left>294</left>
+          <left>291</left>
           <top>-155</top>
 					<width>24</width>
 					<height>24</height>
@@ -393,8 +392,8 @@
 			</control>
 			<control type="label">
 				<visible>![Control.IsVisible(56) | Control.IsVisible(504)]</visible>
-				<left>60</left>
-				<top>162</top>
+				<left>54</left>
+				<top>159</top>
 				<width>260</width>
 				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 				<font>font20_title</font>
@@ -402,16 +401,24 @@
 				<align>right</align>
 			</control>
 			<control type="image">
-        <left>20</left>
-        <top>160</top>
+        <left>23</left>
+        <top>157</top>
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
 			</control>
 			<control type="group">
-        <left>278</left>
-				<top>-8</top>
-				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+        <left>279</left>
+				<top>-7</top>
+				<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">
+				<param name="left">-72</param>
+				<param name="top">17</param>
+				<param name="width">119</param>
+				<param name="height">119</param>
+				<param name="label-left">-6</param>
+				<param name="label-top">22</param>
+				<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
+				</include>
 			</control>
 			<include content="ProgressBar" condition="![$PARAM[focused]]">
 				<param name="left" value="20"/>

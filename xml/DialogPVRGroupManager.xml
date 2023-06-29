@@ -73,7 +73,7 @@
 							<top>0</top>
 							<right>0</right>
 							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="button_focus">masks/focus.png</texture>
 							<visible>Control.HasFocus(13)</visible>
 						</control>
 						<control type="label">

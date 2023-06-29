@@ -22,7 +22,7 @@
 			<include>OpenClose_Right</include>
 			<control type="grouplist" id="610">
 				<top>133</top>
-				<left>0</left>
+				<left>25</left>
 				<right>0</right>
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
@@ -169,7 +169,7 @@
 
 			<control type="grouplist" id="637">
 				<top>133</top>
-				<left>0</left>
+				<left>25</left>
 				<right>0</right>
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
@@ -282,7 +282,7 @@
 
 			<control type="grouplist" id="700">
 				<top>133</top>
-				<left>0</left>
+				<left>25</left>
 				<right>0</right>
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
@@ -336,7 +336,7 @@
 			</control>
 			<control type="grouplist" id="600">
 				<top>133</top>
-				<left>0</left>
+				<left>25</left>
 				<right>0</right>
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
@@ -399,7 +399,7 @@
 			
 			<control type="grouplist" id="622">
 				<top>133</top>
-				<left>0</left>
+				<left>25</left>
 				<right>0</right>
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
@@ -427,7 +427,7 @@
 			
 			<control type="grouplist" id="623">
 				<top>133</top>
-				<left>0</left>
+				<left>25</left>
 				<right>0</right>
 				<bottom>140</bottom>
 				<onleft>9000</onleft>
@@ -462,17 +462,17 @@
 
 			<control type="image">
 				<description>Dialog Header image</description>
-				<left>0</left>
+				<left>25</left>
 				<top>130</top>
-				<right>0</right>
+				<right>25</right>
 				<height>3</height>
 				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="image">
 				<description>Dialog Header image</description>
-				<left>0</left>
+				<left>25</left>
 				<bottom>134</bottom>
-				<right>0</right>
+				<right>25</right>
 				<height>3</height>
 				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
 			</control>
@@ -508,7 +508,7 @@
 					<control type="image">
 						<width>470</width>
 						<height>85</height>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="button_focus">masks/focus.png</texture>
 						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
 					</control>
 					<control type="label">

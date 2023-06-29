@@ -20,9 +20,9 @@
 			<control type="grouplist" id="5">
 				<description>control area</description>
 				<top>133</top>
-				<left>470</left>
+				<left>495</left>
 				<pagecontrol>60</pagecontrol>
-				<right>0</right>
+				<right>25</right>
 				<bottom>137</bottom>
 				<onleft>3</onleft>
 				<onright>60</onright>
@@ -30,16 +30,16 @@
 				<ondown>5</ondown>
 			</control>
 			<control type="image">
-				<left>470</left>
+				<left>495</left>
 				<top>130</top>
-				<right>0</right>
+				<right>25</right>
 				<height>2</height>
 				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="image">
-				<left>470</left>
+				<left>495</left>
 				<bottom>135</bottom>
-				<right>0</right>
+				<right>25</right>
 				<height>2</height>
 				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
 			</control>
@@ -110,7 +110,7 @@
 				<textoffsetx>40</textoffsetx>
 				<aligny>center</aligny>
 				<font>font37</font>
-				<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+				<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 				<texturenofocus />
 			</control>
 		</control>
@@ -152,7 +152,7 @@
 				<onclick>SettingsLevelChange</onclick>
 				<textoffsetx>100</textoffsetx>
 				<textoffsety>0</textoffsety>
-				<texturefocus colordiffuse="button_focus">colors/white.png</texturefocus>
+				<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 				<texturenofocus />
 				<radioposx>40</radioposx>
 				<radioposy>0</radioposy>

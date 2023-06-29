@@ -101,7 +101,7 @@
 							<top>0</top>
 							<right>0</right>
 							<height>70</height>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="button_focus">masks/focus.png</texture>
 							<visible>Control.HasFocus(51)</visible>
 						</control>
 						<control type="progress">

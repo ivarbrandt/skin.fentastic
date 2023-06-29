@@ -27,14 +27,14 @@
 						<param name="list_id" value="50" />
 					</include>
 					<control type="scrollbar" id="50600">
-						<left>20</left>
-						<top>list_top_offset</top>
+						<left>35</left>
+						<top>160</top>
 						<width>12</width>
-						<bottom>list_bottom_offset</bottom>
+						<bottom>150</bottom>
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<orientation>vertical</orientation>
-						<animation effect="zoom" end="50,100" time="300" tween="sine" center="20,0" easing="inout" condition="!Control.HasFocus(50600)">conditional</animation>
+						<animation effect="zoom" end="50,100" time="300" tween="sine" center="35,0" easing="inout" condition="!Control.HasFocus(50600)">conditional</animation>
 					</control>
 				</control>
 			</control>
@@ -47,9 +47,9 @@
 				<right>-32</right>
 				<!-- right content panel -->
 				<include content="ContentPanel">
-					<param name="left" value="0" />
+					<param name="left" value="-50" />
 					<param name="top" value="-20" />
-					<param name="width" value="656" />
+					<param name="width" value="706" />
 					<param name="flipx" value="true" />
 				</include>
 				<control type="group">
@@ -63,13 +63,20 @@
 						<bottom>124</bottom>
 						<fadetime>200</fadetime>
 						<aspectratio aligny="top">keep</aspectratio>
-						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar]</texture>
+						<texture diffuse="masks/poster-50.png" fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar]</texture>
 					</control>
 					<control type="group">
-						<left>541</left>
-						<top>142</top>
+						<left>540</left>
+						<top>143</top>
 						<include content="RatingCircle">
 							<param name="animation" value="True" />
+							<param name="left">-72</param>
+							<param name="top">17</param>
+							<param name="width">119</param>
+							<param name="height">119</param>
+							<param name="label-left">-16</param>
+							<param name="label-top">38</param>
+							<param name="cornerdiffuse">overlays/overlay-bg4.png</param>
 						</include>
 					</control>
 					<include content="ProgressBar">
@@ -150,7 +157,7 @@
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="button_focus">masks/focus-long.png</texture>
 						<visible>Control.HasFocus($PARAM[list_id])</visible>
 					</control>
 					<control type="label">
@@ -248,7 +255,7 @@
 					<height>470</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<fadetime>300</fadetime>
-					<texture fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
+					<texture diffuse="masks/landscape.png" fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
 					<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song)</visible>
 				</control>
 				<control type="image">
@@ -256,9 +263,9 @@
 					<top>110</top>
 					<width>540</width>
 					<height>303</height>
-					<aspectratio aligny="top">scale</aspectratio>
+					<!-- <aspectratio aligny="top">scale</aspectratio> -->
 					<fadetime>300</fadetime>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture diffuse="masks/landscape.png">$INFO[ListItem.Icon]</texture>
 					<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 				</control>
 				<control type="image">
@@ -268,14 +275,14 @@
 					<height>470</height>
 					<aspectratio aligny="bottom">scale</aspectratio>
 					<fadetime>300</fadetime>
-					<texture fallback="DefaultAudio.png" background="true">$VAR[IconWallThumbVar]</texture>
+					<texture diffuse="masks/landscape.png" fallback="DefaultAudio.png" background="true">$VAR[IconWallThumbVar]</texture>
 					<visible>String.IsEqual(ListItem.DBType,song)</visible>
 				</control>
 				<control type="image">
 					<left>30</left>
-					<top>293</top>
+					<top>145</top>
 					<width>540</width>
-					<height>120</height>
+					<height>270</height>
 					<texture>overlays/overlayfade.png</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 					<visible>String.IsEqual(ListItem.DbType,episode)</visible>

@@ -11,7 +11,7 @@
 					<left>594</left>
 					<top>list_top_offset</top>			
 					<bottom>$PARAM[bottom_offset]</bottom>
-					<right>0</right>
+					<right>25</right>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<orientation>vertical</orientation>
 					<pagecontrol>531</pagecontrol>
@@ -27,7 +27,7 @@
 							<left>0</left>
 							<right>0</right>
 							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="button_focus">masks/focus-long.png</texture>
 							<visible>Control.HasFocus(55)</visible>
 						</control>
 						<control type="image">
@@ -159,7 +159,7 @@
 							<left>0</left>
 							<right>0</right>
 							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="button_focus">masks/focus-long.png</texture>
 							<visible>Control.HasFocus(55)</visible>
 						</control>
 						<control type="image">
@@ -223,7 +223,7 @@
 							<left>0</left>
 							<right>0</right>
 							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="button_focus">masks/focus-long.png</texture>
 							<visible>Control.HasFocus(55)</visible>
 						</control>
 						<control type="image">
@@ -275,7 +275,7 @@
 			<control type="image">
 				<left>0</left>
 				<right>0</right>
-				<texture colordiffuse="button_focus">lists/focus.png</texture>
+				<texture colordiffuse="button_focus">masks/focus-long.png</texture>
 				<visible>Control.hasFocus(55)</visible>
 			</control>
 			<control type="label">
@@ -319,7 +319,7 @@
 			<control type="image">
 				<left>0</left>
 				<right>0</right>
-				<texture colordiffuse="button_focus">lists/focus.png</texture>
+				<texture colordiffuse="button_focus">masks/focus-long.png</texture>
 				<visible>Control.hasFocus(55)</visible>
 			</control>
 			<control type="image">

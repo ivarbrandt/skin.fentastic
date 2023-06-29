@@ -37,13 +37,6 @@
 				<font>font25_title</font>
 				<texturenofocus colordiffuse="button_focus2" border="40">buttons/dialogbutton-nofo.png</texturenofocus>
 			</control>
-			<control type="image">
-				<left>410</left>
-				<top>80</top>
-				<width>1100</width>
-				<height>740</height>
-				<texture colordiffuse="button_focus" border="40">buttons/dialogbutton-nofo.png</texture>
-			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>
 				<left>429</left>

@@ -69,7 +69,7 @@
 							<top>0</top>
 							<right>0</right>
 							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
+							<texture colordiffuse="button_focus">masks/focus.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
 						<control type="image">
@@ -133,9 +133,9 @@
 						<aligny>top</aligny>
 						<textoffsetx>40</textoffsetx>
 						<texturenofocus />
-						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+						<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 						<alttexturenofocus></alttexturenofocus>
-						<alttexturefocus colordiffuse="button_focus">lists/focus.png</alttexturefocus>
+						<alttexturefocus colordiffuse="button_focus">masks/focus.png</alttexturefocus>
 						<textoffsety>35</textoffsety>
 						<label>$LOCALIZE[31032]: $LOCALIZE[584]</label>
 						<altlabel>$LOCALIZE[31032]: $LOCALIZE[585]</altlabel>
@@ -149,7 +149,7 @@
 						<height>110</height>
 						<aligny>top</aligny>
 						<texturenofocus />
-						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+						<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>35</textoffsety>
 					</control>

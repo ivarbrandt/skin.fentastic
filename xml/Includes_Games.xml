@@ -59,7 +59,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font25_title</font>
-					<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+					<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 					<texturenofocus />
 				</control>
 			</control>
@@ -116,7 +116,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font27</font>
-					<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+					<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 					<texturenofocus />
 				</control>
 				<control type="label" id="8">

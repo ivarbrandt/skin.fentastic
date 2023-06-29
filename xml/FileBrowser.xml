@@ -50,16 +50,8 @@
 				<width>260</width>
 				<height>380</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 				<bordersize>4</bordersize>
 				<texture border="4" background="true">$INFO[ListItem.Icon]</texture>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>80</top>
-				<width>980</width>
-				<height>740</height>
-				<texture border="40" colordiffuse="button_focus2">buttons/dialogbutton-nofo.png</texture>
 			</control>
 			<control type="panel" id="450">
 				<left>20</left>
@@ -74,7 +66,7 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="70" width="940">
 					<control type="image">
-						<left>10</left>
+						<left>35</left>
 						<top>10</top>
 						<width>50</width>
 						<height>50</height>
@@ -82,7 +74,7 @@
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
-						<left>75</left>
+						<left>100</left>
 						<top>0</top>
 						<right>20</right>
 						<height>70</height>
@@ -93,15 +85,15 @@
 				</itemlayout>
 				<focusedlayout height="70" width="940">
 					<control type="image">
-						<left>0</left>
+						<left>25</left>
 						<top>0</top>
 						<right>0</right>
 						<height>71</height>
 						<visible>Control.HasFocus(450)</visible>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="button_focus">masks/focus-long.png</texture>
 					</control>
 					<control type="image">
-						<left>10</left>
+						<left>35</left>
 						<top>10</top>
 						<width>50</width>
 						<height>50</height>
@@ -109,7 +101,7 @@
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
-						<left>75</left>
+						<left>100</left>
 						<top>0</top>
 						<right>20</right>
 						<height>70</height>
@@ -132,7 +124,7 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="70" width="940">
 					<control type="image">
-						<left>10</left>
+						<left>35</left>
 						<top>10</top>
 						<width>50</width>
 						<height>50</height>
@@ -140,7 +132,7 @@
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
-						<left>75</left>
+						<left>100</left>
 						<top>0</top>
 						<right>20</right>
 						<height>70</height>
@@ -151,15 +143,15 @@
 				</itemlayout>
 				<focusedlayout height="70" width="940">
 					<control type="image">
-						<left>0</left>
+						<left>25</left>
 						<top>0</top>
 						<right>0</right>
 						<height>71</height>
 						<visible>Control.HasFocus(451)</visible>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="button_focus">masks/focus-long.png</texture>
 					</control>
 					<control type="image">
-						<left>10</left>
+						<left>35</left>
 						<top>10</top>
 						<width>50</width>
 						<height>50</height>
@@ -167,7 +159,7 @@
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label">
-						<left>75</left>
+						<left>100</left>
 						<top>0</top>
 						<right>20</right>
 						<height>70</height>
@@ -188,8 +180,8 @@
 			</control>
 			<control type="label" id="412">
 				<description>Path label</description>
-				<left>25</left>
-				<bottom>10</bottom>
+				<left>75</left>
+				<bottom>25</bottom>
 				<width>595</width>
 				<height>30</height>
 				<haspath>true</haspath>
@@ -198,8 +190,8 @@
 				<textcolor>grey</textcolor>
 			</control>
 			<control type="label">
-				<left>0</left>
-				<bottom>10</bottom>
+				<left>-50</left>
+				<bottom>25</bottom>
 				<width>1270</width>
 				<height>30</height>
 				<align>right</align>

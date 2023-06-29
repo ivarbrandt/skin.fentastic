@@ -132,7 +132,7 @@
 					<top>0</top>
 					<right>0</right>
 					<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
-					<texture colordiffuse="button_focus">lists/focus.png</texture>
+					<texture colordiffuse="button_focus">masks/focus.png</texture>
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
 				</control>
 				<control type="progress">
@@ -226,7 +226,7 @@
 					<left>0</left>
 					<right>0</right>
 					<bottom>0</bottom>
-					<texture colordiffuse="button_focus">lists/focus.png</texture>
+					<texture colordiffuse="button_focus">masks/focus.png</texture>
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
 				</control>
 				<control type="image">
@@ -652,7 +652,7 @@
 						<left>2</left>
 						<width>54</width>
 						<height>54</height>
-						<texture colordiffuse="button_focus">lists/focus.png</texture>
+						<texture colordiffuse="button_focus">masks/focus.png</texture>
 						<visible>Control.HasFocus($PARAM[control_id])</visible>
 					</control>
 					<!-- unfocused grid (back) -->

@@ -25,13 +25,13 @@
 			<font>font12</font>
 			<label>$LOCALIZE[1021]</label>
 		</control>
-		<control type="image">
+		<!-- <control type="image">
 			<left>25</left>
 			<top>145</top>
 			<width>860</width>
 			<height>285</height>
 			<texture colordiffuse="button_focus2" border="40">buttons/dialogbutton-nofo.png</texture>
-		</control>
+		</control> -->
 		<control type="list" id="10">
 			<left>45</left>
 			<top>165</top>
@@ -61,7 +61,7 @@
 					<bottom>0</bottom>
 					<right>0</right>
 					<visible>Control.HasFocus(10)</visible>
-					<texture colordiffuse="button_focus">lists/focus.png</texture>
+					<texture colordiffuse="button_focus">masks/focus-long.png</texture>
 				</control>
 				<control type="label">
 					<left>10</left>

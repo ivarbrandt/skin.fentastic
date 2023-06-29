@@ -56,8 +56,7 @@
 				<width>280</width>
 				<!-- 386 -->
 				<height>345</height>
-				<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+				<texture diffuse="masks/addons.png" colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
@@ -65,8 +64,7 @@
 				<left>-4</left>
 				<width>288</width>
 				<height>351</height>
-				<texture colordiffuse="button_focus">colors/grey.png</texture>
-				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+				<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
 				<bordersize>20</bordersize>
 				<visible>$PARAM[focused]</visible>
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
@@ -76,7 +74,7 @@
 				<top>0</top>
 				<width>280</width>
 				<height>280</height>
-				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
+				<texture diffuse="masks/addons-artwork.png" fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>keep</aspectratio>
 				<bordersize>20</bordersize>
 			</control>
@@ -132,9 +130,8 @@
 			<control type="image">
 				<top>10</top>
 				<width>347</width>
-				<height>283</height>
-				<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+				<height>265</height>
+				<texture colordiffuse="button_focus2">masks/settingspanel-unfocused.png</texture>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
@@ -142,8 +139,7 @@
 				<left>-4</left>
 				<width>355</width>
 				<height>291</height>
-				<texture colordiffuse="button_focus">colors/grey.png</texture>
-				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+				<texture colordiffuse="button_focus">masks/settingspanel.png</texture>
 				<bordersize>20</bordersize>
 				<visible>$PARAM[focused]</visible>
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
@@ -157,8 +153,8 @@
 				<width>347</width>
 				<!-- 234 -->
 				<height>212</height>
-				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
-				<aspectratio>scale</aspectratio>
+				<texture diffuse="masks/landscapeinfo-artwork.png" fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
+				<!-- <aspectratio>scale</aspectratio> -->
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
@@ -175,15 +171,16 @@
 			<control type="image">
 				<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 				<left>20</left>
-				<top>133</top>
+				<!-- 133 -->
+				<top>116</top>
 				<width>307</width>
 				<height>70</height>
-				<texture>overlays/overlayfade.png</texture>
+				<texture>overlays/overlayfade1.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
 				<left>131</left>
-				<top>173</top>
+				<top>156</top>
 				<width>191</width>
 				<label>$PARAM[thumb_label]</label>
 				<font>font20_title</font>
@@ -193,15 +190,15 @@
 			<control type="image">
 				<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)] + [Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)]</visible>
 				<left>20</left>
-				<top>122</top>
+				<top>105</top>
 				<width>80</width>
 				<height>80</height>
-				<texture>overlays/overlay-bg.png</texture>
+				<texture>overlays/overlay-bg1.png</texture>
 				<visible></visible>
 			</control>
 			<control type="image">
 				<left>20</left>
-				<top>170</top>
+				<top>153</top>
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
@@ -222,7 +219,7 @@
 				<control type="label">
 					<visible>String.IsEqual(ListItem.DBType,episode) + Skin.HasSetting(LandscapeInfoScroll)</visible>
 					<left>15%</left>
-					<top>205</top>
+					<top>188</top>
 					<width>100%</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
@@ -233,7 +230,7 @@
 				<control type="label">
 					<visible>String.IsEqual(ListItem.DBType,episode) + Skin.HasSetting(LandscapeInfoScroll)</visible>
 					<left>15%</left>
-					<top>235</top>
+					<top>218</top>
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10</font>
@@ -266,7 +263,7 @@
 				<control type="label">
 					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + Skin.HasSetting(LandscapeInfoScroll)</visible>
 					<left>15%</left>
-					<top>217</top>
+					<top>200</top>
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font12</font>
@@ -277,7 +274,7 @@
 				<control type="label">
 					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + !Skin.HasSetting(LandscapeInfoScroll)</visible>
 					<left>15%</left>
-					<top>217</top>
+					<top>200</top>
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font12</font>
@@ -288,7 +285,7 @@
 				<control type="label">
 					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] + Skin.HasSetting(LandscapeInfoScroll)</visible>
 					<left>15%</left>
-					<top>217</top>
+					<top>200</top>
 					<width>100%</width>
 					<label>$PARAM[networks_label]</label>
 					<font>font12</font>
@@ -299,7 +296,7 @@
 				<control type="label">
 					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] + !Skin.HasSetting(LandscapeInfoScroll)</visible>
 					<left>15%</left>
-					<top>217</top>
+					<top>200</top>
 					<width>100%</width>
 					<label>$PARAM[networks_label]</label>
 					<font>font12</font>
@@ -310,12 +307,12 @@
 			</control>
 			<include content="ProgressBar" condition="![$PARAM[focused]]">
 				<param name="left" value="20"/>
-				<param name="top" value="250"/>
+				<param name="top" value="233"/>
 				<param name="width" value="307"/>
 			</include>
 			<control type="label">
 				<left>51</left>
-				<top>173</top>
+				<top>156</top>
 				<width>100</width>
 				<label>$INFO[ListItem.Property(WatchedProgress)]%</label>
 				<font>font20_title</font>
@@ -326,7 +323,15 @@
 			<control type="group">
 				<left>280</left>
 				<top>12</top>
-				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+				<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">
+					<param name="left">-72</param>
+					<param name="top">17</param>
+					<param name="width">119</param>
+					<param name="height">119</param>
+					<param name="label-left">-6</param>
+					<param name="label-top">22</param>
+					<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
+				</include>
 			</control>
 		</definition>
 	</include>
@@ -384,8 +389,7 @@
 					<top>-14</top>
 					<width>243</width>
 					<height>332</height>
-					<texture colordiffuse="button_focus">colors/grey.png</texture>
-					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+					<texture colordiffuse="button_focus">masks/poster.png</texture>
 					<bordersize>20</bordersize>
 					<visible>$PARAM[focused]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
@@ -397,9 +401,8 @@
 					<width>235</width>
 					<!-- 427 -->
 					<height>324</height>
-					<texture background="true">$INFO[ListItem.Art(poster)]</texture>
-					<aspectratio>scale</aspectratio>
-					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+					<texture diffuse="masks/poster.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+					<!-- <aspectratio>scale</aspectratio> -->
 					<bordersize>20</bordersize>
 				</control>
 
@@ -415,7 +418,7 @@
 				</control>
 				<control type="image">
 					<left>75</left>
-					<top>214</top>
+					<top>215</top>
 					<width>140</width>
 					<height>80</height>
 					<texture>overlays/overlay-bg2.png</texture>
@@ -424,8 +427,8 @@
 				</control>
 
 				<control type="label">
-					<left>-70</left>
-					<top>263</top>
+					<left>-73</left>
+					<top>260</top>
 					<width>280</width>
 					<label>$INFO[ListItem.Property(WatchedProgress)]%</label>
 					<font>font20_title</font>
@@ -442,17 +445,17 @@
 				<top>320</top>
 				<control type="image">
 					<left>20</left>
-					<top>-76</top>
+					<top>-176</top>
 					<width>195</width>
-					<height>50</height>
+					<height>150</height>
 					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
 					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 					<visible>$PARAM[focused]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
 				<control type="label">
-					<left>5</left>
-					<top>-56</top>
+					<left>-1</left>
+					<top>-59</top>
 					<width>169</width>
 					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
 					<font>font20_title</font>
@@ -462,8 +465,8 @@
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
 				<control type="image">
-					<left>184</left>
-					<top>-53</top>
+					<left>178</left>
+					<top>-56</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>lists/played-total.png</texture>
@@ -472,8 +475,8 @@
 				</control>
 			</control>
 			<control type="image">
-				<left>20</left>
-				<top>262</top>
+				<left>23</left>
+				<top>259</top>
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
@@ -481,7 +484,15 @@
 			<control type="group">
 				<left>168</left>
 				<top>-8</top>
-				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+				<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">
+					<param name="left">-72</param>
+					<param name="top">17</param>
+					<param name="width">119</param>
+					<param name="height">119</param>
+					<param name="label-left">-6</param>
+					<param name="label-top">22</param>
+					<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
+				</include>
 			</control>
 			<include content="ProgressBar" condition="![$PARAM[focused]]">
 				<param name="left" value="21"/>

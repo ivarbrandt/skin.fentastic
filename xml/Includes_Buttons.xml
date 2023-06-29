@@ -30,8 +30,8 @@
 				<textoffsetx>16</textoffsetx>
 				<aligny>center</aligny>
 				<font>font12</font>
-				<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-				<alttexturefocus colordiffuse="button_focus">lists/focus.png</alttexturefocus>
+				<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
+				<alttexturefocus colordiffuse="button_focus">masks/focus.png</alttexturefocus>
 				<texturenofocus />
 				<alttexturenofocus />
 				<onclick>noop</onclick>
@@ -47,15 +47,18 @@
 	</include>
 	<include name="DefaultSettingButton">
 		<param name="height">70</param>
+		<param name="right">25</param>
 		<param name="textoffsetx">40</param>
+
 		<definition>
 			<textoffsetx>$PARAM[textoffsetx]</textoffsetx>
 			<top>0</top>
 			<height>$PARAM[height]</height>
+			<right>$PARAM[right]</right>
 			<aligny>center</aligny>
 			<invalidcolor>invalid</invalidcolor>
 			<selectedcolor>selected</selectedcolor>
-			<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+			<texturefocus colordiffuse="button_focus">masks/focus-long.png</texturefocus>
 			<texturenofocus />
 		</definition>
 	</include>
@@ -69,7 +72,7 @@
 			<aligny>center</aligny>
 			<invalidcolor>invalid</invalidcolor>
 			<selectedcolor>selected</selectedcolor>
-			<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+			<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 			<texturenofocus colordiffuse="dialog_tint">colors/white.png</texturenofocus>
 		</definition>
 	</include>
@@ -140,7 +143,7 @@
 				<height>110</height>
 				<align>left</align>
 				<aligny>top</aligny>
-				<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+				<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 				<texturenofocus />
 				<textoffsetx>40</textoffsetx>
 				<textoffsety>35</textoffsety>
@@ -233,11 +236,11 @@
 		<definition>
 			<control type="radiobutton" id="$PARAM[id]">
 				<width>$PARAM[width]</width>
-				<height>142</height>
+				<height>130</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
-				<texturenofocus border="21" colordiffuse="button_focus2">buttons/button-nofo.png</texturenofocus>
+				<texturefocus border="2" colordiffuse="button_focus">masks/landscape.png</texturefocus>
+				<texturenofocus border="2" colordiffuse="button_focus2">masks/landscape-unfocused.png</texturenofocus>
 				<textoffsetx>22</textoffsetx>
 				<textoffsety>78</textoffsety>
 				<radioposx>108</radioposx>
@@ -264,11 +267,11 @@
 		<definition>
 			<control type="radiobutton" id="$PARAM[id]">
 				<width>$PARAM[width]</width>
-				<height>142</height>
+				<height>130</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
-				<texturenofocus border="21" colordiffuse="button_focus2">buttons/button-nofo.png</texturenofocus>
+				<texturefocus border="2" colordiffuse="button_focus">masks/landscape.png</texturefocus>
+				<texturenofocus border="2" colordiffuse="button_focus2">masks/landscape-unfocused.png</texturenofocus>
 				<textoffsetx>35</textoffsetx>
 				<textoffsety>78</textoffsety>
 				<radioposx>108</radioposx>
@@ -300,17 +303,17 @@
 		<ondown>9000</ondown>
 		<orientation>vertical</orientation>
 		<itemlayout height="70" width="600">
-			<control type="image">
+			<!-- <control type="image">
 				<left>0</left>
-				<top>0</top>
+				<top>25</top>
 				<width>600</width>
 				<height>70</height>
 				<texture colordiffuse="dialog_tint">colors/white.png</texture>
-			</control>
+			</control> -->
 			<control type="label">
 				<left>0</left>
 				<textoffsetx>20</textoffsetx>
-				<top>0</top>
+				<top>25</top>
 				<width>600</width>
 				<height>70</height>
 				<align>center</align>
@@ -322,22 +325,22 @@
 		<focusedlayout height="70" width="600">
 			<control type="image">
 				<left>0</left>
-				<top>0</top>
+				<top>25</top>
 				<width>600</width>
 				<height>70</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<texture colordiffuse="dialog_tint">masks/buttonmenu.png</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
-				<top>0</top>
+				<top>25</top>
 				<width>600</width>
 				<height>70</height>
-				<texture colordiffuse="button_focus">lists/focus.png</texture>
+				<texture colordiffuse="button_focus">masks/buttonmenu.png</texture>
 			</control>
 			<control type="label">
 				<left>0</left>
 				<textoffsetx>20</textoffsetx>
-				<top>0</top>
+				<top>25</top>
 				<width>600</width>
 				<height>70</height>
 				<align>center</align>

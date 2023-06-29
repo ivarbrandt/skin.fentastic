@@ -33,7 +33,7 @@
 				<top>0</top>
 				<width>450</width>
 				<height>780</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<texture diffuse="masks/landscape.png" colordiffuse="dialog_tint">colors/white.png</texture>
 			</control>
 			<control type="grouplist" id="996">
 				<description>grouplist for context buttons</description>
@@ -57,7 +57,7 @@
 			<width>450</width>
 			<height>65</height>
 			<align>center</align>
-			<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+			<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 			<texturenofocus />
 		</control>
 	</controls>
