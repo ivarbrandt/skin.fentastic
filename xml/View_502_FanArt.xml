@@ -33,7 +33,7 @@
 					<height>644</height>
 					<fadetime>300</fadetime>
 					<texture diffuse="masks/landscape-502.png" border="2" fallback="special://skin/extras/home-images/movie.jpg" background="true">$VAR[FanartImageVar]</texture>
-					<aspectratio align="center" aligny="bottom">scale</aspectratio>
+					<!-- <aspectratio align="center" aligny="bottom">keep</aspectratio> -->
 				</control>
 				<control type="group">
 					<left>1152</left>
@@ -45,7 +45,7 @@
 						<param name="height">119</param>
 						<param name="label-left">-18</param>
 						<param name="label-top">32</param>
-						<param name="cornerdiffuse">overlays/overlay-bg4.png</param>
+						<param name="cornerdiffuse">overlays/overlay-bg5.png</param>
 					</include>
 				</control>
 				<control type="textbox">

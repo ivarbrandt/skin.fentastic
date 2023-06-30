@@ -32,7 +32,7 @@
 				<visible>Control.IsVisible(50) | Control.Isvisible(54) | Control.Isvisible(56) | [Control.IsVisible(501) + String.IsEqual(Skin.AspectRatio,21:9)]</visible>
 				<include>Visible_Left</include>
 				<include content="ContentPanel">
-					<param name="width" value="706" />
+					<param name="width" value="806" />
 				</include>
 				<control type="group">
 					<width>550</width>

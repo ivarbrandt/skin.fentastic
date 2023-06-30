@@ -47,9 +47,9 @@
 				<right>-32</right>
 				<!-- right content panel -->
 				<include content="ContentPanel">
-					<param name="left" value="-50" />
+					<param name="left" value="-150" />
 					<param name="top" value="-20" />
-					<param name="width" value="706" />
+					<param name="width" value="806" />
 					<param name="flipx" value="true" />
 				</include>
 				<control type="group">
