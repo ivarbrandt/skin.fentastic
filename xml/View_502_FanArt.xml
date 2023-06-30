@@ -57,9 +57,10 @@
 					<autoscroll time="3000" delay="7000" repeat="5000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<include content="ProgressBar">
-					<param name="left" value="38"/>
+					<!-- 38 -->
+					<param name="left" value="100"/>
 					<param name="top" value="737"/>
-					<param name="width" value="1161"/>
+					<param name="width" value="1040"/>
 				</include>
 				<control type="scrollbar" id="502600">
 					<left>20</left>

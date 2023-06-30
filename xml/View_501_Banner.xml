@@ -60,9 +60,10 @@
 							</include>
 						</control>
 						<include content="ProgressBar">
-							<param name="left" value="20"/>
+							<!-- 20 -->
+							<param name="left" value="55"/>
 							<param name="top" value="150"/>
-							<param name="width" value="820"/>
+							<param name="width" value="745"/>
 						</include>
 					</control>
 				</itemlayout>
