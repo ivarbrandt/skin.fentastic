@@ -311,7 +311,7 @@
 				<left>0</left>
 				<top>106</top>
 				<right>0</right>
-				<height>372</height>
+				<height>389</height>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>
@@ -381,7 +381,7 @@
 				<left>0</left>
 				<top>106</top>
 				<right>0</right>
-				<height>372</height>
+				<height>389</height>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<focusposition>0</focusposition>

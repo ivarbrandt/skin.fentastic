@@ -130,7 +130,7 @@
 				<onright>60</onright>
 				<control type="button" id="95">
 					<description>Button Summary Values</description>
-					<include content="DefaultSettingButton">
+					<include content="DefaultSystemSettingsButton">
 						<param name="height" value="85" />
 					</include>
 					<width>420</width>
@@ -138,7 +138,7 @@
 				</control>
 				<control type="button" id="94">
 					<description>Button Storage</description>
-					<include content="DefaultSettingButton">
+					<include content="DefaultSystemSettingsButton">
 						<param name="height" value="85" />
 					</include>
 					<width>420</width>
@@ -146,7 +146,7 @@
 				</control>
 				<control type="button" id="96">
 					<description>Button Network</description>
-					<include content="DefaultSettingButton">
+					<include content="DefaultSystemSettingsButton">
 						<param name="height" value="85" />
 					</include>
 					<width>420</width>
@@ -154,7 +154,7 @@
 				</control>
 				<control type="button" id="97">
 					<description>Button Video</description>
-					<include content="DefaultSettingButton">
+					<include content="DefaultSystemSettingsButton">
 						<param name="height" value="85" />
 					</include>
 					<width>420</width>
@@ -162,7 +162,7 @@
 				</control>
 				<control type="button" id="98">
 					<description>Button Hardware</description>
-					<include content="DefaultSettingButton">
+					<include content="DefaultSystemSettingsButton">
 						<param name="height" value="85" />
 					</include>
 					<width>420</width>
@@ -170,7 +170,7 @@
 				</control>
 				<control type="button" id="99">
 					<description>Button PVR</description>
-					<include content="DefaultSettingButton">
+					<include content="DefaultSystemSettingsButton">
 						<param name="height" value="85" />
 					</include>
 					<width>420</width>
@@ -178,7 +178,7 @@
 				</control>
 				<control type="button" id="100">
 					<description>Button Privacy policy</description>
-					<include content="DefaultSettingButton">
+					<include content="DefaultSystemSettingsButton">
 						<param name="height" value="85" />
 					</include>
 					<width>420</width>

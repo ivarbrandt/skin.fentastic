@@ -49,7 +49,6 @@
 		<param name="height">70</param>
 		<param name="right">25</param>
 		<param name="textoffsetx">40</param>
-
 		<definition>
 			<textoffsetx>$PARAM[textoffsetx]</textoffsetx>
 			<top>0</top>
@@ -59,6 +58,22 @@
 			<invalidcolor>invalid</invalidcolor>
 			<selectedcolor>selected</selectedcolor>
 			<texturefocus colordiffuse="button_focus">masks/focus-long.png</texturefocus>
+			<texturenofocus />
+		</definition>
+	</include>
+	<include name="DefaultSystemSettingsButton">
+		<param name="height">70</param>
+		<param name="right">25</param>
+		<param name="textoffsetx">40</param>
+		<definition>
+			<textoffsetx>$PARAM[textoffsetx]</textoffsetx>
+			<top>0</top>
+			<height>$PARAM[height]</height>
+			<right>$PARAM[right]</right>
+			<aligny>center</aligny>
+			<invalidcolor>invalid</invalidcolor>
+			<selectedcolor>selected</selectedcolor>
+			<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 			<texturenofocus />
 		</definition>
 	</include>
