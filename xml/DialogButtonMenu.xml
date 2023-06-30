@@ -14,7 +14,9 @@
 				<param name="header_label" value="$LOCALIZE[31072]" />
 				<param name="header_id" value="2" />
 			</include>
-			<control type="panel" id="9000">
+			<control type="fixedlist" id="9000">
+				<focuspositon>0</focuspositon>
+				<movement>4</movement>
 				<include>ButtonMenuList</include>
 				<content>
 					<item>
