@@ -80,9 +80,10 @@
 						</include>
 					</control>
 					<include content="ProgressBar">
-						<param name="left" value="48"/>
+						<!-- 48 -->
+						<param name="left" value="100"/>
 						<param name="top" value="120"/>
-						<param name="width" value="540"/>
+						<param name="width" value="435"/>
 					</include>
 				</control>
 				<control type="group">
@@ -243,7 +244,7 @@
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include content="ContentPanel">
-					<param name="width" value="656" />
+					<param name="width" value="806" />
 					<param name="flipx" value="$PARAM[flip_bg]" />
 				</include>
 				
@@ -304,9 +305,10 @@
 					<visible>!String.IsEqual(ListItem.DbType,episode)</visible>
 				</control> -->
 				<include content="ProgressBar">
-					<param name="left" value="30"/>
+					<!-- 30 -->
+					<param name="left" value="65"/>
 					<param name="top" value="390"/>
-					<param name="width" value="540"/>
+					<param name="width" value="460"/>
 				</include>
 				<control type="group">
 					<visible>!Container.Content() | !String.isempty(ListItem.Plot)</visible>

@@ -652,7 +652,7 @@
 						<left>2</left>
 						<width>54</width>
 						<height>54</height>
-						<texture colordiffuse="button_focus">masks/focus.png</texture>
+						<texture colordiffuse="button_focus">masks/focus-PVR.png</texture>
 						<visible>Control.HasFocus($PARAM[control_id])</visible>
 					</control>
 					<!-- unfocused grid (back) -->

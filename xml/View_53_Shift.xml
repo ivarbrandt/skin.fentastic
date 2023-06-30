@@ -78,7 +78,7 @@
 							<top>90</top>
 							<width>370</width>
 							<height>480</height>
-							<!-- <aspectratio aligny="center">keep</aspectratio> -->
+							<aspectratio aligny="center">keep</aspectratio>
 							<texture diffuse="masks/poster.png" fallback="DefaultVideo.png" background="true">$VAR[ShiftThumbVar]</texture>
 							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 							<bordersize>20</bordersize>
@@ -95,16 +95,16 @@
 						<control type="group">
 							<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
 							<control type="image">
-								<left>30.5</left>
-								<top>500</top>
-								<width>309</width>
-								<height>50</height>
-								<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
+								<left>38</left>
+								<top>450</top>
+								<width>294</width>
+								<height>100</height>
+								<texture colordiffuse="CCFFFFFF">overlays/overlayfade2.png</texture>
 								<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 							</control>
 							<control type="label">
-								<left>0</left>
-								<top>522</top>
+								<left>-15</left>
+								<top>517</top>
 								<width>301</width>
 								<height>24</height>
 								<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
@@ -114,8 +114,8 @@
 								<aligny>center</aligny>
 							</control>
 							<control type="image">
-								<left>308</left>
-								<top>522</top>
+								<left>293</left>
+								<top>517</top>
 								<width>24</width>
 								<height>24</height>
 								<texture>lists/played-total.png</texture>
@@ -124,8 +124,8 @@
 							</control>
 						</control>
 						<control type="image">
-							<left>41</left>
-							<top>506</top>
+							<left>45</left>
+							<top>510</top>
 							<width>32</width>
 							<height>32</height>
 							<align>left</align>
@@ -136,20 +136,21 @@
 							<left>292</left>
 							<top>92</top>
 							<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">
-								<param name="left">-61</param>
+								<param name="left">-78</param>
 								<param name="top">17</param>
 								<param name="width">119</param>
 								<param name="height">119</param>
-								<param name="label-left">-10</param>
+								<param name="label-left">-15</param>
 								<param name="label-top">32</param>
 								<param name="cornerdiffuse">overlays/overlayfade-bg5.png</param>
 							</include>
 						</control>
 
 						<include content="ProgressBar">
-							<param name="left" value="31"/>
+							<!-- 31 -->
+							<param name="left" value="63"/>
 							<param name="top" value="525"/>
-							<param name="width" value="285"/>
+							<param name="width" value="243"/>
 						</include>
 
 
@@ -171,7 +172,7 @@
 							<top>90</top>
 							<width>370</width>
 							<height>480</height>
-							<!-- <aspectratio aligny="center">keep</aspectratio> -->
+							<aspectratio aligny="center">keep</aspectratio>
 							<texture diffuse="masks/poster.png" fallback="DefaultVideo.png" background="true">$VAR[ShiftThumbVar]</texture>
 							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 							<bordersize>20</bordersize>
@@ -189,16 +190,16 @@
 						<control type="group">
 							<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
 							<control type="image">
-								<left>30.5</left>
-								<top>500</top>
-								<width>309</width>
-								<height>50</height>
-								<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
+								<left>38</left>
+								<top>450</top>
+								<width>294</width>
+								<height>100</height>
+								<texture colordiffuse="CCFFFFFF">overlays/overlayfade2.png</texture>
 								<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 							</control>
 							<control type="label">
-								<left>0</left>
-								<top>522</top>
+								<left>-15</left>
+								<top>517</top>
 								<width>301</width>
 								<height>24</height>
 								<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
@@ -208,8 +209,8 @@
 								<aligny>center</aligny>
 							</control>
 							<control type="image">
-								<left>308</left>
-								<top>522</top>
+								<left>293</left>
+								<top>517</top>
 								<width>24</width>
 								<height>24</height>
 								<texture>lists/played-total.png</texture>
@@ -218,8 +219,8 @@
 							</control>
 						</control>
 						<control type="image">
-							<left>41</left>
-							<top>506</top>
+							<left>45</left>
+							<top>510</top>
 							<width>32</width>
 							<height>32</height>
 							<align>left</align>
@@ -230,16 +231,16 @@
 							<left>292</left>
 							<top>92</top>
 							<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">
-								<param name="left">-61</param>
+								<param name="left">-78</param>
 								<param name="top">17</param>
 								<param name="width">119</param>
 								<param name="height">119</param>
-								<param name="label-left">-10</param>
+								<param name="label-left">-15</param>
 								<param name="label-top">32</param>
 								<param name="cornerdiffuse">overlays/overlayfade-bg5.png</param>
 							</include>
 						</control>
-						<control type="progress">
+						<!-- <control type="progress">
 							<left>31</left>
 							<top>525</top>
 							<width>285</width>
@@ -258,7 +259,13 @@
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
 							<visible>Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-						</control>
+						</control> -->
+						<include content="ProgressBar">
+							<!-- 31 -->
+							<param name="left" value="63"/>
+							<param name="top" value="525"/>
+							<param name="width" value="243"/>
+						</include>
 					</focusedlayout>
 				</control>
 			</control>
