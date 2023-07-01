@@ -72,6 +72,7 @@
 							<bordersize>20</bordersize>
 							<visible>String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
 						</control>
+						<!-- TODO Clean up view (align Rating Circle, ContentPanelFade) -->
 						<control type="image">
 							<depth>DepthContentPopout</depth>
 							<left>0</left>

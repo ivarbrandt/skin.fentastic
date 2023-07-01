@@ -27,6 +27,7 @@
 		</control>
 		<control type="group">
 			<animation effect="slide" end="0,175" time="0" condition="Window.IsActive(home)">conditional</animation>
+			<!-- TODO Add border and adjust height -->
 			<control type="image" id="999">
 				<description>background image</description>
 				<left>0</left>
@@ -50,6 +51,7 @@
 				<param name="down_posy" value="798" />
 			</include>
 		</control>
+		<!-- TODO Adjust width of focused items -->
 		<control type="button" id="1000">
 			<description>button template</description>
 			<left>0</left>

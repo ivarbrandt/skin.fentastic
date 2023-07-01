@@ -227,6 +227,7 @@
 						</control>
 					</control>
 				</control>
+				<!-- TODO Resize buttons to all fit on screen -->
 				<control type="grouplist" id="9000">
 					<left>90</left>
 					<top>840</top>

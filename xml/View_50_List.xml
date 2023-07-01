@@ -26,6 +26,7 @@
 					<include content="RightListPanel">
 						<param name="list_id" value="50" />
 					</include>
+					<!-- TODO Adjust start/end values to match top/bottom of poster -->
 					<control type="scrollbar" id="50600">
 						<left>35</left>
 						<top>160</top>

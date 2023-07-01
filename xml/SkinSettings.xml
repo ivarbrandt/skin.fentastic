@@ -437,6 +437,7 @@
 				<ondown>623</ondown>
 				<visible>Container(9000).HasFocus(6)</visible>
 				<control type="button" id="6230">
+					<!-- TODO Adjust label coloring for changelog, setup guide crashes window -->
 					<include>DefaultSettingButton</include>
 					<label>[B]CHANGELOG: $INFO[System.AddonTitle(skin.fentastic)][/B]</label>
 					<onclick>SetProperty(Changelog,True)</onclick>

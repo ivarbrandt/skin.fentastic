@@ -5,6 +5,7 @@
 	<onunload>ClearProperty(infobackground,home)</onunload>
 	<controls>
 		<control type="group">
+			<!-- TODO Update UI to new design -->
 			<centertop>50%</centertop>
 			<height>1080</height>
 			<centerleft>50%</centerleft>

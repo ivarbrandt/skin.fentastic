@@ -28,6 +28,7 @@
 				<param name="header_label" value="$INFO[Window(home).Property(TextViewer_Header)]" />
 				<param name="header_id" value="1" />
 			</include>
+			<!-- TODO Adjust label positioning -->
 			<control type="label">
 				<left>1%</left>
 					<top>10</top>
@@ -69,6 +70,7 @@
 				<visible>!String.IsEmpty(Window(skinsettings).Property(Changelog))</visible>
 				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 			</control>
+			<!-- TODO Adjust scrollbar begin/end -->
 			<control type="scrollbar" id="61">
 				<left>1390</left>
 				<top>70</top>

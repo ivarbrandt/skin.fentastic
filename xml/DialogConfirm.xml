@@ -32,9 +32,10 @@
 			<control type="grouplist" id="9000">
 				<orientation>horizontal</orientation>
 				<left>0</left>
-				<top>290</top>
+				<top>280</top>
 				<width>915</width>
 				<align>center</align>
+				<itemgap>dialogbuttons_itemgap</itemgap>
 				<include content="DefaultDialogButton">
 					<param name="id" value="11" />
 					<param name="label" value="" />
@@ -51,4 +52,3 @@
 		</control>
 	</controls>
 </window>
-

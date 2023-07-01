@@ -16,13 +16,13 @@
 			</include>
 			<control type="grouplist" id="9000">
 				<left>990</left>
-				<top>85</top>
+				<top>95</top>
 				<width>400</width>
 				<height>400</height>
 				<itemgap>dialogbuttons_itemgap</itemgap>
 				<orientation>vertical</orientation>
 				<onleft>450</onleft>
-				<onright>450</onright>
+				<onright>60</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<include content="DefaultDialogButton">
@@ -58,8 +58,8 @@
 				<top>100</top>
 				<width>940</width>
 				<height>700</height>
-				<onleft>9000</onleft>
-				<onright>60</onright>
+				<onleft>60</onleft>
+				<onright>9000</onright>
 				<onup>450</onup>
 				<ondown>450</ondown>
 				<pagecontrol>60</pagecontrol>
@@ -84,10 +84,11 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="70" width="940">
+					<!-- TODO Adjust focus item length -->
 					<control type="image">
 						<left>25</left>
 						<top>0</top>
-						<right>0</right>
+						<right>25</right>
 						<height>71</height>
 						<visible>Control.HasFocus(450)</visible>
 						<texture colordiffuse="button_focus">masks/focus-long.png</texture>
@@ -116,8 +117,8 @@
 				<top>100</top>
 				<width>940</width>
 				<height>700</height>
-				<onleft>9000</onleft>
-				<onright>60</onright>
+				<onleft>60</onleft>
+				<onright>9000</onright>
 				<onup>451</onup>
 				<ondown>451</ondown>
 				<pagecontrol>60</pagecontrol>
@@ -142,10 +143,11 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="70" width="940">
+					<!-- TODO Adjust focus item length -->
 					<control type="image">
 						<left>25</left>
 						<top>0</top>
-						<right>0</right>
+						<right>25</right>
 						<height>71</height>
 						<visible>Control.HasFocus(451)</visible>
 						<texture colordiffuse="button_focus">masks/focus-long.png</texture>
@@ -170,12 +172,12 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>965</left>
+				<left>20</left>
 				<top>100</top>
 				<width>12</width>
 				<height>698</height>
-				<onleft>450</onleft>
-				<onright>9000</onright>
+				<onleft>9000</onleft>
+				<onright>451</onright>
 				<orientation>vertical</orientation>
 			</control>
 			<control type="label" id="412">

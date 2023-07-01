@@ -79,6 +79,7 @@
 					<shadowcolor>black</shadowcolor>
 			</control>
 	</include>
+	<!-- TODO Reactivate focus for items, fix blue focus frame issue -->
 	<include name="WidgetListPoster">
 		<param name="onclick_condition">false</param>
 		<definition>
@@ -1072,6 +1073,7 @@
 							<height>32</height>
 							<texture>$VAR[WallWatchedIconVar]</texture>
 						</control>
+						<!-- TODO Adjust progress bar for new design -->
 						<control type="progress">
 							<left>20</left>
 							<top>257</top>

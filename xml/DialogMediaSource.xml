@@ -59,7 +59,7 @@
 					<left>0</left>
 					<top>0</top>
 					<bottom>0</bottom>
-					<right>0</right>
+					<right>25</right>
 					<visible>Control.HasFocus(10)</visible>
 					<texture colordiffuse="button_focus">masks/focus-long.png</texture>
 				</control>
@@ -84,12 +84,12 @@
 		</control>
 		<control type="grouplist" id="9000">
 			<left>880</left>
-			<top>147</top>
+			<top>163</top>
 			<orientation>vertical</orientation>
 			<onleft>10</onleft>
 			<onright>10</onright>
 			<ondown>12</ondown>
-			<itemgap>-7</itemgap>
+			<itemgap>dialogbuttons_itemgap</itemgap>
 			<include content="DefaultDialogButton">
 				<param name="id" value="11" />
 				<param name="label" value="$LOCALIZE[1024]" />
@@ -133,6 +133,7 @@
 			<height>100</height>
 			<width>1200</width>
 			<align>center</align>
+			<itemgap>dialogbuttons_itemgap</itemgap>
 			<orientation>horizontal</orientation>
 			<onup>12</onup>
 			<include content="DefaultDialogButton">

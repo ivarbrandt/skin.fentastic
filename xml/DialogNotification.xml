@@ -9,6 +9,7 @@
 			<width>640</width>
 			<include>OpenClose_Right</include>
 			<visible>String.IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>
+			<!-- TODO Update notification window to new design -->
 			<control type="image">
 				<left>0</left>
 				<top>0</top>

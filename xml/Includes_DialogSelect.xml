@@ -168,7 +168,7 @@
 			</control>
 			<control type="grouplist" id="9001">
 				<left>920</left>
-				<top>80</top>
+				<top>100</top>
 				<onleft>61</onleft>
 				<itemgap>dialogbuttons_itemgap</itemgap>
 				<onright>3</onright>

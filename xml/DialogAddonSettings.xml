@@ -95,12 +95,12 @@
 				<include>DefaultSettingButton</include>
 			</control>
 			<control type="grouplist" id="9000">
-				<left>1510</left>
+				<left>1530</left>
 				<top>92</top>
 				<orientation>vertical</orientation>
 				<width>300</width>
 				<height>300</height>
-				<itemgap>-10</itemgap>
+				<itemgap>dialogbuttons_itemgap</itemgap>
 				<onleft>5</onleft>
 				<onright>3</onright>
 				<include content="DefaultDialogButton">
