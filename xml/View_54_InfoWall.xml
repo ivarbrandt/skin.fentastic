@@ -308,7 +308,7 @@
 			<include content="ProgressBar" condition="![$PARAM[focused]]">
 				<!-- 20 -->
 				<param name="left" value="37"/>
-				<param name="top" value="247"/>
+				<param name="top" value="250"/>
 				<param name="width" value="270"/>
 			</include>
 			<control type="label">
@@ -498,7 +498,7 @@
 			<include content="ProgressBar" condition="![$PARAM[focused]]">
 				<!-- 21 -->
 				<param name="left" value="35"/>
-				<param name="top" value="266"/>
+				<param name="top" value="269"/>
 				<param name="width" value="165"/>
 			</include>
 		</definition>

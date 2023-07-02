@@ -13,6 +13,7 @@
 				<param name="height" value="80" />
 				<param name="header_label" value="$LOCALIZE[5]" />
 				<param name="header_id" value="" />
+				<param name="diffusetexture" value="masks/focus-long.png" />
 			</include>
 			<control type="group">
 				<left>0</left>

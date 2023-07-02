@@ -15,9 +15,16 @@
 				<top>0</top>
 				<width>640</width>
 				<height>160</height>
-				<texture colordiffuse="dialog_tint">dialogs/dialog-bg-nobo.png</texture>
-				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
+				<texture colordiffuse="button_focus">masks/dialog-notification-border.png</texture>
+				<bordersize>15</bordersize>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>640</width>
+				<height>160</height>
+				<texture colordiffuse="dialog_bg">masks/dialog-notification.png</texture>
+				<bordersize>17</bordersize>
 			</control>
 			<control type="image" id="400">
 				<description>avatar</description>

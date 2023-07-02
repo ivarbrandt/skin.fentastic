@@ -11,6 +11,7 @@
 				<param name="height" value="870" />
 				<param name="header_label" value="$LOCALIZE[35058]" />
 				<param name="header_id" value="2" />
+				<param name="diffusetexture" value="masks/dialog-bg-large.png" />
 			</include>
 			<control type="group">
 				<description>Controller list</description>
@@ -28,14 +29,14 @@
 					<aligny>center</aligny>
 					<textcolor>button_focus</textcolor>
 				</control>
-				<control type="image">
+				<!-- <control type="image">
 					<description>Controller profiles grouplist background</description>
 					<top>20</top>
 					<bottom>-20</bottom>
 					<left>-20</left>
 					<right>0</right>
 					<texture border="40">buttons/dialogbutton-nofo.png</texture>
-				</control>
+				</control> -->
 				<control type="grouplist" id="3">
 					<description>Controller profiles grouplist</description>
 					<top>40</top>
@@ -54,7 +55,7 @@
 				</control>
 				<control type="button" id="10">
 					<description>Default controller button</description>
-					<width>390</width>
+					<width>340</width>
 					<height>60</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -69,6 +70,7 @@
 				<width>540</width>
 				<height>540</height>
 			</control>
+			<!-- TODO Maybe adjust height - check on Shield -->
 			<control type="group">
 				<description>Feature list</description>
 				<top>90</top>
@@ -84,13 +86,13 @@
 					<aligny>center</aligny>
 					<textcolor>button_focus</textcolor>
 				</control>
-				<control type="image">
+				<!-- <control type="image">
 					<top>20</top>
 					<bottom>-20</bottom>
 					<left>-20</left>
 					<right>0</right>
 					<texture border="40">buttons/dialogbutton-nofo.png</texture>
-				</control>
+				</control> -->
 				<control type="grouplist" id="5">
 					<description>Features grouplist</description>
 					<top>40</top>
@@ -102,8 +104,8 @@
 					<pagecontrol>61</pagecontrol>
 				</control>
 				<control type="scrollbar" id="61">
-					<right>0</right>
-					<top>40</top>
+					<right>-10</right>
+					<top>25</top>
 					<width>12</width>
 					<orientation>vertical</orientation>
 				</control>
@@ -132,43 +134,43 @@
 				<control type="image" id="9">
 					<description>Feature separator image</description>
 					<height>3</height>
-					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
+					<texture colordiffuse="button_focus" border="3">dialogs/separator-grey.png</texture>
 				</control>
 			</control>
 			<control type="grouplist" id="9001">
 				<top>110</top>
-				<right>20</right>
+				<right>0</right>
 				<width>340</width>
 				<onleft>5</onleft>
 				<onright>3</onright>
 				<itemgap>dialogbuttons_itemgap</itemgap>
 				<include content="DefaultDialogButton">
-					<param name="width" value="350" />
+					<param name="width" value="300" />
 					<param name="id" value="18" />
 					<param name="label" value="$LOCALIZE[186]" />
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="width" value="350" />
+					<param name="width" value="300" />
 					<param name="id" value="19" />
 					<param name="label" value="$LOCALIZE[13007]" />
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="width" value="350" />
+					<param name="width" value="300" />
 					<param name="id" value="20" />
 					<param name="label" value="$LOCALIZE[21452]" />
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="width" value="350" />
+					<param name="width" value="300" />
 					<param name="id" value="22" />
 					<param name="label" value="$LOCALIZE[35021]" />
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="width" value="350" />
+					<param name="width" value="300" />
 					<param name="id" value="17" />
 					<param name="label" value="$LOCALIZE[10043]" />
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="width" value="350" />
+					<param name="width" value="300" />
 					<param name="id" value="21" />
 					<param name="label" value="$LOCALIZE[35019]" />
 				</include>
@@ -179,14 +181,14 @@
 				<left>30</left>
 				<right>30</right>
 				<height>140</height>
-				<control type="image">
+				<!-- <control type="image">
 					<description>Controller description background image</description>
 					<top>-20</top>
 					<bottom>-20</bottom>
 					<left>-20</left>
 					<right>-20</right>
 					<texture border="40">buttons/dialogbutton-nofo.png</texture>
-				</control>
+				</control> -->
 				<control type="textbox" id="32">
 					<top>5</top>
 					<bottom>5</bottom>
@@ -209,6 +211,7 @@
 				<param name="height" value="830" />
 				<param name="header_label" value="" />
 				<param name="header_id" value="2" />
+				<param name="diffusetexture" value="masks/dialog-bg-large.png" />
 			</include>
 			<control type="group">
 				<description>Content area</description>
@@ -220,14 +223,14 @@
 					<description>Port list</description>
 					<width>1430</width>
 					<height>700</height>
-					<control type="image">
+					<!-- <control type="image">
 						<description>Port list background</description>
 						<top>-20</top>
 						<bottom>-20</bottom>
 						<left>-20</left>
 						<right>-20</right>
 						<texture border="40">buttons/dialogbutton-nofo.png</texture>
-					</control>
+					</control> -->
 					<control type="list" id="3">
 						<description>Port item list</description>
 						<onright>9001</onright>
@@ -263,14 +266,14 @@
 						</itemlayout>
 						<focusedlayout width="1440" height="100">
 							<control type="group">
-								<control type="image">
+								<!-- <control type="image">
 									<top>-20</top>
 									<bottom>-20</bottom>
 									<left>-20</left>
 									<right>-20</right>
 									<texture border="40" colordiffuse="button_focus2">buttons/dialogbutton-fo.png</texture>
 									<visible>Control.HasFocus(3)</visible>
-								</control>
+								</control> -->
 								<control type="label">
 									<top>20</top>
 									<left>20</left>

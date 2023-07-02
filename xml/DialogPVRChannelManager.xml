@@ -13,6 +13,7 @@
 				<param name="height" value="995" />
 				<param name="header_label" value="$VAR[PVRChannelMgrHeader]$INFO[Container(20).NumItems, (,)]" />
 				<param name="header_id" value="2" />
+				<param name="diffusetexture" value="masks/landscape-502.png" />
 			</include>
 			<control type="group">
 				<left>10</left>
@@ -27,17 +28,18 @@
 					<orientation>vertical</orientation>
 				</control>
 				<!-- TODO Update window to new design -->
-				<control type="image">
+				<!-- <control type="image">
 					<left>0</left>
 					<top>10</top>
 					<width>672</width>
 					<height>910</height>
 					<texture colordiffuse="button_focus" border="40">buttons/dialogbutton-nofo.png</texture>
-				</control>
+				</control> -->
 				<control type="list" id="20">
 					<left>20</left>
 					<top>30</top>
 					<width>630</width>
+					<!-- TODO Check list height on Shield -->
 					<height>870</height>
 					<onup>20</onup>
 					<ondown>20</ondown>
@@ -156,6 +158,7 @@
 						<textcolor>button_focus</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
+					<!-- TODO Adjust SettingsItemCommon include for new design -->
 					<control type="radiobutton" id="7">
 						<description>Channel activated</description>
 						<width>700</width>

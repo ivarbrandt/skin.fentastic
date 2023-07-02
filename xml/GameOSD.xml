@@ -20,6 +20,7 @@
 					<param name="height" value="1040" />
 					<param name="header_label" value="$LOCALIZE[35221]" />
 					<param name="header_id" value="2" />
+					<param name="diffusetexture" value="masks/dialog-bg-squareish.png" />
 				</include>
 				<control type="group" id="1000">
 					<top>80</top>
@@ -72,6 +73,7 @@
 					<param name="height" value="480" />
 					<param name="header_label" value="$LOCALIZE[35221]" />
 					<param name="header_id" value="3" />
+					<param name="diffusetexture" value="masks/dialog-bg-squareish.png" />
 				</include>
 				<control type="group" id="2000">
 					<top>80</top>

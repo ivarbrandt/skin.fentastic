@@ -27,7 +27,9 @@
 				<param name="height" value="975" />
 				<param name="header_label" value="$INFO[Window(home).Property(TextViewer_Header)]" />
 				<param name="header_id" value="1" />
+				<param name="diffusetexture" value="masks/dialog-bg-squareish.png" />
 			</include>
+			<!-- TODO Adjust positioning -->
 			<control type="label">
 				<left>1%</left>
 					<top>10</top>
@@ -60,7 +62,7 @@
 			<control type="textbox">
 				<left>3%</left>
 				<top>105</top>
-				<width>79%</width>
+				<width>78%</width>
 				<height>820</height>
 				<shadowcolor>black</shadowcolor>
 				<pagecontrol>69</pagecontrol>
@@ -69,6 +71,7 @@
 				<visible>!String.IsEmpty(Window(skinsettings).Property(SetupGuide))</visible>
 				<autoscroll delay="15000" time="4000" repeat="15000">Skin.HasSetting(autoscroll)</autoscroll>
 			</control>
+			<!-- TODO Adjust scrollabar -->
 			<control type="scrollbar" id="68">
 				<left>1390</left>
 				<top>70</top>

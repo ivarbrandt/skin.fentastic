@@ -12,9 +12,10 @@
 				<param name="height" value="770" />
 				<param name="header_label" value="$INFO[Window(home).Property(TextViewer_Header)]" />
 				<param name="header_id" value="1" />
+				<param name="diffusetexture" value="masks/dialog-bg-large.png" />
 			</include>
 			<control type="textbox" id="2000">
-				<left>1%</left>
+				<left>3%</left>
 				<top>85</top>
 				<width>82%</width>
 				<height>675</height>

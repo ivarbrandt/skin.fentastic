@@ -13,6 +13,7 @@
 				<param name="height" value="858" />
 				<param name="header_label" value="$LOCALIZE[1036]" />
 				<param name="header_id" value="2" />
+				<param name="diffusetexture" value="masks/landscape-502.png" />
 			</include>
 			<include content="UpDownArrows">
 				<param name="container_id" value="450" />

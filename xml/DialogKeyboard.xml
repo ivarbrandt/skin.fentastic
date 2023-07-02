@@ -546,6 +546,7 @@
 				</control>
 			</control>
 			<control type="grouplist" id="95200">
+				<top>640</top>
 				<bottom>0</bottom>
 				<height>460</height>
 				<centerleft>88%</centerleft>

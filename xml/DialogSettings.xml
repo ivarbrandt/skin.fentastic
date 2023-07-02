@@ -14,14 +14,15 @@
 				<param name="height" value="870" />
 				<param name="header_label" value="" />
 				<param name="header_id" value="2" />
+				<param name="diffusetexture" value="masks/landscape-502.png" />
 			</include>
-			<control type="image">
+			<!-- <control type="image">
 				<left>10</left>
 				<top>80</top>
 				<width>1200</width>
 				<height>790</height>
 				<texture colordiffuse="button_focus2" border="40">buttons/dialogbutton-nofo.png</texture>
-			</control>
+			</control> -->
 			<control type="grouplist" id="5">
 				<description>control area</description>
 				<left>29</left>

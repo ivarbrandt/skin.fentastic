@@ -11,6 +11,7 @@
 				<param name="height" value="775" />
 				<param name="header_label" value="" />
 				<param name="header_id" value="1" />
+				<param name="diffusetexture" value="masks/landscape-502.png" />
 			</include>
 			<control type="list" id="3">
 				<left>20</left>
@@ -147,7 +148,7 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="61">
-				<left>910</left>
+				<left>892</left>
 				<top>100</top>
 				<width>12</width>
 				<bottom>20</bottom>
@@ -198,6 +199,7 @@
 				<param name="height" value="919" />
 				<param name="header_label" value="35260" />
 				<param name="header_id" value="10820" />
+				<param name="diffusetexture" value="masks/landscape-502.png" />
 			</include>
 			<control type="group">
 				<description>Content area</description>

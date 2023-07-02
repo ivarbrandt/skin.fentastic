@@ -306,11 +306,10 @@
 				</control>
 			</itemlayout>
 			<focusedlayout width="$PARAM[width]" height="$PARAM[height]">
-				<!-- TODO Adjust focus item length -->
 				<control type="image">
 					<left>25</left>
 					<top>0</top>
-					<right>0</right>
+					<right>25</right>
 					<bottom>0</bottom>
 					<texture colordiffuse="button_focus">masks/focus-long.png</texture>
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
@@ -856,17 +855,17 @@
 				<top>-2</top>
 				<right>-2</right>
         <bottom>-2</bottom>
-				<texture diffuse="masks/landscape-502.png" colordiffuse="button_focus2">colors/grey.png</texture>
+				<texture colordiffuse="button_focus">$PARAM[diffusetexture]</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
 				<right>0</right>
 				<bottom>0</bottom>
-				<texture diffuse="masks/landscape-502.png" colordiffuse="dialog_bg">colors/white.png</texture>
+				<texture colordiffuse="dialog_bg">$PARAM[diffusetexture]</texture>
 			</control>
 			<control type="label" id="$PARAM[header_id]">
-				<left>60</left>
+				<left>50</left>
 				<top>20</top>
 				<right>100</right>
 				<height>70</height>

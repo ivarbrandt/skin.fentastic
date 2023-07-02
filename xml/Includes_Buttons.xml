@@ -345,14 +345,14 @@
 				<top>25</top>
 				<width>600</width>
 				<height>70</height>
-				<texture colordiffuse="dialog_tint">masks/buttonmenu.png</texture>
+				<texture colordiffuse="dialog_tint">masks/focus.png</texture>
 			</control>
 			<control type="image">
-				<left>0</left>
+				<left>25</left>
 				<top>25</top>
-				<width>600</width>
+				<width>550</width>
 				<height>70</height>
-				<texture colordiffuse="button_focus">masks/buttonmenu.png</texture>
+				<texture colordiffuse="button_focus">masks/focus.png</texture>
 			</control>
 			<control type="label">
 				<left>0</left>

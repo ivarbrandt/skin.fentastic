@@ -13,6 +13,7 @@
 			<param name="height" value="750" />
 			<param name="header_label" value="$LOCALIZE[13406]" />
 			<param name="header_id" value="2" />
+			<param name="diffusetexture" value="masks/dialog-bg-squareish.png" />
 		</include>
 		<control type="label">
 			<description>path label</description>
