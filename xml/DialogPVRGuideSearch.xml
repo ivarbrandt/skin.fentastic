@@ -190,13 +190,14 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9000">
-				<top>80</top>
-				<left>1460</left>
+				<top>100</top>
+				<left>1480</left>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<onleft>6000</onleft>
 				<onright>5000</onright>
 				<width>1320</width>
+				<itemgap>dialogbuttons_itemgap</itemgap>
 				<orientation>vertical</orientation>
 				<include content="DefaultDialogButton">
 					<param name="id" value="26" />

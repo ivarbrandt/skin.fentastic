@@ -26,6 +26,7 @@
 					<onright>9002</onright>
 					<orientation>vertical</orientation>
 				</control>
+				<!-- TODO Update window to new design -->
 				<control type="image">
 					<left>0</left>
 					<top>10</top>
@@ -260,6 +261,7 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9000">
+				<left>1450</left>
 				<right>20</right>
 				<top>90</top>
 				<onleft>9002</onleft>
@@ -267,17 +269,17 @@
 				<itemgap>dialogbuttons_itemgap</itemgap>
 				<width>400</width>
 				<include content="DefaultDialogButton">
-					<param name="width" value="400" />
+					<param name="width" value="300" />
 					<param name="id" value="4" />
 					<param name="label" value="$LOCALIZE[186]" />
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="width" value="400" />
+					<param name="width" value="300" />
 					<param name="id" value="5" />
 					<param name="label" value="$LOCALIZE[14070]" />
 				</include>
 				<include content="DefaultDialogButton">
-					<param name="width" value="400" />
+					<param name="width" value="300" />
 					<param name="id" value="6" />
 					<param name="label" value="$LOCALIZE[222]" />
 				</include>

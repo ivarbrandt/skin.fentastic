@@ -22,6 +22,7 @@
 						<onright>150</onright>
 						<onleft>73</onleft>
 						<orientation>vertical</orientation>
+						<!-- TODO Adjust button positioning/size -->
 						<include content="DefaultDialogButton">
 							<param name="id" value="160" />
 							<param name="label" value="$LOCALIZE[24120]" />

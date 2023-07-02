@@ -64,6 +64,7 @@
 				<align>center</align>
 				<onup>9002</onup>
 				<ondown>15</ondown>
+				<itemgap>dialogbuttons_itemgap</itemgap>
 				<include content="DefaultDialogButton">
 					<param name="id" value="18" />
 					<param name="label" value="$LOCALIZE[186]" />

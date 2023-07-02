@@ -1073,11 +1073,10 @@
 							<height>32</height>
 							<texture>$VAR[WallWatchedIconVar]</texture>
 						</control>
-						<!-- TODO Adjust progress bar for new design -->
 						<control type="progress">
-							<left>20</left>
+							<left>40</left>
 							<top>257</top>
-							<width>240</width>
+							<width>200</width>
 							<height>1</height>
 							<texturebg></texturebg>
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
@@ -1085,9 +1084,9 @@
 							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 						</control>
 						<control type="progress">
-							<left>20</left>
+							<left>40</left>
 							<top>257</top>
-							<width>240</width>
+							<width>200</width>
 							<height>1</height>
 							<texturebg></texturebg>
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
@@ -1159,9 +1158,9 @@
 							<texture>$VAR[WallWatchedIconVar]</texture>
 						</control>
 						<control type="progress">
-							<left>20</left>
+							<left>40</left>
 							<top>257</top>
-							<width>240</width>
+							<width>200</width>
 							<height>1</height>
 							<texturebg></texturebg>
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
@@ -1169,9 +1168,9 @@
 							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 						</control>
 						<control type="progress">
-							<left>20</left>
+							<left>40</left>
 							<top>257</top>
-							<width>240</width>
+							<width>200</width>
 							<height>1</height>
 							<texturebg></texturebg>
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
