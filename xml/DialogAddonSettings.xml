@@ -28,20 +28,16 @@
 				<onup>20</onup>
 				<ondown>20</ondown>
 			</control>
-			<!-- TODO Find and fix length of focus items -->
-			<control type="group">
-				
-				<control type="button" id="10">
-					<description>Default Category Button</description>
-					<height>80</height>
-					<width>345</width>
-					<textoffsetx>20</textoffsetx>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font25_title</font>
-					<texturefocus colordiffuse="button_focus">masks/categorywidget.png</texturefocus>
-					<texturenofocus colordiffuse="button_focus2">masks/categorywidget-unfocused.png</texturenofocus>
-				</control>
+			<control type="button" id="10">
+				<description>Default Category Button</description>
+				<height>80</height>
+				<width>345</width>
+				<textoffsetx>20</textoffsetx>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font25_title</font>
+				<texturefocus colordiffuse="button_focus">masks/categorywidget.png</texturefocus>
+				<texturenofocus colordiffuse="button_focus2">masks/categorywidget-unfocused.png</texturenofocus>
 			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>

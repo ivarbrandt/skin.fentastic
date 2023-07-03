@@ -27,19 +27,19 @@
 		</control>
 		<control type="group">
 			<animation effect="slide" end="0,175" time="0" condition="Window.IsActive(home)">conditional</animation>
-			<!-- TODO Add border and adjust height -->
+			<!-- TODO Add border -->
 			<control type="image" id="999">
 				<description>background image</description>
 				<left>0</left>
-				<top>0</top>
+				<top>-5</top>
 				<width>450</width>
-				<height>780</height>
-				<texture diffuse="masks/landscape.png" colordiffuse="dialog_tint">colors/white.png</texture>
+				<height>840</height>
+				<texture diffuse="masks/landscape.png" colordiffuse="dialog_bg">colors/white.png</texture>
 			</control>
 			<control type="grouplist" id="996">
 				<description>grouplist for context buttons</description>
 				<left>0</left>
-				<top>0</top>
+				<top>25</top>
 				<width>450</width>
 				<height max="780">auto</height>
 				<usecontrolcoords>true</usecontrolcoords>
@@ -54,9 +54,9 @@
 		<!-- TODO Adjust width of focused items -->
 		<control type="button" id="1000">
 			<description>button template</description>
-			<left>0</left>
+			<left>25</left>
 			<top></top>
-			<width>450</width>
+			<width>400</width>
 			<height>65</height>
 			<align>center</align>
 			<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
