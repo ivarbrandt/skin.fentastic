@@ -98,14 +98,6 @@
               <param name="list_id" value="27017"/>
             </include>
 					</control>
-					<!-- TODO Center image widget -->
-					<include content="ImageWidget" condition="!String.IsEmpty(Skin.String(DatabaseStatus))">
-						<param name="text_label" value="Your search history is empty. Would you like to perform a new search or return to the home screen?" />
-						<param name="button_label" value="New search" />
-						<param name="button_onclick" value="RunScript(script.fentastic.helper,mode=re_search)"/>
-						<param name="button3_onclick" value="ActivateWindow(home)"/>
-						<param name="button_id" value="27400"/>
-					</include>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
 						<param name="scrollbar_id" value="27099"/>
 					</include>
@@ -122,6 +114,14 @@
 				<include>OpenClose_Left</include>
 				<include content="ContentPanel">
 					<param name="width" value="522" />
+				</include>
+				<include content="ImageWidget" condition="!String.IsEmpty(Skin.String(DatabaseStatus))">
+					<param name="left">50</param>
+					<param name="text_label" value="Your search history is currently empty. Would you like to perform a new search or return to the home screen?" />
+					<param name="button_label" value="New search" />
+					<param name="button_onclick" value="RunScript(script.fentastic.helper,mode=re_search)"/>
+					<param name="button3_onclick" value="ActivateWindow(home)"/>
+					<param name="button_id" value="27400"/>
 				</include>
 				<control type="group">
 					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>

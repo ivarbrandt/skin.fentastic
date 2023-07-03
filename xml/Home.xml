@@ -149,6 +149,7 @@
 						</include>
 					</control>
 					<include content="ImageWidget" condition="!Library.HasContent(music)">
+						<param name="left">50</param>
 						<param name="text_label" value="$LOCALIZE[31104]" />
 						<param name="button_label" value="$LOCALIZE[31110]" />
 						<param name="button_onclick" value="ActivateWindow(music,files)"/>
@@ -231,6 +232,7 @@
 					</control>
 					<include content="ImageWidget">
 						<param name="text_label" value="$LOCALIZE[31119]" />
+						<param name="left">50</param>
 						<param name="button_label" value="$LOCALIZE[31118]" />
 						<param name="button_onclick" value="ActivateWindow(addonbrowser)"/>
 						<param name="button_id" value="8600"/>
@@ -272,6 +274,7 @@
 					</control>
 					<include content="ImageWidget">
 						<param name="text_label" value="$LOCALIZE[31105]" />
+						<param name="left">50</param>
 						<param name="button_label" value="$LOCALIZE[31110]" />
 						<param name="button_onclick" value="ActivateWindow(videos,root)"/>
 						<param name="button_id" value="11300"/>
@@ -342,6 +345,7 @@
 						</include>
 					</control>
 					<include content="ImageWidget" condition="!System.HasPVRAddon">
+						<param name="left">50</param>
 						<param name="text_label" value="$LOCALIZE[31143]" />
 						<param name="button_label" value="$LOCALIZE[31144]" />
 						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://default_binary_addons_source/kodi.pvrclient,return)"/>
@@ -413,6 +417,7 @@
 					</control>
 					<include content="ImageWidget" condition="!System.HasPVRAddon">
 						<param name="text_label" value="$LOCALIZE[31143]" />
+						<param name="left">50</param>
 						<param name="button_label" value="$LOCALIZE[31144]" />
 						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://default_binary_addons_source/kodi.pvrclient,return)"/>
 						<param name="button_id" value="13400"/>
@@ -467,6 +472,7 @@
 					<include content="ImageWidget">
 						<param name="text_label" value="$LOCALIZE[31025]" />
 						<param name="button_label" value="$LOCALIZE[31116]" />
+						<param name="left">50</param>
 						<param name="button_onclick" value=""/>
 						<param name="button_id" value="5500"/>
 						<param name="visible" value="!Integer.IsGreater(Container(14100).NumItems,0) + !Container(14100).IsUpdating"/>
@@ -580,6 +586,7 @@
 					<include content="ImageWidget" condition="String.IsEmpty(Weather.plugin)">
 						<param name="text_label" value="$LOCALIZE[31120]" />
 						<param name="button_label" value="$LOCALIZE[31121]" />
+						<param name="left">50</param>
 						<param name="button_onclick" value="ActivateWindow(servicesettings,weather)"/>
 						<param name="button_id" value="15300"/>
 						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoWeatherButton)"/>
@@ -670,6 +677,7 @@
 					</control>
 					<include content="ImageWidget" condition="!Library.HasContent(musicvideos)">
 						<param name="text_label" value="$LOCALIZE[31104]" />
+						<param name="left">50</param>
 						<param name="button_label" value="$LOCALIZE[31110]" />
 						<param name="button_onclick" value="ActivateWindow(videos,files,return)"/>
 						<param name="button_id" value="16800"/>
@@ -718,6 +726,7 @@
 						<param name="button_label" value="$LOCALIZE[31144]" />
 						<param name="button_onclick" value="ActivateWindow(addonbrowser,addons://default_binary_addons_source/category.gameaddons,return)"/>
 						<param name="button_id" value="17100"/>
+						<param name="left">50</param>
 						<param name="visible" value="!Integer.IsGreater(Container(17001).NumItems,0)"/>
 						<param name="button2_onclick" value="Skin.SetBool(HomeMenuNoGamesButton)"/>
 					</include>
@@ -732,6 +741,7 @@
 					</include>
 					<include content="ImageWidget">
 						<param name="text_label" value="$INFO[System.DVDLabel]" />
+						<param name="left">50</param>
 						<param name="button_label" value="$LOCALIZE[341]" />
 						<param name="button_onclick" value="PlayDisc"/>
 						<param name="button_id" value="21100"/>

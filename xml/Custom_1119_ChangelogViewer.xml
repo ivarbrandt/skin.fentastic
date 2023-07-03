@@ -29,21 +29,20 @@
 				<param name="header_id" value="1" />
 				<param name="diffusetexture" value="masks/dialog-bg-squareish.png" />
 			</include>
-			<!-- TODO Adjust label positioning -->
 			<control type="label">
-				<left>1%</left>
-					<top>10</top>
+					<top>25</top>
 					<width>82%</width>
-					<height>675</height>
+					<height>70</height>
 					<shadowcolor>black</shadowcolor>
 					<font>font37</font>
+					<align>center</align>
 				<label>$INFO[Window(Home).Property(TextViewerHeader)]</label>
 			</control>
 			<control type="label">
 				<left>1%</left>
 					<top>85</top>
 					<width>82%</width>
-					<height>675</height>
+					<height>70</height>
 					<shadowcolor>black</shadowcolor>
 					<font>font37</font>
 				<label>$INFO[Window(Home).Property(TextViewerSubHeader)]</label>
@@ -52,7 +51,7 @@
 				<left>1%</left>
 					<top>85</top>
 					<width>82%</width>
-					<height>675</height>
+					<height>70</height>
 					<shadowcolor>black</shadowcolor>
 					<pagecontrol>61</pagecontrol>
 					<font>font37</font>
@@ -71,22 +70,21 @@
 				<visible>!String.IsEmpty(Window(skinsettings).Property(Changelog))</visible>
 				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 			</control>
-			<!-- TODO Adjust scrollbar begin/end -->
 			<control type="scrollbar" id="61">
-				<left>1390</left>
-				<top>70</top>
-				<bottom>-104</bottom>
-				<width>13</width>
+				<left>1393</left>
+				<top>113</top>
+				<bottom>-20</bottom>
+				<width>10</width>
 				<ondown>61</ondown>
 				<onup>61</onup>
 				<texturesliderbackground />
 				<visible>String.IsEmpty(Window(skinsettings).Property(Changelog))</visible>
 			</control>
 			<control type="scrollbar" id="62">
-				<left>1390</left>
-				<top>70</top>
-				<bottom>-104</bottom>
-				<width>13</width>
+				<left>1393</left>
+				<top>113</top>
+				<bottom>-20</bottom>
+				<width>10</width>
 				<ondown>61</ondown>
 				<onup>61</onup>
 				<texturesliderbackground />

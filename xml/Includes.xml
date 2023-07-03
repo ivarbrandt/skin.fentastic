@@ -660,6 +660,7 @@
 					<include content="ImageWidget">
 						<param name="text_label" value="$LOCALIZE[31153]" />
 						<param name="button_label" value="$LOCALIZE[31144]" />
+						<param name="left">50</param>
 						<param name="button_onclick" value="$PARAM[imagewidget_onclick]"/>
 						<param name="button_id" value="$PARAM[group_id]333"/>
 						<param name="visible_2" value="false"/>
