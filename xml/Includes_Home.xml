@@ -834,7 +834,6 @@
 
 
 	<include name="ImageWidget">
-		<!-- TODO Adjust button/text spacing -->
 		<param name="visible">true</param>
 		<param name="visible_1">true</param>
 		<param name="visible_2">true</param>

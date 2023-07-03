@@ -27,7 +27,6 @@
 					<onright>9002</onright>
 					<orientation>vertical</orientation>
 				</control>
-				<!-- TODO Update window to new design -->
 				<!-- <control type="image">
 					<left>0</left>
 					<top>10</top>
@@ -39,8 +38,7 @@
 					<left>20</left>
 					<top>30</top>
 					<width>630</width>
-					<!-- TODO Check list height on Shield -->
-					<height>870</height>
+					<height>840</height>
 					<onup>20</onup>
 					<ondown>20</ondown>
 					<onleft>9000</onleft>

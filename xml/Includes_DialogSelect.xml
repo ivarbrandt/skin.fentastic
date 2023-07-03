@@ -42,16 +42,16 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="125" width="880">
 					<control type="image">
-						<left>12</left>
+						<left>37</left>
 						<top>7</top>
 						<width>110</width>
 						<height>110</height>
-						<texture>$VAR[InfoWallThumbVar]</texture>
+						<texture diffuse="masks/landscapeinfo.png">$VAR[InfoWallThumbVar]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>!ListItem.Property(PVR.IsRecordingTimer) + !ListItem.Property(PVR.IsRemindingTimer)</visible>
 					</control>
 					<control type="image">
-						<left>27</left>
+						<left>52</left>
 						<top>22</top>
 						<width>80</width>
 						<height>80</height>
@@ -61,7 +61,7 @@
 						<visible>ListItem.Property(PVR.IsRecordingTimer)</visible>
 					</control>
 					<control type="image">
-						<left>27</left>
+						<left>52</left>
 						<top>22</top>
 						<width>80</width>
 						<height>80</height>
@@ -71,7 +71,7 @@
 						<visible>ListItem.Property(PVR.IsRemindingTimer)</visible>
 					</control>
 					<control type="label">
-						<left>135</left>
+						<left>165</left>
 						<top>0</top>
 						<right>20</right>
 						<height>60</height>
@@ -80,7 +80,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="textbox">
-						<left>135</left>
+						<left>165</left>
 						<top>50</top>
 						<right>20</right>
 						<height>67</height>
@@ -91,24 +91,24 @@
 				</itemlayout>
 				<focusedlayout height="125" width="880">
 					<control type="image">
-						<left>0</left>
+						<left>25</left>
 						<top>0</top>
-						<right>0</right>
+						<right>25</right>
 						<bottom>0</bottom>
 						<texture colordiffuse="button_focus">masks/focus.png</texture>
 						<visible>Control.HasFocus(6)</visible>
 					</control>
 					<control type="image">
-						<left>12</left>
+						<left>37</left>
 						<top>7</top>
 						<width>110</width>
 						<height>110</height>
-						<texture>$VAR[InfoWallThumbVar]</texture>
+						<texture diffuse="masks/landscapeinfo.png">$VAR[InfoWallThumbVar]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>!ListItem.Property(PVR.IsRecordingTimer) + !ListItem.Property(PVR.IsRemindingTimer)</visible>
 					</control>
 					<control type="image">
-						<left>27</left>
+						<left>52</left>
 						<top>22</top>
 						<width>80</width>
 						<height>80</height>
@@ -118,7 +118,7 @@
 						<visible>ListItem.Property(PVR.IsRecordingTimer)</visible>
 					</control>
 					<control type="image">
-						<left>27</left>
+						<left>52</left>
 						<top>22</top>
 						<width>80</width>
 						<height>80</height>
@@ -128,7 +128,7 @@
 						<visible>ListItem.Property(PVR.IsRemindingTimer)</visible>
 					</control>
 					<control type="label">
-						<left>135</left>
+						<left>165</left>
 						<top>0</top>
 						<right>20</right>
 						<height>60</height>
@@ -138,7 +138,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="textbox">
-						<left>135</left>
+						<left>165</left>
 						<top>50</top>
 						<right>20</right>
 						<height>67</height>

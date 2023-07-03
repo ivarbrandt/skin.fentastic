@@ -117,7 +117,6 @@
 		<textoffsety>10</textoffsety>
 		<textcolor>button_focus</textcolor>
 	</include>
-	<!-- TODO Add diffuse texture to button -->
 	<include name="DefaultDialogButton">
 		<param name="width">250</param>
 		<param name="height">67</param>
@@ -309,7 +308,6 @@
 			</control>
 		</definition>
 	</include>
-	<!-- TODO Fix width of selected items -->
 	<include name="ButtonMenuList">
 		<left>0</left>
 		<top>80</top>

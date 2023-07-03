@@ -15,7 +15,6 @@
 				<param name="header_id" value="1" />
 				<param name="diffusetexture" value="masks/landscape-502.png" />
 			</include>
-			<!-- TODO Update to new design -->
 			<control type="group">
 				<left>0</left>
 				<top>80</top>
@@ -30,18 +29,18 @@
 					<aligny>center</aligny>
 					<textcolor>button_focus</textcolor>
 				</control>
-				<control type="image">
+				<!-- <control type="image">
 					<left>0</left>
 					<top>55</top>
 					<width>440</width>
 					<height>855</height>
 					<texture border="40" colordiffuse="button_focus">buttons/dialogbutton-nofo.png</texture>
-				</control>
+				</control> -->
 				<control type="list" id="13">
 					<left>20</left>
 					<top>75</top>
 					<width>400</width>
-					<height>815</height>
+					<height>785</height>
 					<onup>13</onup>
 					<ondown>13</ondown>
 					<onleft>9000</onleft>
@@ -147,6 +146,7 @@
 				<onright>13</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
+				<!-- TODO Fix SettingsItemCommon include -->
 				<control type="button" id="29">
 					<description>OK</description>
 					<width>370</width>

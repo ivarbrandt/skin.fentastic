@@ -51,7 +51,6 @@
 				<param name="down_posy" value="798" />
 			</include>
 		</control>
-		<!-- TODO Adjust width of focused items -->
 		<control type="button" id="1000">
 			<description>button template</description>
 			<left>25</left>

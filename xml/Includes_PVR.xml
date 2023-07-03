@@ -182,13 +182,13 @@
 				<label>: [COLOR white]$INFO[Container($PARAM[list_id]).Numitems][/COLOR]</label>
 			</control>
 		</control>
-		<control type="image">
+		<!-- <control type="image">
 			<left>0</left>
 			<top>55</top>
 			<width>510</width>
 			<height>855</height>
 			<texture border="40" colordiffuse="button_focus2">buttons/dialogbutton-nofo.png</texture>
-		</control>
+		</control> -->
 		<control type="list" id="$PARAM[list_id]">
 			<left>20</left>
 			<top>75</top>

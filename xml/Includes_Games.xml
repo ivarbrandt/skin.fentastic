@@ -70,7 +70,6 @@
 				<width>540</width>
 				<height>540</height>
 			</control>
-			<!-- TODO Maybe adjust height - check on Shield -->
 			<control type="group">
 				<description>Feature list</description>
 				<top>90</top>
@@ -95,7 +94,7 @@
 				</control> -->
 				<control type="grouplist" id="5">
 					<description>Features grouplist</description>
-					<top>40</top>
+					<top>45</top>
 					<right>20</right>
 					<onleft>3</onleft>
 					<onright>9001</onright>

@@ -96,9 +96,9 @@
 						<control type="group">
 							<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
 							<control type="image">
-								<left>38</left>
+								<left>31</left>
 								<top>450</top>
-								<width>294</width>
+								<width>308</width>
 								<height>100</height>
 								<texture colordiffuse="CCFFFFFF">overlays/overlayfade2.png</texture>
 								<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
@@ -125,6 +125,15 @@
 							</control>
 						</control>
 						<control type="image">
+							<visible>String.IsEqual(ListItem.DBType,movie) + [Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)]</visible>
+							<left>29</left>
+							<top>432</top>
+							<width>119</width>
+							<height>119</height>
+							<aspectratio>scale</aspectratio>
+							<texture>overlays/overlayfade-bg6.png</texture>
+						</control>
+						<control type="image">
 							<left>45</left>
 							<top>510</top>
 							<width>32</width>
@@ -137,7 +146,7 @@
 							<left>292</left>
 							<top>92</top>
 							<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">
-								<param name="left">-78</param>
+								<param name="left">-71</param>
 								<param name="top">17</param>
 								<param name="width">119</param>
 								<param name="height">119</param>
@@ -191,9 +200,9 @@
 						<control type="group">
 							<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
 							<control type="image">
-								<left>38</left>
+								<left>31</left>
 								<top>450</top>
-								<width>294</width>
+								<width>308</width>
 								<height>100</height>
 								<texture colordiffuse="CCFFFFFF">overlays/overlayfade2.png</texture>
 								<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
@@ -220,6 +229,15 @@
 							</control>
 						</control>
 						<control type="image">
+							<visible>String.IsEqual(ListItem.DBType,movie) + [Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)]</visible>
+							<left>29</left>
+							<top>432</top>
+							<width>119</width>
+							<height>119</height>
+							<aspectratio>scale</aspectratio>
+							<texture>overlays/overlayfade-bg6.png</texture>
+						</control>
+						<control type="image">
 							<left>45</left>
 							<top>510</top>
 							<width>32</width>
@@ -232,7 +250,7 @@
 							<left>292</left>
 							<top>92</top>
 							<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">
-								<param name="left">-78</param>
+								<param name="left">-71</param>
 								<param name="top">17</param>
 								<param name="width">119</param>
 								<param name="height">119</param>
