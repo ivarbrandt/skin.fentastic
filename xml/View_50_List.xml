@@ -248,7 +248,6 @@
 					<param name="width" value="806" />
 					<param name="flipx" value="$PARAM[flip_bg]" />
 				</include>
-				
 				<!-- image control -->
 				<control type="image">
 					<left>30</left>
@@ -258,7 +257,17 @@
 					<aspectratio aligny="top">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<texture diffuse="masks/landscape.png" fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
-					<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song)</visible>
+					<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song) + !Container.Content(addons)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>110</top>
+					<width>540</width>
+					<height>470</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture diffuse="masks/landscapeinfo.png" fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
+					<visible>Container.Content(addons)</visible>
 				</control>
 				<control type="image">
 					<left>30</left>

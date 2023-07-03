@@ -251,7 +251,7 @@
 						<param name="label" value="$LOCALIZE[24020]" />
 					</include>
 					<control type="radiobutton" id="13">
-						<width>262</width>
+						<width>220</width>
 						<height>130</height>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -259,7 +259,7 @@
 						<texturenofocus border="2" colordiffuse="button_focus2">masks/landscape-unfocused.png</texturenofocus>
 						<textoffsetx>35</textoffsetx>
 						<textoffsety>76</textoffsety>
-						<radioposx>81</radioposx>
+						<radioposx>65</radioposx>
 						<radioposy>17</radioposy>
 						<radiowidth>100</radiowidth>
 						<font>font12</font>
@@ -307,7 +307,7 @@
 					<width>540</width>
 					<height>540</height>
 					<!-- <aspectratio>scale</aspectratio> -->
-					<texture diffuse="masks/settingspanel.png" colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
+					<texture diffuse="masks/landscapeinfo.png" colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 					<bordersize>20</bordersize>
 				</control>
 				<control type="image">
@@ -317,7 +317,7 @@
 					<height>500</height>
 					<!-- <aspectratio aligny="top">scale</aspectratio> -->
 					<fadetime>300</fadetime>
-					<texture diffuse="masks/settingspanel.png" fallback="DefaultAddon.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<texture diffuse="masks/landscapeinfo.png" fallback="DefaultAddon.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 				</control>
 				<control type="group">
 					<visible>String.IsEqual(ListItem.AddonLifecycleType,$LOCALIZE[24170]) | String.IsEqual(ListItem.AddonLifecycleType,$LOCALIZE[24171])</visible>
