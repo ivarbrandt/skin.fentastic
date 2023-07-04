@@ -339,13 +339,13 @@
 			</control>
 		</itemlayout>
 		<focusedlayout height="70" width="600">
-			<control type="image">
+			<!-- <control type="image">
 				<left>0</left>
 				<top>25</top>
-				<width>600</width>
+				<width>560</width>
 				<height>70</height>
 				<texture colordiffuse="dialog_tint">masks/focus.png</texture>
-			</control>
+			</control> -->
 			<control type="image">
 				<left>25</left>
 				<top>25</top>

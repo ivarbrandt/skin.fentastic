@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1107">
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol>9000</defaultcontrol>
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
 		<control type="group">
@@ -52,12 +52,9 @@
 						<label>$LOCALIZE[31113]</label>
 						<onclick>Dialog.Close(all)</onclick>
 						<onclick condition="System.AddonIsEnabled(script.globalsearch)">
-							RunScript(script.globalsearch)</onclick>
-						<onclick
-							condition="System.HasAddon(script.globalsearch) + !System.AddonIsEnabled(script.globalsearch)">
-							EnableAddon(script.globalsearch)</onclick>
-						<onclick condition="!System.HasAddon(script.globalsearch)">
-							InstallAddon(script.globalsearch)</onclick>
+						RunScript(script.globalsearch)</onclick>
+						<onclick condition="System.HasAddon(script.globalsearch) + !System.AddonIsEnabled(script.globalsearch)">EnableAddon(script.globalsearch)</onclick>
+						<onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
 					</item> -->
 					<item>
 						<label>$LOCALIZE[31145]</label>
@@ -77,6 +74,12 @@
 					</item>
 				</content>
 			</control>
+			<include content="UpDownArrows">
+				<param name="container_id" value="9000" />
+				<param name="posx" value="276" />
+				<param name="up_posy" value="-40" />
+				<param name="down_posy" value="500" />
+			</include>
 		</control>
 	</controls>
 </window>

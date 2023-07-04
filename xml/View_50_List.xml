@@ -28,9 +28,9 @@
 					</include>
 					<control type="scrollbar" id="50600">
 						<left>35</left>
-						<top>220</top>
+						<top>210</top>
 						<width>12</width>
-						<bottom>170</bottom>
+						<bottom>200</bottom>
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<orientation>vertical</orientation>

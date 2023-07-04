@@ -866,12 +866,13 @@
 				<texture colordiffuse="dialog_bg">$PARAM[diffusetexture]</texture>
 			</control>
 			<control type="label" id="$PARAM[header_id]">
-				<left>50</left>
+				<posx>0</posx> 
 				<top>20</top>
-				<right>100</right>
+				<width>$PARAM[width]</width> 
 				<height>70</height>
 				<font>font32_title</font>
 				<label>$PARAM[header_label]</label>
+				<align>center</align> 
 				<aligny>center</aligny>
 				<textcolor>button_focus</textcolor>
 				<shadowcolor>black</shadowcolor>

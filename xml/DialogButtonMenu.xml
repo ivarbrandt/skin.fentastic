@@ -98,6 +98,12 @@
 					</item>
 				</content>
 			</control>
+		<include content="UpDownArrows">
+			<param name="container_id" value="9000" />
+			<param name="posx" value="276" />
+			<param name="up_posy" value="-40" />
+			<param name="down_posy" value="500" />
+			</include>
 		</control>
 	</controls>
 </window>
