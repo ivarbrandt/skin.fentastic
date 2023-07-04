@@ -215,9 +215,9 @@
 				</control>
 				<!-- SEARCH OPTIONS -->
 				<control type="radiobutton" id="638">
-					<label>Enable search results window</label>
+					<label>Disable search results window</label>
 					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(NoSearchResultsWindow)</selected>
+					<selected>Skin.HasSetting(NoSearchResultsWindow)</selected>
 					<onclick>Skin.ToggleSetting(NoSearchResultsWindow)</onclick>
 				</control>
 				<control type="button" id="6380">
@@ -228,7 +228,6 @@
 					<selected>Skin.HasSetting(DefaultSearchWindowBehavior)</selected>
 					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
 				</control>
-
 				<control type="radiobutton" id="6381">
 					<label>   - $LOCALIZE[342]</label>
 					<include>DefaultSettingButton</include>
