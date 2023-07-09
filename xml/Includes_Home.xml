@@ -1585,7 +1585,7 @@
 		<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 		<!-- <onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus> -->
 		<onback>SetFocus($PARAM[list_id],0,absolute)</onback>
-		<preloaditems>2</preloaditems>
+		<!-- <preloaditems>2</preloaditems> -->
 	</include>
 	<include name="WidgetListCommonStacked">
     <scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -1595,7 +1595,7 @@
     <onright>$PARAM[list_id]</onright>
     <onfocus>RunScript(script.fentastic.helper,mode=widget_monitor&amp;list_id=$PARAM[list_id])</onfocus>
     <onback>SetFocus($PARAM[list_id],0,absolute)</onback>
-    <preloaditems>2</preloaditems>
+    <!-- <preloaditems>2</preloaditems> -->
   </include>
 	<include name="BusyListSpinner">
 		<param name="posy">160</param>

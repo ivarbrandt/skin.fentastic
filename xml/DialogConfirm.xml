@@ -25,7 +25,7 @@
 			</control>
 			<control type="progress" id="20">
 				<left>30</left>
-				<top>262</top>
+				<top>242</top>
 				<width>855</width>
 				<height>24</height>
 				<info>System.Progressbar</info>
