@@ -313,7 +313,7 @@
 				<left>0</left>
 				<width>100%</width>
 				<height>240</height>
-				<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="dialog_tint">dialogs/dialog-bg-nobo.png</texture>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -382,7 +382,7 @@
 				<left>0</left>
 				<width>100%</width>
 				<height>330</height>
-				<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="dialog_tint">dialogs/dialog-bg-nobo.png</texture>
 			</control>
 
 			<control type="image">
@@ -392,9 +392,9 @@
 				<width>400</width>
 				<height>600</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<texture fallback="DefaultVideo.png" background="true">$VAR[NowPlayingPosterVar]</texture>
-				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
+				<texture diffuse= "masks/poster-50.png" fallback="DefaultVideo.png" background="true">$VAR[NowPlayingPosterVar]</texture>
+				<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+				<bordersize>20</bordersize> -->
 				<include>OpenClose_Left</include>
 			</control>
 			<control type="grouplist">
