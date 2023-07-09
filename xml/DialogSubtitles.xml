@@ -18,8 +18,8 @@
 				<control type="group">
 					<left>1320</left>
 					<control type="grouplist">
-						<top>110</top>
-						<left>-20</left>
+						<top>125</top>
+						<left>5</left>
 						<onright>150</onright>
 						<onleft>73</onleft>
 						<orientation>vertical</orientation>
@@ -66,13 +66,13 @@
 			<control type="group">
 				<top>130</top>
 				<left>360</left>
-				<control type="image">
+				<!-- <control type="image">
 					<left>-20</left>
 					<top>-20</top>
 					<width>960</width>
 					<height>640</height>
 					<texture border="40">buttons/dialogbutton-nofo.png</texture>
-				</control>
+				</control> -->
 				<control type="label">
 					<description>Video label</description>
 					<top>-45</top>
@@ -153,7 +153,7 @@
 							<left>0</left>
 							<right>0</right>
 							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">masks/focus.png</texture>
+							<texture colordiffuse="button_focus">lists/rounded_corners.png</texture>
 							<visible>Control.HasFocus(120)</visible>
 						</control>
 						<control type="image">
@@ -170,7 +170,7 @@
 							<width>100</width>
 							<height>100</height>
 							<font>font12</font>
-							<textcolor>grey</textcolor>
+							<textcolor>white</textcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -210,7 +210,7 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="73">
-					<left>925</left>
+					<left>937</left>
 					<width>12</width>
 					<height>600</height>
 					<onleft>120</onleft>
@@ -223,13 +223,13 @@
 			<control type="group">
 				<left>20</left>
 				<top>130</top>
-				<control type="image">
+				<!-- <control type="image">
 					<left>-20</left>
 					<top>-20</top>
 					<width>360</width>
 					<height>520</height>
 					<texture border="40">buttons/dialogbutton-nofo.png</texture>
-				</control>
+				</control> -->
 				<control type="label">
 					<left>0</left>
 					<top>-50</top>
@@ -261,9 +261,10 @@
 					<scrolltime>200</scrolltime>
 					<include content="DefaultSimpleListLayout">
 						<param name="width" value="320" />
-						<param name="height" value="80" />
+						<param name="height" value="60" />
 						<param name="list_id" value="150" />
 						<param name="align" value="center" />
+						<param name="diffuse" value="masks/categorywidget.png" />
 					</include>
 				</control>
 			</control>

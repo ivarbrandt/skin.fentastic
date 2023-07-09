@@ -258,6 +258,7 @@
 		<param name="height">70</param>
 		<param name="font">font13</param>
 		<param name="fontcolor">grey</param>
+		<param name="diffuse">$PARAM[diffuse]</param>
 		<definition>
 			<itemlayout width="$PARAM[width]" height="$PARAM[height]">
 				<control type="group">
@@ -311,7 +312,7 @@
 					<top>0</top>
 					<right>25</right>
 					<bottom>0</bottom>
-					<texture colordiffuse="button_focus">masks/focus-long.png</texture>
+					<texture colordiffuse="button_focus">$PARAM[diffuse]</texture>
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
 				</control>
 				<control type="group">

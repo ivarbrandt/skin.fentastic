@@ -89,6 +89,7 @@
 				<include content="DefaultSimpleListLayout">
 					<param name="width" value="600" />
 					<param name="list_id" value="10" />
+					<param name="diffuse" value="masks/focus-long.png" />
 				</include>
 			</control>
 			<control type="textbox">
