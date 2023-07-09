@@ -5,7 +5,6 @@
 	<onunload>ClearProperty(infobackground,home)</onunload>
 	<controls>
 		<control type="group">
-			<!-- TODO Update UI to new design -->
 			<centertop>50%</centertop>
 			<height>1080</height>
 			<centerleft>50%</centerleft>
@@ -20,8 +19,8 @@
 					<left>-16</left>
 					<width>566</width>
 					<height>841</height>
-					<texture>colors/black.png</texture>
-					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+					<texture diffuse="masks/poster-50.png">colors/black.png</texture>
+					<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 					<bordersize>20</bordersize>
 				</control>
 				<control type="image">
@@ -30,10 +29,10 @@
 					<top>4</top>
 					<width>526</width>
 					<height>801</height>
-					<aspectratio>scale</aspectratio>
-					<texture fallback="DefaultVideo.png" background="true">$VAR[InfoDialogPosterVar]</texture>
+					<!-- <aspectratio>scale</aspectratio> -->
+					<texture diffuse="masks/poster-50.png" fallback="DefaultVideo.png" background="true">$VAR[InfoDialogPosterVar]</texture>
 				</control>
-				<control type="group">
+				<!-- <control type="group">
 					<visible>String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
 					<visible>!String.IsEmpty(ListItem.Art(thumb)) + !String.IsEqual(ListItem.Art(thumb),ListItem.Art(poster))</visible>
 					<control type="image">
@@ -42,7 +41,7 @@
 						<width>526</width>
 						<height>801</height>
 						<aspectratio>stretch</aspectratio>
-						<texture colordiffuse="AAFFFFFF" fallback="DefaultVideo.png">colors/black.png</texture>
+						<texture diffuse="masks/poster-50.png" colordiffuse="AAFFFFFF" fallback="DefaultVideo.png">colors/black.png</texture>
 					</control>
 					<control type="image">
 						<left>14</left>
@@ -50,11 +49,11 @@
 						<width>506</width>
 						<height>801</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$VAR[ShiftThumbVar]</texture>
+						<texture diffuse="masks/poster-50.png">$VAR[ShiftThumbVar]</texture>
 						<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 					</control>
-				</control>
+				</control> -->
 			</control>
 			<control type="group">
 				<top>154</top>
@@ -65,14 +64,14 @@
 					<width>526</width>
 					<height>801</height>
 					<aspectratio>stretch</aspectratio>
-					<texture colordiffuse="FF555555">DefaultVideo.png</texture>
+					<texture diffuse="masks/poster-50.png" colordiffuse="FF555555">DefaultVideo.png</texture>
 				</control>
 				<control type="image">
 					<left>10</left>
 					<width>506</width>
 					<height>801</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="masks/poster-50.png">$INFO[ListItem.Thumb]</texture>
 					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
@@ -84,8 +83,12 @@
 				<control type="group" id="140">
 					<top>468</top>
 					<control type="button" id="138">
-						<width>754</width>
-						<height>418</height>
+						<left>20</left>
+						<top>20</top>
+						<!-- 754 -->
+						<width>714</width>
+						<!-- 418 -->
+						<height>358</height>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>20</textoffsety>
 						<aligny>bottom</aligny>
@@ -97,15 +100,17 @@
 						<onleft>4000</onleft>
 						<onright>4000</onright>
 						<ondown>5000</ondown>
-						<texturenofocus colordiffuse="button_focus2" border="21">dialogs/dialog-bg.png</texturenofocus>
+						<texturefocus colordiffuse="button_focus" border="21">masks/landscape.png</texturefocus>
+						<texturenofocus colordiffuse="button_focus2" border="21">masks/landscape-unfocused.png</texturenofocus>
 						<visible>Integer.IsGreater(Container(4000).NumItems,0)</visible>
 					</control>
 					<control type="image">
-						<left>735</left>
-						<width>512</width>
-						<height>418</height>
+						<top>20</top>
+						<left>755</left>
+						<width>472</width>
+						<height>359</height>
 						<aligny>bottom</aligny>
-						<texture colordiffuse="button_focus2" border="21">dialogs/dialog-bg.png</texture>
+						<texture colordiffuse="button_focus2" border="21">masks/settingspanel-unfocused.png</texture>
 						<visible>Integer.IsGreater(Container(4000).NumItems,0)</visible>
 					</control>
 					<control type="button" id="139">
@@ -126,19 +131,19 @@
 						<visible>!Integer.IsGreater(Container(4000).NumItems,0)</visible>
 					</control>
 					<control type="textbox">
-						<left>40</left>
-						<top>25</top>
-						<width>670</width>
-						<height>363</height>
+						<left>60</left>
+						<top>45</top>
+						<width>630</width>
+						<height>295</height>
 						<label fallback="19055">$INFO[ListItem.Plot]</label>
 						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>Integer.IsGreater(Container(4000).NumItems,0)</visible>
 					</control>
 					<control type="textbox">
-						<left>40</left>
-						<top>25</top>
-						<width>1165</width>
-						<height>363</height>
+						<left>60</left>
+						<top>45</top>
+						<width>1125</width>
+						<height>295</height>
 						<label fallback="19055">$INFO[ListItem.Plot]</label>
 						<autoscroll delay="10000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>!Integer.IsGreater(Container(4000).NumItems,0)</visible>
@@ -306,32 +311,32 @@
 							<top>10</top>
 							<control type="image">
 								<top>0</top>
-								<width>264</width>
+								<width>244</width>
 								<height>317</height>
-								<texture>DefaultActorSolid.png</texture>
-								<aspectratio aligny="center">scale</aspectratio>
-								<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+								<texture diffuse="masks/addons.png">DefaultActorSolid.png</texture>
+								<!-- <aspectratio aligny="center">scale</aspectratio> -->
+								<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 								<bordersize>20</bordersize>
 							</control>
 							<control type="image">
 								<top>20</top>
 								<left>20</left>
-								<width>224</width>
+								<width>214</width>
 								<height>277</height>
-								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<aspectratio aligny="center">scale</aspectratio>
+								<texture diffuse="masks/addons.png" background="true">$INFO[ListItem.Thumb]</texture>
+								<!-- <aspectratio aligny="center">scale</aspectratio> -->
 							</control>
 							<control type="image">
 								<left>20</left>
-								<width>224</width>
-								<height>80</height>
+								<width>214</width>
+								<height>280</height>
 								<bottom>10</bottom>
 								<texture>overlays/overlayfade.png</texture>
 								<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
 							</control>
 							<control type="label">
 								<left>25</left>
-								<width>214</width>
+								<width>204</width>
 								<height>67</height>
 								<top>218</top>
 								<align>center</align>
@@ -341,7 +346,7 @@
 							</control>
 							<control type="label">
 								<left>25</left>
-								<width>214</width>
+								<width>204</width>
 								<height>67</height>
 								<top>245</top>
 								<align>center</align>
@@ -357,33 +362,40 @@
 							<left>0</left>
 							<top>10</top>
 							<control type="image">
+								<left>16</left>
+								<top>16</top>
+								<width>222</width>
+								<height>285</height>
+								<texture colordiffuse="button_focus">masks/addons.png</texture>
+							</control>
+							<control type="image">
 								<top>0</top>
-								<width>264</width>
+								<width>244</width>
 								<height>317</height>
-								<texture>DefaultActorSolid.png</texture>
-								<aspectratio aligny="center">scale</aspectratio>
-								<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+								<texture diffuse="masks/addons.png">DefaultActorSolid.png</texture>
+								<!-- <aspectratio aligny="center">scale</aspectratio> -->
+								<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 								<bordersize>20</bordersize>
 							</control>
 							<control type="image">
 								<top>20</top>
 								<left>20</left>
-								<width>224</width>
+								<width>214</width>
 								<height>277</height>
-								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<aspectratio aligny="center">scale</aspectratio>
+								<texture diffuse="masks/addons.png" background="true">$INFO[ListItem.Thumb]</texture>
+								<!-- <aspectratio aligny="center">scale</aspectratio> -->
 							</control>
 							<control type="image">
 								<left>20</left>
-								<width>224</width>
-								<height>80</height>
+								<width>214</width>
+								<height>280</height>
 								<bottom>10</bottom>
 								<texture>overlays/overlayfade.png</texture>
 								<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
 							</control>
 							<control type="label">
 								<left>25</left>
-								<width>214</width>
+								<width>204</width>
 								<height>67</height>
 								<top>218</top>
 								<align>center</align>
@@ -394,7 +406,7 @@
 							</control>
 							<control type="label">
 								<left>25</left>
-								<width>214</width>
+								<width>204</width>
 								<height>67</height>
 								<top>245</top>
 								<align>center</align>
@@ -403,13 +415,6 @@
 								<textcolor>grey</textcolor>
 								<scroll>true</scroll>
 								<label>$INFO[ListItem.Label2]</label>
-							</control>
-							<control type="image">
-								<left>16</left>
-								<top>16</top>
-								<width>232</width>
-								<height>285</height>
-								<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
 							</control>
 						</control>
 					</focusedlayout>
@@ -423,7 +428,7 @@
 								<height>317</height>
 								<texture>DefaultMovies.png</texture>
 								<aspectratio aligny="center">scale</aspectratio>
-								<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+								<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 								<bordersize>20</bordersize>
 							</control>
 							<control type="image">
@@ -507,7 +512,7 @@
 				</control>
 				<control type="grouplist" id="5000">
 					<left>0</left>
-					<top>864</top>
+					<top>874</top>
 					<width>1246</width>
 					<height>400</height>
 					<onleft>5000</onleft>
@@ -515,7 +520,7 @@
 					<onup>140</onup>
 					<ondown condition="!Integer.IsGreater(Container(5000).Position,4)">SetFocus(50,$INFO[Container(5000).Position])</ondown>
 					<ondown condition="Integer.IsGreater(Container(5000).Position,4)">SetFocus(50,4)</ondown>
-					<itemgap>-18</itemgap>
+					<itemgap>28</itemgap>
 					<align>center</align>
 					<orientation>horizontal</orientation>
 					<scrolltime tween="quadratic">200</scrolltime>
@@ -640,7 +645,7 @@
 				<include content="LeftRightArrows">
 					<param name="list_id" value="50" />
 					<param name="left_posx" value="-15" />
-					<param name="right_posx" value="1240" />
+					<param name="right_posx" value="1220" />
 					<param name="posy" value="320" />
 					<param name="visible" value="true" />
 				</include>

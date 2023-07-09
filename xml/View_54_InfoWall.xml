@@ -536,8 +536,8 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>30</left>
-						<animation effect="zoom" start="100" end="101" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
-						<animation effect="zoom" start="101" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
+						<animation effect="zoom" start="100" end="103" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
+						<animation effect="zoom" start="103" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
 						<top>120</top>
 						<include content="InfoWallMovieLayout">
 							<param name="focused" value="true" />

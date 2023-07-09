@@ -72,7 +72,6 @@
 							<bordersize>20</bordersize>
 							<visible>String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
 						</control>
-						<!-- TODO try adjusting width -->
 						<control type="image">
 							<depth>DepthContentPopout</depth>
 							<left>0</left>
