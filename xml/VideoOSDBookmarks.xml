@@ -17,12 +17,13 @@
 			<bottom>0</bottom>
 			<height>550</height>
 			<control type="image">
+				<top>-20</top>
 				<left>0</left>
 				<width>100%</width>
-				<height>410</height>
+				<height>430</height>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-				<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
+				<texture colordiffuse="dialog_tint">lists/panel.png</texture>
 			</control>
 			<control type="textbox">
 				<left>0</left>
@@ -38,28 +39,27 @@
 			<control type="grouplist" id="9001">
 				<orientation>horizontal</orientation>
 				<left>0</left>
-				<top>-10</top>
+				<top>0</top>
 				<width>100%</width>
 				<align>center</align>
 				<height>100</height>
 				<onup>11</onup>
 				<ondown>11</ondown>
 				<itemgap>dialogbuttons_itemgap</itemgap>
-				<!-- TODO Adjust button positioning/size -->
 				<include content="DefaultDialogButton">
 					<param name="id" value="2" />
 					<param name="label" value="$LOCALIZE[294]" />
-					<param name="width" value="300" />
+					<param name="width" value="270" />
 				</include>
 				<include content="DefaultDialogButton">
 					<param name="id" value="3" />
 					<param name="label" value="$LOCALIZE[296]" />
-					<param name="width" value="300" />
+					<param name="width" value="270" />
 				</include>
 				<include content="DefaultDialogButton">
 					<param name="id" value="4" />
 					<param name="label" value="$LOCALIZE[20406]" />
-					<param name="width" value="300" />
+					<param name="width" value="270" />
 					<param name="visible" value="Control.IsEnabled(4)" />
 				</include>
 			</control>
@@ -81,9 +81,9 @@
 							<top>5</top>
 							<width>330</width>
 							<height>250</height>
-							<aspectratio>scale</aspectratio>
-							<texture border="4" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
-							<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+							<!-- <aspectratio>scale</aspectratio> -->
+							<texture diffuse="masks/landscape.png" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+							<!-- <bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture> -->
 							<bordersize>4</bordersize>
 						</control>
 						<control type="label">
@@ -106,9 +106,17 @@
 							<top>5</top>
 							<width>330</width>
 							<height>250</height>
-							<aspectratio>scale</aspectratio>
-							<texture border="4" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
-							<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+							<texture border="3" colordiffuse="button_focus">masks/landscape.png</texture>
+							<visible>Control.HasFocus(11)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>5</top>
+							<width>330</width>
+							<height>250</height>
+							<!-- <aspectratio>scale</aspectratio> -->
+							<texture diffuse="masks/landscape.png" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
+							<!-- <bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture> -->
 							<bordersize>4</bordersize>
 						</control>
 						<control type="label">
@@ -120,14 +128,6 @@
 							<font>font12</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>5</top>
-							<width>330</width>
-							<height>250</height>
-							<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
-							<visible>Control.HasFocus(11)</visible>
 						</control>
 					</control>
 				</focusedlayout>

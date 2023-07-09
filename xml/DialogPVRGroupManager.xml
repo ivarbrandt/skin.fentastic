@@ -146,7 +146,6 @@
 				<onright>13</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<!-- TODO Fix SettingsItemCommon include -->
 				<control type="button" id="29">
 					<description>OK</description>
 					<width>370</width>

@@ -156,7 +156,6 @@
 						<textcolor>button_focus</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
-					<!-- TODO Adjust SettingsItemCommon include for new design -->
 					<control type="radiobutton" id="7">
 						<description>Channel activated</description>
 						<width>700</width>
