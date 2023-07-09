@@ -153,7 +153,7 @@
 					<orientation>vertical</orientation>
 					<left>755</left>
 					<top>488</top>
-					<height>377</height>
+					<height>337</height>
 					<itemgap>-8</itemgap>
 					<ondown>5000</ondown>
 					<onup>50</onup>
