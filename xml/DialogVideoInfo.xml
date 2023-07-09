@@ -546,7 +546,7 @@
 						<param name="visible" value="System.AddonIsEnabled(script.cinemavision) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]" />
 					</include>
 					<control type="group" id="400">
-						<width>264</width>
+						<width>227</width>
 						<visible>Control.IsEnabled(7) | !String.IsEmpty(ListItem.UserRating)</visible>
 						<control type="button" id="7">
 							<include content="VideoInfoButtonsCommon">
@@ -573,7 +573,7 @@
 						</control>
 						<control type="image">
 							<texture>icons/infodialogs/rating.png</texture>
-							<left>108</left>
+							<left>84</left>
 							<top>30</top>
 							<width>48</width>
 							<height>48</height>

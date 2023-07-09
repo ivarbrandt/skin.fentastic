@@ -221,17 +221,17 @@
 		</definition>
 	</include>
 	<include name="VideoInfoButtonsCommon">
-		<param name="width">264</param>
+		<param name="width">220</param>
 		<definition>
 			<width>$PARAM[width]</width>
-			<height>142</height>
+			<height>130</height>
 			<align>center</align>
 			<aligny>top</aligny>
 			<texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
 			<texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
 			<textoffsetx>22</textoffsetx>
 			<textoffsety>78</textoffsety>
-			<radioposx>108</radioposx>
+			<radioposx>64</radioposx>
 			<radioposy>13</radioposy>
 			<radiowidth>48</radiowidth>
 			<font>font12</font>
