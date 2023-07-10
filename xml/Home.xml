@@ -460,8 +460,8 @@
 							<control type="group">
 								<depth>DepthContentPopout</depth>
 								<top>130</top>
-								<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="142,300">Focus</animation>
-								<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="142,300">UnFocus</animation>
+								<animation effect="zoom" start="100" end="103" time="200" tween="sine" easing="inout" center="142,300">Focus</animation>
+								<animation effect="zoom" start="103" end="100" time="200" tween="sine" easing="inout" center="142,300">UnFocus</animation>
 								<include content="InfoWallMusicLayout">
 									<param name="fallback_image" value="DefaultFavourites.png" />
 									<param name="list_id" value="$PARAM[list_id]" />

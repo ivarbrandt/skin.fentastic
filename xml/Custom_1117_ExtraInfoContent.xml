@@ -7,7 +7,7 @@
 - Updated widget list to circular ordering; topmost widget will now cycle to the bottom when moved up and vice versa
 - Brought back colored frame highlight for focused widget items
 - Cleaned up home screen InfoPanel
-- Extensive overhaul of UI
+- Extensive overhaul of UI. There are some parts of the skin that I don't use so if something looks off, please let me know by opening an issue in my Github repo
 - Other fixes/changes
 
 [B][COLOR button_focus]Version 1.0.13[/COLOR][/B]
