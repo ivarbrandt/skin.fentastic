@@ -9,7 +9,7 @@
 	<controls>
 		<control type="group">
 			<left>735</left>
-			<top>85</top>
+			<top>225</top>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="450" />
 				<param name="height" value="455" />
