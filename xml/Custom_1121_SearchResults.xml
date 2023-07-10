@@ -53,45 +53,45 @@
 					<visible allowhiddenfocus="true">!String.IsEmpty(Skin.String(SearchInput)) + String.IsEmpty(Skin.String(DatabaseStatus))</visible>
 						<include>WidgetGroupListCommon</include>
 						<pagecontrol>27099</pagecontrol>
-						<include content="WidgetListPoster" condition="Skin.HasSetting(MovieResults)">
+						<include content="WidgetListPoster" condition="!Skin.HasSetting(HideMovieResults)">
               <param name="content_path" value="plugin://plugin.video.fen/?mode=build_movie_list&amp;action=tmdb_movies_search&amp;query=$INFO[Skin.String(SearchInputEncoded)]"/>
               <param name="widget_header" value="Movies"/>
               <!-- <param name="widget_header" value="$LOCALIZE[342]"/> -->
               <param name="widget_target" value="videos"/>
               <param name="list_id" value="27011"/>
             </include>
-            <include content="WidgetListPoster" condition="Skin.HasSetting(TVShowResults)">
+            <include content="WidgetListPoster" condition="!Skin.HasSetting(HideTVShowResults)">
               <param name="content_path" value="plugin://plugin.video.fen/?mode=build_tvshow_list&amp;action=tmdb_tv_search&amp;query=$INFO[Skin.String(SearchInputEncoded)]"/>
               <param name="widget_header" value="TV Shows"/>
               <!-- <param name="widget_header" value="$LOCALIZE[20343]"/> -->
               <param name="widget_target" value="videos"/>
               <param name="list_id" value="27012"/>
             </include>
-            <include content="WidgetListPoster" condition="Skin.HasSetting(CollectionsResults)">
+            <include content="WidgetListPoster" condition="!Skin.HasSetting(HideCollectionsResults)">
               <param name="content_path" value="plugin://plugin.video.fen/?mode=build_movie_list&amp;action=tmdb_movies_search_sets&amp;query=$INFO[Skin.String(SearchInputEncoded)]"/>
               <param name="widget_header" value="Collections"/>
               <param name="widget_target" value="videos"/>
               <param name="list_id" value="27013"/>
             </include>
-            <include content="WidgetListPoster" condition="Skin.HasSetting(PeopleResults)">
+            <include content="WidgetListPoster" condition="!Skin.HasSetting(HidePeopleResults)">
               <param name="content_path" value="plugin://plugin.video.fen/?mode=person_direct.search&amp;query=$INFO[Skin.String(SearchInputEncoded)]"/>
               <param name="widget_header" value="Actors/Actresses"/>
               <param name="widget_target" value="videos"/>
               <param name="list_id" value="27014"/>
             </include>
-            <include content="WidgetListPoster" condition="Skin.HasSetting(MovieKeywordResults)">
+            <include content="WidgetListPoster" condition="!Skin.HasSetting(HideMovieKeywordResults)">
 							<param name="content_path" value="plugin://plugin.video.fen/?mode=build_movie_list&amp;action=imdb_keywords_list_contents&amp;list_id=$INFO[Skin.String(SearchInputEncoded)]"/>
               <param name="widget_header" value="IMDb Keywords (Movies)"/>
               <param name="widget_target" value="videos"/>
               <param name="list_id" value="27015"/>
             </include>
-            <include content="WidgetListPoster" condition="Skin.HasSetting(TVShowKeywordResults)">
+            <include content="WidgetListPoster" condition="!Skin.HasSetting(HideTVShowKeywordResults)">
 							<param name="content_path" value="plugin://plugin.video.fen/?mode=build_tvshow_list&amp;action=imdb_keywords_list_contents&amp;list_id=$INFO[Skin.String(SearchInputEncoded)]"/>
               <param name="widget_header" value="IMDb Keywords (TV Shows)"/>
               <param name="widget_target" value="videos"/>
               <param name="list_id" value="27016"/>
             </include>
-						<include content="WidgetListItems" condition="Skin.HasSetting(TraktResults)">
+						<include content="WidgetListItems" condition="!Skin.HasSetting(HideTraktResults)">
               <param name="content_path" value="plugin://plugin.video.fen/?mode=trakt.list.search_trakt_lists&amp;query=$INFO[Skin.String(SearchInputTraktEncoded)]"/>
               <param name="widget_header" value="TRAKT Lists"/>
               <param name="widget_target" value="videos"/>
@@ -234,7 +234,6 @@
 						<aspectratio align="center">keep</aspectratio>
 					</control>
 					<control type="textbox">
-						<visible>!String.IsEqual(System.Language,Hebrew)</visible>
 						<top>75</top>
 						<left>30</left>
 						<width>430</width>
@@ -245,34 +244,11 @@
 						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 					<control type="textbox">
-						<visible>String.IsEqual(System.Language,Hebrew)</visible>
-						<top>75</top>
-						<left>10</left>
-						<width>430</width>
-						<aligny>center</aligny>
-						<height>98</height>
-						<font>font36_title</font>
-						<align>right</align>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
-					</control>
-					<control type="textbox">
-						<visible>!String.IsEqual(System.Language,Hebrew)</visible>
 						<left>30</left>
 						<top>239</top>
 						<width>410</width>
 						<bottom>60</bottom>
-						<label>$VAR[HomeInfoPanel]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control>
-					<control type="textbox">
-						<visible>String.IsEqual(System.Language,Hebrew)</visible>
-						<left>30</left>
-						<top>239</top>
-						<width>410</width>
-						<bottom>60</bottom>
-						<align>right</align>
-						<label>$VAR[HomeInfoPanel]</label>
+						<label>$VAR[InfoPanel]</label>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">

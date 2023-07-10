@@ -1001,7 +1001,6 @@
 						<aspectratio align="center">keep</aspectratio>
 					</control>
 					<control type="textbox">
-						<visible>!String.IsEqual(System.Language,Hebrew)</visible>
 						<top>75</top>
 						<left>30</left>
 						<width>430</width>
@@ -1012,53 +1011,19 @@
 						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 					<control type="textbox">
-						<visible>String.IsEqual(System.Language,Hebrew)</visible>
-						<top>75</top>
-						<left>10</left>
-						<width>430</width>
-						<aligny>center</aligny>
-						<height>98</height>
-						<font>font36_title</font>
-						<align>right</align>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
-					</control>
-					<control type="textbox">
-						<visible>!String.IsEqual(System.Language,Hebrew)</visible>
 						<left>30</left>
 						<top>239</top>
 						<width>410</width>
 						<bottom>60</bottom>
-						<label>$VAR[HomeInfoPanel]</label>
+						<label>$VAR[InfoPanel]</label>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">
-						<visible>String.IsEqual(System.Language,Hebrew)</visible>
-						<left>30</left>
-						<top>239</top>
-						<width>410</width>
-						<bottom>60</bottom>
-						<align>right</align>
-						<label>$VAR[HomeInfoPanel]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control>
-					<control type="textbox">
-						<visible>!String.IsEqual(System.Language,Hebrew)</visible>
 						<left>30</left>
 						<top>323</top>
 						<width>410</width>
 						<bottom>60</bottom>
-						<label>$VAR[HomeInfoPanelEpisode]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control>
-					<control type="textbox">
-						<visible>String.IsEqual(System.Language,Hebrew)</visible>
-						<left>30</left>
-						<top>323</top>
-						<width>410</width>
-						<bottom>60</bottom>
-						<align>right</align>
-						<label>$VAR[HomeInfoPanelEpisode]</label>
+						<label>$VAR[InfoPanelEpisode]</label>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">
