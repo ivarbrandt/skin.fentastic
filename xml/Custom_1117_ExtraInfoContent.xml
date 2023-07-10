@@ -5,6 +5,8 @@
 - Fixed empty Search window on new Kodi installs
 - Fixed stacked widget renaming
 - Updated widget list to circular ordering; topmost widget will now cycle to the bottom when moved up and vice versa
+- Brought back colored frame highlight for focused widget items
+- Cleaned up home screen InfoPanel
 - Extensive overhaul of UI
 - Other fixes/changes
 
