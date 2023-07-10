@@ -188,6 +188,7 @@
 				<align>center</align>
 				<bordersize>20</bordersize>
 			</control>
+			<!-- TODO Add overlay-bg21 and percent watched for movies -->
 			<control type="image">
 				<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 				<left>20</left>
@@ -198,6 +199,54 @@
 				<texture>overlays/overlayfade1.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
+			<!-- TODO Check alignment -->
+			<control type="image">
+				<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + String.IsEqual(ListItem.DBType,movie) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
+				<left>20</left>
+				<!-- 133 -->
+				<top>133</top>
+				<width>307</width>
+				<height>70</height>
+				<texture>overlays/overlayfade1.png</texture>
+				<visible>!ListItem.IsParentFolder</visible>
+			</control>
+
+
+			<control type="image">
+				<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + String.IsEqual(ListItem.DBType,tvshow)</visible>
+				<left>20</left>
+				<!-- 133 -->
+				<top>133</top>
+				<width>307</width>
+				<height>70</height>
+				<texture>overlays/overlayfade1.png</texture>
+				<visible>!ListItem.IsParentFolder</visible>
+			</control>
+
+			<control type="label">
+					<left>117</left>
+					<top>171</top>
+					<width>169</width>
+					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
+					<font>font20_title</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<align>right</align>
+					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + String.IsEqual(ListItem.DBType,tvshow)</visible>
+					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+				</control>
+				<control type="image">
+					<left>293</left>
+					<top>174</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>lists/played-total.png</texture>
+					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + String.IsEqual(ListItem.DBType,tvshow)</visible>
+					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+				</control>
+
+
+
+
 			<control type="label">
 				<left>131</left>
 				<top>173</top>
@@ -214,7 +263,6 @@
 				<width>80</width>
 				<height>80</height>
 				<texture>overlays/overlay-bg1.png</texture>
-				<visible></visible>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -281,6 +329,7 @@
 					<align>center</align>
 				</control>
 			</control>
+			<!-- TODO Add progress bar for widgets -->
 			<include content="ProgressBar" condition="![$PARAM[focused]]">
 				<!-- 20 -->
 				<param name="left" value="37"/>
@@ -295,7 +344,7 @@
 				<font>font20_title</font>
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>left</align>
-				<visible>$PARAM[focused] + String.IsEqual(ListItem.DBtype,episode) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
+				<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,episode)] + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
 			</control>
 			<control type="group">
 				<left>280</left>
@@ -532,6 +581,7 @@
 					<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
 				</include>
 			</control>
+			<!-- TODO Add progress bar for widgets -->
 			<include content="ProgressBar" condition="![$PARAM[focused]]">
 				<!-- 21 -->
 				<param name="left" value="35"/>

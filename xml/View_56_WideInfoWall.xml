@@ -226,6 +226,7 @@
 					<align>center</align>
 				</control>
 			</control>
+			<!-- TODO Add progress bar for widgets -->
 				<include content="ProgressBar" condition="![$PARAM[focused]]">
 					<param name="left" value="20"/>
 					<param name="top" value="256"/>
@@ -481,6 +482,7 @@
 				<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
 				</include>
 			</control>
+			<!-- TODO Add progress bar for widgets -->
 			<include content="ProgressBar" condition="![$PARAM[focused]]">
 				<!-- 20 -->
 				<param name="left" value="37"/>

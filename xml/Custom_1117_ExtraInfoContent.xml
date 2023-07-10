@@ -6,7 +6,8 @@
 - Fixed stacked widget renaming
 - Updated widget list to circular ordering; topmost widget will now cycle to the bottom when moved up and vice versa
 - Brought back colored frame highlight for focused widget items
-- Cleaned up home screen InfoPanel
+- Moved progress back to focused items for widgets, removed progress from InfoPanel
+- Added tvshow progress to LandscapeInfo widgets
 - Extensive overhaul of UI. There are some parts of the skin that I don't use so if something looks off, please let me know by opening an issue in my Github repo
 - Other fixes/changes
 
