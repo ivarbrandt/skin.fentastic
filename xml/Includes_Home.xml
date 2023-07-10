@@ -95,7 +95,6 @@
 				<top>120</top>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
-				<focusposition>0</focusposition>
 				<movement>5</movement>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
@@ -109,6 +108,8 @@
 						<left>68</left>
 						<top>15</top>
 						<include content="InfoWallMovieLayout">
+						<param name="focused" value="false" />
+						<param name="list_id" value="$PARAM[list_id]" />
 						</include>
 					</control>
 				</itemlayout>
@@ -124,6 +125,8 @@
 							<effect type="zoom" start="113" end="100" time="200" tween="sine" easing="inout" center="185,162" />
 						</animation>
 						<include content="InfoWallMovieLayout">
+						<param name="focused" value="true" />
+						<param name="list_id" value="$PARAM[list_id]" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -148,7 +151,6 @@
         <height>425</height>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
-				<focusposition>0</focusposition>
 				<movement>5</movement>
         <include content="WidgetListCommonStacked">
           <param name="list_id" value="$PARAM[list_id]" />
@@ -158,7 +160,8 @@
             <left>68</left>
             <top>15</top>
             <include content="InfoWallMovieLayout">
-              <!-- <param name="focused" value="false" /> -->
+            <param name="focused" value="false" />
+						<param name="list_id" value="$PARAM[list_id]" />
             </include>
           </control>
         </itemlayout>
@@ -174,7 +177,8 @@
             <effect type="zoom" start="113" end="100" time="200" tween="sine" easing="inout" center="185,162" />
             </animation>
             <include content="InfoWallMovieLayout">
-              <!-- <param name="focused" value="true" /> -->
+            <param name="focused" value="true" />
+						<param name="list_id" value="$PARAM[list_id]" />
             </include>
           </control>
         </focusedlayout>
@@ -199,7 +203,6 @@
 				<top>110</top>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
-				<focusposition>0</focusposition>
 				<movement>3</movement>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
@@ -213,6 +216,8 @@
 						<left>68</left>
 						<top>15</top>
 						<include content="WideInfoWallMovieLayout">
+						<param name="focused" value="false" />
+						<param name="list_id" value="$PARAM[list_id]" />
 						</include>
 					</control>
 				</itemlayout>
@@ -228,6 +233,8 @@
 							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,111" />
 						</animation>
 						<include content="WideInfoWallMovieLayout">
+						<param name="focused" value="true" />
+						<param name="list_id" value="$PARAM[list_id]" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -251,7 +258,6 @@
 				<top>110</top>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
-				<focusposition>0</focusposition>
 				<movement>3</movement>
 				<right>0</right>
 				<height>312</height>
@@ -264,6 +270,8 @@
 						<left>68</left>
 						<top>15</top>
 						<include content="WideInfoWallMovieLayout">
+						<param name="focused" value="false" />
+						<param name="list_id" value="$PARAM[list_id]" />
 						</include>
 					</control>
 				</itemlayout>
@@ -279,6 +287,8 @@
 							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="240,111" />
 						</animation>
 						<include content="WideInfoWallMovieLayout">
+						<param name="focused" value="true" />
+						<param name="list_id" value="$PARAM[list_id]" />
 						</include>
 					</control>
 				</focusedlayout>
@@ -314,7 +324,6 @@
 				<height>389</height>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
-				<focusposition>0</focusposition>
 				<movement>3</movement>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
@@ -326,11 +335,12 @@
 						<left>70</left>
 						<top>5</top>
 						<include content="InfoWallEpisodeLayout">
+							<param name="focused" value="false" />
+							<param name="list_id" value="$PARAM[list_id]" />
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="networks_label" value="$PARAM[networks_label]"/>
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
-							<!-- <param name="focused" value="false" /> -->
 						</include>
 					</control>
 				</itemlayout>
@@ -346,11 +356,12 @@
 							<effect type="zoom" start="109" end="100" time="200" tween="sine" easing="inout" center="245,150" />
 						</animation>
 						<include content="InfoWallEpisodeLayout">
+							<param name="focused" value="true" />
+							<param name="list_id" value="$PARAM[list_id]" />
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="networks_label" value="$PARAM[networks_label]"/>
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
-							<!-- <param name="focused" value="true" /> -->
 						</include>
 					</control>
 				</focusedlayout>
@@ -384,7 +395,6 @@
 				<height>389</height>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
-				<focusposition>0</focusposition>
 				<movement>3</movement>
 				<include content="WidgetListCommonStacked">
 					<param name="list_id" value="$PARAM[list_id]"/>
@@ -395,11 +405,12 @@
 						<left>70</left>
 						<top>5</top>
 						<include content="InfoWallEpisodeLayout">
+							<param name="focused" value="false" />
+							<param name="list_id" value="$PARAM[list_id]" />
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="networks_label" value="$PARAM[networks_label]"/>
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
-							<!-- <param name="focused" value="false" /> -->
 						</include>
 					</control>
 				</itemlayout>
@@ -415,11 +426,12 @@
 							<effect type="zoom" start="109" end="100" time="200" tween="sine" easing="inout" center="245,150" />
 						</animation>
 						<include content="InfoWallEpisodeLayout">
+							<param name="focused" value="true" />
+							<param name="list_id" value="$PARAM[list_id]" />
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
 							<param name="networks_label" value="$PARAM[networks_label]"/>
 							<param name="thumb_label" value="$PARAM[thumb_label]" />
-							<!-- <param name="focused" value="true" /> -->
 						</include>
 					</control>
 				</focusedlayout>
@@ -446,12 +458,13 @@
 				<param name="visible" value="$PARAM[visible]"/>
 				<param name="posy" value="140"/>
 			</include>
-			<control type="panel" id="$PARAM[list_id]">
+			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>115</top>
 				<right>0</right>
 				<height>200</height>
 				<onright>$PARAM[list_id]</onright>
+				<movement>3</movement>
 				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
 				<include content="WidgetListCommon">
@@ -526,6 +539,7 @@
 							<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
+							<visible>Control.HasFocus($PARAM[list_id])</visible>
 						</control>
 						<!-- <control type="image">
 							<centertop>74</centertop>
@@ -584,11 +598,12 @@
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
-			<control type="panel" id="$PARAM[list_id]">
+			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>115</top>
 				<right>0</right>
 				<height>200</height>
+				<movement>3</movement>
 				<onright>$PARAM[list_id]</onright>
 				<!-- <onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus> -->
@@ -665,6 +680,7 @@
 							<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
+							<visible>Control.HasFocus($PARAM[list_id])</visible>
 						</control>
 						<!-- <control type="image">
 							<centertop>74</centertop>
@@ -925,11 +941,12 @@
 				<param name="posy" value="220"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
-			<control type="panel" id="$PARAM[list_id]">
+			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>125</top>
 				<right>0</right>
 				<height>435</height>
+				<movement>4</movement>
 				<onright>$PARAM[list_id]</onright>
 				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
@@ -946,6 +963,7 @@
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="single_label" value="$PARAM[single_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="list_id" value="$PARAM[list_id]" />
 							<param name="focused" value="false" />
 						</include>
 					</control>
@@ -964,6 +982,7 @@
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="single_label" value="$PARAM[single_label]" />
 							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="list_id" value="$PARAM[list_id]" />
 							<param name="focused" value="true" />
 						</include>
 					</control>
@@ -1015,11 +1034,12 @@
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="posy" value="200"/>
 			</include>
-			<control type="panel" id="$PARAM[list_id]">
+			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>125</top>
 				<right>0</right>
 				<height>397</height>
+				<movement>4</movement>
 				<onright>$PARAM[list_id]</onright>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
@@ -1117,6 +1137,7 @@
 							<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
+							<visible>Control.HasFocus($PARAM[list_id])</visible>
 						</control>
 						<control type="image">
 							<top>43</top>
@@ -1191,11 +1212,12 @@
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
-			<control type="panel" id="$PARAM[list_id]">
+			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>105</top>
 				<right>0</right>
 				<height>396</height>
+				<movement>4</movement>
 				<onright>$PARAM[list_id]</onright>
 				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
@@ -1271,6 +1293,7 @@
 							<height>280</height>
 							<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
 							<bordersize>20</bordersize>
+							<visible>Control.HasFocus($PARAM[list_id])</visible>
 							<include>Animation_FocusTextureFade</include>
 						</control>
 						<control type="image">

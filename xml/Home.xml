@@ -451,6 +451,7 @@
 								<top>130</top>
 								<include content="InfoWallMusicLayout">
 									<param name="fallback_image" value="DefaultFavourites.png" />
+									<param name="list_id" value="$PARAM[list_id]" />
 									<param name="focused" value="false" />
 								</include>
 							</control>
@@ -463,6 +464,7 @@
 								<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="142,300">UnFocus</animation>
 								<include content="InfoWallMusicLayout">
 									<param name="fallback_image" value="DefaultFavourites.png" />
+									<param name="list_id" value="$PARAM[list_id]" />
 									<param name="focused" value="true" />
 								</include>
 							</control>
