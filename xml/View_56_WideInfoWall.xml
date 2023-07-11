@@ -227,7 +227,7 @@
 				</control>
 			</control>
 			<!-- TODO Add progress bar for widgets -->
-				<include content="ProgressBar" condition="![$PARAM[focused]]">
+				<include content="ProgressBar" condition="!$PARAM[focused]">
 					<param name="left" value="20"/>
 					<param name="top" value="256"/>
 					<param name="width" value="416"/>
@@ -239,6 +239,7 @@
 				</control> -->
 		</definition>
 	</include>
+	
 	<include name="WideInfoWallMovieLayout">
 		<param name="focused">false</param>
 		<definition>
@@ -473,24 +474,24 @@
         <left>279</left>
 				<top>-7</top>
 				<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">
-				<param name="left">-72</param>
-				<param name="top">17</param>
-				<param name="width">119</param>
-				<param name="height">119</param>
-				<param name="label-left">-6</param>
-				<param name="label-top">22</param>
-				<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
+					<param name="left">-72</param>
+					<param name="top">17</param>
+					<param name="width">119</param>
+					<param name="height">119</param>
+					<param name="label-left">-6</param>
+					<param name="label-top">22</param>
+					<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
 				</include>
 			</control>
-			<!-- TODO Add progress bar for widgets -->
-			<include content="ProgressBar" condition="![$PARAM[focused]]">
-				<!-- 20 -->
+			<!-- TODO Fix progress bar for WidgetListLandscape -->
+			<include content="ProgressBar" condition="!$PARAM[focused]">
 				<param name="left" value="37"/>
 				<param name="top" value="169"/>
 				<param name="width" value="270"/>
 			</include>
 		</definition>
 	</include>
+
 	<include name="View_56_WideInfoWall">
 		<control type="group">
 			<include>OpenClose_Right</include>

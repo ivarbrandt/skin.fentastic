@@ -188,7 +188,6 @@
 				<align>center</align>
 				<bordersize>20</bordersize>
 			</control>
-			<!-- TODO Add overlay-bg21 and percent watched for movies -->
 			<control type="image">
 				<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 				<left>20</left>
@@ -330,7 +329,7 @@
 				</control>
 			</control>
 			<!-- TODO Add progress bar for widgets -->
-			<include content="ProgressBar" condition="![$PARAM[focused]]">
+			<include content="ProgressBar" condition="!$PARAM[focused]">
 				<!-- 20 -->
 				<param name="left" value="37"/>
 				<param name="top" value="250"/>
@@ -582,7 +581,7 @@
 				</include>
 			</control>
 			<!-- TODO Add progress bar for widgets -->
-			<include content="ProgressBar" condition="![$PARAM[focused]]">
+			<include content="ProgressBar" condition="!$PARAM[focused]">
 				<!-- 21 -->
 				<param name="left" value="35"/>
 				<param name="top" value="271"/>
