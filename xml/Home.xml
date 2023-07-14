@@ -770,7 +770,7 @@
 					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 					<visible allowhiddenfocus="true">![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)]</visible>
 					<control type="fixedlist" id="9000">
-						<left>0</left>
+						<left>25</left>
 						<top>240</top>
             <width>492</width>
 						<bottom>-10</bottom>
@@ -803,7 +803,7 @@
 							</control>
 							<!-- SideMenu Focused Icons -->
 							<control type="image">
-								<left>-3</left>
+								<left>5</left>
 								<top>1</top>
 								<width>95</width>
 								<height>95</height>
@@ -813,7 +813,7 @@
 								<left>104</left>
 								<top>0</top>
 								<height>95</height>
-								<width>560</width>
+								<width>355</width>
 								<aligny>center</aligny>
 								<font>font37</font>
 								<label>$INFO[ListItem.Label]</label>
@@ -822,7 +822,7 @@
 						</focusedlayout>
 						<itemlayout height="95">
 							<control type="image">
-								<left>-3</left>
+								<left>5</left>
 								<top>1</top>
 								<width>95</width>
 								<height>95</height>
@@ -832,7 +832,7 @@
 								<left>104</left>
 								<top>0</top>
 								<height>95</height>
-								<width>560</width>
+								<width>355</width>
 								<aligny>center</aligny>
 								<font>font37</font>
 								<label>$INFO[ListItem.Label]</label>
@@ -938,7 +938,7 @@
 					<control type="grouplist" id="700">
 						<orientation>horizontal</orientation>
 						<itemgap>0</itemgap>
-            <left>-13</left>
+            <left>7</left>
 						<width>480</width>
 						<height>110</height>
 						<top>100</top>
@@ -1090,7 +1090,7 @@
 				<top>30</top>
 				<left>90</left>
         <control type="image">
-          <left>-6</left>
+          <left>19</left>
           <top>0</top>
           <aspectratio>keep</aspectratio>
           <width>130</width>
@@ -1098,7 +1098,7 @@
           <texture colordiffuse="button_focus">special://skin/media/logos/K-logo.png</texture>
         </control>
         <control type="image">
-          <left>34</left>
+          <left>59</left>
           <top>0</top>
           <aspectratio>keep</aspectratio>
           <width>192</width>

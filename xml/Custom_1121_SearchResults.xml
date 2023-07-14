@@ -127,7 +127,7 @@
 					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 					<visible allowhiddenfocus="true">![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + String.IsEmpty(Skin.String(DatabaseStatus))</visible>
 					<control type="fixedlist" id="9000">
-						<left>0</left>
+						<left>25</left>
 						<top>230</top>
             <width>492</width>
 						<bottom>-10</bottom>
@@ -144,7 +144,7 @@
 								<control type="image">
 									<left>0</left>
 									<top>0</top>
-									<width>462</width>
+									<width>437</width>
 									<height>83</height>
 									<texture colordiffuse="button_focus">masks/focus.png</texture>
 									<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasActiveModalDialog">Conditional</animation>
@@ -155,7 +155,7 @@
 								<left>45</left>
 								<top>0</top>
 								<height>83</height>
-								<width>380</width>
+								<width>355</width>
 								<aligny>center</aligny>
 								<font>font32</font>
 								<label>$INFO[ListItem.Label]</label>
@@ -168,7 +168,7 @@
 								<left>45</left>
 								<top>0</top>
 								<height>83</height>
-								<width>380</width>
+								<width>355</width>
 								<aligny>center</aligny>
 								<font>font32</font>
 								<label>$INFO[ListItem.Label]</label>
