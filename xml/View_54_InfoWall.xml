@@ -60,9 +60,9 @@
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
-				<top>-4</top>
-				<left>-4</left>
-				<width>288</width>
+				<top>-5</top>
+				<left>-5</left>
+				<width>290</width>
 				<height>351</height>
 				<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
 				<bordersize>20</bordersize>
@@ -70,9 +70,9 @@
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
 			<control type="image">
-				<top>-4</top>
-				<left>-4</left>
-				<width>288</width>
+				<top>-5</top>
+				<left>-5</left>
+				<width>290</width>
 				<height>351</height>
 				<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
 				<bordersize>20</bordersize>
@@ -80,9 +80,9 @@
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
 			<control type="image">
-				<top>-4</top>
-				<left>-4</left>
-				<width>288</width>
+				<top>-5</top>
+				<left>-5</left>
+				<width>290</width>
 				<height>351</height>
 				<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
 				<bordersize>20</bordersize>
@@ -203,6 +203,7 @@
 				<texture>overlays/overlayfade1.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
+			<!-- TODO Check alignment -->
 			<control type="image">
 				<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + String.IsEqual(ListItem.DBType,movie) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
 				<left>20</left>
@@ -332,6 +333,7 @@
 					<align>center</align>
 				</control>
 			</control>
+			<!-- TODO Add progress bar for widgets -->
 			<control type="label">
 				<left>51</left>
 				<top>173</top>
@@ -587,6 +589,7 @@
 					<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
 				</include>
 			</control>
+			<!-- TODO Add progress bar for widgets -->
 		</definition>
 	</include>
 	<include name="View_54_InfoWall">

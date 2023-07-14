@@ -521,10 +521,10 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="104" time="200" tween="sine" easing="inout" center="245,60" />
+							<effect type="zoom" start="100" end="106" time="200" tween="sine" easing="inout" center="245,60" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="104" end="100" time="200" tween="sine" easing="inout" center="245,60" />
+							<effect type="zoom" start="106" end="100" time="200" tween="sine" easing="inout" center="245,60" />
 						</animation>
 						<control type="image">
 							<width>347</width>
@@ -1120,10 +1120,10 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="210,145" />
+							<effect type="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="210,145" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="210,145" />
+							<effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="210,145" />
 						</animation>
 						<control type="image">
 							<width>279</width>
