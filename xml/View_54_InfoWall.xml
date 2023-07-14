@@ -60,32 +60,32 @@
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
-				<top>-5</top>
-				<left>-5</left>
-				<width>290</width>
+				<top>-4</top>
+				<left>-4</left>
+				<width>288</width>
 				<height>351</height>
 				<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
-				<bordersize>20</bordersize>
+				<bordersize>19</bordersize>
 				<visible>$PARAM[focused] + Control.IsVisible(54)</visible>
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
 			<control type="image">
-				<top>-5</top>
-				<left>-5</left>
-				<width>290</width>
+				<top>-4</top>
+				<left>-4</left>
+				<width>288</width>
 				<height>351</height>
 				<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
-				<bordersize>20</bordersize>
+				<bordersize>19</bordersize>
 				<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
 			<control type="image">
-				<top>-5</top>
-				<left>-5</left>
-				<width>290</width>
+				<top>-4</top>
+				<left>-4</left>
+				<width>288</width>
 				<height>351</height>
 				<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
-				<bordersize>20</bordersize>
+				<bordersize>19</bordersize>
 				<visible>$PARAM[focused] + [Control.HasFocus(14100) | ControlGroup(400).HasFocus]</visible>
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
@@ -160,12 +160,12 @@
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
-				<top>5</top>
-				<left>-5</left>
-				<width>357</width>
-				<height>293</height>
+				<top>6</top>
+				<left>-4</left>
+				<width>355</width>
+				<height>291</height>
 				<texture colordiffuse="button_focus">masks/landscapeinfo.png</texture>
-				<bordersize>20</bordersize>
+				<bordersize>19</bordersize>
 				<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
