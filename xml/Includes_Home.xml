@@ -92,13 +92,13 @@
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>120</top>
+				<top>115</top>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<movement>5</movement>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
-				<height>425</height>
+				<height>415</height>
 				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
@@ -146,9 +146,9 @@
       </include>
       <control type="fixedlist" id="$PARAM[list_id]">
         <left>0</left>
-        <top>120</top> 
+        <top>115</top> 
         <right>0</right>
-        <height>425</height>
+        <height>415</height>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<movement>5</movement>
@@ -319,9 +319,9 @@
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<left>0</left>
-				<top>106</top>
+				<top>101</top>
 				<right>0</right>
-				<height>389</height>
+				<height>381</height>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<movement>3</movement>
@@ -390,9 +390,9 @@
 			<!-- Widget Height Spacing -->
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>106</top>
+				<top>101</top>
 				<right>0</right>
-				<height>389</height>
+				<height>381</height>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<movement>3</movement>
@@ -460,9 +460,9 @@
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>115</top>
+				<top>110</top>
 				<right>0</right>
-				<height>200</height>
+				<height>195</height>
 				<onright>$PARAM[list_id]</onright>
 				<movement>3</movement>
 				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
@@ -600,9 +600,9 @@
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>115</top>
+				<top>110</top>
 				<right>0</right>
-				<height>200</height>
+				<height>195</height>
 				<movement>3</movement>
 				<onright>$PARAM[list_id]</onright>
 				<!-- <onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
@@ -661,10 +661,10 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="104" time="200" tween="sine" easing="inout" center="245,60" />
+							<effect type="zoom" start="100" end="106" time="200" tween="sine" easing="inout" center="245,60" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="104" end="100" time="200" tween="sine" easing="inout" center="245,60" />
+							<effect type="zoom" start="106" end="100" time="200" tween="sine" easing="inout" center="245,60" />
 						</animation>
 						<control type="image">
 							<width>347</width>
@@ -943,9 +943,9 @@
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>125</top>
+				<top>120</top>
 				<right>0</right>
-				<height>435</height>
+				<height>430</height>
 				<movement>4</movement>
 				<onright>$PARAM[list_id]</onright>
 				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
@@ -973,10 +973,10 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="104" time="200" tween="sine" easing="inout" center="210,170" />
+							<effect type="zoom" start="100" end="106" time="200" tween="sine" easing="inout" center="210,170" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="104" end="100" time="200" tween="sine" easing="inout" center="210,170" />
+							<effect type="zoom" start="106" end="100" time="200" tween="sine" easing="inout" center="210,170" />
 						</animation>
 						<include content="InfoWallMusicLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
@@ -1036,9 +1036,9 @@
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>125</top>
+				<top>120</top>
 				<right>0</right>
-				<height>397</height>
+				<height>392</height>
 				<movement>4</movement>
 				<onright>$PARAM[list_id]</onright>
 				<include content="WidgetListCommon">
@@ -1214,9 +1214,9 @@
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>105</top>
+				<top>100</top>
 				<right>0</right>
-				<height>396</height>
+				<height>391</height>
 				<movement>4</movement>
 				<onright>$PARAM[list_id]</onright>
 				<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
