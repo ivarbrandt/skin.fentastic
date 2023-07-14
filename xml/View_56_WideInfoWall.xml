@@ -126,22 +126,27 @@
 		<param name="fallback_image">DefaultTVShows.png</param>
 		<param name="focused">false</param>
 		<definition>
+			<include content="ProgressBar">
+				<param name="left" value="40"/>
+				<param name="top" value="248"/>
+				<param name="width" value="360"/>
+			</include>
 			<control type="image">
 				<top>10</top>
 				<width>416</width>
 				<height>286</height>
-				<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+				<texture colordiffuse="button_focus2">masks/landscapeinfo-unfocused.png</texture>
+				<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
 				<top>6</top>
 				<left>-4</left>
 				<width>424</width>
-				<height>290</height>
-				<texture colordiffuse="button_focus">colors/grey.png</texture>
-				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
+				<height>294</height>
+				<texture colordiffuse="button_focus">masks/landscapeinfo.png</texture>
+				<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
+				<bordersize>19</bordersize>
 				<visible>$PARAM[focused]</visible>
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
@@ -151,8 +156,8 @@
 				<top>10</top>
 				<width>416</width>
 				<height>234</height>
-				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
-				<aspectratio>scale</aspectratio>
+				<texture diffuse="masks/landscapeinfo-artwork.png" fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
+				<aspectratio>stretch</aspectratio>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
@@ -226,11 +231,7 @@
 					<align>center</align>
 				</control>
 			</control>
-				<include content="ProgressBar" condition="!$PARAM[focused]">
-					<param name="left" value="20"/>
-					<param name="top" value="256"/>
-					<param name="width" value="416"/>
-				</include>
+			<!-- TODO Add progress bar for widgets -->
 				<!-- <control type="group">
 					<left>50%</left>
 					<top>8</top>
@@ -492,6 +493,8 @@
 					<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
 				</include>
 			</control>
+			<!-- TODO Fix progress bar for WidgetListLandscape -->
+			
 		</definition>
 	</include>
 
