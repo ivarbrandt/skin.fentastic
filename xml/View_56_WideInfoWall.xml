@@ -226,7 +226,6 @@
 					<align>center</align>
 				</control>
 			</control>
-			<!-- TODO Add progress bar for widgets -->
 				<include content="ProgressBar" condition="!$PARAM[focused]">
 					<param name="left" value="20"/>
 					<param name="top" value="256"/>
@@ -245,6 +244,11 @@
 		<definition>
 			<control type="group">
 				<visible>String.IsEmpty(ListItem.Art(poster))</visible>
+				<include content="ProgressBar">
+					<param name="left" value="37"/>
+					<param name="top" value="164"/>
+					<param name="width" value="270"/>
+				</include>
 				<control type="image">
 					<left>15</left>
 					<top>-10</top>
@@ -289,23 +293,28 @@
 			</control>
 			<control type="group">
 				<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
+				<include content="ProgressBar">
+					<param name="left" value="37"/>
+					<param name="top" value="164"/>
+					<param name="width" value="270"/>
+				</include>
 				<control type="image">
           <left>-4</left>
 					<top>-14</top>
-          <width>353</width>
+          <width>354</width>
           <height>230</height>
 					<texture colordiffuse="button_focus">masks/landscape.png</texture>
-					<bordersize>20</bordersize>
+					<bordersize>19</bordersize>
 					<visible>$PARAM[focused] + [Control.IsVisible(56) | Control.IsVisible(504)]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
 				<control type="image">
           <left>-4</left>
 					<top>-14</top>
-          <width>353</width>
+          <width>354</width>
           <height>230</height>
 					<texture colordiffuse="button_focus">masks/landscape.png</texture>
-					<bordersize>20</bordersize>
+					<bordersize>19</bordersize>
 					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
@@ -483,12 +492,6 @@
 					<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
 				</include>
 			</control>
-			<!-- TODO Fix progress bar for WidgetListLandscape -->
-			<include content="ProgressBar" condition="!$PARAM[focused]">
-				<param name="left" value="37"/>
-				<param name="top" value="169"/>
-				<param name="width" value="270"/>
-			</include>
 		</definition>
 	</include>
 
