@@ -231,7 +231,6 @@
 					<align>center</align>
 				</control>
 			</control>
-			<!-- TODO Add progress bar for widgets -->
 				<!-- <control type="group">
 					<left>50%</left>
 					<top>8</top>
@@ -492,9 +491,7 @@
 					<param name="label-top">22</param>
 					<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
 				</include>
-			</control>
-			<!-- TODO Fix progress bar for WidgetListLandscape -->
-			
+			</control>			
 		</definition>
 	</include>
 
