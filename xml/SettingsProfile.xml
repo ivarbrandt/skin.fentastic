@@ -49,8 +49,8 @@
 						<top>5</top>
 						<width>320</width>
 						<height>380</height>
-						<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-						<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+						<texture colordiffuse="dialog_bg">masks/addons.png</texture>
+						<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 						<bordersize>20</bordersize>
 					</control>
 					<control type="image">
@@ -58,8 +58,8 @@
 						<top>38</top>
 						<width>215</width>
 						<height>215</height>
-						<aspectratio>scale</aspectratio>
-						<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
+						<!-- <aspectratio>scale</aspectratio> -->
+						<texture diffuse="masks/landscapeinfo.png" fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -101,15 +101,15 @@
 							<top>5</top>
 							<width>320</width>
 							<height>380</height>
-							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+							<texture colordiffuse="dialog_bg">masks/addons.png</texture>
+							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
 							<top>5</top>
 							<width>320</width>
 							<height>380</height>
-							<texture colordiffuse="button_focus">colors/grey.png</texture>
+							<texture colordiffuse="button_focus">masks/addons.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
 						</control>
@@ -118,8 +118,8 @@
 							<top>38</top>
 							<width>215</width>
 							<height>215</height>
-							<aspectratio>scale</aspectratio>
-							<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
+							<!-- <aspectratio>scale</aspectratio> -->
+							<texture diffuse="masks/landscapeinfo.png" fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -183,9 +183,9 @@
 				<param name="width" value="530" />
 			</include>
 			<control type="list" id="9000">
-				<left>0</left>
+				<left>25</left>
 				<top>130</top>
-				<width>470</width>
+				<width>445</width>
 				<height>567</height>
 				<onleft>9100</onleft>
 				<onright>9100</onright>
@@ -204,7 +204,7 @@
 				</itemlayout>
 				<focusedlayout height="85" width="470">
 					<control type="image">
-						<right>0</right>
+						<right>50</right>
 						<bottom>0</bottom>
 						<texture colordiffuse="button_focus">masks/focus.png</texture>
 						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>

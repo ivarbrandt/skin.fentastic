@@ -495,8 +495,9 @@
 				<ondown>9000</ondown>
 				<itemlayout height="85" width="470">
 					<control type="label">
+						<left>25</left>
 						<textoffsetx>30</textoffsetx>
-						<width>470</width>
+						<width>445</width>
 						<height>85</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font37</font>
@@ -505,14 +506,16 @@
 				</itemlayout>
 				<focusedlayout height="85" width="470">
 					<control type="image">
-						<width>470</width>
+						<left>25</left>
+						<width>445</width>
 						<height>85</height>
 						<texture colordiffuse="button_focus">masks/focus.png</texture>
 						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
 					</control>
 					<control type="label">
+						<left>25</left>
 						<textoffsetx>30</textoffsetx>
-						<width>470</width>
+						<width>445</width>
 						<height>85</height>
 						<font>font37</font>
 						<aligny>center</aligny>

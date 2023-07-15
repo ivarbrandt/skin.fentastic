@@ -121,9 +121,9 @@
 				<param name="width" value="480" />
 			</include>
 			<control type="grouplist" id="9000">
-				<left>0</left>
+				<left>25</left>
 				<top>130</top>
-				<width>420</width>
+				<width>395</width>
 				<height>100%</height>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
@@ -133,7 +133,7 @@
 					<include content="DefaultSystemSettingsButton">
 						<param name="height" value="85" />
 					</include>
-					<width>420</width>
+					<width>395</width>
 					<label>$LOCALIZE[20037]</label>
 				</control>
 				<control type="button" id="94">
@@ -141,7 +141,7 @@
 					<include content="DefaultSystemSettingsButton">
 						<param name="height" value="85" />
 					</include>
-					<width>420</width>
+					<width>395</width>
 					<label>$LOCALIZE[13277]</label>
 				</control>
 				<control type="button" id="96">
@@ -149,7 +149,7 @@
 					<include content="DefaultSystemSettingsButton">
 						<param name="height" value="85" />
 					</include>
-					<width>420</width>
+					<width>395</width>
 					<label>$LOCALIZE[13279]</label>
 				</control>
 				<control type="button" id="97">
@@ -157,7 +157,7 @@
 					<include content="DefaultSystemSettingsButton">
 						<param name="height" value="85" />
 					</include>
-					<width>420</width>
+					<width>395</width>
 					<label>$LOCALIZE[13280]</label>
 				</control>
 				<control type="button" id="98">
@@ -165,7 +165,7 @@
 					<include content="DefaultSystemSettingsButton">
 						<param name="height" value="85" />
 					</include>
-					<width>420</width>
+					<width>395</width>
 					<label>$LOCALIZE[13281]</label>
 				</control>
 				<control type="button" id="99">
@@ -173,7 +173,7 @@
 					<include content="DefaultSystemSettingsButton">
 						<param name="height" value="85" />
 					</include>
-					<width>420</width>
+					<width>395</width>
 					<label>$LOCALIZE[19191]</label>
 				</control>
 				<control type="button" id="100">
@@ -181,7 +181,7 @@
 					<include content="DefaultSystemSettingsButton">
 						<param name="height" value="85" />
 					</include>
-					<width>420</width>
+					<width>395</width>
 					<label>$LOCALIZE[12389]</label>
 				</control>
 			</control>

@@ -104,9 +104,9 @@
 			</control>
 			<control type="button" id="10">
 				<description>Default Category Button</description>
-				<left>0</left>
+				<left>25</left>
 				<height>85</height>
-				<width>470</width>
+				<width>445</width>
 				<textoffsetx>40</textoffsetx>
 				<aligny>center</aligny>
 				<font>font37</font>
@@ -144,8 +144,8 @@
 			<depth>DepthContentPanel</depth>
 			<include>OpenClose_Left</include>
 			<control type="radiobutton" id="20">
-				<width>470</width>
-				<left>0</left>
+				<width>445</width>
+				<left>25</left>
 				<bottom>70</bottom>
 				<height>90</height>
 				<aligny>center</aligny>
