@@ -42,7 +42,7 @@
 					<item>
 						<label>Skin settings</label>
 						<onclick>ActivateWindow(skinsettings)</onclick>
-						<icon>defaultaddonlookandfeel.png</icon>
+						<icon>icons/settings/skin.png</icon>
 					</item>
 					<item>
 						<label>$LOCALIZE[10003]</label>
