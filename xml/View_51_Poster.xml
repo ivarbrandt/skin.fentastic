@@ -29,7 +29,7 @@
 				<include>Visible_Right</include>
 				<include>OpenClose_Right</include>
 				<control type="fixedlist" id="51">
-					<left>0</left>
+					<left>-10</left>
 					<top>0</top>
 					<width>110%</width>
 					<height>704</height>

@@ -4,7 +4,7 @@
 	<controls>
 		<control type="group">
 			<depth>DepthMax</depth>
-			<top>85</top>
+			<top>100</top>
 			<right>0</right>
 			<width>640</width>
 			<include>OpenClose_Right</include>
