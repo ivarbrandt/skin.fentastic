@@ -5,7 +5,7 @@
 		<include>DefaultBackground</include>
 		<control type="image">
 			<description>Dialog Header image</description>
-			<centerleft>50%</centerleft>
+			<centerleft>49.4%</centerleft>
 			<centertop>50%</centertop>
 			<width>68</width>
 			<height>68</height>

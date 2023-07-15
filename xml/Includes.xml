@@ -531,15 +531,15 @@
 				<scrolltime>200</scrolltime>
 				<focusedlayout height="list_item_height">
 					<control type="image">
-						<left>0</left>
+						<left>25</left>
 						<top>0</top>
-						<right>0</right>
+						<right>25</right>
 						<bottom>0</bottom>
 						<texture colordiffuse="button_focus">masks/focus-long.png</texture>
 						<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus($PARAM[list_id])">Conditional</animation>
 					</control>
 					<control type="image">
-						<left>15</left>
+						<left>40</left>
 						<top>0</top>
 						<width>32</width>
 						<bottom>0</bottom>
@@ -547,7 +547,7 @@
 						<texture>$VAR[ListWatchedIconVar]</texture>
 					</control>
 					<control type="label">
-						<left>65</left>
+						<left>90</left>
 						<top>0</top>
 						<bottom>0</bottom>
 						<right>20</right>
@@ -570,7 +570,7 @@
 				</focusedlayout>
 				<itemlayout height="list_item_height">
 					<control type="image">
-						<left>15</left>
+						<left>40</left>
 						<top>0</top>
 						<width>32</width>
 						<bottom>0</bottom>
@@ -578,7 +578,7 @@
 						<texture>$VAR[ListWatchedIconVar]</texture>
 					</control>
 					<control type="label">
-						<left>65</left>
+						<left>90</left>
 						<top>0</top>
 						<bottom>0</bottom>
 						<right>20</right>
