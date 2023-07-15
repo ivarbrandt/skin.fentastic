@@ -560,6 +560,7 @@
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
+							<autoscroll delay="1300" time="1500" repeat="2000">$PARAM[focused]</autoscroll>
 						</control>
 						<control type="textbox">
 							<visible>String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
@@ -572,6 +573,7 @@
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
+							<autoscroll delay="1300" time="1500" repeat="2000">$PARAM[focused]</autoscroll>
 						</control>
 					</control>
 				</focusedlayout>
@@ -605,8 +607,6 @@
 				<height>195</height>
 				<movement>3</movement>
 				<onright>$PARAM[list_id]</onright>
-				<!-- <onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
-				<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus> -->
 				<include content="WidgetListCommonStacked">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -631,24 +631,11 @@
 							<aspectratio>keep</aspectratio>
 						</control> -->
 						<control type="textbox">
-							<visible>!String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
 							<left>47</left>
 							<top>25</top>
 							<width>254</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label]</label>
-							<font>font25_narrow</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-						<control type="textbox">
-							<visible>String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
-							<left>47</left>
-							<top>25</top>
-							<width>254</width>
-							<height>70</height>
-							<label>$INFO[ListItem.Label] ($INFO[System.AddonUpdateCount])</label>
 							<font>font25_narrow</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
@@ -691,7 +678,6 @@
 							<aspectratio>keep</aspectratio>
 						</control> -->
 						<control type="textbox">
-							<visible>!String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
 							<left>47</left>
 							<top>25</top>
 							<width>254</width>
@@ -701,18 +687,7 @@
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
-						</control>
-						<control type="textbox">
-							<visible>String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
-							<left>47</left>
-							<top>25</top>
-							<width>254</width>
-							<height>70</height>
-							<label>$INFO[ListItem.Label] ($INFO[System.AddonUpdateCount])</label>
-							<font>font25_narrow</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<aligny>center</aligny>
+							<autoscroll delay="1300" time="1500" repeat="2000">$PARAM[focused]</autoscroll>
 						</control>
 					</control>
 				</focusedlayout>
