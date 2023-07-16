@@ -1,14 +1,24 @@
 # FENtastic Skin for Kodi Nexus
 
-FENtastic is a modded version of the default Estuary skin, specifically designed for FEN users. It includes several new features and adjustments to pre-existing views, including new viewtypes, customizable widgets, and a new default colors theme.
+FENtastic is a modded version of the default Estuary skin, specifically designed for FEN users. It includes several new features and adjustments to pre-existing views, including a new UI, viewtypes, customizable widgets, and a new default colors theme.
 
 ## FENtastic vs Default Estuary Skin
 
 Here are some of the key differences between FENtastic and the default Estuary skin.
 
+* **New UI Experience**: FENtastic introduces an updated modern UI.
+
+  ![Viewtypes Widelist](resources/images/viewtypes1.jpg)
+
+  ![Viewtypes List](resources/images/viewtypes2.jpg)
+
+  ![Viewtypes Widelist](resources/images/viewtypes3.jpg)
+
+  ![Viewtypes List](resources/images/viewtypes4.jpg)
+
 * **New viewtypes**: FENtastic introduces "WideInfoWall" and "WideWall" viewtypes.
 
-  ![Viewtypes](resources/images/viewtypes.jpg)
+  ![Viewtypes WideInfoWall](resources/images/viewtypes.jpg)
 
 * **Customizable Widgets**: FENtastic allows you to customize widgets and category widgets for movies, tvshows, and episodes.
 
@@ -26,11 +36,22 @@ Here are some of the key differences between FENtastic and the default Estuary s
 
   ![InfoPanel](resources/images/infopanel.jpg)
 
-* **Color Theme**: FENtastic comes with a new default color theme, and a new color theme 'purple'.
+* **Color Themes**: FENtastic comes with a new default color theme, and a new color theme 'purple'. The UI changes extend into every color theme.
 
-  ![Color Theme](resources/images/color_theme.jpg)
+  ![Color Theme Purple](resources/images/color_theme.jpg)
+
+  ![Color Theme Estuary](resources/images/color_theme1.jpg)
+
+  ![Color Theme Gold](resources/images/color_theme2.jpg)
+
+  ![Color Theme Green](resources/images/color_theme3.jpg)
+
+  ![Color Theme Pink](resources/images/color_theme4.jpg)
+
+  ![Color Theme Maroon](resources/images/color_theme5.jpg)
 
 ## Features
+* NEW UI experience
 * 2 NEW viewtypes ("WideWall" and "WideInfoWall")
 * Plenty of adjustments to pre-existing views
 * Customizable movie and show main menu items
