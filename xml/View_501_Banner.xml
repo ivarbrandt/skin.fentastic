@@ -78,12 +78,12 @@
 						</animation>
 						<top>100</top>
 						<control type="image">
-								<left>15</left>
-								<top>15</top>
-								<width>830</width>
-								<height>166</height>
-								<texture border="8" colordiffuse="button_focus">masks/banner.png</texture>
-							</control>
+							<left>13</left>
+							<top>14</top>
+							<width>834</width>
+							<height>168</height>
+							<texture border="8" colordiffuse="button_focus">masks/banner.png</texture>
+						</control>
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
