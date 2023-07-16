@@ -78,10 +78,10 @@
 						</animation>
 						<top>100</top>
 						<control type="image">
-							<left>15</left>
-							<top>15</top>
-							<width>830</width>
-							<height>166</height>
+							<left>13</left>
+							<top>13</top>
+							<width>834</width>
+							<height>169.5</height>
 							<texture border="8" colordiffuse="button_focus">masks/banner.png</texture>
 						</control>
 						<control type="image">
@@ -92,7 +92,7 @@
 							<texture diffuse="masks/banner.png" fallback="dialogs/dialog-bg-nobo.png" background="true">$VAR[BannerArtVar]</texture>
 							<!-- <aspectratio aligny="center">scale</aspectratio>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
-							<bordersize>15</bordersize>
+							<bordersize>20</bordersize>
 						</control>
 						<control type="label">
 							<left>70</left>
