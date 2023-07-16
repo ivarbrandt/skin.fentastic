@@ -18,11 +18,18 @@
 				<texture flipy="true">frame/osdfade.png</texture>
 			</control>
 			<control type="image">
-				<left>0</left>
+				<left>-35</left>
 				<bottom>0</bottom>
-				<width>100%</width>
+				<width>1992</width>
+				<height>472</height>
+				<texture diffuse="masks/keyboard.png" colordiffuse="button_focus">colors/white.png</texture>
+			</control>
+			<control type="image">
+				<left>-35</left>
+				<bottom>0</bottom>
+				<width>1990</width>
 				<height>470</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<texture diffuse="masks/keyboard.png" colordiffuse="dialog_bg">colors/white.png</texture>
 			</control>
 			<control type="label" id="311">
 				<centerleft>50%</centerleft>
@@ -37,18 +44,25 @@
 			</control>
 			<control type="image">
 				<centerleft>50%</centerleft>
-				<top>184</top>
-				<width>1542</width>
-				<height>100</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<top>182</top>
+				<width>1546</width>
+				<height>104</height>
+				<texture diffuse="masks/focus-long.png" colordiffuse="button_focus">colors/white.png</texture>
 			</control>
 			<control type="image">
 				<centerleft>50%</centerleft>
 				<top>184</top>
 				<width>1542</width>
 				<height>100</height>
-				<texture colordiffuse="button_focus" border="40">buttons/button-alt-nofo.png</texture>
+				<texture diffuse="masks/focus-long.png" colordiffuse="dialog_bg">colors/white.png</texture>
 			</control>
+			<!-- <control type="image">
+				<centerleft>50%</centerleft>
+				<top>184</top>
+				<width>1542</width>
+				<height>100</height>
+				<texture diffuse="masks/focus-long.png" colordiffuse="button_focus" border="40">buttons/button-alt-nofo.png</texture>
+			</control> -->
 			<control type="edit" id="312">
 				<centerleft>50%</centerleft>
 				<top>183</top>
@@ -600,7 +614,7 @@
 						<top>0</top>
 						<width>480</width>
 						<height>50</height>
-						<texture colordiffuse="dialog_tint">colors/white.png</texture>
+						<texture diffuse="masks/focus.png" colordiffuse="dialog_tint">colors/white.png</texture>
 					</control>
 					<control type="label">
 						<textoffsetx>30</textoffsetx>
@@ -620,13 +634,13 @@
 							<top>0</top>
 							<width>480</width>
 							<height>50</height>
-							<texture colordiffuse="dialog_tint">colors/white.png</texture>
+							<texture diffuse="masks/focus.png" colordiffuse="dialog_tint">colors/white.png</texture>
 						</control>
 						<control type="image">
 							<left>10</left>
 							<width>480</width>
 							<height>50</height>
-							<texture colordiffuse="button_focus">colors/grey.png</texture>
+							<texture diffuse="masks/focus.png" colordiffuse="button_focus">colors/grey.png</texture>
 							<include>Animation_FocusTextureFade</include>
 						</control>
 						<control type="label">
