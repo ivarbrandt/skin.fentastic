@@ -508,10 +508,10 @@
 				<top>320</top>
 				<control type="image">
 					<left>20</left>
-					<top>-176</top>
+					<top>-106</top>
 					<width>195</width>
-					<height>150</height>
-					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
+					<height>80</height>
+					<texture colordiffuse="CCFFFFFF">overlays/overlayfade8.png</texture>
 					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
@@ -538,10 +538,10 @@
 				</control>
 				<control type="image">
 					<left>20</left>
-					<top>-176</top>
+					<top>-106</top>
 					<width>195</width>
-					<height>150</height>
-					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
+					<height>80</height>
+					<texture colordiffuse="CCFFFFFF">overlays/overlayfade8.png</texture>
 					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 					<visible>$PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>

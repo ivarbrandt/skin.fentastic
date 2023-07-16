@@ -400,11 +400,11 @@
 				<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
 				<top>320</top>
 				<control type="image">
-					<left>20</left>
-					<top>-277</top>
-					<width>305</width>
-					<height>150</height>
-					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
+					<left>19</left>
+					<top>-208</top>
+					<width>307</width>
+					<height>80</height>
+					<texture colordiffuse="CCFFFFFF">overlays/overlayfade7.png</texture>
 					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
@@ -431,11 +431,11 @@
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
 				<control type="image">
-					<left>20</left>
-					<top>-277</top>
-					<width>305</width>
-					<height>150</height>
-					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
+					<left>19</left>
+					<top>-208</top>
+					<width>307</width>
+					<height>80</height>
+					<texture colordiffuse="CCFFFFFF">overlays/overlayfade7.png</texture>
 					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 					<visible>$PARAM[focused] + [Control.IsVisible(56) | Control.IsVisible(504)]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
