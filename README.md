@@ -28,9 +28,11 @@ Here are some of the key differences between FENtastic and the default Estuary s
 
   ![Stacked Widgets](resources/images/stacked_widgets.jpg)
 
-* **Custom Search Window**: FENtastic introduces a search window to simultaneously search multiple categories.
+* **Custom Search Window**: FENtastic introduces a search window to simultaneously search multiple categories including TRAKT Lists.
 
   ![Search Window](resources/images/search_window.jpg)
+
+  ![Search Window](resources/images/search_window1.jpg)
 
 * **InfoPanel**: FENtastic introduces a new InfoPanel for widgets.
 
