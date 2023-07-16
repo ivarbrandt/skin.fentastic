@@ -1,6 +1,6 @@
 # FENtastic Skin for Kodi Nexus
 
-FENtastic is a modded version of the default Estuary skin, specifically designed for FEN users. It includes several new features and adjustments to pre-existing views, including a new UI, viewtypes, customizable widgets, and a new default colors theme.
+FENtastic is a modded version of the default Estuary skin, specifically designed for FEN users. It includes several new features and adjustments to pre-existing views, a new UI, viewtypes, customizable widgets, and a new default colors theme.
 
 ## FENtastic vs Default Estuary Skin
 
