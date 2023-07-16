@@ -25,31 +25,31 @@
 						<control type="image">
 							<width>396</width>
 							<height>245</height>
-							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+							<texture colordiffuse="button_focus2">masks/landscape-unfocused.png</texture>
+							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 							<bordersize>20</bordersize>
 						</control>
 						<!-- IMAGE CONTROL -->
 						<control type="image">
 							<left>120</left>
-							<top>20</top>
+							<top>35</top>
 							<width>160</width>
 							<height>130</height>
 							<texture fallback="DefaultStudios.png">$VAR[IconWallThumbVar]</texture>
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
 						</control>
-						<control type="image">
+						<!-- <control type="image">
 							<left>20</left>
 							<top>150</top>
 							<width>356</width>
 							<height>75</height>
 							<texture colordiffuse="border_alpha">colors/black.png</texture>
-						</control>
+						</control> -->
 						<control type="textbox">
-							<left>25</left>
+							<left>35</left>
 							<top>148</top>
-							<width>350</width>
+							<width>340</width>
 							<height>74</height>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
@@ -71,37 +71,37 @@
 						<control type="image">
 							<width>396</width>
 							<height>245</height>
-							<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
+							<texture colordiffuse="button_focus2">masks/landscape-unfocused.png</texture>
+							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
 							<width>396</width>
 							<height>245</height>
-							<texture colordiffuse="button_focus2">colors/grey.png</texture>
-							<bordersize>20</bordersize>
+							<texture colordiffuse="button_focus">masks/landscape.png</texture>
+							<bordersize>19</bordersize>
 							<include>Animation_FocusTextureFade</include>
 						</control>
 						<control type="image">
 							<left>120</left>
-							<top>20</top>
+							<top>35</top>
 							<width>160</width>
 							<height>130</height>
 							<texture fallback="DefaultStudios.png">$VAR[IconWallThumbVar]</texture>
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
 						</control>
-						<control type="image">
+						<!-- <control type="image">
 							<left>20</left>
 							<top>150</top>
 							<width>356</width>
 							<height>75</height>
 							<texture colordiffuse="border_alpha">colors/black.png</texture>
-						</control>
+						</control> -->
 						<control type="textbox">
-							<left>25</left>
+							<left>35</left>
 							<top>148</top>
-							<width>350</width>
+							<width>340</width>
 							<height>74</height>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label]</label>
