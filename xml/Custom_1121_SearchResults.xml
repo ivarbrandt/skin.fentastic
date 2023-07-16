@@ -191,7 +191,7 @@
 						<visible>String.IsEmpty(Skin.String(DatabaseStatus))</visible>
 						<orientation>horizontal</orientation>
 						<itemgap>0</itemgap>
-            <left>-13</left>
+            <left>7</left>
 						<width>480</width>
 						<height>110</height>
 						<top>15</top>
@@ -312,7 +312,7 @@
 				<left>90</left>
 				<control type="label">
 					<top>90</top>
-					<left>-45</left>
+					<left>-25</left>
 					<width>1085</width>
 					<aligny>center</aligny>
 					<height>98</height>
