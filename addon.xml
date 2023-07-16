@@ -23,13 +23,16 @@
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
-			<screenshot>resources/screenshot-01.jpg</screenshot>
-			<screenshot>resources/screenshot-02.jpg</screenshot>
-			<screenshot>resources/screenshot-03.jpg</screenshot>
-			<screenshot>resources/screenshot-04.jpg</screenshot>
-			<screenshot>resources/screenshot-05.jpg</screenshot>
-			<screenshot>resources/screenshot-06.jpg</screenshot>
-			<screenshot>resources/screenshot-07.jpg</screenshot>
+			<screenshot>resources/images/customizable_widgets.jpg</screenshot>
+			<screenshot>resources/stacked_widgets.jpg</screenshot>
+			<screenshot>resources/images/infopanel.jpg</screenshot>
+			<screenshot>resources/images/search_window.jpg</screenshot>
+			<screenshot>resources/images/viewtypes1.jpg</screenshot>
+			<screenshot>resources/images/viewtypes4.jpg</screenshot>
+			<screenshot>resources/images/viewtypes.jpg</screenshot>
+			<screenshot>resources/images/color_theme3.jpg</screenshot>
+			<screenshot>resources/images/color_theme4.jpg</screenshot>
+			<screenshot>resources/images/color_theme5.jpg</screenshot>
 		</assets>
 		
 		<summary lang="en_GB">FENtastic skin by Ivar Brandt (Estuary MOD)</summary>
