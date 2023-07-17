@@ -2,6 +2,9 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR button_focus]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
+- Small bug fix for TRAKT search widget
+
+[B][COLOR button_focus]Version 1.0.14[/COLOR][/B]
 - Extensive overhaul of UI. There are some parts of the skin that I don't use so if something looks off, please let me know by opening an issue in my Github repo
 - Fixed blank Search window on new Kodi installs
 - Fixed stacked widget renaming

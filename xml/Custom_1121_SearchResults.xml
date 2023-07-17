@@ -98,10 +98,10 @@
 							<param name="list_id" value="27017"/>
 						</include>
 						<include content="WidgetListPosterStacked" condition="!Skin.HasSetting(HideTraktResults)">
-								<param name="content_path" value="$INFO[Window(1121).Property(fentastic.27017.path)]"/>
-								<param name="widget_header" value="$INFO[Window(1121).Property(fentastic.27017.label)]"/>
-								<param name="widget_target" value="videos"/>
-								<param name="list_id" value="270171"/>
+							<param name="content_path" value="$INFO[Window(1121).Property(fentastic.27017.path)]"/>
+							<param name="widget_header" value="$INFO[Window(1121).Property(fentastic.27017.label)]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="270171"/>
 						</include>
 					</control>
 					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
