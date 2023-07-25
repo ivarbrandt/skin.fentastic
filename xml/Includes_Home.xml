@@ -443,7 +443,7 @@
 	<include name="WidgetListCategory">
 		<param name="item_limit">30</param>
 		<param name="icon">$INFO[ListItem.Icon]</param>
-		<param name="icon_height">120</param>
+		<param name="icon_height">72</param>
 		<param name="additional_movie_items">false</param>
 		<param name="additional_tvshow_items">false</param>
 		<param name="visible">true</param>
@@ -482,14 +482,14 @@
 							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 							<bordersize>20</bordersize>
 						</control>
-						<!-- <control type="image">
-							<centertop>74</centertop>
-							<left>58</left>
-							<width>200</width>
+						<control type="image">
+							<top>23</top>
+							<left>113.5</left>
+							<width>120</width>
 							<height>$PARAM[icon_height]</height>
-							<texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
-							<aspectratio>keep</aspectratio>
-						</control> -->
+							<texture colordiffuse="dialog_bg2" fallback="DefaultFolder.png">$PARAM[icon]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
 						<control type="textbox">
 							<visible>!String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
 							<left>47</left>
@@ -541,14 +541,23 @@
 							<include>Animation_FocusTextureFade</include>
 							<visible>Control.HasFocus($PARAM[list_id])</visible>
 						</control>
-						<!-- <control type="image">
-							<centertop>74</centertop>
-							<left>58</left>
-							<width>200</width>
+						<control type="image">
+							<top>23</top>
+							<left>113.5</left>
+							<width>120</width>
 							<height>$PARAM[icon_height]</height>
-							<texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
-							<aspectratio>keep</aspectratio>
-						</control> -->
+							<texture colordiffuse="dialog_bg2" fallback="DefaultFolder.png">$PARAM[icon]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="image">
+							<top>23</top>
+							<left>113.5</left>
+							<width>120</width>
+							<height>$PARAM[icon_height]</height>
+							<texture colordiffuse="button_focus" fallback="DefaultFolder.png">$PARAM[icon]</texture>
+							<aspectratio>scale</aspectratio>
+							<visible>Control.HasFocus($PARAM[list_id])</visible>
+						</control>
 						<control type="textbox">
 							<visible>!String.IsEqual(ListItem.FolderPath,addons://outdated/)</visible>
 							<left>47</left>
@@ -586,7 +595,7 @@
 
 	<include name="WidgetListCategoryStacked">
 		<param name="icon">$INFO[ListItem.Icon]</param>
-		<param name="icon_height">120</param>
+		<param name="icon_height">72</param>
 		<param name="additional_movie_items">false</param>
 		<param name="additional_tvshow_items">false</param>
 		<param name="visible">true</param>
@@ -598,103 +607,106 @@
 			</include>
 			<include content="BusyListSpinnerWidget">
 				<param name="list_id" value="$PARAM[list_id]"/>
-				<param name="visible" value="$PARAM[visible]"/>
+				
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
 				<top>110</top>
 				<right>0</right>
 				<height>195</height>
-				<movement>3</movement>
-				<onright>$PARAM[list_id]</onright>
 				<include content="WidgetListCommonStacked">
-					<param name="list_id" value="$PARAM[list_id]"/>
+						<param name="list_id" value="$PARAM[list_id]" />
 				</include>
+				<movement>3</movement>
 				<visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<itemlayout width="337" height="340">
-					<control type="group">
-						<left>70</left>
-						<control type="image">
-							<width>347</width>
-							<height>120</height>
-							<texture colordiffuse="button_focus2">masks/categorywidget-unfocused.png</texture>
-							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
-							<bordersize>20</bordersize>
+						<control type="group">
+								<left>70</left>
+								<control type="image">
+									<width>347</width>
+									<height>120</height>
+									<texture colordiffuse="button_focus2">masks/categorywidget-unfocused.png</texture>
+									<bordersize>20</bordersize>
+								</control>
+								<control type="image">
+									<top>23</top>
+									<left>113.5</left>
+									<width>120</width>
+									<height>$PARAM[icon_height]</height>
+									<texture colordiffuse="dialog_bg2" fallback="DefaultFolder.png">$PARAM[icon]</texture>
+									<aspectratio>scale</aspectratio>
+								</control>
+								<control type="textbox">
+									<left>47</left>
+									<top>25</top>
+									<width>254</width>
+									<height>70</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>font25_narrow</font>
+									<shadowcolor>text_shadow</shadowcolor>
+									<align>center</align>
+									<aligny>center</aligny>
+									<autoscroll delay="1300" time="1500" repeat="2000">$PARAM[focused]</autoscroll>
+								</control>
 						</control>
-						<!-- <control type="image">
-							<centertop>74</centertop>
-							<left>58</left>
-							<width>200</width>
-							<height>$PARAM[icon_height]</height>
-							<texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
-							<aspectratio>keep</aspectratio>
-						</control> -->
-						<control type="textbox">
-							<left>47</left>
-							<top>25</top>
-							<width>254</width>
-							<height>70</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>font25_narrow</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-						</control>
-					</control>
 				</itemlayout>
 				<focusedlayout width="337" height="340">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<left>70</left>
-						<animation type="Focus">
-							<effect type="zoom" start="100" end="106" time="200" tween="sine" easing="inout" center="245,60" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="106" end="100" time="200" tween="sine" easing="inout" center="245,60" />
-						</animation>
-						<control type="image">
-							<width>347</width>
-							<height>120</height>
-							<texture colordiffuse="button_focus2">masks/categorywidget-unfocused.png</texture>
-							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
-							<bordersize>20</bordersize>
+						<control type="group">
+								<depth>DepthContentPopout</depth>
+								<left>70</left>
+								<animation type="Focus">
+										<effect type="zoom" start="100" end="108" time="200" tween="sine" easing="inout" center="228,70" />
+								</animation>
+								<animation type="Unfocus">
+										<effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="228,70" />
+								</animation>
+								<control type="image">
+									<width>347</width>
+									<height>120</height>
+									<texture colordiffuse="button_focus2">masks/categorywidget-unfocused.png</texture>
+									<bordersize>20</bordersize>
+								</control>
+								<control type="image">
+									<width>347</width>
+									<height>120</height>
+									<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
+									<bordersize>20</bordersize>
+									<include>Animation_FocusTextureFade</include>
+									<visible>Control.HasFocus($PARAM[list_id])</visible>
+								</control>
+								<control type="image">
+									<top>23</top>
+									<left>113.5</left>
+									<width>120</width>
+									<height>$PARAM[icon_height]</height>
+									<texture colordiffuse="dialog_bg2" fallback="DefaultFolder.png">$PARAM[icon]</texture>
+									<aspectratio>scale</aspectratio>
+								</control>
+								<control type="image">
+									<top>23</top>
+									<left>113.5</left>
+									<width>120</width>
+									<height>$PARAM[icon_height]</height>
+									<texture colordiffuse="button_focus" fallback="DefaultFolder.png">$PARAM[icon]</texture>
+									<aspectratio>scale</aspectratio>
+									<visible>Control.HasFocus($PARAM[list_id])</visible>
+								</control>
+								<control type="textbox">
+									<left>47</left>
+									<top>25</top>
+									<width>254</width>
+									<height>70</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>font25_narrow</font>
+									<shadowcolor>text_shadow</shadowcolor>
+									<align>center</align>
+									<aligny>center</aligny>
+									<autoscroll delay="1300" time="1500" repeat="2000">$PARAM[focused]</autoscroll>
+								</control>
 						</control>
-						<control type="image">
-						<param name="visible" value="$PARAM[list_id]"/>
-							<width>347</width>
-							<height>120</height>
-							<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
-							<bordersize>20</bordersize>
-							<include>Animation_FocusTextureFade</include>
-							<visible>Control.HasFocus($PARAM[list_id])</visible>
-						</control>
-						<!-- <control type="image">
-							<centertop>74</centertop>
-							<left>58</left>
-							<width>200</width>
-							<height>$PARAM[icon_height]</height>
-							<texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
-							<aspectratio>keep</aspectratio>
-						</control> -->
-						<control type="textbox">
-							<left>47</left>
-							<top>25</top>
-							<width>254</width>
-							<height>70</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>font25_narrow</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<autoscroll delay="1300" time="1500" repeat="2000">$PARAM[focused]</autoscroll>
-						</control>
-					</control>
 				</focusedlayout>
-				<content target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
-				<include condition="$PARAM[additional_movie_items]" content="MovieSubmenuItems" />
-				<include condition="$PARAM[additional_tvshow_items]" content="TVShowSubmenuItems" />
-			</control>
+				<content target="$PARAM[widget_target]" sortby="$PARAM[list_id]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
+		</control>
 		</definition>
 	</include>
 
