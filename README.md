@@ -2,7 +2,9 @@
 
 FENtastic is a modded version of the default Estuary skin, specifically designed for FEN users. It includes several new features and adjustments to pre-existing views, a new UI, viewtypes, customizable widgets, and a new default colors theme.
 
-Creating FENtastic started off as a few tweaks here and there. Over time, it grew into a passion project where I experience absolute joy every time I work on it. If you feel some of this joy when using it and you'd like to support my work, you may do so [here](https://ko-fi.com/ivarbrandt). Below you'll find some information about the [differences](#fentastic-vs-default-estuary-skin) between Estuary and FENtastic along with some screenshots and a detailed [setup guide](#setup-guide) of the skin. If you would like to open an issue, please make sure to read the [rules](#rules-for-reporting-issues) before doing so.
+Creating FENtastic started off as a few tweaks here and there. Over time, it grew into a passion project where I experience absolute joy every time I work on it. If you feel some of this joy when using it and you'd like to support my work, you may do so by buying me a coffee [here](https://ko-fi.com/ivarbrandt). 
+
+Below you'll find some information about the [differences](#fentastic-vs-default-estuary-skin) between Estuary and FENtastic along with some screenshots and a detailed [setup guide](#setup-guide) of the skin. If you would like to open an issue, please make sure to read the [rules](#rules-for-reporting-issues) before doing so.
 
 ## FENtastic vs Default Estuary Skin
 
