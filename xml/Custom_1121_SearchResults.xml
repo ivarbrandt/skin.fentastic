@@ -146,6 +146,7 @@
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
 						<focusedlayout height="83">
 							<control type="group">
+								<visible>Control.HasFocus(9000)</visible>
 								<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 								<control type="image">
 									<left>0</left>
