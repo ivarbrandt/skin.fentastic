@@ -12,13 +12,14 @@
 	<include name="CategoryLabel">
 		<param name="visible">true</param>
 		<param name="item_treshold">0</param>
-		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title, [COLOR button_focus][B]| [/B][/COLOR]]</param>
+		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title, [COLOR button_focus][B]» [/B][/COLOR]]</param>
+		<param name="label_focus_episodes">$INFO[Container($PARAM[list_id]).ListItem.TVShowTitle, [COLOR button_focus][B]» [/B][/COLOR]]$INFO[Container($PARAM[list_id]).ListItem.Title, [COLOR button_focus][B]» [/B][/COLOR]]</param>
 		<definition>
 		<control type="group" id="$PARAM[list_id]665">
 			<left>75</left>
 			<top>80</top>
 			<onback>9000</onback>
-			<width>900</width>
+			<width>1200</width>
 			<height>90</height>
 			<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,$PARAM[item_treshold]) | [Container($PARAM[list_id]).IsUpdating + Integer.IsEqual(Container($PARAM[list_id]).NumItems,0)]</visible>
 			<visible>$PARAM[visible]</visible>
@@ -29,7 +30,12 @@
 			<control type="label">
 				<label>$PARAM[label]$PARAM[label_focus]</label>
 				<shadowcolor>text_shadow</shadowcolor>
-				<visible>Control.HasFocus($PARAM[list_id])</visible>
+				<visible>!String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
+			</control>
+			<control type="label">
+				<label>$PARAM[label]$PARAM[label_focus_episodes]</label>
+				<shadowcolor>text_shadow</shadowcolor>
+				<visible>String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
 			</control>
 		</control>
 		</definition>
@@ -37,52 +43,32 @@
 	<include name="CategoryLabelWidget">
 		<param name="visible">true</param>
 		<param name="item_treshold">0</param>
-		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title, [COLOR button_focus][B]| [/B][/COLOR]]</param>
+		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title, [COLOR button_focus][B]» [/B][/COLOR]]</param>
 		<definition>
-
-			<control type="group" id="$PARAM[list_id]666">
+			<control type="label" id="$PARAM[list_id]666">
 				<visible>!Container($PARAM[list_id]).IsUpdating</visible>
 				<left>75</left>
 				<top>80</top>
 				<onback>9000</onback>
-				<width>900</width>
-				<height>90</height>
-				<visible>$PARAM[visible]</visible>
-				<control type="label" >
-					<label>$PARAM[label]</label>
-					<shadowcolor>text_shadow</shadowcolor>
-				</control>
-				<control type="label" >
-					<label>$PARAM[label]$PARAM[label_focus]</label>
-					<shadowcolor>text_shadow</shadowcolor>
-					<visible>Control.HasFocus($PARAM[list_id])</visible>
-				</control>
-			</control>
-
-			<!-- <control type="label" id="$PARAM[list_id]666">
-				<visible>!Container($PARAM[list_id]).IsUpdating</visible>
-				<left>75</left>
-				<top>80</top>
-				<onback>9000</onback>
-				<width>900</width>
+				<width>1200</width>
 				<height>90</height>
 				<visible>$PARAM[visible]</visible>
 				<label>$PARAM[label]</label>
 				<shadowcolor>text_shadow</shadowcolor>
+				<visible>!Control.HasFocus($PARAM[list_id])</visible>
 			</control>
 			<control type="label" id="$PARAM[list_id]667">
 				<visible>!Container($PARAM[list_id]).IsUpdating</visible>
 				<left>75</left>
 				<top>80</top>
 				<onback>9000</onback>
-				<width>900</width>
+				<width>1200</width>
 				<height>90</height>
 				<visible>$PARAM[visible]</visible>
 				<label>$PARAM[label]$PARAM[label_focus]</label>
 				<shadowcolor>text_shadow</shadowcolor>
 				<visible>Control.HasFocus($PARAM[list_id])</visible>
-			</control> -->
-
+			</control>
 		</definition>
 	</include>
 	<include name="PVRWidget">
