@@ -6,6 +6,7 @@
   <color name="secondary_background">4D808080</color>
   <color name="dialog_tint">E60C022D</color>
   <color name="dialog_bg">FF0C022D</color>
+  <color name="dialog_bg2">FF130446</color>
   <color name="button_focus">FF845BFB</color>
   <color name="button_focus2">99845BFB</color>
   <color name="selected">FFC3AEFD</color>

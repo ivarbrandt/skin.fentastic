@@ -5,6 +5,7 @@
 	<color name="primary_content_panel_bg">FF354CCF</color>
 	<color name="dialog_tint">E60E1337</color>
 	<color name="dialog_bg">FF0E1337</color>
+	<color name="dialog_bg2">FF171E56</color>
 	<color name="background">FF000000</color>
 	<color name="bg_image">FF909090</color>
 	<color name="bg_overlay">30FFFFFF</color>
