@@ -687,7 +687,6 @@
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
 									<aligny>center</aligny>
-									<autoscroll delay="1300" time="1500" repeat="2000">$PARAM[focused]</autoscroll>
 								</control>
 						</control>
 				</itemlayout>
