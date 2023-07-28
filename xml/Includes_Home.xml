@@ -32,17 +32,6 @@
 				<visible>Control.HasFocus($PARAM[list_id])</visible>
 			</control>
 		</control>
-			<!-- <control type="label" id="$PARAM[list_id]665">
-				<left>75</left>
-				<top>80</top>
-				<onback>9000</onback>
-				<width>900</width>
-				<height>90</height>
-				<label>$PARAM[label]</label>
-				<shadowcolor>text_shadow</shadowcolor>
-				<visible>$PARAM[visible]</visible>
-				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,$PARAM[item_treshold]) | [Container($PARAM[list_id]).IsUpdating + Integer.IsEqual(Container($PARAM[list_id]).NumItems,0)]</visible>
-			</control> -->
 		</definition>
 	</include>
 	<include name="CategoryLabelWidget">
@@ -50,6 +39,7 @@
 		<param name="item_treshold">0</param>
 		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title, [COLOR button_focus][B]| [/B][/COLOR]]</param>
 		<definition>
+
 			<control type="group" id="$PARAM[list_id]666">
 				<visible>!Container($PARAM[list_id]).IsUpdating</visible>
 				<left>75</left>
@@ -68,17 +58,31 @@
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
 				</control>
 			</control>
+
 			<!-- <control type="label" id="$PARAM[list_id]666">
+				<visible>!Container($PARAM[list_id]).IsUpdating</visible>
 				<left>75</left>
 				<top>80</top>
 				<onback>9000</onback>
 				<width>900</width>
 				<height>90</height>
+				<visible>$PARAM[visible]</visible>
 				<label>$PARAM[label]</label>
 				<shadowcolor>text_shadow</shadowcolor>
-				<visible>$PARAM[visible]</visible>
+			</control>
+			<control type="label" id="$PARAM[list_id]667">
 				<visible>!Container($PARAM[list_id]).IsUpdating</visible>
+				<left>75</left>
+				<top>80</top>
+				<onback>9000</onback>
+				<width>900</width>
+				<height>90</height>
+				<visible>$PARAM[visible]</visible>
+				<label>$PARAM[label]$PARAM[label_focus]</label>
+				<shadowcolor>text_shadow</shadowcolor>
+				<visible>Control.HasFocus($PARAM[list_id])</visible>
 			</control> -->
+
 		</definition>
 	</include>
 	<include name="PVRWidget">
@@ -156,12 +160,12 @@
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
 						<top>15</top>
-						<animation type="Focus">
+						<!-- <animation type="Focus">
 							<effect type="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="185,162" />
 						</animation>
 						<animation type="Unfocus">
 							<effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="185,162" />
-						</animation>
+						</animation> -->
 						<include content="InfoWallMovieLayout">
 						<param name="focused" value="true" />
 						<param name="list_id" value="$PARAM[list_id]" />
@@ -208,12 +212,12 @@
             <depth>DepthContentPopout</depth>
             <left>68</left>
             <top>15</top>
-            <animation type="Focus">
+            <!-- <animation type="Focus">
             <effect type="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="185,162" />
             </animation>
             <animation type="Unfocus">
             <effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="185,162" />
-            </animation>
+            </animation> -->
             <include content="InfoWallMovieLayout">
             <param name="focused" value="true" />
 						<param name="list_id" value="$PARAM[list_id]" />
@@ -264,12 +268,12 @@
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
 						<top>15</top>
-						<animation type="Focus">
+						<!-- <animation type="Focus">
 							<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="240,111" />
 						</animation>
 						<animation type="Unfocus">
 							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="240,111" />
-						</animation>
+						</animation> -->
 						<include content="WideInfoWallMovieLayout">
 						<param name="focused" value="true" />
 						<param name="list_id" value="$PARAM[list_id]" />
@@ -318,12 +322,12 @@
 						<depth>DepthContentPopout</depth>
 						<left>68</left>
 						<top>15</top>
-						<animation type="Focus">
+						<!-- <animation type="Focus">
 							<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="240,111" />
 						</animation>
 						<animation type="Unfocus">
 							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="240,111" />
-						</animation>
+						</animation> -->
 						<include content="WideInfoWallMovieLayout">
 						<param name="focused" value="true" />
 						<param name="list_id" value="$PARAM[list_id]" />
@@ -387,12 +391,12 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>5</top>
-						<animation type="Focus">
+						<!-- <animation type="Focus">
 							<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="245,150" />
 						</animation>
 						<animation type="Unfocus">
 							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="245,150" />
-						</animation>
+						</animation> -->
 						<include content="InfoWallEpisodeLayout">
 							<param name="focused" value="true" />
 							<param name="list_id" value="$PARAM[list_id]" />
@@ -457,12 +461,12 @@
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
 						<top>5</top>
-						<animation type="Focus">
+						<!-- <animation type="Focus">
 							<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="245,150" />
 						</animation>
 						<animation type="Unfocus">
 							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="245,150" />
-						</animation>
+						</animation> -->
 						<include content="InfoWallEpisodeLayout">
 							<param name="focused" value="true" />
 							<param name="list_id" value="$PARAM[list_id]" />
@@ -558,12 +562,12 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
-						<animation type="Focus">
+						<!-- <animation type="Focus">
 							<effect type="zoom" start="100" end="106" time="200" tween="sine" easing="inout" center="245,60" />
 						</animation>
 						<animation type="Unfocus">
 							<effect type="zoom" start="106" end="100" time="200" tween="sine" easing="inout" center="245,60" />
-						</animation>
+						</animation> -->
 						<control type="image">
 							<width>347</width>
 							<height>120</height>
@@ -692,12 +696,12 @@
 						<control type="group">
 								<depth>DepthContentPopout</depth>
 								<left>70</left>
-								<animation type="Focus">
+								<!-- <animation type="Focus">
 										<effect type="zoom" start="100" end="108" time="200" tween="sine" easing="inout" center="228,70" />
 								</animation>
 								<animation type="Unfocus">
 										<effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="228,70" />
-								</animation>
+								</animation> -->
 								<control type="image">
 									<width>347</width>
 									<height>120</height>
@@ -745,102 +749,6 @@
 				</focusedlayout>
 				<content target="$PARAM[widget_target]" sortby="$PARAM[list_id]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
 		</control>
-			<!-- <control type="fixedlist" id="$PARAM[list_id]">
-				<left>0</left>
-				<top>110</top>
-				<right>0</right>
-				<height>195</height>
-				<movement>3</movement>
-				<onright>$PARAM[list_id]</onright>
-				<include content="WidgetListCommonStacked">
-					<param name="list_id" value="$PARAM[list_id]"/>
-				</include>
-				<visible>$PARAM[visible]</visible>
-				<itemlayout width="337" height="340">
-					<control type="group">
-						<left>70</left>
-						<control type="image">
-							<width>347</width>
-							<height>120</height>
-							<texture colordiffuse="button_focus2">masks/categorywidget-unfocused.png</texture>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							
-							<top>19</top>
-							<left>103.5</left>
-							<width>140</width>
-							<height>$PARAM[icon_height]</height>
-							<texture colordiffuse="dialog_bg2" fallback="DefaultFolder.png">$PARAM[icon]</texture>
-							<aspectratio>scale</aspectratio>
-							
-						</control>
-						<control type="textbox">
-							<left>47</left>
-							<top>25</top>
-							<width>254</width>
-							<height>70</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>font25_narrow</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<autoscroll delay="1300" time="1500" repeat="2000">$PARAM[focused]</autoscroll>
-						</control>
-					</control>
-				</itemlayout>
-				<focusedlayout width="337" height="340">
-					<control type="group">
-						<depth>DepthContentPopout</depth>
-						<left>70</left>
-						<animation type="Focus">
-							<effect type="zoom" start="100" end="106" time="200" tween="sine" easing="inout" center="245,60" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="106" end="100" time="200" tween="sine" easing="inout" center="245,60" />
-						</animation>
-						<control type="image">
-							<width>347</width>
-							<height>120</height>
-							<texture colordiffuse="button_focus2">masks/categorywidget-unfocused.png</texture>
-							<bordersize>20</bordersize>
-						</control>
-						<control type="image">
-							
-							<width>347</width>
-							<height>120</height>
-							<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
-							<bordersize>20</bordersize>
-							<include>Animation_FocusTextureFade</include>
-							<visible>Control.HasFocus($PARAM[list_id])</visible>
-						</control>
-						<control type="image">
-							<top>19</top>
-							<left>103.5</left>
-							<width>140</width>
-							<height>$PARAM[icon_height]</height>
-							<texture colordiffuse="dialog_bg2" fallback="DefaultFolder.png">$PARAM[icon]</texture>
-							<aspectratio>scale</aspectratio>
-							<visible>Control.HasFocus($PARAM[list_id])</visible>
-						</control>
-						<control type="textbox">
-							<left>47</left>
-							<top>25</top>
-							<width>254</width>
-							<height>70</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>font25_narrow</font>
-							<shadowcolor>text_shadow</shadowcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<autoscroll delay="1300" time="1500" repeat="2000">$PARAM[focused]</autoscroll>
-						</control>
-					</control>
-				</focusedlayout>
-				<content target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
-				<include condition="$PARAM[additional_movie_items]" content="MovieSubmenuItems" />
-				<include condition="$PARAM[additional_tvshow_items]" content="TVShowSubmenuItems" />
-			</control> -->
 		</definition>
 	</include>
 
@@ -968,12 +876,12 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
-						<animation type="Focus">
+						<!-- <animation type="Focus">
 							<effect type="zoom" start="100" end="106" time="200" tween="sine" easing="inout" center="210,170" />
 						</animation>
 						<animation type="Unfocus">
 							<effect type="zoom" start="106" end="100" time="200" tween="sine" easing="inout" center="210,170" />
-						</animation>
+						</animation> -->
 						<include content="InfoWallMusicLayout">
 							<param name="main_label" value="$PARAM[main_label]" />
 							<param name="single_label" value="$PARAM[single_label]" />
@@ -1115,12 +1023,12 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
-						<animation type="Focus">
+						<!-- <animation type="Focus">
 							<effect type="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="210,145" />
 						</animation>
 						<animation type="Unfocus">
 							<effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="210,145" />
-						</animation>
+						</animation> -->
 						<control type="image">
 							<width>279</width>
 							<height>297</height>
@@ -1268,12 +1176,12 @@
 					<control type="group">
 						<left>70</left>
 						<depth>DepthContentPopout</depth>
-						<animation type="Focus">
+						<!-- <animation type="Focus">
 							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="200,150" />
 						</animation>
 						<animation type="Unfocus">
 							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="200,150" />
-						</animation>
+						</animation> -->
 						<control type="image">
 							<left>0</left>
 							<top>20</top>
