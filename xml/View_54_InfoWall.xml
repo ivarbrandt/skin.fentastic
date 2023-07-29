@@ -66,7 +66,7 @@
 				<height>351</height>
 				<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
 				<bordersize>19</bordersize>
-				<visible>$PARAM[focused] + Control.IsVisible(54)</visible>
+				<visible>$PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]</visible>
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
 			<control type="image">
@@ -86,7 +86,7 @@
 				<height>351</height>
 				<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
 				<bordersize>19</bordersize>
-				<visible>$PARAM[focused] + [Control.HasFocus(14100) | ControlGroup(400).HasFocus]</visible>
+				<visible>$PARAM[focused] + [Control.HasFocus(14100) | ControlGroup(400).HasFocus | Control.HasFocus(450)]</visible>
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
 			<control type="image">
