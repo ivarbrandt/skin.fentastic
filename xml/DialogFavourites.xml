@@ -46,7 +46,6 @@
 				<itemlayout width="300" height="380">
 					<control type="group">
 						<top>10</top>
-						<!-- TODO Add focus conditon for Control 450 -->
 						<include content="InfoWallMusicLayout">
 							<param name="fallback_image" value="DefaultFavourites.png" />
 						</include>
