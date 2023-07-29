@@ -12,8 +12,8 @@
 	<include name="CategoryLabel">
 		<param name="visible">true</param>
 		<param name="item_treshold">0</param>
-		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title,[COLOR button_focus][B] » [/B][/COLOR]]</param>
-		<param name="label_focus_episodes">$INFO[Container($PARAM[list_id]).ListItem.TVShowTitle,[COLOR button_focus][B] » [/B][/COLOR]]$INFO[Container($PARAM[list_id]).ListItem.Title,[COLOR button_focus][B] » [/B][/COLOR]]</param>
+		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title,[COLOR button_focus][B] | [/B][/COLOR]]</param>
+		<param name="label_focus_episodes">$INFO[Container($PARAM[list_id]).ListItem.TVShowTitle,[COLOR button_focus][B] | [/B][/COLOR]]$INFO[Container($PARAM[list_id]).ListItem.Title,[COLOR button_focus][B] | [/B][/COLOR]]</param>
 		<definition>
 		<control type="group" id="$PARAM[list_id]665">
 			<left>75</left>
@@ -44,8 +44,8 @@
 	<include name="CategoryLabelWidget">
 		<param name="visible">true</param>
 		<param name="item_treshold">0</param>
-		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title,[COLOR button_focus][B] » [/B][/COLOR]]</param>
-		<param name="label_focus_episodes">$INFO[Container($PARAM[list_id]).ListItem.TVShowTitle,[COLOR button_focus][B] » [/B][/COLOR]]$INFO[Container($PARAM[list_id]).ListItem.Title,[COLOR button_focus][B] » [/B][/COLOR]]</param>
+		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title,[COLOR button_focus][B] | [/B][/COLOR]]</param>
+		<param name="label_focus_episodes">$INFO[Container($PARAM[list_id]).ListItem.TVShowTitle,[COLOR button_focus][B] | [/B][/COLOR]]$INFO[Container($PARAM[list_id]).ListItem.Title,[COLOR button_focus][B] | [/B][/COLOR]]</param>
 		<definition>
 			<control type="label" id="$PARAM[list_id]666">
 				<visible>!Container($PARAM[list_id]).IsUpdating</visible>
