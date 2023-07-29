@@ -26,6 +26,7 @@
 			<control type="label">
 				<label>$PARAM[label]</label>
 				<shadowcolor>text_shadow</shadowcolor>
+				<visible>!Control.HasFocus($PARAM[list_id])</visible>
 			</control>
 			<control type="label">
 				<label>$PARAM[label]$PARAM[label_focus]</label>
