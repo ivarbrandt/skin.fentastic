@@ -2,6 +2,12 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR button_focus]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
+- Added titles for movies/tvshows/episodes to widget labels
+- Added MPAA ratings to InfoPanel for movies/tvshows
+- Removed alternate InfoPanel
+- Other miscallaneous bug fixes
+
+[B][COLOR button_focus]Version 1.0.15[/COLOR][/B]
 - Small bug fix for TRAKT search widget
 
 [B][COLOR button_focus]Version 1.0.14[/COLOR][/B]
