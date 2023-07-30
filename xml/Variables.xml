@@ -695,9 +695,10 @@
 		<!-- MOVIES -->
 		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot) + String.IsEmpty(ListItem.Genre)] + String.IsEqual(ListItem.DBtype,movie)">$INFO[ListItem.Year]$INFO[ListItem.Mpaa,[COLOR button_focus][B] • [/B][/COLOR]]$INFO[ListItem.Genre,[COLOR button_focus][B] • [/B][/COLOR]]$INFO[ListItem.Director,[COLOR button_focus][B] • [/B][/COLOR]]$INFO[ListItem.Duration(h,[COLOR button_focus][B] • [/B][/COLOR], hr] $INFO[ListItem.Duration(m,, mins]$INFO[ListItem.EndTime,[COLOR button_focus][B] • [/B][/COLOR]$LOCALIZE[31080]: ][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>
 		<!-- SHOWS -->
-		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)] + String.IsEqual(ListItem.DBtype,tvshow)">$INFO[ListItem.Year]$INFO[ListItem.Mpaa,[COLOR button_focus][B] • [/B][/COLOR]]$INFO[ListItem.Studio,[COLOR button_focus][B] • [/B][/COLOR]]$INFO[ListItem.Genre,[COLOR button_focus][B] • [/B][/COLOR]]$INFO[ListItem.Duration(mins),[COLOR button_focus][B] • [/B][/COLOR], mins]$INFO[ListItem.Status,[COLOR button_focus][B] • [/B][/COLOR]][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>
+		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)] + String.IsEqual(ListItem.DBtype,tvshow)">$INFO[ListItem.Year]$INFO[ListItem.Mpaa,[COLOR button_focus][B] • [/B][/COLOR]]$INFO[ListItem.Studio,[COLOR button_focus][B] • [/B][/COLOR]]$INFO[ListItem.Genre,[COLOR button_focus][B] • [/B][/COLOR]]$INFO[ListItem.Duration(mins),[COLOR button_focus][B] • [/B][/COLOR], mins]$INFO[ListItem.Property(TotalSeasons),[COLOR button_focus][B] • [/B][/COLOR], seasons]$INFO[ListItem.Status,[COLOR button_focus][B] • [/B][/COLOR]][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>
 		<!-- SEASONS -->
 		<value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)] + String.IsEqual(ListItem.DBtype,season)">$INFO[ListItem.Genre][CR][CR]$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</value>
+	
 	</variable>
 
 	<!-- EPISODES -->
