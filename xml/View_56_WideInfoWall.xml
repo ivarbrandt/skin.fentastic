@@ -695,7 +695,7 @@
 				</control>
 				<!-- 6 -->
 				<control type="label">
-          <left>232</left>
+          <left>229</left>
           <top>-102</top>
 					<width>154</width>
 					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
