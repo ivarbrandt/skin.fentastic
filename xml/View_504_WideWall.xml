@@ -10,8 +10,8 @@
 			<control type="panel" id="504">
 				<left>-10</left>
 				<top>-20</top>
-				<width>103%</width>
-				<height>100%</height>
+				<width>102%</width>
+				<height>102%</height>
 				<onleft>9000</onleft>
 				<onright>531</onright>
 				<onup condition="Integer.IsGreater(Container.NumPages,1)">504</onup>
