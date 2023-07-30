@@ -385,7 +385,7 @@
 				<top>3</top>
 				<left>-4</left>
 				<width>461</width>
-				<height>352</height>
+				<height>351</height>
 				<texture colordiffuse="button_focus">masks/landscapeinfo.png</texture>
 				<bordersize>17</bordersize>
 				<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
@@ -408,8 +408,8 @@
 				<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
 				<left>0</left>
 				<top>10</top>
-				<width>347</width>
-				<height>212</height>
+				<width>453</width>
+				<height>277</height>
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
 				<aspectratio>keep</aspectratio>
 				<align>center</align>
@@ -419,9 +419,9 @@
 				<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 				<left>20</left>
 				<!-- 133 -->
-				<top>133</top>
-				<width>307</width>
-				<height>70</height>
+				<top>173</top>
+				<width>413</width>
+				<height>91</height>
 				<texture>overlays/overlayfade1.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
@@ -429,9 +429,9 @@
 				<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + String.IsEqual(ListItem.DBType,movie) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
 				<left>20</left>
 				<!-- 133 -->
-				<top>133</top>
-				<width>307</width>
-				<height>70</height>
+				<top>173</top>
+				<width>413</width>
+				<height>91</height>
 				<texture>overlays/overlayfade1.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
@@ -441,16 +441,16 @@
 				<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + String.IsEqual(ListItem.DBType,tvshow)</visible>
 				<left>20</left>
 				<!-- 133 -->
-				<top>133</top>
-				<width>307</width>
-				<height>70</height>
+				<top>173</top>
+				<width>413</width>
+				<height>91</height>
 				<texture>overlays/overlayfade1.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 
 			<control type="label">
-					<left>117</left>
-					<top>171</top>
+					<left>220</left>
+					<top>228</top>
 					<width>169</width>
 					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
 					<font>font20_title</font>
@@ -460,8 +460,8 @@
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
 				<control type="image">
-					<left>293</left>
-					<top>174</top>
+					<left>396</left>
+					<top>231</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>lists/played-total.png</texture>
@@ -473,8 +473,8 @@
 
 
 			<control type="label">
-				<left>131</left>
-				<top>173</top>
+				<left>231</left>
+				<top>230</top>
 				<width>191</width>
 				<label>$PARAM[thumb_label]</label>
 				<font>font20_title</font>
@@ -484,14 +484,14 @@
 			<control type="image">
 				<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)] + [Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)]</visible>
 				<left>20</left>
-				<top>122</top>
-				<width>80</width>
-				<height>80</height>
+				<top>160</top>
+				<width>104</width>
+				<height>104</height>
 				<texture>overlays/overlay-bg1.png</texture>
 			</control>
 			<control type="image">
-				<left>20</left>
-				<top>170</top>
+				<left>23</left>
+				<top>227</top>
 				<width>32</width>
 				<height>32</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
@@ -511,8 +511,8 @@
 				<visible>!Window.IsActive(videos)</visible>
 				<control type="label">
 					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
-					<left>15%</left>
-					<top>205</top>
+					<left>10%</left>
+					<top>265</top>
 					<width>100%</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
@@ -522,8 +522,8 @@
 				</control>
 				<control type="label">
 					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
-					<left>15%</left>
-					<top>235</top>
+					<left>11%</left>
+					<top>295</top>
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10</font>
@@ -533,8 +533,8 @@
 				</control>
 				<control type="label">
 					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
-					<left>15%</left>
-					<top>219</top>
+					<left>11%</left>
+					<top>280</top>
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font12</font>
@@ -544,8 +544,8 @@
 				</control>
 				<control type="label">
 					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
-					<left>15%</left>
-					<top>219</top>
+					<left>11%</left>
+					<top>280</top>
 					<width>100%</width>
 					<label>$PARAM[networks_label]</label>
 					<font>font12</font>
@@ -555,25 +555,26 @@
 				</control>
 			</control>
 			<control type="label">
-				<left>51</left>
-				<top>173</top>
+				<left>54</left>
+				<!-- 173 -->
+				<top>230</top>
 				<width>100</width>
-				<label>$INFO[ListItem.Property(WatchedProgress)]%</label>
+				<label>$INFO[ListItem.Property(WatchedProgress)]</label>
 				<font>font20_title</font>
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>left</align>
 				<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,episode)] + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
 			</control>
 			<control type="group">
-				<left>280</left>
+				<left>350</left>
 				<top>12</top>
 				<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">
 					<param name="left">-72</param>
-					<param name="top">17</param>
-					<param name="width">119</param>
-					<param name="height">119</param>
-					<param name="label-left">-6</param>
-					<param name="label-top">22</param>
+					<param name="top">15</param>
+					<param name="width">155</param>
+					<param name="height">155</param>
+					<param name="label-left">26</param>
+					<param name="label-top">25</param>
 					<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
 				</include>
 			</control>
