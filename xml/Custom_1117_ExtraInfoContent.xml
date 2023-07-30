@@ -6,6 +6,7 @@
 - Added MPAA ratings to InfoPanel for movies/tvshows/episodes
 - Added studios to InfoPanel for tvshows/episodes
 - Added duration to InfoPanel for movies/episodes
+- Added total seasons to InfoPanel for tvshows
 - Added Ends at: to InfoPanel for episodes
 - Removed alternate InfoPanel
 - Miscellaneous bug fixes
