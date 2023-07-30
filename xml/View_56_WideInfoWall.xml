@@ -860,8 +860,8 @@
 				<focusedlayout height="301" width="430" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<animation effect="zoom" start="100" end="101" time="200" tween="sine" easing="inout" center="240,130">Focus</animation>
-						<animation effect="zoom" start="101" end="100" time="200" tween="sine" easing="inout" center="240,130">UnFocus</animation>
+						<!-- <animation effect="zoom" start="100" end="101" time="200" tween="sine" easing="inout" center="240,130">Focus</animation>
+						<animation effect="zoom" start="101" end="100" time="200" tween="sine" easing="inout" center="240,130">UnFocus</animation> -->
 						<left>44</left>
 						<top>110</top>
 						<include content="WideInfoWallEpisodeLayout">
