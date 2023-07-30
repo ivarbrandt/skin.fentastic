@@ -1117,7 +1117,7 @@
 					<control type="group">
 						<left>64</left>
 						<top>110</top>
-						<include content="InfoWallEpisodeLayout">
+						<include content="BigInfoWallEpisodeLayout">
 							<param name="focused" value="false" />
 							<param name="thumb_label" value="$INFO[ListItem.Label2]" />
 						</include>
@@ -1130,7 +1130,7 @@
 						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="180,100">UnFocus</animation>
 						<left>64</left>
 						<top>110</top>
-						<include content="InfoWallEpisodeLayout">
+						<include content="BigInfoWallEpisodeLayout">
 							<param name="focused" value="true" />
 							<param name="thumb_label" value="$INFO[ListItem.Label2]" />
 						</include>

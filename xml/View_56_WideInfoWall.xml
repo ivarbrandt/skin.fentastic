@@ -677,6 +677,30 @@
 					<visible>$PARAM[focused] + String.IsEqual(ListItem.DBtype,episode) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0) + [Control.IsVisible(56) | Control.IsVisible(504)]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
+				<control type="label">
+					<left>45</left>
+					<top>261</top>
+					<width>357</width>
+					<label>$INFO[ListItem.Label]</label>
+					<!-- <label>hello there how are you doing today?</label> -->
+					<font>font10</font>
+          <textcolor>FFCCCCCC</textcolor>
+					<shadowcolor>text_shadow</shadowcolor>
+					<align>center</align>
+					<visible>!$PARAM[focused] + [Control.IsVisible(56) | Control.IsVisible(504)]</visible>
+				</control>
+				<control type="label">
+					<left>45</left>
+					<top>261</top>
+					<width>357</width>
+					<label>$INFO[ListItem.Label]</label>
+					<!-- <label>hello there how are you doing today?</label> -->
+					<font>font10</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<align>center</align>
+					<visible>$PARAM[focused] + [Control.IsVisible(56) | Control.IsVisible(504)]</visible>
+					<scroll>true</scroll>
+				</control>
 
 
 			</control>
@@ -783,11 +807,11 @@
 		<control type="group">
 			<include>OpenClose_Right</include>
 			<!-- <left>100</left> -->
-			<top>0</top>
+			<top>-15</top>
 			<visible>Control.IsVisible(56)</visible>
 			<include>Visible_Right</include>
 			<control type="panel" id="56">
-				<left>565</left>
+				<left>555</left>
 				<top>0</top>
 				<right>15</right>
 				<height>100%</height>
@@ -801,23 +825,23 @@
 				<pagecontrol>531</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(images) | Container.Content(videos) | Container.Content(games)</visible>
-				<itemlayout height="217" width="327" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
+				<itemlayout height="305" width="440" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<left>30</left>
 						<top>120</top>
-						<include content="WideInfoWallMovieLayout">
+						<include content="BigWideInfoWallMovieLayout">
 						<param name="focused" value="false" />
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="217" width="327" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
+				<focusedlayout height="305" width="440" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>30</left>
-						<animation effect="zoom" start="100" end="101" time="200" tween="sine" easing="inout" center="240,130">Focus</animation>
-						<animation effect="zoom" start="101" end="100" time="200" tween="sine" easing="inout" center="240,130">UnFocus</animation>
+						<!-- <animation effect="zoom" start="100" end="101" time="200" tween="sine" easing="inout" center="240,130">Focus</animation>
+						<animation effect="zoom" start="101" end="100" time="200" tween="sine" easing="inout" center="240,130">UnFocus</animation> -->
 						<top>120</top>
-						<include content="WideInfoWallMovieLayout">
+						<include content="BigWideInfoWallMovieLayout">
 							<param name="focused" value="true" />
 						</include>
 					</control>

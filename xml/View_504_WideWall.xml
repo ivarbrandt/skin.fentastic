@@ -8,8 +8,8 @@
 			<visible>Control.IsVisible(504)</visible>
 			<include>Visible_Right</include>
 			<control type="panel" id="504">
-				<left>-60</left>
-				<top>0</top>
+				<left>-10</left>
+				<top>-20</top>
 				<width>103%</width>
 				<height>100%</height>
 				<onleft>9000</onleft>
@@ -22,21 +22,21 @@
 				<pagecontrol>531</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos) | Container.Content(addons) | Container.Content(images) | Container.Content(videos) | Container.Content(games) | Container.Content(favourites)</visible>
-				<itemlayout height="217" width="318" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
+				<itemlayout height="305" width="460" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<top>130</top>
-						<include content="WideInfoWallMovieLayout">
+						<include content="BigWideInfoWallMovieLayout">
 						<param name="focused" value="false" />
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="217" width="318" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
+				<focusedlayout height="305" width="460" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<animation effect="zoom" start="100" end="101" time="200" tween="sine" easing="inout" center="240,130">Focus</animation>
-						<animation effect="zoom" start="101" end="100" time="200" tween="sine" easing="inout" center="240,130">UnFocus</animation>
+						<!-- <animation effect="zoom" start="100" end="101" time="200" tween="sine" easing="inout" center="240,130">Focus</animation>
+						<animation effect="zoom" start="101" end="100" time="200" tween="sine" easing="inout" center="240,130">UnFocus</animation> -->
 						<top>130</top>
-						<include content="WideInfoWallMovieLayout">
+						<include content="BigWideInfoWallMovieLayout">
 							<param name="focused" value="true" />
 						</include>
 					</control>
