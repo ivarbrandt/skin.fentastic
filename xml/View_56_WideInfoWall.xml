@@ -185,7 +185,7 @@
 				<left>51</left>
 				<top>195</top>
 				<width>100</width>
-				<label>$INFO[ListItem.Property(WatchedProgress)]%</label>
+				<label>$INFO[ListItem.Property(WatchedProgress)]</label>
 				<font>font20_title</font>
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>left</align>
