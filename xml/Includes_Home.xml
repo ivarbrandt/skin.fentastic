@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+
 	<include name="WidgetGroupListCommon">
 		<orientation>vertical</orientation>
 		<height>100%</height>
@@ -9,6 +10,7 @@
 		<ondown>20001</ondown>
 		<usecontrolcoords>true</usecontrolcoords>
 	</include>
+
 	<include name="CategoryLabel">
 		<param name="visible">true</param>
 		<param name="item_treshold">0</param>
@@ -41,6 +43,7 @@
 		</control>
 		</definition>
 	</include>
+
 	<include name="CategoryLabelWidget">
 		<param name="visible">true</param>
 		<param name="item_treshold">0</param>
@@ -85,6 +88,7 @@
 			</control>
 		</definition>
 	</include>
+
 	<include name="PVRWidget">
 			<control type="image">
 					<top>80</top>
@@ -121,6 +125,7 @@
 					<shadowcolor>black</shadowcolor>
 			</control>
 	</include>
+
 	<include name="WidgetListPoster">
 		<param name="onclick_condition">false</param>
 		<definition>
@@ -177,6 +182,62 @@
 		</definition>
 	</include>
 
+	<include name="WidgetListBigPoster">
+		<param name="onclick_condition">false</param>
+		<definition>
+			<include content="CategoryLabel">
+				<param name="label">$PARAM[widget_header]</param>
+				<param name="list_id" value="$PARAM[list_id]"/>
+			</include>
+			<include content="BusyListSpinner">
+				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="posy" value="240"/>
+			</include>
+			<control type="fixedlist" id="$PARAM[list_id]">
+				<left>0</left>
+				<top>115</top>
+				<onright>$PARAM[list_id]</onright>
+				<orientation>horizontal</orientation>
+				<movement>4</movement>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<right>0</right>
+				<height>465</height>
+				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
+				<include content="WidgetListCommon">
+					<param name="list_id" value="$PARAM[list_id]"/>
+				</include>
+				<itemlayout width="269" height="393">
+					<control type="group">
+						<left>68</left>
+						<top>15</top>
+						<include content="BigInfoWallMovieLayout">
+						<param name="focused" value="false" />
+						<param name="list_id" value="$PARAM[list_id]" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="269" height="393">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>68</left>
+						<top>15</top>
+						<!-- <animation type="Focus">
+							<effect type="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="185,162" />
+						</animation>
+						<animation type="Unfocus">
+							<effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="185,162" />
+						</animation> -->
+						<include content="BigInfoWallMovieLayout">
+						<param name="focused" value="true" />
+						<param name="list_id" value="$PARAM[list_id]" />
+						</include>
+					</control>
+				</focusedlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[limit]">$PARAM[content_path]</content>
+			</control>
+		</definition>
+	</include>
+
 	<include name="WidgetListPosterStacked">
     <definition>
       <include content="CategoryLabelWidget">
@@ -219,6 +280,58 @@
             <effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="185,162" />
             </animation> -->
             <include content="InfoWallMovieLayout">
+            <param name="focused" value="true" />
+						<param name="list_id" value="$PARAM[list_id]" />
+            </include>
+          </control>
+        </focusedlayout>
+        <content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" limit="$PARAM[limit]" target="$PARAM[widget_target]">$PARAM[content_path]</content>
+      </control>
+    </definition>
+  </include>
+
+	<include name="WidgetListBigPosterStacked">
+    <definition>
+      <include content="CategoryLabelWidget">
+        <param name="label">$PARAM[widget_header]</param>
+        <param name="list_id" value="$PARAM[list_id]" />
+      </include>
+      <include content="BusyListSpinnerWidget">
+        <param name="list_id" value="$PARAM[list_id]" />
+      </include>
+      <control type="fixedlist" id="$PARAM[list_id]">
+        <left>0</left>
+        <top>115</top> 
+        <right>0</right>
+        <height>465</height>
+				<onright>$PARAM[list_id]</onright>
+				<orientation>horizontal</orientation>
+				<movement>4</movement>
+        <include content="WidgetListCommonStacked">
+          <param name="list_id" value="$PARAM[list_id]" />
+        </include>
+        <itemlayout width="269" height="393">
+          <control type="group">
+            <left>68</left>
+            <top>15</top>
+            <include content="BigInfoWallMovieLayout">
+            <param name="focused" value="false" />
+						<param name="list_id" value="$PARAM[list_id]" />
+            </include>
+          </control>
+        </itemlayout>
+        <focusedlayout width="269" height="393">
+          <control type="group">
+            <depth>DepthContentPopout</depth>
+            <left>68</left>
+            <top>15</top>
+            <!-- <animation type="Focus">
+            <effect type="zoom" start="100" end="107" time="200" tween="sine" easing="inout" center="185,162" />
+            </animation>
+            <animation type="Unfocus">
+            <effect type="zoom" start="107" end="100" time="200" tween="sine" easing="inout" center="185,162" />
+            </animation> -->
+            <include content="BigInfoWallMovieLayout">
             <param name="focused" value="true" />
 						<param name="list_id" value="$PARAM[list_id]" />
             </include>
@@ -285,6 +398,62 @@
 		</definition>
 	</include>
 
+	<include name="WidgetListBigLandscape">
+		<param name="onclick_condition">false</param>
+		<definition>
+			<include content="CategoryLabel">
+				<param name="label">$PARAM[widget_header]</param>
+				<param name="list_id" value="$PARAM[list_id]"/>
+			</include>
+			<include content="BusyListSpinner">
+				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="posy" value="185"/>
+			</include>
+			<control type="fixedlist" id="$PARAM[list_id]">
+				<left>0</left>
+				<top>110</top>
+				<onright>$PARAM[list_id]</onright>
+				<orientation>horizontal</orientation>
+				<movement>2</movement>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<right>0</right>
+				<height>366</height>
+				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
+				<include content="WidgetListCommon">
+					<param name="list_id" value="$PARAM[list_id]"/>
+				</include>
+				<itemlayout width="448" height="347">
+					<control type="group">
+						<left>68</left>
+						<top>15</top>
+						<include content="BigWideInfoWallMovieLayout">
+						<param name="focused" value="false" />
+						<param name="list_id" value="$PARAM[list_id]" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="448" height="347">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>68</left>
+						<top>15</top>
+						<!-- <animation type="Focus">
+							<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="240,111" />
+						</animation>
+						<animation type="Unfocus">
+							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="240,111" />
+						</animation> -->
+						<include content="BigWideInfoWallMovieLayout">
+						<param name="focused" value="true" />
+						<param name="list_id" value="$PARAM[list_id]" />
+						</include>
+					</control>
+				</focusedlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[limit]">$PARAM[content_path]</content>
+			</control>
+		</definition>
+	</include>
+
 	<include name="WidgetListLandscapeStacked">
 		<param name="onclick_condition">false</param>
 		<definition>
@@ -329,6 +498,60 @@
 							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="240,111" />
 						</animation> -->
 						<include content="WideInfoWallMovieLayout">
+						<param name="focused" value="true" />
+						<param name="list_id" value="$PARAM[list_id]" />
+						</include>
+					</control>
+				</focusedlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[limit]">$PARAM[content_path]</content>
+			</control>
+		</definition>
+	</include>
+
+	<include name="WidgetListBigLandscapeStacked">
+		<param name="onclick_condition">false</param>
+		<definition>
+			<include content="CategoryLabelWidget">
+				<param name="label">$PARAM[widget_header]</param>
+				<param name="list_id" value="$PARAM[list_id]"/>
+			</include>
+			<include content="BusyListSpinnerWidget">
+				<param name="list_id" value="$PARAM[list_id]"/>
+			</include>
+			<control type="fixedlist" id="$PARAM[list_id]">
+				<left>0</left>
+				<top>110</top>
+				<onright>$PARAM[list_id]</onright>
+				<orientation>horizontal</orientation>
+				<movement>2</movement>
+				<right>0</right>
+				<height>366</height>
+				<include content="WidgetListCommonStacked">
+					<param name="list_id" value="$PARAM[list_id]"/>
+				</include>
+				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
+				<itemlayout width="448" height="347">
+					<control type="group">
+						<left>68</left>
+						<top>15</top>
+						<include content="BigWideInfoWallMovieLayout">
+						<param name="focused" value="false" />
+						<param name="list_id" value="$PARAM[list_id]" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="448" height="347">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>68</left>
+						<top>15</top>
+						<!-- <animation type="Focus">
+							<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="240,111" />
+						</animation>
+						<animation type="Unfocus">
+							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="240,111" />
+						</animation> -->
+						<include content="BigWideInfoWallMovieLayout">
 						<param name="focused" value="true" />
 						<param name="list_id" value="$PARAM[list_id]" />
 						</include>
@@ -412,6 +635,79 @@
 		</definition>
 	</include>
 
+	<include name="WidgetListBigEpisodes">
+		<param name="main_label">$INFO[ListItem.Title]</param>
+		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
+		<param name="networks_label">$INFO[ListItem.Label]</param>
+		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
+		<param name="sortby"></param>
+		<param name="visible">True</param>
+		<param name="sortorder">ascending</param>
+		<!-- <param name="widget_limit">10</param> -->
+		<definition>
+			<include content="CategoryLabel">
+				<param name="label">$PARAM[widget_header]</param>
+				<param name="list_id" value="$PARAM[list_id]"/>
+			</include>
+			<include content="BusyListSpinner">
+				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="posy" value="210"/>
+			</include>
+			<!-- Widget Height Spacing -->
+			<control type="fixedlist" id="$PARAM[list_id]">
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<left>0</left>
+				<top>101</top>
+				<right>0</right>
+				<height>441</height>
+				<onright>$PARAM[list_id]</onright>
+				<orientation>horizontal</orientation>
+				<movement>2</movement>
+				<include content="WidgetListCommon">
+					<param name="list_id" value="$PARAM[list_id]"/>
+				</include>
+				<visible>$PARAM[visible]</visible>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+				<itemlayout width="448" height="550">
+					<control type="group">
+						<left>70</left>
+						<top>5</top>
+						<include content="BigInfoWallEpisodeLayout">
+							<param name="focused" value="false" />
+							<param name="list_id" value="$PARAM[list_id]" />
+							<param name="main_label" value="$PARAM[main_label]" />
+							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="networks_label" value="$PARAM[networks_label]"/>
+							<param name="thumb_label" value="$PARAM[thumb_label]" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="448" height="550">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>70</left>
+						<top>5</top>
+						<!-- <animation type="Focus">
+							<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="245,150" />
+						</animation>
+						<animation type="Unfocus">
+							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="245,150" />
+						</animation> -->
+						<include content="BigInfoWallEpisodeLayout">
+							<param name="focused" value="true" />
+							<param name="list_id" value="$PARAM[list_id]" />
+							<param name="main_label" value="$PARAM[main_label]" />
+							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="networks_label" value="$PARAM[networks_label]"/>
+							<param name="thumb_label" value="$PARAM[thumb_label]" />
+						</include>
+					</control>
+				</focusedlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[limit]">$PARAM[content_path]</content>
+			</control>
+		</definition>
+	</include>
+
 	<include name="WidgetListEpisodesStacked">
 		<param name="main_label">$INFO[ListItem.Title]</param>
 		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
@@ -468,6 +764,76 @@
 							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="245,150" />
 						</animation> -->
 						<include content="InfoWallEpisodeLayout">
+							<param name="focused" value="true" />
+							<param name="list_id" value="$PARAM[list_id]" />
+							<param name="main_label" value="$PARAM[main_label]" />
+							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="networks_label" value="$PARAM[networks_label]"/>
+							<param name="thumb_label" value="$PARAM[thumb_label]" />
+						</include>
+					</control>
+				</focusedlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[widget_target]" limit="$PARAM[limit]">$PARAM[content_path]</content>
+			</control>
+		</definition>
+	</include>
+
+	<include name="WidgetListBigEpisodesStacked">
+		<param name="main_label">$INFO[ListItem.Title]</param>
+		<param name="sub_label">$INFO[ListItem.TVShowTitle]</param>
+		<param name="networks_label">$INFO[ListItem.Label]</param>
+		<param name="thumb_label">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</param>
+		<param name="sortby"></param>
+		<param name="visible">True</param>
+		<param name="sortorder">ascending</param>
+		<!-- <param name="widget_limit">10</param> -->
+		<definition>
+			<include content="CategoryLabelWidget">
+				<param name="label">$PARAM[widget_header]</param>
+				<param name="list_id" value="$PARAM[list_id]"/>
+			</include>
+			<include content="BusyListSpinnerWidget">
+				<param name="list_id" value="$PARAM[list_id]"/>
+			</include>
+			<!-- Widget Height Spacing -->
+			<control type="fixedlist" id="$PARAM[list_id]">
+				<left>0</left>
+				<top>101</top>
+				<right>0</right>
+				<height>441</height>
+				<onright>$PARAM[list_id]</onright>
+				<orientation>horizontal</orientation>
+				<movement>2</movement>
+				<include content="WidgetListCommonStacked">
+					<param name="list_id" value="$PARAM[list_id]"/>
+				</include>
+				<visible>$PARAM[visible]</visible>
+				<itemlayout width="448" height="550">
+					<control type="group">
+						<left>70</left>
+						<top>5</top>
+						<include content="BigInfoWallEpisodeLayout">
+							<param name="focused" value="false" />
+							<param name="list_id" value="$PARAM[list_id]" />
+							<param name="main_label" value="$PARAM[main_label]" />
+							<param name="sub_label" value="$PARAM[sub_label]" />
+							<param name="networks_label" value="$PARAM[networks_label]"/>
+							<param name="thumb_label" value="$PARAM[thumb_label]" />
+						</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="448" height="550">
+					<control type="group">
+						<depth>DepthContentPopout</depth>
+						<left>70</left>
+						<top>5</top>
+						<!-- <animation type="Focus">
+							<effect type="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="245,150" />
+						</animation>
+						<animation type="Unfocus">
+							<effect type="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="245,150" />
+						</animation> -->
+						<include content="BigInfoWallEpisodeLayout">
 							<param name="focused" value="true" />
 							<param name="list_id" value="$PARAM[list_id]" />
 							<param name="main_label" value="$PARAM[main_label]" />
@@ -911,6 +1277,7 @@
 			</item>
 		</content>
 	</include>
+	
 	<include name="TVShowSubmenuItems">
 		<content>
 			<item>
@@ -921,6 +1288,7 @@
 			</item>
 		</content>
 	</include>
+
 	<include name="WidgetListPVR">
 		<param name="item_treshold">0</param>
 		<param name="icon">$INFO[ListItem.Icon]</param>
@@ -1107,6 +1475,7 @@
 			</control>
 		</definition>
 	</include>
+
 	<include name="WeatherWidget">
 		<param name="width">266</param>
 		<definition>
@@ -1235,6 +1604,7 @@
 			</control>
 		</definition>
 	</include>
+
 	<include name="HourlyItems">
 		<content>
 			<item>
@@ -1316,6 +1686,7 @@
 			</include>
 		</content>
 	</include>
+
 	<include name="DailyItems">
 		<content>
 			<item>
@@ -1388,6 +1759,7 @@
 			</include>
 		</content>
 	</include>
+
 	<include name="WeatherHourlyItem">
 		<item>
 			<label>$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Time)]</label>
@@ -1402,6 +1774,7 @@
 			<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item_index].Outlook))</visible>
 		</item>
 	</include>
+
 	<include name="WeatherDailyItem">
 		<item>
 			<label>$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDay)]</label>
@@ -1417,6 +1790,7 @@
 			<visible>!String.IsEmpty(Window(weather).Property(Daily.IsFetched)) + !String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_index].Outlook))</visible>
 		</item>
 	</include>
+
 	<include name="WeatherDayItem">
 		<item>
 			<label>$INFO[Window(weather).Property(Day$PARAM[item_index].Title)]</label>
@@ -1432,6 +1806,7 @@
 			<visible>String.IsEmpty(Window(weather).Property(Daily.IsFetched)) + !String.IsEmpty(Window(weather).Property(Day$PARAM[item_index].Outlook))</visible>
 		</item>
 	</include>
+
 	<include name="WeatherMapItem">
 		<control type="group" id="700$PARAM[item_id]">
 			<height>1110</height>
@@ -1500,6 +1875,7 @@
 			<visible>Weather.IsFetched + !String.IsEmpty(Window(weather).Property(Map.$PARAM[item_id].Area)) + !String.IsEmpty(Window(weather).Property(Map.IsFetched))</visible>
 		</control>
 	</include>
+
 	<include name="WidgetListCommon">
 		<scrolltime tween="cubic" easing="out">500</scrolltime>
 		<orientation>horizontal</orientation>
@@ -1512,6 +1888,7 @@
 		<onback>SetFocus($PARAM[list_id],0,absolute)</onback>
 		<!-- <preloaditems>2</preloaditems> -->
 	</include>
+
 	<include name="WidgetListCommonStacked">
     <scrolltime tween="cubic" easing="out">500</scrolltime>
     <orientation>horizontal</orientation>
@@ -1522,6 +1899,7 @@
     <onback>SetFocus($PARAM[list_id],0,absolute)</onback>
     <!-- <preloaditems>2</preloaditems> -->
   </include>
+
 	<include name="BusyListSpinner">
 		<param name="posy">160</param>
 		<param name="posx">180</param>
@@ -1550,6 +1928,7 @@
 			</control>
 		</definition>
 	</include>
+
   <include name="BusyListSpinnerWidget">
     <param name="posy">75</param>
     <param name="visible">true</param>
@@ -1576,6 +1955,7 @@
       </control>
     </definition>
   </include>
+
 	<include name="WidgetScrollbar">
 		<control type="group">
 			<right>0</right>
@@ -1598,4 +1978,5 @@
 			</control>
 		</control>
 	</include>
+
 </includes>
