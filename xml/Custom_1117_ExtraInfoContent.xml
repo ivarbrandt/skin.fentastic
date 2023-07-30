@@ -2,12 +2,14 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR button_focus]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
+- Added BigPoster, BigLandscape, and BigLandscapeInfo widget display types
 - Added titles for movies/tvshows/episodes to widget labels
 - Added MPAA ratings to InfoPanel for movies/tvshows/episodes
 - Added studios to InfoPanel for tvshows/episodes
 - Added duration to InfoPanel for movies/episodes
 - Added total seasons to InfoPanel for tvshows
 - Added Ends at: to InfoPanel for episodes
+- Added percent progress to Landscape widgets for episodes
 - Removed alternate InfoPanel
 - Miscellaneous bug fixes
 
