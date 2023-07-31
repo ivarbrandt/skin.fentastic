@@ -4,6 +4,12 @@
 		<animation effect="fade" start="0" end="100" time="200" tween="sine">Focus</animation>
 		<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 	</include>
+	<include name="FocusBounce">
+		<animation type="Focus" condition="!Skin.HasSetting(NoFocusAnimations)" reversible="false">
+			<effect type="zoom" end="105" time="75" tween="sine" easing="out" center="auto" />
+			<effect type="zoom" end="95" time="225" tween="sine" delay="100" easing="out" center="auto" />
+		</animation>
+	</include>
 	<include name="Animation_DialogPopupOpenClose">
 		<animation type="WindowOpen" reversible="false">
 			<effect type="zoom" start="80" end="100" center="50%,50%" delay="160" tween="back" time="240" />

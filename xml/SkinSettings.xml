@@ -199,6 +199,12 @@
 					<selected>Skin.HasSetting(category_widget_display_delay)</selected>
 					<onclick>Skin.ToggleSetting(category_widget_display_delay)</onclick>
 				</control>
+				<control type="radiobutton" id="6373">
+					<label>Enable focus animations</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(NoFocusAnimations)</selected>
+					<onclick>Skin.ToggleSetting(NoFocusAnimations)</onclick>
+				</control>
 				<!-- SEARCH OPTIONS -->
 				<control type="radiobutton" id="638">
 					<label>Enable search results window</label>

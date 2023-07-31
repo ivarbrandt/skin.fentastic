@@ -942,6 +942,7 @@
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
+							<include>FocusBounce</include>
 							<width>347</width>
 							<height>120</height>
 							<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
@@ -1074,6 +1075,7 @@
 									<bordersize>20</bordersize>
 								</control>
 								<control type="image">
+									<include>FocusBounce</include>
 									<width>347</width>
 									<height>120</height>
 									<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
@@ -1151,6 +1153,7 @@
 						<align>center</align>
 						<onleft>9000</onleft>
 						<control type="button" id="$PARAM[button_id]">
+							<include>FocusBounce</include>
 							<width>auto</width>
 							<height>75</height>
 							<label>$PARAM[button_label]</label>
@@ -1162,6 +1165,7 @@
 							<visible>$PARAM[visible_1]</visible>
 						</control>
 						<control type="button" id="$PARAM[button_id]568">
+							<include>FocusBounce</include>
 							<width>auto</width>
 							<height>75</height>
 							<label>$PARAM[button2_label]</label>
@@ -1174,6 +1178,7 @@
 							<visible>$PARAM[visible_2] + Window.IsActive(home)</visible>
 						</control>
 						<control type="button" id="$PARAM[button_id]569">
+							<include>FocusBounce</include>
 							<width>auto</width>
 							<height>75</height>
 							<label>$PARAM[button3_label]</label>
@@ -1403,6 +1408,7 @@
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
+							<include>FocusBounce</include>
 							<width>279</width>
 							<height>297</height>
 							<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
@@ -1559,6 +1565,7 @@
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
+							<include>FocusBounce</include>
 							<left>0</left>
 							<top>20</top>
 							<width>254</width>

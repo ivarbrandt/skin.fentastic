@@ -143,6 +143,7 @@
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
+				<include>FocusBounce</include>
 				<top>6</top>
 				<left>-4</left>
 				<width>424</width>
@@ -302,6 +303,7 @@
 					<param name="width" value="270"/>
 				</include>
 				<control type="image">
+					<include>FocusBounce</include>
           <left>-4</left>
 					<top>-14</top>
           <width>354</width>
@@ -312,6 +314,7 @@
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
 				<control type="image">
+					<include>FocusBounce</include>
           <left>-4</left>
 					<top>-14</top>
           <width>354</width>
@@ -558,6 +561,7 @@
 					<param name="width" value="363"/>
 				</include>
 				<control type="image">
+					<include>FocusBounce</include>
           <left>-4</left>
 					<top>-14</top>
           <width>462</width>
@@ -568,6 +572,7 @@
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
 				<control type="image">
+					<include>FocusBounce</include>
           <left>-4</left>
 					<top>-14</top>
           <width>462</width>
