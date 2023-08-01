@@ -173,6 +173,7 @@
 		<param name="visible">true</param>
 		<definition>
 			<control type="radiobutton" id="$PARAM[control_id]">
+				<include>FocusBounce</include>
 				<width>120</width>
 				<height>$PARAM[height]</height>
 				<align>center</align>
