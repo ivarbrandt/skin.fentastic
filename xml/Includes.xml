@@ -1599,12 +1599,12 @@
 		<focusedlayout height="230" width="400">
 			<control type="group">
 				<depth>DepthContentPopout</depth>
-				<animation type="Focus" reversible="false">
+				<!-- <animation type="Focus" reversible="false">
 					<effect type="zoom" center="200,140" start="100" end="105" time="250" tween="sine" />
 				</animation>
 				<animation type="UnFocus" reversible="false">
 					<effect type="zoom" center="200,140" start="105" end="100" time="250" tween="sine" />
-				</animation>
+				</animation> -->
 				<control type="image">
 					<left>-5</left>
 					<width>410</width>
@@ -1614,6 +1614,7 @@
 					<bordersize>20</bordersize>
 				</control>
 				<control type="image">
+					<include>FocusBounce</include>
 					<left>-5</left>
 					<width>410</width>
 					<height>270</height>
