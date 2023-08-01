@@ -95,8 +95,8 @@
 				</itemlayout>
 				<focusedlayout height="390" width="354">
 					<control type="group">
-						<animation effect="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="160,190">Focus</animation>
-						<animation effect="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="160,190">UnFocus</animation>
+						<!-- <animation effect="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="160,190">Focus</animation>
+						<animation effect="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="160,190">UnFocus</animation> -->
 						<control type="image">
 							<top>5</top>
 							<width>320</width>
@@ -106,6 +106,7 @@
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
+							<include>FocusBounce</include>
 							<top>5</top>
 							<width>320</width>
 							<height>380</height>
