@@ -793,28 +793,29 @@
 									<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
 									<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasActiveModalDialog">Conditional</animation>
 								</control>
-								<control type="image">
+								<!-- <control type="image">
 									<left>5</left>
 									<top>1</top>
 									<width>95</width>
 									<height>95</height>
 									<texture colordiffuse="button_focus2">$INFO[ListItem.Art(thumb)]</texture>
 									<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
-								</control>
+								</control> -->
 							</control>
 							<!-- SideMenu Focused Icons -->
-							<control type="image">
+							<!-- <control type="image">
 								<left>5</left>
 								<top>1</top>
 								<width>95</width>
 								<height>95</height>
 								<texture>$INFO[ListItem.Art(thumb)]</texture>
-							</control>
+							</control> -->
 							<control type="label">
-								<left>104</left>
+								<left>40</left>
 								<top>0</top>
 								<height>95</height>
 								<width>355</width>
+								<align>center</align>
 								<aligny>center</aligny>
 								<font>font37</font>
 								<label>$INFO[ListItem.Label]</label>
@@ -822,18 +823,19 @@
 							</control>
 						</focusedlayout>
 						<itemlayout height="95">
-							<control type="image">
+							<!-- <control type="image">
 								<left>5</left>
 								<top>1</top>
 								<width>95</width>
 								<height>95</height>
 								<texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
-							</control>
+							</control> -->
 							<control type="label">
-								<left>104</left>
+								<left>40</left>
 								<top>0</top>
 								<height>95</height>
 								<width>355</width>
+								<align>center</align>
 								<aligny>center</aligny>
 								<font>font37</font>
 								<label>$INFO[ListItem.Label]</label>
