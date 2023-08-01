@@ -296,7 +296,7 @@
 					<control type="label">
 						<left>45</left>
 						<top>0</top>
-						<right>20</right>
+						<right>45</right>
 						<bottom>0</bottom>
 						<align>$PARAM[align]</align>
 						<font>$PARAM[font]</font>
@@ -350,7 +350,7 @@
 					<control type="label">
 						<left>45</left>
 						<top>0</top>
-						<right>20</right>
+						<right>45</right>
 						<bottom>0</bottom>
 						<align>$PARAM[align]</align>
 						<font>$PARAM[font]</font>
