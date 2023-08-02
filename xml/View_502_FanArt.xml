@@ -6,8 +6,8 @@
 			<visible>Control.IsVisible(502)</visible>
 			<include>Visible_Left</include>
 			<include content="ListContainer">
-				<param name="left" value="-5" />
-				<param name="right" value="1195" />
+				<param name="left" value="20" />
+				<param name="right" value="1220" />
 				<param name="list_id" value="502" />
 				<param name="viewtype_label" value="$LOCALIZE[20445]" />
 			</include>
