@@ -70,14 +70,15 @@
 				<focusedlayout height="220" width="900">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<animation type="Focus">
+						<!-- <animation type="Focus">
 							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="450,180" />
 						</animation>
 						<animation type="Unfocus">
 							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="450,180" />
-						</animation>
+						</animation> -->
 						<top>100</top>
 						<control type="image">
+							<include>FocusBounce</include>
 							<left>13</left>
 							<top>13</top>
 							<width>834</width>
