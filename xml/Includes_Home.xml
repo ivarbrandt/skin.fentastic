@@ -941,15 +941,7 @@
 							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 							<bordersize>20</bordersize>
 						</control>
-						<control type="image">
-							<include>FocusBounce</include>
-							<width>347</width>
-							<height>120</height>
-							<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
-							<bordersize>20</bordersize>
-							<include>Animation_FocusTextureFade</include>
-							<visible>Control.HasFocus($PARAM[list_id])</visible>
-						</control>
+						
 						<control type="image">
 							<top>23</top>
 							<left>113.5</left>
@@ -958,13 +950,22 @@
 							<texture colordiffuse="dialog_bg2" fallback="DefaultFolder.png">$PARAM[icon]</texture>
 							<aspectratio>scale</aspectratio>
 						</control>
-						<control type="image">
+						<!-- <control type="image">
 							<top>23</top>
 							<left>113.5</left>
 							<width>120</width>
 							<height>$PARAM[icon_height]</height>
 							<texture colordiffuse="button_focus" fallback="DefaultFolder.png">$PARAM[icon]</texture>
 							<aspectratio>scale</aspectratio>
+							<visible>Control.HasFocus($PARAM[list_id])</visible>
+						</control> -->
+						<control type="image">
+							<include>FocusBounce</include>
+							<width>347</width>
+							<height>120</height>
+							<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
+							<bordersize>20</bordersize>
+							<include>Animation_FocusTextureFade</include>
 							<visible>Control.HasFocus($PARAM[list_id])</visible>
 						</control>
 						<control type="textbox">
@@ -1074,15 +1075,7 @@
 									<texture colordiffuse="button_focus2">masks/categorywidget-unfocused.png</texture>
 									<bordersize>20</bordersize>
 								</control>
-								<control type="image">
-									<include>FocusBounce</include>
-									<width>347</width>
-									<height>120</height>
-									<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
-									<bordersize>20</bordersize>
-									<include>Animation_FocusTextureFade</include>
-									<visible>Control.HasFocus($PARAM[list_id])</visible>
-								</control>
+								
 								<control type="image">
 									<top>23</top>
 									<left>113.5</left>
@@ -1091,13 +1084,22 @@
 									<texture colordiffuse="dialog_bg2" fallback="DefaultFolder.png">$PARAM[icon]</texture>
 									<aspectratio>scale</aspectratio>
 								</control>
-								<control type="image">
+								<!-- <control type="image">
 									<top>23</top>
 									<left>113.5</left>
 									<width>120</width>
 									<height>$PARAM[icon_height]</height>
 									<texture colordiffuse="button_focus" fallback="DefaultFolder.png">$PARAM[icon]</texture>
 									<aspectratio>scale</aspectratio>
+									<visible>Control.HasFocus($PARAM[list_id])</visible>
+								</control> -->
+								<control type="image">
+									<include>FocusBounce</include>
+									<width>347</width>
+									<height>120</height>
+									<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
+									<bordersize>20</bordersize>
+									<include>Animation_FocusTextureFade</include>
 									<visible>Control.HasFocus($PARAM[list_id])</visible>
 								</control>
 								<control type="textbox">
