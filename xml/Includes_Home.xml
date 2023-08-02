@@ -16,6 +16,7 @@
 		<param name="item_treshold">0</param>
 		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title,[COLOR button_focus][B] | [/B][/COLOR]]</param>
 		<param name="label_focus_episodes">$INFO[Container($PARAM[list_id]).ListItem.TVShowTitle,[COLOR button_focus][B] | [/B][/COLOR]]$INFO[Container($PARAM[list_id]).ListItem.Title,[COLOR button_focus][B] | [/B][/COLOR]]</param>
+		<param name="label_focus_collections">$INFO[Container($PARAM[list_id]).ListItem.Label,[COLOR button_focus][B] | [/B][/COLOR]]</param>
 		<definition>
 		<control type="group" id="$PARAM[list_id]665">
 			<left>75</left>
@@ -39,6 +40,11 @@
 				<label>$PARAM[label]$PARAM[label_focus_episodes]</label>
 				<shadowcolor>text_shadow</shadowcolor>
 				<visible>String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
+			</control>
+			<control type="label">
+				<label>$PARAM[label]$PARAM[label_focus_collections]</label>
+				<shadowcolor>text_shadow</shadowcolor>
+				<visible>[String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)] + Control.HasFocus($PARAM[list_id])</visible>
 			</control>
 		</control>
 		</definition>
