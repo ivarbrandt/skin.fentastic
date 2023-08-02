@@ -812,13 +812,13 @@
 								<texture>$INFO[ListItem.Art(thumb)]</texture>
 							</control> -->
 							<control type="label">
-								<left>40</left>
+								<include>FocusBounce</include>
+								<left>65</left>
 								<top>0</top>
 								<height>95</height>
-								<width>355</width>
-								<align>center</align>
+								<width>315</width>
 								<aligny>center</aligny>
-								<font>font37</font>
+								<font>font45</font>
 								<label>$INFO[ListItem.Label]</label>
 								<shadowcolor>text_shadow</shadowcolor>
 							</control>
@@ -832,13 +832,12 @@
 								<texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
 							</control> -->
 							<control type="label">
-								<left>40</left>
+								<left>65</left>
 								<top>0</top>
 								<height>95</height>
-								<width>355</width>
-								<align>center</align>
+								<width>315</width>
 								<aligny>center</aligny>
-								<font>font37</font>
+								<font>font45</font>
 								<label>$INFO[ListItem.Label]</label>
 								<shadowcolor>text_shadow</shadowcolor>
 							</control>
