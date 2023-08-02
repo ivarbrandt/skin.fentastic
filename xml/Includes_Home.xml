@@ -145,7 +145,7 @@
 				<movement>5</movement>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
-				<height>415</height>
+				<height>410</height>
 				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
@@ -251,7 +251,7 @@
         <left>0</left>
         <top>115</top> 
         <right>0</right>
-        <height>415</height>
+        <height>410</height>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<movement>5</movement>
@@ -355,13 +355,13 @@
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>110</top>
+				<top>115</top>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<movement>3</movement>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
-				<height>312</height>
+				<height>307</height>
 				<onclick condition="$PARAM[onclick_condition]">$PARAM[onclick_action]</onclick>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
@@ -411,7 +411,7 @@
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>110</top>
+				<top>115</top>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<movement>2</movement>
@@ -466,12 +466,12 @@
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>110</top>
+				<top>115</top>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<movement>3</movement>
 				<right>0</right>
-				<height>312</height>
+				<height>307</height>
 				<include content="WidgetListCommonStacked">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -520,7 +520,7 @@
 			</include>
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>110</top>
+				<top>115</top>
 				<onright>$PARAM[list_id]</onright>
 				<orientation>horizontal</orientation>
 				<movement>2</movement>
@@ -657,7 +657,7 @@
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<left>0</left>
-				<top>101</top>
+				<top>106</top>
 				<right>0</right>
 				<height>441</height>
 				<onright>$PARAM[list_id]</onright>
@@ -798,7 +798,7 @@
 			<!-- Widget Height Spacing -->
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>101</top>
+				<top>106</top>
 				<right>0</right>
 				<height>441</height>
 				<onright>$PARAM[list_id]</onright>
@@ -941,7 +941,15 @@
 							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 							<bordersize>20</bordersize>
 						</control>
-					
+						<control type="image">
+							<include>FocusBounce</include>
+							<width>347</width>
+							<height>120</height>
+							<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
+							<bordersize>20</bordersize>
+							<include>Animation_FocusTextureFade</include>
+							<visible>Control.HasFocus($PARAM[list_id])</visible>
+						</control>
 						<control type="image">
 							<top>23</top>
 							<left>113.5</left>
@@ -950,22 +958,13 @@
 							<texture colordiffuse="dialog_bg2" fallback="DefaultFolder.png">$PARAM[icon]</texture>
 							<aspectratio>scale</aspectratio>
 						</control>
-						<!-- <control type="image">
+						<control type="image">
 							<top>23</top>
 							<left>113.5</left>
 							<width>120</width>
 							<height>$PARAM[icon_height]</height>
 							<texture colordiffuse="button_focus" fallback="DefaultFolder.png">$PARAM[icon]</texture>
 							<aspectratio>scale</aspectratio>
-							<visible>Control.HasFocus($PARAM[list_id])</visible>
-						</control> -->
-						<control type="image">
-							<include>FocusBounce</include>
-							<width>347</width>
-							<height>120</height>
-							<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
-							<bordersize>20</bordersize>
-							<include>Animation_FocusTextureFade</include>
 							<visible>Control.HasFocus($PARAM[list_id])</visible>
 						</control>
 						<control type="textbox">
@@ -1075,7 +1074,15 @@
 									<texture colordiffuse="button_focus2">masks/categorywidget-unfocused.png</texture>
 									<bordersize>20</bordersize>
 								</control>
-								
+								<control type="image">
+									<include>FocusBounce</include>
+									<width>347</width>
+									<height>120</height>
+									<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
+									<bordersize>20</bordersize>
+									<include>Animation_FocusTextureFade</include>
+									<visible>Control.HasFocus($PARAM[list_id])</visible>
+								</control>
 								<control type="image">
 									<top>23</top>
 									<left>113.5</left>
@@ -1084,22 +1091,13 @@
 									<texture colordiffuse="dialog_bg2" fallback="DefaultFolder.png">$PARAM[icon]</texture>
 									<aspectratio>scale</aspectratio>
 								</control>
-								<!-- <control type="image">
+								<control type="image">
 									<top>23</top>
 									<left>113.5</left>
 									<width>120</width>
 									<height>$PARAM[icon_height]</height>
 									<texture colordiffuse="button_focus" fallback="DefaultFolder.png">$PARAM[icon]</texture>
 									<aspectratio>scale</aspectratio>
-									<visible>Control.HasFocus($PARAM[list_id])</visible>
-								</control> -->
-								<control type="image">
-									<include>FocusBounce</include>
-									<width>347</width>
-									<height>120</height>
-									<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
-									<bordersize>20</bordersize>
-									<include>Animation_FocusTextureFade</include>
 									<visible>Control.HasFocus($PARAM[list_id])</visible>
 								</control>
 								<control type="textbox">
@@ -1114,7 +1112,6 @@
 									<aligny>center</aligny>
 									<autoscroll delay="1300" time="1500" repeat="2000">$PARAM[focused]</autoscroll>
 								</control>
-								
 						</control>
 				</focusedlayout>
 				<content target="$PARAM[widget_target]" sortby="$PARAM[list_id]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
