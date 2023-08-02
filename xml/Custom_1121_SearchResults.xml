@@ -157,8 +157,8 @@
 									<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasActiveModalDialog">Conditional</animation>
 								</control>
 							</control>
-							<!-- SideMenu Focused Icons -->
 							<control type="label">
+								<include>FocusBounce</include>
 								<left>45</left>
 								<top>0</top>
 								<height>83</height>

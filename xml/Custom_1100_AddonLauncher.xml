@@ -93,20 +93,20 @@
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<focusedlayout height="95" width="462">
 						<control type="image">
-							<left>0</left>
-							<right>0</right>
+							<left>25</left>
+							<right>25</right>
 							<bottom>0</bottom>
 							<texture colordiffuse="button_focus">masks/focus.png</texture>
 							<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000)">Conditional</animation>
 						</control>
-						<control type="image">
-							<left>-3</left>
+						<!-- <control type="image">
+							<left>22</left>
 							<top>0</top>
 							<width>95</width>
 							<bottom>0</bottom>
 							<texture colordiffuse="button_focus">$INFO[ListItem.Art(thumb)]</texture>
 							<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
-						</control>
+						</control> -->
 						<!-- <control type="image">
 							<left>0</left>
 							<width>95</width>
@@ -114,15 +114,16 @@
 							<texture colordiffuse="51FFFFFF">colors/black.png</texture>
 							<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000)">Conditional</animation>
 						</control> -->
-						<control type="image">
-							<left>-3</left>
+						<!-- <control type="image">
+							<left>22</left>
 							<top>0</top>
 							<width>95</width>
 							<bottom>0</bottom>
 							<texture>$INFO[ListItem.Art(thumb)]</texture>
-						</control>
+						</control> -->
 						<control type="label">
-							<left>104</left>
+							<include>FocusBounce</include>
+							<left>65</left>
 							<bottom>0</bottom>
 							<right>10</right>
 							<aligny>center</aligny>
@@ -133,7 +134,7 @@
 					</focusedlayout>
 					<itemlayout height="95" width="462">
 						<control type="label">
-							<left>104</left>
+							<left>65</left>
 							<bottom>0</bottom>
 							<right>10</right>
 							<aligny>center</aligny>
@@ -141,13 +142,13 @@
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
-						<control type="image">
-							<left>-3</left>
+						<!-- <control type="image">
+							<left>22</left>
 							<top>0</top>
 							<width>95</width>
 							<bottom>0</bottom>
 							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
-						</control>
+						</control> -->
 					</itemlayout>
 					<content>
 						<item id="1">
@@ -230,6 +231,7 @@
 				<onright>400</onright>
 				<usecontrolcoords>true</usecontrolcoords>
 				<control type="radiobutton" id="801">
+					<include>FocusBounce</include>
 					<width>120</width>
 					<height>120</height>
 					<align>right</align>
@@ -251,6 +253,7 @@
 					<textureradiooffnofocus>icons/submenu/add-ons.png</textureradiooffnofocus>
 				</control>
 				<control type="radiobutton" id="802">
+					<include>FocusBounce</include>
 					<top>5</top>
 					<width>157</width>
 					<height>110</height>
@@ -276,6 +279,7 @@
 					<textureradiooffdisabled colordiffuse="disabled">icons/submenu/updatelibrary.png</textureradiooffdisabled>
 				</control>
 				<control type="radiobutton" id="803">
+					<include>FocusBounce</include>
 					<width>120</width>
 					<height>120</height>
 					<align>right</align>

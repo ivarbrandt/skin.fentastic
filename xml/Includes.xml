@@ -633,9 +633,10 @@
 						</itemlayout>
 						<focusedlayout height="365" width="280">
 							<control type="group">
+								<include>FocusBounce</include>
 								<top>150</top>
-								<animation effect="zoom" start="100" end="104" time="200" tween="sine" easing="inout" center="150,320">Focus</animation>
-								<animation effect="zoom" start="104" end="100" time="200" tween="sine" easing="inout" center="150,320">UnFocus</animation>
+								<!-- <animation effect="zoom" start="100" end="104" time="200" tween="sine" easing="inout" center="150,320">Focus</animation>
+								<animation effect="zoom" start="104" end="100" time="200" tween="sine" easing="inout" center="150,320">UnFocus</animation> -->
 								<include content="InfoWallMusicLayout">
 									<param name="fallback_image" value="DefaultAddon.png" />
 									<param name="focused" value="true" />
