@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.fentastic" version="1.0.15l" name="FENtastic"
+<addon id="skin.fentastic" version="1.0.15m" name="FENtastic"
 	provider-name="Ivar Brandt">
 	<requires>
 		<import addon="xbmc.gui" version="5.16.0" />
