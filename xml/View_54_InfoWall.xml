@@ -968,7 +968,7 @@
 				</control>
 				<control type="label">
 					<left>40</left>
-					<top>362</top>
+					<top>360</top>
 					<width>195</width>
 					<label>$INFO[ListItem.Label]</label>
 					<!-- <label>hello there how are you</label> -->
@@ -980,7 +980,7 @@
 				</control>
 				<control type="label">
 					<left>40</left>
-					<top>362</top>
+					<top>360</top>
 					<width>195</width>
 					<label>$INFO[ListItem.Label]</label>
 					<!-- <label>hello there how are you</label> -->
