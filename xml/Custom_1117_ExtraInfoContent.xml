@@ -2,16 +2,19 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR button_focus]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
-- Added BigPoster, BigLandscape, and BigLandscapeInfo widget display types
-- Updated InfoWall, WideInfoWall, Wall, and WideWall views to use bigger artwork
+- Added 3 NEW widget display types (BigPoster, BigLandscape, BigLandscapeInfo)
+- Updated Wall views to use bigger artwork
+- Added icon silhouettes to category widgets
+- Added the following to the InfoPanel:
+  • MPAA ratings for movies/tvshows/episodes
+  • Studios for tvshows/episodes
+  • Runtime for movies/tvshows/episodes
+  • Total seasons for tvshows
+  • Ends at: for episodes
 - Added titles for movies/tvshows/episodes to widget labels
-- Added MPAA ratings to InfoPanel for movies/tvshows/episodes
-- Added studios to InfoPanel for tvshows/episodes
-- Added runtime to InfoPanel for movies/episodes
-- Added total seasons to InfoPanel for tvshows
-- Added Ends at: to InfoPanel for episodes
 - Added percent progress to Landscape widgets for episodes
 - Added optional focus animations for main menu, widgets, and views
+- Increased visibility of raindrop background
 - Removed %, progress is now shown as '33' instead of '33%'
 - Removed alternate InfoPanel
 - Fixed profile change bug
