@@ -246,7 +246,7 @@
 				</control>
 				<control type="image">
 					<left>293</left>
-					<top>174</top>
+					<top>173</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>lists/played-total.png</texture>
@@ -466,7 +466,7 @@
 				</control>
 				<control type="image">
 					<left>396</left>
-					<top>231</top>
+					<top>230.5</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>lists/played-total.png</texture>
@@ -760,7 +760,7 @@
 				</control>
 				<control type="image">
 					<left>178</left>
-					<top>-56</top>
+					<top>-56.7</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>lists/played-total.png</texture>
@@ -790,7 +790,7 @@
 				</control>
 				<control type="image">
 					<left>178</left>
-					<top>-56</top>
+					<top>-56.7</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>lists/played-total.png</texture>
@@ -1019,7 +1019,7 @@
 				</control>
 				<control type="image">
 					<left>218</left>
-					<top>-1</top>
+					<top>-1.8</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>lists/played-total.png</texture>
@@ -1049,7 +1049,7 @@
 				</control>
 				<control type="image">
 					<left>218</left>
-					<top>-1</top>
+					<top>-1.8</top>
 					<width>24</width>
 					<height>24</height>
 					<texture>lists/played-total.png</texture>
