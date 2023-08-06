@@ -76,7 +76,7 @@
 							<param name="height">119</param>
 							<param name="label-left">-16</param>
 							<param name="label-top">38</param>
-							<param name="cornerdiffuse">overlays/overlay-bg4.png</param>
+							<param name="cornerdiffuse">overlays/overlaybg4.png</param>
 						</include>
 					</control>
 					<include content="ProgressBar">

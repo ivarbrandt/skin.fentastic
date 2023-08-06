@@ -272,7 +272,7 @@
 				<top>122</top>
 				<width>80</width>
 				<height>80</height>
-				<texture>overlays/overlay-bg1.png</texture>
+				<texture>overlays/overlaybg1.png</texture>
 			</control>
 			<control type="image">
 				<left>20</left>
@@ -359,7 +359,7 @@
 					<param name="height">119</param>
 					<param name="label-left">-6</param>
 					<param name="label-top">22</param>
-					<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
+					<param name="cornerdiffuse">overlays/overlaybg3.png</param>
 				</include>
 			</control>
 		</definition>
@@ -492,7 +492,7 @@
 				<top>160</top>
 				<width>104</width>
 				<height>104</height>
-				<texture>overlays/overlay-bg1.png</texture>
+				<texture>overlays/overlaybg1.png</texture>
 			</control>
 			<control type="image">
 				<left>23</left>
@@ -580,7 +580,7 @@
 					<param name="height">155</param>
 					<param name="label-left">26</param>
 					<param name="label-top">25</param>
-					<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
+					<param name="cornerdiffuse">overlays/overlaybg3.png</param>
 				</include>
 			</control>
 		</definition>
@@ -686,7 +686,7 @@
 					<top>214</top>
 					<width>80</width>
 					<height>80</height>
-					<texture>overlays/overlay-bg.png</texture>
+					<texture>overlays/overlaybg.png</texture>
 					<visible>Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
 				</control>
 				<control type="image">
@@ -694,7 +694,7 @@
 					<top>214</top>
 					<width>80</width>
 					<height>80</height>
-					<texture>overlays/overlay-bg2.png</texture>
+					<texture>overlays/overlaybg2.png</texture>
 					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + String.IsEqual(ListItem.DBtype,movie) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
@@ -715,7 +715,7 @@
 					<top>214</top>
 					<width>80</width>
 					<height>80</height>
-					<texture>overlays/overlay-bg2.png</texture>
+					<texture>overlays/overlaybg2.png</texture>
 					<visible>$PARAM[focused] + String.IsEqual(ListItem.DBtype,movie) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0) + [Control.IsVisible(54) | Control.IsVisible(500)]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
@@ -815,7 +815,7 @@
 					<param name="height">119</param>
 					<param name="label-left">-6</param>
 					<param name="label-top">22</param>
-					<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
+					<param name="cornerdiffuse">overlays/overlaybg3.png</param>
 				</include>
 			</control>
 		</definition>
@@ -921,7 +921,7 @@
 					<top>255</top>
 					<width>94</width>
 					<height>94</height>
-					<texture>overlays/overlay-bg.png</texture>
+					<texture>overlays/overlaybg.png</texture>
 					<visible>Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
 				</control>
 				<control type="image">
@@ -929,7 +929,7 @@
 					<top>255</top>
 					<width>94</width>
 					<height>94</height>
-					<texture>overlays/overlay-bg2.png</texture>
+					<texture>overlays/overlaybg2.png</texture>
 					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + String.IsEqual(ListItem.DBtype,movie) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
@@ -950,7 +950,7 @@
 					<top>255</top>
 					<width>94</width>
 					<height>94</height>
-					<texture>overlays/overlay-bg2.png</texture>
+					<texture>overlays/overlaybg2.png</texture>
 					<visible>$PARAM[focused] + String.IsEqual(ListItem.DBtype,movie) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0) + [Control.IsVisible(54) | Control.IsVisible(500)]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
@@ -1074,7 +1074,7 @@
 					<param name="height">139</param>
 					<param name="label-left">11</param>
 					<param name="label-top">25</param>
-					<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
+					<param name="cornerdiffuse">overlays/overlaybg3.png</param>
 				</include>
 			</control>
 		</definition>

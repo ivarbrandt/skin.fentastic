@@ -359,7 +359,7 @@
           <top>112</top>
 					<width>80</width>
 					<height>80</height>
-					<texture>overlays/overlay-bg.png</texture>
+					<texture>overlays/overlaybg.png</texture>
 					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)] + [Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)]</visible>
 				</control>
 				<control type="image">
@@ -367,7 +367,7 @@
 					<top>112</top>
 					<width>80</width>
 					<height>80</height>
-					<texture>overlays/overlay-bg2.png</texture>
+					<texture>overlays/overlaybg2.png</texture>
 					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + String.IsEqual(ListItem.DBtype,movie) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
@@ -387,7 +387,7 @@
 					<top>112</top>
 					<width>80</width>
 					<height>80</height>
-					<texture>overlays/overlay-bg2.png</texture>
+					<texture>overlays/overlaybg2.png</texture>
 					<visible>$PARAM[focused] + String.IsEqual(ListItem.DBtype,movie) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0) + [Control.IsVisible(56) | Control.IsVisible(504)]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
@@ -496,7 +496,7 @@
 					<param name="height">119</param>
 					<param name="label-left">-6</param>
 					<param name="label-top">22</param>
-					<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
+					<param name="cornerdiffuse">overlays/overlaybg3.png</param>
 				</include>
 			</control>			
 		</definition>
@@ -608,7 +608,7 @@
           <top>143</top>
 					<width>108</width>
 					<height>108</height>
-					<texture>overlays/overlay-bg.png</texture>
+					<texture>overlays/overlaybg.png</texture>
 					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)] + [Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)]</visible>
 				</control>
 				<control type="image">
@@ -616,7 +616,7 @@
 					<top>143</top>
 					<width>108</width>
 					<height>108</height>
-					<texture>overlays/overlay-bg6.png</texture>
+					<texture>overlays/overlaybg6.png</texture>
 					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + String.IsEqual(ListItem.DBtype,movie) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
@@ -636,7 +636,7 @@
 					<top>143</top>
 					<width>108</width>
 					<height>108</height>
-					<texture>overlays/overlay-bg6.png</texture>
+					<texture>overlays/overlaybg6.png</texture>
 					<visible>$PARAM[focused] + String.IsEqual(ListItem.DBtype,movie) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0) + [Control.IsVisible(56) | Control.IsVisible(504)]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
@@ -791,7 +791,7 @@
 					<param name="height">156</param>
 					<param name="label-left">97</param>
 					<param name="label-top">25</param>
-					<param name="cornerdiffuse">overlays/overlay-bg3.png</param>
+					<param name="cornerdiffuse">overlays/overlaybg3.png</param>
 				</include>
 			</control>			
 		</definition>

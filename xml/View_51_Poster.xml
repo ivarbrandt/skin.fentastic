@@ -153,7 +153,7 @@
 					<top>521</top>
 					<width>200</width>
 					<height>200</height>
-					<texture>overlays/overlay-bg2.png</texture>
+					<texture>overlays/overlaybg2.png</texture>
 					<visible>String.IsEqual(ListItem.DBtype,movie) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
@@ -179,7 +179,7 @@
 					<param name="height">119</param>
 					<param name="label-left">-16</param>
 					<param name="label-top">38</param>
-					<param name="cornerdiffuse">overlays/overlay-bg4.png</param>
+					<param name="cornerdiffuse">overlays/overlaybg4.png</param>
 				</include>
 			</control>
 			</control>
@@ -190,7 +190,7 @@
 					<top>570</top>
 					<width>476</width>
 					<height>150</height>
-					<texture colordiffuse="CCFFFFFF">overlays/overlayfade-51.png</texture>
+					<texture colordiffuse="CCFFFFFF">overlays/overlayfade51.png</texture>
 					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 				</control>
 				<control type="label">

@@ -56,7 +56,7 @@
 								<param name="height">119</param>
 								<param name="label-left">-12</param>
 								<param name="label-top">28</param>
-								<param name="cornerdiffuse">overlays/overlayfade-bg5.png</param>
+								<param name="cornerdiffuse">overlays/overlaybg7.png</param>
 							</include>
 						</control>
 						<include content="ProgressBar">
@@ -113,7 +113,7 @@
 								<top>75</top>
 								<width>818</width>
 								<height>100</height>
-								<texture>overlays/overlayfade-banner.png</texture>
+								<texture>overlays/overlayfadebanner.png</texture>
 								<animation effect="fade" start="0" end="80" time="50">Focus</animation>
 								<visible>!Listitem.IsParentFolder</visible>
 							</control>

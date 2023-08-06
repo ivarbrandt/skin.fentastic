@@ -45,7 +45,7 @@
 						<param name="height">119</param>
 						<param name="label-left">-18</param>
 						<param name="label-top">32</param>
-						<param name="cornerdiffuse">overlays/overlay-bg5.png</param>
+						<param name="cornerdiffuse">overlays/overlaybg5.png</param>
 					</include>
 				</control>
 				<control type="textbox">

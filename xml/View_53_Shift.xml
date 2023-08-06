@@ -130,7 +130,7 @@
 							<width>119</width>
 							<height>119</height>
 							<aspectratio>scale</aspectratio>
-							<texture>overlays/overlayfade-bg6.png</texture>
+							<texture>overlays/overlaybg8.png</texture>
 						</control>
 						<control type="image">
 							<left>45</left>
@@ -151,7 +151,7 @@
 								<param name="height">119</param>
 								<param name="label-left">-15</param>
 								<param name="label-top">32</param>
-								<param name="cornerdiffuse">overlays/overlayfade-bg5.png</param>
+								<param name="cornerdiffuse">overlays/overlaybg7.png</param>
 							</include>
 						</control>
 
@@ -234,7 +234,7 @@
 							<width>119</width>
 							<height>119</height>
 							<aspectratio>scale</aspectratio>
-							<texture>overlays/overlayfade-bg6.png</texture>
+							<texture>overlays/overlaybg8.png</texture>
 						</control>
 						<control type="image">
 							<left>45</left>
@@ -255,7 +255,7 @@
 								<param name="height">119</param>
 								<param name="label-left">-15</param>
 								<param name="label-top">32</param>
-								<param name="cornerdiffuse">overlays/overlayfade-bg5.png</param>
+								<param name="cornerdiffuse">overlays/overlaybg7.png</param>
 							</include>
 						</control>
 						<!-- <control type="progress">
