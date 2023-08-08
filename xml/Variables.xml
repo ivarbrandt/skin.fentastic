@@ -695,6 +695,11 @@
 		<value condition="![String.IsEmpty(ListItem.Year) | Skin.HasSetting(Enable.AlternateInfo)]">$INFO[ListItem.Year]</value>
 		<value condition="!String.IsEmpty(ListItem.Year) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Year,[COLOR button_focus][B]Released: [/B][/COLOR]][CR]</value>
 	</variable>
+	<!-- Aired -->
+	<variable name="_Aired">
+		<value condition="![String.IsEmpty(ListItem.Premiered) | Skin.HasSetting(Enable.AlternateInfo)]">$INFO[ListItem.Premiered]</value>
+		<value condition="!String.IsEmpty(ListItem.Premiered) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Premiered,[COLOR button_focus][B]Aired: [/B][/COLOR]][CR]</value>
+	</variable>
 	<!-- MPAA Rating -->
 	<variable name="_Mpaa">
 		<value condition="![String.IsEmpty(ListItem.Mpaa) | Skin.HasSetting(Enable.AlternateInfo)]">$INFO[ListItem.Mpaa,[COLOR button_focus][B] • [/B][/COLOR]]</value>
@@ -758,10 +763,13 @@
 		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,tvshow)">$VAR[_Year]$VAR[_Mpaa]$VAR[_Network]$VAR[_Genre]$VAR[_RuntimeEpisodes]$VAR[_TotalSeasons]$VAR[_Status]$VAR[_Endsat][CR]$VAR[_Plot][CR]</value>
 		<!-- SEASONS -->
 		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,season)">$VAR[_Mpaa]$VAR[_Network]$VAR[_Genre]$VAR[_RuntimeEpisodes]$VAR[_Endsat][CR]$VAR[_Plot][CR]</value>
+	
 	</variable>
+
 	<!-- EPISODES -->
 	<variable name="InfoPanelEpisode">
 		<!-- <value condition="![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)] + String.IsEqual(ListItem.DBtype,episode + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Mpaa]$INFO[ListItem.Studio,[COLOR button_focus][B] • [/B][/COLOR]]$INFO[ListItem.Duration(mins),[COLOR button_focus][B] • [/B][/COLOR], mins]$INFO[ListItem.EndTime,[COLOR button_focus][B] • [/B][/COLOR]$LOCALIZE[31080]: ][CR][CR]$INFO[ListItem.Plot][CR][CR]</value> -->
-		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,episode">$VAR[_Mpaa]$VAR[_Network]$VAR[_RuntimeEpisodes]$VAR[_Endsat][CR]$VAR[_Plot][CR]</value>
+		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,episode">$VAR[_Aired]$VAR[_Mpaa]$VAR[_Network]$VAR[_RuntimeEpisodes]$VAR[_Endsat][CR]$VAR[_Plot][CR]</value>
 	</variable>
+	
 </includes>
