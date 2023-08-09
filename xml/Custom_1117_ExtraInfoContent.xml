@@ -6,6 +6,7 @@
 - Brought back %, progress is now shown as '33% watched' instead of '33'
 - Added air date to InfoPanel for episodes
 - Made icon silhouettes for category widgets optional
+- Other small changes/fixes
 
 [B][COLOR button_focus]Version 1.0.16[/COLOR][/B]
 - Added BigPoster, BigLandscape, and BigLandscapeInfo widget display types
