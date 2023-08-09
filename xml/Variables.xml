@@ -732,8 +732,8 @@
 	</variable>
 	<!-- Runtime -->
 	<variable name="_Runtime">
-		<value condition="!String.IsEmpty(ListItem.Duration) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Duration(h,[COLOR button_focus][B] • [/B][/COLOR], hr] $INFO[ListItem.Duration(m,, mins]</value>
-		<value condition="!String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Duration(h,[COLOR button_focus][B]Runtime: [/B][/COLOR], hr] $INFO[ListItem.Duration(m,, mins][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Duration) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Duration(h),[COLOR button_focus][B] • [/B][/COLOR], hr] $INFO[ListItem.Duration(m),, mins]</value>
+		<value condition="!String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Duration(h),[COLOR button_focus][B]Runtime: [/B][/COLOR], hr] $INFO[ListItem.Duration(m),, mins][CR]</value>
 	</variable>
 	<!-- Runtime Episodes -->
 	<variable name="_RuntimeEpisodes">
@@ -764,7 +764,7 @@
 
 	<!-- EPISODES -->
 	<variable name="InfoPanelEpisode">
-		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,episode">$VAR[_Aired]$VAR[_Mpaa]$VAR[_Network]$VAR[_RuntimeEpisodes]$VAR[_Endsat][CR]$VAR[_Plot][CR]</value>
+		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,episode)">$VAR[_Aired]$VAR[_Mpaa]$VAR[_Network]$VAR[_RuntimeEpisodes]$VAR[_Endsat][CR]$VAR[_Plot][CR]</value>
 	</variable>
 	
 </includes>
