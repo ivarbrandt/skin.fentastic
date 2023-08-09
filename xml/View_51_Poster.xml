@@ -149,19 +149,18 @@
 					<texture diffuse="masks/poster-50.png" fallback="DefaultMovies.png" background="true">$VAR[PosterThumbVar]</texture>
 				</control>
 				<control type="image">
-					<left>281</left>
-					<top>521</top>
-					<width>200</width>
-					<height>200</height>
-					<texture>overlays/overlaybg2.png</texture>
-					<visible>String.IsEqual(ListItem.DBtype,movie) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+					<left>4</left>
+					<top>570</top>
+					<width>476</width>
+					<height>150</height>
+					<texture colordiffuse="CCFFFFFF">overlays/overlayfade51.png</texture>
+					<visible>String.IsEqual(ListItem.DBtype,movie) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
 				</control>
 				<control type="label">
 					<left>275</left>
 					<top>680</top>
 					<width>180</width>
-					<label>$INFO[ListItem.Property(WatchedProgress)]</label>
+					<label>$INFO[ListItem.Property(WatchedProgress)]% watched</label>
 					<font>font20_title</font>
 					<shadowcolor>text_shadow</shadowcolor>
 					<align>right</align>
