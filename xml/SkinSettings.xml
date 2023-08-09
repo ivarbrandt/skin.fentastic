@@ -206,11 +206,19 @@
 					<selected>Skin.HasSetting(category_widget_display_delay)</selected>
 					<onclick>Skin.ToggleSetting(category_widget_display_delay)</onclick>
 				</control>
+				<!-- FOCUS ANIMATIONS -->
 				<control type="radiobutton" id="6374">
 					<label>Enable focus animations</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(NoFocusAnimations)</selected>
 					<onclick>Skin.ToggleSetting(NoFocusAnimations)</onclick>
+				</control>
+				<!-- ICON SILHOUETTES -->
+				<control type="radiobutton" id="6375">
+					<label>Enable icon silhouettes for category widgets</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(NoIconSilhouettes)</selected>
+					<onclick>Skin.ToggleSetting(NoIconSilhouettes)</onclick>
 				</control>
 				<!-- SEARCH OPTIONS -->
 				<control type="radiobutton" id="638">
