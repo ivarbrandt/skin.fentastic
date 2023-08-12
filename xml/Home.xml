@@ -784,7 +784,6 @@
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
 						<focusedlayout height="95">
 							<control type="group">
-								<visible>Control.HasFocus(9000)</visible>
 								<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 								<control type="image">
 									<left>0</left>
@@ -793,6 +792,7 @@
 									<height>95</height>
 									<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
 									<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasActiveModalDialog">Conditional</animation>
+									<visible>!ControlGroup(700).HasFocus</visible>
 								</control>
 								<!-- <control type="image">
 									<left>5</left>
@@ -821,6 +821,19 @@
 								<font>font45</font>
 								<label>$INFO[ListItem.Label]</label>
 								<shadowcolor>text_shadow</shadowcolor>
+								<visible>ControlGroup(700).HasFocus</visible>
+							</control>
+							<control type="label">
+								<include>FocusBounce</include>
+								<left>65</left>
+								<top>0</top>
+								<height>95</height>
+								<width>315</width>
+								<aligny>center</aligny>
+								<font>font45_title</font>
+								<label>$INFO[ListItem.Label]</label>
+								<shadowcolor>text_shadow</shadowcolor>
+								<visible>!ControlGroup(700).HasFocus</visible>
 							</control>
 						</focusedlayout>
 						<itemlayout height="95">
