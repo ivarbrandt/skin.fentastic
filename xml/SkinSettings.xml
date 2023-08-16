@@ -55,13 +55,6 @@
 					<onclick>RunScript(script.fentastic.helper,mode=manage_widgets&amp;cpath_setting=movie.widget)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</control>
-				<!-- <control type="radiobutton" id="6243">
-					<label>   - $LOCALIZE[31008]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(HomeMenuNoMoviesCategories)</selected>
-					<onclick>Skin.ToggleSetting(HomeMenuNoMoviesCategories)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
-				</control> -->
 				<!-- TV SHOWS -->
 				<control type="radiobutton" id="625">
 					<label>$INFO[Skin.String(MenuTVShowLabel)]</label>
@@ -81,13 +74,63 @@
 					<onclick>RunScript(script.fentastic.helper,mode=manage_widgets&amp;cpath_setting=tvshow.widget)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
 				</control>
-				<!-- <control type="radiobutton" id="6252">
-					<label>   - $LOCALIZE[31008]</label>
+				<!-- CUSTOM 1 -->
+				<control type="radiobutton" id="626">
+					<label>$INFO[Skin.String(MenuCustom1Label)]</label>
 					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(HomeMenuNoTVShowsCategories)</selected>
-					<onclick>Skin.ToggleSetting(HomeMenuNoTVShowsCategories)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
-				</control> -->
+					<selected>!Skin.HasSetting(HomeMenuNoCustom1Button)</selected>
+					<onclick>Skin.ToggleSetting(HomeMenuNoCustom1Button)</onclick>
+				</control>
+				<control type="button" id="6260">
+					<label>   - Set main menu path</label>
+					<include>DefaultSettingButton</include>
+					<onclick>RunScript(script.fentastic.helper,mode=manage_main_menu_path&amp;cpath_setting=custom1.main_menu)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoCustom1Button)</visible>
+				</control>
+				<control type="button" id="6261">
+					<label>   - Set widgets</label>
+					<include>DefaultSettingButton</include>
+					<onclick>RunScript(script.fentastic.helper,mode=manage_widgets&amp;cpath_setting=custom1.widget)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoCustom1Button)</visible>
+				</control>
+				<!-- CUSTOM 2 -->
+				<control type="radiobutton" id="627">
+					<label>$INFO[Skin.String(MenuCustom2Label)]</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(HomeMenuNoCustom2Button)</selected>
+					<onclick>Skin.ToggleSetting(HomeMenuNoCustom2Button)</onclick>
+				</control>
+				<control type="button" id="6270">
+					<label>   - Set main menu path</label>
+					<include>DefaultSettingButton</include>
+					<onclick>RunScript(script.fentastic.helper,mode=manage_main_menu_path&amp;cpath_setting=custom2.main_menu)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoCustom2Button)</visible>
+				</control>
+				<control type="button" id="6271">
+					<label>   - Set widgets</label>
+					<include>DefaultSettingButton</include>
+					<onclick>RunScript(script.fentastic.helper,mode=manage_widgets&amp;cpath_setting=custom2.widget)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoCustom2Button)</visible>
+				</control>
+				<!-- CUSTOM 3 -->
+				<control type="radiobutton" id="628">
+					<label>$INFO[Skin.String(MenuCustom3Label)]</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(HomeMenuNoCustom3Button)</selected>
+					<onclick>Skin.ToggleSetting(HomeMenuNoCustom3Button)</onclick>
+				</control>
+				<control type="button" id="6280">
+					<label>   - Set main menu path</label>
+					<include>DefaultSettingButton</include>
+					<onclick>RunScript(script.fentastic.helper,mode=manage_main_menu_path&amp;cpath_setting=custom3.main_menu)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoCustom3Button)</visible>
+				</control>
+				<control type="button" id="6281">
+					<label>   - Set widgets</label>
+					<include>DefaultSettingButton</include>
+					<onclick>RunScript(script.fentastic.helper,mode=manage_widgets&amp;cpath_setting=custom3.widget)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoCustom3Button)</visible>
+				</control>
 				<!-- MUSIC -->
 				<control type="radiobutton" id="6252">
 					<label>$LOCALIZE[31008]</label>
@@ -95,7 +138,7 @@
 					<selected>!Skin.HasSetting(home_no_categories_widget)</selected>
 					<onclick>Skin.ToggleSetting(home_no_categories_widget)</onclick>
 				</control>
-				<control type="radiobutton" id="627">
+				<control type="radiobutton" id="6272">
 					<label>$LOCALIZE[2]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(HomeMenuNoMusicButton)</selected>
@@ -109,7 +152,7 @@
 					<onclick>Skin.ToggleSetting(HomeMenuNoMusicVideoButton)</onclick>
 				</control>
 				<!-- PVR -->
-				<control type="radiobutton" id="626">
+				<control type="radiobutton" id="6262">
 					<label>$LOCALIZE[19020]</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(HomeMenuNoTVButton)</selected>

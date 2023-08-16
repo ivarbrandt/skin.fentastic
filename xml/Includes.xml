@@ -11,8 +11,14 @@
 	<include file="Includes_PVR.xml" />
 	<include file="script-fentastic-main_menu_movies.xml" />
 	<include file="script-fentastic-main_menu_tvshows.xml" />
+	<include file="script-fentastic-main_menu_custom1.xml" />
+	<include file="script-fentastic-main_menu_custom2.xml" />
+	<include file="script-fentastic-main_menu_custom3.xml" />
 	<include file="script-fentastic-widget_movies.xml" />
 	<include file="script-fentastic-widget_tvshows.xml" />
+	<include file="script-fentastic-widget_custom1.xml" />
+	<include file="script-fentastic-widget_custom2.xml" />
+	<include file="script-fentastic-widget_custom3.xml" />
 	<include file="script-fentastic-search_history.xml" />
 	<include file="View_50_List.xml" />
 	<include file="View_51_Poster.xml" />

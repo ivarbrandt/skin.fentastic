@@ -80,6 +80,51 @@
 						<param name="scrollbar_id" value="22099"/>
 					</include>
 				</control>
+				<!-- CUSTOM 1 -->
+				<control type="group" id="23000">
+					<visible>String.IsEqual(Container(9000).ListItem.Property(id),custom1)</visible>
+					<include content="Visible_Right_Delayed">
+						<param name="id" value="custom1"/>
+					</include>
+					<control type="grouplist" id="23001">
+						<include>WidgetGroupListCommon</include>
+						<pagecontrol>23099</pagecontrol>
+						<include content="Custom1Widgets" condition="!Skin.HasSetting(HomeMenuNoCustom1Button)" />
+					</control>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="23099"/>
+					</include>
+				</control>
+				<!-- CUSTOM 2 -->
+				<control type="group" id="24000">
+					<visible>String.IsEqual(Container(9000).ListItem.Property(id),custom2)</visible>
+					<include content="Visible_Right_Delayed">
+						<param name="id" value="custom2"/>
+					</include>
+					<control type="grouplist" id="24001">
+						<include>WidgetGroupListCommon</include>
+						<pagecontrol>24099</pagecontrol>
+						<include content="Custom2Widgets" condition="!Skin.HasSetting(HomeMenuNoCustom2Button)" />
+					</control>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="24099"/>
+					</include>
+				</control>
+				<!-- CUSTOM 3 -->
+				<control type="group" id="25000">
+					<visible>String.IsEqual(Container(9000).ListItem.Property(id),custom3)</visible>
+					<include content="Visible_Right_Delayed">
+						<param name="id" value="custom3"/>
+					</include>
+					<control type="grouplist" id="25001">
+						<include>WidgetGroupListCommon</include>
+						<pagecontrol>25099</pagecontrol>
+						<include content="Custom3Widgets" condition="!Skin.HasSetting(HomeMenuNoCustom3Button)" />
+					</control>
+					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
+						<param name="scrollbar_id" value="25099"/>
+					</include>
+				</control>
 				<control type="group" id="7000">
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),music)</visible>
 					<include content="Visible_Right_Delayed">
@@ -836,7 +881,7 @@
 								<visible>!ControlGroup(700).HasFocus</visible>
 							</control>
 						</focusedlayout>
-						<itemlayout height="95">
+						<itemlayout height="90">
 							<!-- <control type="image">
 								<left>5</left>
 								<top>1</top>
@@ -860,6 +905,12 @@
 							<include content="MoviesMainMenu" condition="!Skin.HasSetting(HomeMenuNoMoviesButton)" />
 							<!-- TVSHOWS 22000 -->
 							<include content="TVShowsMainMenu" condition="!Skin.HasSetting(HomeMenuNoTVShowsButton)" />
+							<!-- CUSTOM 1 23000 -->
+							<include content="Custom1MainMenu" condition="!Skin.HasSetting(HomeMenuNoCustom1Button)" />
+							<!-- CUSTOM 2 24000 -->
+							<include content="Custom2MainMenu" condition="!Skin.HasSetting(HomeMenuNoCustom2Button)" />
+							<!-- CUSTOM 3 25000 -->
+							<include content="Custom3MainMenu" condition="!Skin.HasSetting(HomeMenuNoCustom3Button)" />
 							<item>
 								<label>$LOCALIZE[2]</label>
 								<onclick>ActivateWindow(Music,root,return)</onclick>
