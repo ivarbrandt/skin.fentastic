@@ -2,6 +2,11 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR button_focus]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
+- Added 3 NEW custom main menu sections
+- Fixed WideWall view
+- Updated widgets to handle menu items better
+
+[B][COLOR button_focus]Version 1.0.18[/COLOR][/B]
 - Small bug fix
 
 [B][COLOR button_focus]Version 1.0.17[/COLOR][/B]
