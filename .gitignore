@@ -1,7 +1,13 @@
 .DS_Store
 xml/script-fentastic-main_menu_movies.xml
 xml/script-fentastic-main_menu_tvshows.xml
+xml/script-fentastic-main_menu_custom1.xml
+xml/script-fentastic-main_menu_custom2.xml
+xml/script-fentastic-main_menu_custom3.xml
 xml/script-fentastic-widget_movies.xml
 xml/script-fentastic-widget_tvshows.xml
+xml/script-fentastic-widget_custom1.xml
+xml/script-fentastic-widget_custom2.xml
+xml/script-fentastic-widget_custom3.xml
 xml/script-fentastic-search_history.xml
 xml/script-skinshortcuts-includes.xml
