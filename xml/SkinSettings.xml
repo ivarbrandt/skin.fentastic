@@ -263,6 +263,13 @@
 					<selected>!Skin.HasSetting(NoIconSilhouettes)</selected>
 					<onclick>Skin.ToggleSetting(NoIconSilhouettes)</onclick>
 				</control>
+				<!-- OMDB API KEY -->
+				<control type="button" id="6376">
+					<label>Enter OMDb API Key</label>
+					<label2>$INFO[Skin.String(omdb_api_key)]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SetString(omdb_api_key)</onclick>
+				</control>		
 				<!-- SEARCH OPTIONS -->
 				<control type="radiobutton" id="638">
 					<label>Enable search results window</label>
