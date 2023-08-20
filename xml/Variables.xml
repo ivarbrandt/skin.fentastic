@@ -689,6 +689,40 @@
     <value>Open search window</value>
 	</variable>
 
+	<!-- CATEGORY LABEL RATINGS -->
+	<variable name="MC_Label">
+		<value>$INFO[Window.Property(Metascore),[COLOR button_focus][B] | [/B][/COLOR]MC: ]</value>
+	</variable>
+	<variable name="RT_Label">
+		<value>$INFO[Window.Property(TomatoMeter),[COLOR button_focus][B] | [/B][/COLOR]RT: ]</value>
+	</variable>
+	<variable name="RA_Label">
+		<value>$INFO[Window.Property(TomatoUserMeter),[COLOR button_focus][B] | [/B][/COLOR]RA: ]</value>
+	</variable>
+	<variable name="IM_Label">
+		<value>$INFO[Window.Property(IMDbRating),[COLOR button_focus][B] | [/B][/COLOR]IM: ]</value>
+	</variable>
+	<variable name="TM_Label">
+		<value>$INFO[Window.Property(TMDbRating),[COLOR button_focus][B] | [/B][/COLOR]TM: ]</value>
+	</variable>
+
+	<!-- INFOPANEL RATINGS -->
+	<variable name="MC_Panel">
+		<value>[CR]$INFO[Window.Property(Metascore),MC: ]</value>
+	</variable>
+	<variable name="RT_Panel">
+		<value>$INFO[Window.Property(TomatoMeter),[COLOR button_focus][B] • [/B][/COLOR]RT: ]</value>
+	</variable>
+	<variable name="RA_Panel">
+		<value>$INFO[Window.Property(TomatoUserMeter),[COLOR button_focus][B] • [/B][/COLOR]RA: ]</value>
+	</variable>
+	<variable name="IM_Panel">
+		<value>$INFO[Window.Property(IMDbRating),[COLOR button_focus][B] • [/B][/COLOR]IM: ]</value>
+	</variable>
+	<variable name="TM_Panel">
+		<value>$INFO[Window.Property(TMDbRating),[COLOR button_focus][B] • [/B][/COLOR]TM: ]</value>
+	</variable>
+
 	<!-- INFOPANEL VARIABLES -->
 	<!-- Released -->
 	<variable name="_Year">
@@ -756,7 +790,7 @@
 		<!-- COLLECTIONS -->
 		<value condition="String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)">$VAR[_Plot][CR]</value>
 		<!-- MOVIES -->
-		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,movie)">$VAR[_Year]$VAR[_Mpaa]$VAR[_Genre]$VAR[_Director]$VAR[_Runtime]$VAR[_Endsat][CR]$VAR[_Plot][CR]</value>
+		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,movie)">$VAR[_Year]$VAR[_Mpaa]$VAR[_Genre]$VAR[_Director]$VAR[_Runtime]$VAR[_Endsat][CR]$VAR[MC_Panel]$VAR[RT_Panel]$VAR[RA_Panel]$VAR[IM_Panel]$VAR[TM_Panel][CR]$VAR[_Plot][CR]</value>
 		<!-- SHOWS -->
 		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,tvshow)">$VAR[_Year]$VAR[_Mpaa]$VAR[_Network]$VAR[_Genre]$VAR[_RuntimeEpisodes]$VAR[_TotalSeasons]$VAR[_Status]$VAR[_Endsat][CR]$VAR[_Plot][CR]</value>
 		<!-- SEASONS -->
