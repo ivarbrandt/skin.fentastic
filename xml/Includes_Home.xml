@@ -14,7 +14,7 @@
 	<include name="CategoryLabel">
 		<param name="visible">true</param>
 		<param name="item_treshold">0</param>
-		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title,[COLOR button_focus][B] | [/B][/COLOR]]</param>
+		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title,[COLOR button_focus][B] | [/B][/COLOR]]$VAR[MC_Label]$VAR[RT_Label]$VAR[RA_Label]$VAR[IM_Label]$VAR[TM_Label]</param>
 		<param name="label_focus_episodes">$INFO[Container($PARAM[list_id]).ListItem.TVShowTitle,[COLOR button_focus][B] | [/B][/COLOR]]$INFO[Container($PARAM[list_id]).ListItem.Title,[COLOR button_focus][B] | [/B][/COLOR]]</param>
 		<param name="label_focus_collections">$INFO[Container($PARAM[list_id]).ListItem.Label,[COLOR button_focus][B] | [/B][/COLOR]]</param>
 		<definition>
@@ -22,7 +22,7 @@
 			<left>75</left>
 			<top>80</top>
 			<onback>9000</onback>
-			<width>1200</width>
+			<width>1350</width>
 			<height>90</height>
 			<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,$PARAM[item_treshold]) | [Container($PARAM[list_id]).IsUpdating + Integer.IsEqual(Container($PARAM[list_id]).NumItems,0)]</visible>
 			<visible>$PARAM[visible]</visible>
@@ -35,6 +35,7 @@
 				<label>$PARAM[label]$PARAM[label_focus]</label>
 				<shadowcolor>text_shadow</shadowcolor>
 				<visible>!String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
+				<scroll>true</scroll>
 			</control>
 			<control type="label">
 				<label>$PARAM[label]$PARAM[label_focus_episodes]</label>
