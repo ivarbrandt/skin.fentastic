@@ -263,9 +263,9 @@
 	<include name="MediaMenuCommon">
 		<include>OpenClose_Left</include>
 		<depth>DepthSideBlade</depth>
-		<left>-520</left>
+		<left>-770</left>
 		<animation type="Conditional" condition="$EXP[sidebar_visible]" reversible="true">
-			<effect type="slide" start="0" end="520" time="400" tween="cubic" easing="out" />
+			<effect type="slide" start="0" end="770" time="300" tween="cubic" easing="out" />
 		</animation>
 		<control type="image">
 			<width>4000</width>
@@ -278,7 +278,7 @@
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
-			<width>520</width>
+			<width>770</width>
 			<height>100%</height>
 			<texture colordiffuse="button_focus" border="0,0,52,0">lists/contentpanel-fade.png</texture>
 		</control>
@@ -343,7 +343,7 @@
 	</include>
 	<include name="MediaMenuListCommon">
 		<definition>
-			<left>0</left>
+			<left>25</left>
 			<top>100</top>
 			<width>470</width>
 			<height>100%</height>
