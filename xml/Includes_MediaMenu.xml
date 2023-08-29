@@ -48,7 +48,7 @@
 			</control>
 			<control type="grouplist" id="9000">
 				<top>50</top>
-				<left>0</left>
+				<left>25</left>
 				<width>470</width>
 				<height>100%</height>
 				<onleft>9000</onleft>
