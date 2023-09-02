@@ -7,6 +7,8 @@
 		<height>80</height>
 		<radioposx>370</radioposx>
 		<aligny>center</aligny>
+		<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+		<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
 		<invalidcolor>invalid</invalidcolor>
 		<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 		<texturenofocus />
@@ -28,10 +30,10 @@
 				<radioposy>0</radioposy>
 				<radiowidth>40</radiowidth>
 				<radioheight>40</radioheight>
-				<textureradioonfocus>$PARAM[icon]</textureradioonfocus>
-				<textureradioonnofocus>$PARAM[icon]</textureradioonnofocus>
-				<textureradioofffocus>$PARAM[icon]</textureradioofffocus>
-				<textureradiooffnofocus>$PARAM[icon]</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="$VAR[FocusedTextColor]">$PARAM[icon]</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="$VAR[UnfocusedTextColor]">$PARAM[icon]</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="$VAR[FocusedTextColor]">$PARAM[icon]</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="$VAR[UnfocusedTextColor]">$PARAM[icon]</textureradiooffnofocus>
 				<textureradiooffdisabled colordiffuse="button_focus">$PARAM[icon]</textureradiooffdisabled>
 				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TV$PARAM[area])</onclick>
 				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(Radio$PARAM[area])</onclick>
@@ -258,7 +260,7 @@
 		<radioposx>300</radioposx>
 		<font>font25_title</font>
 		<aligny>top</aligny>
-		<textcolor>button_focus</textcolor>
+		<textcolor>skyblue</textcolor>
 	</include>
 	<include name="MediaMenuCommon">
 		<include>OpenClose_Left</include>
@@ -364,14 +366,41 @@
 				<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 				<onclick>Container.NextViewMode</onclick>
 			</control>
+			<control type="button" id="6052">
+				<label>Brightness</label>
+				<label2>[B]$INFO[Skin.String(DefaultBackgroundBrightness)][/B]</label2>
+				<include>MediaMenuItemsCommon</include>
+				<onclick condition="String.IsEqual(Skin.String(DefaultBackgroundBrightness),High)">Skin.SetString(DefaultBackgroundBrightness,Medium)</onclick>
+				<onclick condition="String.IsEqual(Skin.String(DefaultBackgroundBrightness),Medium)">Skin.SetString(DefaultBackgroundBrightness,Low)</onclick>
+				<onclick condition="String.IsEqual(Skin.String(DefaultBackgroundBrightness),Low)">Skin.SetString(DefaultBackgroundBrightness,Highest)</onclick>
+				<onclick condition="String.IsEqual(Skin.String(DefaultBackgroundBrightness),Highest)">Skin.SetString(DefaultBackgroundBrightness,High)</onclick>
+				<visible>!Skin.HasSetting(no_fanart) + ![Container.Content(movies) | Container.Content(shows) | Container.Content(episodes) | Container.Content(seasons)]</visible>
+			</control>
 			<control type="button" id="6053">
+				<label>Brightness</label>
+				<label2>[B]$INFO[Skin.String(DefaultFanartBrightness)][/B]</label2>
+				<include>MediaMenuItemsCommon</include>
+				<onclick condition="String.IsEqual(Skin.String(DefaultFanartBrightness),High)">Skin.SetString(DefaultFanartBrightness,Medium)</onclick>
+				<onclick condition="String.IsEqual(Skin.String(DefaultFanartBrightness),Medium)">Skin.SetString(DefaultFanartBrightness,Low)</onclick>
+				<onclick condition="String.IsEqual(Skin.String(DefaultFanartBrightness),Low)">Skin.SetString(DefaultFanartBrightness,Highest)</onclick>
+				<onclick condition="String.IsEqual(Skin.String(DefaultFanartBrightness),Highest)">Skin.SetString(DefaultFanartBrightness,High)</onclick>
+				<visible>!Skin.HasSetting(no_fanart) + [Container.Content(movies) | Container.Content(shows) | Container.Content(episodes) | Container.Content(seasons)]</visible>
+			</control>
+			<control type="button" id="6054">
+				<include>MediaMenuItemsCommon</include>
+				<label>Artwork</label>
+				<label2>[B]$VAR[LandscapeSwitchVar][/B]</label2>
+				<visible>Control.IsVisible(55) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+				<onclick>Skin.ToggleSetting(UseLandscape)</onclick>
+			</control>
+			<control type="button" id="6055">
 				<include>MediaMenuItemsCommon</include>
 				<label>$LOCALIZE[31022]</label>
 				<label2>[B]$INFO[Container.SortMethod][/B]</label2>
 				<visible>Control.IsEnabled(3)</visible>
 				<onclick>SendClick(3)</onclick>
 			</control>
-			<control type="button" id="6052">
+			<control type="button" id="6056">
 				<include>MediaMenuItemsCommon</include>
 				<label>$LOCALIZE[31032]</label>
 				<label2>[B]$INFO[Container.SortOrder][/B]</label2>

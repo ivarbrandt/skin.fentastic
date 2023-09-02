@@ -25,10 +25,10 @@
 			</control> -->
 			<control type="grouplist" id="5">
 				<description>control area</description>
-				<left>29</left>
+				<left>25</left>
 				<top>100</top>
-				<width>1160</width>
-				<height>750</height>
+				<width>1135</width>
+				<height>710</height>
 				<pagecontrol>60</pagecontrol>
 				<onleft>9000</onleft>
 				<onright>60</onright>
@@ -65,7 +65,7 @@
 				<include>DefaultSettingLabel</include>
 			</control>
 			<control type="grouplist" id="9000">
-				<left>1210</left>
+				<left>1235</left>
 				<top>92</top>
 				<orientation>vertical</orientation>
 				<width>300</width>
@@ -90,7 +90,7 @@
 				<left>1189</left>
 				<top>100</top>
 				<width>12</width>
-				<height>750</height>
+				<height>710</height>
 				<orientation>vertical</orientation>
 				<onleft>5</onleft>
 				<onright>9000</onright>

@@ -27,57 +27,68 @@
 				<control type="label" id="2">
 					<height>47</height>
 					<width>1400</width>
-					<font>Mono26</font>
+					<font>font32</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				</control>
 				<control type="label" id="3">
 					<height>47</height>
 					<width>1400</width>
-					<font>Mono26</font>
+					<font>font32</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				</control>
 				<control type="label" id="4">
 					<height>47</height>
 					<width>1400</width>
-					<font>Mono26</font>
+					<font>font32</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				</control>
 				<control type="label" id="5">
 					<height>47</height>
 					<width>1400</width>
-					<font>Mono26</font>
+					<font>font32</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				</control>
 				<control type="label" id="6">
 					<height>47</height>
 					<width>1400</width>
-					<font>Mono26</font>
+					<font>font32</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				</control>
 				<control type="label" id="7">
 					<height>47</height>
 					<width>1400</width>
-					<font>Mono26</font>
+					<font>font32</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				</control>
 				<control type="label" id="8">
 					<height>47</height>
 					<width>1400</width>
-					<font>Mono26</font>
+					<font>font32</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				</control>
 				<control type="label" id="9">
 					<height>47</height>
 					<width>1400</width>
-					<font>Mono26</font>
+					<font>font32</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				</control>
 				<control type="label" id="10">
 					<height>47</height>
 					<width>1400</width>
-					<font>Mono26</font>
+					<font>font32</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				</control>
 				<control type="label" id="11">
 					<height>47</height>
 					<width>1400</width>
-					<font>Mono26</font>
+					<font>font32</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				</control>
 				<control type="label" id="12">
 					<height>47</height>
 					<width>1400</width>
-					<font>Mono26</font>
+					<font>font32</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				</control>
 			</control>
 			<control type="textbox" id="30">
@@ -214,12 +225,14 @@
 					<textoffsety>40</textoffsety>
 					<shadowcolor>black</shadowcolor>
 					<font>font12</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				</control>
 				<control type="progress">
 					<description>Memory BAR</description>
 					<width>730</width>
 					<height>16</height>
 					<info>system.memory(used)</info>
+					<colordiffuse>$VAR[UnfocusedTextColor]</colordiffuse>
 				</control>
 				<control type="label">
 					<description>CPU Text</description>
@@ -229,6 +242,7 @@
 					<aligny>center</aligny>
 					<shadowcolor>black</shadowcolor>
 					<font>font12</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 					<visible>System.SupportsCPUUsage</visible>
 				</control>
 				<control type="progress">
@@ -237,6 +251,7 @@
 					<height>16</height>
 					<info>System.CPUUsage</info>
 					<visible>System.SupportsCPUUsage</visible>
+					<colordiffuse>$VAR[UnfocusedTextColor]</colordiffuse>
 				</control>
 			</control>
 			<control type="group">
@@ -251,6 +266,7 @@
 					<label>$LOCALIZE[31031]:</label>
 					<shadowcolor>black</shadowcolor>
 					<font>font25_title</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				</control>
 				<control type="grouplist">
 					<description>Kodi build version</description>
@@ -266,6 +282,7 @@
 						<font>font12</font>
 						<label>$LOCALIZE[144]</label>
 						<shadowcolor>black</shadowcolor>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 					</control>
 					<control type="label">
 						<description>Kodi Build Version</description>
@@ -273,7 +290,7 @@
 						<height>40</height>
 						<font>font12</font>
 						<label>$INFO[System.BuildVersionShort]$INFO[System.BuildVersionCode, (,)]</label>
-						<textcolor>button_focus</textcolor>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
 				</control>
@@ -291,6 +308,7 @@
 						<font>font12</font>
 						<label>Git:</label>
 						<shadowcolor>black</shadowcolor>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 					</control>
 					<control type="label">
 						<description>Git version</description>
@@ -298,7 +316,7 @@
 						<height>40</height>
 						<font>font12</font>
 						<label>$INFO[System.BuildVersionGit]</label>
-						<textcolor>button_focus</textcolor>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
 				</control>
@@ -316,14 +334,15 @@
 						<font>font12</font>
 						<label>$LOCALIZE[174]</label>
 						<shadowcolor>black</shadowcolor>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 					</control>
 					<control type="label" id="53">
 						<description>Kodi Build Date</description>
 						<width>auto</width>
 						<height>40</height>
 						<font>font12</font>
-						<textcolor>button_focus</textcolor>
 						<shadowcolor>black</shadowcolor>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 					</control>
 				</control>
 			</control>

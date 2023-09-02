@@ -54,7 +54,7 @@
 	<constant name="list_bottom">0</constant>
 	<constant name="list_bottom_offset">70</constant>
 	<constant name="list_top_offset">110</constant>
-	<constant name="list_item_height">75</constant>
+	<constant name="list_item_height">68</constant>
 	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo) | Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)</expression>
 	<expression name="sidebar_visible">ControlGroup(9000).HasFocus | Control.HasFocus(6130) | Control.HasFocus(6131)</expression>
 	<expression name="ProgessBarMovie">String.IsEqual(ListItem.DBtype,movie) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</expression>
@@ -307,7 +307,7 @@
 						<align>$PARAM[align]</align>
 						<font>$PARAM[font]</font>
 						<aligny>center</aligny>
-						<textcolor>$PARAM[fontcolor]</textcolor>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</control>
@@ -361,7 +361,8 @@
 						<align>$PARAM[align]</align>
 						<font>$PARAM[font]</font>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
 						<scroll>true</scroll>
 					</control>
 				</control>
@@ -418,13 +419,16 @@
 				<width>1900</width>
 				<usecontrolcoords>true</usecontrolcoords>
 				<control type="group">
-					<width>150</width>
-					<visible>System.AddonIsEnabled(resource.images.studios.white) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Studio)</visible>
-					<include content="MediaFlag">
+					<width>140</width>
+					<visible>[System.AddonIsEnabled(resource.images.studios.white) | System.AddonIsEnabled(resource.images.studios.coloured)] + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.Studio)</visible>
+					<include condition="!Skin.HasSetting(Disable.ColorStudio)" content="MediaFlag">
 						<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.Studio,resource://resource.images.studios.white/,.png]" />
 					</include>
+					<include condition="Skin.HasSetting(Disable.ColorStudio)" content="MediaFlag">
+						<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.Studio,resource://resource.images.studios.coloured/,.png]" />
+					</include>
 				</control>
-				<control type="group">
+				<!-- <control type="group">
 					<top>10</top>
 					<width>200</width>
 					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Premiered)</visible>
@@ -432,8 +436,8 @@
 						<param name="icon" value="lists/year.png" />
 						<param name="label" value="$INFO[$PARAM[infolabel_prefix]ListItem.Premiered]" />
 					</include>
-				</control>
-				<control type="group">
+				</control> -->
+				<!-- <control type="group">
 					<width>115</width>
 					<visible>!String.IsEmpty($PARAM[infolabel_prefix]ListItem.Duration)</visible>
 					<control type="label">
@@ -447,7 +451,7 @@
 					<include content="MediaFlag">
 						<param name="texture" value="flags/flag.png" />
 					</include>
-				</control>
+				</control> -->
 				<include content="MediaFlag">
 					<param name="texture" value="$INFO[ListItem.VideoCodec,flags/videocodec/,.png]" />
 					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoCodec)" />
@@ -511,6 +515,7 @@
 				<width>160</width>
 				<height>63</height>
 				<font>font27_narrow</font>
+				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[$PARAM[label]]</label>
@@ -521,9 +526,9 @@
 		<param name="width"></param>
 		<param name="right"></param>
 		<definition>
-			<control type="fixedlist" id="$PARAM[list_id]">
+			<control type="panel" id="$PARAM[list_id]">
 				<left>0</left>
-				<top>list_top_offset</top>
+				<top>150</top>
 				<bottom>list_bottom_offset</bottom>
 				<right>$PARAM[right]</right>
 				<width>$PARAM[width]</width>
@@ -550,7 +555,7 @@
 						<width>32</width>
 						<bottom>0</bottom>
 						<aspectratio aligny="center">keep</aspectratio>
-						<texture>$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[FocusedTextColor]">$VAR[ListWatchedIconVar]</texture>
 					</control>
 					<control type="label">
 						<left>90</left>
@@ -559,7 +564,8 @@
 						<right>20</right>
 						<aligny>center</aligny>
 						<scroll>true</scroll>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="label">
@@ -581,7 +587,7 @@
 						<width>32</width>
 						<bottom>0</bottom>
 						<aspectratio aligny="center">keep</aspectratio>
-						<texture>$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[UnfocusedTextColor]">$VAR[ListWatchedIconVar]</texture>
 					</control>
 					<control type="label">
 						<left>90</left>
@@ -590,6 +596,7 @@
 						<right>20</right>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="label">
@@ -864,7 +871,7 @@
 				<top>-2</top>
 				<right>-2</right>
         <bottom>-2</bottom>
-				<texture colordiffuse="button_focus">$PARAM[diffusetexture]</texture>
+				<texture colordiffuse="$VAR[UnfocusedTextColor]">$PARAM[diffusetexture]</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -882,7 +889,7 @@
 				<label>$PARAM[header_label]</label>
 				<align>center</align> 
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<!-- <control type="button" id="22002">
@@ -906,9 +913,9 @@
 				<texturenofocus />
 				<label></label>
 				<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="button_focus">special://xbmc/media/vendor_icon.png</textureradiooffnofocus>
+				<textureradiooffnofocus colordiffuse="skyblue">special://xbmc/media/vendor_icon.png</textureradiooffnofocus>
 				<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="button_focus">special://xbmc/media/vendor_icon.png</textureradioonnofocus>
+				<textureradioonnofocus colordiffuse="skyblue">special://xbmc/media/vendor_icon.png</textureradioonnofocus>
 				<onclick>Action(close)</onclick>
 				<visible>!Skin.HasSetting(touchmode)</visible>
 			</control>
@@ -1002,10 +1009,11 @@
 								<width>32</width>
 								<height>32</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="button_focus">$VAR[NowPlayingIconVar]</texture>
+								<texture colordiffuse="skyblue">$VAR[NowPlayingIconVar]</texture>
 							</control>
 							<control type="label">
 								<label>$INFO[Player.Title]</label>
+								<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 								<font>font27</font>
 								<shadowcolor>text_shadow</shadowcolor>
 								<height>35</height>
@@ -1048,10 +1056,12 @@
 							<width max="600">auto</width>
 							<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 							<label>$INFO[System.ProfileName]</label>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						</control>
 					</control>
 					<control type="label">
 						<font>font_clock</font>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<height>200</height>
 						<width>auto</width>
@@ -1090,6 +1100,7 @@
 						<width>auto</width>
 						<aligny>center</aligny>
 						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="image">
@@ -1098,7 +1109,7 @@
 						<height>50</height>
 						<fadetime>300</fadetime>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
-						<texture>$INFO[Weather.FanartCode,weather/small/,.png]</texture>
+						<texture colordiffuse="$VAR[UnfocusedTextColor]">$INFO[Weather.FanartCode,weather/small/,.png]</texture>
 						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="image">
@@ -1152,7 +1163,7 @@
 			<visible>!String.IsEmpty(Container.ShowTitle) + !String.IsEqual(Container.ShowTitle,Container.FolderName)</visible>
 		</control>
 		<control type="label">
-			<label>$INFO[Container.FolderName, » ]</label>
+			<label>$INFO[Container.FolderName, [COLOR skyblue][B]»[/B][/COLOR] ]</label>
 			<include>BreadcrumbsLabel</include>
 			<visible>![Container.Content()]</visible>
 			<visible>![Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRSearch.xml) | Window.IsActive(MyVideoNav.xml)]</visible>
@@ -1164,7 +1175,7 @@
 			<visible>![Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRSearch.xml)]</visible>
 		</control> -->
 		<control type="label">
-			<label>$INFO[Container.PluginCategory, » ]</label>
+			<label>$INFO[Container.PluginCategory, [COLOR skyblue][B]»[/B][/COLOR] ]</label>
 			<include>BreadcrumbsLabel</include>
 			<visible>!String.isempty(Container.PluginCategory)</visible>
 		</control>
@@ -1182,6 +1193,7 @@
 	</include>
 	<include name="BreadcrumbsLabel">
 		<font>font45</font>
+		<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 		<shadowcolor>text_shadow</shadowcolor>
 		<top>7</top>
 		<height>100</height>
@@ -1189,16 +1201,11 @@
 	</include>
 	<include name="ColoredBackgroundImages">
 		<control type="image">
+			<visible>[Skin.HasSetting(no_fanart) | String.IsEmpty(Listitem.Art(fanart))] + !Player.HasMedia</visible>
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="primary_background">special://skin/extras/backgrounds/primary.jpg</texture>
-		</control>
-		<control type="image">
-			<depth>DepthBackground</depth>
-			<include>FullScreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="secondary_background" fallback="special://skin/extras/backgrounds/pattern1.jpg">$INFO[Skin.String(background_overlay),special://skin/extras/backgrounds/pattern,.jpg]</texture>
+			<texture colordiffuse="$VAR[BackgroundBrightnessVar]" fallback="special://skin/extras/backgrounds/redblur.jpg">$VAR[CustomBackgroundImage]</texture>
 		</control>
 	</include>
 	<include name="DefaultBackground">
@@ -1224,7 +1231,7 @@
 					<include>RainDropAnimationBackground</include>
 				</control>
 				<control type="group" id="31111">
-					<visible>!Window.IsActive(Home) + [![Player.HasVideo | [Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name)]] | !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))]</visible>
+					<visible>![Window.IsActive(Home) | Window.IsActive(1121)] + [![Player.HasVideo | [Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name)]] | !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))]</visible>
 					<depth>DepthBackground</depth>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
@@ -1234,7 +1241,7 @@
 						<aspectratio>scale</aspectratio>
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400">VisibleChange</animation>
-						<texture background="true" colordiffuse="37FFFFFF">$VAR[MediaFanartVar]</texture>
+						<texture background="true" colordiffuse="$VAR[FanartBrightnessVar]">$VAR[MediaFanartVar]</texture>
 						<visible>!Control.IsVisible(502) | $EXP[infodialog_active]</visible>
 					</control>
 					<control type="image">
@@ -1246,7 +1253,7 @@
 						<fadetime>400</fadetime>
 						<include>OpenClose_Left</include>
 						<animation effect="fade" time="400">VisibleChange</animation>
-						<texture background="true" colordiffuse="37FFFFFF">$VAR[PosterVar]</texture>
+						<texture background="true" colordiffuse="$VAR[FanartBrightnessVar]">$VAR[PosterVar]</texture>
 						<visible>!Control.IsVisible(32111)</visible>
 					</control>
 				</control>
@@ -1449,6 +1456,7 @@
 				<right>$PARAM[right]</right>
 				<top>$PARAM[top]</top>
 				<height>$PARAM[height]</height>
+				<visible>[String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode) | VideoPlayer.Content(LiveTV)]</visible>
 			</control>
 		</definition>
 	</include>
@@ -1590,7 +1598,7 @@
 				<top>30</top>
 				<width>240</width>
 				<height>160</height>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture colordiffuse="$VAR[UnfocusedTextColor]">$INFO[ListItem.Icon]</texture>
 				<align>center</align>
 				<aspectratio>scale</aspectratio>
 			</control>
@@ -1600,6 +1608,7 @@
 				<width>350</width>
 				<height>400</height>
 				<label>$INFO[ListItem.Label]</label>
+				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				<align>center</align>
 			</control>
 		</itemlayout>
@@ -1634,7 +1643,7 @@
 					<top>30</top>
 					<width>240</width>
 					<height>160</height>
-					<texture>$INFO[ListItem.Icon]</texture>
+					<texture colordiffuse="$VAR[FocusedTextColor]">$INFO[ListItem.Icon]</texture>
 					<align>center</align>
 					<aspectratio>scale</aspectratio>
 				</control>
@@ -1643,7 +1652,8 @@
 					<top>190</top>
 					<width>350</width>
 					<height>400</height>
-					<label>$INFO[ListItem.Label]</label>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<align>center</align>
 				</control>
 			</control>

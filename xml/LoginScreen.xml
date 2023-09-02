@@ -60,10 +60,10 @@
 						<top>220</top>
 						<height>80</height>
 						<label>$INFO[ListItem.label]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<font>font27</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>99FFFFFF</textcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout width="384" height="300">
@@ -93,6 +93,7 @@
 						<top>220</top>
 						<height>80</height>
 						<label>[B]$INFO[ListItem.label][/B]</label>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
 						<font>font27</font>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -105,7 +106,7 @@
 				<top>860</top>
 				<height>45</height>
 				<font>font25_narrow</font>
-				<textcolor>80FFFFFF</textcolor>
+				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.label2]</label>
@@ -117,7 +118,7 @@
 				<width>400</width>
 				<height>100</height>
 				<label>$LOCALIZE[31072]</label>
-				<font>font12</font>
+				<font>font13</font>
 				<align>center</align>
 				<onclick>ActivateWindow(ShutdownMenu)</onclick>
 				<onleft>52</onleft>

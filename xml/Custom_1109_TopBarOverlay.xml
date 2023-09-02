@@ -74,7 +74,7 @@
 				<height>16</height>
 				<info>Player.Progress</info>
 				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-				<midtexture colordiffuse="button_focus">colors/white.png</midtexture>
+				<midtexture colordiffuse="skyblue">colors/white.png</midtexture>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="slider">
@@ -83,8 +83,8 @@
 				<width>100%</width>
 				<height>26</height>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-				<textureslidernib colordiffuse="button_focus">osd/progress/nub_bar.png</textureslidernib>
-				<textureslidernibfocus colordiffuse="button_focus">colors/white.png</textureslidernibfocus>
+				<textureslidernib colordiffuse="skyblue">osd/progress/nub_bar.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="skyblue">colors/white.png</textureslidernibfocus>
 				<info>Player.Seekbar</info>
 				<visible>!VideoPlayer.Content(LiveTV) + [Player.Seeking | Player.HasPerformedSeek(3) | Player.Paused]</visible>
 			</control>

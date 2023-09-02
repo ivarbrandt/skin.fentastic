@@ -141,8 +141,8 @@
 				<right>$PARAM[right]</right>
 				<top>list_top_offset</top>
 				<bottom>list_bottom_offset</bottom>
-				<movement>6</movement>
-				<focusposition>5</focusposition>
+				<movement>7</movement>
+				<focusposition>6</focusposition>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>vertical</orientation>
 				<pagecontrol>$PARAM[list_id]600</pagecontrol>
@@ -152,23 +152,24 @@
 				<ondown>$PARAM[list_id]</ondown>
 				<viewtype label="$PARAM[viewtype_label]">list</viewtype>
 				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(games) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)</visible>
-				<focusedlayout height="list_item_height">
-					<control type="image">
+				<focusedlayout height="85">
+					<!-- <control type="image">
 						<left>0</left>
 						<right>0</right>
 						<top>0</top>
 						<bottom>0</bottom>
 						<texture colordiffuse="button_focus">masks/focus-long.png</texture>
 						<visible>Control.HasFocus($PARAM[list_id])</visible>
-					</control>
+					</control> -->
 					<control type="label">
 						<left>70</left>
-						<right>70</right>
+						<right>20</right>
 						<top>0</top>
 						<bottom>0</bottom>
 						<aligny>center</aligny>
 						<scroll>true</scroll>
-						<font>font27</font>
+						<scrollspeed>300</scrollspeed>
+						<font>font52_title</font>
 						<label>$VAR[ListLabelVar]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -179,24 +180,24 @@
 						<right>20</right>
 						<align>right</align>
 						<aligny>center</aligny>
-						<font>font12</font>
-						<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
+						<font>font32</font>
+						<label>[B]$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,][/B]</label>
 						<animation effect="fade" start="70" end="100" time="300" reversible="false">Focus</animation>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="image">
-						<left>21</left>
+						<left>15</left>
 						<centertop>50%</centertop>
-						<width>32</width>
-						<height>32</height>
+						<width>37</width>
+						<height>37</height>
 						<texture>$VAR[ListWatchedIconVar]</texture>
 						<animation effect="fade" start="30" end="100" time="300" reversible="false">Focus</animation>
 					</control>
 					<control type="image">
-						<left>21</left>
+						<left>15</left>
 						<centertop>50%</centertop>
-						<width>32</width>
-						<height>32</height>
+						<width>37</width>
+						<height>37</height>
 						<texture colordiffuse="button_focus">$VAR[ListWatchedIconVar]</texture>
 						<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 						<animation effect="fade" time="150">VisibleChange</animation>
@@ -206,11 +207,12 @@
 				<itemlayout height="list_item_height">
 					<control type="label">
 						<left>70</left>
-						<right>70</right>
+						<right>20</right>
 						<top>0</top>
 						<bottom>0</bottom>
 						<aligny>center</aligny>
-						<font>font27</font>
+						<font>font32</font>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<label>$VAR[ListLabelVar]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -221,16 +223,16 @@
 						<bottom>0</bottom>
 						<align>right</align>
 						<aligny>center</aligny>
-						<font>font12</font>
+						<font>font27</font>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
-						<textcolor>grey</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="image">
-						<left>21</left>
+						<left>15</left>
 						<centertop>50%</centertop>
-						<width>32</width>
-						<height>32</height>
+						<width>37</width>
+						<height>37</height>
 						<texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
 					</control>
 				</itemlayout>
@@ -244,7 +246,7 @@
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include content="ContentPanel">
-					<param name="width" value="806" />
+					<param name="width" value="1106" />
 					<param name="flipx" value="$PARAM[flip_bg]" />
 				</include>
 				<!-- image control -->
@@ -256,7 +258,36 @@
 					<aspectratio aligny="top">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<texture diffuse="masks/landscape.png" fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
-					<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song) + !Container.Content(addons)</visible>
+					<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song) + !Container.Content(addons) + Skin.HasSetting(UseLandscape)</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>110</top>
+					<width>540</width>
+					<height>470</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture diffuse="masks/landscape.png" fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
+					<visible>!Skin.HasSetting(UseLandscape) + ![String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]</visible>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>120</top>
+					<width>515</width>
+					<height>200</height>
+					<texture background="true">$VAR[ClearlogoVar]</texture>
+					<aspectratio align="center">keep</aspectratio>
+					<visible>[String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season)] + !String.IsEqual(ListItem.DBType,song) + !Container.Content(addons) + !Skin.HasSetting(UseLandscape)</visible>
+				</control>
+				<control type="textbox">
+					<top>155</top>
+					<left>30</left>
+					<width>550</width>
+					<aligny>center</aligny>
+					<height>110</height>
+					<font>font36_title</font>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>[String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season)] + !String.IsEqual(ListItem.DBType,song) + !Container.Content(addons) + !Skin.HasSetting(UseLandscape) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 				</control>
 				<control type="image">
 					<left>30</left>
@@ -313,7 +344,7 @@
 					<animation effect="slide" end="0,-140" time="0" condition="String.IsEqual(ListItem.DbType,episode)">conditional</animation>
 					<visible>!String.IsEqual(ListItem.DbType,episode)</visible>
 				</control> -->
-				<include content="ProgressBar">
+				<include condition="Skin.HasSetting(UseLandscape)" content="ProgressBar">
 					<!-- 30 -->
 					<param name="left" value="65"/>
 					<param name="top" value="390"/>
@@ -328,7 +359,18 @@
 						<width>540</width>
 						<bottom>80</bottom>
 						<label>$VAR[InfoPanel]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<autoscroll time="3000" delay="10000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<visible>Skin.HasSetting(UseLandscape)</visible>
+					</control>
+					<control type="textbox">
+						<top>346</top>
+						<width>525</width>
+						<bottom>115</bottom>
+						<label>$VAR[InfoPanel]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+						<visible>!Skin.HasSetting(UseLandscape)</visible>
 					</control>
 					<control type="textbox" id="15500">
 						<top>600</top>
@@ -336,6 +378,7 @@
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[ListBoxInfoVar]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<visible>!String.IsEqual(ListItem.DbType,movie) + !String.IsEqual(ListItem.DbType,tvshow) + !String.IsEqual(ListItem.DbType,season) + !String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song)</visible>
 					</control>
 					<!-- Plot control episodes -->
@@ -345,6 +388,7 @@
 						<bottom>100</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[InfoPanelEpisode]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 					</control>
 					<control type="textbox">
 						<top>418</top>
@@ -353,6 +397,7 @@
 						<height>110</height>
 						<bottom>70</bottom>
 						<font>font36_title</font>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<label>Season $INFO[ListItem.Season], Episode $INFO[ListItem.Episode]</label>
 						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 					</control>
@@ -362,6 +407,7 @@
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="3000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[ListBoxInfoVar]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<visible>String.IsEqual(ListItem.DBType,song)</visible>
 					</control>
 				</control>

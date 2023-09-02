@@ -11,7 +11,7 @@
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<control type="fixedlist" id="50">
-					<left>0</left>
+					<left>25</left>
 					<top>list_top_offset</top>
 					<right>918</right>
 					<bottom>list_bottom_offset</bottom>

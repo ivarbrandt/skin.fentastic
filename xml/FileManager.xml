@@ -84,6 +84,7 @@
 				<align>right</align>
 				<shadowcolor>text_shadow</shadowcolor>
 				<label>$INFO[Container(21).CurrentItem,, / ]$INFO[Container(21).NumItems]</label>
+				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 			</control>
 			<control type="label" id="102">
 				<right>40</right>
@@ -93,6 +94,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>$PARAM[header_label]</label>
+				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				<haspath>true</haspath>
 				<shadowcolor>black</shadowcolor>
 			</control>
@@ -102,6 +104,7 @@
 				<height>48</height>
 				<aligny>center</aligny>
 				<shadowcolor>text_shadow</shadowcolor>
+				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				<label>$INFO[Container(20).CurrentItem,, / ]$INFO[Container(20).NumItems]</label>
 			</control>
 			<control type="label" id="101">
@@ -111,6 +114,7 @@
 				<font>font30_title</font>
 				<aligny>center</aligny>
 				<label>$PARAM[header_label]</label>
+				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				<haspath>true</haspath>
 				<shadowcolor>black</shadowcolor>
 			</control>

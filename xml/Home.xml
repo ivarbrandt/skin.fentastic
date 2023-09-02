@@ -7,8 +7,10 @@
 	<onload>RunScript(script.fentastic.helper,mode=check_for_profile_change&amp;skin_id=skin.fentastic)</onload>
   <onload condition="String.IsEmpty(Window(Home).Property(fentastic.starting_widgets))">RunScript(script.fentastic.helper,mode=starting_widgets)</onload>
   <onload condition="String.IsEmpty(Window(Home).Property(fentastic.starting_widgets))">SetProperty(fentastic.starting_widgets,true)</onload>
+	<onload condition="String.IsEmpty(Skin.String(DefaultBackgroundBrightness))">Skin.SetString(DefaultBackgroundBrightness,Medium)</onload>
+	<onload condition="String.IsEmpty(Skin.String(DefaultFanartBrightness))">Skin.SetString(DefaultFanartBrightness,Medium)</onload>
 	<controls>
-		<control type="button" id="20000">
+		<!-- <control type="button" id="20000">
 			<include>HiddenObject</include>
 			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
 			<onfocus>SetFocus(2000)</onfocus>
@@ -21,7 +23,7 @@
 			<onfocus>SetFocus(2000)</onfocus>
 			<onclick>noop</onclick>
 			<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
-		</control>
+		</control> -->
 		<include>DefaultBackground</include>
 		<control type="multiimage">
 			<depth>DepthBackground</depth>
@@ -563,6 +565,7 @@
 								<align>right</align>
 								<font>font30_title</font>
 								<label>$INFO[Weather.Location]</label>
+								<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 							</control>
 							<control type="label">
 								<left>840</left>
@@ -573,6 +576,7 @@
 								<align>right</align>
 								<font>font14</font>
 								<label>$INFO[Weather.Conditions]</label>
+								<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 							</control>
 							<control type="label">
 								<left>840</left>
@@ -583,6 +587,7 @@
 								<align>right</align>
 								<font>font14</font>
 								<label>$INFO[Weather.Temperature]</label>
+								<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 							</control>
 							<control type="grouplist">
 								<top>50</top>
@@ -810,7 +815,7 @@
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
 				<include content="ContentPanel">
-					<param name="width" value="800" />
+					<param name="width" value="900" />
 				</include>
 				<control type="group">
 					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
@@ -830,7 +835,7 @@
 						<focusedlayout height="95">
 							<control type="group">
 								<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
-								<control type="image">
+								<!-- <control type="image">
 									<left>0</left>
 									<top>0</top>
 									<width>437</width>
@@ -838,7 +843,7 @@
 									<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
 									<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasActiveModalDialog">Conditional</animation>
 									<visible>!ControlGroup(700).HasFocus</visible>
-								</control>
+								</control> -->
 								<!-- <control type="image">
 									<left>5</left>
 									<top>1</top>
@@ -864,6 +869,7 @@
 								<width>315</width>
 								<aligny>center</aligny>
 								<font>font45</font>
+								<textcolor>darkgrey</textcolor>
 								<label>$INFO[ListItem.Label]</label>
 								<shadowcolor>text_shadow</shadowcolor>
 								<visible>ControlGroup(700).HasFocus</visible>
@@ -875,8 +881,9 @@
 								<height>95</height>
 								<width>315</width>
 								<aligny>center</aligny>
-								<font>font45_title</font>
+								<font>font52_title</font>
 								<label>$INFO[ListItem.Label]</label>
+								<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 								<shadowcolor>text_shadow</shadowcolor>
 								<visible>!ControlGroup(700).HasFocus</visible>
 							</control>
@@ -896,6 +903,7 @@
 								<width>315</width>
 								<aligny>center</aligny>
 								<font>font45</font>
+								<textcolor>darkgrey</textcolor>
 								<label>$INFO[ListItem.Label]</label>
 								<shadowcolor>text_shadow</shadowcolor>
 							</control>
@@ -1008,7 +1016,7 @@
             <left>7</left>
 						<width>480</width>
 						<height>110</height>
-						<top>100</top>
+						<top>110</top>
 						<onup>SetFocus(9000,99,absolute)</onup>
 						<ondown>SetFocus(9000,0,absolute)</ondown>
 						<onright>2000</onright>
@@ -1083,6 +1091,7 @@
 						<width>410</width>
 						<bottom>60</bottom>
 						<label>$VAR[InfoPanel]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">
@@ -1091,6 +1100,7 @@
 						<width>410</width>
 						<bottom>60</bottom>
 						<label>$VAR[InfoPanelEpisode]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">
@@ -1162,7 +1172,7 @@
           <aspectratio>keep</aspectratio>
           <width>130</width>
           <height>56</height>
-          <texture colordiffuse="button_focus">special://skin/media/logos/K-logo.png</texture>
+          <texture colordiffuse="skyblue">special://skin/media/logos/K-logo.png</texture>
         </control>
         <control type="image">
           <left>59</left>
@@ -1170,7 +1180,7 @@
           <aspectratio>keep</aspectratio>
           <width>192</width>
           <height>56</height>
-          <texture>special://skin/media/logos/letters.png</texture>
+          <texture colordiffuse="$VAR[UnfocusedTextColor]">special://skin/media/logos/letters.png</texture>
         </control>
 			</control>
 		</control>

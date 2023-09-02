@@ -53,20 +53,11 @@
 		<param name="focused">false</param>
 		<definition>
 			<control type="image">
-				<top>0</top>
-				<!-- 316 -->
-				<width>280</width>
-				<!-- 386 -->
-				<height>345</height>
-				<texture diffuse="masks/addons.png" colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-				<bordersize>20</bordersize>
-			</control>
-			<control type="image">
 				<include>FocusBounce</include>
 				<top>-4</top>
 				<left>-4</left>
 				<width>288</width>
-				<height>351</height>
+				<height>288</height>
 				<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
 				<bordersize>19</bordersize>
 				<visible>$PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]</visible>
@@ -77,7 +68,7 @@
 				<top>-4</top>
 				<left>-4</left>
 				<width>288</width>
-				<height>351</height>
+				<height>288</height>
 				<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
 				<bordersize>19</bordersize>
 				<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
@@ -88,30 +79,40 @@
 				<top>-4</top>
 				<left>-4</left>
 				<width>288</width>
-				<height>351</height>
+				<height>288</height>
 				<texture diffuse="masks/addons.png" colordiffuse="button_focus">colors/grey.png</texture>
 				<bordersize>19</bordersize>
 				<visible>$PARAM[focused] + [Control.HasFocus(14100) | ControlGroup(400).HasFocus | Control.HasFocus(450)]</visible>
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
 			<control type="image">
+				<top>0</top>
+				<!-- 316 -->
+				<width>280</width>
+				<!-- 386 -->
+				<height>280</height>
+				<texture diffuse="masks/addons.png" colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="image">
 				<left>0</left>
 				<top>0</top>
 				<width>280</width>
 				<height>280</height>
-				<texture diffuse="masks/addons-artwork.png" fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
+				<texture diffuse="masks/addons.png" fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>keep</aspectratio>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="textbox">
 				<left>28</left>
-				<top>252</top>
+				<top>257</top>
 				<width>226</width>
 				<height>80</height>
 				<font>font12</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$PARAM[single_label]</label>
+				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				<visible>!String.IsEqual(ListItem.DBType,album)</visible>
 			</control>
 			<control type="group">
@@ -299,10 +300,39 @@
 					<left>15%</left>
 					<top>205</top>
 					<width>100%</width>
-					<label>$PARAM[sub_label]</label>
+					<label>[B]$PARAM[sub_label][/B]</label>
 					<font>font12</font>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
+					<scrollspeed>150</scrollspeed>
+					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
+					<left>15%</left>
+					<top>205</top>
+					<width>100%</width>
+					<label>$PARAM[sub_label]</label>
+					<font>font12</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<shadowcolor>text_shadow</shadowcolor>
+					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
+					<left>15%</left>
+					<top>235</top>
+					<width>100%</width>
+					<label>[B]$PARAM[main_label][/B]</label>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<font>font10</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
+					<scrollspeed>150</scrollspeed>
+					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -311,9 +341,24 @@
 					<top>235</top>
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 					<font>font10</font>
 					<shadowcolor>text_shadow</shadowcolor>
+					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
+					<left>15%</left>
+					<top>219</top>
+					<width>100%</width>
+					<label>[B]$PARAM[main_label][/B]</label>
+					<font>font12</font>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
+					<scrollspeed>150</scrollspeed>
+					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -323,8 +368,23 @@
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font12</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<shadowcolor>text_shadow</shadowcolor>
+					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
+					<left>15%</left>
+					<top>219</top>
+					<width>100%</width>
+					<label>[B]$PARAM[networks_label][/B]</label>
+					<font>font12</font>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
+					<scrollspeed>150</scrollspeed>
+					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -334,8 +394,9 @@
 					<width>100%</width>
 					<label>$PARAM[networks_label]</label>
 					<font>font12</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
-					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
+					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
 					<align>center</align>
 				</control>
 			</control>
@@ -519,10 +580,39 @@
 					<left>10%</left>
 					<top>265</top>
 					<width>100%</width>
-					<label>$PARAM[sub_label]</label>
+					<label>[B]$PARAM[sub_label][/B]</label>
 					<font>font12</font>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
+					<scrollspeed>150</scrollspeed>
+					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
+					<left>10%</left>
+					<top>265</top>
+					<width>100%</width>
+					<label>$PARAM[sub_label]</label>
+					<font>font12</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<shadowcolor>text_shadow</shadowcolor>
+					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
+					<left>11%</left>
+					<top>295</top>
+					<width>100%</width>
+					<label>[B]$PARAM[main_label][/B]</label>
+					<font>font10</font>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<shadowcolor>text_shadow</shadowcolor>
+					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
+					<scrollspeed>150</scrollspeed>
+					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -532,8 +622,23 @@
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<shadowcolor>text_shadow</shadowcolor>
+					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
+					<left>11%</left>
+					<top>280</top>
+					<width>100%</width>
+					<label>[B]$PARAM[main_label][/B]</label>
+					<font>font12</font>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
+					<scrollspeed>150</scrollspeed>
+					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -543,8 +648,23 @@
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font12</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<shadowcolor>text_shadow</shadowcolor>
+					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
+					<left>11%</left>
+					<top>280</top>
+					<width>100%</width>
+					<label>[B]$PARAM[networks_label][/B]</label>
+					<font>font12</font>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
+					<scrollspeed>150</scrollspeed>
+					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -554,8 +674,9 @@
 					<width>100%</width>
 					<label>$PARAM[networks_label]</label>
 					<font>font12</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
-					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
+					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
 					<align>center</align>
 				</control>
 			</control>
@@ -1001,7 +1122,7 @@
 					<width>195</width>
 					<label>$INFO[ListItem.Label]</label>
 					<font>font10</font>
-          <textcolor>FFCCCCCC</textcolor>
+          <textcolor>$VAR[UnfocusedTextColor]</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<align>center</align>
 					<visible>!$PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]</visible>

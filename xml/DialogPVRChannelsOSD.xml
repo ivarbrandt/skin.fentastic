@@ -8,10 +8,10 @@
 				<depth>DepthOSD</depth>
 				<include>OpenClose_Left</include>
 				<include content="ContentPanel">
-					<param name="width" value="1042" />
+					<param name="width" value="2042" />
 				</include>
 				<control type="fixedlist" id="11">
-					<left>0</left>
+					<left>25</left>
 					<top>list_top_offset</top>
 					<width>970</width>
 					<bottom>list_bottom</bottom>
@@ -40,23 +40,23 @@
 					<texturesliderbackground />
 					<animation effect="zoom" start="100,100" end="50,100" center="982,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
 				</control>
-				<control type="image">
+				<!-- <control type="image">
 					<left>0</left>
 					<bottom>0</bottom>
 					<width>970</width>
 					<height>115</height>
 					<texture flipy="true">frame/InfoBar.png</texture>
-				</control>
+				</control> -->
 			</control>
 			<control type="group">
 				<depth>DepthOSD</depth>
 				<include>Animation_TopSlide</include>
-				<control type="image">
+				<!-- <control type="image">
 					<left>0</left>
 					<width>970</width>
 					<height>110</height>
 					<texture>frame/InfoBar.png</texture>
-				</control>
+				</control> -->
 				<control type="label" id="2">
 					<description>header label</description>
 					<textoffsetx>40</textoffsetx>

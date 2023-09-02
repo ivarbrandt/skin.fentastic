@@ -49,13 +49,14 @@
 							<width>380</width>
 							<height>50</height>
 							<aspectratio align="center">keep</aspectratio>
-							<texture>DefaultIconInfo.png</texture>
+							<texture colordiffuse="$VAR[UnfcusedTextColor]">DefaultIconInfo.png</texture>
 						</control>
 						<control type="label">
 							<description>notification</description>
 							<width>380</width>
 							<height>30</height>
 							<label>$LOCALIZE[31096]</label>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 						</control>
@@ -109,7 +110,7 @@
 							<width>100</width>
 							<height>100</height>
 							<font>font12</font>
-							<textcolor>grey</textcolor>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -119,7 +120,7 @@
 							<top>60</top>
 							<width>30</width>
 							<height>20</height>
-							<texture>windows/subtitles/icon_close_caption.png</texture>
+							<texture colordiffuse="$VAR[UnfocusedTextColor]">windows/subtitles/icon_close_caption.png</texture>
 							<visible>ListItem.property(hearing_imp)</visible>
 						</control>
 						<control type="image">
@@ -127,7 +128,7 @@
 							<top>60</top>
 							<width>60</width>
 							<height>20</height>
-							<texture>windows/subtitles/icon_sync.png</texture>
+							<texture colordiffuse="$VAR[UnocusedTextColor]">windows/subtitles/icon_sync.png</texture>
 							<visible>ListItem.property(sync)</visible>
 						</control>
 						<control type="textbox">
@@ -137,13 +138,14 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label2]</label>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						</control>
 						<control type="image">
 							<left>810</left>
 							<top>10</top>
 							<width>100</width>
 							<height>45</height>
-							<texture fallback="flags/starrating/rating0.png">$INFO[ListItem.ActualIcon,flags/starrating/rating,.png]</texture>
+							<texture colordiffuse="$VAR[UnfocusedTextColor]" fallback="flags/starrating/rating0.png">$INFO[ListItem.ActualIcon,flags/starrating/rating,.png]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 					</itemlayout>
@@ -169,7 +171,7 @@
 							<width>100</width>
 							<height>100</height>
 							<font>font12</font>
-							<textcolor>white</textcolor>
+							<textcolor>$VAR[FocusedTextColor]</textcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -179,7 +181,7 @@
 							<top>60</top>
 							<width>30</width>
 							<height>20</height>
-							<texture>windows/subtitles/icon_close_caption.png</texture>
+							<texture colordiffuse="$VAR[FocusedTextColor]">windows/subtitles/icon_close_caption.png</texture>
 							<visible>ListItem.property(hearing_imp)</visible>
 						</control>
 						<control type="image">
@@ -187,7 +189,7 @@
 							<top>60</top>
 							<width>60</width>
 							<height>20</height>
-							<texture>windows/subtitles/icon_sync.png</texture>
+							<texture colordiffuse="$VAR[FocusedTextColor]">windows/subtitles/icon_sync.png</texture>
 							<visible>ListItem.property(sync)</visible>
 						</control>
 						<control type="textbox">
@@ -197,13 +199,14 @@
 							<aligny>center</aligny>
 							<font>font12</font>
 							<label>$INFO[ListItem.Label2]</label>
+							<textcolor>$VAR[FocusedTextColor]</textcolor>
 						</control>
 						<control type="image">
 							<left>810</left>
 							<top>10</top>
 							<width>100</width>
 							<height>45</height>
-							<texture fallback="flags/starrating/rating0.png">$INFO[ListItem.ActualIcon,flags/starrating/rating,.png]</texture>
+							<texture colordiffuse="$VAR[FocusedTextColor]" fallback="flags/starrating/rating0.png">$INFO[ListItem.ActualIcon,flags/starrating/rating,.png]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 					</focusedlayout>
@@ -238,7 +241,7 @@
 					<align>center</align>
 					<font>font30_title</font>
 					<aligny>top</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
 				</control>

@@ -27,6 +27,7 @@
 				<top>420</top>
 				<height>400</height>
 				<label>$LOCALIZE[5]</label>
+				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				<align>center</align>
 				<font>font37</font>
 			</control>

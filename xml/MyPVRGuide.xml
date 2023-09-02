@@ -105,7 +105,8 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<scroll>true</scroll>
-								<label>$INFO[ListItem.Label]</label>
+								<label>[B]$INFO[ListItem.Label][/B]</label>
+								<textcolor>$VAR[FocusedTextColor]</textcolor>
 							</control>
 						</focusedlayout>
 					</control>
@@ -187,6 +188,7 @@
 							<width>70%</width>
 							<height>30</height>
 							<label>[B]$INFO[ListItem.EpgEventTitle][/B] $INFO[ListItem.Year,([COLOR grey],[/COLOR])]</label>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						</control>
 						<control type="label">
 							<top>0</top>
@@ -195,12 +197,14 @@
 							<height>30</height>
 							<align>right</align>
 							<label>[COLOR button_focus]$INFO[ListItem.StartTime,[COLOR grey]$LOCALIZE[555]:[/COLOR] ][/COLOR]$INFO[ListItem.EndTime,[COLOR button_focus] - ,[/COLOR]]</label>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						</control>
 						<control type="label">
 							<top>35</top>
 							<width>60%</width>
 							<height>30</height>
 							<label>$VAR[FlagDashLabel][I][COLOR grey]$VAR[SeasonEpisodeLabel][/COLOR]$INFO[ListItem.EpisodeName,[COLOR white],[/COLOR]][/I]</label>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						</control>
 						<control type="label">
 							<top>35</top>
@@ -209,6 +213,7 @@
 							<height>30</height>
 							<align>right</align>
 							<label>$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]:[/COLOR] ]</label>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						</control>
 					</control>
 					<control type="textbox">
@@ -218,6 +223,7 @@
 						<height>170</height>
 						<align>justify</align>
 						<label>$INFO[ListItem.Plot]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 				</control>

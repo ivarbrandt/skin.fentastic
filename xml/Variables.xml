@@ -82,7 +82,7 @@
 	<variable name="IconWallThumbVar">
 		<value condition="String.IsEqual(listitem.dbtype,genre) + System.AddonIsEnabled(resource.images.moviegenreicons.transparent)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</value>
 		<value condition="String.IsEqual(listitem.dbtype,studio) + System.AddonIsEnabled(resource.images.studios.white)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
-		<value condition="String.IsEqual(ListItem.DbType,movie) + String.IsEqual(ListItem.DbType,show)">$INFO[Listitem.Art(landscape)]</value>
+		<value condition="String.IsEqual(ListItem.DbType,movie) + String.IsEqual(ListItem.DbType,tvshow)">$INFO[Listitem.Art(landscape)]</value>
 		<!-- <value condition="!String.IsEmpty(Listitem.Art(poster)) + ![Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">$INFO[Listitem.Art(poster)]</value> -->
 		<value condition="!String.isempty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
@@ -470,7 +470,6 @@
 		<value condition="ListItem.IsCollection">overlays/set.png</value>
 		<value condition="ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder">overlays/folder.png</value>
 		<value condition="!String.IsEmpty(ListItem.Overlay)">$INFO[ListItem.Overlay]</value>
-		<value condition="!ListItem.IsParentFolder">OverlayUnwatched.png</value>
 	</variable>
 	<variable name="WallWatchedIconVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
@@ -660,10 +659,10 @@
 		<value condition="!String.IsEmpty(ListItem.StartDate) + !String.IsEmpty(ListItem.StartTime)">$INFO[ListItem.StartDate,[COLOR grey]$LOCALIZE[552]:[/COLOR] ,[CR]]$INFO[ListItem.StartTime,[COLOR grey]$LOCALIZE[555]:[/COLOR] ,[CR]]$INFO[ListItem.Duration,[COLOR grey]$LOCALIZE[180]:[/COLOR] ]</value>
 		<value>$INFO[ListItem.Date,[COLOR grey]$LOCALIZE[552]:[/COLOR] ,[CR]]$INFO[ListItem.Duration,[COLOR grey]$LOCALIZE[180]:[/COLOR] ]</value>
 	</variable>
-	<variable name="BackgroundOverlayTypeVar">
+	<!-- <variable name="BackgroundOverlayTypeVar">
 		<value condition="String.IsEqual(Skin.String(background_overlay),0)">$LOCALIZE[231]</value>
 		<value>$INFO[Skin.String(background_overlay),$LOCALIZE[467] ]</value>
-	</variable>
+	</variable> -->
 	<variable name="MasterModeLabel">
 		<value condition="!System.IsMaster">$LOCALIZE[20045]</value>
 		<value>$LOCALIZE[20046]</value>
@@ -679,105 +678,142 @@
 
 	<!-- MY VARIABLES -->
 
+	<variable name="CustomBackgroundImage">
+		<value condition="!String.IsEmpty(Skin.String(CustomBackground))">$INFO[Skin.String(CustomBackground)]</value>
+		<value>special://skin/extras/backgrounds/redblur.jpg</value>
+	</variable>
+
 	<variable name="ClearlogoVar">
 		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
+
+	<variable name="FocusedTextColor">
+    <value>FF141515</value>
+	</variable>
+	
+	<variable name="UnfocusedTextColor">
+    <value>FFCCCCCC</value>
+	</variable>
+
+	<variable name="BackgroundBrightnessVar">
+    <value condition="String.IsEqual(Skin.String(DefaultBackgroundBrightness),Highest)">E6FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(DefaultBackgroundBrightness),High)">CCFFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(DefaultBackgroundBrightness),Medium)">99FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(DefaultBackgroundBrightness),Low)">4DFFFFFF</value>
+		<value>99FFFFFF</value>
+	</variable>
+
+	<variable name="FanartBrightnessVar">
+    <value condition="String.IsEqual(Skin.String(DefaultFanartBrightness),Highest)">99FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(DefaultFanartBrightness),High)">80FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(DefaultFanartBrightness),Medium)">66FFFFFF</value>
+    <value condition="String.IsEqual(Skin.String(DefaultFanartBrightness),Low)">4DFFFFFF</value>
+    <value>66FFFFFF</value>
+	</variable>
+
+
+
 
 	<variable name="DefaultSearchWindowBehaviorVar">
     <value condition="Skin.HasSetting(DefaultSearchWindowBehavior)">Open keyboard</value>
     <value>Open search window</value>
 	</variable>
 
+	<variable name="LandscapeSwitchVar">
+    <value condition="Skin.HasSetting(UseLandscape)">Landscape</value>
+    <value condition="!Skin.HasSetting(UseLandscape)">Clearlogo</value>
+	</variable>
+
 	<!-- CATEGORY LABEL RATINGS -->
 	<variable name="MC_Label">
-		<value>$INFO[Window.Property(Metascore),[COLOR button_focus][B] | [/B][/COLOR]MC: ]</value>
+		<value condition="!String.IsEmpty(Window.Property(Metascore))">$INFO[Window.Property(Metascore),[B] | [/B]MC: ]</value>
 	</variable>
 	<variable name="RT_Label">
-		<value>$INFO[Window.Property(TomatoMeter),[COLOR button_focus][B] | [/B][/COLOR]RT: ]</value>
+		<value condition="!String.IsEmpty(Window.Property(TomatoMeter))">$INFO[Window.Property(TomatoMeter),[B] | [/B]RT: ]</value>
 	</variable>
 	<variable name="RA_Label">
-		<value>$INFO[Window.Property(TomatoUserMeter),[COLOR button_focus][B] | [/B][/COLOR]RA: ]</value>
+		<value condition="!String.IsEmpty(Window.Property(TomatoUserMeter))">$INFO[Window.Property(TomatoUserMeter),[B] | [/B]RA: ]</value>
 	</variable>
 	<variable name="IM_Label">
-		<value>$INFO[Window.Property(IMDbRating),[COLOR button_focus][B] | [/B][/COLOR]IM: ]</value>
+		<value condition="!String.IsEmpty(Window.Property(IMDbRating))">$INFO[Window.Property(IMDbRating),[B] | [/B]IM: ]</value>
 	</variable>
 	<variable name="TM_Label">
-		<value>$INFO[Window.Property(TMDbRating),[COLOR button_focus][B] | [/B][/COLOR]TM: ]</value>
+		<value condition="!String.IsEmpty(Window.Property(TMDbRating))">$INFO[Window.Property(TMDbRating),[B] | [/B]TM: ]</value>
 	</variable>
 
 	<!-- INFOPANEL RATINGS -->
 	<variable name="MC_Panel">
-		<value>[CR]$INFO[Window.Property(Metascore),MC: ]</value>
+		<value condition="!String.IsEmpty(Window.Property(Metascore))">[CR][CR]$INFO[Window.Property(Metascore),MC: ]</value>
 	</variable>
 	<variable name="RT_Panel">
-		<value>$INFO[Window.Property(TomatoMeter),[COLOR button_focus][B] • [/B][/COLOR]RT: ]</value>
+		<value condition="!String.IsEmpty(Window.Property(TomatoMeter))">$INFO[Window.Property(TomatoMeter),[B] • [/B]RT: ]</value>
 	</variable>
 	<variable name="RA_Panel">
-		<value>$INFO[Window.Property(TomatoUserMeter),[COLOR button_focus][B] • [/B][/COLOR]RA: ]</value>
+		<value condition="!String.IsEmpty(Window.Property(TomatoUserMeter))">$INFO[Window.Property(TomatoUserMeter),[B] • [/B]RA: ]</value>
 	</variable>
 	<variable name="IM_Panel">
-		<value>$INFO[Window.Property(IMDbRating),[COLOR button_focus][B] • [/B][/COLOR]IM: ]</value>
+		<value condition="!String.IsEmpty(Window.Property(IMDbRating))">$INFO[Window.Property(IMDbRating),[B] • [/B]IM: ]</value>
 	</variable>
 	<variable name="TM_Panel">
-		<value>$INFO[Window.Property(TMDbRating),[COLOR button_focus][B] • [/B][/COLOR]TM: ]</value>
+		<value condition="!String.IsEmpty(Window.Property(TMDbRating))">$INFO[Window.Property(TMDbRating),[B] • [/B]TM: ]</value>
 	</variable>
 
 	<!-- INFOPANEL VARIABLES -->
 	<!-- Released -->
 	<variable name="_Year">
 		<value condition="!String.IsEmpty(ListItem.Year) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Year]</value>
-		<value condition="!String.IsEmpty(ListItem.Year) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Year,[COLOR button_focus][B]Released: [/B][/COLOR]][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Year) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Year,[B]Released: [/B]][CR]</value>
 	</variable>
 	<!-- Aired -->
 	<variable name="_Aired">
 		<value condition="!String.IsEmpty(ListItem.Premiered) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Premiered]</value>
-		<value condition="!String.IsEmpty(ListItem.Premiered) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Premiered,[COLOR button_focus][B]Aired: [/B][/COLOR]][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Premiered) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Premiered,[B]Aired: [/B]][CR]</value>
 	</variable>
 	<!-- MPAA Rating -->
 	<variable name="_Mpaa">
-		<value condition="!String.IsEmpty(ListItem.Mpaa) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Mpaa,[COLOR button_focus][B] • [/B][/COLOR]]</value>
-		<value condition="!String.IsEmpty(ListItem.Mpaa) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Mpaa,[COLOR button_focus][B]Rated: [/B][/COLOR]][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Mpaa) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Mpaa,[B] • [/B]]</value>
+		<value condition="!String.IsEmpty(ListItem.Mpaa) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Mpaa,[B]Rated: [/B]][CR]</value>
 	</variable>
 	<!-- Genre -->
 	<variable name="_Genre">
-		<value condition="!String.IsEmpty(ListItem.Genre) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Genre,[COLOR button_focus][B] • [/B][/COLOR]]</value>
-		<value condition="!String.IsEmpty(ListItem.Genre) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Genre,[COLOR button_focus][B]Genre: [/B][/COLOR]][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Genre) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Genre,[B] • [/B]]</value>
+		<value condition="!String.IsEmpty(ListItem.Genre) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Genre,[B]Genre: [/B]][CR]</value>
 	</variable>
 	<!-- Director -->
 	<variable name="_Director">
-		<value condition="!String.IsEmpty(ListItem.Director) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Director,[COLOR button_focus][B] • [/B][/COLOR]]</value>
-		<value condition="!String.IsEmpty(ListItem.Director) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Director,[COLOR button_focus][B]Director: [/B][/COLOR]][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Director) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Director,[B] • [/B]]</value>
+		<value condition="!String.IsEmpty(ListItem.Director) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Director,[B]Director: [/B]][CR]</value>
 	</variable>
 	<!-- Network -->
 	<variable name="_Network">
-		<value condition="!String.IsEmpty(ListItem.Studio) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Studio,[COLOR button_focus][B] • [/B][/COLOR]]</value>
-		<value condition="!String.IsEmpty(ListItem.Studio) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Studio,[COLOR button_focus][B]Network: [/B][/COLOR]][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Studio) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Studio,[B] • [/B]]</value>
+		<value condition="!String.IsEmpty(ListItem.Studio) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Studio,[B]Network: [/B]][CR]</value>
 	</variable>
 	<!-- Total Seasons -->
 	<variable name="_TotalSeasons">
-		<value condition="!String.IsEmpty(ListItem.Property(TotalSeasons)) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Property(TotalSeasons),[COLOR button_focus][B] • [/B][/COLOR], seasons]</value>
-		<value condition="!String.IsEmpty(ListItem.Property(TotalSeasons)) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Property(TotalSeasons),[COLOR button_focus][B]Seasons: [/B][/COLOR]][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(TotalSeasons)) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Property(TotalSeasons),[B] • [/B], seasons]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(TotalSeasons)) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Property(TotalSeasons),[B]Seasons: [/B]][CR]</value>
 	</variable>
 	<!-- Status -->
 	<variable name="_Status">
-		<value condition="!String.IsEmpty(ListItem.Status) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Status,[COLOR button_focus][B] • [/B][/COLOR]]</value>
-		<value condition="!String.IsEmpty(ListItem.Status) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Status,[COLOR button_focus][B]Status: [/B][/COLOR]][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Status) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Status,[B] • [/B]]</value>
+		<value condition="!String.IsEmpty(ListItem.Status) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Status,[B]Status: [/B]][CR]</value>
 	</variable>
 	<!-- Runtime -->
 	<variable name="_Runtime">
-		<value condition="!String.IsEmpty(ListItem.Duration) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Duration(h),[COLOR button_focus][B] • [/B][/COLOR], hr] $INFO[ListItem.Duration(m),, mins]</value>
-		<value condition="!String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Duration(h),[COLOR button_focus][B]Runtime: [/B][/COLOR], hr] $INFO[ListItem.Duration(m),, mins][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Duration) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Duration(h),[B] • [/B], hr] $INFO[ListItem.Duration(m),, mins]</value>
+		<value condition="!String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Duration(h),[B]Runtime: [/B], hr] $INFO[ListItem.Duration(m),, mins][CR]</value>
 	</variable>
 	<!-- Runtime Episodes -->
 	<variable name="_RuntimeEpisodes">
-		<value condition="!String.IsEmpty(ListItem.Duration) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Duration(mins),[COLOR button_focus][B] • [/B][/COLOR], mins]</value>
-		<value condition="!String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Duration(mins),[COLOR button_focus][B]Runtime: [/B][/COLOR], mins][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Duration) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Duration(mins),[B] • [/B], mins]</value>
+		<value condition="!String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Duration(mins),[B]Runtime: [/B], mins][CR]</value>
 	</variable>
 	<!-- Ends at: -->
 	<variable name="_Endsat">
-		<value condition="!String.IsEmpty(ListItem.EndTime) + !String.IsEmpty(ListItem.Duration) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.EndTime,[COLOR button_focus][B] • [/B][/COLOR]$LOCALIZE[31080]: ]</value>
-		<value condition="!String.IsEmpty(ListItem.EndTime) + !String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.EndTime,[COLOR button_focus][B]$LOCALIZE[31080]: [/B][/COLOR]][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.EndTime) + !String.IsEmpty(ListItem.Duration) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.EndTime,[B] • [/B]$LOCALIZE[31080]: ]</value>
+		<value condition="!String.IsEmpty(ListItem.EndTime) + !String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.EndTime,[B]$LOCALIZE[31080]: [/B]][CR]</value>
 	</variable>
 	<!-- Plot -->
 	<variable name="_Plot">
@@ -790,7 +826,7 @@
 		<!-- COLLECTIONS -->
 		<value condition="String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)">$VAR[_Plot][CR]</value>
 		<!-- MOVIES -->
-		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,movie)">$VAR[_Year]$VAR[_Mpaa]$VAR[_Genre]$VAR[_Director]$VAR[_Runtime]$VAR[_Endsat][CR]$VAR[MC_Panel]$VAR[RT_Panel]$VAR[RA_Panel]$VAR[IM_Panel]$VAR[TM_Panel][CR]$VAR[_Plot][CR]</value>
+		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,movie)">$VAR[_Year]$VAR[_Mpaa]$VAR[_Genre]$VAR[_Director]$VAR[_Runtime]$VAR[_Endsat]$VAR[MC_Panel]$VAR[RT_Panel]$VAR[RA_Panel]$VAR[IM_Panel]$VAR[TM_Panel][CR]$VAR[_Plot][CR]</value>
 		<!-- SHOWS -->
 		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,tvshow)">$VAR[_Year]$VAR[_Mpaa]$VAR[_Network]$VAR[_Genre]$VAR[_RuntimeEpisodes]$VAR[_TotalSeasons]$VAR[_Status]$VAR[_Endsat][CR]$VAR[_Plot][CR]</value>
 		<!-- SEASONS -->

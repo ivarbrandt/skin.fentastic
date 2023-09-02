@@ -79,6 +79,7 @@
 						<font>font14</font>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 					</control>
 					<control type="textbox">
 						<left>165</left>
@@ -86,7 +87,7 @@
 						<right>20</right>
 						<height>67</height>
 						<font>font12</font>
-						<textcolor>grey</textcolor>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
@@ -136,7 +137,8 @@
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<font>font14</font>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
 					</control>
 					<control type="textbox">
 						<left>165</left>
@@ -144,7 +146,8 @@
 						<right>20</right>
 						<height>67</height>
 						<font>font12</font>
-						<label>$INFO[ListItem.Label2]</label>
+						<label>[B]$INFO[ListItem.Label2][/B]</label>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
 					</control>
 				</focusedlayout>
 			</control>

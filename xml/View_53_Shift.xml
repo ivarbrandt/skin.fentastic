@@ -31,7 +31,7 @@
 				<include>Visible_Right</include>
 				<include>OpenClose_Right</include>
 				<top>160</top>
-				<control type="image">
+				<!-- <control type="image">
 					<left>600</left>
 					<top>600</top>
 					<width>340</width>
@@ -43,7 +43,7 @@
 					<animation effect="slide" start="0,0" end="-364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,0)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,3) | Integer.IsEqual(Container.Position,4)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,4)">Conditional</animation>
-				</control>
+				</control> -->
 				<control type="fixedlist" id="53">
 					<left>-150</left>
 					<top>0</top>
@@ -88,9 +88,11 @@
 							<top>603</top>
 							<width>330</width>
 							<height>105</height>
+							<font>font32</font>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						</control>
 						<control type="group">
 							<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
@@ -186,15 +188,17 @@
 							<!-- <bordertexture border="21" infill="false">overlays/shadow.png</bordertexture> -->
 							<bordersize>20</bordersize>
 						</control>
-						<control type="textbox">
+						<control type="label">
 							<left>20</left>
 							<top>603</top>
 							<width>330</width>
-							<height>105</height>
+							<height>100</height>
+							<font>font36_title</font>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
+							<scroll>True</scroll>
+							<scrollspeed>200</scrollspeed>
 						</control>
 						<control type="group">
 							<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
@@ -258,28 +262,7 @@
 								<param name="cornerdiffuse">overlays/overlaybg7.png</param>
 							</include>
 						</control>
-						<!-- <control type="progress">
-							<left>31</left>
-							<top>525</top>
-							<width>285</width>
-							<height>1</height>
-							<texturebg></texturebg>
-							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-							<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-							<visible>String.IsEqual(ListItem.DBtype,movie) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-						</control>
-						<control type="progress">
-							<left>31</left>
-							<top>525</top>
-							<width>285</width>
-							<height>1</height>
-							<texturebg></texturebg>
-							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
-							<info>Container($PARAM[id]).ListItem.Property(WatchedProgress)</info>
-							<visible>Integer.IsGreater(Container($PARAM[id]).ListItem.Property(UnwatchedEpisodes),0) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0)</visible>
-						</control> -->
 						<include content="ProgressBar">
-							<!-- 31 -->
 							<param name="left" value="63"/>
 							<param name="top" value="525"/>
 							<param name="width" value="243"/>
@@ -349,6 +332,7 @@
 				<right>30</right>
 				<height>163</height>
 				<label>$PARAM[textbox_content]</label>
+				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>
 		</control>

@@ -25,6 +25,7 @@
 			<aligny>center</aligny>
 			<font>font12</font>
 			<label>$LOCALIZE[1021]</label>
+			<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 		</control>
 		<!-- <control type="image">
 			<left>25</left>
@@ -33,7 +34,7 @@
 			<height>285</height>
 			<texture colordiffuse="button_focus2" border="40">buttons/dialogbutton-nofo.png</texture>
 		</control> -->
-		<control type="list" id="10">
+		<control type="panel" id="10">
 			<left>45</left>
 			<top>165</top>
 			<width>820</width>
@@ -51,7 +52,7 @@
 					<top>0</top>
 					<bottom>0</bottom>
 					<aligny>center</aligny>
-					<textcolor>grey</textcolor>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</itemlayout>
@@ -70,7 +71,8 @@
 					<bottom>0</bottom>
 					<right>10</right>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
 				</control>
 			</focusedlayout>
 		</control>

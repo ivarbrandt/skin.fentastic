@@ -32,7 +32,7 @@
 				<visible>Control.IsVisible(50) | Control.Isvisible(54) | Control.Isvisible(56) | [Control.IsVisible(501) + String.IsEqual(Skin.AspectRatio,21:9)]</visible>
 				<include>Visible_Left</include>
 				<include content="ContentPanel">
-					<param name="width" value="806" />
+					<param name="width" value="1106" />
 				</include>
 				<control type="group">
 					<width>550</width>
@@ -60,6 +60,7 @@
 						<width>525</width>
 						<bottom>115</bottom>
 						<label>$VAR[InfoPanel]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">
@@ -68,6 +69,7 @@
 						<width>525</width>
 						<bottom>105</bottom>
 						<label>$VAR[InfoPanelEpisode]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">
@@ -78,6 +80,7 @@
 						<height>110</height>
 						<bottom>70</bottom>
 						<font>font36_title</font>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<label>Season $INFO[ListItem.Season], Episode $INFO[ListItem.Episode]</label>
 						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 					</control>

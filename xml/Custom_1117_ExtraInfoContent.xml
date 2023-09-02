@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
   <include name="Changelog">
-    <label>[B][COLOR button_focus]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
+    <label>[B][COLOR skyblue]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
 - Added 3 NEW custom main menu sections
+- Overhauled UI for a more artwork centric experience
 - Fixed WideWall view
 - Updated widgets to handle menu items better
 - Added bold font to focused main main and search window items
 - Added custom version of AutoCompletion for virtual keyboard to repo (only try if you are having issues with your version)
 - Added optional FENtastic Audio Suite to repo
+- Added switch for Landscape/Clearlogo on WideList view
+- Added custom default background selection
+- Added optional color studio logos
+- Added custom background brightness
+- Added custom fanart brightness
+- Removed color themes
 - Other changes/fixes
 
-[B][COLOR button_focus]Version 1.0.18[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.18[/COLOR][/B]
 - Small bug fix
 
-[B][COLOR button_focus]Version 1.0.17[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.17[/COLOR][/B]
 - Brought back optional alternate InfoPanel
 - Brought back %, progress is now shown as '33% watched' instead of '33'
 - Added air date to InfoPanel for episodes
 - Made icon silhouettes for category widgets optional
 - Other small changes/fixes
 
-[B][COLOR button_focus]Version 1.0.16[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.16[/COLOR][/B]
 - Added BigPoster, BigLandscape, and BigLandscapeInfo widget display types
 - Updated Wall views to use bigger artwork
 - Increased visibility of raindrop background
@@ -37,10 +44,10 @@
 - Removed alternate InfoPanel
 - Fixed profile change bug
 
-[B][COLOR button_focus]Version 1.0.15[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.15[/COLOR][/B]
 - Small bug fix for TRAKT search widget
 
-[B][COLOR button_focus]Version 1.0.14[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.14[/COLOR][/B]
 - Extensive overhaul of UI. There are some parts of the skin that I don't use so if something looks off, please let me know by opening an issue in my Github repo
 - Fixed blank Search window on new Kodi installs
 - Fixed stacked widget renaming
@@ -52,7 +59,7 @@
 - Updated Github documentation to reflect new UI changes
 - Other fixes/changes
 
-[B][COLOR button_focus]Version 1.0.13[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.13[/COLOR][/B]
 - Added functionality for:
   • Rearranging and renaming widgets
   • Renaming main menu labels
@@ -69,16 +76,16 @@
 - Reactivated Shift view
 - Other changes/fixes
 
-[B][COLOR button_focus]Version 1.0.12[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.12[/COLOR][/B]
 - Added customizable load delay for stacked widgets. You can find this new setting in Skin settings » Options
 - Added optional display of countdown timer for use with the stacked widget load delay
 - Added toggle for auto-scrolling labels on LandscapeInfo widgets
 - Cleaned up LandscapeInfo widget for episodes
 
-[B][COLOR button_focus]Version 1.0.11[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.11[/COLOR][/B]
 - Quick fix for stacked widgets not loading on startup
 
-[B][COLOR button_focus]Version 1.0.10[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.10[/COLOR][/B]
 - Resized all Poster, Landscape, and LandscapeInfo widgets
 - Resized PVR, Addon, and Favorites widgets
 - Resized artwork for InfoWall, WideInfoWall, Wall, WideWall, and Poster views
@@ -91,10 +98,10 @@
 - Fixed widget sorting behavior
 - Added new detailed documentation for skin setup to Github repo
 
-[B][COLOR button_focus]Version 1.0.9[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.9[/COLOR][/B]
 - Small fixes
 
-[B][COLOR button_focus]Version 1.0.8[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.8[/COLOR][/B]
 - Added custom category widgets. You are no longer limited to top and bottom category widgets
 - Added optional stacked category widgets
 - Added Clear Path option for Main Menu paths and category widgets
@@ -107,13 +114,13 @@
 - Removed startup video (Total skin size is now under 7 MB)
 - Other small fixes/changes
 
-[B][COLOR button_focus]Version 1.0.7[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.7[/COLOR][/B]
 - Re-added changelog viewing for other addons
 - Reverted focus and scrolling behavior for widgets that don't use the InfoPanel
 - Added details to Available updates category widget. You can now see how many addon updates are pending directly from the Addon section on the home screen
 - Added tip to Extra info to help with Kodi crashes
 
-[B][COLOR button_focus]Version 1.0.6[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.6[/COLOR][/B]
 - Added optional Raindrop Animated Background. You can turn this off in Skin settings » Options » Raindrop background. Note: Only works when you have Show media background toggled to 'off' in Skin settings » Artwork
 - Moved percent progress for widgets to InfoPanel
 - Changed widget scrolling behavior
@@ -122,10 +129,10 @@
 - Renamed Episode widget to LandscapeInfo
 - Other small fixes/changes
 
-[B][COLOR button_focus]Version 1.0.5[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.5[/COLOR][/B]
 - Fixed scrolling in changelog and setup guide windows
 
-[B][COLOR button_focus]Version 1.0.4[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.4[/COLOR][/B]
 
 [B]IMPORTANT NOTICE: IF YOUR WIDGETS WERE DELETED AFTER THIS UPDATE PLEASE READ INFO BELOW
 
@@ -136,31 +143,31 @@ In this version the default widgets that you may have seen on first install have
 - Renamed Changelog tab in Skin settings to Extra info
 - Added Setup Guide to Extra info
 
-[B][COLOR button_focus]Version 1.0.3[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.3[/COLOR][/B]
 - Added new InfoPanel for movie, show, and episode widgets
 - Moved startup video and widget limit settings to new Options tab in Skin settings
 - Small adjustments to most views
 - Cleaned up collections info panel
 - Small fixes/changes
 
-[B][COLOR button_focus]Version 1.0.2[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.2[/COLOR][/B]
 - Added changelog to Skin settings menu
 
-[B][COLOR button_focus]Version 1.0.1[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.1[/COLOR][/B]
 - Re-added startup video (Recommended to test with lower volume)
 - Made startup video optional
 - Added screenshots
 
-[B][COLOR button_focus]Version 1.0.0[/COLOR][/B]
+[B][COLOR skyblue]Version 1.0.0[/COLOR][/B]
 - Added adjustable widget limits for movies/shows and episodes
 
-[B][COLOR button_focus]Version 0.0.9[/COLOR][/B]
+[B][COLOR skyblue]Version 0.0.9[/COLOR][/B]
 - Small fixes/changes
 
-[B][COLOR button_focus]Version 0.0.8[/COLOR][/B]
+[B][COLOR skyblue]Version 0.0.8[/COLOR][/B]
 - Removed startup video
 
-[B][COLOR button_focus]Version 0.0.7 (Initial release)[/COLOR][/B]
+[B][COLOR skyblue]Version 0.0.7 (Initial release)[/COLOR][/B]
 Main changes from default Estuary include:
 - 2 NEW viewtypes ("WideWall" and "WideInfoWall")
 - Plenty of adjustments to pre-existing views
@@ -178,7 +185,7 @@ Main changes from default Estuary include:
 
 
   <include name="SetupGuide">
-    <label>[B][COLOR button_focus]Welcome to the FENtastic Setup Guide[/COLOR][/B]
+    <label>[B][COLOR skyblue]Welcome to the FENtastic Setup Guide[/COLOR][/B]
 
 FENtastic is a skin specifically designed for FEN users. It can display movie, tvshow, and episode widgets as well as submenu widgets. It can also set paths for main menu items (more on this later). Here in this guide I will show you how these work and how to set them up.
 
@@ -193,7 +200,7 @@ Click a menu item to toggle the display of a section on and off. This will show 
 
 [B][COLOR deeppink]- Set widgets[/COLOR][/B] is for setting up the movie/tvshow widgets. These are the main widgets that you'll set up. You can configure up to 10 movie and 10 TV show widgets. After choosing a path you'll have the option to set the label and display type (Poster, Landscape, LandscapeInfo, and Category) for each widget. If you choose the Category display type, you'll have the option to set it up as a stacked widget. After that you can choose the display type for the stacked widget as well.
 
-[B][COLOR button_focus]Stacked widgets[/COLOR][/B] contain a category widget and a normal widget beneath. The category widget "communicates" with the normal widget in order to load the new widget list according to the focused item in the category widget. If the stacked widget that you set up has 20 items in it, then that means you'll be able to have all 20 widgets available from just one widget on the home screen.
+[B][COLOR skyblue]Stacked widgets[/COLOR][/B] contain a category widget and a normal widget beneath. The category widget "communicates" with the normal widget in order to load the new widget list according to the focused item in the category widget. If the stacked widget that you set up has 20 items in it, then that means you'll be able to have all 20 widgets available from just one widget on the home screen.
 
 That's it! You're all set to go. Enjoy the skin!
 
@@ -203,7 +210,7 @@ If you would like to see a more detailed version of this Setup Guide, please vis
 
 
   <include name="Tip-Crashes">
-    <label>[COLOR button_focus][B]How to fix Kodi crashes[/B][/COLOR]
+    <label>[COLOR skyblue][B]How to fix Kodi crashes[/B][/COLOR]
 
 If you are experiencing random or semi-random crashes when either returning to the home screen after playback or returning to the home screen after an extended period of time away from the home screen, go into the FEN addon » Tools » click [B]TOOLS:[/B] Set Language Invoker (ADVANCED!!) » Set it to FALSE.
 

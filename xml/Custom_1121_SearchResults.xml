@@ -3,7 +3,7 @@
 	<defaultcontrol>2000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
-		<control type="button" id="20000">
+		<!-- <control type="button" id="20000">
 			<include>HiddenObject</include>
 			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
 			<onfocus>SetFocus(2000)</onfocus>
@@ -16,7 +16,7 @@
 			<onfocus>SetFocus(2000)</onfocus>
 			<onclick>noop</onclick>
 			<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
-		</control>
+		</control> -->
 		<include>DefaultBackground</include>
 		<control type="multiimage">
 			<depth>DepthBackground</depth>
@@ -147,7 +147,7 @@
 						<focusedlayout height="83">
 							<control type="group">
 								<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
-								<control type="image">
+								<!-- <control type="image">
 									<left>0</left>
 									<top>0</top>
 									<width>437</width>
@@ -155,7 +155,7 @@
 									<texture colordiffuse="button_focus">masks/focus.png</texture>
 									<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasActiveModalDialog">Conditional</animation>
 									<visible>!ControlGroup(700).HasFocus</visible>
-								</control>
+								</control> -->
 							</control>
 							<control type="label">
 								<include>FocusBounce</include>
@@ -166,6 +166,7 @@
 								<aligny>center</aligny>
 								<font>font32</font>
 								<label>$INFO[ListItem.Label]</label>
+								<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 								<shadowcolor>text_shadow</shadowcolor>
 								<scroll>$PARAM[focused]</scroll>
 								<visible>ControlGroup(700).HasFocus</visible>
@@ -177,7 +178,7 @@
 								<height>83</height>
 								<width>355</width>
 								<aligny>center</aligny>
-								<font>font32_title</font>
+								<font>font45_title</font>
 								<label>$INFO[ListItem.Label]</label>
 								<shadowcolor>text_shadow</shadowcolor>
 								<scroll>$PARAM[focused]</scroll>
@@ -193,6 +194,7 @@
 								<aligny>center</aligny>
 								<font>font32</font>
 								<label>$INFO[ListItem.Label]</label>
+								<textcolor>darkgrey</textcolor>
 								<shadowcolor>text_shadow</shadowcolor>
 							</control>
 						</itemlayout>
@@ -270,6 +272,7 @@
 						<width>410</width>
 						<bottom>60</bottom>
 						<label>$VAR[InfoPanel]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">
@@ -350,7 +353,8 @@
 					<aligny>center</aligny>
 					<height>98</height>
 					<font>font37</font>
-					<label>Search results for: [COLOR button_focus][B]$INFO[Skin.String(SearchInput)][/B][/COLOR]</label>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<label>Search results for: [B]$INFO[Skin.String(SearchInput)][/B]</label>
 				</control>
 				<control type="label">
 				<visible>String.IsEmpty(Skin.String(SearchInput)) + String.IsEmpty(Skin.String(DatabaseStatus))</visible>
@@ -361,6 +365,7 @@
 					<align>center</align>
 					<height>98</height>
 					<font>font14</font>
+					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 					<wrapmultiline>true</wrapmultiline>
 					<label>Explore your past searches on the left, delve into TRAKT lists using the TRAKT button, or click the search icon to initiate a new search.</label>
 				</control>

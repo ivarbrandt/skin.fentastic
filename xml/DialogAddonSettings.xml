@@ -128,6 +128,8 @@
 				<onclick>SettingsLevelChange</onclick>
 				<textoffsetx>100</textoffsetx>
 				<textoffsety>0</textoffsety>
+				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
 				<texturefocus colordiffuse="button_focus">masks/categorywidget.png</texturefocus>
 				<texturenofocus />
 				<radioposx>40</radioposx>
@@ -138,10 +140,10 @@
 				<onright>5</onright>
 				<onup>3</onup>
 				<ondown>3</ondown>
-				<textureradioonfocus>icons/settings.png</textureradioonfocus>
-				<textureradioonnofocus>icons/settings.png</textureradioonnofocus>
-				<textureradioofffocus>icons/settings.png</textureradioofffocus>
-				<textureradiooffnofocus>icons/settings.png</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="$VAR[FocusedTextColor]">icons/settings.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="$VAR[UnfocusedTextColor]">icons/settings.png</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="$VAR[FocusedTextColor]">icons/settings.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="$VAR[UnfocusedTextColor]">icons/settings.png</textureradiooffnofocus>
 			</control>
 			<control type="scrollbar" id="60">
 				<left>1489</left>

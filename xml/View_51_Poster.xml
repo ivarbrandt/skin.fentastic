@@ -13,7 +13,7 @@
 			<description>Poster Viewtype</description>
 			<centertop>50%</centertop>
 			<height>720</height>
-			<control type="image">
+			<!-- <control type="image">
 				<left>0</left>
 				<top>4</top>
 				<width>100%</width>
@@ -23,7 +23,7 @@
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
 				<visible>Control.IsVisible(51)</visible>
-			</control>
+			</control> -->
 			<control type="group">
 				<visible>Control.IsVisible(51)</visible>
 				<include>Visible_Right</include>
@@ -97,7 +97,7 @@
 						<top>337</top>
 						<width>32</width>
 						<height>32</height>
-						<texture>$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[UnfocusedTextColor]">$VAR[ListWatchedIconVar]</texture>
 					</control>
 					<control type="label">
 						<left>695</left>
@@ -115,6 +115,7 @@
 						<right>115</right>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[PlotTextBoxVar]</label>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.PlotOutline) + String.IsEmpty(ListItem.Plot)]</visible>
 					</control>
