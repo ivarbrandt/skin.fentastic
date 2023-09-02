@@ -656,7 +656,7 @@
 			</control>
 		</control>
 		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[5] » $LOCALIZE[20077]" />
+			<param name="breadcrumbs_label" value="$LOCALIZE[5] [B]»[/B] $LOCALIZE[20077]" />
 		</include>
 		<include>BottomBar</include>
 		<control type="textbox" id="6">

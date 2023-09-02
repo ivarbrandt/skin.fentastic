@@ -204,7 +204,7 @@
 			</include>
 		</control>
 		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[8]$INFO[Window(Weather).Property(Location), » ]" />
+			<param name="breadcrumbs_label" value="$LOCALIZE[8]$INFO[Window(Weather).Property(Location), [B]»[/B] ]" />
 			<param name="sublabel" value="$INFO[Window(weather).Property(WeatherProvider)]" />
 		</include>
 		<include>BottomBar</include>

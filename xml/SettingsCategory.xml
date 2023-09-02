@@ -137,7 +137,7 @@
 			</control>
 		</control>
 		<include content="TopBar">
-			<param name="breadcrumbs_label" value="$LOCALIZE[5]$INFO[Control.GetLabel(2), » ]" />
+			<param name="breadcrumbs_label" value="$LOCALIZE[5]$INFO[Control.GetLabel(2), [B]»[/B] ]" />
 		</include>
 		<include>BottomBar</include>
 		<control type="group">
