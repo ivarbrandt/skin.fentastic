@@ -1676,7 +1676,7 @@
 				<top>400</top>
 				<width>128</width>
 				<height>128</height>
-				<texture colordiffuse="button_focus2" background="true">rain-drop.png</texture>
+				<texture colordiffuse="dimgrey" background="true">rain-drop.png</texture>
 				<visible>true</visible>
 				<animation type="conditional" reversible="false" loop="true" condition="true">
 					<effect type="fade" delay="2000" start="0" end="100" time="200"/>
@@ -1690,7 +1690,7 @@
 				<top>200</top>
 				<width>128</width>
 				<height>128</height>
-				<texture colordiffuse="button_focus2" background="true">rain-drop.png</texture>
+				<texture colordiffuse="dimgrey" background="true">rain-drop.png</texture>
 				<visible>true</visible>
 				<animation type="conditional" reversible="false" loop="true" condition="true">
 					<effect type="fade" start="0" end="100" time="200"/>
@@ -1704,7 +1704,7 @@
 				<top>130</top>
 				<width>128</width>
 				<height>128</height>
-				<texture colordiffuse="button_focus2" background="true">rain-drop.png</texture>
+				<texture colordiffuse="dimgrey" background="true">rain-drop.png</texture>
 				<visible>true</visible>
 				<animation type="conditional" reversible="false" loop="true" condition="true">
 					<effect type="fade" delay="400" start="0" end="100" time="200"/>
@@ -1718,7 +1718,7 @@
 				<top>700</top>
 				<width>128</width>
 				<height>128</height>
-				<texture colordiffuse="button_focus2" background="true">rain-drop.png</texture>
+				<texture colordiffuse="dimgrey" background="true">rain-drop.png</texture>
 				<visible>true</visible>
 				<animation type="conditional" reversible="false" loop="true" condition="true">
 					<effect type="fade" delay="800" start="0" end="100" time="200"/>
@@ -1732,7 +1732,7 @@
 				<top>800</top>
 				<width>128</width>
 				<height>128</height>
-				<texture colordiffuse="button_focus2" background="true">rain-drop.png</texture>
+				<texture colordiffuse="dimgrey" background="true">rain-drop.png</texture>
 				<visible>true</visible>
 				<animation type="conditional" reversible="false" loop="true" condition="true">
 					<effect type="fade" delay="1500" start="0" end="100" time="200"/>
@@ -1746,7 +1746,7 @@
 				<top>550</top>
 				<width>128</width>
 				<height>128</height>
-				<texture colordiffuse="button_focus2" background="true">rain-drop.png</texture>
+				<texture colordiffuse="dimgrey" background="true">rain-drop.png</texture>
 				<visible>true</visible>
 				<animation type="conditional" reversible="false" loop="true" condition="true">
 					<effect type="fade" delay="2200" start="0" end="100" time="200"/>
@@ -1760,7 +1760,7 @@
 				<top>100</top>
 				<width>128</width>
 				<height>128</height>
-				<texture colordiffuse="button_focus2" background="true">rain-drop.png</texture>
+				<texture colordiffuse="dimgrey" background="true">rain-drop.png</texture>
 				<visible>true</visible>
 				<animation type="conditional" reversible="false" loop="true" condition="true">
 					<effect type="fade" delay="1500" start="0" end="100" time="200"/>
@@ -1774,7 +1774,7 @@
 				<top>450</top>
 				<width>128</width>
 				<height>128</height>
-				<texture colordiffuse="button_focus2" background="true">rain-drop.png</texture>
+				<texture colordiffuse="dimgrey" background="true">rain-drop.png</texture>
 				<visible>true</visible>
 				<animation type="conditional" reversible="false" loop="true" condition="true">
 					<effect type="fade" delay="1000" start="0" end="100" time="200"/>
@@ -1788,7 +1788,7 @@
 				<top>800</top>
 				<width>128</width>
 				<height>128</height>
-				<texture colordiffuse="button_focus2" background="true">rain-drop.png</texture>
+				<texture colordiffuse="dimgrey" background="true">rain-drop.png</texture>
 				<visible>true</visible>
 				<animation type="conditional" reversible="false" loop="true" condition="true">
 					<effect type="fade" delay="700" start="0" end="100" time="200"/>
