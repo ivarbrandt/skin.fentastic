@@ -374,7 +374,7 @@
 				<onclick condition="String.IsEqual(Skin.String(DefaultBackgroundBrightness),Medium)">Skin.SetString(DefaultBackgroundBrightness,Low)</onclick>
 				<onclick condition="String.IsEqual(Skin.String(DefaultBackgroundBrightness),Low)">Skin.SetString(DefaultBackgroundBrightness,Highest)</onclick>
 				<onclick condition="String.IsEqual(Skin.String(DefaultBackgroundBrightness),Highest)">Skin.SetString(DefaultBackgroundBrightness,High)</onclick>
-				<visible>!Skin.HasSetting(no_fanart) + ![Container.Content(movies) | Container.Content(shows) | Container.Content(episodes) | Container.Content(seasons)]</visible>
+				<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | String.StartsWith(ListItem.FolderPath, plugin://plugin.video.fen)]</visible>
 			</control>
 			<control type="button" id="6053">
 				<label>Brightness</label>
@@ -384,7 +384,7 @@
 				<onclick condition="String.IsEqual(Skin.String(DefaultFanartBrightness),Medium)">Skin.SetString(DefaultFanartBrightness,Low)</onclick>
 				<onclick condition="String.IsEqual(Skin.String(DefaultFanartBrightness),Low)">Skin.SetString(DefaultFanartBrightness,Highest)</onclick>
 				<onclick condition="String.IsEqual(Skin.String(DefaultFanartBrightness),Highest)">Skin.SetString(DefaultFanartBrightness,High)</onclick>
-				<visible>!Skin.HasSetting(no_fanart) + [Container.Content(movies) | Container.Content(shows) | Container.Content(episodes) | Container.Content(seasons)]</visible>
+				<visible>!Skin.HasSetting(no_fanart) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | String.StartsWith(ListItem.FolderPath, plugin://plugin.video.fen)]</visible>
 			</control>
 			<control type="button" id="6054">
 				<include>MediaMenuItemsCommon</include>
