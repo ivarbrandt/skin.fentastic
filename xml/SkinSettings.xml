@@ -267,7 +267,7 @@
 					<label>Enter OMDb API Key</label>
 					<label2>$INFO[Skin.String(omdb_api_key)]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SetString(omdb_api_key)</onclick>
+					<onclick>RunScript(script.fentastic.helper, mode=set_api_key)</onclick>
 				</control>		
 				<!-- SEARCH OPTIONS -->
 				<control type="radiobutton" id="638">
