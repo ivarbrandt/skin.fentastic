@@ -712,9 +712,6 @@
     <value>66FFFFFF</value>
 	</variable>
 
-
-
-
 	<variable name="DefaultSearchWindowBehaviorVar">
     <value condition="Skin.HasSetting(DefaultSearchWindowBehavior)">Open keyboard</value>
     <value>Open search window</value>
@@ -828,14 +825,14 @@
 		<!-- MOVIES -->
 		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,movie)">$VAR[_Year]$VAR[_Mpaa]$VAR[_Genre]$VAR[_Director]$VAR[_Runtime]$VAR[_Endsat]$VAR[MC_Panel]$VAR[RT_Panel]$VAR[RA_Panel]$VAR[IM_Panel]$VAR[TM_Panel][CR]$VAR[_Plot][CR]</value>
 		<!-- SHOWS -->
-		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,tvshow)">$VAR[_Year]$VAR[_Mpaa]$VAR[_Network]$VAR[_Genre]$VAR[_RuntimeEpisodes]$VAR[_TotalSeasons]$VAR[_Status]$VAR[_Endsat][CR]$VAR[_Plot][CR]</value>
+		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,tvshow)">$VAR[_Year]$VAR[_Mpaa]$VAR[_Network]$VAR[_Genre]$VAR[_RuntimeEpisodes]$VAR[_TotalSeasons]$VAR[_Status]$VAR[_Endsat]$VAR[MC_Panel]$VAR[RT_Panel]$VAR[RA_Panel]$VAR[IM_Panel]$VAR[TM_Panel][CR]$VAR[_Plot][CR]</value>
 		<!-- SEASONS -->
-		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,season)">$VAR[_Mpaa]$VAR[_Network]$VAR[_Genre]$VAR[_RuntimeEpisodes]$VAR[_Endsat][CR]$VAR[_Plot][CR]</value>
+		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,season)">$VAR[_Mpaa]$VAR[_Network]$VAR[_Genre]$VAR[_RuntimeEpisodes]$VAR[_Endsat]$VAR[MC_Panel]$VAR[RT_Panel]$VAR[RA_Panel]$VAR[IM_Panel]$VAR[TM_Panel][CR]$VAR[_Plot][CR]</value>
 	</variable>
 
 	<!-- EPISODES -->
 	<variable name="InfoPanelEpisode">
-		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,episode)">$VAR[_Aired]$VAR[_Mpaa]$VAR[_Network]$VAR[_RuntimeEpisodes]$VAR[_Endsat][CR]$VAR[_Plot][CR]</value>
+		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,episode)">$VAR[_Aired]$VAR[_Mpaa]$VAR[_Network]$VAR[_RuntimeEpisodes]$VAR[_Endsat]$VAR[MC_Panel]$VAR[RT_Panel]$VAR[RA_Panel]$VAR[IM_Panel]$VAR[TM_Panel][CR]$VAR[_Plot][CR]</value>
 	</variable>
 	
 </includes>
