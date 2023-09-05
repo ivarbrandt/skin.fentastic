@@ -7,6 +7,7 @@
 	<onload>RunScript(script.fentastic.helper,mode=check_for_profile_change&amp;skin_id=skin.fentastic)</onload>
   <onload condition="String.IsEmpty(Window(Home).Property(fentastic.starting_widgets))">RunScript(script.fentastic.helper,mode=starting_widgets)</onload>
   <onload condition="String.IsEmpty(Window(Home).Property(fentastic.starting_widgets))">SetProperty(fentastic.starting_widgets,true)</onload>
+	<onload>RunScript(script.fentastic.helper,mode=start_service)</onload>
 	<onload condition="String.IsEmpty(Skin.String(DefaultBackgroundBrightness))">Skin.SetString(DefaultBackgroundBrightness,Medium)</onload>
 	<onload condition="String.IsEmpty(Skin.String(DefaultFanartBrightness))">Skin.SetString(DefaultFanartBrightness,Medium)</onload>
 	<controls>
