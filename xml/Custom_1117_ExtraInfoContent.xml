@@ -2,18 +2,16 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR skyblue]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
-- Added 3 NEW custom main menu sections
-- Overhauled UI for a more artwork centric experience
-- Fixed WideWall view
+- Updated UI for a more artwork centric experience
 - Updated widgets to handle menu items better
-- Added bold font to focused main main and search window items
-- Added custom version of AutoCompletion for virtual keyboard to repo (only try if you are having issues with your version)
-- Added optional FENtastic Audio Suite to repo
+- Added 3 NEW custom main menu sections
 - Added switch for Landscape/Clearlogo on WideList view
 - Added custom default background selection
 - Added optional color studio logos
-- Added custom background brightness
-- Added custom fanart brightness
+- Added custom background and fanart brightness
+- Added custom version of AutoCompletion for virtual keyboard to repo (only try if you are having issues with your version)
+- Added optional FENtastic Audio Suite to repo
+- Fixed WideWall view
 - Removed color themes
 - Other changes/fixes
 
