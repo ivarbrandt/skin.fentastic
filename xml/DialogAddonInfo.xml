@@ -36,7 +36,7 @@
 					<width>625</width>
 					<height>335</height>
 					<label>$INFO[ListItem.AddonSummary,[B],[/B][CR]]$INFO[ListItem.AddonDescription][CR]$VAR[AddonNewsVar,[I][CR][CR],[/I]]</label>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
 					<visible>!Control.HasFocus(5000)</visible>
 				</control>
@@ -46,7 +46,7 @@
 					<width>625</width>
 					<height>335</height>
 					<label>$INFO[ListItem.AddonSummary,[B],[/B][CR]]$INFO[ListItem.AddonDescription][CR]$VAR[AddonNewsVar,[I][CR][CR],[/I]]</label>
-					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<textcolor>focused_text</textcolor>
 					<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
 					<visible>Control.HasFocus(5000)</visible>
 				</control>
@@ -163,8 +163,8 @@
 									<width>410</width>
 									<height>30</height>
 									<font>font27_narrow</font>
-									<label>$INFO[ListItem.Label,[COLOR skyblue],[/COLOR]]</label>
-									<textcolor>$VAR[UnfocusedTextColor]</textcolor> 
+									<label>$INFO[ListItem.Label,[COLOR accent_color],[/COLOR]]</label>
+									<textcolor>unfocused_text</textcolor> 
 								</control>
 								<control type="label">
 									<left>10</left>
@@ -173,7 +173,7 @@
 									<height>30</height>
 									<font>font27_narrow</font>
 									<label>$INFO[ListItem.Label2]</label>
-									<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+									<textcolor>unfocused_text</textcolor>
 								</control>
 								<control type="image">
 									<right>25</right>
@@ -190,8 +190,8 @@
 									<width>410</width>
 									<height>30</height>
 									<font>font27_narrow</font>
-									<label>$INFO[ListItem.Label,[COLOR skyblue],[/COLOR]]</label>
-									<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+									<label>$INFO[ListItem.Label,[COLOR accent_color],[/COLOR]]</label>
+									<textcolor>unfocused_text</textcolor>
 									<scroll>false</scroll>
 								</control>
 								<control type="label">
@@ -201,7 +201,7 @@
 									<height>30</height>
 									<font>font27_narrow</font>
 									<label>$INFO[ListItem.Label2]</label>
-									<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+									<textcolor>unfocused_text</textcolor>
 									<scroll>false</scroll>
 								</control>
 								<control type="image">
@@ -270,8 +270,8 @@
 						<height>130</height>
 						<align>center</align>
 						<aligny>top</aligny>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
-						<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
+						<textcolor>unfocused_text</textcolor>
+						<focusedcolor>focused_text</focusedcolor>
 						<texturefocus border="2" colordiffuse="button_focus">masks/landscape.png</texturefocus>
 						<texturenofocus border="2" colordiffuse="button_focus2">masks/landscape-unfocused.png</texturenofocus>
 						<textoffsetx>35</textoffsetx>
@@ -367,12 +367,12 @@
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<label>[I]$INFO[ListItem.AddonDisclaimer][/I]</label>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<textcolor>unfocused_text</textcolor>
 				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 			</control>
 			<include content="InfoDialogTopBarInfo">
-				<param name="main_label" value="[COLOR $VAR[UnfocusedTextColor]]$INFO[ListItem.AddonName][/COLOR]" />
-				<param name="sub_label" value="[COLOR $VAR[UnfocusedTextColor]]$INFO[ListItem.AddonVersion][/COLOR][COLOR skyblue]$INFO[ListItem.AddonCreator, $LOCALIZE[31071] ][/COLOR]" />
+				<param name="main_label" value="[COLOR unfocused_text]$INFO[ListItem.AddonName][/COLOR]" />
+				<param name="sub_label" value="[COLOR unfocused_text]$INFO[ListItem.AddonVersion][/COLOR][COLOR accent_color]$INFO[ListItem.AddonCreator, $LOCALIZE[31071] ][/COLOR]" />
 			</include>
 		</control>
 		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>

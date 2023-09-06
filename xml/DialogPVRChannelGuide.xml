@@ -45,7 +45,7 @@
 							<bottom>0</bottom>
 							<align>right</align>
 							<aligny>center</aligny>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 							<label>$VAR[PVRListItemSubLabel]</label>
 						</control>
 					</itemlayout>
@@ -64,7 +64,7 @@
 							<bottom>0</bottom>
 							<aligny>center</aligny>
 							<label>[B]$INFO[ListItem.StartTime][/B]</label>
-							<textcolor>$VAR[FocusedTextColor]</textcolor>
+							<textcolor>focused_text</textcolor>
 						</control>
 						<control type="label">
 							<left>100</left>
@@ -73,7 +73,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>[B]$VAR[PVRListItemSubLabelFocused][/B]</label>
-							<textcolor>$VAR[FocusedTextColor]</textcolor>
+							<textcolor>focused_text</textcolor>
 							<scroll>true</scroll>
 						</control>
 						<control type="group">
@@ -139,7 +139,7 @@
 					<font>font45</font>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[19069]$INFO[Container(11).ListItem.StartDate, - ]</label>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 			</control>

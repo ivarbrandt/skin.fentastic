@@ -566,7 +566,7 @@
 								<align>right</align>
 								<font>font30_title</font>
 								<label>$INFO[Weather.Location]</label>
-								<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+								<textcolor>unfocused_text</textcolor>
 							</control>
 							<control type="label">
 								<left>840</left>
@@ -577,7 +577,7 @@
 								<align>right</align>
 								<font>font14</font>
 								<label>$INFO[Weather.Conditions]</label>
-								<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+								<textcolor>unfocused_text</textcolor>
 							</control>
 							<control type="label">
 								<left>840</left>
@@ -588,7 +588,7 @@
 								<align>right</align>
 								<font>font14</font>
 								<label>$INFO[Weather.Temperature]</label>
-								<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+								<textcolor>unfocused_text</textcolor>
 							</control>
 							<control type="grouplist">
 								<top>50</top>
@@ -884,7 +884,7 @@
 								<aligny>center</aligny>
 								<font>font52_title</font>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+								<textcolor>unfocused_text</textcolor>
 								<shadowcolor>text_shadow</shadowcolor>
 								<visible>!ControlGroup(700).HasFocus</visible>
 							</control>
@@ -1092,7 +1092,7 @@
 						<width>410</width>
 						<bottom>60</bottom>
 						<label>$VAR[InfoPanel]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">
@@ -1101,7 +1101,7 @@
 						<width>410</width>
 						<bottom>60</bottom>
 						<label>$VAR[InfoPanelEpisode]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">
@@ -1173,7 +1173,7 @@
           <aspectratio>keep</aspectratio>
           <width>130</width>
           <height>56</height>
-          <texture colordiffuse="skyblue">special://skin/media/logos/K-logo.png</texture>
+          <texture colordiffuse="accent_color">special://skin/media/logos/K-logo.png</texture>
         </control>
         <control type="image">
           <left>59</left>
@@ -1181,7 +1181,7 @@
           <aspectratio>keep</aspectratio>
           <width>192</width>
           <height>56</height>
-          <texture colordiffuse="$VAR[UnfocusedTextColor]">special://skin/media/logos/letters.png</texture>
+          <texture colordiffuse="unfocused_text">special://skin/media/logos/letters.png</texture>
         </control>
 			</control>
 		</control>

@@ -688,14 +688,6 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
-	<variable name="FocusedTextColor">
-    <value>FF141515</value>
-	</variable>
-	
-	<variable name="UnfocusedTextColor">
-    <value>FFCCCCCC</value>
-	</variable>
-
 	<variable name="BackgroundBrightnessVar">
     <value condition="String.IsEqual(Skin.String(DefaultBackgroundBrightness),Highest)">E6FFFFFF</value>
     <value condition="String.IsEqual(Skin.String(DefaultBackgroundBrightness),High)">CCFFFFFF</value>

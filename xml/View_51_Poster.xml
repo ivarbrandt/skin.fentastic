@@ -97,7 +97,7 @@
 						<top>337</top>
 						<width>32</width>
 						<height>32</height>
-						<texture colordiffuse="$VAR[UnfocusedTextColor]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="unfocused_text">$VAR[ListWatchedIconVar]</texture>
 					</control>
 					<control type="label">
 						<left>695</left>
@@ -115,7 +115,7 @@
 						<right>115</right>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[PlotTextBoxVar]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.PlotOutline) + String.IsEmpty(ListItem.Plot)]</visible>
 					</control>

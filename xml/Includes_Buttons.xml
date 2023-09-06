@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="OSDButton">
-		<textureradioonfocus colordiffuse="$VAR[FocusedTextColor]">$PARAM[texture]</textureradioonfocus>
-		<textureradioonnofocus colordiffuse="$VAR[UnfocusedTextColor]">$PARAM[texture]</textureradioonnofocus>
-		<textureradioofffocus colordiffuse="$VAR[FocusedTextColor]">$PARAM[texture]</textureradioofffocus>
-		<textureradiooffnofocus colordiffuse="$VAR[UnfocusedTextColor]">$PARAM[texture]</textureradiooffnofocus>
+		<textureradioonfocus colordiffuse="focused_text">$PARAM[texture]</textureradioonfocus>
+		<textureradioonnofocus colordiffuse="unfocused_text">$PARAM[texture]</textureradioonnofocus>
+		<textureradioofffocus colordiffuse="focused_text">$PARAM[texture]</textureradioofffocus>
+		<textureradiooffnofocus colordiffuse="unfocused_text">$PARAM[texture]</textureradiooffnofocus>
 		<textureradioondisabled colordiffuse="disabled">$PARAM[texture]</textureradioondisabled>
 		<textureradiooffdisabled colordiffuse="disabled">$PARAM[texture]</textureradiooffdisabled>
 		<texturefocus colordiffuse="button_focus">osd/fullscreen/buttons/button-fo.png</texturefocus>
@@ -58,8 +58,8 @@
 			<invalidcolor>invalid</invalidcolor>
 			<selectedcolor>selected</selectedcolor>
 			<font>font32</font>
-			<textcolor>$VAR[UnfocusedTextColor]</textcolor>
-			<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
+			<textcolor>unfocused_text</textcolor>
+			<focusedcolor>focused_text</focusedcolor>
 			<texturefocus colordiffuse="button_focus">masks/focus-long.png</texturefocus>
 			<texturenofocus />
 		</definition>
@@ -74,8 +74,8 @@
 			<height>$PARAM[height]</height>
 			<right>$PARAM[right]</right>
 			<aligny>center</aligny>
-			<textcolor>$VAR[UnfocusedTextColor]</textcolor>
-			<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
+			<textcolor>unfocused_text</textcolor>
+			<focusedcolor>focused_text</focusedcolor>
 			<font>font37</font>
 			<invalidcolor>invalid</invalidcolor>
 			<selectedcolor>selected</selectedcolor>
@@ -141,8 +141,8 @@
 				<onclick>$PARAM[onclick]</onclick>
 				<wrapmultiline>$PARAM[wrapmultiline]</wrapmultiline>
 				<align>center</align>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
-				<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
+				<textcolor>unfocused_text</textcolor>
+				<focusedcolor>focused_text</focusedcolor>
 				<texturefocus colordiffuse="button_focus">buttons/dfo.png</texturefocus>
 				<texturenofocus colordiffuse="button_focus2">buttons/dnfo.png</texturenofocus>
 				<visible>$PARAM[visible]</visible>
@@ -197,9 +197,9 @@
 				<radioposy>0</radioposy>
 				<radiowidth>40</radiowidth>
 				<radioheight>40</radioheight>
-				<textureradioonfocus colordiffuse="$VAR[FocusedTextColor]">$PARAM[icon]</textureradioonfocus>
+				<textureradioonfocus colordiffuse="focused_text">$PARAM[icon]</textureradioonfocus>
 				<textureradioonnofocus colordiffuse="grey">$PARAM[icon]</textureradioonnofocus>
-				<textureradioofffocus colordiffuse="$VAR[FocusedTextColor]">$PARAM[icon]</textureradioofffocus>
+				<textureradioofffocus colordiffuse="focused_text">$PARAM[icon]</textureradioofffocus>
 				<textureradiooffnofocus colordiffuse="grey">$PARAM[icon]</textureradiooffnofocus>
 				<visible>$PARAM[visible]</visible>
 			</control>
@@ -237,8 +237,8 @@
 			<height>130</height>
 			<align>center</align>
 			<aligny>top</aligny>
-			<textcolor>$VAR[UnfocusedTextColor]</textcolor>
-			<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
+			<textcolor>unfocused_text</textcolor>
+			<focusedcolor>focused_text</focusedcolor>
 			<texturefocus border="2" colordiffuse="button_focus">masks/landscape.png</texturefocus>
 			<texturenofocus border="2" colordiffuse="button_focus2">masks/landscape-unfocused.png</texturenofocus>
 			<textoffsetx>22</textoffsetx>
@@ -267,8 +267,8 @@
 				<height>130</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
-				<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
+				<textcolor>unfocused_text</textcolor>
+				<focusedcolor>focused_text</focusedcolor>
 				<texturefocus border="2" colordiffuse="button_focus">masks/landscape.png</texturefocus>
 				<texturenofocus border="2" colordiffuse="button_focus2">masks/landscape-unfocused.png</texturenofocus>
 				<textoffsetx>22</textoffsetx>
@@ -277,10 +277,10 @@
 				<radioposy>16</radioposy>
 				<radiowidth>48</radiowidth>
 				<font>font12</font>
-				<textureradioonfocus colordiffuse="$VAR[FocusedTextColor]">$PARAM[icon]</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="$VAR[UnfocusedTextColor]">$PARAM[icon]</textureradioonnofocus>
-				<textureradioofffocus colordiffuse="$VAR[FocusedTextColor]">$PARAM[icon]</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="$VAR[UnfocusedTextColor]">$PARAM[icon]</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="focused_text">$PARAM[icon]</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="unfocused_text">$PARAM[icon]</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="focused_text">$PARAM[icon]</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="unfocused_text">$PARAM[icon]</textureradiooffnofocus>
 				<textureradiooffdisabled colordiffuse="disabled">$PARAM[icon]</textureradiooffdisabled>
 				<textureradioondisabled colordiffuse="disabled">$PARAM[icon]</textureradioondisabled>
 				<label>$PARAM[label]</label>
@@ -300,8 +300,8 @@
 				<height>130</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
-				<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
+				<textcolor>unfocused_text</textcolor>
+				<focusedcolor>focused_text</focusedcolor>
 				<texturefocus border="2" colordiffuse="button_focus">masks/landscape.png</texturefocus>
 				<texturenofocus border="2" colordiffuse="button_focus2">masks/landscape-unfocused.png</texturenofocus>
 				<textoffsetx>35</textoffsetx>
@@ -310,10 +310,10 @@
 				<radioposy>16</radioposy>
 				<radiowidth>48</radiowidth>
 				<font>font12</font>
-				<textureradioonfocus colordiffuse="$VAR[FocusedTextColor]">$PARAM[icon_on]</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="$VAR[UnfocusedTextColor]">$PARAM[icon_on]</textureradioonnofocus>
-				<textureradioofffocus colordiffuse="$VAR[FocusedTextColor]">$PARAM[icon_off]</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="$VAR[UnfocusedTextColor]">$PARAM[icon_off]</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="focused_text">$PARAM[icon_on]</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="unfocused_text">$PARAM[icon_on]</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="focused_text">$PARAM[icon_off]</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="unfocused_text">$PARAM[icon_off]</textureradiooffnofocus>
 				<textureradiooffdisabled colordiffuse="disabled">$PARAM[icon_off]</textureradiooffdisabled>
 				<textureradioondisabled colordiffuse="disabled">$PARAM[icon_on]</textureradioondisabled>
 				<selected>$PARAM[selected]</selected>
@@ -350,7 +350,7 @@
 				<height>70</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<textcolor>unfocused_text</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 		</itemlayout>
@@ -378,7 +378,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
-				<textcolor>$VAR[FocusedTextColor]</textcolor>
+				<textcolor>focused_text</textcolor>
 			</control>
 		</focusedlayout>
 	</include>

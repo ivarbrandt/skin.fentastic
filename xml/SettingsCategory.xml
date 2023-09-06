@@ -162,12 +162,12 @@
 				<onright>5</onright>
 				<onup>3</onup>
 				<ondown>3</ondown>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
-				<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
-				<textureradioonfocus colordiffuse="$VAR[FocusedTextColor]">icons/settings.png</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="$VAR[UnfocusedTextColor]">icons/settings.png</textureradioonnofocus>
-				<textureradioofffocus colordiffuse="$VAR[FocusedTextColor]">icons/settings.png</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="$VAR[UnfocusedTextColor]">icons/settings.png</textureradiooffnofocus>
+				<textcolor>unfocused_text</textcolor>
+				<focusedcolor>focused_text</focusedcolor>
+				<textureradioonfocus colordiffuse="focused_text">icons/settings.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="unfocused_text">icons/settings.png</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="focused_text">icons/settings.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="unfocused_text">icons/settings.png</textureradiooffnofocus>
 			</control>
 		</control>
 		<control type="group">

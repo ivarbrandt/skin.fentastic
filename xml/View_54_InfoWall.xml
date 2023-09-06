@@ -112,7 +112,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$PARAM[single_label]</label>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<textcolor>unfocused_text</textcolor>
 				<visible>!String.IsEqual(ListItem.DBType,album)</visible>
 			</control>
 			<control type="group">
@@ -302,7 +302,7 @@
 					<width>100%</width>
 					<label>[B]$PARAM[sub_label][/B]</label>
 					<font>font12</font>
-					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<textcolor>focused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
 					<scrollspeed>150</scrollspeed>
@@ -316,7 +316,7 @@
 					<width>100%</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
 					<align>center</align>
@@ -327,7 +327,7 @@
 					<top>235</top>
 					<width>100%</width>
 					<label>[B]$PARAM[main_label][/B]</label>
-					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<textcolor>focused_text</textcolor>
 					<font>font10</font>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
@@ -341,7 +341,7 @@
 					<top>235</top>
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<font>font10</font>
 					<shadowcolor>text_shadow</shadowcolor>
 					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
@@ -354,7 +354,7 @@
 					<width>100%</width>
 					<label>[B]$PARAM[main_label][/B]</label>
 					<font>font12</font>
-					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<textcolor>focused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
 					<scrollspeed>150</scrollspeed>
@@ -368,7 +368,7 @@
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font12</font>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
 					<align>center</align>
@@ -380,7 +380,7 @@
 					<width>100%</width>
 					<label>[B]$PARAM[networks_label][/B]</label>
 					<font>font12</font>
-					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<textcolor>focused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
 					<scrollspeed>150</scrollspeed>
@@ -394,7 +394,7 @@
 					<width>100%</width>
 					<label>$PARAM[networks_label]</label>
 					<font>font12</font>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
 					<align>center</align>
@@ -582,7 +582,7 @@
 					<width>100%</width>
 					<label>[B]$PARAM[sub_label][/B]</label>
 					<font>font12</font>
-					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<textcolor>focused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
 					<scrollspeed>150</scrollspeed>
@@ -596,7 +596,7 @@
 					<width>100%</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
 					<align>center</align>
@@ -608,7 +608,7 @@
 					<width>100%</width>
 					<label>[B]$PARAM[main_label][/B]</label>
 					<font>font10</font>
-					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<textcolor>focused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
 					<scrollspeed>150</scrollspeed>
@@ -622,7 +622,7 @@
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10</font>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
 					<align>center</align>
@@ -634,7 +634,7 @@
 					<width>100%</width>
 					<label>[B]$PARAM[main_label][/B]</label>
 					<font>font12</font>
-					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<textcolor>focused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
 					<scrollspeed>150</scrollspeed>
@@ -648,7 +648,7 @@
 					<width>100%</width>
 					<label>$PARAM[main_label]</label>
 					<font>font12</font>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
 					<align>center</align>
@@ -660,7 +660,7 @@
 					<width>100%</width>
 					<label>[B]$PARAM[networks_label][/B]</label>
 					<font>font12</font>
-					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<textcolor>focused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<scroll>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</scroll>
 					<scrollspeed>150</scrollspeed>
@@ -674,7 +674,7 @@
 					<width>100%</width>
 					<label>$PARAM[networks_label]</label>
 					<font>font12</font>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
 					<align>center</align>
@@ -1122,7 +1122,7 @@
 					<width>195</width>
 					<label>$INFO[ListItem.Label]</label>
 					<font>font10</font>
-          <textcolor>$VAR[UnfocusedTextColor]</textcolor>
+          <textcolor>unfocused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<align>center</align>
 					<visible>!$PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]</visible>

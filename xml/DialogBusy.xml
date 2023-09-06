@@ -26,7 +26,7 @@
 					<height>80</height>
 					<aspectratio>keep</aspectratio>
 					<animation effect="rotate" end="-45" center="auto" time="200" delay="600" loop="true" reversible="false" condition="true">Conditional</animation>
-					<texture colordiffuse="$VAR[UnfocusedTextColor]">spinner.png</texture>
+					<texture colordiffuse="unfocused_text">spinner.png</texture>
 				</control>
 				<control type="image">
 					<centerleft>50%</centerleft>
@@ -35,14 +35,14 @@
 					<height>50</height>
 					<aspectratio>keep</aspectratio>
 					<animation effect="rotate" end="45" center="auto" time="200" delay="600" loop="true" reversible="false" condition="true">Conditional</animation>
-					<texture flipx="true" colordiffuse="$VAR[UnfocusedTextColor]">spinner.png</texture>
+					<texture flipx="true" colordiffuse="unfocused_text">spinner.png</texture>
 				</control>
 				<control type="image">
 					<centerleft>50%</centerleft>
 					<centertop>50%</centertop>
 					<width>30</width>
 					<height>30</height>
-					<texture colordiffuse="$VAR[UnfocusedTextColor]">$INFO[Control.GetLabel(10),dialogs/volume/progress/p,.png]</texture>
+					<texture colordiffuse="unfocused_text">$INFO[Control.GetLabel(10),dialogs/volume/progress/p,.png]</texture>
 				</control>
 			</control>
 		</control>

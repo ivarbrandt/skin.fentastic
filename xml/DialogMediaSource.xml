@@ -25,7 +25,7 @@
 			<aligny>center</aligny>
 			<font>font12</font>
 			<label>$LOCALIZE[1021]</label>
-			<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+			<textcolor>unfocused_text</textcolor>
 		</control>
 		<!-- <control type="image">
 			<left>25</left>
@@ -52,7 +52,7 @@
 					<top>0</top>
 					<bottom>0</bottom>
 					<aligny>center</aligny>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</itemlayout>
@@ -72,7 +72,7 @@
 					<right>10</right>
 					<aligny>center</aligny>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
-					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<textcolor>focused_text</textcolor>
 				</control>
 			</focusedlayout>
 		</control>

@@ -118,7 +118,7 @@
 					<width>500</width>
 					<align>right</align>
 					<font>WeatherTemp</font>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<label>$INFO[Weather.Temperature]</label>
 				</control>
 				<control type="label">
@@ -126,7 +126,7 @@
 					<top>164</top>
 					<align>right</align>
 					<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I][CR]$INFO[Weather.Conditions]</label>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<font>font14</font>
 					<width>630</width>
 				</control>

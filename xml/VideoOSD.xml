@@ -85,7 +85,7 @@
 							<width>74</width>
 							<height>74</height>
 							<visible>!Control.HasFocus(602)</visible>
-							<texture colordiffuse="$VAR[UnfocusedTextColor]">$VAR[PlayerControlsPlayImageVar]</texture>
+							<texture colordiffuse="unfocused_text">$VAR[PlayerControlsPlayImageVar]</texture>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -94,7 +94,7 @@
 							<height>74</height>
 							<animation center="38,38" effect="zoom" end="100" reversible="false" start="95" time="480" tween="back" condition="Control.HasFocus(602)">Conditional</animation>
 							<visible>Control.HasFocus(602)</visible>
-							<texture colordiffuse="$VAR[FocusedTextColor]">$VAR[PlayerControlsPlayImageVar]</texture>
+							<texture colordiffuse="focused_text">$VAR[PlayerControlsPlayImageVar]</texture>
 						</control>
 					</control>
 					<control type="radiobutton" id="603">

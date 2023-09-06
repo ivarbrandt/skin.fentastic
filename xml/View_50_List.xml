@@ -212,7 +212,7 @@
 						<bottom>0</bottom>
 						<aligny>center</aligny>
 						<font>font32</font>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<label>$VAR[ListLabelVar]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -224,7 +224,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>font27</font>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -359,7 +359,7 @@
 						<width>540</width>
 						<bottom>80</bottom>
 						<label>$VAR[InfoPanel]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<autoscroll time="3000" delay="10000" repeat="10000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>Skin.HasSetting(UseLandscape)</visible>
 					</control>
@@ -368,7 +368,7 @@
 						<width>525</width>
 						<bottom>115</bottom>
 						<label>$VAR[InfoPanel]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 						<visible>!Skin.HasSetting(UseLandscape)</visible>
 					</control>
@@ -378,7 +378,7 @@
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[ListBoxInfoVar]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<visible>!String.IsEqual(ListItem.DbType,movie) + !String.IsEqual(ListItem.DbType,tvshow) + !String.IsEqual(ListItem.DbType,season) + !String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song)</visible>
 					</control>
 					<!-- Plot control episodes -->
@@ -388,7 +388,7 @@
 						<bottom>100</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[InfoPanelEpisode]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 					</control>
 					<control type="textbox">
 						<top>418</top>
@@ -397,7 +397,7 @@
 						<height>110</height>
 						<bottom>70</bottom>
 						<font>font36_title</font>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<label>Season $INFO[ListItem.Season], Episode $INFO[ListItem.Episode]</label>
 						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 					</control>
@@ -407,7 +407,7 @@
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="3000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[ListBoxInfoVar]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<visible>String.IsEqual(ListItem.DBType,song)</visible>
 					</control>
 				</control>

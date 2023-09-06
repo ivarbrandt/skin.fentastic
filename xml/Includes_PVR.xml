@@ -110,7 +110,7 @@
 					<height>12</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<colordiffuse>$VAR[UnfocusedTextColor]</colordiffuse>
+					<colordiffuse>unfocused_text</colordiffuse>
 					<visible>ListItem.HasEpg + !$PARAM[has_info_icon]</visible>
 					<info>ListItem.Progress</info>
 				</control>
@@ -119,11 +119,11 @@
 					<param name="info_icon" value="$PARAM[info_icon]" />
 					<param name="has_info_icon" value="$PARAM[has_info_icon]" />
 					<param name="has_status_icon" value="$PARAM[has_status_icon]" />
-					<param name="label0" value="[COLOR $VAR[UnfocusedTextColor]]$INFO[ListItem.ChannelNumberLabel][/COLOR]" />
-					<param name="label1" value="[COLOR $VAR[UnfocusedTextColor]]$PARAM[label1][/COLOR]" />
-					<param name="label2" value="[COLOR $VAR[UnfocusedTextColor]]$PARAM[label2][/COLOR]" />
-					<param name="label3" value="[COLOR $VAR[UnfocusedTextColor]]$VAR[PVRListItemSubLabel][/COLOR]" />
-					<param name="label4" value="[COLOR $VAR[UnfocusedTextColor]]$INFO[ListItem.Comment][/COLOR]" />
+					<param name="label0" value="[COLOR unfocused_text]$INFO[ListItem.ChannelNumberLabel][/COLOR]" />
+					<param name="label1" value="[COLOR unfocused_text]$PARAM[label1][/COLOR]" />
+					<param name="label2" value="[COLOR unfocused_text]$PARAM[label2][/COLOR]" />
+					<param name="label3" value="[COLOR unfocused_text]$VAR[PVRListItemSubLabel][/COLOR]" />
+					<param name="label4" value="[COLOR unfocused_text]$INFO[ListItem.Comment][/COLOR]" />
 				</include>
 			</itemlayout>
 			<focusedlayout height="101" infoupdate="$PARAM[info_update]">
@@ -142,7 +142,7 @@
 					<height>12</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<colordiffuse>$VAR[FocusedTextColor]</colordiffuse>
+					<colordiffuse>focused_text</colordiffuse>
 					<midtexture border="3">progress/texturebg_white.png</midtexture>
 					<visible>ListItem.HasEpg + !$PARAM[has_info_icon]</visible>
 					<info>ListItem.Progress</info>
@@ -152,11 +152,11 @@
 					<param name="info_icon" value="$PARAM[info_icon]" />
 					<param name="has_info_icon" value="$PARAM[has_info_icon]" />
 					<param name="has_status_icon" value="$PARAM[has_status_icon]" />
-					<param name="label0" value="[COLOR $VAR[FocusedTextColor]][B]$INFO[ListItem.ChannelNumberLabel][/B][/COLOR]" />
-					<param name="label1" value="[COLOR $VAR[FocusedTextColor]][B]$PARAM[label1][/B][/COLOR]" />
-					<param name="label2" value="[COLOR $VAR[FocusedTextColor]][B]$PARAM[label2][/B][/COLOR]" />
-					<param name="label3" value="[COLOR $VAR[FocusedTextColor]][B]$VAR[PVRListItemSubLabelFocused][/B][/COLOR]" />
-					<param name="label4" value="[COLOR $VAR[FocusedTextColor]][B]$INFO[ListItem.Comment][/B][/COLOR]" />
+					<param name="label0" value="[COLOR focused_text][B]$INFO[ListItem.ChannelNumberLabel][/B][/COLOR]" />
+					<param name="label1" value="[COLOR focused_text][B]$PARAM[label1][/B][/COLOR]" />
+					<param name="label2" value="[COLOR focused_text][B]$PARAM[label2][/B][/COLOR]" />
+					<param name="label3" value="[COLOR focused_text][B]$VAR[PVRListItemSubLabelFocused][/B][/COLOR]" />
+					<param name="label4" value="[COLOR focused_text][B]$INFO[ListItem.Comment][/B][/COLOR]" />
 				</include>
 			</focusedlayout>
 		</definition>
@@ -311,7 +311,7 @@
 					<info2>PVR.TimeshiftProgressEpgStart</info2>
 					<info>PVR.TimeshiftProgressPlayPos</info>
 					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-					<midtexture colordiffuse="skyblue">colors/white.png</midtexture>
+					<midtexture colordiffuse="accent_color">colors/white.png</midtexture>
 				</control>
 				<control type="progress">
 					<left>0</left>
@@ -390,26 +390,26 @@
 				<control type="label">
 					<height>262</height>
 					<font>font45</font>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<label>[B]$INFO[ListItem.ChannelName][/B]</label>
 				</control>
 				<control type="label">
 					<top>60</top>
 					<height>200</height>
 					<label>$VAR[PVRInfoPanelDateDurationLabel]</label>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 				</control>
 				<control type="progress">
 					<top>200</top>
 					<height>12</height>
-					<colordiffuse>$VAR[UnfocusedTextColor]</colordiffuse>
+					<colordiffuse>unfocused_text</colordiffuse>
 					<info>ListItem.Progress</info>
 					<visible>Integer.IsGreater(ListItem.Progress,0)</visible>
 				</control>
 				<control type="progress">
 					<top>200</top>
 					<height>12</height>
-					<colordiffuse>$VAR[UnfocusedTextColor]</colordiffuse>
+					<colordiffuse>unfocused_text</colordiffuse>
 					<info>ListItem.PercentPlayed</info>
 					<visible>Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
 				</control>
@@ -420,7 +420,7 @@
 				<height>262</height>
 				<font>font36_title</font>
 				<label>$INFO[ListItem.Title] $INFO[ListItem.Year,([COLOR grey],[/COLOR])]</label>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<textcolor>unfocused_text</textcolor>
 				<scroll>true</scroll>
 				<visible>!ListItem.HasEpg</visible>
 			</control>
@@ -430,7 +430,7 @@
 				<height>262</height>
 				<font>font36_title</font>
 				<label>$INFO[ListItem.EpgEventTitle] $INFO[ListItem.Year,([COLOR grey],[/COLOR])]</label>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<textcolor>unfocused_text</textcolor>
 				<scroll>true</scroll>
 				<visible>ListItem.HasEpg</visible>
 			</control>
@@ -440,14 +440,14 @@
 				<height>70</height>
 				<scroll>true</scroll>
 				<label>[I]$VAR[SeasonEpisodeLabel]$INFO[ListItem.EpisodeName][/I]</label>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<textcolor>unfocused_text</textcolor>
 			</control>
 			<control type="textbox">
 				<top>465</top>
 				<width>830</width>
 				<bottom>list_bottom_offset</bottom>
 				<label>$VAR[FlagLabel,,[CR]]$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]:[/COLOR] ,[CR]]$INFO[ListItem.TimerType,[COLOR grey]$LOCALIZE[803]:[/COLOR] ,[CR]]$VAR[RecordingSizeLabel]$VAR[ExpirationDateTimeLabel]$INFO[ListItem.Plot,[CR]]</label>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<textcolor>unfocused_text</textcolor>
 				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 			</control>
 		</control>
@@ -552,7 +552,7 @@
 				<ondown>$PARAM[control_onupdown_id]</ondown>
 				<viewtype label="$PARAM[viewtype_label]">list</viewtype>
 				<!-- progress panel -->
-				<progresstexture border="$PARAM[progress_texture_border]" colordiffuse="$VAR[UnfocusedTextColor]">$PARAM[progress_texture]</progresstexture>
+				<progresstexture border="$PARAM[progress_texture_border]" colordiffuse="unfocused_text">$PARAM[progress_texture]</progresstexture>
 				<rulerdatelayout width="1700" height="45" condition="$PARAM[has_rulerdate_layout]">
 					<control type="label">
 						<width>1700</width>
@@ -570,7 +570,7 @@
 						<height>45</height>
 						<font>font12</font>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<textoffsetx>10</textoffsetx>
 						<textcolor>button_focus</textcolor>
 					</control>
@@ -636,7 +636,7 @@
 						<aligny>center</aligny>
 						<font>font13</font>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 					</control>
 					<control type="image">
 						<visible>ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive</visible>
@@ -685,7 +685,7 @@
 						<aligny>center</aligny>
 						<font>font13</font>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
-						<textcolor>$VAR[FocusedTextColor]</textcolor>
+						<textcolor>focused_text</textcolor>
 					</control>
 					<control type="image">
 						<visible>ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive</visible>

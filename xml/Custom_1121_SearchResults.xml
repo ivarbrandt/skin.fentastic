@@ -166,7 +166,7 @@
 								<aligny>center</aligny>
 								<font>font32</font>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+								<textcolor>unfocused_text</textcolor>
 								<shadowcolor>text_shadow</shadowcolor>
 								<scroll>$PARAM[focused]</scroll>
 								<visible>ControlGroup(700).HasFocus</visible>
@@ -272,7 +272,7 @@
 						<width>410</width>
 						<bottom>60</bottom>
 						<label>$VAR[InfoPanel]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">
@@ -353,7 +353,7 @@
 					<aligny>center</aligny>
 					<height>98</height>
 					<font>font37</font>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<label>Search results for: [B]$INFO[Skin.String(SearchInput)][/B]</label>
 				</control>
 				<control type="label">
@@ -365,7 +365,7 @@
 					<align>center</align>
 					<height>98</height>
 					<font>font14</font>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<wrapmultiline>true</wrapmultiline>
 					<label>Explore your past searches on the left, delve into TRAKT lists using the TRAKT button, or click the search icon to initiate a new search.</label>
 				</control>

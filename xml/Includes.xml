@@ -307,7 +307,7 @@
 						<align>$PARAM[align]</align>
 						<font>$PARAM[font]</font>
 						<aligny>center</aligny>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</control>
@@ -362,7 +362,7 @@
 						<font>$PARAM[font]</font>
 						<aligny>center</aligny>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
-						<textcolor>$VAR[FocusedTextColor]</textcolor>
+						<textcolor>focused_text</textcolor>
 						<scroll>true</scroll>
 					</control>
 				</control>
@@ -515,7 +515,7 @@
 				<width>160</width>
 				<height>63</height>
 				<font>font27_narrow</font>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<textcolor>unfocused_text</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[$PARAM[label]]</label>
@@ -555,7 +555,7 @@
 						<width>32</width>
 						<bottom>0</bottom>
 						<aspectratio aligny="center">keep</aspectratio>
-						<texture colordiffuse="$VAR[FocusedTextColor]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="focused_text">$VAR[ListWatchedIconVar]</texture>
 					</control>
 					<control type="label">
 						<left>90</left>
@@ -565,7 +565,7 @@
 						<aligny>center</aligny>
 						<scroll>true</scroll>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
-						<textcolor>$VAR[FocusedTextColor]</textcolor>
+						<textcolor>focused_text</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="label">
@@ -587,7 +587,7 @@
 						<width>32</width>
 						<bottom>0</bottom>
 						<aspectratio aligny="center">keep</aspectratio>
-						<texture colordiffuse="$VAR[UnfocusedTextColor]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="unfocused_text">$VAR[ListWatchedIconVar]</texture>
 					</control>
 					<control type="label">
 						<left>90</left>
@@ -596,7 +596,7 @@
 						<right>20</right>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="label">
@@ -763,8 +763,8 @@
 				<top>$PARAM[down_posy]</top>
 				<width>48</width>
 				<height>24</height>
-				<texturefocus colordiffuse="$VAR[UnfocusedTextColor]">overlays/arrowdown.png</texturefocus>
-				<texturenofocus colordiffuse="$VAR[UnfocusedTextColor]">overlays/arrowdown.png</texturenofocus>
+				<texturefocus colordiffuse="unfocused_text">overlays/arrowdown.png</texturefocus>
+				<texturenofocus colordiffuse="unfocused_text">overlays/arrowdown.png</texturenofocus>
 				<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 				<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 				<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -778,8 +778,8 @@
 				<top>$PARAM[up_posy]</top>
 				<width>48</width>
 				<height>24</height>
-				<texturefocus colordiffuse="$VAR[UnfocusedTextColor]" flipy="true">overlays/arrowdown.png</texturefocus>
-				<texturenofocus colordiffuse="$VAR[UnfocusedTextColor]" flipy="true">overlays/arrowdown.png</texturenofocus>
+				<texturefocus colordiffuse="unfocused_text" flipy="true">overlays/arrowdown.png</texturefocus>
+				<texturenofocus colordiffuse="unfocused_text" flipy="true">overlays/arrowdown.png</texturenofocus>
 				<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
 				<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 				<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
@@ -801,7 +801,7 @@
 				<top>$PARAM[posy]</top>
 				<width>28</width>
 				<height>28</height>
-				<texture flipx="true" colordiffuse="$VAR[UnfocusedTextColor]">overlays/arrowright.png</texture>
+				<texture flipx="true" colordiffuse="unfocused_text">overlays/arrowright.png</texture>
 				<animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
 				<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 				<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
@@ -813,7 +813,7 @@
 				<top>$PARAM[posy]</top>
 				<width>28</width>
 				<height>28</height>
-				<texture colordiffuse="$VAR[UnfocusedTextColor]">overlays/arrowright.png</texture>
+				<texture colordiffuse="unfocused_text">overlays/arrowright.png</texture>
 				<animation effect="zoom" start="0,100" end="100,100" center="auto" time="200">VisibleChange</animation>
 				<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
 				<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
@@ -871,7 +871,7 @@
 				<top>-2</top>
 				<right>-2</right>
         <bottom>-2</bottom>
-				<texture colordiffuse="$VAR[UnfocusedTextColor]">$PARAM[diffusetexture]</texture>
+				<texture colordiffuse="unfocused_text">$PARAM[diffusetexture]</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -889,7 +889,7 @@
 				<label>$PARAM[header_label]</label>
 				<align>center</align> 
 				<aligny>center</aligny>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<textcolor>unfocused_text</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<!-- <control type="button" id="22002">
@@ -913,9 +913,9 @@
 				<texturenofocus />
 				<label></label>
 				<textureradioofffocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="skyblue">special://xbmc/media/vendor_icon.png</textureradiooffnofocus>
+				<textureradiooffnofocus colordiffuse="accent_color">special://xbmc/media/vendor_icon.png</textureradiooffnofocus>
 				<textureradioonfocus colordiffuse="EEFFFFFF">dialogs/close.png</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="skyblue">special://xbmc/media/vendor_icon.png</textureradioonnofocus>
+				<textureradioonnofocus colordiffuse="accent_color">special://xbmc/media/vendor_icon.png</textureradioonnofocus>
 				<onclick>Action(close)</onclick>
 				<visible>!Skin.HasSetting(touchmode)</visible>
 			</control>
@@ -1009,11 +1009,11 @@
 								<width>32</width>
 								<height>32</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="skyblue">$VAR[NowPlayingIconVar]</texture>
+								<texture colordiffuse="accent_color">$VAR[NowPlayingIconVar]</texture>
 							</control>
 							<control type="label">
 								<label>$INFO[Player.Title]</label>
-								<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+								<textcolor>unfocused_text</textcolor>
 								<font>font27</font>
 								<shadowcolor>text_shadow</shadowcolor>
 								<height>35</height>
@@ -1056,12 +1056,12 @@
 							<width max="600">auto</width>
 							<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 							<label>$INFO[System.ProfileName]</label>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 						</control>
 					</control>
 					<control type="label">
 						<font>font_clock</font>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<height>200</height>
 						<width>auto</width>
@@ -1100,7 +1100,7 @@
 						<width>auto</width>
 						<aligny>center</aligny>
 						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="image">
@@ -1109,7 +1109,7 @@
 						<height>50</height>
 						<fadetime>300</fadetime>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
-						<texture colordiffuse="$VAR[UnfocusedTextColor]">$INFO[Weather.FanartCode,weather/small/,.png]</texture>
+						<texture colordiffuse="unfocused_text">$INFO[Weather.FanartCode,weather/small/,.png]</texture>
 						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
 					<control type="image">
@@ -1193,7 +1193,7 @@
 	</include>
 	<include name="BreadcrumbsLabel">
 		<font>font45</font>
-		<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+		<textcolor>unfocused_text</textcolor>
 		<shadowcolor>text_shadow</shadowcolor>
 		<top>7</top>
 		<height>100</height>
@@ -1598,7 +1598,7 @@
 				<top>30</top>
 				<width>240</width>
 				<height>160</height>
-				<texture colordiffuse="$VAR[UnfocusedTextColor]">$INFO[ListItem.Icon]</texture>
+				<texture colordiffuse="unfocused_text">$INFO[ListItem.Icon]</texture>
 				<align>center</align>
 				<aspectratio>scale</aspectratio>
 			</control>
@@ -1608,7 +1608,7 @@
 				<width>350</width>
 				<height>400</height>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<textcolor>unfocused_text</textcolor>
 				<align>center</align>
 			</control>
 		</itemlayout>
@@ -1643,7 +1643,7 @@
 					<top>30</top>
 					<width>240</width>
 					<height>160</height>
-					<texture colordiffuse="$VAR[FocusedTextColor]">$INFO[ListItem.Icon]</texture>
+					<texture colordiffuse="focused_text">$INFO[ListItem.Icon]</texture>
 					<align>center</align>
 					<aspectratio>scale</aspectratio>
 				</control>
@@ -1653,7 +1653,7 @@
 					<width>350</width>
 					<height>400</height>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
-					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<textcolor>focused_text</textcolor>
 					<align>center</align>
 				</control>
 			</control>

@@ -113,7 +113,7 @@
 							<right>40</right>
 							<aligny>center</aligny>
 							<font>font32</font>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 							<label>$VAR[ListLabelVar]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
@@ -125,7 +125,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<font>font32</font>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 							<label>$INFO[ListItem.Rating]</label>
 							<visible>!String.IsEqual(ListItem.DBtype,tvshow) + !String.IsEqual(ListItem.DbType,season)</visible>
 							<shadowcolor>text_shadow</shadowcolor>
@@ -138,7 +138,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<font>font32</font>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 							<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
 							<visible>String.IsEqual(ListItem.DBtype,season)</visible>
 							<shadowcolor>text_shadow</shadowcolor>
@@ -152,7 +152,7 @@
 								<right>125</right>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+								<textcolor>unfocused_text</textcolor>
 								<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
 							</control>
 							<control type="label">
@@ -162,7 +162,7 @@
 								<right>40</right>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+								<textcolor>unfocused_text</textcolor>
 								<label>  •  $INFO[ListItem.Rating]</label>
 							</control>
 							<shadowcolor>text_shadow</shadowcolor>
@@ -220,7 +220,7 @@
 							<right>40</right>
 							<aligny>center</aligny>
 							<font>font32</font>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 							<label>$VAR[ListLabelVar]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
@@ -232,7 +232,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<font>font32</font>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 							<label>$VAR[ListLabel2Var]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
@@ -282,7 +282,7 @@
 							<bottom>0</bottom>
 							<right>100</right>
 							<aligny>center</aligny>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
@@ -390,7 +390,7 @@
 				<left>75</left>
 				<right>40</right>
 				<aligny>center</aligny>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<textcolor>unfocused_text</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 			<control type="label">
@@ -400,7 +400,7 @@
 				<aligny>center</aligny>
 				<font>font27</font>
 				<label>$VAR[AddonsLabel2Var]</label>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<textcolor>unfocused_text</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>
 			<control type="image">

@@ -229,7 +229,7 @@
 					<height>16</height>
 					<info>Player.Progress</info>
 					<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
-					<midtexture colordiffuse="skyblue">colors/white.png</midtexture>
+					<midtexture colordiffuse="accent_color">colors/white.png</midtexture>
 				</control>
 				<control type="slider" id="401">
 					<left>0</left>
@@ -237,8 +237,8 @@
 					<width>100%</width>
 					<height>26</height>
 					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_bar.png</texturesliderbar>
-					<textureslidernib colordiffuse="skyblue">osd/progress/nub_bar.png</textureslidernib>
-					<textureslidernibfocus colordiffuse="skyblue">colors/white.png</textureslidernibfocus>
+					<textureslidernib colordiffuse="accent_color">osd/progress/nub_bar.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="accent_color">colors/white.png</textureslidernibfocus>
 					<visible>Player.SeekEnabled</visible>
 				</control>
 			</control>

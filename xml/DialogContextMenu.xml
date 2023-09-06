@@ -48,8 +48,8 @@
 				<width>400</width>
 				<height>65</height>
 				<align>center</align>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
-				<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
+				<textcolor>unfocused_text</textcolor>
+				<focusedcolor>focused_text</focusedcolor>
 				<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 				<texturenofocus />
 			</control>

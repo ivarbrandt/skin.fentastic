@@ -7,8 +7,8 @@
 		<height>80</height>
 		<radioposx>370</radioposx>
 		<aligny>center</aligny>
-		<textcolor>$VAR[UnfocusedTextColor]</textcolor>
-		<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
+		<textcolor>unfocused_text</textcolor>
+		<focusedcolor>focused_text</focusedcolor>
 		<invalidcolor>invalid</invalidcolor>
 		<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 		<texturenofocus />
@@ -30,10 +30,10 @@
 				<radioposy>0</radioposy>
 				<radiowidth>40</radiowidth>
 				<radioheight>40</radioheight>
-				<textureradioonfocus colordiffuse="$VAR[FocusedTextColor]">$PARAM[icon]</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="$VAR[UnfocusedTextColor]">$PARAM[icon]</textureradioonnofocus>
-				<textureradioofffocus colordiffuse="$VAR[FocusedTextColor]">$PARAM[icon]</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="$VAR[UnfocusedTextColor]">$PARAM[icon]</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="focused_text">$PARAM[icon]</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="unfocused_text">$PARAM[icon]</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="focused_text">$PARAM[icon]</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="unfocused_text">$PARAM[icon]</textureradiooffnofocus>
 				<textureradiooffdisabled colordiffuse="button_focus">$PARAM[icon]</textureradiooffdisabled>
 				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TV$PARAM[area])</onclick>
 				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(Radio$PARAM[area])</onclick>
@@ -260,7 +260,7 @@
 		<radioposx>300</radioposx>
 		<font>font25_title</font>
 		<aligny>top</aligny>
-		<textcolor>skyblue</textcolor>
+		<textcolor>accent_color</textcolor>
 	</include>
 	<include name="MediaMenuCommon">
 		<include>OpenClose_Left</include>

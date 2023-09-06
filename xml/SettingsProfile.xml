@@ -69,7 +69,7 @@
 						<align>center</align>
 						<aligny>top</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -80,7 +80,7 @@
 						<align>center</align>
 						<aligny>top</aligny>
 						<label>$LOCALIZE[31029]:</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<visible>!String.IsEqual(Listitem.Label,$LOCALIZE[20058])</visible>
 					</control>
 					<control type="label">
@@ -92,7 +92,7 @@
 						<align>center</align>
 						<aligny>top</aligny>
 						<label fallback="13170">$INFO[ListItem.Label2]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<visible>!String.Contains(Listitem.Label,$LOCALIZE[20058])</visible>
 					</control>
 				</itemlayout>
@@ -133,7 +133,7 @@
 							<align>center</align>
 							<aligny>top</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>$VAR[FocusedTextColor]</textcolor>
+							<textcolor>focused_text</textcolor>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -144,7 +144,7 @@
 							<align>center</align>
 							<aligny>top</aligny>
 							<label>$LOCALIZE[31029]:</label>
-							<textcolor>$VAR[FocusedTextColor]</textcolor>
+							<textcolor>focused_text</textcolor>
 							<visible>!String.Contains(Listitem.Label,$LOCALIZE[20058])</visible>
 						</control>
 						<control type="label">
@@ -156,7 +156,7 @@
 							<align>center</align>
 							<aligny>top</aligny>
 							<label fallback="13170">$INFO[ListItem.Label2]</label>
-							<textcolor>$VAR[FocusedTextColor]</textcolor>
+							<textcolor>focused_text</textcolor>
 							<visible>!String.Contains(Listitem.Label,$LOCALIZE[20058])</visible>
 						</control>
 					</control>
@@ -205,7 +205,7 @@
 						<right>30</right>
 						<bottom>0</bottom>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<font>font37</font>
 						<aligny>center</aligny>
 					</control>
@@ -222,7 +222,7 @@
 						<right>30</right>
 						<bottom>0</bottom>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[FocusedTextColor]</textcolor>
+						<textcolor>focused_text</textcolor>
 						<font>font37</font>
 						<aligny>center</aligny>
 					</control>

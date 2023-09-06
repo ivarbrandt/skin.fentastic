@@ -35,7 +35,7 @@
 					<height>70</height>
 					<shadowcolor>black</shadowcolor>
 					<font>font37</font>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 					<align>center</align>
 				<label>$INFO[Window(Home).Property(TextViewerHeader)]</label>
 			</control>
@@ -46,7 +46,7 @@
 					<height>70</height>
 					<shadowcolor>black</shadowcolor>
 					<font>font37</font>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 				<label>$INFO[Window(Home).Property(TextViewerSubHeader)]</label>
 			</control>
 			<control type="textbox">
@@ -57,7 +57,7 @@
 					<shadowcolor>black</shadowcolor>
 					<pagecontrol>61</pagecontrol>
 					<font>font37</font>
-					<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+					<textcolor>unfocused_text</textcolor>
 				<label>$INFO[Window(Home).Property(TextViewerContent)]</label>
 				<visible>String.IsEmpty(Window(skinsettings).Property(Changelog))</visible>
 			</control>
@@ -69,7 +69,7 @@
 				<shadowcolor>black</shadowcolor>
 				<pagecontrol>62</pagecontrol>
 				<font>font37</font>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<textcolor>unfocused_text</textcolor>
 				<include>Changelog</include>
 				<visible>!String.IsEmpty(Window(skinsettings).Property(Changelog))</visible>
 				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>

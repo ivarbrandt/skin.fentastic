@@ -580,7 +580,7 @@
 						<width>445</width>
 						<height>85</height>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<font>font37</font>
 						<aligny>center</aligny>
 					</control>
@@ -601,7 +601,7 @@
 						<font>font37</font>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[FocusedTextColor]</textcolor>
+						<textcolor>focused_text</textcolor>
 					</control>
 				</focusedlayout>
 				<content>
@@ -668,7 +668,7 @@
 			<height>100</height>
 			<font>font12</font>
 			<align>justify</align>
-			<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+			<textcolor>unfocused_text</textcolor>
 			<label>$VAR[SkinSettingsHelpTextVar]</label>
 			<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 		</control>

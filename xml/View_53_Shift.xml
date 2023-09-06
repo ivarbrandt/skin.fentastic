@@ -92,7 +92,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 						</control>
 						<control type="group">
 							<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
@@ -332,7 +332,7 @@
 				<right>30</right>
 				<height>163</height>
 				<label>$PARAM[textbox_content]</label>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<textcolor>unfocused_text</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>
 		</control>
