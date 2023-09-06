@@ -254,7 +254,7 @@
 		<value condition="ListItem.Property(addon.isenabled) + String.IsEqual(ListItem.AddonLifecycleType,$LOCALIZE[24169])">icons/addonstatus/enabled-normal.png</value>
 		<value condition="ListItem.Property(addon.isenabled) + String.IsEqual(ListItem.AddonLifecycleType,$LOCALIZE[24170])">icons/addonstatus/enabled-deprecated.png</value>
 		<value condition="ListItem.Property(addon.isenabled) + String.IsEqual(ListItem.AddonLifecycleType,$LOCALIZE[24171])">icons/addonstatus/enabled-broken.png</value>
-		<value condition="!ListItem.IsParentFolder">OverlayUnwatched.png</value>
+		<!-- <value condition="!ListItem.IsParentFolder">OverlayUnwatched.png</value> -->
 	</variable>
 	<variable name="AddonsOriginVar">
 		<value condition="ListItem.Property(Addon.IsFromOfficialRepo) + ListItem.IsAutoUpdateable">icons/addonstatus/official.png</value>
@@ -293,7 +293,7 @@
 	<variable name="BannerLabel2Var">
 		<value condition="String.IsEqual(Listitem.DBType,tvshow)">$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</value>
 		<!-- <value>$INFO[ListItem.Year]</value>
-		 -->
+		-->
 	</variable>
 	<variable name="VideoPlayerForwardRewindVar">
 		<value condition="Player.Forwarding2x | Player.Rewinding2x">2x</value>
@@ -485,7 +485,7 @@
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
 		<value condition="ListItem.IsResumable">overlays/watched/resume.png</value>
 		<value condition="!String.IsEmpty(ListItem.Overlay)">OverlayWatched.png</value>
-		<value condition="!ListItem.IsParentFolder">OverlayUnwatched.png</value>
+		<!-- <value condition="!ListItem.IsParentFolder">OverlayUnwatched.png</value> -->
 	</variable>
 	<variable name="ListPVRTimersIconVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
