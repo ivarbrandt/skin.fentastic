@@ -14,41 +14,181 @@
 	<include name="CategoryLabel">
 		<param name="visible">true</param>
 		<param name="item_treshold">0</param>
-		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title,[B] | [/B]]$VAR[MC_Label]$VAR[RT_Label]$VAR[RA_Label]$VAR[IM_Label]$VAR[TM_Label]</param>
+		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title,[B] | [/B]]</param>
 		<param name="label_focus_episodes">$INFO[Container($PARAM[list_id]).ListItem.TVShowTitle,[B] | [/B]]$INFO[Container($PARAM[list_id]).ListItem.Title,[B] | [/B]]</param>
 		<param name="label_focus_collections">$INFO[Container($PARAM[list_id]).ListItem.Label,[B] | [/B]]</param>
 		<definition>
-		<control type="group" id="$PARAM[list_id]665">
-			<left>75</left>
-			<top>80</top>
-			<onback>9000</onback>
-			<width>1350</width>
-			<height>90</height>
-			<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,$PARAM[item_treshold]) | [Container($PARAM[list_id]).IsUpdating + Integer.IsEqual(Container($PARAM[list_id]).NumItems,0)]</visible>
-			<visible>$PARAM[visible]</visible>
-			<control type="label">
-				<label>$PARAM[label]</label>
-				<shadowcolor>text_shadow</shadowcolor>
-				<textcolor>unfocused_text</textcolor>
-				<visible>!Control.HasFocus($PARAM[list_id])</visible>
-			</control>
-			<control type="label">
-				<label>$PARAM[label]$PARAM[label_focus]</label>
-				<shadowcolor>text_shadow</shadowcolor>
-				<visible>!String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
-				<scroll>true</scroll>
-			</control>
-			<control type="label">
-				<label>$PARAM[label]$PARAM[label_focus_episodes]</label>
-				<shadowcolor>text_shadow</shadowcolor>
-				<visible>String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
-			</control>
-			<control type="label">
-				<label>$PARAM[label]$PARAM[label_focus_collections]</label>
-				<shadowcolor>text_shadow</shadowcolor>
-				<visible>[String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)] + Control.HasFocus($PARAM[list_id])</visible>
-			</control>
+			<control type="group" id="$PARAM[list_id]665">
+				<left>75</left>
+				<top>80</top>
+				<onback>9000</onback>
+				<height>90</height>
+				<width>1350</width>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,$PARAM[item_treshold]) | [Container($PARAM[list_id]).IsUpdating + Integer.IsEqual(Container($PARAM[list_id]).NumItems,0)]</visible>
+				<visible>$PARAM[visible]</visible>
+				<!-- <control type="label">
+					<width max="1000">auto</width>
+					<label>$PARAM[label]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+					<textcolor>unfocused_text</textcolor>
+					<visible>!Control.HasFocus($PARAM[list_id])</visible>
+				</control> -->
+				
+		
+				
+					
+					<control type="grouplist">
+						<width>1350</width>
+						<orientation>horizontal</orientation>
+						<itemgap>15</itemgap>
+						<control type="label">
+							<width max="1000">auto</width>
+							<label>$PARAM[label]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+							<scroll>true</scroll>
+							<visible>!Control.HasFocus($PARAM[list_id])</visible>
+						</control>
+						<control type="label">
+							<width max="650">auto</width>
+							<label>$PARAM[label]$PARAM[label_focus]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+							<scroll>true</scroll>
+							<visible>!String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
+						</control>
+						<control type="label">
+							<width max="1150">auto</width>
+							<label>$PARAM[label]$PARAM[label_focus_episodes]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+							<scroll>true</scroll>
+							<visible>String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
+						</control>
+						<control type="label">
+							<width max="650">auto</width>
+							<label>$PARAM[label]$PARAM[label_focus_collections]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+							<visible>[String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)] + Control.HasFocus($PARAM[list_id])</visible>
+						</control>
+						<control type="grouplist">
+							<orientation>horizontal</orientation>
+							<aligny>center</aligny>
+							<itemgap>20</itemgap>
+							<control type="grouplist">
+								<width>130</width>
+								<orientation>horizontal</orientation>
+								<itemgap>8</itemgap>
+								<align>center</align>
+								<visible>!String.IsEmpty(Window.Property(fentastic.metascore)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre) + Control.HasFocus($PARAM[list_id])</visible>
+								<control type="image">
+									<top>45</top>
+									<width>35</width>
+									<aspectratio>keep</aspectratio>
+									<align>right</align>
+									<aligny>center</aligny>
+									<texture>$INFO[Window.Property(fentastic.metascoreImage)]</texture>
+								</control>
+								<control type="label">
+									<width max="75">auto</width>
+									<height>32</height>
+									<align>left</align>
+									<label>$INFO[Window.Property(fentastic.metascore)]</label>
+								</control>
+							</control>
+							<control type="grouplist">
+								<width>130</width>
+								<orientation>horizontal</orientation>
+								<itemgap>8</itemgap>
+								<align>center</align>
+								<visible>!String.IsEmpty(Window.Property(fentastic.tomatoMeter)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre) + Control.HasFocus($PARAM[list_id])</visible>
+								<control type="image">
+									<top>45</top>
+									<width>35</width>
+									<aspectratio>keep</aspectratio>
+									<align>right</align>
+									<aligny>center</aligny>
+									<texture>$INFO[Window.Property(fentastic.tomatoImage)]</texture>
+								</control>
+								<control type="label">
+									<width max="75">auto</width>
+									<height>32</height>
+									<align>left</align>
+									<label>$INFO[Window.Property(fentastic.tomatoMeter)]</label>
+								</control>
+							</control>
+							<control type="grouplist">
+								<width>120</width>
+								<orientation>horizontal</orientation>
+								<itemgap>6</itemgap>
+								<align>center</align>
+								<visible>!String.IsEmpty(Window.Property(fentastic.tomatoUserMeter)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre) + Control.HasFocus($PARAM[list_id])</visible>
+								<control type="image">
+									<top>45</top>
+									<width>35</width>
+									<aspectratio>keep</aspectratio>
+									<align>right</align>
+									<aligny>center</aligny>
+									<texture>$INFO[Window.Property(fentastic.tomatoUserImage)]</texture>
+								</control>
+								<control type="label">
+									<width max="75">auto</width>
+									<height>32</height>
+									<align>left</align>
+									<label>$INFO[Window.Property(fentastic.tomatoUserMeter)]</label>
+								</control>
+							</control>
+							<control type="grouplist">
+								<width>130</width>
+								<orientation>horizontal</orientation>
+								<itemgap>8</itemgap>
+								<align>center</align>
+								<visible>!String.IsEmpty(Window.Property(fentastic.imdbRating)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre) + Control.HasFocus($PARAM[list_id])</visible>
+								<control type="image">
+									<top>45</top>
+									<width>52</width>
+									<!-- <height>32</height> -->
+									<aspectratio>keep</aspectratio>
+									<align>right</align>
+									<aligny>center</aligny>
+									<texture>$INFO[Window.Property(fentastic.imdbImage)]</texture>
+								</control>
+								<control type="label">
+									<width max="75">auto</width>
+									<height>32</height>
+									<align>left</align>
+									<label>$INFO[Window.Property(fentastic.imdbRating)]</label>
+								</control>
+							</control>
+							<control type="grouplist">
+								<width>130</width>
+								<orientation>horizontal</orientation>
+								<itemgap>8</itemgap>
+								<align>center</align>
+								<visible>!String.IsEmpty(Window.Property(fentastic.tmdbRating)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre) + Control.HasFocus($PARAM[list_id])</visible>
+								<control type="image">
+									<top>45</top>
+									<width>33</width>
+									<aspectratio>keep</aspectratio>
+									<align>right</align>
+									<aligny>center</aligny>
+									<texture>$INFO[Window.Property(fentastic.tmdbImage)]</texture>
+								</control>
+								<control type="label">
+									<width max="75">auto</width>
+									<height>32</height>
+									<align>left</align>
+									<label>$INFO[Window.Property(fentastic.tmdbRating)]</label>
+								</control>
+							</control>
+							
+							
+							
+							
+						</control>
+				</control>
+
+
+				
 		</control>
+		
 		</definition>
 	</include>
 
@@ -67,7 +207,7 @@
 				<height>90</height>
 				<visible>$PARAM[visible]</visible>
 				<label>$PARAM[label]</label>
-				<textcolor>unfocused_text</textcolor>
+				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<visible>!Control.HasFocus($PARAM[list_id])</visible>
 			</control>
@@ -916,7 +1056,7 @@
 							<height>70</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font25_narrow</font>
-							<textcolor>unfocused_text</textcolor>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -929,7 +1069,7 @@
 							<height>70</height>
 							<label>$INFO[ListItem.Label] ($INFO[System.AddonUpdateCount])</label>
 							<font>font25_narrow</font>
-							<textcolor>unfocused_text</textcolor>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -989,7 +1129,7 @@
 							<width>254</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>unfocused_text</textcolor>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 							<font>font25_narrow</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
@@ -1003,7 +1143,7 @@
 							<width>254</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label] ($INFO[System.AddonUpdateCount])</label>
-							<textcolor>unfocused_text</textcolor>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 							<font>font25_narrow</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
@@ -1069,7 +1209,7 @@
 									<width>254</width>
 									<height>70</height>
 									<label>$INFO[ListItem.Label]</label>
-									<textcolor>unfocused_text</textcolor>
+									<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 									<font>font25_narrow</font>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
@@ -1127,7 +1267,7 @@
 									<width>254</width>
 									<height>70</height>
 									<label>$INFO[ListItem.Label]</label>
-									<textcolor>unfocused_text</textcolor>
+									<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 									<font>font25_narrow</font>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
@@ -1163,7 +1303,7 @@
 						<width>100%</width>
 						<height min="110" max="300">auto</height>
 						<label>$PARAM[text_label]</label>
-						<textcolor>unfocused_text</textcolor>
+						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 						<align>center</align>
 						<font>font14</font>
 					</control>
@@ -1185,7 +1325,7 @@
 							<align>center</align>
 							<texturefocus border="40" colordiffuse="button_focus">buttons/dfo.png</texturefocus>
 							<texturenofocus border="40" colordiffuse="button_focus2">buttons/dnfo.png</texturenofocus>
-							<focusedcolor>focused_text</focusedcolor>
+							<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
 							<visible>$PARAM[visible_1]</visible>
 						</control>
 						<control type="button" id="$PARAM[button_id]568">
@@ -1199,7 +1339,7 @@
 							<align>center</align>
 							<texturefocus border="40" colordiffuse="button_focus">buttons/dfo.png</texturefocus>
 							<texturenofocus border="40" colordiffuse="button_focus2" >buttons/dnfo.png</texturenofocus>
-							<focusedcolor>focused_text</focusedcolor>
+							<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
 							<visible>$PARAM[visible_2] + Window.IsActive(home)</visible>
 						</control>
 						<control type="button" id="$PARAM[button_id]569">
@@ -1213,7 +1353,7 @@
 							<align>center</align>
 							<texturefocus border="40" colordiffuse="button_focus">buttons/dfo.png</texturefocus>
 							<texturenofocus border="40" colordiffuse="button_focus2" >buttons/dnfo.png</texturenofocus>
-							<focusedcolor>focused_text</focusedcolor>
+							<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
 							<visible>$PARAM[visible_3] + Window.IsActive(1121)</visible>
 						</control>
 					</control>
@@ -1372,7 +1512,7 @@
 							<width>205</width>
 							<height>70</height>
 							<label>$PARAM[label]</label>
-							<textcolor>unfocused_text</textcolor>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 							<font>font12</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
@@ -1384,7 +1524,7 @@
 							<width>205</width>
 							<height>65</height>
 							<label>$PARAM[label2]</label>
-							<textcolor>unfocused_text</textcolor>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 							<font>font12</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
@@ -1479,10 +1619,10 @@
 							<height>70</height>
 							<label>$PARAM[label]</label>
 							<font>font12</font>
-							<textcolor>unfocused_text</textcolor>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
-							<scroll>$PARAM[focused]</scroll>
+							<scroll>true</scroll>
 							<aligny>top</aligny>
 						</control>
 						<control type="label">
@@ -1492,10 +1632,10 @@
 							<height>65</height>
 							<label>$PARAM[label2]</label>
 							<font>font12</font>
-							<textcolor>unfocused_text</textcolor>
+							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
-							<scroll>$PARAM[focused]</scroll>
+							<scroll>true</scroll>
 							<aligny>top</aligny>
 						</control>
 						<control type="image">
@@ -1503,7 +1643,7 @@
 							<top>30</top>
 							<width>32</width>
 							<height>32</height>
-							<texture colordiffuse="accent_color">$VAR[WallWatchedIconVar]</texture>
+							<texture colordiffuse="skyblue">$VAR[WallWatchedIconVar]</texture>
 						</control>
 					</control>
 				</focusedlayout>
@@ -1799,12 +1939,12 @@
 
 	<include name="WeatherHourlyItem">
 		<item>
-			<label>[COLOR unfocused_text]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Time)][/COLOR]</label>
-			<label2>[COLOR unfocused_text][B]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Temperature)]  [COLOR accent_color]•[/B][/COLOR]  $INFO[Window(weather).Property(Hourly.$PARAM[item_index].Precipitation)][/COLOR]</label2>
+			<label>[COLOR $VAR[UnfocusedTextColor]]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Time)][/COLOR]</label>
+			<label2>[COLOR $VAR[UnfocusedTextColor]][B]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Temperature)]  [COLOR skyblue]•[/B][/COLOR]  $INFO[Window(weather).Property(Hourly.$PARAM[item_index].Precipitation)][/COLOR]</label2>
 			<property name="Temperature">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Temperature)]</property>
 			<property name="Outlook">$INFO[Window(weather).Property(Hourly.$PARAM[item_id].Outlook)]</property>
 			<property name="Cloudiness">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Cloudiness)]</property>
-			<property name="ShortDate">[COLOR accent_color]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].ShortDate)][/COLOR]</property>
+			<property name="ShortDate">[COLOR skyblue]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].ShortDate)][/COLOR]</property>
 			<property name="FanartCode">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].FanartCode)]</property>
 			<thumb>resource://resource.images.weathericons.default/$INFO[Window(weather).Property(Hourly.$PARAM[item_index].OutlookIcon)]</thumb>
 			<onclick>noop</onclick>
@@ -1815,12 +1955,12 @@
 	<include name="WeatherDailyItem">
 		<item>
 			<label>$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDay)]</label>
-			<label2>[COLOR FFFF4C4C][B]$INFO[Window(weather).Property(Daily.$PARAM[item_index].HighTemperature)][/COLOR]  [COLOR accent_color]•[/COLOR]  [COLOR FF4C8CFF]$INFO[Window(weather).Property(Daily.$PARAM[item_index].LowTemperature)][/B][/COLOR]</label2>
+			<label2>[COLOR FFFF4C4C][B]$INFO[Window(weather).Property(Daily.$PARAM[item_index].HighTemperature)][/COLOR]  [COLOR skyblue]•[/COLOR]  [COLOR FF4C8CFF]$INFO[Window(weather).Property(Daily.$PARAM[item_index].LowTemperature)][/B][/COLOR]</label2>
 			<property name="LongDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].LongDay)]</property>
 			<property name="TempDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].TempDay)]</property>
 			<property name="Cloudiness">$INFO[Window(weather).Property(Daily.$PARAM[item_index].Cloudiness)]</property>
 			<property name="Outlook">$INFO[Window(weather).Property(Daily.$PARAM[item_index].Outlook)]</property>
-			<property name="ShortDate">[COLOR accent_color]$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDate)][/COLOR]</property>
+			<property name="ShortDate">[COLOR skyblue]$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDate)][/COLOR]</property>
 			<property name="FanartCode">$INFO[Window(weather).Property(Daily.$PARAM[item_index].FanartCode)]</property>
 			<thumb>resource://resource.images.weathericons.default/$INFO[Window(weather).Property(Daily.$PARAM[item_index].OutlookIcon)]</thumb>
 			<onclick>noop</onclick>
@@ -1960,7 +2100,7 @@
 					<width>80</width>
 					<height>80</height>
 					<aspectratio aligny="center">keep</aspectratio>
-					<texture colordiffuse="unfocused_text">dialogs/extendedprogress/loading.png</texture>
+					<texture colordiffuse="$VAR[UnfocusedTextColor]">dialogs/extendedprogress/loading.png</texture>
 					<animation effect="rotate" center="auto" start="360" end="0" time="750" loop="true" condition="true">Conditional</animation>
 				</control>
 			</control>
@@ -1987,7 +2127,7 @@
           <width>50</width>
           <height>50</height>
           <aspectratio aligny="center">keep</aspectratio>
-          <texture colordiffuse="unfocused_text">dialogs/extendedprogress/loading.png</texture>
+          <texture colordiffuse="$VAR[UnfocusedTextColor]">dialogs/extendedprogress/loading.png</texture>
           <animation effect="rotate" center="auto" start="360" end="0" time="750" loop="true" condition="true">Conditional</animation>
         </control>
       </control>
