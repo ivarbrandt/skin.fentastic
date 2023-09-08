@@ -88,7 +88,7 @@
 				<scroll>$PARAM[focused]</scroll>
 				<scrollspeed>150</scrollspeed>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
-				<textcolor>focused_text_color</textcolor>
+				<textcolor>focused_text</textcolor>
 				<visible>Window.IsActive(videos) + $PARAM[focused]</visible>
 			</control>
 			<control type="label">
@@ -100,7 +100,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>unfocused_text_color</textcolor>
+				<textcolor>unfocused_text</textcolor>
 				<visible>Window.IsActive(videos) + !$PARAM[focused]</visible>
 			</control>
 			<control type="group">
@@ -606,7 +606,7 @@
 					<width>357</width>
 					<label>$INFO[ListItem.Label]</label>
 					<font>font10</font>
-          <textcolor>unfocused_text_color</textcolor>
+          <textcolor>unfocused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<align>center</align>
 					<visible>!$PARAM[focused] + [Control.IsVisible(56) | Control.IsVisible(504)]</visible>
