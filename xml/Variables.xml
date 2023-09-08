@@ -740,7 +740,7 @@
 	</variable>
 
 	<!-- INFOPANEL RATINGS -->
-	<variable name="MC_Panel">
+	<!-- <variable name="MC_Panel">
 		<value condition="!String.IsEmpty(Window.Property(fentastic.metascore)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre)">[CR][CR]$INFO[Window.Property(fentastic.metascore),MC: ]</value>
 	</variable>
 	<variable name="RT_Panel">
@@ -754,14 +754,14 @@
 	</variable>
 	<variable name="TM_Panel">
 		<value condition="!String.IsEmpty(Window.Property(fentastic.tmdbRating)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre)">$INFO[Window.Property(fentastic.tmdbRating),[B] • [/B]TM: ]</value>
-	</variable>
+	</variable> -->
 
-	<variable name="Media_Item_Rating">
-		<value condition="!String.IsEmpty(Window.Property(fentastic.metascore)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre)">$INFO[Window.Property(fentastic.metascore)</value>
-		<value condition="!String.IsEmpty(Window.Property(fentastic.tomatoMeter)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre)">$INFO[Window.Property(fentastic.tomatoMeter)</value>
-		<value condition="!String.IsEmpty(Window.Property(fentastic.tomatoUserMeter)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre)">$INFO[Window.Property(fentastic.tomatoUserMeter)</value>
-		<value condition="!String.IsEmpty(Window.Property(fentastic.imdbRating)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre)">$INFO[Window.Property(fentastic.imdbRating)</value>
-		<value condition="!String.IsEmpty(Window.Property(fentastic.tmdbRating)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre)">$INFO[Window.Property(fentastic.tmdbRating)</value>
+	<variable name="Media_Rating">
+		<value condition="!String.IsEmpty(Window.Property(fentastic.metascore))">$INFO[Window.Property(fentastic.metascore)</value>
+		<value condition="!String.IsEmpty(Window.Property(fentastic.tomatoMeter))">$INFO[Window.Property(fentastic.tomatoMeter)</value>
+		<value condition="!String.IsEmpty(Window.Property(fentastic.tomatoUserMeter))">$INFO[Window.Property(fentastic.tomatoUserMeter)</value>
+		<value condition="!String.IsEmpty(Window.Property(fentastic.imdbRating))">$INFO[Window.Property(fentastic.imdbRating)</value>
+		<value condition="!String.IsEmpty(Window.Property(fentastic.tmdbRating))">$INFO[Window.Property(fentastic.tmdbRating)</value>
 	</variable>
 
 	<!-- INFOPANEL VARIABLES -->
@@ -818,29 +818,30 @@
 	<!-- Ends at: -->
 	<variable name="_Endsat">
 		<value condition="!String.IsEmpty(ListItem.EndTime) + !String.IsEmpty(ListItem.Duration) + !Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.EndTime,[B] • [/B]$LOCALIZE[31080]: ]</value>
-		<value condition="!String.IsEmpty(ListItem.EndTime) + !String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.EndTime,[B]$LOCALIZE[31080]: [/B]][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.EndTime) + !String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.EndTime,[B]$LOCALIZE[31080]: [/B]]</value>
 	</variable>
 	<!-- Plot -->
 	<variable name="_Plot">
-		<value condition="String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Plot][CR]</value>
-		<value condition="!String.IsEmpty(ListItem.Plot) + !Skin.HasSetting(Enable.AlternateInfo)">[CR]$INFO[ListItem.Plot][CR]</value>
-		<value condition="!String.IsEmpty(ListItem.Plot) + Skin.HasSetting(Enable.AlternateInfo)">$INFO[ListItem.Plot][CR]</value>
+		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
 	</variable>
 
-	<variable name="InfoPanel">
-		<!-- COLLECTIONS -->
-		<value condition="String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)">$VAR[_Plot][CR]</value>
+	<variable name="InfoPanelTop">
 		<!-- MOVIES -->
-		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,movie)">$VAR[_Year]$VAR[_Mpaa]$VAR[_Genre]$VAR[_Director]$VAR[_Runtime]$VAR[_Endsat]$VAR[MC_Panel]$VAR[RT_Panel]$VAR[RA_Panel]$VAR[IM_Panel]$VAR[TM_Panel][CR]$VAR[_Plot][CR]</value>
+		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,movie)">$VAR[_Year]$VAR[_Mpaa]$VAR[_Genre]$VAR[_Director]$VAR[_Runtime]$VAR[_Endsat]</value>
 		<!-- SHOWS -->
-		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,tvshow)">$VAR[_Year]$VAR[_Mpaa]$VAR[_Network]$VAR[_Genre]$VAR[_RuntimeEpisodes]$VAR[_TotalSeasons]$VAR[_Status]$VAR[_Endsat]$VAR[MC_Panel]$VAR[RT_Panel]$VAR[RA_Panel]$VAR[IM_Panel]$VAR[TM_Panel][CR]$VAR[_Plot][CR]</value>
+		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,tvshow)">$VAR[_Year]$VAR[_Mpaa]$VAR[_Network]$VAR[_Genre]$VAR[_RuntimeEpisodes]$VAR[_TotalSeasons]$VAR[_Status]$VAR[_Endsat]</value>
 		<!-- SEASONS -->
-		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,season)">$VAR[_Mpaa]$VAR[_Network]$VAR[_Genre]$VAR[_RuntimeEpisodes]$VAR[_Endsat]$VAR[MC_Panel]$VAR[RT_Panel]$VAR[RA_Panel]$VAR[IM_Panel]$VAR[TM_Panel][CR]$VAR[_Plot][CR]</value>
+		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,season)">$VAR[_Mpaa]$VAR[_Network]$VAR[_Genre]$VAR[_RuntimeEpisodes]$VAR[_Endsat]</value>
 	</variable>
-
+	
+	<variable name="InfoPanelBottom">
+		<!-- COLLECTIONS -->
+		<!-- MOVIES, TVSHOWS, SEASONS, EPISODES -->
+		<value condition="!ListItem.IsCollection + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)]">$VAR[_Plot]</value>
+	</variable>
 	<!-- EPISODES -->
-	<variable name="InfoPanelEpisode">
-		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,episode)">$VAR[_Aired]$VAR[_Mpaa]$VAR[_Network]$VAR[_RuntimeEpisodes]$VAR[_Endsat]$VAR[MC_Panel]$VAR[RT_Panel]$VAR[RA_Panel]$VAR[IM_Panel]$VAR[TM_Panel][CR]$VAR[_Plot][CR]</value>
+	<variable name="InfoPanelEpisodeTop">
+		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,episode)">$VAR[_Aired]$VAR[_Mpaa]$VAR[_Network]$VAR[_RuntimeEpisodes]$VAR[_Endsat]</value>
 	</variable>
 	
 </includes>

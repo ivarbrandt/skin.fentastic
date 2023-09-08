@@ -1813,4 +1813,174 @@
 		</control>
 	</include>
 
+	<include name="SmallInfoPanel">
+		<control type="grouplist">
+			<!-- <left>30</left>
+			<width>410</width>
+			<top>239</top> -->
+			<left>$PARAM[left]</left>
+			<width>$PARAM[width]</width>
+			<top>$PARAM[top]</top>
+			<!-- <bottom>95</bottom> -->
+			<orientation>vertical</orientation>
+			<itemgap>13</itemgap>
+			<control type="textbox">
+				<height>auto</height>
+				<label>$VAR[InfoPanelTop]</label>
+				<textcolor>unfocused_text</textcolor>
+			</control>
+			<control type="textbox">
+				<height>auto</height>
+				<font>font36_title</font>
+				<label>Season $INFO[ListItem.Season], Episode $INFO[ListItem.Episode]</label>
+				<textcolor>unfocused_text</textcolor>
+				<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+			</control>
+			<control type="textbox">
+				<height>auto</height>
+				<label>$VAR[InfoPanelEpisodeTop]</label>
+				<textcolor>unfocused_text</textcolor>
+			</control>
+			<control type="grouplist">
+				<visible>![String.IsEmpty(Window.Property(fentastic.metascore)) + String.IsEmpty(Window.Property(fentastic.tomatoMeter)) + String.IsEmpty(Window.Property(fentastic.tomatoUserMeter)) + String.IsEmpty(Window.Property(fentastic.imdbRating)) + String.IsEmpty(Window.Property(fentastic.tmdbRating))]</visible>
+				<height>90</height>
+				<orientation>horizontal</orientation>
+				<itemgap>$PARAM[ratings_spacing]</itemgap>
+				<aligny>center</aligny>
+				<control type="grouplist">
+					<width>75</width>
+					<orientation>vertical</orientation>
+					<itemgap>10</itemgap>
+					<align>center</align>
+					<visible>!String.IsEmpty(Window.Property(fentastic.metascore))</visible>
+					<control type="image">
+						<width>58</width>
+						<height>36</height>
+						<aspectratio>keep</aspectratio>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texture>$INFO[Window.Property(fentastic.metascoreImage)]</texture>
+					</control>
+					<control type="label">
+						<width max="75">auto</width>
+						<height>42</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window.Property(fentastic.metascore)]</label>
+						<textcolor>unfocused_text</textcolor>
+					</control>
+				</control>
+				<control type="grouplist">
+					<width>75</width>
+					<orientation>vertical</orientation>
+					<itemgap>10</itemgap>
+					<align>center</align>
+					<visible>!String.IsEmpty(Window.Property(fentastic.tomatoMeter))</visible>
+					<control type="image">
+						<width>58</width>
+						<height>36</height>
+						<aspectratio>keep</aspectratio>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texture>$INFO[Window.Property(fentastic.tomatoImage)]</texture>
+					</control>
+					<control type="label">
+						<width max="75">auto</width>
+						<height>42</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window.Property(fentastic.tomatoMeter)]</label>
+						<textcolor>unfocused_text</textcolor>
+					</control>
+				</control>
+				<control type="grouplist">
+					<width>75</width>
+					<orientation>vertical</orientation>
+					<itemgap>10</itemgap>
+					<align>center</align>
+					<visible>!String.IsEmpty(Window.Property(fentastic.tomatoUserMeter))</visible>
+					<control type="image">
+						<width>58</width>
+						<height>36</height>
+						<aspectratio>keep</aspectratio>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texture>$INFO[Window.Property(fentastic.tomatoUserImage)]</texture>
+					</control>
+					<control type="label">
+						<width max="75">auto</width>
+						<height>42</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window.Property(fentastic.tomatoUserMeter)]</label>
+						<textcolor>unfocused_text</textcolor>
+					</control>
+				</control>
+				<control type="grouplist">
+					<width>75</width>
+					<orientation>vertical</orientation>
+					<itemgap>10</itemgap>
+					<align>center</align>
+					<visible>!String.IsEmpty(Window.Property(fentastic.imdbRating))</visible>
+					<control type="image">
+						<width>58</width>
+						<height>36</height>
+						<aspectratio>keep</aspectratio>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texture>$INFO[Window.Property(fentastic.imdbImage)]</texture>
+					</control>
+					<control type="label">
+						<width max="57">auto</width>
+						<height>42</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window.Property(fentastic.imdbRating)]</label>
+						<textcolor>unfocused_text</textcolor>
+					</control>
+				</control>
+				<control type="grouplist">
+					<width>65</width>
+					<orientation>vertical</orientation>
+					<itemgap>10</itemgap>
+					<align>center</align>
+					<visible>!String.IsEmpty(Window.Property(fentastic.tmdbRating))</visible>
+					<control type="image">
+						<width>58</width>
+						<height>36</height>
+						<aspectratio>keep</aspectratio>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texture>$INFO[Window.Property(fentastic.tmdbImage)]</texture>
+					</control>
+					<control type="label">
+						<width max="57">auto</width>
+						<height>42</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window.Property(fentastic.tmdbRating)]</label>
+						<textcolor>unfocused_text</textcolor>
+					</control>
+				</control>
+				
+			</control>
+			<control type="textbox">
+				<height max="$PARAM[height_noalt]">auto</height>
+				<bottom>70</bottom>
+				<label>$VAR[InfoPanelBottom]</label>
+				<textcolor>unfocused_text</textcolor>
+				<autoscroll delay="7000" time="2000" repeat="7000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>!Skin.HasSetting(Enable.AlternateInfo)</visible>
+			</control>
+			<control type="textbox">
+				<height max="$PARAM[height_alt]">auto</height>
+				<bottom>70</bottom>
+				<label>$VAR[InfoPanelBottom]</label>
+				<textcolor>unfocused_text</textcolor>
+				<autoscroll delay="5000" time="1500" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>Skin.HasSetting(Enable.AlternateInfo)</visible>
+			</control>
+	</control>
+	</include>
+
 </includes>

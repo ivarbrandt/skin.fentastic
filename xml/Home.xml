@@ -1085,36 +1085,15 @@
 						<label>$INFO[ListItem.Label]</label>
 						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
-					<control type="textbox">
-						<left>30</left>
-						<top>239</top>
-						<width>410</width>
-						<bottom>60</bottom>
-						<label>$VAR[InfoPanel]</label>
-						<textcolor>unfocused_text</textcolor>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control>
-					<control type="textbox">
-						<left>30</left>
-						<top>323</top>
-						<width>410</width>
-						<bottom>60</bottom>
-						<label>$VAR[InfoPanelEpisode]</label>
-						<textcolor>unfocused_text</textcolor>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control>
-					<control type="textbox">
-						<left>30</left>
-						<top>213</top>
-						<width>410</width>
-						<aligny>center</aligny>
-						<height>110</height>
-						<bottom>60</bottom>
-						<font>font36_title</font>
-						<label>Season $INFO[ListItem.Season], Episode $INFO[ListItem.Episode]</label>
-						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
-					</control>
-					<control type="textbox">
+					<include content="SmallInfoPanel">
+						<param name="left" value="30" />
+						<param name="width" value="410" />
+						<param name="top" value="239" />
+						<param name="ratings_spacing" value="10" />
+						<param name="height_noalt" value="460" />
+						<param name="height_alt" value="290" />
+					</include>
+					<!-- <control type="textbox">
 						<left>30</left>
 						<top>467</top>
 						<width>530</width>
@@ -1125,7 +1104,7 @@
 						<textcolor>80FFFFFF</textcolor>
 						<label>$LOCALIZE[19055]</label>
 						<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
-					</control>
+					</control> -->
 				</control>
 			</control>
 			
