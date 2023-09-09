@@ -54,58 +54,15 @@
 						<label>$INFO[ListItem.Label]</label>
 						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
-
-
 					<include content="SmallInfoPanel">
 						<param name="left" value="30" />
 						<param name="width" value="525" />
 						<param name="top" value="346" />
 						<param name="ratings_spacing" value="30" />
 						<param name="height_noalt" value="375" />
-						<param name="height_alt" value="170" />
+						<param name="height_alt_movie" value="250" />
+						<param name="height_alt_tvshow" value="170" />
 					</include>
-					<!-- <control type="textbox">
-						<left>30</left>
-						<top>346</top>
-						<width>525</width>
-						<bottom>115</bottom>
-						<label>$VAR[InfoPanel]</label>
-						<textcolor>unfocused_text</textcolor>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control>
-					<control type="textbox">
-						<left>30</left>
-						<top>440</top>
-						<width>525</width>
-						<bottom>105</bottom>
-						<label>$VAR[InfoPanelEpisodeTop]</label>
-						<textcolor>unfocused_text</textcolor>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-					</control> -->
-					<!-- <control type="textbox">
-						<left>30</left>
-						<top>330</top>
-						<width>525</width>
-						<aligny>center</aligny>
-						<height>110</height>
-						<bottom>70</bottom>
-						<font>font36_title</font>
-						<textcolor>unfocused_text</textcolor>
-						<label>Season $INFO[ListItem.Season], Episode $INFO[ListItem.Episode]</label>
-						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
-					</control> -->
-					<!-- <control type="textbox">
-						<left>30</left>
-						<top>467</top>
-						<width>530</width>
-						<height>413</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>font27</font>
-						<textcolor>80FFFFFF</textcolor>
-						<label>$LOCALIZE[19055]</label>
-						<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
-					</control> -->
 					<control type="group">
 						<left>20</left>
 						<top>245</top>
