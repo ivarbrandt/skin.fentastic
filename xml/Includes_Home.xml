@@ -1058,7 +1058,7 @@
 							<height>70</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font25_narrow</font>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -1071,7 +1071,7 @@
 							<height>70</height>
 							<label>$INFO[ListItem.Label] ($INFO[System.AddonUpdateCount])</label>
 							<font>font25_narrow</font>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -1131,7 +1131,7 @@
 							<width>254</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 							<font>font25_narrow</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
@@ -1145,7 +1145,7 @@
 							<width>254</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label] ($INFO[System.AddonUpdateCount])</label>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 							<font>font25_narrow</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
@@ -1211,7 +1211,7 @@
 									<width>254</width>
 									<height>70</height>
 									<label>$INFO[ListItem.Label]</label>
-									<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+									<textcolor>unfocused_text</textcolor>
 									<font>font25_narrow</font>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
@@ -1269,7 +1269,7 @@
 									<width>254</width>
 									<height>70</height>
 									<label>$INFO[ListItem.Label]</label>
-									<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+									<textcolor>unfocused_text</textcolor>
 									<font>font25_narrow</font>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>center</align>
@@ -1305,7 +1305,7 @@
 						<width>100%</width>
 						<height min="110" max="300">auto</height>
 						<label>$PARAM[text_label]</label>
-						<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+						<textcolor>unfocused_text</textcolor>
 						<align>center</align>
 						<font>font14</font>
 					</control>
@@ -1327,7 +1327,7 @@
 							<align>center</align>
 							<texturefocus border="40" colordiffuse="button_focus">buttons/dfo.png</texturefocus>
 							<texturenofocus border="40" colordiffuse="button_focus2">buttons/dnfo.png</texturenofocus>
-							<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
+							<focusedcolor>focused_text</focusedcolor>
 							<visible>$PARAM[visible_1]</visible>
 						</control>
 						<control type="button" id="$PARAM[button_id]568">
@@ -1341,7 +1341,7 @@
 							<align>center</align>
 							<texturefocus border="40" colordiffuse="button_focus">buttons/dfo.png</texturefocus>
 							<texturenofocus border="40" colordiffuse="button_focus2" >buttons/dnfo.png</texturenofocus>
-							<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
+							<focusedcolor>focused_text</focusedcolor>
 							<visible>$PARAM[visible_2] + Window.IsActive(home)</visible>
 						</control>
 						<control type="button" id="$PARAM[button_id]569">
@@ -1355,7 +1355,7 @@
 							<align>center</align>
 							<texturefocus border="40" colordiffuse="button_focus">buttons/dfo.png</texturefocus>
 							<texturenofocus border="40" colordiffuse="button_focus2" >buttons/dnfo.png</texturenofocus>
-							<focusedcolor>$VAR[FocusedTextColor]</focusedcolor>
+							<focusedcolor>focused_text</focusedcolor>
 							<visible>$PARAM[visible_3] + Window.IsActive(1121)</visible>
 						</control>
 					</control>
@@ -1514,7 +1514,7 @@
 							<width>205</width>
 							<height>70</height>
 							<label>$PARAM[label]</label>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 							<font>font12</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
@@ -1526,7 +1526,7 @@
 							<width>205</width>
 							<height>65</height>
 							<label>$PARAM[label2]</label>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 							<font>font12</font>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
@@ -1621,7 +1621,7 @@
 							<height>70</height>
 							<label>$PARAM[label]</label>
 							<font>font12</font>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
 							<scroll>true</scroll>
@@ -1634,7 +1634,7 @@
 							<height>65</height>
 							<label>$PARAM[label2]</label>
 							<font>font12</font>
-							<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+							<textcolor>unfocused_text</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
 							<scroll>true</scroll>
@@ -1941,8 +1941,8 @@
 
 	<include name="WeatherHourlyItem">
 		<item>
-			<label>[COLOR $VAR[UnfocusedTextColor]]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Time)][/COLOR]</label>
-			<label2>[COLOR $VAR[UnfocusedTextColor]][B]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Temperature)]  [COLOR skyblue]•[/B][/COLOR]  $INFO[Window(weather).Property(Hourly.$PARAM[item_index].Precipitation)][/COLOR]</label2>
+			<label>[COLOR unfocused_text]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Time)][/COLOR]</label>
+			<label2>[COLOR unfocused_text][B]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Temperature)]  [COLOR skyblue]•[/B][/COLOR]  $INFO[Window(weather).Property(Hourly.$PARAM[item_index].Precipitation)][/COLOR]</label2>
 			<property name="Temperature">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Temperature)]</property>
 			<property name="Outlook">$INFO[Window(weather).Property(Hourly.$PARAM[item_id].Outlook)]</property>
 			<property name="Cloudiness">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Cloudiness)]</property>
@@ -2102,7 +2102,7 @@
 					<width>80</width>
 					<height>80</height>
 					<aspectratio aligny="center">keep</aspectratio>
-					<texture colordiffuse="$VAR[UnfocusedTextColor]">dialogs/extendedprogress/loading.png</texture>
+					<texture colordiffuse="unfocused_text">dialogs/extendedprogress/loading.png</texture>
 					<animation effect="rotate" center="auto" start="360" end="0" time="750" loop="true" condition="true">Conditional</animation>
 				</control>
 			</control>
@@ -2129,7 +2129,7 @@
           <width>50</width>
           <height>50</height>
           <aspectratio aligny="center">keep</aspectratio>
-          <texture colordiffuse="$VAR[UnfocusedTextColor]">dialogs/extendedprogress/loading.png</texture>
+          <texture colordiffuse="unfocused_text">dialogs/extendedprogress/loading.png</texture>
           <animation effect="rotate" center="auto" start="360" end="0" time="750" loop="true" condition="true">Conditional</animation>
         </control>
       </control>
