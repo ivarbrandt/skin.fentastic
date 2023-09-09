@@ -38,13 +38,15 @@
 							<height>37</height>
 							<texture>$VAR[ListWatchedIconVar]</texture>
 						</control>
+						<!-- TODO Fix length -->
 						<control type="label">
 							<left>105</left>
 							<top>0</top>
 							<bottom>0</bottom>
-							<right>40</right>
+							<right>260</right>
 							<aligny>center</aligny>
 							<scroll>true</scroll>
+							<scrollspeed>160</scrollspeed>
 							<font>font52_title</font>
 							<label>$VAR[ListLabelVar]</label>
 							<shadowcolor>text_shadow</shadowcolor>
