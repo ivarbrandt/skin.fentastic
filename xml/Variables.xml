@@ -688,14 +688,6 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
-	<variable name="FocusedTextColor">
-    <value>FF141515</value>
-	</variable>
-	
-	<variable name="UnfocusedTextColor">
-    <value>FFCCCCCC</value>
-	</variable>
-
 	<variable name="BackgroundBrightnessVar">
     <value condition="String.IsEqual(Skin.String(DefaultBackgroundBrightness),Highest)">E6FFFFFF</value>
     <value condition="String.IsEqual(Skin.String(DefaultBackgroundBrightness),High)">CCFFFFFF</value>
@@ -723,7 +715,7 @@
 	</variable>
 
 	<!-- CATEGORY LABEL RATINGS -->
-	<variable name="MC_Label">
+	<!-- <variable name="MC_Label">
 		<value condition="!String.IsEmpty(Window.Property(fentastic.metascore)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre)">$INFO[Window.Property(fentastic.metascore),[B] | [/B]MC: ]</value>
 	</variable>
 	<variable name="RT_Label">
@@ -737,7 +729,7 @@
 	</variable>
 	<variable name="TM_Label">
 		<value condition="!String.IsEmpty(Window.Property(fentastic.tmdbRating)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre)">$INFO[Window.Property(fentastic.tmdbRating),[B] | [/B]TM: ]</value>
-	</variable>
+	</variable> -->
 
 	<!-- INFOPANEL RATINGS -->
 	<!-- <variable name="MC_Panel">
@@ -755,14 +747,6 @@
 	<variable name="TM_Panel">
 		<value condition="!String.IsEmpty(Window.Property(fentastic.tmdbRating)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre)">$INFO[Window.Property(fentastic.tmdbRating),[B] • [/B]TM: ]</value>
 	</variable> -->
-
-	<variable name="Media_Rating">
-		<value condition="!String.IsEmpty(Window.Property(fentastic.metascore))">$INFO[Window.Property(fentastic.metascore)</value>
-		<value condition="!String.IsEmpty(Window.Property(fentastic.tomatoMeter))">$INFO[Window.Property(fentastic.tomatoMeter)</value>
-		<value condition="!String.IsEmpty(Window.Property(fentastic.tomatoUserMeter))">$INFO[Window.Property(fentastic.tomatoUserMeter)</value>
-		<value condition="!String.IsEmpty(Window.Property(fentastic.imdbRating))">$INFO[Window.Property(fentastic.imdbRating)</value>
-		<value condition="!String.IsEmpty(Window.Property(fentastic.tmdbRating))">$INFO[Window.Property(fentastic.tmdbRating)</value>
-	</variable>
 
 	<!-- INFOPANEL VARIABLES -->
 	<!-- Released -->
@@ -831,17 +815,16 @@
 		<!-- SHOWS -->
 		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,tvshow)">$VAR[_Year]$VAR[_Mpaa]$VAR[_Network]$VAR[_Genre]$VAR[_RuntimeEpisodes]$VAR[_TotalSeasons]$VAR[_Status]$VAR[_Endsat]</value>
 		<!-- SEASONS -->
+		<!-- TODO Fix seasons not showing release year -->
 		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,season)">$VAR[_Mpaa]$VAR[_Network]$VAR[_Genre]$VAR[_RuntimeEpisodes]$VAR[_Endsat]</value>
+		<!-- EPISODES -->
+		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,episode)">$VAR[_Aired]$VAR[_Mpaa]$VAR[_Network]$VAR[_RuntimeEpisodes]$VAR[_Endsat]</value>
 	</variable>
 	
 	<variable name="InfoPanelBottom">
 		<!-- COLLECTIONS -->
 		<!-- MOVIES, TVSHOWS, SEASONS, EPISODES -->
 		<value condition="!ListItem.IsCollection + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)]">$VAR[_Plot]</value>
-	</variable>
-	<!-- EPISODES -->
-	<variable name="InfoPanelEpisodeTop">
-		<value condition="!ListItem.IsCollection + String.IsEqual(ListItem.DBtype,episode)">$VAR[_Aired]$VAR[_Mpaa]$VAR[_Network]$VAR[_RuntimeEpisodes]$VAR[_Endsat]</value>
 	</variable>
 	
 </includes>

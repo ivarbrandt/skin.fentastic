@@ -44,6 +44,7 @@
 						<control type="label">
 							<width max="1000">auto</width>
 							<label>$PARAM[label]</label>
+							<textcolor>unfocused_text</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 							<scroll>true</scroll>
 							<visible>!Control.HasFocus($PARAM[list_id])</visible>
@@ -208,7 +209,7 @@
 				<height>90</height>
 				<visible>$PARAM[visible]</visible>
 				<label>$PARAM[label]</label>
-				<textcolor>$VAR[UnfocusedTextColor]</textcolor>
+				<textcolor>unfocused_text</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<visible>!Control.HasFocus($PARAM[list_id])</visible>
 			</control>
