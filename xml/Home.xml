@@ -1091,7 +1091,8 @@
 						<param name="top" value="239" />
 						<param name="ratings_spacing" value="10" />
 						<param name="height_noalt" value="460" />
-						<param name="height_alt" value="290" />
+						<param name="height_alt_movie" value="330" />
+						<param name="height_alt_tvshow" value="290" />
 					</include>
 					<!-- <control type="textbox">
 						<left>30</left>

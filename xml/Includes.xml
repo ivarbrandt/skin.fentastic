@@ -1273,7 +1273,7 @@
 					<left>0</left>
 					<bottom>0</bottom>
 					<width>110%</width>
-					<height>115</height>
+					<height>85</height>
 					<texture flipy="true">frame/InfoBar.png</texture>
 				</control>
 				<control type="group">
@@ -1815,20 +1815,11 @@
 
 	<include name="SmallInfoPanel">
 		<control type="grouplist">
-			<!-- <left>30</left>
-			<width>410</width>
-			<top>239</top> -->
 			<left>$PARAM[left]</left>
 			<width>$PARAM[width]</width>
 			<top>$PARAM[top]</top>
-			<!-- <bottom>95</bottom> -->
 			<orientation>vertical</orientation>
 			<itemgap>13</itemgap>
-			<control type="textbox">
-				<height>auto</height>
-				<label>$VAR[InfoPanelTop]</label>
-				<textcolor>unfocused_text</textcolor>
-			</control>
 			<control type="textbox">
 				<height>auto</height>
 				<font>font36_title</font>
@@ -1838,7 +1829,7 @@
 			</control>
 			<control type="textbox">
 				<height>auto</height>
-				<label>$VAR[InfoPanelEpisodeTop]</label>
+				<label>$VAR[InfoPanelTop]</label>
 				<textcolor>unfocused_text</textcolor>
 			</control>
 			<control type="grouplist">
@@ -1850,7 +1841,7 @@
 				<control type="grouplist">
 					<width>75</width>
 					<orientation>vertical</orientation>
-					<itemgap>10</itemgap>
+					<itemgap>5</itemgap>
 					<align>center</align>
 					<visible>!String.IsEmpty(Window.Property(fentastic.metascore))</visible>
 					<control type="image">
@@ -1873,7 +1864,7 @@
 				<control type="grouplist">
 					<width>75</width>
 					<orientation>vertical</orientation>
-					<itemgap>10</itemgap>
+					<itemgap>5</itemgap>
 					<align>center</align>
 					<visible>!String.IsEmpty(Window.Property(fentastic.tomatoMeter))</visible>
 					<control type="image">
@@ -1896,7 +1887,7 @@
 				<control type="grouplist">
 					<width>75</width>
 					<orientation>vertical</orientation>
-					<itemgap>10</itemgap>
+					<itemgap>5</itemgap>
 					<align>center</align>
 					<visible>!String.IsEmpty(Window.Property(fentastic.tomatoUserMeter))</visible>
 					<control type="image">
@@ -1919,7 +1910,7 @@
 				<control type="grouplist">
 					<width>75</width>
 					<orientation>vertical</orientation>
-					<itemgap>10</itemgap>
+					<itemgap>5</itemgap>
 					<align>center</align>
 					<visible>!String.IsEmpty(Window.Property(fentastic.imdbRating))</visible>
 					<control type="image">
@@ -1942,7 +1933,7 @@
 				<control type="grouplist">
 					<width>65</width>
 					<orientation>vertical</orientation>
-					<itemgap>10</itemgap>
+					<itemgap>5</itemgap>
 					<align>center</align>
 					<visible>!String.IsEmpty(Window.Property(fentastic.tmdbRating))</visible>
 					<control type="image">
@@ -1962,7 +1953,6 @@
 						<textcolor>unfocused_text</textcolor>
 					</control>
 				</control>
-				
 			</control>
 			<control type="textbox">
 				<height max="$PARAM[height_noalt]">auto</height>
@@ -1973,14 +1963,22 @@
 				<visible>!Skin.HasSetting(Enable.AlternateInfo)</visible>
 			</control>
 			<control type="textbox">
-				<height max="$PARAM[height_alt]">auto</height>
+				<height max="$PARAM[height_alt_movie]">auto</height>
 				<bottom>70</bottom>
 				<label>$VAR[InfoPanelBottom]</label>
 				<textcolor>unfocused_text</textcolor>
-				<autoscroll delay="5000" time="1500" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<visible>Skin.HasSetting(Enable.AlternateInfo)</visible>
+				<autoscroll delay="5000" time="2000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>Skin.HasSetting(Enable.AlternateInfo) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,episode) | String.IsEqual(ListItem.DBtype,season)]</visible>
 			</control>
-	</control>
+			<control type="textbox">
+				<height max="$PARAM[height_alt_tvshow]">auto</height>
+				<bottom>70</bottom>
+				<label>$VAR[InfoPanelBottom]</label>
+				<textcolor>unfocused_text</textcolor>
+				<autoscroll delay="5000" time="2000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>Skin.HasSetting(Enable.AlternateInfo) + String.IsEqual(ListItem.DBtype,tvshow)</visible>
+			</control>
+		</control>
 	</include>
-
+	
 </includes>
