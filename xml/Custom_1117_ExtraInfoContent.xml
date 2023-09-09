@@ -5,6 +5,7 @@
 - Updated UI for a more artwork centric experience
 - Updated widgets to handle menu items better
 - Added 3 NEW custom main menu sections
+- Added ratings (enter OMDb API Key in Skin settings to activate)
 - Added switch for Landscape/Clearlogo on WideList view
 - Added custom default background selection
 - Added optional color studio logos
