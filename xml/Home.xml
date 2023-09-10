@@ -10,20 +10,6 @@
 	<onload condition="String.IsEmpty(Skin.String(DefaultBackgroundBrightness))">Skin.SetString(DefaultBackgroundBrightness,Medium)</onload>
 	<onload condition="String.IsEmpty(Skin.String(DefaultFanartBrightness))">Skin.SetString(DefaultFanartBrightness,Medium)</onload>
 	<controls>
-		<!-- <control type="button" id="20000">
-			<include>HiddenObject</include>
-			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
-			<onfocus>SetFocus(2000)</onfocus>
-			<onclick>noop</onclick>
-			<visible allowhiddenfocus="true">Control.HasFocus(20000)</visible>
-		</control>
-		<control type="button" id="20001">
-			<include>HiddenObject</include>
-			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
-			<onfocus>SetFocus(2000)</onfocus>
-			<onclick>noop</onclick>
-			<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
-		</control> -->
 		<include>DefaultBackground</include>
 		<control type="multiimage">
 			<depth>DepthBackground</depth>
@@ -43,14 +29,6 @@
 			<!-- WIDGETS GROUP -->
 			<control type="group" id="2000">
 				<left>462</left>
-				<animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
-					<effect type="slide" end="0,20" time="60" tween="sine" />
-					<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
-				</animation>
-				<animation type="Conditional" condition="Control.IsVisible(20001)" reversible="false">
-					<effect type="slide" end="0,-20" time="60" tween="sine" />
-					<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
-				</animation>
 				<include>OpenClose_Right</include>
 				<!-- MOVIES -->
 				<control type="group" id="19000">
@@ -291,7 +269,6 @@
 						<param name="scrollbar_id" value="8010"/>
 					</include>
 				</control>
-
 				<control type="group" id="11000">
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),video)</visible>
 					<include content="Visible_Right_Delayed">
@@ -508,8 +485,6 @@
 							<control type="group">
 								<depth>DepthContentPopout</depth>
 								<top>130</top>
-								<!-- <animation effect="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="142,300">Focus</animation>
-								<animation effect="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="142,300">UnFocus</animation> -->
 								<include content="InfoWallMusicLayout">
 									<param name="fallback_image" value="DefaultFavourites.png" />
 									<param name="list_id" value="$PARAM[list_id]" />
@@ -835,32 +810,8 @@
 						<focusedlayout height="95">
 							<control type="group">
 								<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
-								<!-- <control type="image">
-									<left>0</left>
-									<top>0</top>
-									<width>437</width>
-									<height>95</height>
-									<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
-									<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasActiveModalDialog">Conditional</animation>
-									<visible>!ControlGroup(700).HasFocus</visible>
-								</control> -->
-								<!-- <control type="image">
-									<left>5</left>
-									<top>1</top>
-									<width>95</width>
-									<height>95</height>
-									<texture colordiffuse="button_focus2">$INFO[ListItem.Art(thumb)]</texture>
-									<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
-								</control> -->
 							</control>
 							<!-- SideMenu Focused Icons -->
-							<!-- <control type="image">
-								<left>5</left>
-								<top>1</top>
-								<width>95</width>
-								<height>95</height>
-								<texture>$INFO[ListItem.Art(thumb)]</texture>
-							</control> -->
 							<control type="label">
 								<include>FocusBounce</include>
 								<left>65</left>
@@ -889,13 +840,6 @@
 							</control>
 						</focusedlayout>
 						<itemlayout height="90">
-							<!-- <control type="image">
-								<left>5</left>
-								<top>1</top>
-								<width>95</width>
-								<height>95</height>
-								<texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
-							</control> -->
 							<control type="label">
 								<left>65</left>
 								<top>0</top>
@@ -1061,7 +1005,6 @@
 					</control>
 				</control>
 
-
 				<control type="group">
 					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 					<width>550</width>
@@ -1085,7 +1028,39 @@
 						<label>$INFO[ListItem.Label]</label>
 						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
-					<include content="SmallInfoPanel">
+					<control type="group">
+						<visible>Skin.HasSetting(Disable.RatingsINF) |  [String.IsEmpty(Window.Property(fentastic.metascore)) + String.IsEmpty(Window.Property(fentastic.tomatoMeter)) + String.IsEmpty(Window.Property(fentastic.tomatoUserMeter)) + String.IsEmpty(Window.Property(fentastic.imdbRating)) + String.IsEmpty(Window.Property(fentastic.tmdbRating))]</visible>
+						<control type="textbox">
+							<left>30</left>
+							<top>239</top>
+							<width>410</width>
+							<bottom>60</bottom>
+							<label>$VAR[InfoPanel]</label>
+							<textcolor>unfocused_text</textcolor>
+							<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+						</control>
+						<control type="textbox">
+							<left>30</left>
+							<top>323</top>
+							<width>410</width>
+							<bottom>60</bottom>
+							<label>$VAR[InfoPanelEpisode]</label>
+							<textcolor>unfocused_text</textcolor>
+							<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+						</control>
+						<control type="textbox">
+							<left>30</left>
+							<top>213</top>
+							<width>410</width>
+							<aligny>center</aligny>
+							<height>110</height>
+							<bottom>60</bottom>
+							<font>font36_title</font>
+							<label>Season $INFO[ListItem.Season], Episode $INFO[ListItem.Episode]</label>
+							<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+						</control>
+					</control>
+					<include condition="!Skin.HasSetting(Disable.RatingsINF)" content="RatingsInfoPanel">
 						<param name="left" value="30" />
 						<param name="width" value="410" />
 						<param name="top" value="239" />
@@ -1108,7 +1083,6 @@
 					</control> -->
 				</control>
 			</control>
-			
 			<control type="group">
 				<depth>DepthBars</depth>
 				<bottom>0</bottom>
@@ -1136,7 +1110,6 @@
 					<animation effect="fade" time="300">VisibleChange</animation>
 				</control>
 			</control>
-			
 			<control type="group">
         <animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
         <visible>![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)]</visible>
