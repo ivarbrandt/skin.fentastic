@@ -55,7 +55,7 @@
 						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 					<control type="group">
-						<visible>[String.IsEmpty(Window.Property(fentastic.metascore)) + String.IsEmpty(Window.Property(fentastic.tomatoMeter)) + String.IsEmpty(Window.Property(fentastic.tomatoUserMeter)) + String.IsEmpty(Window.Property(fentastic.imdbRating)) + String.IsEmpty(Window.Property(fentastic.tmdbRating))]</visible>
+						<visible>String.IsEmpty(Skin.String(omdb_api_key))</visible>
 						<control type="textbox">
 							<left>30</left>
 							<top>346</top>
@@ -99,7 +99,7 @@
 							<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
 						</control>
 					</control>
-					<include content="RatingsInfoPanel">
+					<include condition="!String.IsEmpty(Skin.String(omdb_api_key))" content="RatingsInfoPanel">
 						<param name="left" value="30" />
 						<param name="width" value="525" />
 						<param name="top" value="346" />
