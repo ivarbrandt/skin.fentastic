@@ -153,9 +153,9 @@
 							</control>
 						</control>
 						<control type="grouplist">
-							<width>130</width>
+							<width>110</width>
 							<orientation>horizontal</orientation>
-							<itemgap>8</itemgap>
+							<itemgap>6</itemgap>
 							<align>center</align>
 							<visible>!String.IsEmpty(Window.Property(fentastic.tmdbRating)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre) + Control.HasFocus($PARAM[list_id])</visible>
 							<control type="image">
@@ -335,9 +335,9 @@
 								</control>
 							</control>
 							<control type="grouplist">
-								<width>130</width>
+								<width>110</width>
 								<orientation>horizontal</orientation>
-								<itemgap>8</itemgap>
+								<itemgap>6</itemgap>
 								<align>center</align>
 								<visible>!String.IsEmpty(Window.Property(fentastic.tmdbRating)) + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre) + Control.HasFocus($PARAM[list_id])</visible>
 								<control type="image">
