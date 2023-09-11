@@ -29,7 +29,7 @@
 					<orientation>horizontal</orientation>
 					<itemgap>15</itemgap>
 					<control type="label">
-						<width max="1000">auto</width>
+						<width max="1350">auto</width>
 						<label>$PARAM[label]</label>
 						<textcolor>unfocused_text</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
@@ -37,7 +37,7 @@
 						<visible>!Control.HasFocus($PARAM[list_id])</visible>
 					</control>
 					<control type="label">
-						<width max="650">auto</width>
+						<width max="735">auto</width>
 						<label>$PARAM[label]$PARAM[label_focus]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<scroll>true</scroll>
@@ -45,7 +45,7 @@
 						<visible>!String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
 					</control>
 					<control type="label">
-						<width max="1150">auto</width>
+						<width max="1085">auto</width>
 						<label>$PARAM[label]$PARAM[label_focus_episodes]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<scroll>true</scroll>
@@ -53,7 +53,7 @@
 						<visible>String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
 					</control>
 					<control type="label">
-						<width max="650">auto</width>
+						<width max="1350">auto</width>
 						<label>$PARAM[label]$PARAM[label_focus_collections]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<scroll>true</scroll>
@@ -192,168 +192,168 @@
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,$PARAM[item_treshold]) | [Container($PARAM[list_id]).IsUpdating + Integer.IsEqual(Container($PARAM[list_id]).NumItems,0)]</visible>
 				<visible>$PARAM[visible]</visible>
 				<control type="grouplist">
-						<width>1350</width>
+					<width>1350</width>
+					<orientation>horizontal</orientation>
+					<itemgap>15</itemgap>
+					<control type="group" id="$PARAM[list_id]599">
+						<visible>Container($PARAM[list_id]).IsUpdating</visible>
+						<control type="image">
+							<width>50</width>
+							<height>50</height>
+							<aspectratio aligny="center">keep</aspectratio>
+							<texture colordiffuse="button_focus2">dialogs/extendedprogress/loading-back.png</texture>
+						</control>
+						<control type="image">
+							<width>50</width>
+							<height>50</height>
+							<aspectratio aligny="center">keep</aspectratio>
+							<texture colordiffuse="unfocused_text">dialogs/extendedprogress/loading.png</texture>
+							<animation effect="rotate" center="auto" start="360" end="0" time="750" loop="true" condition="true">Conditional</animation>
+						</control>
+					</control>
+					<control type="label" id="$PARAM[list_id]666">
+						<visible>!Container($PARAM[list_id]).IsUpdating</visible>
+						<width max="1350">auto</width>
+						<label>$PARAM[label]</label>
+						<textcolor>unfocused_text</textcolor>
+						<shadowcolor>text_shadow</shadowcolor>
+						<scroll>true</scroll>
+						<scrollspeed>100</scrollspeed>
+						<visible>$PARAM[visible]</visible>
+						<visible>!Control.HasFocus($PARAM[list_id])</visible>
+					</control>
+					<control type="label" id="$PARAM[list_id]667">
+						<visible>!Container($PARAM[list_id]).IsUpdating</visible>
+						<width max="735">auto</width>
+						<label>$PARAM[label]$PARAM[label_focus]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+						<scroll>true</scroll>
+						<scrollspeed>100</scrollspeed>
+						<visible>$PARAM[visible]</visible>
+						<visible>!String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
+					</control>
+					<control type="label" id="$PARAM[list_id]668">
+						<visible>!Container($PARAM[list_id]).IsUpdating</visible>
+						<width max="1085">auto</width>
+						<label>$PARAM[label]$PARAM[label_focus_episodes]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>$PARAM[visible]</visible>
+						<scroll>true</scroll>
+						<scrollspeed>100</scrollspeed>
+						<visible>String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
+					</control>
+					<control type="grouplist">
+						<visible>![String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings) | Container($PARAM[list_id]).IsUpdating] + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre) + Control.HasFocus($PARAM[list_id])</visible>
 						<orientation>horizontal</orientation>
-						<itemgap>15</itemgap>
-						<control type="group" id="$PARAM[list_id]599">
-							<visible>Container($PARAM[list_id]).IsUpdating</visible>
+						<aligny>center</aligny>
+						<itemgap>20</itemgap>
+						<control type="grouplist">
+							<width>130</width>
+							<orientation>horizontal</orientation>
+							<itemgap>8</itemgap>
+							<align>center</align>
+							<visible>!String.IsEmpty(Window.Property(fentastic.metascore))</visible>
 							<control type="image">
-								<width>50</width>
-								<height>50</height>
-								<aspectratio aligny="center">keep</aspectratio>
-								<texture colordiffuse="button_focus2">dialogs/extendedprogress/loading-back.png</texture>
+								<top>45</top>
+								<width>35</width>
+								<aspectratio>keep</aspectratio>
+								<align>right</align>
+								<aligny>center</aligny>
+								<texture>$INFO[Window.Property(fentastic.metascoreImage)]</texture>
 							</control>
-							<control type="image">
-								<width>50</width>
-								<height>50</height>
-								<aspectratio aligny="center">keep</aspectratio>
-								<texture colordiffuse="unfocused_text">dialogs/extendedprogress/loading.png</texture>
-								<animation effect="rotate" center="auto" start="360" end="0" time="750" loop="true" condition="true">Conditional</animation>
+							<control type="label">
+								<width max="75">auto</width>
+								<height>32</height>
+								<align>left</align>
+								<label>$INFO[Window.Property(fentastic.metascore)]</label>
 							</control>
-						</control>
-						<control type="label" id="$PARAM[list_id]666">
-							<visible>!Container($PARAM[list_id]).IsUpdating</visible>
-							<width max="1000">auto</width>
-							<label>$PARAM[label]</label>
-							<textcolor>unfocused_text</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
-							<scroll>true</scroll>
-							<scrollspeed>100</scrollspeed>
-							<visible>$PARAM[visible]</visible>
-							<visible>!Control.HasFocus($PARAM[list_id])</visible>
-						</control>
-						<control type="label" id="$PARAM[list_id]667">
-							<visible>!Container($PARAM[list_id]).IsUpdating</visible>
-							<width max="650">auto</width>
-							<label>$PARAM[label]$PARAM[label_focus]</label>
-							<shadowcolor>text_shadow</shadowcolor>
-							<scroll>true</scroll>
-							<scrollspeed>100</scrollspeed>
-							<visible>$PARAM[visible]</visible>
-							<visible>!String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
-						</control>
-						<control type="label" id="$PARAM[list_id]668">
-							<visible>!Container($PARAM[list_id]).IsUpdating</visible>
-							<width max="1150">auto</width>
-							<label>$PARAM[label]$PARAM[label_focus_episodes]</label>
-							<shadowcolor>text_shadow</shadowcolor>
-							<visible>$PARAM[visible]</visible>
-							<scroll>true</scroll>
-							<scrollspeed>100</scrollspeed>
-							<visible>String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
 						</control>
 						<control type="grouplist">
-							<visible>![String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings) | Container($PARAM[list_id]).IsUpdating] + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre) + Control.HasFocus($PARAM[list_id])</visible>
+							<width>130</width>
 							<orientation>horizontal</orientation>
-							<aligny>center</aligny>
-							<itemgap>20</itemgap>
-							<control type="grouplist">
-								<width>130</width>
-								<orientation>horizontal</orientation>
-								<itemgap>8</itemgap>
-								<align>center</align>
-								<visible>!String.IsEmpty(Window.Property(fentastic.metascore))</visible>
-								<control type="image">
-									<top>45</top>
-									<width>35</width>
-									<aspectratio>keep</aspectratio>
-									<align>right</align>
-									<aligny>center</aligny>
-									<texture>$INFO[Window.Property(fentastic.metascoreImage)]</texture>
-								</control>
-								<control type="label">
-									<width max="75">auto</width>
-									<height>32</height>
-									<align>left</align>
-									<label>$INFO[Window.Property(fentastic.metascore)]</label>
-								</control>
+							<itemgap>8</itemgap>
+							<align>center</align>
+							<visible>!String.IsEmpty(Window.Property(fentastic.tomatoMeter))</visible>
+							<control type="image">
+								<top>45</top>
+								<width>35</width>
+								<aspectratio>keep</aspectratio>
+								<align>right</align>
+								<aligny>center</aligny>
+								<texture>$INFO[Window.Property(fentastic.tomatoImage)]</texture>
 							</control>
-							<control type="grouplist">
-								<width>130</width>
-								<orientation>horizontal</orientation>
-								<itemgap>8</itemgap>
-								<align>center</align>
-								<visible>!String.IsEmpty(Window.Property(fentastic.tomatoMeter))</visible>
-								<control type="image">
-									<top>45</top>
-									<width>35</width>
-									<aspectratio>keep</aspectratio>
-									<align>right</align>
-									<aligny>center</aligny>
-									<texture>$INFO[Window.Property(fentastic.tomatoImage)]</texture>
-								</control>
-								<control type="label">
-									<width max="75">auto</width>
-									<height>32</height>
-									<align>left</align>
-									<label>$INFO[Window.Property(fentastic.tomatoMeter)]</label>
-								</control>
-							</control>
-							<control type="grouplist">
-								<width>120</width>
-								<orientation>horizontal</orientation>
-								<itemgap>6</itemgap>
-								<align>center</align>
-								<visible>!String.IsEmpty(Window.Property(fentastic.tomatoUserMeter))</visible>
-								<control type="image">
-									<top>45</top>
-									<width>35</width>
-									<aspectratio>keep</aspectratio>
-									<align>right</align>
-									<aligny>center</aligny>
-									<texture>$INFO[Window.Property(fentastic.tomatoUserImage)]</texture>
-								</control>
-								<control type="label">
-									<width max="75">auto</width>
-									<height>32</height>
-									<align>left</align>
-									<label>$INFO[Window.Property(fentastic.tomatoUserMeter)]</label>
-								</control>
-							</control>
-							<control type="grouplist">
-								<width>130</width>
-								<orientation>horizontal</orientation>
-								<itemgap>8</itemgap>
-								<align>center</align>
-								<visible>!String.IsEmpty(Window.Property(fentastic.imdbRating))</visible>
-								<control type="image">
-									<top>45</top>
-									<width>52</width>
-									<!-- <height>32</height> -->
-									<aspectratio>keep</aspectratio>
-									<align>right</align>
-									<aligny>center</aligny>
-									<texture>$INFO[Window.Property(fentastic.imdbImage)]</texture>
-								</control>
-								<control type="label">
-									<width max="75">auto</width>
-									<height>32</height>
-									<align>left</align>
-									<label>$INFO[Window.Property(fentastic.imdbRating)]</label>
-								</control>
-							</control>
-							<control type="grouplist">
-								<width>110</width>
-								<orientation>horizontal</orientation>
-								<itemgap>6</itemgap>
-								<align>center</align>
-								<visible>!String.IsEmpty(Window.Property(fentastic.tmdbRating))</visible>
-								<control type="image">
-									<top>45</top>
-									<width>33</width>
-									<aspectratio>keep</aspectratio>
-									<align>right</align>
-									<aligny>center</aligny>
-									<texture>$INFO[Window.Property(fentastic.tmdbImage)]</texture>
-								</control>
-								<control type="label">
-									<width max="75">auto</width>
-									<height>32</height>
-									<align>left</align>
-									<label>$INFO[Window.Property(fentastic.tmdbRating)]</label>
-								</control>
+							<control type="label">
+								<width max="75">auto</width>
+								<height>32</height>
+								<align>left</align>
+								<label>$INFO[Window.Property(fentastic.tomatoMeter)]</label>
 							</control>
 						</control>
+						<control type="grouplist">
+							<width>120</width>
+							<orientation>horizontal</orientation>
+							<itemgap>6</itemgap>
+							<align>center</align>
+							<visible>!String.IsEmpty(Window.Property(fentastic.tomatoUserMeter))</visible>
+							<control type="image">
+								<top>45</top>
+								<width>35</width>
+								<aspectratio>keep</aspectratio>
+								<align>right</align>
+								<aligny>center</aligny>
+								<texture>$INFO[Window.Property(fentastic.tomatoUserImage)]</texture>
+							</control>
+							<control type="label">
+								<width max="75">auto</width>
+								<height>32</height>
+								<align>left</align>
+								<label>$INFO[Window.Property(fentastic.tomatoUserMeter)]</label>
+							</control>
+						</control>
+						<control type="grouplist">
+							<width>130</width>
+							<orientation>horizontal</orientation>
+							<itemgap>8</itemgap>
+							<align>center</align>
+							<visible>!String.IsEmpty(Window.Property(fentastic.imdbRating))</visible>
+							<control type="image">
+								<top>45</top>
+								<width>52</width>
+								<!-- <height>32</height> -->
+								<aspectratio>keep</aspectratio>
+								<align>right</align>
+								<aligny>center</aligny>
+								<texture>$INFO[Window.Property(fentastic.imdbImage)]</texture>
+							</control>
+							<control type="label">
+								<width max="75">auto</width>
+								<height>32</height>
+								<align>left</align>
+								<label>$INFO[Window.Property(fentastic.imdbRating)]</label>
+							</control>
+						</control>
+						<control type="grouplist">
+							<width>110</width>
+							<orientation>horizontal</orientation>
+							<itemgap>6</itemgap>
+							<align>center</align>
+							<visible>!String.IsEmpty(Window.Property(fentastic.tmdbRating))</visible>
+							<control type="image">
+								<top>45</top>
+								<width>33</width>
+								<aspectratio>keep</aspectratio>
+								<align>right</align>
+								<aligny>center</aligny>
+								<texture>$INFO[Window.Property(fentastic.tmdbImage)]</texture>
+							</control>
+							<control type="label">
+								<width max="75">auto</width>
+								<height>32</height>
+								<align>left</align>
+								<label>$INFO[Window.Property(fentastic.tmdbRating)]</label>
+							</control>
+						</control>
+					</control>
 				</control>
 			</control>
 		</definition>
