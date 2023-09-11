@@ -251,7 +251,7 @@
 						<height>110</height>
 						<font>font36_title</font>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>[String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season)] + !String.IsEqual(ListItem.DBType,song) + !Container.Content(addons) + !Skin.HasSetting(UseLandscape) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
+						<visible>[String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season)] + !String.IsEqual(ListItem.DBType,song) + !Container.Content(addons) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 					<control type="image">
 						<width>540</width>
