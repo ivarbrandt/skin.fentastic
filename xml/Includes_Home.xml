@@ -42,7 +42,7 @@
 						<shadowcolor>text_shadow</shadowcolor>
 						<scroll>true</scroll>
 						<scrollspeed>100</scrollspeed>
-						<visible>!String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
+						<visible>!String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.Genre) + Control.HasFocus($PARAM[list_id])</visible>
 					</control>
 					<control type="label">
 						<width max="1085">auto</width>
