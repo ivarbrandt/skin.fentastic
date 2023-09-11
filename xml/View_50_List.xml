@@ -279,7 +279,7 @@
 					<control type="image">
 						<width>540</width>
 						<height>303</height>
-						<aspectratio aligny="top">scale</aspectratio>
+						<!-- <aspectratio aligny="top">scale</aspectratio> -->
 						<fadetime>300</fadetime>
 						<texture diffuse="masks/landscape.png">$INFO[ListItem.Icon]</texture>
 						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
@@ -547,7 +547,7 @@
 					<top>105</top>
 					<width>540</width>
 					<height>303</height>
-					<aspectratio aligny="top">scale</aspectratio>
+					<!-- <aspectratio aligny="top">scale</aspectratio> -->
 					<fadetime>300</fadetime>
 					<texture diffuse="masks/landscape.png">$INFO[ListItem.Icon]</texture>
 					<visible>String.IsEmpty(Skin.String(omdb_api_key)) + String.IsEqual(ListItem.DbType,episode)</visible>
