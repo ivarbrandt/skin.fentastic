@@ -1002,6 +1002,24 @@
 							<textcolor>unfocused_text</textcolor>
 						</control>
 					</control>
+					<control type="image">
+						<width>60</width>
+						<height>90</height>
+						<fadetime>300</fadetime>
+						<aspectratio aligny="center" align="left">keep</aspectratio>
+						<texture colordiffuse="unfocused_text">$INFO[Weather.FanartCode,weather/small/,.png]</texture>
+						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
+					</control>
+					<control type="label">
+						<font>font_clock_small</font>
+						<height>85</height>
+						<width>auto</width>
+						<aligny>center</aligny>
+						<align>right</align>
+						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits] [COLOR accent_color][B]•[/B][/COLOR]</label>
+						<textcolor>unfocused_text</textcolor>
+						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
+					</control>
 					<control type="label">
 						<font>font_clock</font>
 						<textcolor>unfocused_text</textcolor>
@@ -1038,15 +1056,8 @@
 						<texture>icons/power.png</texture>
 						<visible>System.HasAlarm(shutdowntimer)</visible>
 					</control>
-					<control type="label">
-						<height>50</height>
-						<width>auto</width>
-						<aligny>center</aligny>
-						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
-						<textcolor>unfocused_text</textcolor>
-						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
-					</control>
-					<control type="image">
+					
+					<!-- <control type="image">
 						<top>1</top>
 						<width>50</width>
 						<height>50</height>
@@ -1054,7 +1065,7 @@
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 						<texture colordiffuse="unfocused_text">$INFO[Weather.FanartCode,weather/small/,.png]</texture>
 						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
-					</control>
+					</control> -->
 					<control type="image">
 						<top>8</top>
 						<left>-20</left>

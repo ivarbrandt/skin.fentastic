@@ -82,6 +82,11 @@
 			<filename>Roboto-Thin.ttf</filename>
 			<size>70</size>
 		</font>
+		<font>
+			<name>font_clock_small</name>
+			<filename>Roboto-Thin.ttf</filename>
+			<size>40</size>
+		</font>
 		<!-- Title Fonts -->
 		<font>
 			<name>font_flag</name>
