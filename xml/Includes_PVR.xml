@@ -183,13 +183,6 @@
 				<label>: [COLOR white]$INFO[Container($PARAM[list_id]).Numitems][/COLOR]</label>
 			</control>
 		</control>
-		<!-- <control type="image">
-			<left>0</left>
-			<top>55</top>
-			<width>510</width>
-			<height>855</height>
-			<texture border="40" colordiffuse="button_focus2">buttons/dialogbutton-nofo.png</texture>
-		</control> -->
 		<control type="list" id="$PARAM[list_id]">
 			<left>20</left>
 			<top>75</top>
@@ -666,18 +659,6 @@
 						<visible>Control.HasFocus($PARAM[control_id])</visible>
 					</control>
 					<!-- unfocused grid (back) -->
-					<!-- <control type="image" id="2">
-						<width>58</width>
-						<height>58</height>
-						<texture border="8" colordiffuse="button_focus2">buttons/thumbnail_focused.png</texture>
-					</control> -->
-					<!-- <control type="image" id="2">
-						<width>58</width>
-						<height>58</height>
-						<top>0</top>
-						<texture colordiffuse="dialog_tint" border="3" fallback="windows/pvr/epg-genres/0.png">$INFO[ListItem.Property(GenreType),windows/pvr/epg-genres/,.png]</texture>
-						<visible>!Control.HasFocus($PARAM[control_id])</visible>
-					</control> -->
 					<control type="label" id="1">
 						<left>15</left>
 						<top>12</top>

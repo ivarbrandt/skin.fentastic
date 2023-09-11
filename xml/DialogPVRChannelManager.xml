@@ -27,13 +27,6 @@
 					<onright>9002</onright>
 					<orientation>vertical</orientation>
 				</control>
-				<!-- <control type="image">
-					<left>0</left>
-					<top>10</top>
-					<width>672</width>
-					<height>910</height>
-					<texture colordiffuse="button_focus" border="40">buttons/dialogbutton-nofo.png</texture>
-				</control> -->
 				<control type="list" id="20">
 					<left>20</left>
 					<top>30</top>

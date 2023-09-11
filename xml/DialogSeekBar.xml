@@ -376,7 +376,6 @@
 			<animation effect="fade" start="100" end="0" time="100">Hidden</animation>
 			<bottom>0</bottom>
 			<height>470</height>
-			
 			<!-- info background -->
 			<control type="image">
 				<left>0</left>
@@ -384,7 +383,6 @@
 				<height>330</height>
 				<texture colordiffuse="dialog_tint">dialogs/dialog-bg-nobo.png</texture>
 			</control>
-
 			<control type="image">
 				<depth>DepthOSD+</depth>
 				<left>10</left>

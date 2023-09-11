@@ -335,13 +335,6 @@
 		<ondown>9000</ondown>
 		<orientation>vertical</orientation>
 		<itemlayout height="70" width="600">
-			<!-- <control type="image">
-				<left>0</left>
-				<top>25</top>
-				<width>600</width>
-				<height>70</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
-			</control> -->
 			<control type="label">
 				<left>0</left>
 				<textoffsetx>20</textoffsetx>
@@ -355,13 +348,6 @@
 			</control>
 		</itemlayout>
 		<focusedlayout height="70" width="600">
-			<!-- <control type="image">
-				<left>0</left>
-				<top>25</top>
-				<width>560</width>
-				<height>70</height>
-				<texture colordiffuse="dialog_tint">masks/focus.png</texture>
-			</control> -->
 			<control type="image">
 				<left>25</left>
 				<top>25</top>

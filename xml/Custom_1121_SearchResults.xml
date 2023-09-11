@@ -85,12 +85,10 @@
 					</include>
 				</control>
 			</control>
-
 			<include content="TopBar">
 				<param name="breadcrumbs_label" value="" />
 			</include>
 			<include>BottomBar</include>
-			
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
@@ -170,7 +168,6 @@
 							<include content="SearchHistory" />
 						</content>
 					</control>
-
 					<control type="grouplist" id="700">
 						<visible>String.IsEmpty(Skin.String(DatabaseStatus))</visible>
 						<orientation>horizontal</orientation>
@@ -210,7 +207,6 @@
 						</include>
 					</control>
 				</control>
-
 				<control type="group">
 					<animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 					<width>550</width>

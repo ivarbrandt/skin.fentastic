@@ -11,39 +11,12 @@
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<!-- <control type="image">
-					<left>0</left>
-					<top>760</top>
-					<width>100%</width>
-					<height>110</height>
-					<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-				</control>
-				<control type="image">
-					<left>0</left>
-					<top>35</top>
-					<width>100%</width>
-					<height>190</height>
-					<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-				</control> -->
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(53)</visible>
 				<include>Visible_Right</include>
 				<include>OpenClose_Right</include>
 				<top>160</top>
-				<!-- <control type="image">
-					<left>600</left>
-					<top>600</top>
-					<width>340</width>
-					<height>110</height>
-					<visible>Control.HasFocus(53)</visible>
-					<animation effect="fade" time="200">VisibleChange</animation>
-					<texture colordiffuse="button_focus">masks/categorywidget.png</texture>
-					<animation effect="slide" start="0,0" end="-364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,1) | Integer.IsEqual(Container.Position,0)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="-364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,0)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,3) | Integer.IsEqual(Container.Position,4)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,4)">Conditional</animation>
-				</control> -->
 				<control type="fixedlist" id="53">
 					<left>-150</left>
 					<top>0</top>
@@ -156,15 +129,12 @@
 								<param name="cornerdiffuse">overlays/overlaybg7.png</param>
 							</include>
 						</control>
-
 						<include content="ProgressBar">
 							<!-- 31 -->
 							<param name="left" value="63"/>
 							<param name="top" value="525"/>
 							<param name="width" value="243"/>
 						</include>
-
-
 					</itemlayout>
 					<focusedlayout width="370">
 						<control type="image">

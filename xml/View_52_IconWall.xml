@@ -39,13 +39,6 @@
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
 						</control>
-						<!-- <control type="image">
-							<left>20</left>
-							<top>150</top>
-							<width>356</width>
-							<height>75</height>
-							<texture colordiffuse="border_alpha">colors/black.png</texture>
-						</control> -->
 						<control type="textbox">
 							<left>35</left>
 							<top>148</top>
@@ -62,12 +55,6 @@
 				<focusedlayout height="280" width="440" condition="Container.Content() | Container.Content(files) | Container.Content(tags) | Container.Content(playlists) | [Container.Content(studios) + System.AddonIsEnabled(resource.images.studios.white)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<!-- <animation type="Focus">
-							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="auto" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="auto" />
-						</animation> -->
 						<top>150</top>
 						<control type="image">
 							<include>FocusBounce</include>
@@ -93,13 +80,6 @@
 							<aspectratio>keep</aspectratio>
 							<align>center</align>
 						</control>
-						<!-- <control type="image">
-							<left>20</left>
-							<top>150</top>
-							<width>356</width>
-							<height>75</height>
-							<texture colordiffuse="border_alpha">colors/black.png</texture>
-						</control> -->
 						<control type="textbox">
 							<left>35</left>
 							<top>148</top>
@@ -138,12 +118,6 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<top>120</top>
-						<!-- <animation type="Focus">
-							<effect type="zoom" start="100" end="112" time="200" tween="sine" easing="inout" center="auto" />
-						</animation>
-						<animation type="Unfocus">
-							<effect type="zoom" start="112" end="100" time="200" tween="sine" easing="inout" center="auto" />
-						</animation> -->
 						<control type="image">
 							<width>330</width>
 							<height>140</height>

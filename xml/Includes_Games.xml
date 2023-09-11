@@ -29,14 +29,6 @@
 					<aligny>center</aligny>
 					<textcolor>button_focus</textcolor>
 				</control>
-				<!-- <control type="image">
-					<description>Controller profiles grouplist background</description>
-					<top>20</top>
-					<bottom>-20</bottom>
-					<left>-20</left>
-					<right>0</right>
-					<texture border="40">buttons/dialogbutton-nofo.png</texture>
-				</control> -->
 				<control type="grouplist" id="3">
 					<description>Controller profiles grouplist</description>
 					<top>40</top>
@@ -85,13 +77,6 @@
 					<aligny>center</aligny>
 					<textcolor>button_focus</textcolor>
 				</control>
-				<!-- <control type="image">
-					<top>20</top>
-					<bottom>-20</bottom>
-					<left>-20</left>
-					<right>0</right>
-					<texture border="40">buttons/dialogbutton-nofo.png</texture>
-				</control> -->
 				<control type="grouplist" id="5">
 					<description>Features grouplist</description>
 					<top>45</top>
@@ -180,14 +165,6 @@
 				<left>30</left>
 				<right>30</right>
 				<height>140</height>
-				<!-- <control type="image">
-					<description>Controller description background image</description>
-					<top>-20</top>
-					<bottom>-20</bottom>
-					<left>-20</left>
-					<right>-20</right>
-					<texture border="40">buttons/dialogbutton-nofo.png</texture>
-				</control> -->
 				<control type="textbox" id="32">
 					<top>5</top>
 					<bottom>5</bottom>
@@ -222,14 +199,6 @@
 					<description>Port list</description>
 					<width>1430</width>
 					<height>700</height>
-					<!-- <control type="image">
-						<description>Port list background</description>
-						<top>-20</top>
-						<bottom>-20</bottom>
-						<left>-20</left>
-						<right>-20</right>
-						<texture border="40">buttons/dialogbutton-nofo.png</texture>
-					</control> -->
 					<control type="list" id="3">
 						<description>Port item list</description>
 						<onright>9001</onright>
@@ -265,14 +234,6 @@
 						</itemlayout>
 						<focusedlayout width="1440" height="100">
 							<control type="group">
-								<!-- <control type="image">
-									<top>-20</top>
-									<bottom>-20</bottom>
-									<left>-20</left>
-									<right>-20</right>
-									<texture border="40" colordiffuse="button_focus2">buttons/dialogbutton-fo.png</texture>
-									<visible>Control.HasFocus(3)</visible>
-								</control> -->
 								<control type="label">
 									<top>20</top>
 									<left>20</left>

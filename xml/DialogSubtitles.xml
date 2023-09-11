@@ -66,13 +66,6 @@
 			<control type="group">
 				<top>130</top>
 				<left>360</left>
-				<!-- <control type="image">
-					<left>-20</left>
-					<top>-20</top>
-					<width>960</width>
-					<height>640</height>
-					<texture border="40">buttons/dialogbutton-nofo.png</texture>
-				</control> -->
 				<control type="label">
 					<description>Video label</description>
 					<top>-45</top>
@@ -225,13 +218,6 @@
 			<control type="group">
 				<left>20</left>
 				<top>130</top>
-				<!-- <control type="image">
-					<left>-20</left>
-					<top>-20</top>
-					<width>360</width>
-					<height>520</height>
-					<texture border="40">buttons/dialogbutton-nofo.png</texture>
-				</control> -->
 				<control type="label">
 					<left>0</left>
 					<top>-50</top>

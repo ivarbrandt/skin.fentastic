@@ -126,11 +126,6 @@
 					<align>center</align>
 				</control>
 			</control>
-				<!-- <control type="group">
-					<left>50%</left>
-					<top>8</top>
-					<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
-				</control> -->
 		</definition>
 	</include>
 	
@@ -576,7 +571,6 @@
 					<visible>$PARAM[focused] + String.IsEqual(ListItem.DBtype,movie) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0) + [Control.IsVisible(56) | Control.IsVisible(504)]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
-
 				<!-- Episode Percent Progress -->
 				<control type="label">
 					<left>60</left>
@@ -757,8 +751,6 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>30</left>
-						<!-- <animation effect="zoom" start="100" end="101" time="200" tween="sine" easing="inout" center="240,130">Focus</animation>
-						<animation effect="zoom" start="101" end="100" time="200" tween="sine" easing="inout" center="240,130">UnFocus</animation> -->
 						<top>120</top>
 						<include content="BigWideInfoWallMovieLayout">
 							<param name="focused" value="true" />
@@ -779,8 +771,6 @@
 				<focusedlayout height="301" width="430" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<!-- <animation effect="zoom" start="100" end="101" time="200" tween="sine" easing="inout" center="240,130">Focus</animation>
-						<animation effect="zoom" start="101" end="100" time="200" tween="sine" easing="inout" center="240,130">UnFocus</animation> -->
 						<left>44</left>
 						<top>110</top>
 						<include content="WideInfoWallEpisodeLayout">

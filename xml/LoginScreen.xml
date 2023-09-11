@@ -70,14 +70,11 @@
 					<control type="image">
 						<include>FocusBounce</include>
 						<left>40</left>
-						<!-- <top>-20</top> -->
 						<right>30</right>
-						<!-- <bottom>-20</bottom> -->
 						<width>300</width>
 						<height>300</height>
 						<texture diffuse="masks/addons.png" colordiffuse="button_focus">masks/addons.png</texture>
 						<visible>Control.HasFocus(52)</visible>
-						<!-- <animation reversible="false" effect="fade" start="20" end="75" time="200">Focus</animation> -->
 					</control>
 					<control type="image">
 						<centerleft>50%</centerleft>

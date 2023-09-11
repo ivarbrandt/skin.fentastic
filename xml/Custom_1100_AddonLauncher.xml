@@ -99,28 +99,6 @@
 							<texture colordiffuse="button_focus">masks/focus.png</texture>
 							<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000)">Conditional</animation>
 						</control>
-						<!-- <control type="image">
-							<left>22</left>
-							<top>0</top>
-							<width>95</width>
-							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">$INFO[ListItem.Art(thumb)]</texture>
-							<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
-						</control> -->
-						<!-- <control type="image">
-							<left>0</left>
-							<width>95</width>
-							<bottom>0</bottom>
-							<texture colordiffuse="51FFFFFF">colors/black.png</texture>
-							<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000)">Conditional</animation>
-						</control> -->
-						<!-- <control type="image">
-							<left>22</left>
-							<top>0</top>
-							<width>95</width>
-							<bottom>0</bottom>
-							<texture>$INFO[ListItem.Art(thumb)]</texture>
-						</control> -->
 						<control type="label">
 							<include>FocusBounce</include>
 							<left>65</left>
@@ -144,13 +122,6 @@
 							<textcolor>unfocused_text</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
-						<!-- <control type="image">
-							<left>22</left>
-							<top>0</top>
-							<width>95</width>
-							<bottom>0</bottom>
-							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
-						</control> -->
 					</itemlayout>
 					<content>
 						<item id="1">

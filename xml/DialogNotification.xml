@@ -25,6 +25,7 @@
 				<texture colordiffuse="dialog_bg">masks/dialog-notification.png</texture>
 				<bordersize>17</bordersize>
 			</control>
+			<!-- TODO Find way to apply diffuse texture -->
 			<control type="image" id="400">
 				<description>avatar</description>
 				<left>25</left>

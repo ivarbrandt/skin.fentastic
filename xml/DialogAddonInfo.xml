@@ -128,7 +128,6 @@
 							<aspectratio>scale</aspectratio>
 							<bordersize>20</bordersize>
 						</control>
-						
 					</focusedlayout>
 				</control>
 				<include content="LeftRightArrows">

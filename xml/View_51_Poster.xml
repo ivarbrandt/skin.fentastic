@@ -13,17 +13,6 @@
 			<description>Poster Viewtype</description>
 			<centertop>50%</centertop>
 			<height>720</height>
-			<!-- <control type="image">
-				<left>0</left>
-				<top>4</top>
-				<width>100%</width>
-				<height>332</height>
-				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
-				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-				<animation effect="fade" time="200">VisibleChange</animation>
-				<texture colordiffuse="button_focus2">dialogs/dialog-bg-nobo.png</texture>
-				<visible>Control.IsVisible(51)</visible>
-			</control> -->
 			<control type="group">
 				<visible>Control.IsVisible(51)</visible>
 				<include>Visible_Right</include>
@@ -70,13 +59,10 @@
 								<visible>Control.IsVisible(20000)</visible>
 								<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
 								<include>InfoWallMovieLayout</include>
-								
 							</control>
-							
 						</control>
 					</focusedlayout>
 				</control>
-
 				<!-- Title and Plot -->
 				<control type="group">
 					<top>25</top>
@@ -130,15 +116,6 @@
 			<visible>Control.IsVisible(51)</visible>
 			<include>OpenClose_Left</include>
 			<include>Visible_Left</include>
-			<!-- <control type="image">
-				<top>-16</top>
-				<left>-16</left>
-				<width>516</width>
-				<height>756</height>
-				<texture>colors/black.png</texture>
-				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
-				<bordersize>20</bordersize>
-			</control> -->
 			<control type="group">
 				<control type="image">
 					<left>4</left>
@@ -224,15 +201,6 @@
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 			</control>
-			<!-- <control type="image">
-				<left>1</left>
-				<top>1</top>
-				<width>482</width>
-				<height>721</height>
-				<visible>Control.HasFocus(51)</visible>
-				<animation effect="fade" time="100">VisibleChange</animation>
-				<texture border="8" colordiffuse="button_focus2">masks/poster-50.png</texture>
-			</control> -->
 		</control>
 	</include>
 </includes>

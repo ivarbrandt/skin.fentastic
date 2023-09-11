@@ -29,13 +29,6 @@
 					<aligny>center</aligny>
 					<textcolor>button_focus</textcolor>
 				</control>
-				<!-- <control type="image">
-					<left>0</left>
-					<top>55</top>
-					<width>440</width>
-					<height>855</height>
-					<texture border="40" colordiffuse="button_focus">buttons/dialogbutton-nofo.png</texture>
-				</control> -->
 				<control type="list" id="13">
 					<left>20</left>
 					<top>75</top>

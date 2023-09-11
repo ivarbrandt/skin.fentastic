@@ -73,7 +73,6 @@
 				<description>Weather info</description>
 				<height>410</height>
 				<left>22</left>
-				
 				<control type="label">
 					<top>310</top>
 					<left>10%</left>

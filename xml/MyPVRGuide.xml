@@ -25,13 +25,6 @@
 					</control>
 					<control type="group">
 						<visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
-						<!-- <control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>100%</width>
-							<height>50</height>
-							<texture colordiffuse="dialog_tint">colors/white50.png</texture>
-						</control> -->
 						<control type="image">
 							<left>42</left>
 							<top>0</top>
@@ -71,13 +64,6 @@
 						<scrolltime>200</scrolltime>
 						<visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
 						<itemlayout height="50" width="368">
-							<!-- <control type="image">
-								<left>1</left>
-								<top>0</top>
-								<width>366</width>
-								<height>49</height>
-								<texture colordiffuse="dialog_tint">colors/white50.png</texture>
-							</control> -->
 							<control type="label">
 								<left>5</left>
 								<width>358</width>

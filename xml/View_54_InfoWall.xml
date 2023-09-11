@@ -221,8 +221,6 @@
 				<texture>overlays/overlayfade1.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
-
-
 			<control type="image">
 				<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + String.IsEqual(ListItem.DBType,tvshow)</visible>
 				<left>20</left>
@@ -233,7 +231,6 @@
 				<texture>overlays/overlayfade1.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
-
 			<control type="label">
 					<left>117</left>
 					<top>171</top>
@@ -254,10 +251,6 @@
 					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + String.IsEqual(ListItem.DBType,tvshow)</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
-
-
-
-
 			<control type="label">
 				<left>131</left>
 				<top>173</top>
@@ -501,8 +494,6 @@
 				<texture>overlays/overlayfade1.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
-
-
 			<control type="image">
 				<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + String.IsEqual(ListItem.DBType,tvshow)</visible>
 				<left>20</left>
@@ -513,7 +504,6 @@
 				<texture>overlays/overlayfade1.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
-
 			<control type="label">
 					<left>220</left>
 					<top>228</top>
@@ -534,10 +524,6 @@
 					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id]) + String.IsEqual(ListItem.DBType,tvshow)</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
-
-
-
-
 			<control type="label">
 				<left>231</left>
 				<top>230</top>
@@ -813,9 +799,6 @@
 					<!-- <aspectratio>scale</aspectratio> -->
 					<bordersize>20</bordersize>
 				</control>
-
-				
-
 				<control type="image">
 					<left>20</left>
 					<top>214</top>
@@ -866,8 +849,6 @@
 					<visible>$PARAM[focused] + String.IsEqual(ListItem.DBtype,movie) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0) + [Control.IsVisible(54) | Control.IsVisible(500)]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
-
-
 			</control>
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
@@ -1062,9 +1043,6 @@
 					<!-- <aspectratio>scale</aspectratio> -->
 					<bordersize>20</bordersize>
 				</control>
-
-				
-
 				<control type="image">
 					<left>20</left>
 					<top>255</top>
@@ -1115,7 +1093,6 @@
 					<visible>$PARAM[focused] + String.IsEqual(ListItem.DBtype,movie) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WatchedProgress)) + !Integer.IsEqual(Container($PARAM[id]).ListItem.Property(WatchedProgress),0) + [Control.IsVisible(54) | Control.IsVisible(500)]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
-
 				<control type="label">
 					<left>40</left>
 					<top>360</top>
@@ -1138,8 +1115,6 @@
 					<visible>$PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]</visible>
 					<scroll>true</scroll>
 				</control>
-
-
 			</control>
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
@@ -1261,8 +1236,6 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>30</left>
-						<!-- <animation effect="zoom" start="100" end="103" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
-						<animation effect="zoom" start="103" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation> -->
 						<top>120</top>
 						<include content="BigInfoWallMovieLayout">
 							<param name="focused" value="true" />
@@ -1283,8 +1256,6 @@
 				<focusedlayout height="301" width="410" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="180,100">Focus</animation>
-						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="180,100">UnFocus</animation>
 						<left>64</left>
 						<top>110</top>
 						<include content="BigInfoWallEpisodeLayout">
@@ -1303,8 +1274,6 @@
 				<focusedlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<animation effect="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="200,350">Focus</animation>
-						<animation effect="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="200,350">UnFocus</animation>
 						<top>150</top>
 						<left>40</left>
 						<include content="InfoWallMusicLayout">
@@ -1324,8 +1293,6 @@
 						<depth>DepthContentPopout</depth>
 						<left>0</left>
 						<top>150</top>
-						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="180,330">Focus</animation>
-						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="180,330">UnFocus</animation>
 						<include content="InfoWallPictureLayout">
 							<param name="focused" value="true" />
 						</include>

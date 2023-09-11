@@ -39,13 +39,6 @@
 				<textcolor>grey</textcolor>
 				<label>$LOCALIZE[19001] $LOCALIZE[19002]</label>
 			</control>
-			<!-- <control type="image">
-				<left>10</left>
-				<top>210</top>
-				<width>1460</width>
-				<height>675</height>
-				<texture colordiffuse="button_focus2" border="40">buttons/dialogbutton-nofo.png</texture>
-			</control> -->
 			<control type="grouplist" id="5000">
 				<left>30</left>
 				<top>230</top>

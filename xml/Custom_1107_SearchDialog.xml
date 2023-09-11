@@ -48,14 +48,6 @@
 						<onclick>Dialog.Close(all)</onclick>
 						<onclick>ActivateWindow(Videos,"plugin://plugin.video.fen/?mode=history.search&amp;action=imdb_keyword_tvshow&amp;iconImage=https%3A%2F%2Fi.imgur.com%2Fz4C3PAx.png",return)</onclick>
 					</item>
-					<!-- <item>
-						<label>$LOCALIZE[31113]</label>
-						<onclick>Dialog.Close(all)</onclick>
-						<onclick condition="System.AddonIsEnabled(script.globalsearch)">
-						RunScript(script.globalsearch)</onclick>
-						<onclick condition="System.HasAddon(script.globalsearch) + !System.AddonIsEnabled(script.globalsearch)">EnableAddon(script.globalsearch)</onclick>
-						<onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
-					</item> -->
 					<item>
 						<label>$LOCALIZE[31145]</label>
 						<onclick>Dialog.Close(all)</onclick>

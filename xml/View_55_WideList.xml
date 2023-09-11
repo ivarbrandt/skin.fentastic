@@ -24,13 +24,6 @@
 					<ondown>55</ondown>
 					<viewtype label="$LOCALIZE[31107]">list</viewtype>
 					<focusedlayout height="85" condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(musicvideos) | Container.Content(videos) | Container.Content(games) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)">
-						<!-- <control type="image">
-							<left>0</left>
-							<right>0</right>
-							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">masks/focus-long.png</texture>
-							<visible>Control.HasFocus(55)</visible>
-						</control> -->
 						<control type="image">
 							<left>35</left>
 							<centertop>50%</centertop>
@@ -38,7 +31,6 @@
 							<height>37</height>
 							<texture>$VAR[ListWatchedIconVar]</texture>
 						</control>
-						<!-- TODO Fix length -->
 						<control type="label">
 							<left>105</left>
 							<top>0</top>
@@ -171,13 +163,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="85" condition="!Container.Content(songs) + !Container.Content(addons) + !Container.Content(playlists) + !Container.Content() + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(movies) + !Container.Content(musicvideos) + !Container.Content(videos)+ !Container.Content(favourites)">
-						<!-- <control type="image">
-							<left>0</left>
-							<right>0</right>
-							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">masks/focus-long.png</texture>
-							<visible>Control.HasFocus(55)</visible>
-						</control> -->
 						<control type="image">
 							<left>35</left>
 							<centertop>50%</centertop>
@@ -240,13 +225,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="85" top="200" condition="Container.Content(playlists) | Container.Content(favourites) | Container.Content()">
-						<!-- <control type="image">
-							<left>0</left>
-							<right>0</right>
-							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">masks/focus-long.png</texture>
-							<visible>Control.HasFocus(55)</visible>
-						</control> -->
 						<control type="image">
 							<left>20</left>
 							<centertop>50%</centertop>
@@ -341,12 +319,6 @@
 	</include>
 	<include name="AddonsListLayout">
 		<focusedlayout height="85" condition="Container.Content(addons)">
-			<!-- <control type="image">
-				<left>0</left>
-				<right>0</right>
-				<texture colordiffuse="button_focus">masks/focus-long.png</texture>
-				<visible>Control.hasFocus(55)</visible>
-			</control> -->
 			<control type="image">
 				<left>20</left>
 				<width>37</width>

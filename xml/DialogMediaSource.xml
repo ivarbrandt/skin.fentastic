@@ -27,13 +27,6 @@
 			<label>$LOCALIZE[1021]</label>
 			<textcolor>unfocused_text</textcolor>
 		</control>
-		<!-- <control type="image">
-			<left>25</left>
-			<top>145</top>
-			<width>860</width>
-			<height>285</height>
-			<texture colordiffuse="button_focus2" border="40">buttons/dialogbutton-nofo.png</texture>
-		</control> -->
 		<control type="panel" id="10">
 			<left>45</left>
 			<top>165</top>

@@ -32,28 +32,6 @@
 					<!-- <aspectratio>scale</aspectratio> -->
 					<texture diffuse="masks/poster-50.png" fallback="DefaultVideo.png" background="true">$VAR[InfoDialogPosterVar]</texture>
 				</control>
-				<!-- <control type="group">
-					<visible>String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video)</visible>
-					<visible>!String.IsEmpty(ListItem.Art(thumb)) + !String.IsEqual(ListItem.Art(thumb),ListItem.Art(poster))</visible>
-					<control type="image">
-						<left>4</left>
-						<top>4</top>
-						<width>526</width>
-						<height>801</height>
-						<aspectratio>stretch</aspectratio>
-						<texture diffuse="masks/poster-50.png" colordiffuse="AAFFFFFF" fallback="DefaultVideo.png">colors/black.png</texture>
-					</control>
-					<control type="image">
-						<left>14</left>
-						<top>4</top>
-						<width>506</width>
-						<height>801</height>
-						<aspectratio>keep</aspectratio>
-						<texture diffuse="masks/poster-50.png">$VAR[ShiftThumbVar]</texture>
-						<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
-						<bordersize>20</bordersize>
-					</control>
-				</control> -->
 			</control>
 			<control type="group">
 				<top>154</top>

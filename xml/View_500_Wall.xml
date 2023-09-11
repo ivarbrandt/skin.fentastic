@@ -31,8 +31,6 @@
 				<focusedlayout height="415" width="263" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<!-- <animation effect="zoom" start="100" end="101" time="200" tween="sine" easing="inout" center="180,100">Focus</animation>
-						<animation effect="zoom" start="101" end="100" time="200" tween="sine" easing="inout" center="180,100">UnFocus</animation> -->
 						<top>120</top>
 						<include content="BigInfoWallMovieLayout">
 							<param name="focused" value="true" />
@@ -51,8 +49,6 @@
 				<focusedlayout height="301" width="300" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<!-- <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="160,280">Focus</animation>
-						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="160,280">UnFocus</animation> -->
 						<top>110</top>
 						<include content="InfoWallEpisodeLayout">
 							<param name="focused" value="true" />
@@ -70,8 +66,6 @@
 				<focusedlayout height="425" width="442" condition="Container.Content(images)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<!-- <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="220,330">Focus</animation>
-						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="220,330">UnFocus</animation> -->
 						<left>40</left>
 						<top>150</top>
 						<include content="InfoWallPictureLayout">
@@ -91,8 +85,6 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<top>150</top>
-						<!-- <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="160,350">Focus</animation>
-						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="160,350">UnFocus</animation> -->
 						<include content="InfoWallMusicLayout">
 							<param name="fallback_image" value="DefaultMusicSongs.png" />
 							<param name="focused" value="true" />
@@ -111,8 +103,6 @@
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<top>150</top>
-						<!-- <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="160,350">Focus</animation>
-						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="160,350">UnFocus</animation> -->
 						<include content="InfoWallMusicLayout">
 							<param name="fallback_image" value="DefaultAddon.png" />
 							<param name="focused" value="true" />
@@ -133,8 +123,6 @@
 						<depth>DepthContentPopout</depth>
 						<left>35</left>
 						<top>150</top>
-						<!-- <animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="160,350">Focus</animation>
-						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="160,350">UnFocus</animation> -->
 						<include content="InfoWallMusicLayout">
 							<param name="fallback_image" value="DefaultFavourites.png" />
 							<param name="focused" value="true" />
