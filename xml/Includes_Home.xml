@@ -14,7 +14,7 @@
 		<param name="item_treshold">0</param>
 		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title,[B] | [/B]]</param>
 		<param name="label_focus_episodes">$INFO[Container($PARAM[list_id]).ListItem.TVShowTitle,[B] | [/B]]$INFO[Container($PARAM[list_id]).ListItem.Title,[B] | [/B]]</param>
-		<param name="label_focus_collections">$INFO[Container($PARAM[list_id]).ListItem.Label,[B] | [/B]]</param>
+		<param name="label_focus_collections">$INFO[Container($PARAM[list_id]).ListItem.Label,[B]| [/B]]</param>
 		<definition>
 			<control type="group" id="$PARAM[list_id]665">
 				<left>75</left>
@@ -54,7 +54,7 @@
 					</control>
 					<control type="label">
 						<width max="1350">auto</width>
-						<label>$PARAM[label]$PARAM[label_focus_collections]</label>
+						<label>$PARAM[label_focus_collections]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<scroll>true</scroll>
 						<scrollspeed>100</scrollspeed>
@@ -182,6 +182,7 @@
 		<param name="item_treshold">0</param>
 		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title,[B] | [/B]]</param>
 		<param name="label_focus_episodes">$INFO[Container($PARAM[list_id]).ListItem.TVShowTitle,[B] | [/B]]$INFO[Container($PARAM[list_id]).ListItem.Title,[B] | [/B]]</param>
+		<param name="label_focus_collections">$INFO[Container($PARAM[list_id]).ListItem.Label,[B]| [/B]]</param>
 		<definition>
 			<control type="group" id="$PARAM[list_id]665">
 				<left>75</left>
@@ -241,6 +242,16 @@
 						<scroll>true</scroll>
 						<scrollspeed>100</scrollspeed>
 						<visible>String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
+					</control>
+					<control type="label" id="$PARAM[list_id]669">
+						<visible>!Container($PARAM[list_id]).IsUpdating</visible>
+						<width max="1085">auto</width>
+						<label>$PARAM[label_focus_collections]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>$PARAM[visible]</visible>
+						<scroll>true</scroll>
+						<scrollspeed>100</scrollspeed>
+						<visible>[String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)] + Control.HasFocus($PARAM[list_id])</visible>
 					</control>
 					<control type="grouplist">
 						<visible>![String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings) | Container($PARAM[list_id]).IsUpdating] + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre) + Control.HasFocus($PARAM[list_id])</visible>
