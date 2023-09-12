@@ -340,6 +340,7 @@
 					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
 					<align>center</align>
 				</control>
+				<!-- TODO check logs for errors -->
 				<control type="label">
 					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
 					<left>15%</left>
@@ -367,7 +368,7 @@
 					<align>center</align>
 				</control>
 				<control type="label">
-					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
+					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] | String.IsEmpty(ListItem.Genre)</visible>
 					<left>15%</left>
 					<top>219</top>
 					<width>100%</width>
@@ -381,7 +382,7 @@
 					<align>center</align>
 				</control>
 				<control type="label">
-					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
+					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] | String.IsEmpty(ListItem.Genre)</visible>
 					<left>15%</left>
 					<top>219</top>
 					<width>100%</width>
@@ -640,7 +641,7 @@
 					<align>center</align>
 				</control>
 				<control type="label">
-					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
+					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] | String.IsEmpty(ListItem.Genre)</visible>
 					<left>11%</left>
 					<top>280</top>
 					<width>100%</width>
@@ -654,7 +655,7 @@
 					<align>center</align>
 				</control>
 				<control type="label">
-					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
+					<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] | String.IsEmpty(ListItem.Genre)</visible>
 					<left>11%</left>
 					<top>280</top>
 					<width>100%</width>
