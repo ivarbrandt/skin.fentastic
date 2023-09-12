@@ -930,7 +930,7 @@
 					<right>20</right>
 					<height>200</height>
 					<orientation>horizontal</orientation>
-					<width>1050</width>
+					<width>1100</width>
 					<itemgap>10</itemgap>
 					<visible>!Window.IsVisible(extendedprogressdialog) + !Window.IsActive(fullscreenvideo)</visible>
 					<animation effect="fade" time="150">VisibleChange</animation>
