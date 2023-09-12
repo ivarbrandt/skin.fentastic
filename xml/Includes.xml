@@ -655,6 +655,7 @@
 					<width>1400</width>
 					<label>$PARAM[main_label]</label>
 					<font>font30_title</font>
+					<textcolor>unfocused_text</textcolor>
 					<shadowcolor>text_shadow</shadowcolor>
 					<height>35</height>
 					<scroll>true</scroll>
@@ -662,6 +663,7 @@
 				</control>
 				<control type="label" id="$PARAM[id]">
 					<label>$PARAM[sub_label]</label>
+					<textcolor>accent_color</textcolor>
 					<font>font12</font>
 					<left>85</left>
 					<shadowcolor>text_shadow</shadowcolor>
