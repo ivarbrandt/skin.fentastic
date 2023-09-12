@@ -1012,7 +1012,7 @@
 					</control>
 					<control type="label">
 						<font>font_clock_small</font>
-						<height>95</height>
+						<height>100</height>
 						<width>auto</width>
 						<aligny>center</aligny>
 						<align>right</align>
