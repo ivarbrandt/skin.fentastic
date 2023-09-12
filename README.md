@@ -38,23 +38,9 @@ Here are some of the key differences between FENtastic and the default Estuary s
 
   ![Search Window](resources/images/search_window1.jpg)
 
-* **InfoPanel**: FENtastic introduces a new InfoPanel for widgets.
+* **InfoPanel with Ratings**: FENtastic introduces a new InfoPanel with optional displaying of ratings for widgets. The ratings can be dislayed in the InfoPanel, widget labels, or both.
 
   ![InfoPanel](resources/images/infopanel.jpg)
-
-* **Color Themes**: FENtastic comes with a new default color theme, and a new color theme 'purple'. The UI changes extend into every color theme.
-
-  ![Color Theme Purple](resources/images/color_theme.jpg)
-
-  ![Color Theme Estuary](resources/images/color_theme1.jpg)
-
-  ![Color Theme Gold](resources/images/color_theme2.jpg)
-
-  ![Color Theme Green](resources/images/color_theme3.jpg)
-
-  ![Color Theme Pink](resources/images/color_theme4.jpg)
-
-  ![Color Theme Maroon](resources/images/color_theme5.jpg)
 
 ## Features
 * NEW UI experience
@@ -63,14 +49,11 @@ Here are some of the key differences between FENtastic and the default Estuary s
 * Customizable movie and show main menu items
 * Customizable widgets and category widgets for movies, tvshows, and episodes
 * Custom stacked widgets for movies, tvshows, and episodes
+* Ratings displayed for movies, tvshows, seasons, and episodes
 * New InfoPanel for widgets
 * New custom search window
 * Progress displayed for movies, tvshows, seasons and episodes
-* New default Colors theme
-* New Color theme 'purple'
-* Skin-wide adjustments to dialog and menu colors for every color theme
 * Custom Search options from Home window
-* PVR guide adjustments
 
 
 ## Download and installation
@@ -125,15 +108,7 @@ To set up the widgets, follow these steps:
 
 5. If you would like to rearrange, rename, remake, change display type, or remove a widget after you have set it up, click the widget. You'll see a list of options pop up. Click the desired option. You can reconfigure your widgets as many times as you'd like. You can also rename, remake, or remove the main menu items.
 
-   ![Step 4](resources/images/step_5.jpg)
-
-## Stacked Widgets
-
-Stacked widgets contain a category widget and a normal widget beneath. The category widget "communicates" with the normal widget in order to load the new widget list according to the focused item in the category widget. If the stacked widget that you set up has 20 items in it, then that means you'll be able to have all 20 widgets available from just one widget on the home screen.
-
-![Stacked Widgets](resources/images/stacked_widgets.jpg)
-
-![Stacked Widgets1](resources/images/stacked_widgets1.jpg)
+   ![Step 5](resources/images/step_5.jpg)
 
 
 
