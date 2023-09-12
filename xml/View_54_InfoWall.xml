@@ -735,8 +735,9 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
+					<textcolor>focused_text</textcolor>
 					<autoscroll time="1000" delay="500" repeat="2000">$PARAM[focused] + Control.HasFocus($PARAM[list_id])</autoscroll>
-					<visible>!ListItem.IsParentFolder + ![Control.IsVisible(54) | Control.IsVisible(500)]</visible>
+					<visible>!ListItem.IsParentFolder + $PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
 				</control>
 				<control type="textbox">
 					<left>40</left>
@@ -747,17 +748,28 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
-					<autoscroll time="1000" delay="500" repeat="2000">$PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]</autoscroll>
-					<visible>!ListItem.IsParentFolder + [Control.IsVisible(54) | Control.IsVisible(500)]</visible>
+					<textcolor>unfocused_text</textcolor>
+					<visible>!ListItem.IsParentFolder + ![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
 				</control>
 				<control type="image">
 					<left>4</left>
 					<top>-1</top>
 					<width>230</width>
 					<height>230</height>
-					<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
+					<texture colordiffuse="focused_text" fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>scale</aspectratio>
 					<bordersize>20</bordersize>
+					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
+				</control>
+				<control type="image">
+					<left>4</left>
+					<top>-1</top>
+					<width>230</width>
+					<height>230</height>
+					<texture colordiffuse="unfocused_text" fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<bordersize>20</bordersize>
+					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -979,8 +991,9 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
+					<textcolor>focused_text</textcolor>
 					<autoscroll time="2000" delay="1000" repeat="2000">$PARAM[focused] + Control.HasFocus($PARAM[list_id])</autoscroll>
-					<visible>!ListItem.IsParentFolder + ![Control.IsVisible(54) | Control.IsVisible(500)]</visible>
+					<visible>!ListItem.IsParentFolder + $PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
 				</control>
 				<control type="textbox">
 					<left>27</left>
@@ -991,17 +1004,29 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
-					<autoscroll time="2000" delay="1000" repeat="2000">$PARAM[focused] + [Control.IsVisible(54) | Control.IsVisible(500)]</autoscroll>
-					<visible>!ListItem.IsParentFolder + [Control.IsVisible(54) | Control.IsVisible(500)]</visible>
+					<textcolor>unfocused_text</textcolor>
+					<textcolor>focused_text</textcolor>
+					<visible>!ListItem.IsParentFolder + ![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
 				</control>
 				<control type="image">
 					<left>4</left>
 					<top>-1</top>
 					<width>272</width>
 					<height>272</height>
-					<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
+					<texture colordiffuse="focused_text" fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>scale</aspectratio>
 					<bordersize>20</bordersize>
+					<visible>$PARAM[focused] + Control.HasFocus($PARAM[list_id])</visible>
+				</control>
+				<control type="image">
+					<left>4</left>
+					<top>-1</top>
+					<width>272</width>
+					<height>272</height>
+					<texture colordiffuse="unfocused_text" fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<bordersize>20</bordersize>
+					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
 				</control>
 			</control>
 			<control type="group">
