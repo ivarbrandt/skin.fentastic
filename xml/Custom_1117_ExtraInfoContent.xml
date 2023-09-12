@@ -3,6 +3,7 @@
   <include name="Changelog">
     <label>[B][COLOR accent_color]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
 - Updated UI for a more artwork centric experience
+- Updated widgets to handle menu items better
 - Added 3 NEW custom main menu sections
 - Added ratings (enter OMDb API Key in Skin settings to activate)
 - Added switch for Landscape/Clearlogo on WideList view
