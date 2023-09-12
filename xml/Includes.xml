@@ -930,7 +930,7 @@
 					<right>20</right>
 					<height>200</height>
 					<orientation>horizontal</orientation>
-					<width>900</width>
+					<width>1050</width>
 					<itemgap>10</itemgap>
 					<visible>!Window.IsVisible(extendedprogressdialog) + !Window.IsActive(fullscreenvideo)</visible>
 					<animation effect="fade" time="150">VisibleChange</animation>
@@ -1004,7 +1004,7 @@
 					</control>
 					<control type="image">
 						<width>60</width>
-						<height>90</height>
+						<height>100</height>
 						<fadetime>300</fadetime>
 						<aspectratio aligny="center" align="left">keep</aspectratio>
 						<texture colordiffuse="unfocused_text">$INFO[Weather.FanartCode,weather/small/,.png]</texture>
@@ -1012,11 +1012,11 @@
 					</control>
 					<control type="label">
 						<font>font_clock_small</font>
-						<height>85</height>
+						<height>95</height>
 						<width>auto</width>
 						<aligny>center</aligny>
 						<align>right</align>
-						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits] [COLOR accent_color][B]•[/B][/COLOR]</label>
+						<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits] [COLOR accent_color][B] • [/B][/COLOR]</label>
 						<textcolor>unfocused_text</textcolor>
 						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
