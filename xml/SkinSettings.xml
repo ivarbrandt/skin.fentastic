@@ -451,7 +451,7 @@
 					<label>Choose default background</label>
 					<label2>$INFO[Skin.String(CustomBackground)]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SetImage(CustomBackground)</onclick>
+					<onclick>RunScript(script.fentastic.helper, mode=set_image)</onclick>
 				</control>
 				<control type="button" id="605">
 					<label>   - Restore default background</label>
