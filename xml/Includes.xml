@@ -1147,6 +1147,13 @@
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[BackgroundBrightnessVar]" fallback="special://skin/extras/backgrounds/redblur.jpg">$VAR[CustomBackgroundImage]</texture>
 		</control>
+		<control type="image">
+			<visible>Player.HasMedia</visible>
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<texture colordiffuse="CC141414" fallback="special://skin/extras/backgrounds/redblur.jpg">$VAR[CustomBackgroundImage]</texture>
+		</control>
 	</include>
 	<include name="DefaultBackground">
 		<definition>
