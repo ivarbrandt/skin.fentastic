@@ -1981,10 +1981,9 @@
 		<orientation>horizontal</orientation>
 		<onleft>9000</onleft>
 		<onright>$PARAM[list_id]</onright>
-		<onback>9000</onback>
 		<onback>SetFocus($PARAM[list_id],0,absolute)</onback>
+		<onback>9000</onback>
 		<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
-		<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
 		<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
 		<!-- <preloaditems>2</preloaditems> -->
 	</include>
