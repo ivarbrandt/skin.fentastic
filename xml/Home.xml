@@ -1048,10 +1048,10 @@
 					<control type="grouplist" id="700">
 						<orientation>horizontal</orientation>
 						<itemgap>0</itemgap>
-            <left>7</left>
-						<width>480</width>
+            <left>45</left>
+						<width>380</width>
 						<height>110</height>
-						<top>110</top>
+						<top>115</top>
 						<onup>SetFocus(9000,99,absolute)</onup>
 						<ondown>SetFocus(9000,0,absolute)</ondown>
 						<onright>2000</onright>
@@ -1208,8 +1208,8 @@
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<top>30</top>
-				<left>90</left>
+				<top>35</top>
+				<left>35</left>
         <control type="image">
           <left>19</left>
           <top>0</top>
