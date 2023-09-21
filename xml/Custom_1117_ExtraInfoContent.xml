@@ -2,6 +2,9 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR accent_color]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
+- Hopefully fixed crashing bug
+
+[B][COLOR accent_color]Version 1.0.19[/COLOR][/B]
 - Updated UI for a more artwork centric experience
 - Updated widgets to handle menu items better
 - Added 3 NEW custom main menu sections
