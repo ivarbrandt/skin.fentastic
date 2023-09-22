@@ -4,6 +4,7 @@
     <label>[B][COLOR accent_color]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
 - Hopefully fixed crashing bug
 - Added overlay for background media playback
+- Added more sources for choosing of custom background
 
 [B][COLOR accent_color]Version 1.0.19[/COLOR][/B]
 - Updated UI for a more artwork centric experience
