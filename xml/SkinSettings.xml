@@ -563,13 +563,6 @@
 					<onclick>SetProperty(TextViewerHeader,[B]Setup Guide[/B],Home)</onclick>
 					<onclick>ActivateWindow(1118)</onclick>
 				</control>
-				<control type="button" id="6232">
-					<include>DefaultSettingButton</include>
-					<label>[B]Tip:[/B] Crashes</label>
-					<onclick>SetProperty(Tip-Crashes,True)</onclick>
-					<onclick>SetProperty(TextViewerHeader,[B]Crashes[/B],Home)</onclick>
-					<onclick>ActivateWindow(1120)</onclick>
-				</control>
 			</control>
 			<control type="image">
 				<description>Dialog Header image</description>
