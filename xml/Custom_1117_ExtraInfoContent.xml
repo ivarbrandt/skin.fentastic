@@ -2,9 +2,10 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR accent_color]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
-- Hopefully fixed crashing bug
+- Fixed crashing bug. You can now enable ReuseLanguageInvoker in FEN.
 - Added overlay for background media playback
-- Added more sources for choosing of custom background
+- Added network sources for choosing of custom background
+- Removed [B]Tip: Crashes[/B] window
 
 [B][COLOR accent_color]Version 1.0.19[/COLOR][/B]
 - Updated UI for a more artwork centric experience
@@ -210,16 +211,6 @@ Click a menu item to toggle the display of a section on and off. This will show 
 That's it! You're all set to go. Enjoy the skin!
 
 If you would like to see a more detailed version of this Setup Guide, please visit my Github repo at https://github.com/ivarbrandt/skin.fentastic
-    </label>
-  </include>
-
-
-  <include name="Tip-Crashes">
-    <label>[COLOR accent_color][B]How to fix Kodi crashes[/B][/COLOR]
-
-If you are experiencing random or semi-random crashes when either returning to the home screen after playback or returning to the home screen after an extended period of time away from the home screen, go into the FEN addon » Tools » click [B]TOOLS:[/B] Set Language Invoker (ADVANCED!!) » Set it to FALSE.
-
-This should alleviate the crashing on your device. The trade off for this is that you'll lose some speed when navigating FEN.
     </label>
   </include>
 </includes>
