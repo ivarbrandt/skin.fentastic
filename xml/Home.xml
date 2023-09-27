@@ -556,7 +556,7 @@
 								<left>20</left>
 								<height>220</height>
 								<bottom>90</bottom>
-								<width>100%</width>
+								<width>97%</width>
 								<texture colordiffuse="button_focus2" border="21">masks/settingspanel-unfocused.png</texture>
 							</control>
 							<control type="label">
