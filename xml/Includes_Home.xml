@@ -10,6 +10,7 @@
 	</include>
 
 	<include name="CategoryLabel">
+		<!-- TODO Add one-click functionality for Trakt Manager, viewing of trailers etc -->
 		<param name="visible">true</param>
 		<param name="item_treshold">0</param>
 		<param name="label_focus">$INFO[Container($PARAM[list_id]).ListItem.Title,[B] | [/B]]</param>

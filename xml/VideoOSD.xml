@@ -14,6 +14,7 @@
 			<texturenofocus />
 			<onclick>Action(close)</onclick>
 		</control>
+		<!-- TODO Add new MPAA icons, Info message at start of playback (title, year, mpaa, audio and video codec) -->
 		<include condition="Skin.HasSetting(touchmode)">TouchBackOSDButton</include>
 		<control type="group">
 			<include>Animation_BottomSlide</include>
