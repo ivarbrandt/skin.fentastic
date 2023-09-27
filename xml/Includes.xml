@@ -451,6 +451,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[$PARAM[label]]</label>
+				<textcolor>unfocused_text</textcolor>
 			</control>
 		</control>
 	</include>
