@@ -463,7 +463,7 @@
 						<texturefocus colordiffuse="button_focus">buttons/roundbutton-fo.png</texturefocus>
 						<texturenofocus />
 						<textureradioonfocus colordiffuse="focused_text">icons/keyboard/capslock.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="unfocused_text">icons/keyboard/capslock.png</textureradioonnofocus>
+						<textureradioonnofocus colordiffuse="accent_color">icons/keyboard/capslock.png</textureradioonnofocus>
 						<textureradioofffocus colordiffuse="focused_text">icons/keyboard/capslock.png</textureradioofffocus>
 						<textureradiooffnofocus colordiffuse="unfocused_text">icons/keyboard/capslock.png</textureradiooffnofocus>
 						<radioposx>40</radioposx>
@@ -480,7 +480,7 @@
 						<texturefocus colordiffuse="button_focus">buttons/roundbutton-fo.png</texturefocus>
 						<texturenofocus />
 						<textureradioonfocus colordiffuse="focused_text">icons/keyboard/shift.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="unfocused_text">icons/keyboard/shift.png</textureradioonnofocus>
+						<textureradioonnofocus colordiffuse="accent_color">icons/keyboard/shift.png</textureradioonnofocus>
 						<textureradioofffocus colordiffuse="focused_text">icons/keyboard/shift.png</textureradioofffocus>
 						<textureradiooffnofocus colordiffuse="unfocused_text">icons/keyboard/shift.png</textureradiooffnofocus>
 						<radioposx>42</radioposx>
