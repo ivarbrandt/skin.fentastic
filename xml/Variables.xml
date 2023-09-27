@@ -709,6 +709,11 @@
     <value>Open search window</value>
 	</variable>
 
+	<variable name="OneClickCloseVar">
+    <value condition="Skin.HasSetting(OneClickClose)">Exit</value>
+    <value>Open shutdown menu</value>
+	</variable>
+
 	<variable name="LandscapeSwitchVar">
     <value condition="Skin.HasSetting(UseLandscape)">Landscape</value>
     <value condition="!Skin.HasSetting(UseLandscape)">Clearlogo</value>
