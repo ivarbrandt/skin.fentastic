@@ -3,6 +3,7 @@
   <include name="Changelog">
     <label>[B][COLOR accent_color]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
 - Added optional one-click close of Kodi via the homescreen power button. If you decide to use this you can still access the shutdown menu by holding the back key/backspace on your remote/keyboard.
+- Other changes/fixes
 
 [B][COLOR accent_color]Version 1.0.20[/COLOR][/B]
 - Fixed crashing bug. You can now enable ReuseLanguageInvoker in FEN.
