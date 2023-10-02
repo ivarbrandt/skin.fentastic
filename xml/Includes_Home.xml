@@ -1552,7 +1552,7 @@
 							<textcolor>unfocused_text</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
-							<scroll>true</scroll>
+							<scroll>Control.HasFocus($PARAM[list_id])</scroll>
 							<aligny>top</aligny>
 						</control>
 						<control type="label">
@@ -1565,7 +1565,7 @@
 							<textcolor>unfocused_text</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 							<align>center</align>
-							<scroll>true</scroll>
+							<scroll>Control.HasFocus($PARAM[list_id])</scroll>
 							<aligny>top</aligny>
 						</control>
 						<control type="image">
