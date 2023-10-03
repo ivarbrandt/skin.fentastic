@@ -2,7 +2,7 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR accent_color]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
-- Switched ratings source to MDbList for better tvshow support
+- Switched ratings source to MDbList for better tvshow support (enter MDbList API Key in Skin settings to activate)
 - Added optional one-click close of Kodi via the homescreen power button. If you decide to use this you can still access the shutdown menu by holding the back key/backspace on your remote/keyboard.
 - Other changes/fixes
 
