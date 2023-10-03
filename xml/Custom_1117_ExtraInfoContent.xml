@@ -5,10 +5,10 @@
 - Switched ratings source to MDbList for better tvshow support (enter MDbList API Key in Skin settings to activate)
 - Added IMDb popular ratings. These are from IMDb's most popular movies and tvshows. The rating for these is out of 100. The color coding of the new flame icon is as follows:
 
-  • [COLOR blueviolet]Purple[/COLOR] flame = Top 10
-  • [COLOR deeppink]Pink[/COLOR] flame = Top third (10 - 33)
-  • [COLOR orangered]Orange[/COLOR] flame = Middle third (33 - 66)
-  • [COLOR dodgerblue]Blue[/COLOR] flame = Bottom third (66 - 100)
+  • [COLOR blueviolet][B]PURPLE[/B][/COLOR] flame = Top 10
+  • [COLOR deeppink][B]PINK[/B][/COLOR] flame = Top third (10 - 33)
+  • [COLOR darkorange][B]ORANGE[/B][/COLOR] flame = Middle third (33 - 66)
+  • [COLOR dodgerblue][B]BLUE[/B][/COLOR] flame = Bottom third (66 - 100)
 
 [COLOR red][B]IMPORTANT: AFTER YOU HAVE ENTERED IN YOUR MDBLIST API KEY I HIGHLY RECOMMEND CLICKING THE "CLEAR ALL RATINGS" BUTTON IN SKIN SETTINGS BEFORE FETCHING NEW RATINGS AGAIN. IF YOU DO NOT DO THIS YOU MAY RUN INTO ERRORS. THIS IS A ONE TIME THING AS I DON'T EVER RECOMMEND CLEARNG THE RATINGS AS THEY AUTO-UPDATE OVER TIME.[/B][/COLOR]
 
