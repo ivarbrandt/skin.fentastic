@@ -5,10 +5,12 @@
 - Switched ratings source to MDbList for better tvshow support (enter MDbList API Key in Skin settings to activate)
 - Added IMDb popular ratings. These are from IMDb's most popular movies and tvshows. The rating for these is out of 100. The color coding of the new flame icon is as follows:
 
-  • Purple flame = Top 10
-  • Pink flame = Top third (10 - 33)
-  • Orange flame = Middle third (33 - 66)
-  • Blue flame = Bottom third (66 - 100)
+  • [COLOR blueviolet]Purple[/COLOR] flame = Top 10
+  • [COLOR deeppink]Pink[/COLOR] flame = Top third (10 - 33)
+  • [COLOR orangered]Orange[/COLOR] flame = Middle third (33 - 66)
+  • [COLOR dodgerblue]Blue[/COLOR] flame = Bottom third (66 - 100)
+
+[COLOR red][B]IMPORTANT: AFTER YOU HAVE ENTERED IN YOUR MDBLIST API KEY I HIGHLY RECOMMEND CLICKING THE "CLEAR ALL RATINGS" BUTTON IN SKIN SETTINGS BEFORE FETCHING NEW RATINGS AGAIN. IF YOU DO NOT DO THIS YOU MAY RUN INTO ERRORS. THIS IS A ONE TIME THING AS I DON'T EVER RECOMMEND CLEARNG THE RATINGS AS THEY AUTO-UPDATE OVER TIME.[/B][/COLOR]
 
 - Added optional one-click close of Kodi via the homescreen power button. If you decide to use this you can still access the shutdown menu by holding the back key/backspace on your remote/keyboard.
 - Other changes/fixes
