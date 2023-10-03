@@ -1786,7 +1786,7 @@
 					<align>center</align>
 					<visible>!String.IsEmpty(Window.Property(fentastic.metascore))</visible>
 					<control type="image">
-						<width>58</width>
+						<width>75</width>
 						<height>36</height>
 						<aspectratio>keep</aspectratio>
 						<align>center</align>
@@ -1794,7 +1794,7 @@
 						<texture>$INFO[Window.Property(fentastic.metascoreImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="58">auto</width>
+						<width max="75">auto</width>
 						<height>42</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1809,7 +1809,7 @@
 					<align>center</align>
 					<visible>!String.IsEmpty(Window.Property(fentastic.tomatoMeter))</visible>
 					<control type="image">
-						<width>58</width>
+						<width>75</width>
 						<height>36</height>
 						<aspectratio>keep</aspectratio>
 						<align>center</align>
@@ -1817,7 +1817,7 @@
 						<texture>$INFO[Window.Property(fentastic.tomatoImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="58">auto</width>
+						<width max="75">auto</width>
 						<height>42</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1832,7 +1832,7 @@
 					<align>center</align>
 					<visible>!String.IsEmpty(Window.Property(fentastic.tomatoUserMeter))</visible>
 					<control type="image">
-						<width>58</width>
+						<width>75</width>
 						<height>36</height>
 						<aspectratio>keep</aspectratio>
 						<align>center</align>
@@ -1840,7 +1840,7 @@
 						<texture>$INFO[Window.Property(fentastic.tomatoUserImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="58">auto</width>
+						<width max="75">auto</width>
 						<height>42</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1855,7 +1855,7 @@
 					<align>center</align>
 					<visible>!String.IsEmpty(Window.Property(fentastic.imdbRating))</visible>
 					<control type="image">
-						<width>58</width>
+						<width>75</width>
 						<height>36</height>
 						<aspectratio>keep</aspectratio>
 						<align>center</align>
@@ -1863,7 +1863,7 @@
 						<texture>$INFO[Window.Property(fentastic.imdbImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="58">auto</width>
+						<width max="75">auto</width>
 						<height>42</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1878,7 +1878,7 @@
 					<align>center</align>
 					<visible>!String.IsEmpty(Window.Property(fentastic.tmdbRating))</visible>
 					<control type="image">
-						<width>58</width>
+						<width>65</width>
 						<height>36</height>
 						<aspectratio>keep</aspectratio>
 						<align>center</align>
@@ -1886,7 +1886,7 @@
 						<texture>$INFO[Window.Property(fentastic.tmdbImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="58">auto</width>
+						<width max="65">auto</width>
 						<height>42</height>
 						<align>center</align>
 						<aligny>center</aligny>
