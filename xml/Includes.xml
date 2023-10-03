@@ -1794,9 +1794,9 @@
 						<texture>$INFO[Window.Property(fentastic.metascoreImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="75">auto</width>
+						<width max="58">auto</width>
 						<height>42</height>
-						<align>left</align>
+						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Window.Property(fentastic.metascore)]</label>
 						<textcolor>unfocused_text</textcolor>
@@ -1817,9 +1817,9 @@
 						<texture>$INFO[Window.Property(fentastic.tomatoImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="75">auto</width>
+						<width max="58">auto</width>
 						<height>42</height>
-						<align>left</align>
+						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Window.Property(fentastic.tomatoMeter)]</label>
 						<textcolor>unfocused_text</textcolor>
@@ -1840,9 +1840,9 @@
 						<texture>$INFO[Window.Property(fentastic.tomatoUserImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="75">auto</width>
+						<width max="58">auto</width>
 						<height>42</height>
-						<align>left</align>
+						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Window.Property(fentastic.tomatoUserMeter)]</label>
 						<textcolor>unfocused_text</textcolor>
@@ -1863,7 +1863,7 @@
 						<texture>$INFO[Window.Property(fentastic.imdbImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="57">auto</width>
+						<width max="58">auto</width>
 						<height>42</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1886,7 +1886,7 @@
 						<texture>$INFO[Window.Property(fentastic.tmdbImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="57">auto</width>
+						<width max="58">auto</width>
 						<height>42</height>
 						<align>center</align>
 						<aligny>center</aligny>
