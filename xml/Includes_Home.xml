@@ -39,7 +39,7 @@
 					</control>
 					<!-- RATINGS VISIBLE -->
 					<control type="label">
-						<width max="735">auto</width>
+						<width max="715">auto</width>
 						<label>$PARAM[label]$PARAM[label_focus]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<scroll>true</scroll>
@@ -48,7 +48,7 @@
 						<visible>![String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
 					</control>
 					<control type="label">
-						<width max="735">auto</width>
+						<width max="715">auto</width>
 						<label>$PARAM[label]$PARAM[label_focus_episodes]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<scroll>true</scroll>
@@ -162,7 +162,7 @@
 							</control>
 						</control>
 						<control type="grouplist">
-							<width>130</width>
+							<width>145</width>
 							<orientation>horizontal</orientation>
 							<itemgap>8</itemgap>
 							<align>center</align>
@@ -184,14 +184,14 @@
 							</control>
 						</control>
 						<control type="grouplist">
-							<width>130</width>
+							<width>135</width>
 							<orientation>horizontal</orientation>
 							<itemgap>8</itemgap>
 							<align>center</align>
 							<visible>!String.IsEmpty(Window.Property(fentastic.popularRating))</visible>
 							<control type="image">
 								<top>45</top>
-								<width>52</width>
+								<width>27</width>
 								<!-- <height>32</height> -->
 								<aspectratio>keep</aspectratio>
 								<align>right</align>
@@ -199,14 +199,14 @@
 								<texture>$INFO[Window.Property(fentastic.popularImage)]</texture>
 							</control>
 							<control type="label">
-								<width max="75">auto</width>
+								<width max="70">auto</width>
 								<height>32</height>
 								<align>left</align>
 								<label>$INFO[Window.Property(fentastic.popularRating)]</label>
 							</control>
 						</control>
 						<control type="grouplist">
-							<width>110</width>
+							<width>125</width>
 							<orientation>horizontal</orientation>
 							<itemgap>6</itemgap>
 							<align>center</align>
@@ -265,7 +265,7 @@
 					<!-- RATINGS VISIBLE -->
 					<control type="label" id="$PARAM[list_id]667">
 						<visible>!Container($PARAM[list_id]).IsUpdating</visible>
-						<width max="735">auto</width>
+						<width max="715">auto</width>
 						<label>$PARAM[label]$PARAM[label_focus]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<scroll>true</scroll>
@@ -276,7 +276,7 @@
 					</control>
 					<control type="label" id="$PARAM[list_id]668">
 						<visible>!Container($PARAM[list_id]).IsUpdating</visible>
-						<width max="735">auto</width>
+						<width max="715">auto</width>
 						<label>$PARAM[label]$PARAM[label_focus_episodes]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<visible>$PARAM[visible]</visible>
@@ -287,7 +287,7 @@
 					</control>
 					<control type="label" id="$PARAM[list_id]669">
 						<visible>!Container($PARAM[list_id]).IsUpdating</visible>
-						<width max="1085">auto</width>
+						<width max="1350">auto</width>
 						<label>$PARAM[label_focus_collections]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<visible>$PARAM[visible]</visible>
@@ -399,7 +399,7 @@
 							</control>
 						</control>
 						<control type="grouplist">
-							<width>130</width>
+							<width>145</width>
 							<orientation>horizontal</orientation>
 							<itemgap>8</itemgap>
 							<align>center</align>
@@ -421,14 +421,14 @@
 							</control>
 						</control>
 						<control type="grouplist">
-							<width>130</width>
+							<width>135</width>
 							<orientation>horizontal</orientation>
 							<itemgap>8</itemgap>
 							<align>center</align>
 							<visible>!String.IsEmpty(Window.Property(fentastic.popularRating))</visible>
 							<control type="image">
 								<top>45</top>
-								<width>52</width>
+								<width>27</width>
 								<!-- <height>32</height> -->
 								<aspectratio>keep</aspectratio>
 								<align>right</align>
@@ -436,14 +436,14 @@
 								<texture>$INFO[Window.Property(fentastic.popularImage)]</texture>
 							</control>
 							<control type="label">
-								<width max="75">auto</width>
+								<width max="70">auto</width>
 								<height>32</height>
 								<align>left</align>
 								<label>$INFO[Window.Property(fentastic.popularRating)]</label>
 							</control>
 						</control>
 						<control type="grouplist">
-							<width>110</width>
+							<width>125</width>
 							<orientation>horizontal</orientation>
 							<itemgap>6</itemgap>
 							<align>center</align>
