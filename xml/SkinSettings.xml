@@ -280,8 +280,8 @@
 				</control>
 				<!-- RATINGS -->	
 				<control type="button" id="63709">
-					<label>Enter OMDb API Key</label>
-					<label2>$INFO[Skin.String(omdb_api_key)]</label2>
+					<label>Enter MDbList API Key</label>
+					<label2>$INFO[Skin.String(mdblist_api_key)]</label2>
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.fentastic.helper, mode=set_api_key)</onclick>
 				</control>
@@ -290,20 +290,20 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(Disable.RatingsINF)</onclick>
 					<selected>!Skin.HasSetting(Disable.RatingsINF)</selected>
-					<visible>!String.IsEmpty(Skin.String(omdb_api_key))</visible>
+					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
 				</control>
 				<control type="radiobutton" id="63711">
 					<label>    - Enable ratings for widget labels</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(Disable.WidgetLabelRatings)</onclick>
 					<selected>!Skin.HasSetting(Disable.WidgetLabelRatings)</selected>
-					<visible>!String.IsEmpty(Skin.String(omdb_api_key))</visible>
+					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
 				</control>
 				<control type="button" id="63712">
-					<label>    - Clear OMDb API Key</label>
+					<label>    - Clear MDbList API Key</label>
 					<include>DefaultSettingButton</include>
-					<onclick>Skin.SetString(omdb_api_key,)</onclick>
-					<visible>!String.IsEmpty(Skin.String(omdb_api_key))</visible>
+					<onclick>Skin.SetString(mdblist_api_key,)</onclick>
+					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
 				</control>
 			</control>
 

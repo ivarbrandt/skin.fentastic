@@ -1064,7 +1064,7 @@
 						<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 					<control type="group">
-						<visible>Skin.HasSetting(Disable.RatingsINF) | String.IsEmpty(Skin.String(omdb_api_key))</visible>
+						<visible>Skin.HasSetting(Disable.RatingsINF) | String.IsEmpty(Skin.String(mdblist_api_key))</visible>
 						<control type="textbox">
 							<left>30</left>
 							<top>239</top>
@@ -1095,7 +1095,7 @@
 							<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 						</control>
 					</control>
-					<include condition="![Skin.HasSetting(Disable.RatingsINF) | String.IsEmpty(Skin.String(omdb_api_key))]" content="RatingsInfoPanel">
+					<include condition="![Skin.HasSetting(Disable.RatingsINF) | String.IsEmpty(Skin.String(mdblist_api_key))]" content="RatingsInfoPanel">
 						<param name="left" value="30" />
 						<param name="width" value="410" />
 						<param name="top" value="239" />

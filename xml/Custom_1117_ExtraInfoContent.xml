@@ -2,6 +2,7 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR accent_color]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
+- Switched ratings source to MDbList
 - Added optional one-click close of Kodi via the homescreen power button. If you decide to use this you can still access the shutdown menu by holding the back key/backspace on your remote/keyboard.
 - Other changes/fixes
 
@@ -15,7 +16,7 @@
 - Updated UI for a more artwork centric experience
 - Updated widgets to handle menu items better
 - Added 3 NEW custom main menu sections
-- Added ratings (enter OMDb API Key in Skin settings to activate)
+- Added ratings (enter MDbList API Key in Skin settings to activate)
 - Added switch for Landscape/Clearlogo on WideList view
 - Added custom default background selection
 - Added optional color studio logos

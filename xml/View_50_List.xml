@@ -245,7 +245,7 @@
 					<top>105</top>
 					<orientation>vertical</orientation>
 					<itemgap>13</itemgap>
-					<visible>!String.IsEmpty(Skin.String(omdb_api_key))</visible>
+					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
 					<control type="textbox">
 						<aligny>center</aligny>
 						<height>110</height>
@@ -491,7 +491,7 @@
 				</control>
 				<!-- image control -->
 				<control type="group">
-					<visible>String.IsEmpty(Skin.String(omdb_api_key))</visible>
+					<visible>String.IsEmpty(Skin.String(mdblist_api_key))</visible>
 					<control type="image">
 						<left>30</left>
 						<top>110</top>
@@ -550,7 +550,7 @@
 					<!-- <aspectratio aligny="top">scale</aspectratio> -->
 					<fadetime>300</fadetime>
 					<texture diffuse="masks/landscape.png">$INFO[ListItem.Icon]</texture>
-					<visible>String.IsEmpty(Skin.String(omdb_api_key)) + String.IsEqual(ListItem.DbType,episode)</visible>
+					<visible>String.IsEmpty(Skin.String(mdblist_api_key)) + String.IsEqual(ListItem.DbType,episode)</visible>
 				</control>
 				<control type="image">
 					<left>30</left>
@@ -592,7 +592,7 @@
 					<left>30</left>
 					<!-- Plot control -->
 					<control type="group">
-						<visible>String.IsEmpty(Skin.String(omdb_api_key))</visible>
+						<visible>String.IsEmpty(Skin.String(mdblist_api_key))</visible>
 						<control type="textbox">
 							<top>460</top>
 							<width>540</width>
@@ -623,7 +623,7 @@
 					</control>
 					<!-- Plot control episodes -->
 					<control type="group">
-						<visible>String.IsEmpty(Skin.String(omdb_api_key))</visible>
+						<visible>String.IsEmpty(Skin.String(mdblist_api_key))</visible>
 						<control type="textbox" id="15501">
 							<top>503</top>
 							<width>540</width>

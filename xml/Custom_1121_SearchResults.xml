@@ -237,9 +237,9 @@
 						<label>$VAR[InfoPanel]</label>
 						<textcolor>unfocused_text</textcolor>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
-						<visible>Skin.HasSetting(Disable.RatingsINF) | String.IsEmpty(Skin.String(omdb_api_key))</visible>
+						<visible>Skin.HasSetting(Disable.RatingsINF) | String.IsEmpty(Skin.String(mdblist_api_key))</visible>
 					</control>
-					<include condition="![Skin.HasSetting(Disable.RatingsINF) | String.IsEmpty(Skin.String(omdb_api_key))]" content="RatingsInfoPanel">
+					<include condition="![Skin.HasSetting(Disable.RatingsINF) | String.IsEmpty(Skin.String(mdblist_api_key))]" content="RatingsInfoPanel">
 						<param name="left" value="30" />
 						<param name="width" value="410" />
 						<param name="top" value="239" />

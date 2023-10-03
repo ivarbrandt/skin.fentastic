@@ -45,7 +45,7 @@
 						<scroll>true</scroll>
 						<scrollspeed>100</scrollspeed>
 						<visible>!String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
-						<visible>![String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
+						<visible>![String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
 					</control>
 					<control type="label">
 						<width max="1085">auto</width>
@@ -54,7 +54,7 @@
 						<scroll>true</scroll>
 						<scrollspeed>100</scrollspeed>
 						<visible>String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
-						<visible>![String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
+						<visible>![String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
 					</control>
 					<control type="label">
 						<width max="1350">auto</width>
@@ -63,7 +63,7 @@
 						<scroll>true</scroll>
 						<scrollspeed>100</scrollspeed>
 						<visible>[String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)] + Control.HasFocus($PARAM[list_id])</visible>
-						<visible>![String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
+						<visible>![String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
 					</control>
 					<!-- RATINGS NOT VISIBLE -->
 					<control type="label">
@@ -73,7 +73,7 @@
 						<scroll>true</scroll>
 						<scrollspeed>100</scrollspeed>
 						<visible>!String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
-						<visible>[String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
+						<visible>[String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
 					</control>
 					<control type="label">
 						<width max="1350">auto</width>
@@ -82,7 +82,7 @@
 						<scroll>true</scroll>
 						<scrollspeed>100</scrollspeed>
 						<visible>String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
-						<visible>[String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
+						<visible>[String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
 					</control>
 					<control type="label">
 						<width max="1350">auto</width>
@@ -91,10 +91,10 @@
 						<scroll>true</scroll>
 						<scrollspeed>100</scrollspeed>
 						<visible>[String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)] + Control.HasFocus($PARAM[list_id])</visible>
-						<visible>[String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
+						<visible>[String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
 					</control>
 					<control type="grouplist">
-						<visible>![String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)] + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre) + Control.HasFocus($PARAM[list_id])</visible>
+						<visible>![String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)] + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre) + Control.HasFocus($PARAM[list_id])</visible>
 						<orientation>horizontal</orientation>
 						<aligny>center</aligny>
 						<itemgap>20</itemgap>
@@ -250,7 +250,7 @@
 						<scrollspeed>100</scrollspeed>
 						<visible>$PARAM[visible]</visible>
 						<visible>!String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
-						<visible>![String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
+						<visible>![String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
 					</control>
 					<control type="label" id="$PARAM[list_id]668">
 						<visible>!Container($PARAM[list_id]).IsUpdating</visible>
@@ -261,7 +261,7 @@
 						<scroll>true</scroll>
 						<scrollspeed>100</scrollspeed>
 						<visible>String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
-						<visible>![String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
+						<visible>![String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
 					</control>
 					<control type="label" id="$PARAM[list_id]669">
 						<visible>!Container($PARAM[list_id]).IsUpdating</visible>
@@ -272,7 +272,7 @@
 						<scroll>true</scroll>
 						<scrollspeed>100</scrollspeed>
 						<visible>[String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)] + Control.HasFocus($PARAM[list_id])</visible>
-						<visible>![String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
+						<visible>![String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
 					</control>
 					<!-- RATINGS NOT VISIBLE -->
 					<control type="label" id="$PARAM[list_id]670">
@@ -284,7 +284,7 @@
 						<scrollspeed>100</scrollspeed>
 						<visible>$PARAM[visible]</visible>
 						<visible>!String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
-						<visible>[String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
+						<visible>[String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
 					</control>
 					<control type="label" id="$PARAM[list_id]671">
 						<visible>!Container($PARAM[list_id]).IsUpdating</visible>
@@ -295,7 +295,7 @@
 						<scroll>true</scroll>
 						<scrollspeed>100</scrollspeed>
 						<visible>String.IsEqual(ListItem.DBType,episode) + Control.HasFocus($PARAM[list_id])</visible>
-						<visible>[String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
+						<visible>[String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
 					</control>
 					<control type="label" id="$PARAM[list_id]672">
 						<visible>!Container($PARAM[list_id]).IsUpdating</visible>
@@ -306,10 +306,10 @@
 						<scroll>true</scroll>
 						<scrollspeed>100</scrollspeed>
 						<visible>[String.IsEqual(ListItem.DBtype,movie) + String.IsEmpty(ListItem.Genre)] + Control.HasFocus($PARAM[list_id])</visible>
-						<visible>[String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
+						<visible>[String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
 					</control>
 					<control type="grouplist">
-						<visible>![String.IsEmpty(Skin.String(omdb_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings) | Container($PARAM[list_id]).IsUpdating] + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre) + Control.HasFocus($PARAM[list_id])</visible>
+						<visible>![String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings) | Container($PARAM[list_id]).IsUpdating] + [String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre) + Control.HasFocus($PARAM[list_id])</visible>
 						<orientation>horizontal</orientation>
 						<aligny>center</aligny>
 						<itemgap>20</itemgap>
