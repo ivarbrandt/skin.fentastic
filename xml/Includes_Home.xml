@@ -48,7 +48,7 @@
 						<visible>![String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
 					</control>
 					<control type="label">
-						<width max="1085">auto</width>
+						<width max="735">auto</width>
 						<label>$PARAM[label]$PARAM[label_focus_episodes]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<scroll>true</scroll>
@@ -254,7 +254,7 @@
 					</control>
 					<control type="label" id="$PARAM[list_id]668">
 						<visible>!Container($PARAM[list_id]).IsUpdating</visible>
-						<width max="1085">auto</width>
+						<width max="735">auto</width>
 						<label>$PARAM[label]$PARAM[label_focus_episodes]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<visible>$PARAM[visible]</visible>
