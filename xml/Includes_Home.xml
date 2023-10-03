@@ -184,6 +184,28 @@
 							</control>
 						</control>
 						<control type="grouplist">
+							<width>130</width>
+							<orientation>horizontal</orientation>
+							<itemgap>8</itemgap>
+							<align>center</align>
+							<visible>!String.IsEmpty(Window.Property(fentastic.popularRating))</visible>
+							<control type="image">
+								<top>45</top>
+								<width>52</width>
+								<!-- <height>32</height> -->
+								<aspectratio>keep</aspectratio>
+								<align>right</align>
+								<aligny>center</aligny>
+								<texture>$INFO[Window.Property(fentastic.popularImage)]</texture>
+							</control>
+							<control type="label">
+								<width max="75">auto</width>
+								<height>32</height>
+								<align>left</align>
+								<label>$INFO[Window.Property(fentastic.popularRating)]</label>
+							</control>
+						</control>
+						<control type="grouplist">
 							<width>110</width>
 							<orientation>horizontal</orientation>
 							<itemgap>6</itemgap>
@@ -396,6 +418,28 @@
 								<height>32</height>
 								<align>left</align>
 								<label>$INFO[Window.Property(fentastic.imdbRating)]</label>
+							</control>
+						</control>
+						<control type="grouplist">
+							<width>130</width>
+							<orientation>horizontal</orientation>
+							<itemgap>8</itemgap>
+							<align>center</align>
+							<visible>!String.IsEmpty(Window.Property(fentastic.popularRating))</visible>
+							<control type="image">
+								<top>45</top>
+								<width>52</width>
+								<!-- <height>32</height> -->
+								<aspectratio>keep</aspectratio>
+								<align>right</align>
+								<aligny>center</aligny>
+								<texture>$INFO[Window.Property(fentastic.popularImage)]</texture>
+							</control>
+							<control type="label">
+								<width max="75">auto</width>
+								<height>32</height>
+								<align>left</align>
+								<label>$INFO[Window.Property(fentastic.popularRating)]</label>
 							</control>
 						</control>
 						<control type="grouplist">

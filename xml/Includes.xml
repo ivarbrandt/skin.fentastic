@@ -1780,13 +1780,13 @@
 				<aligny>center</aligny>
 				<visible>[String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre)</visible>
 				<control type="grouplist">
-					<width>75</width>
+					<width>60</width>
 					<orientation>vertical</orientation>
 					<itemgap>5</itemgap>
 					<align>center</align>
 					<visible>!String.IsEmpty(Window.Property(fentastic.metascore))</visible>
 					<control type="image">
-						<width>75</width>
+						<width>60</width>
 						<height>36</height>
 						<aspectratio>keep</aspectratio>
 						<align>center</align>
@@ -1794,7 +1794,7 @@
 						<texture>$INFO[Window.Property(fentastic.metascoreImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="75">auto</width>
+						<width max="60">auto</width>
 						<height>42</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1803,13 +1803,13 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<width>75</width>
+					<width>60</width>
 					<orientation>vertical</orientation>
 					<itemgap>5</itemgap>
 					<align>center</align>
 					<visible>!String.IsEmpty(Window.Property(fentastic.tomatoMeter))</visible>
 					<control type="image">
-						<width>75</width>
+						<width>60</width>
 						<height>36</height>
 						<aspectratio>keep</aspectratio>
 						<align>center</align>
@@ -1817,7 +1817,7 @@
 						<texture>$INFO[Window.Property(fentastic.tomatoImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="75">auto</width>
+						<width max="60">auto</width>
 						<height>42</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1826,13 +1826,13 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<width>75</width>
+					<width>60</width>
 					<orientation>vertical</orientation>
 					<itemgap>5</itemgap>
 					<align>center</align>
 					<visible>!String.IsEmpty(Window.Property(fentastic.tomatoUserMeter))</visible>
 					<control type="image">
-						<width>75</width>
+						<width>60</width>
 						<height>36</height>
 						<aspectratio>keep</aspectratio>
 						<align>center</align>
@@ -1840,7 +1840,7 @@
 						<texture>$INFO[Window.Property(fentastic.tomatoUserImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="75">auto</width>
+						<width max="60">auto</width>
 						<height>42</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1849,13 +1849,13 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<width>75</width>
+					<width>60</width>
 					<orientation>vertical</orientation>
 					<itemgap>5</itemgap>
 					<align>center</align>
 					<visible>!String.IsEmpty(Window.Property(fentastic.imdbRating))</visible>
 					<control type="image">
-						<width>75</width>
+						<width>60</width>
 						<height>36</height>
 						<aspectratio>keep</aspectratio>
 						<align>center</align>
@@ -1863,7 +1863,7 @@
 						<texture>$INFO[Window.Property(fentastic.imdbImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="75">auto</width>
+						<width max="60">auto</width>
 						<height>42</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -1872,13 +1872,36 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<width>65</width>
+					<width>70</width>
+					<orientation>vertical</orientation>
+					<itemgap>5</itemgap>
+					<align>center</align>
+					<visible>!String.IsEmpty(Window.Property(fentastic.popularRating))</visible>
+					<control type="image">
+						<width>70</width>
+						<height>36</height>
+						<aspectratio>keep</aspectratio>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texture>$INFO[Window.Property(fentastic.popularImage)]</texture>
+					</control>
+					<control type="label">
+						<width max="70">auto</width>
+						<height>42</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window.Property(fentastic.popularRating)]</label>
+						<textcolor>unfocused_text</textcolor>
+					</control>
+				</control>
+				<control type="grouplist">
+					<width>60</width>
 					<orientation>vertical</orientation>
 					<itemgap>5</itemgap>
 					<align>center</align>
 					<visible>!String.IsEmpty(Window.Property(fentastic.tmdbRating))</visible>
 					<control type="image">
-						<width>65</width>
+						<width>60</width>
 						<height>36</height>
 						<aspectratio>keep</aspectratio>
 						<align>center</align>
@@ -1886,7 +1909,7 @@
 						<texture>$INFO[Window.Property(fentastic.tmdbImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="65">auto</width>
+						<width max="60">auto</width>
 						<height>42</height>
 						<align>center</align>
 						<aligny>center</aligny>
