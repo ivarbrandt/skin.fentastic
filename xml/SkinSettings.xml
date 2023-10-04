@@ -306,7 +306,7 @@
 					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
 				</control>
 				<control type="button" id="63713">
-					<label>    - Clear all ratings</label>
+					<label>    - Clear ratings cache</label>
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.fentastic.helper,mode=delete_all_ratings)</onclick>
 					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
