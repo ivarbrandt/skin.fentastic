@@ -340,7 +340,7 @@
 							<orientation>horizontal</orientation>
 							<itemgap>8</itemgap>
 							<align>center</align>
-							<visible>!String.IsEmpty(Window.Property(fentastic.metascore))</visible>
+							<visible>![String.IsEmpty(Window.Property(fentastic.metascore)) | Skin.HasSetting(Disable.MetacriticRating)]</visible>
 							<control type="image">
 								<top>45</top>
 								<width>35</width>
@@ -361,7 +361,7 @@
 							<orientation>horizontal</orientation>
 							<itemgap>8</itemgap>
 							<align>center</align>
-							<visible>!String.IsEmpty(Window.Property(fentastic.tomatoMeter))</visible>
+							<visible>![String.IsEmpty(Window.Property(fentastic.tomatoMeter)) | Skin.HasSetting(Disable.RTCRating)]</visible>
 							<control type="image">
 								<top>45</top>
 								<width>35</width>
@@ -382,7 +382,7 @@
 							<orientation>horizontal</orientation>
 							<itemgap>6</itemgap>
 							<align>center</align>
-							<visible>!String.IsEmpty(Window.Property(fentastic.tomatoUserMeter))</visible>
+							<visible>![String.IsEmpty(Window.Property(fentastic.tomatoUserMeter)) | Skin.HasSetting(Disable.RTARating)]</visible>
 							<control type="image">
 								<top>45</top>
 								<width>35</width>
@@ -403,7 +403,7 @@
 							<orientation>horizontal</orientation>
 							<itemgap>8</itemgap>
 							<align>center</align>
-							<visible>!String.IsEmpty(Window.Property(fentastic.imdbRating))</visible>
+							<visible>![String.IsEmpty(Window.Property(fentastic.imdbRating)) | Skin.HasSetting(Disable.IMDbRating)]</visible>
 							<control type="image">
 								<top>45</top>
 								<width>52</width>
@@ -425,7 +425,7 @@
 							<orientation>horizontal</orientation>
 							<itemgap>8</itemgap>
 							<align>center</align>
-							<visible>!String.IsEmpty(Window.Property(fentastic.popularRating))</visible>
+							<visible>![String.IsEmpty(Window.Property(fentastic.popularRating)) | Skin.HasSetting(Disable.IMDbPopularRating)]</visible>
 							<control type="image">
 								<top>45</top>
 								<width>27</width>
@@ -447,7 +447,7 @@
 							<orientation>horizontal</orientation>
 							<itemgap>6</itemgap>
 							<align>center</align>
-							<visible>!String.IsEmpty(Window.Property(fentastic.tmdbRating))</visible>
+							<visible>![String.IsEmpty(Window.Property(fentastic.tmdbRating)) | Skin.HasSetting(Disable.TMDbRating)]</visible>
 							<control type="image">
 								<top>45</top>
 								<width>33</width>
