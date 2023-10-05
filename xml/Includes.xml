@@ -1872,13 +1872,13 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<width>70</width>
+					<width>60</width>
 					<orientation>vertical</orientation>
 					<itemgap>5</itemgap>
 					<align>center</align>
 					<visible>![String.IsEmpty(Window.Property(fentastic.popularRating)) | Skin.HasSetting(Disable.IMDbPopularRating)]</visible>
 					<control type="image">
-						<width>70</width>
+						<width>60</width>
 						<height>36</height>
 						<aspectratio>keep</aspectratio>
 						<align>center</align>
@@ -1886,7 +1886,7 @@
 						<texture>$INFO[Window.Property(fentastic.popularImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="70">auto</width>
+						<width max="60">auto</width>
 						<height>42</height>
 						<align>center</align>
 						<aligny>center</aligny>
