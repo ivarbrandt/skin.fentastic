@@ -603,7 +603,6 @@
 					<aspectratio align="center" aligny="top">keep</aspectratio>
 					<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 				</control>
-				<!-- TODO Fix progress bar not showing on episodes -->
 				<include condition="Skin.HasSetting(UseLandscape)" content="ProgressBar">
 					<!-- 30 -->
 					<param name="left" value="65"/>

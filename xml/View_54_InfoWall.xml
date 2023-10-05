@@ -340,7 +340,6 @@
 					<visible>![$PARAM[focused] + Control.HasFocus($PARAM[list_id])]</visible>
 					<align>center</align>
 				</control>
-				<!-- TODO check logs for errors -->
 				<control type="label">
 					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
 					<left>15%</left>
