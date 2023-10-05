@@ -278,39 +278,6 @@
 					<onclick>Skin.ToggleSetting(Disable.ColorStudio)</onclick>
 					<selected>!Skin.HasSetting(Disable.ColorStudio)</selected>
 				</control>
-				<!-- RATINGS -->	
-				<control type="button" id="63709">
-					<label>Enter MDbList API Key</label>
-					<label2>$INFO[Skin.String(mdblist_api_key)]</label2>
-					<include>DefaultSettingButton</include>
-					<onclick>RunScript(script.fentastic.helper, mode=set_api_key)</onclick>
-				</control>
-				<control type="radiobutton" id="63710">
-					<label>    - Enable ratings for homescreen InfoPanel</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(Disable.RatingsINF)</onclick>
-					<selected>!Skin.HasSetting(Disable.RatingsINF)</selected>
-					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
-				</control>
-				<control type="radiobutton" id="63711">
-					<label>    - Enable ratings for widget labels</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(Disable.WidgetLabelRatings)</onclick>
-					<selected>!Skin.HasSetting(Disable.WidgetLabelRatings)</selected>
-					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
-				</control>
-				<control type="button" id="63712">
-					<label>    - Clear MDbList API Key</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.SetString(mdblist_api_key,)</onclick>
-					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
-				</control>
-				<control type="button" id="63713">
-					<label>    - Clear ratings cache</label>
-					<include>DefaultSettingButton</include>
-					<onclick>RunScript(script.fentastic.helper,mode=delete_all_ratings)</onclick>
-					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
-				</control>
 			</control>
 
 			<control type="grouplist" id="647">
@@ -390,6 +357,94 @@
 				</control>
 			</control>
 
+			<control type="grouplist" id="648">
+				<top>133</top>
+				<left>25</left>
+				<right>0</right>
+				<bottom>140</bottom>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>648</onup>
+				<pagecontrol>60</pagecontrol>
+				<ondown>648</ondown>
+				<visible>Container(9000).HasFocus(4)</visible>
+				<!-- RATINGS -->	
+				<control type="button" id="6480">
+					<label>Enter MDbList API Key</label>
+					<label2>$INFO[Skin.String(mdblist_api_key)]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick>RunScript(script.fentastic.helper, mode=set_api_key)</onclick>
+				</control>
+				<control type="radiobutton" id="64801">
+					<label>Enable ratings for homescreen InfoPanel</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(Disable.RatingsINF)</onclick>
+					<selected>!Skin.HasSetting(Disable.RatingsINF)</selected>
+					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
+				</control>
+				<control type="radiobutton" id="64802">
+					<label>Enable ratings for widget labels</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(Disable.WidgetLabelRatings)</onclick>
+					<selected>!Skin.HasSetting(Disable.WidgetLabelRatings)</selected>
+					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
+				</control>
+				<control type="radiobutton" id="64803">
+					<label>    - Metacritic</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(Disable.MetacriticRating)</onclick>
+					<selected>!Skin.HasSetting(Disable.MetacriticRating)</selected>
+					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
+				</control>
+				<control type="radiobutton" id="64804">
+					<label>    - Rotten Tomatoes (Critic)</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(Disable.RTCRating)</onclick>
+					<selected>!Skin.HasSetting(Disable.RTCRating)</selected>
+					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
+				</control>
+				<control type="radiobutton" id="64805">
+					<label>    - Rotten Tomatoes (Audience)</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(Disable.RTARating)</onclick>
+					<selected>!Skin.HasSetting(Disable.RTARating)</selected>
+					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
+				</control>
+				<control type="radiobutton" id="64806">
+					<label>    - IMDb (Main)</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(Disable.IMDbRating)</onclick>
+					<selected>!Skin.HasSetting(Disable.IMDbRating)</selected>
+					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
+				</control>
+				<control type="radiobutton" id="64807">
+					<label>    - IMDb (Popular)</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(Disable.IMDbPopularRating)</onclick>
+					<selected>!Skin.HasSetting(Disable.IMDbPopularRating)</selected>
+					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
+				</control>
+				<control type="radiobutton" id="64808">
+					<label>    - TMDb</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(Disable.TMDbRating)</onclick>
+					<selected>!Skin.HasSetting(Disable.TMDbRating)</selected>
+					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
+				</control>
+				<control type="button" id="64809">
+					<label>    - Clear MDbList API Key</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.SetString(mdblist_api_key,)</onclick>
+					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
+				</control>
+				<control type="button" id="64810">
+					<label>    - Clear ratings cache</label>
+					<include>DefaultSettingButton</include>
+					<onclick>RunScript(script.fentastic.helper,mode=delete_all_ratings)</onclick>
+					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
+				</control>
+			</control>
+
 			<control type="grouplist" id="700">
 				<top>133</top>
 				<left>25</left>
@@ -399,7 +454,7 @@
 				<onright>60</onright>
 				<onup>700</onup>
 				<ondown>700</ondown>
-				<visible>Container(9000).HasFocus(4)</visible>
+				<visible>Container(9000).HasFocus(5)</visible>
 				<control type="radiobutton" id="702">
 					<label>$LOCALIZE[31095]</label>
 					<include>DefaultSettingButton</include>
@@ -454,7 +509,7 @@
 				<onright>60</onright>
 				<onup>600</onup>
 				<ondown>600</ondown>
-				<visible>Container(9000).HasFocus(5)</visible>
+				<visible>Container(9000).HasFocus(6)</visible>
 				<control type="radiobutton" id="603">
 					<label>$LOCALIZE[31002]</label>
 					<include>DefaultSettingButton</include>
@@ -535,7 +590,7 @@
 				<onup>622</onup>
 				<pagecontrol>60</pagecontrol>
 				<ondown>622</ondown>
-				<visible>Container(9000).HasFocus(6)</visible>
+				<visible>Container(9000).HasFocus(7)</visible>
 				<control type="radiobutton" id="6220">
 					<label>$LOCALIZE[31172]</label>
 					<include>DefaultSettingButton</include>
@@ -562,7 +617,7 @@
 				<onup>623</onup>
 				<pagecontrol>60</pagecontrol>
 				<ondown>623</ondown>
-				<visible>Container(9000).HasFocus(7)</visible>
+				<visible>Container(9000).HasFocus(8)</visible>
 				<control type="button" id="6230">
 					<include>DefaultSettingButton</include>
 					<label>[B]CHANGELOG: $INFO[System.AddonTitle(skin.fentastic)][/B]</label>
@@ -648,27 +703,31 @@
 						<label>$LOCALIZE[31061]</label>
 						<onclick>noop</onclick>
 					</item>
+					<item id="5">
+						<label>$LOCALIZE[128]</label>
+						<onclick>noop</onclick>
+					</item>
 					<item id="2">
 						<label>Options</label>
+						<onclick>noop</onclick>
+					</item>
+					<item id="4">
+						<label>Ratings</label>
 						<onclick>noop</onclick>
 					</item>
 					<item id="3">
 						<label>Search</label>
 						<onclick>noop</onclick>
 					</item>
-					<item id="4">
-						<label>$LOCALIZE[128]</label>
-						<onclick>noop</onclick>
-					</item>
-					<item id="5">
+					<item id="6">
 						<label>$LOCALIZE[31159]</label>
 						<onclick>noop</onclick>
 					</item>
-					<item id="6">
+					<item id="7">
 						<label>$LOCALIZE[31170]</label>
 						<onclick>noop</onclick>
 					</item>
-					<item id="7">
+					<item id="8">
 						<label>Extra info</label>
 						<onclick>noop</onclick>
 					</item>
