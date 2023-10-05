@@ -1895,21 +1895,21 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<width>60</width>
+					<width>65</width>
 					<orientation>vertical</orientation>
-					<itemgap>5</itemgap>
+					<itemgap>8</itemgap>
 					<align>center</align>
 					<visible>![String.IsEmpty(Window.Property(fentastic.tmdbRating)) | Skin.HasSetting(Disable.TMDbRating)]</visible>
 					<control type="image">
-						<width>60</width>
-						<height>27</height>
+						<width>65</width>
+						<height>33</height>
 						<aspectratio>keep</aspectratio>
 						<align>center</align>
 						<aligny>center</aligny>
 						<texture>$INFO[Window.Property(fentastic.tmdbImage)]</texture>
 					</control>
 					<control type="label">
-						<width max="60">auto</width>
+						<width max="65">auto</width>
 						<height>42</height>
 						<align>center</align>
 						<aligny>center</aligny>
