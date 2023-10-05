@@ -1902,7 +1902,7 @@
 					<visible>![String.IsEmpty(Window.Property(fentastic.tmdbRating)) | Skin.HasSetting(Disable.TMDbRating)]</visible>
 					<control type="image">
 						<width>60</width>
-						<height>36</height>
+						<height>27</height>
 						<aspectratio>keep</aspectratio>
 						<align>center</align>
 						<aligny>center</aligny>
