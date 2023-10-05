@@ -580,9 +580,9 @@
 					<top>110</top>
 					<width>540</width>
 					<height>470</height>
-					<aspectratio aligny="bottom">scale</aspectratio>
+					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>300</fadetime>
-					<texture diffuse="masks/landscape.png" fallback="DefaultAudio.png" background="true">$VAR[IconWallThumbVar]</texture>
+					<texture diffuse="masks/addons.png" fallback="DefaultAudio.png" background="true">$VAR[IconWallThumbVar]</texture>
 					<visible>String.IsEqual(ListItem.DBType,song)</visible>
 				</control>
 				<control type="image">
