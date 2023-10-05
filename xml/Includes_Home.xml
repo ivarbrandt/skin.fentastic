@@ -39,7 +39,7 @@
 					</control>
 					<!-- RATINGS VISIBLE -->
 					<control type="label">
-						<width max="700">auto</width>
+						<width max="695">auto</width>
 						<label>$PARAM[label]$PARAM[label_focus]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<scroll>true</scroll>
@@ -48,7 +48,7 @@
 						<visible>![String.IsEmpty(Skin.String(mdblist_api_key)) | Skin.HasSetting(Disable.WidgetLabelRatings)]</visible>
 					</control>
 					<control type="label">
-						<width max="700">auto</width>
+						<width max="695">auto</width>
 						<label>$PARAM[label]$PARAM[label_focus_episodes]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<scroll>true</scroll>
@@ -208,12 +208,12 @@
 						<control type="grouplist">
 							<width>93</width>
 							<orientation>horizontal</orientation>
-							<itemgap>6</itemgap>
+							<itemgap>8</itemgap>
 							<align>left</align>
 							<visible>![String.IsEmpty(Window.Property(fentastic.tmdbRating)) | Skin.HasSetting(Disable.TMDbRating)]</visible>
 							<control type="image">
 								<top>45</top>
-								<width>33</width>
+								<width>36</width>
 								<aspectratio>keep</aspectratio>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -265,7 +265,7 @@
 					<!-- RATINGS VISIBLE -->
 					<control type="label" id="$PARAM[list_id]667">
 						<visible>!Container($PARAM[list_id]).IsUpdating</visible>
-						<width max="700">auto</width>
+						<width max="695">auto</width>
 						<label>$PARAM[label]$PARAM[label_focus]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<scroll>true</scroll>
@@ -276,7 +276,7 @@
 					</control>
 					<control type="label" id="$PARAM[list_id]668">
 						<visible>!Container($PARAM[list_id]).IsUpdating</visible>
-						<width max="700">auto</width>
+						<width max="695">auto</width>
 						<label>$PARAM[label]$PARAM[label_focus_episodes]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<visible>$PARAM[visible]</visible>
@@ -445,12 +445,12 @@
 						<control type="grouplist">
 							<width>93</width>
 							<orientation>horizontal</orientation>
-							<itemgap>6</itemgap>
+							<itemgap>8</itemgap>
 							<align>left</align>
 							<visible>![String.IsEmpty(Window.Property(fentastic.tmdbRating)) | Skin.HasSetting(Disable.TMDbRating)]</visible>
 							<control type="image">
 								<top>45</top>
-								<width>33</width>
+								<width>36</width>
 								<aspectratio>keep</aspectratio>
 								<align>left</align>
 								<aligny>center</aligny>
