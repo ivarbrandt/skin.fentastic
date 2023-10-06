@@ -13,7 +13,7 @@
   • [COLOR darkorange][B]ORANGE[/B][/COLOR] flame = Middle third (33 - 66)
   • [COLOR dodgerblue][B]BLUE[/B][/COLOR] flame = Bottom third (66 - 100)
 
-[COLOR red][B]IMPORTANT: After you have entered in your MDbList API key, I HIGHLY recommend clicking the "Clear ratings cache" button in Skin settings and then restarting Kodi before trying to fetch new ratings again. If you do not do this you may run into errors. This is a one time thing that will ensure you won't encounter any issues after the switch to MDbList.[/B][/COLOR]
+[COLOR red][B]IMPORTANT: After you have entered in your MDbList API key, I HIGHLY recommend clicking the "Clear ratings cache" button in Skin settings and then restarting Kodi before trying to fetch new ratings again. If you do not do this you may run into errors. This is a one time thing that will minimize the possibility of running into issues related to the switch to MDbList.[/B][/COLOR]
 
 - Added optional one-click close of Kodi via the homescreen power button. If you decide to use this you can still access the shutdown menu by holding the back key/backspace on your remote/keyboard.
 - Other changes/fixes
