@@ -30,6 +30,8 @@
 			<control type="group" id="2000">
 				<left>462</left>
 				<include>OpenClose_Right</include>
+				<visible>!String.IsEqual(Skin.String(TrailerPlaying), true)</visible>
+				<animation effect="slide" time="700" start="1380,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 				<control type="group" id="27000">
 					<visible>false</visible>
 					<include content="Visible_Right_Delayed">
@@ -815,6 +817,8 @@
 			</include>
 			<include>BottomBar</include>
 			<control type="group">
+				<visible>!String.IsEqual(Skin.String(TrailerPlaying), true)</visible>
+				<animation effect="slide" time="700" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
 				<include content="ContentPanel">
@@ -1147,7 +1151,7 @@
 			</control>
 			<control type="group">
         <animation effect="slide" time="300" start="-492,0" end="0,0" tween="sine" easing="inout">VisibleChange</animation>
-        <visible>![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)]</visible>
+        <visible>![String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode) | String.IsEqual(Skin.String(TrailerPlaying), true)]</visible>
 				<depth>DepthBars</depth>
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
