@@ -6,6 +6,7 @@
 - Created Ratings section in Skin settings
 - Added on/off toggles for individual ratings
 - Added high quality icons for ratings
+- Added optional auto-trailers
 - Added IMDb popular ratings. These are from IMDb's most popular movies and tvshows. The rating for these is out of 100. The color coding of the new flame icon is as follows:
 
   • [COLOR blueviolet][B]PURPLE[/B][/COLOR] flame = Top 10
