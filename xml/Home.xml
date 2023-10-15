@@ -24,7 +24,6 @@
 			<imagepath background="true" colordiffuse="bg_overlay">$VAR[HomeFanartVar]</imagepath>
 			<visible>!Player.HasMedia</visible>
 		</control>
-		<!-- TODO Implement auto-trailers -->
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<!-- WIDGETS GROUP -->
