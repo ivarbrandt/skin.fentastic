@@ -261,13 +261,23 @@
 						<texture diffuse="masks/landscape.png" fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
 						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song) + !Container.Content(addons) + Skin.HasSetting(UseLandscape) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
-					<control type="image">
+					<!-- <control type="image">
 						<width>540</width>
 						<height>320</height>
 						<aspectratio aligny="top">keep</aspectratio>
 						<fadetime>300</fadetime>
-						<texture diffuse="masks/landscape.png" fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
+						<texture diffuse="masks/addons.png" fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
 						<visible>!Skin.HasSetting(UseLandscape) + ![String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)] + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
+					</control> -->
+					<control type="image">
+						<left>30</left>
+						<top>110</top>
+						<width>540</width>
+						<height>470</height>
+						<aspectratio aligny="top">keep</aspectratio>
+						<fadetime>300</fadetime>
+						<texture diffuse="masks/landscape.png" fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
+						<visible>!Skin.HasSetting(UseLandscape) + ![String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]</visible>
 					</control>
 					<control type="image">
 						<width>515</width>
@@ -532,7 +542,7 @@
 						<height>470</height>
 						<aspectratio aligny="top">keep</aspectratio>
 						<fadetime>300</fadetime>
-						<texture diffuse="masks/landscape.png" fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
+						<texture diffuse="masks/addons.png" fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
 						<visible>!Skin.HasSetting(UseLandscape) + ![String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]</visible>
 					</control>
 					<control type="image">
@@ -562,7 +572,7 @@
 					<height>470</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<fadetime>300</fadetime>
-					<texture diffuse="masks/landscapeinfo.png" fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
+					<texture diffuse="masks/addons.png" fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
 					<visible>Container.Content(addons)</visible>
 				</control>
 				<control type="image">
