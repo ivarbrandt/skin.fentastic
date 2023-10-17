@@ -7,7 +7,7 @@
 			<visible>String.IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>!Window.IsActive(startup) + !Player.Caching</visible>
-			<visible>!String.IsEqual(Skin.String(TrailerPlaying), true)</visible>
+			<visible>!Skin.HasSetting(TrailerPlaying)</visible>
 			<control type="image">
 				<texture>colors/black.png</texture>
 				<include>FullScreenDimensions</include>

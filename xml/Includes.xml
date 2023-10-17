@@ -380,6 +380,7 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture>$PARAM[texture]</texture>
 				<visible>$PARAM[visible]</visible>
+				<visible>!Skin.HasSetting(TrailerPlaying)</visible>
 			</control>
 		</definition>
 	</include>
@@ -934,7 +935,7 @@
 					<orientation>horizontal</orientation>
 					<width>1100</width>
 					<itemgap>10</itemgap>
-					<visible>!Window.IsVisible(extendedprogressdialog) + !Window.IsActive(fullscreenvideo) + !String.IsEqual(Skin.String(TrailerPlaying), true)</visible>
+					<visible>!Window.IsVisible(extendedprogressdialog) + !Window.IsActive(fullscreenvideo) + !Skin.HasSetting(TrailerPlaying)</visible>
 					<animation effect="fade" time="150">VisibleChange</animation>
 					<control type="group">
 						<width>600</width>
@@ -1141,14 +1142,14 @@
 	</include>
 	<include name="ColoredBackgroundImages">
 		<control type="image">
-			<visible>[Skin.HasSetting(no_fanart) | String.IsEmpty(Listitem.Art(fanart))] + !Player.HasMedia + !String.IsEqual(Skin.String(TrailerPlaying), true)</visible>
+			<visible>[Skin.HasSetting(no_fanart) | String.IsEmpty(Listitem.Art(fanart))] + !Player.HasMedia + !Skin.HasSetting(TrailerPlaying)</visible>
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="$VAR[BackgroundBrightnessVar]" fallback="special://skin/extras/backgrounds/redblur.jpg">$VAR[CustomBackgroundImage]</texture>
 		</control>
 		<control type="image">
-			<visible>Player.HasMedia</visible>
+			<visible>Player.HasMedia + !Skin.HasSetting(TrailerPlaying)</visible>
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
