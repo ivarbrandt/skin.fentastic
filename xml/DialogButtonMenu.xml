@@ -39,12 +39,6 @@
 						<onclick>ActivateWindow(systeminfo)</onclick>
 					</item>
 					<item>
-						<visible>Skin.HasSetting(TrailerPlaying)</visible>
-						<label>Fix black screen</label>
-						<onclick>Dialog.Close(all)</onclick>
-						<onclick>Skin.ToggleSetting(TrailerPlaying)</onclick>
-					</item>
-					<item>
 						<label>$LOCALIZE[13012]</label>
 						<onclick>Quit()</onclick>
 						<visible>System.ShowExitButton</visible>

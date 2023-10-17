@@ -8,6 +8,7 @@
   <onload condition="String.IsEmpty(Window(Home).Property(fentastic.starting_widgets))">RunScript(script.fentastic.helper,mode=starting_widgets)</onload>
   <onload condition="String.IsEmpty(Window(Home).Property(fentastic.starting_widgets))">SetProperty(fentastic.starting_widgets,true)</onload>
 	<onload>RunScript(script.fentastic.helper,mode=modify_keymap)</onload>
+	<onload>RunScript(script.fentastic.helper,mode=fix_black_screen)</onload>
 	<onload condition="String.IsEmpty(Skin.String(DefaultBackgroundBrightness))">Skin.SetString(DefaultBackgroundBrightness,Medium)</onload>
 	<onload condition="String.IsEmpty(Skin.String(DefaultFanartBrightness))">Skin.SetString(DefaultFanartBrightness,Medium)</onload>
 	<controls>
