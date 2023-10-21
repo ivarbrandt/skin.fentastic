@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1102">
 	<defaultcontrol always="true">1000</defaultcontrol>
+	<onunload>ClearProperty(TextViewerHeader,Home)</onunload>
+	<onunload>ClearProperty(TextViewerSubHeader,Home)</onunload>
+	<onunload>ClearProperty(TextViewer_Text,Home)</onunload>
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
 		<control type="group">
@@ -16,8 +19,8 @@
 			</include>
 			<control type="textbox" id="2000">
 				<left>3%</left>
-				<top>85</top>
-				<width>82%</width>
+				<top>105</top>
+				<width>78%</width>
 				<height>675</height>
 				<shadowcolor>black</shadowcolor>
 				<pagecontrol>3000</pagecontrol>
