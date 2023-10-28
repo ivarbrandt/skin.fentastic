@@ -16,6 +16,7 @@
 			<control type="group">
 				<include>OpenClose_Right</include>
 				<control type="button" id="5000">
+					<include>FocusBounce</include>
 					<left>625</left>
 					<top>430</top>
 					<width>695</width>
@@ -106,6 +107,7 @@
 					</itemlayout>
 					<focusedlayout height="225" width="405">
 						<control type="image">
+							<include>FocusBounce</include>
 							<left>4</left>
 							<top>16</top>
 							<width>393</width>
