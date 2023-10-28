@@ -184,7 +184,7 @@
 							</control>
 						</control>
 						<control type="grouplist">
-							<width>95</width>
+							<width>105</width>
 							<orientation>horizontal</orientation>
 							<itemgap>10</itemgap>
 							<align>left</align>
@@ -421,7 +421,7 @@
 							</control>
 						</control>
 						<control type="grouplist">
-							<width>95</width>
+							<width>105</width>
 							<orientation>horizontal</orientation>
 							<itemgap>10</itemgap>
 							<align>left</align>

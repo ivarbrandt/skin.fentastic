@@ -103,7 +103,7 @@
 						<param name="left" value="30" />
 						<param name="width" value="525" />
 						<param name="top" value="346" />
-						<param name="ratings_spacing" value="30" />
+						<param name="ratings_spacing" value="25" />
 						<param name="height_noalt" value="375" />
 						<param name="height_alt_movie" value="250" />
 						<param name="height_alt_tvshow" value="170" />

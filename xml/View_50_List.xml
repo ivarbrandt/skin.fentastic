@@ -309,7 +309,7 @@
 					<control type="grouplist">
 						<height>90</height>
 						<orientation>horizontal</orientation>
-						<itemgap>30</itemgap>
+						<itemgap>25</itemgap>
 						<aligny>center</aligny>
 						<visible>[String.IsEqual(ListItem.DBtype,movie) | String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBtype,season) | String.IsEqual(ListItem.DBtype,episode)] + !String.IsEmpty(ListItem.Genre)</visible>
 						<control type="grouplist">
@@ -405,13 +405,13 @@
 							</control>
 						</control>
 						<control type="grouplist">
-							<width>60</width>
+							<width>77</width>
 							<orientation>vertical</orientation>
 							<itemgap>5</itemgap>
 							<align>center</align>
 							<visible>![String.IsEmpty(Window.Property(fentastic.popularRating)) | Skin.HasSetting(Disable.IMDbPopularRating)]</visible>
 							<control type="image">
-								<width>60</width>
+								<width>87</width>
 								<height>36</height>
 								<aspectratio>keep</aspectratio>
 								<align>center</align>
@@ -419,7 +419,7 @@
 								<texture>$INFO[Window.Property(fentastic.popularImage)]</texture>
 							</control>
 							<control type="label">
-								<width max="60">auto</width>
+								<width max="87">auto</width>
 								<height>42</height>
 								<align>center</align>
 								<aligny>center</aligny>
