@@ -25,11 +25,14 @@
 		<param name="altclick">noop</param>
 		<definition>
 			<control type="togglebutton" id="$PARAM[control_id]">
+				<include>FocusBounce</include>
 				<width>472</width>
 				<height>49</height>
 				<textoffsetx>16</textoffsetx>
 				<aligny>center</aligny>
 				<font>font12</font>
+				<textcolor>unfocused_text</textcolor>
+				<focusedcolor>focused_text</focusedcolor>
 				<texturefocus colordiffuse="button_focus">masks/focus.png</texturefocus>
 				<alttexturefocus colordiffuse="button_focus">masks/focus.png</alttexturefocus>
 				<texturenofocus />
@@ -234,6 +237,7 @@
 		<param name="width">220</param>
 		<definition>
 			<width>$PARAM[width]</width>
+			<include>FocusBounce</include>
 			<height>130</height>
 			<align>center</align>
 			<aligny>top</aligny>
@@ -263,6 +267,7 @@
 		<param name="onclick_3_condition">true</param>
 		<definition>
 			<control type="radiobutton" id="$PARAM[id]">
+				<include>FocusBounce</include>
 				<width>$PARAM[width]</width>
 				<height>130</height>
 				<align>center</align>
@@ -296,6 +301,7 @@
 		<param name="width">220</param>
 		<definition>
 			<control type="radiobutton" id="$PARAM[id]">
+				<include>FocusBounce</include>
 				<width>$PARAM[width]</width>
 				<height>130</height>
 				<align>center</align>
