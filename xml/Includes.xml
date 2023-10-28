@@ -380,7 +380,7 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture>$PARAM[texture]</texture>
 				<visible>$PARAM[visible]</visible>
-				<visible>!Skin.HasSetting(TrailerPlaying)</visible>
+				<visible>![Skin.HasSetting(TrailerPlaying) | Window.IsVisible(12003)]</visible>
 			</control>
 		</definition>
 	</include>
