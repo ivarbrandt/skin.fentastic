@@ -1237,7 +1237,6 @@
 			<include>Visible_Right</include>
 			<control type="panel" id="54">
 				<left>480</left>
-				<top>10</top>
 				<right>15</right>
 				<height>100%</height>
 				<onleft>9000</onleft>

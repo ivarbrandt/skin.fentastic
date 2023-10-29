@@ -439,13 +439,13 @@
 					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
 				</control>
 				<control type="button" id="64810">
-					<label>    - Clear MDbList API Key</label>
+					<label>Clear MDbList API Key</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.SetString(mdblist_api_key,)</onclick>
 					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
 				</control>
 				<control type="button" id="64811">
-					<label>    - Clear ratings cache</label>
+					<label>Clear ratings cache</label>
 					<include>DefaultSettingButton</include>
 					<onclick>RunScript(script.fentastic.helper,mode=delete_all_ratings)</onclick>
 					<visible>!String.IsEmpty(Skin.String(mdblist_api_key))</visible>
