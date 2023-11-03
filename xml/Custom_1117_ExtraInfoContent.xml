@@ -2,6 +2,12 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR accent_color]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
+- Fixed ratings not showing on some items
+- Readded Embuary Helper/Info functionality to Video Info window
+
+[COLOR red][B]Please make sure to clear the ratings cache and restart Kodi before trying to fetch ratings again.[/B][/COLOR]
+
+[B][COLOR accent_color]Version 1.0.21[/COLOR][/B]
 - Switched ratings source to MDbList for better tvshow support (enter MDbList API Key in Skin settings to activate)
 - Created Ratings section in Skin settings
 - Added on/off toggles for individual ratings
@@ -14,7 +20,7 @@
   • [COLOR darkorange][B]ORANGE[/B][/COLOR] flame = Middle third (33 - 66)
   • [COLOR dodgerblue][B]BLUE[/B][/COLOR] flame = Bottom third (66 - 100)
 
-[COLOR red][B]IMPORTANT: After you have entered in your MDbList API key, I HIGHLY recommend clicking the "Clear ratings cache" button in Skin settings and then restarting Kodi before trying to fetch new ratings again. If you do not do this you may run into errors. This is a one time thing that will minimize the possibility of running into issues related to the switch to MDbList.[/B][/COLOR]
+[B]IMPORTANT: After you have entered in your MDbList API key, I HIGHLY recommend clicking the "Clear ratings cache" button in Skin settings and then restarting Kodi before trying to fetch new ratings again. If you do not do this you may run into errors. This is a one time thing that will minimize the possibility of running into issues related to the switch to MDbList.[/B]
 
 - Added optional one-click close of Kodi via the homescreen power button. If you decide to use this you can still access the shutdown menu by holding the back key/backspace on your remote/keyboard.
 - Other changes/fixes
