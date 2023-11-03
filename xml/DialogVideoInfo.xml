@@ -155,12 +155,20 @@
 						<param name="control_id" value="147" />
 						<param name="label" value="$INFO[ListItem.Director,$LOCALIZE[20339]: ]" />
 						<param name="altlabel" value="$INFO[ListItem.Director,$LOCALIZE[20339]: ]" />
+						<param name="onclick_condition" value="System.AddonIsEnabled(script.embuary.info)" />
+						<param name="onclick" value="RunScript(script.embuary.info,call=person,query='$ESCINFO[ListItem.Director]')" />
+						<param name="altclick_condition" value="System.AddonIsEnabled(script.embuary.info)" />
+						<param name="altclick" value="RunScript(script.embuary.info,call=person,query='$ESCINFO[ListItem.Director]')" />
 						<param name="visible" value="!String.IsEmpty(ListItem.Director)" />
 					</include>
 					<include content="InfoDialogMetadata">
 						<param name="control_id" value="148" />
 						<param name="label" value="$INFO[ListItem.Writer,$LOCALIZE[20417]: ]" />
 						<param name="altlabel" value="$INFO[ListItem.Writer,$LOCALIZE[20417]: ]" />
+						<param name="onclick_condition" value="System.AddonIsEnabled(script.embuary.info)" />
+						<param name="onclick" value="RunScript(script.embuary.info,call=person,query='$ESCINFO[ListItem.Writer]')" />
+						<param name="altclick_condition" value="System.AddonIsEnabled(script.embuary.info)" />
+						<param name="altclick" value="RunScript(script.embuary.info,call=person,query='$ESCINFO[ListItem.Writer]')" />
 						<param name="visible" value="!String.IsEmpty(ListItem.Writer)" />
 					</include>
 					<include content="InfoDialogMetadata">
@@ -282,6 +290,9 @@
 					<top>158</top>
 					<width>1235</width>
 					<height>370</height>
+					<onup condition="System.AddonIsEnabled(script.embuary.info) + Control.HasFocus(50) + !String.IsEqual(ListItem.DBType,set)">RunScript(script.embuary.info,call=person,query='$ESCINFO[Container(50).ListItem.Label]')</onup>
+					<onup condition="System.HasAddon(script.embuary.info) + !System.AddonIsEnabled(script.embuary.info) + !String.IsEqual(ListItem.DBType,set)">EnableAddon(script.embuary.info)</onup>
+					<onup condition="!System.HasAddon(script.embuary.info) + !String.IsEqual(ListItem.DBType,set)">InstallAddon(script.embuary.info)</onup>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<ondown>140</ondown>
@@ -574,6 +585,12 @@
 						<param name="id" value="101" />
 						<param name="icon" value="icons/infodialogs/info.png" />
 						<param name="label" value="$LOCALIZE[31034]" />
+						<param name="onclick_1_condition" value="!String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,movie)" />
+						<param name="onclick_1" value="RunScript(script.embuary.info,call=movie,dbid=$INFO[ListItem.DBID])" />
+						<param name="onclick_2_condition" value="!String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,tvshow)" />
+						<param name="onclick_2" value="RunScript(script.embuary.info,call=tv,dbid=$INFO[ListItem.DBID])" />
+						<param name="onclick_3_condition" value="!String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,episode)" />
+						<param name="onclick_3" value="RunScript(script.embuary.info,call=tv,query='$ESCINFO[ListItem.TVShowTitle]',year=$INFO[ListItem.Year])" />
 						<param name="visible" value="System.AddonIsEnabled(script.embuary.info) + !String.IsEmpty(ListItem.DBID) + [String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,episode)]" />
 					</include>
 					<include content="InfoDialogButton">
@@ -669,20 +686,20 @@
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<top>10</top>
 				<left>0</left>
-				<!-- <control type="image">
+				<control type="image">
 					<left>21</left>
 					<width>36</width>
 					<height>36</height>
 					<animation effect="rotate" end="-90" center="36,19" time="0" condition="true">Conditional</animation>
 					<texture colordiffuse="grey">frame/menu-nofo.png</texture>
-				</control> -->
-				<!-- <control type="label">
+				</control>
+				<control type="label">
 					<left>74</left>
 					<width>500</width>
 					<height>44</height>
 					<shadowcolor>text_shadow</shadowcolor>
 					<label>$LOCALIZE[31125]</label>
-				</control> -->
+				</control>
 			</control>
 			<control type="group">
 				<visible>Control.HasFocus(138)</visible>
