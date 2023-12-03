@@ -292,13 +292,21 @@
 				<ondown>647</ondown>
 				<visible>Container(9000).HasFocus(3)</visible>
 				<!-- SEARCH OPTIONS -->
-				<control type="radiobutton" id="6470">
+				<control type="button" id="64700">
+					<label>Set Search Provider</label>
+					<label2>$VAR[CurrentSearchProviderVar]</label2>
+					<include>DefaultSettingButton</include>
+					<onclick condition="String.IsEqual(Skin.String(current_search_provider),0)">Skin.SetString(current_search_provider,1)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(current_search_provider),1)">Skin.SetString(current_search_provider,2)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(current_search_provider),2)">Skin.SetString(current_search_provider,0)</onclick>
+				</control>
+				<control type="radiobutton" id="64701">
 					<label>Enable search results window</label>
 					<include>DefaultSettingButton</include>
 					<selected>!Skin.HasSetting(NoSearchResultsWindow)</selected>
 					<onclick>Skin.ToggleSetting(NoSearchResultsWindow)</onclick>
 				</control>
-				<control type="button" id="6471">
+				<control type="button" id="64702">
 					<label>Default home screen search icon behavior</label>
 					<label2>$VAR[DefaultSearchWindowBehaviorVar]</label2>
 					<include>DefaultSettingButton</include>
@@ -306,54 +314,83 @@
 					<selected>Skin.HasSetting(DefaultSearchWindowBehavior)</selected>
 					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
 				</control>
-				<control type="radiobutton" id="6472">
+				<control type="radiobutton" id="64703">
 					<label>   - $LOCALIZE[342]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(HideMovieResults)</onclick>
 					<selected>!Skin.HasSetting(HideMovieResults)</selected>
 					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
 				</control>
-				<control type="radiobutton" id="6473">
-					<label>   - $LOCALIZE[20343]</label>
+				<control type="radiobutton" id="64704">
+					<label>   - TV Shows</label>
+					<!-- <label>   - $LOCALIZE[20343]</label> -->
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(HideTVShowResults)</onclick>
 					<selected>!Skin.HasSetting(HideTVShowResults)</selected>
 					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
 				</control>
-				<control type="radiobutton" id="6474">
+				<control type="radiobutton" id="64705">
 					<label>   - Collections</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(HideCollectionsResults)</onclick>
 					<selected>!Skin.HasSetting(HideCollectionsResults)</selected>
-					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow) + String.IsEqual(Skin.String(current_search_provider),0)</visible>
 				</control>
-				<control type="radiobutton" id="6475">
+				<control type="radiobutton" id="64706">
 					<label>   - Actors/Actresses</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(HidePeopleResults)</onclick>
 					<selected>!Skin.HasSetting(HidePeopleResults)</selected>
-					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow) + [String.IsEqual(Skin.String(current_search_provider),0) | String.IsEqual(Skin.String(current_search_provider),1)]</visible>
 				</control>
-				<control type="radiobutton" id="6476">
+				<control type="radiobutton" id="64707">
+					<label>   - Actors/Actresses (Movies)</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(HideUmbrellaPeopleMovieResults)</onclick>
+					<selected>!Skin.HasSetting(HideUmbrellaPeopleMovieResults)</selected>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow) + String.IsEqual(Skin.String(current_search_provider),2)</visible>
+				</control>
+				<control type="radiobutton" id="64708">
+					<label>   - Actors/Actresses (TV Shows)</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(HideUmbrellaPeopleTVResults)</onclick>
+					<selected>!Skin.HasSetting(HideUmbrellaPeopleTVResults)</selected>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow) + String.IsEqual(Skin.String(current_search_provider),2)</visible>
+				</control>
+				<control type="radiobutton" id="64709">
 					<label>   - IMDb Keywords (Movies)</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(HideMovieKeywordResults)</onclick>
 					<selected>!Skin.HasSetting(HideMovieKeywordResults)</selected>
-					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow) + [String.IsEqual(Skin.String(current_search_provider),0) | String.IsEqual(Skin.String(current_search_provider),1)]</visible>
 				</control>
-				<control type="radiobutton" id="6477">
+				<control type="radiobutton" id="64710">
 					<label>   - IMDb Keywords (TV Shows)</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(HideTVShowKeywordResults)</onclick>
 					<selected>!Skin.HasSetting(HideTVShowKeywordResults)</selected>
-					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow) + [String.IsEqual(Skin.String(current_search_provider),0) | String.IsEqual(Skin.String(current_search_provider),1)]</visible>
 				</control>
-				<control type="radiobutton" id="6478">
+				<control type="radiobutton" id="64711">
 					<label>   - TRAKT Lists</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(HideTraktResults)</onclick>
 					<selected>!Skin.HasSetting(HideTraktResults)</selected>
-					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow) + [String.IsEqual(Skin.String(current_search_provider),0) | String.IsEqual(Skin.String(current_search_provider),1)]</visible>
+				</control>
+				<control type="radiobutton" id="64712">
+					<label>   - TRAKT Lists (Movies)</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(HideUmbrellaTraktMovieResults)</onclick>
+					<selected>!Skin.HasSetting(HideUmbrellaTraktMovieResults)</selected>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow) + String.IsEqual(Skin.String(current_search_provider),2)</visible>
+				</control>
+				<control type="radiobutton" id="64713">
+					<label>   - TRAKT Lists (TV Shows)</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(HideUmbrellaTraktTVResults)</onclick>
+					<selected>!Skin.HasSetting(HideUmbrellaTraktTVResults)</selected>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow) + String.IsEqual(Skin.String(current_search_provider),2)</visible>
 				</control>
 			</control>
 

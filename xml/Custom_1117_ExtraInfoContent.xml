@@ -2,6 +2,10 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR accent_color]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
+- Fixed a few bugs related to one-click trailers
+- Added search window functionality for Fen Light and Umbrella
+
+[B][COLOR accent_color]Version 1.0.22[/COLOR][/B]
 - Fixed ratings not showing on some items
 - Readded Embuary Helper/Info functionality to Video Info window
 
