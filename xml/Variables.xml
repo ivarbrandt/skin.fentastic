@@ -721,8 +721,27 @@
 
 	<variable name="CurrentSearchProviderVar">
     <value condition="String.IsEqual(Skin.String(current_search_provider),0)">FEN</value>
-    <value condition="String.IsEqual(Skin.String(current_search_provider),1)">FEN LIGHT</value>
-    <value condition="String.IsEqual(Skin.String(current_search_provider),2)">UMBRELLA</value>
+    <value condition="String.IsEqual(Skin.String(current_search_provider),1)">FEN Light</value>
+    <value condition="String.IsEqual(Skin.String(current_search_provider),2)">Umbrella</value>
+		<value>FEN</value>
+	</variable>
+
+	<variable name="CurrentSearchProviderToggleVar">
+    <value condition="String.IsEqual(Skin.String(current_search_provider),0)">Skin.SetString(current_search_provider,1)</value>
+    <value condition="String.IsEqual(Skin.String(current_search_provider),1)">Skin.SetString(current_search_provider,2)</value>
+    <value condition="String.IsEqual(Skin.String(current_search_provider),2)">Skin.SetString(current_search_provider,0)</value>
+		<value>Skin.SetString(current_search_provider,0)</value>
+	</variable>
+
+	<variable name="KeywordMoviesLabelVar">
+    <value condition="String.IsEqual(Skin.String(current_search_provider),0)">IMDb Keywords (Movies)</value>
+    <value condition="String.IsEqual(Skin.String(current_search_provider),1)">TMDb Keywords (Movies)</value>
+		<value>FEN</value>
+	</variable>
+
+	<variable name="KeywordTVShowsLabelVar">
+    <value condition="String.IsEqual(Skin.String(current_search_provider),0)">IMDb Keywords (TV Shows)</value>
+    <value condition="String.IsEqual(Skin.String(current_search_provider),1)">TMDb Keywords (Movies)</value>
 		<value>FEN</value>
 	</variable>
 
@@ -753,12 +772,12 @@
 	</variable>
 	<variable name="SearchProviderKeywordMoviesVar">
 		<value condition="String.IsEqual(Skin.String(current_search_provider),0)">plugin://plugin.video.fen/?mode=build_movie_list&amp;action=imdb_keywords_list_contents&amp;list_id=$INFO[Skin.String(SearchInputEncoded)]</value>
-    <value condition="String.IsEqual(Skin.String(current_search_provider),1)">plugin://plugin.video.fenlight/?mode=build_movie_list&amp;action=imdb_keywords_list_contents&amp;list_id=$INFO[Skin.String(SearchInputEncoded)]</value>
+    <value condition="String.IsEqual(Skin.String(current_search_provider),1)">plugin://plugin.video.fenlight/?mode=build_movie_list&amp;action=tmdb_movie_keyword_results_direct&amp;key_id=$INFO[Skin.String(SearchInputEncoded)]</value>
     <value>plugin://plugin.video.fen/?mode=build_movie_list&amp;action=imdb_keywords_list_contents&amp;list_id=$INFO[Skin.String(SearchInputEncoded)]</value>
 	</variable>
 	<variable name="SearchProviderKeywordTVShowsVar">
 		<value condition="String.IsEqual(Skin.String(current_search_provider),0)">plugin://plugin.video.fen/?mode=build_tvshow_list&amp;action=imdb_keywords_list_contents&amp;list_id=$INFO[Skin.String(SearchInputEncoded)]</value>
-    <value condition="String.IsEqual(Skin.String(current_search_provider),1)">plugin://plugin.video.fenlight/?mode=build_tvshow_list&amp;action=imdb_keywords_list_contents&amp;list_id=$INFO[Skin.String(SearchInputEncoded)]</value>
+    <value condition="String.IsEqual(Skin.String(current_search_provider),1)">plugin://plugin.video.fenlight/?mode=build_tvshow_list&amp;action=tmdb_tv_keyword_results_direct&amp;key_id=$INFO[Skin.String(SearchInputEncoded)]</value>
     <value>plugin://plugin.video.fen/?mode=build_tvshow_list&amp;action=imdb_keywords_list_contents&amp;list_id=$INFO[Skin.String(SearchInputEncoded)]</value>
 	</variable>
 	<variable name="SearchProviderTRAKTListsVar">

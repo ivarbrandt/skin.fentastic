@@ -296,9 +296,7 @@
 					<label>Set Search Provider</label>
 					<label2>$VAR[CurrentSearchProviderVar]</label2>
 					<include>DefaultSettingButton</include>
-					<onclick condition="String.IsEqual(Skin.String(current_search_provider),0)">Skin.SetString(current_search_provider,1)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(current_search_provider),1)">Skin.SetString(current_search_provider,2)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(current_search_provider),2)">Skin.SetString(current_search_provider,0)</onclick>
+					<onclick>$VAR[CurrentSearchProviderToggleVar]</onclick>
 				</control>
 				<control type="radiobutton" id="64701">
 					<label>Enable search results window</label>
@@ -358,14 +356,14 @@
 					<visible>!Skin.HasSetting(NoSearchResultsWindow) + String.IsEqual(Skin.String(current_search_provider),2)</visible>
 				</control>
 				<control type="radiobutton" id="64709">
-					<label>   - IMDb Keywords (Movies)</label>
+					<label>   - $VAR[KeywordMoviesLabelVar]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(HideMovieKeywordResults)</onclick>
 					<selected>!Skin.HasSetting(HideMovieKeywordResults)</selected>
 					<visible>!Skin.HasSetting(NoSearchResultsWindow) + [String.IsEqual(Skin.String(current_search_provider),0) | String.IsEqual(Skin.String(current_search_provider),1)]</visible>
 				</control>
 				<control type="radiobutton" id="64710">
-					<label>   - IMDb Keywords (TV Shows)</label>
+					<label>   - $VAR[KeywordTVShowsLabelVar]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(HideTVShowKeywordResults)</onclick>
 					<selected>!Skin.HasSetting(HideTVShowKeywordResults)</selected>

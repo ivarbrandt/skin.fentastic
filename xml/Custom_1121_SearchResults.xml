@@ -69,13 +69,13 @@
             </include>
             <include content="WidgetListBigPoster" condition="!Skin.HasSetting(HideMovieKeywordResults) + [String.IsEqual(Skin.String(current_search_provider),0) | String.IsEqual(Skin.String(current_search_provider),1)]">
 							<param name="content_path" value="$VAR[SearchProviderKeywordMoviesVar]"/>
-              <param name="widget_header" value="IMDb Keywords (Movies)"/>
+              <param name="widget_header" value="$VAR[KeywordMoviesLabelVar]"/>
               <param name="widget_target" value="videos"/>
               <param name="list_id" value="27015"/>
             </include>
             <include content="WidgetListBigPoster" condition="!Skin.HasSetting(HideTVShowKeywordResults) + [String.IsEqual(Skin.String(current_search_provider),0) | String.IsEqual(Skin.String(current_search_provider),1)]">
 							<param name="content_path" value="$VAR[SearchProviderKeywordTVShowsVar]"/>
-              <param name="widget_header" value="IMDb Keywords (TV Shows)"/>
+              <param name="widget_header" value="$VAR[KeywordTVShowsLabelVar]"/>
               <param name="widget_target" value="videos"/>
               <param name="list_id" value="27016"/>
             </include>
@@ -224,18 +224,24 @@
 						</include>
 						<include content="IconButton">
 							<param name="control_id" value="802" />
+							<param name="onclick" value="$VAR[CurrentSearchProviderToggleVar]" />
+							<param name="icon" value="icons/infodialogs/configure.png" />
+							<param name="label" value="TRAKT Lists" />
+						</include>
+						<include content="IconButton">
+							<param name="control_id" value="803" />
 							<param name="onclick" value="ActivateWindow(10025,plugin://plugin.video.fen/?iconImage=https%3a%2f%2fi.imgur.com%2fxihFNwP.png&amp;mode=navigator.trakt_lists,return)" />
 							<param name="icon" value="icons/trakt-icon-white.png" />
 							<param name="label" value="TRAKT Lists" />
 						</include>
 						<include content="IconButton">
-							<param name="control_id" value="803" />
+							<param name="control_id" value="804" />
 							<param name="onclick" value="RunScript(script.fentastic.helper,mode=search_input)" />
 							<param name="icon" value="icons/search.png" />
 							<param name="label" value="$LOCALIZE[137]" />
 						</include>
 						<include content="IconButton">
-							<param name="control_id" value="804" />
+							<param name="control_id" value="805" />
 							<param name="onclick" value="Fullscreen" />
 							<param name="icon" value="icons/now-playing/fullscreen.png" />
 							<param name="label" value="$LOCALIZE[31000]" />
@@ -336,7 +342,16 @@
 				<top>30</top>
 				<left>90</left>
 				<control type="label">
-					<top>90</top>
+					<top>65</top>
+					<left>-23</left>
+					<width>1085</width>
+					<aligny>center</aligny>
+					<height>98</height>
+					<font>font27</font>
+					<label>Currently using: [COLOR accent_color][B]$VAR[CurrentSearchProviderVar][/B][/COLOR]</label>
+				</control>
+				<control type="label">
+					<top>110</top>
 					<left>-25</left>
 					<width>1085</width>
 					<aligny>center</aligny>
@@ -352,7 +367,7 @@
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<control type="label">
-				<visible>!String.IsEmpty(Skin.String(SearchInput)) + String.IsEmpty(Skin.String(DatabaseStatus))</visible>
+					<visible>!String.IsEmpty(Skin.String(SearchInput)) + String.IsEmpty(Skin.String(DatabaseStatus))</visible>
 					<top>-5</top>
 					<left>525</left>
 					<width>1085</width>
@@ -363,7 +378,7 @@
 					<label>Search results for: [B]$INFO[Skin.String(SearchInput)][/B]</label>
 				</control>
 				<control type="label">
-				<visible>String.IsEmpty(Skin.String(SearchInput)) + String.IsEmpty(Skin.String(DatabaseStatus))</visible>
+					<visible>String.IsEmpty(Skin.String(SearchInput)) + String.IsEmpty(Skin.String(DatabaseStatus))</visible>
 					<top>500</top>
 					<left>650</left>
 					<width>1085</width>
@@ -373,7 +388,7 @@
 					<font>font14</font>
 					<textcolor>unfocused_text</textcolor>
 					<wrapmultiline>true</wrapmultiline>
-					<label>Current Search Provider: [COLOR accent_color][B]$VAR[CurrentSearchProviderVar][/B][/COLOR][CR][CR]Explore your past searches on the left, delve into TRAKT lists using the TRAKT button, or click the search icon to initiate a new search.</label>
+					<label>Explore your past searches on the left, delve into TRAKT lists using the TRAKT button, or click the search icon to initiate a new search.</label>
 				</control>
 			</control>
 		</control>
