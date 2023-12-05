@@ -741,7 +741,7 @@
 
 	<variable name="KeywordTVShowsLabelVar">
     <value condition="String.IsEqual(Skin.String(current_search_provider),0)">IMDb Keywords (TV Shows)</value>
-    <value condition="String.IsEqual(Skin.String(current_search_provider),1)">TMDb Keywords (Movies)</value>
+    <value condition="String.IsEqual(Skin.String(current_search_provider),1)">TMDb Keywords (TV Shows)</value>
 		<value>FEN</value>
 	</variable>
 

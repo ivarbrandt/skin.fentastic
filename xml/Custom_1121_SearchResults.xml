@@ -224,14 +224,14 @@
 						</include>
 						<include content="IconButton">
 							<param name="control_id" value="802" />
-							<param name="onclick" value="$VAR[CurrentSearchProviderToggleVar]" />
-							<param name="icon" value="icons/infodialogs/configure.png" />
+							<param name="onclick" value="ActivateWindow(10025,plugin://plugin.video.fen/?iconImage=https%3a%2f%2fi.imgur.com%2fxihFNwP.png&amp;mode=navigator.trakt_lists,return)" />
+							<param name="icon" value="icons/trakt-icon-white.png" />
 							<param name="label" value="TRAKT Lists" />
 						</include>
 						<include content="IconButton">
 							<param name="control_id" value="803" />
-							<param name="onclick" value="ActivateWindow(10025,plugin://plugin.video.fen/?iconImage=https%3a%2f%2fi.imgur.com%2fxihFNwP.png&amp;mode=navigator.trakt_lists,return)" />
-							<param name="icon" value="icons/trakt-icon-white.png" />
+							<param name="onclick" value="$VAR[CurrentSearchProviderToggleVar]" />
+							<param name="icon" value="icons/infodialogs/configure.png" />
 							<param name="label" value="TRAKT Lists" />
 						</include>
 						<include content="IconButton">

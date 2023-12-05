@@ -11,7 +11,7 @@
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="600" />
 				<param name="height" value="485" />
-				<param name="header_label" value="$LOCALIZE[137]" />
+				<param name="header_label" value="$LOCALIZE[137] [COLOR accent_color][B]($VAR[CurrentSearchProviderVar])[/B][/COLOR]" />
 				<param name="header_id" value="" />
 				<param name="diffusetexture" value="masks/dialog-bg-squareish.png" />
 			</include>
@@ -19,42 +19,65 @@
 				<include>ButtonMenuList</include>
 				<content>
 					<item>
-						<label>Search movies</label>
+						<label>Movies</label>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick>ActivateWindow(Videos,"plugin://plugin.video.fen/?mode=history.search&amp;action=movie&amp;iconImage=https%3A%2F%2Fi.imgur.com%2Fu8jgyN3.png",return)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(current_search_provider),0)">ActivateWindow(Videos,"plugin://plugin.video.fen/?mode=history.search&amp;action=movie",return)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(current_search_provider),1)">ActivateWindow(Videos,"plugin://plugin.video.fenlight/?action=movie&amp;mode=navigator.search_history&amp;name=Movies",return)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(current_search_provider),2)">ActivateWindow(Videos,"plugin://plugin.video.umbrella/?action=movieSearch",return)</onclick>
 					</item>
 					<item>
-						<label>Search shows</label>
+						<label>TV Shows</label>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick>ActivateWindow(Videos,"plugin://plugin.video.fen/?mode=history.search&amp;action=tvshow&amp;iconImage=https%3A%2F%2Fi.imgur.com%2FxYTdX3O.png",return)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(current_search_provider),0)">ActivateWindow(Videos,"plugin://plugin.video.fen/?mode=history.search&amp;action=tvshow",return)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(current_search_provider),1)">ActivateWindow(Videos,"plugin://plugin.video.fenlight/?action=tvshow&amp;mode=navigator.search_history&amp;name=TV%20Shows",return)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(current_search_provider),2)">ActivateWindow(Videos,"plugin://plugin.video.umbrella/?action=tvSearch",return)</onclick>
 					</item>
 					<item>
-						<label>Search movie collections</label>
+						<label>Movie Collections</label>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick>ActivateWindow(Videos,"plugin://plugin.video.fen/?mode=history.search&amp;action=tmdb_movie_sets&amp;iconImage=https%3A%2F%2Fi.imgur.com%2Fr0ITv0C.png",return)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(current_search_provider),0)">ActivateWindow(Videos,"plugin://plugin.video.fen/?mode=history.search&amp;action=tmdb_movie_sets",return)</onclick>
+						<visible>String.IsEqual(Skin.String(current_search_provider),0)</visible>
 					</item>
 					<item>
-						<label>Search actors/actresses</label>
+						<label>Actors/Actresses</label>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick>ActivateWindow(Videos,"plugin://plugin.video.fen/?mode=history.search&amp;action=people&amp;iconImage=https%3A%2F%2Fi.imgur.com%2FF1EZyWz.png",return)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(current_search_provider),0)">ActivateWindow(Videos,"plugin://plugin.video.fen/?mode=history.search&amp;action=people",return)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(current_search_provider),1)">ActivateWindow(Videos,"plugin://plugin.video.fenlight/?action=people&amp;mode=navigator.search_history&amp;name=People",return)</onclick>
+						<visible>String.IsEqual(Skin.String(current_search_provider),0) | String.IsEqual(Skin.String(current_search_provider),1)</visible>
+					</item>
+					<!-- <item>
+						<label>Actors/Actresses (Movies)</label>
+						<onclick>Dialog.Close(all)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(current_search_provider),2)">ActivateWindow(Videos,"plugin://plugin.video.umbrella/?action=tools_search",return)</onclick>
+						<visible>String.IsEqual(Skin.String(current_search_provider),2)</visible>
 					</item>
 					<item>
-						<label>Search keywords (movies)</label>
+						<label>Actors/Actresses (TV Shows)</label>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick>ActivateWindow(Videos,"plugin://plugin.video.fen/?mode=history.search&amp;action=imdb_keyword_movie&amp;iconImage=https%3A%2F%2Fi.imgur.com%2Fz4C3PAx.png",return)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(current_search_provider),2)">ActivateWindow(Videos,"plugin://plugin.video.umbrella/?action=tools_search",return)</onclick>
+						<visible>String.IsEqual(Skin.String(current_search_provider),2)</visible>
+					</item> -->
+					<item>
+						<label>$VAR[KeywordMoviesLabelVar]</label>
+						<onclick>Dialog.Close(all)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(current_search_provider),0)">ActivateWindow(Videos,"plugin://plugin.video.fen/?mode=history.search&amp;action=imdb_keyword_movie",return)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(current_search_provider),1)">ActivateWindow(Videos,"plugin://plugin.video.fenlight/?action=tmdb_keyword_movie&amp;mode=navigator.search_history&amp;name=Keywords%20(Movies)",return)</onclick>
+						<visible>String.IsEqual(Skin.String(current_search_provider),0) | String.IsEqual(Skin.String(current_search_provider),1)</visible>
 					</item>
 					<item>
-						<label>Search keywords (shows)</label>
+						<label>$VAR[KeywordTVShowsLabelVar]</label>
 						<onclick>Dialog.Close(all)</onclick>
-						<onclick>ActivateWindow(Videos,"plugin://plugin.video.fen/?mode=history.search&amp;action=imdb_keyword_tvshow&amp;iconImage=https%3A%2F%2Fi.imgur.com%2Fz4C3PAx.png",return)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(current_search_provider),0)">ActivateWindow(Videos,"plugin://plugin.video.fen/?mode=history.search&amp;action=imdb_keyword_tvshow",return)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(current_search_provider),1)">ActivateWindow(Videos,"plugin://plugin.video.fenlight/?action=tmdb_keyword_tvshow&amp;mode=navigator.search_history&amp;name=Keywords%20(TV%20Shows)",return)</onclick>
+						<visible>String.IsEqual(Skin.String(current_search_provider),0) | String.IsEqual(Skin.String(current_search_provider),1)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[31145]</label>
+						<label>Addons</label>
 						<onclick>Dialog.Close(all)</onclick>
 						<onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
 					</item>
 					<item>
-						<label>$LOCALIZE[31114]</label>
+						<label>YouTube</label>
 						<onclick>Dialog.Close(all)</onclick>
 						<onclick condition="System.AddonIsEnabled(plugin.video.youtube)">
 							ActivateWindow(videos,"plugin://plugin.video.youtube/kodion/search/list/",return)</onclick>
