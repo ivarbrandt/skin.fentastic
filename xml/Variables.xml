@@ -733,6 +733,13 @@
 		<value>Skin.SetString(current_search_provider,0)</value>
 	</variable>
 
+	<variable name="TRAKTButtonActionsVar">
+    <value condition="String.IsEqual(Skin.String(current_search_provider),0)">ActivateWindow(10025,plugin://plugin.video.fen/?&amp;mode=navigator.trakt_lists,return)</value>
+    <value condition="String.IsEqual(Skin.String(current_search_provider),1)">ActivateWindow(10025,plugin://plugin.video.fenlight/?&amp;mode=navigator.my_content&amp;name=My%20Lists,return)</value>
+    <value condition="String.IsEqual(Skin.String(current_search_provider),2)">ActivateWindow(10025,plugin://plugin.video.umbrella/?action=trakt_Navigator,return)</value>
+		<value>ActivateWindow(10025,plugin://plugin.video.fen/?&amp;mode=navigator.trakt_lists,return)</value>
+	</variable>
+
 	<variable name="KeywordMoviesLabelVar">
     <value condition="String.IsEqual(Skin.String(current_search_provider),0)">IMDb Keywords (Movies)</value>
     <value condition="String.IsEqual(Skin.String(current_search_provider),1)">TMDb Keywords (Movies)</value>
@@ -744,8 +751,6 @@
     <value condition="String.IsEqual(Skin.String(current_search_provider),1)">TMDb Keywords (TV Shows)</value>
 		<value>FEN</value>
 	</variable>
-
-
 
 	<!-- SEARCH PROVIDER VARIABLES -->
 	<variable name="SearchProviderMoviesVar">
@@ -785,8 +790,6 @@
     <value condition="String.IsEqual(Skin.String(current_search_provider),1)">plugin://plugin.video.fenlight/?mode=trakt.list.search_trakt_lists&amp;query=$INFO[Skin.String(SearchInputTraktEncoded)]</value>
     <value>plugin://plugin.video.fen/?mode=trakt.list.search_trakt_lists&amp;query=$INFO[Skin.String(SearchInputTraktEncoded)]</value>
 	</variable>
-
-
 
 	<!-- RATINGS INFOPANEL VARIABLES -->
 	<!-- Released -->

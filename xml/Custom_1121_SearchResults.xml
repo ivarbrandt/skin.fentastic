@@ -218,34 +218,34 @@
 						<align>justify</align>
 						<include content="IconButton">
 							<param name="control_id" value="801" />
-							<param name="onclick" value="RunScript(script.fentastic.helper,mode=remove_all_spaths)" />
-							<param name="icon" value="icons/infodialogs/uninstall.png" />
-							<param name="label" value="Clear search history" />
-						</include>
-						<include content="IconButton">
-							<param name="control_id" value="802" />
-							<param name="onclick" value="ActivateWindow(10025,plugin://plugin.video.fen/?iconImage=https%3a%2f%2fi.imgur.com%2fxihFNwP.png&amp;mode=navigator.trakt_lists,return)" />
+							<param name="onclick" value="$VAR[TRAKTButtonActionsVar]" />
 							<param name="icon" value="icons/trakt-icon-white.png" />
 							<param name="label" value="TRAKT Lists" />
 						</include>
 						<include content="IconButton">
-							<param name="control_id" value="803" />
+							<param name="control_id" value="802" />
 							<param name="onclick" value="$VAR[CurrentSearchProviderToggleVar]" />
 							<param name="icon" value="icons/infodialogs/configure.png" />
-							<param name="label" value="TRAKT Lists" />
+							<param name="label" value="Switch Search Provider" />
 						</include>
 						<include content="IconButton">
-							<param name="control_id" value="804" />
+							<param name="control_id" value="803" />
 							<param name="onclick" value="RunScript(script.fentastic.helper,mode=search_input)" />
 							<param name="icon" value="icons/search.png" />
 							<param name="label" value="$LOCALIZE[137]" />
 						</include>
 						<include content="IconButton">
-							<param name="control_id" value="805" />
+							<param name="control_id" value="804" />
 							<param name="onclick" value="Fullscreen" />
 							<param name="icon" value="icons/now-playing/fullscreen.png" />
 							<param name="label" value="$LOCALIZE[31000]" />
 							<param name="visible" value="Player.HasMedia" />
+						</include>
+						<include content="IconButton">
+							<param name="control_id" value="805" />
+							<param name="onclick" value="RunScript(script.fentastic.helper,mode=remove_all_spaths)" />
+							<param name="icon" value="icons/infodialogs/uninstall.png" />
+							<param name="label" value="Clear search history" />
 						</include>
 					</control>
 				</control>
