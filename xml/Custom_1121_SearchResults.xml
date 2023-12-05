@@ -348,7 +348,7 @@
 					<aligny>center</aligny>
 					<height>98</height>
 					<font>font27</font>
-					<label>Currently using: [COLOR accent_color][B]$VAR[CurrentSearchProviderVar][/B][/COLOR]</label>
+					<label>Search provider: [COLOR accent_color][B]$VAR[CurrentSearchProviderVar][/B][/COLOR]</label>
 				</control>
 				<control type="label">
 					<top>110</top>
