@@ -390,6 +390,12 @@
 					<selected>!Skin.HasSetting(HideUmbrellaTraktTVResults)</selected>
 					<visible>!Skin.HasSetting(NoSearchResultsWindow) + String.IsEqual(Skin.String(current_search_provider),2)</visible>
 				</control>
+				<control type="button" id="64714">
+					<label>Clear search history</label>
+					<include>DefaultSettingButton</include>
+					<onclick>RunScript(script.fentastic.helper,mode=remove_all_spaths)</onclick>
+					<visible>!Skin.HasSetting(NoSearchResultsWindow)</visible>
+				</control>
 			</control>
 
 			<control type="grouplist" id="648">
