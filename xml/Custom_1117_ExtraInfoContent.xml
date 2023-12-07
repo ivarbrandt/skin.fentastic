@@ -15,8 +15,7 @@
 - Fixed ratings not showing on some items
 - Readded Embuary Helper/Info functionality to Video Info window
 
-[COLOR red][B]Please make sure to clear the ratings cache and restart Kodi before trying to fetch ratings again.[/B][/COLOR]
-
+[B]Please make sure to clear the ratings cache and restart Kodi before trying to fetch ratings again.[/B]
 [B][COLOR accent_color]Version 1.0.21[/COLOR][/B]
 - Switched ratings source to MDbList for better tvshow support (enter MDbList API Key in Skin settings to activate)
 - Created Ratings section in Skin settings
