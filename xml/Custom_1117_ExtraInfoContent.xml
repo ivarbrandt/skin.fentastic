@@ -5,12 +5,9 @@
 - Fixed a few bugs related to one-click trailers
 - Added search window (SW) functionality for FEN Light and Umbrella
   • Set the default add on to use in the SW in Search » Skin settings
-  • Choose between FEN, FEN Light, and Umbrella.
+  • Choose between FEN, FEN Light, and Umbrella
   • Functionality extends to TRAKT button and default search dialog
   • Included SW hot swap button to change search providers on the fly
-
-[B]NOTE: Make sure to reload the search window when using the hot swap feature. For example: Let's say you enter in a search term and you get your results back. Now, you want to search for that exact same term but with a different search provider. Click the middle button above the search history in the search window to swap to your desired provider. Then click the item again in the search history to reload the page. The reason this extra step is necessary is because each search provider has different widgets associated with it. Therfore you'll only see the widgets that correspond to the set search provider.[/B]
-
 - Moved 'Clear Search History' to Search tab in Skin settings
 - Other small bug fixes
 
