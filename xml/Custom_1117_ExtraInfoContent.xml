@@ -4,7 +4,7 @@
     <label>[B][COLOR accent_color]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
 - Fixed a few bugs related to one-click trailers
 - Added search window (SW) functionality for FEN Light and Umbrella
-  • Set the default add on to use in the SW in Search » Skin settings
+  • Set the default add on to use in Skin settings » Search
   • Choose between FEN, FEN Light, and Umbrella
   • Functionality extends to TRAKT button and default search dialog
   • Included SW hot swap button to change search providers on the fly
@@ -16,6 +16,7 @@
 - Readded Embuary Helper/Info functionality to Video Info window
 
 [B]Please make sure to clear the ratings cache and restart Kodi before trying to fetch ratings again.[/B]
+
 [B][COLOR accent_color]Version 1.0.21[/COLOR][/B]
 - Switched ratings source to MDbList for better tvshow support (enter MDbList API Key in Skin settings to activate)
 - Created Ratings section in Skin settings
