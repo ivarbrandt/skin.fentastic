@@ -2,7 +2,7 @@
 <addon id="skin.fentastic" version="1.0.23" name="FENtastic"
 	provider-name="Ivar Brandt">
 	<requires>
-		<import addon="xbmc.gui" version="5.16.0" />
+		<import addon="xbmc.gui" version="5.17.0" />
 		<import addon="script.fentastic.helper" />
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
