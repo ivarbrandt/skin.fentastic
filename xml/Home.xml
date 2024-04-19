@@ -508,7 +508,7 @@
 								<top>130</top>
 								<include content="InfoWallMusicLayout">
 									<param name="fallback_image" value="DefaultFavourites.png" />
-									<param name="list_id" value="$PARAM[list_id]" />
+									<param name="list_id" value="14100" />
 									<param name="focused" value="false" />
 								</include>
 							</control>
@@ -519,7 +519,7 @@
 								<top>130</top>
 								<include content="InfoWallMusicLayout">
 									<param name="fallback_image" value="DefaultFavourites.png" />
-									<param name="list_id" value="$PARAM[list_id]" />
+									<param name="list_id" value="14100" />
 									<param name="focused" value="true" />
 								</include>
 							</control>
