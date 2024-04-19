@@ -786,7 +786,7 @@
 	<variable name="SearchProviderKeywordMoviesVar">
 		<value condition="String.IsEqual(Skin.String(current_search_provider),0)">plugin://plugin.video.fen/?mode=build_movie_list&amp;action=imdb_keywords_list_contents&amp;list_id=$INFO[Skin.String(SearchInputEncoded)]</value>
     <value condition="String.IsEqual(Skin.String(current_search_provider),1)">plugin://plugin.video.fenlight/?mode=build_movie_list&amp;action=tmdb_movie_keyword_results_direct&amp;key_id=$INFO[Skin.String(SearchInputEncoded)]</value>
-    <value condition="String.IsEqual(Skin.String(current_search_provider),3)">pplugin://plugin.video.pov/?mode=imdb_build_keyword_results&amp;media_type=movie&amp;query=$INFO[Skin.String(SearchInputEncoded)]</value>
+    <value condition="String.IsEqual(Skin.String(current_search_provider),3)">plugin://plugin.video.pov/?mode=imdb_build_keyword_results&amp;media_type=movie&amp;query=$INFO[Skin.String(SearchInputEncoded)]</value>
     <value>plugin://plugin.video.fen/?mode=build_movie_list&amp;action=imdb_keywords_list_contents&amp;list_id=$INFO[Skin.String(SearchInputEncoded)]</value>
 	</variable>
 	<variable name="SearchProviderKeywordTVShowsVar">
