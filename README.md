@@ -1,10 +1,12 @@
 # FENtastic Skin for Kodi Omega
 
+**IMPORTANT INFO:** I am currently not accepting **ANY** feature requests.
+
 FENtastic is a modded version of the default Estuary skin, specifically designed for FEN users. It includes several new features and adjustments to pre-existing views, a new UI, viewtypes, customizable widgets, and a new default colors theme.
 
 Creating FENtastic started off as a few tweaks here and there. Over time, it grew into a passion project where I experience absolute joy every time I work on it. If you feel some of this joy when using it and you'd like to support my work, you may do so by buying me a coffee [here](https://ko-fi.com/ivarbrandt). 
 
-Below you'll find some information about the [differences](#fentastic-vs-default-estuary-skin) between Estuary and FENtastic along with some screenshots and a detailed [setup guide](#setup-guide) of the skin. If you would like to open an issue, please make sure to read the [rules](#rules-for-reporting-issues) before doing so.
+Below you'll find some information about the [differences](#fentastic-vs-default-estuary-skin) between Estuary and FENtastic along with some screenshots and a detailed [setup guide](#setup-guide) of the skin.
 
 ## FENtastic vs Default Estuary Skin
 
@@ -110,11 +112,9 @@ To set up the widgets, follow these steps:
 
    ![Step 5](resources/images/step_5.jpg)
 
+<!-- ## Rules for Reporting Issues -->
 
-
-## Rules for Reporting Issues
-
-If you encounter any issues while using FENtastic, please follow these guidelines before opening an Issue:
+<!-- If you encounter any issues while using FENtastic, please follow these guidelines before opening an Issue:
 
 - Read the **CHANGELOG**. As new updates get released features are added, changed, modified or removed. *Before opening an Issue* related to this make sure you read the changelog (located at the bottom of Skin settings in Extra info) as it will contain information for all the changes made to each update. It is also a good way to stay current with what is new with the skin.
 - **Pre-made builds** of any kind are *not supported*. If you installed someone else's build, you need to go to them to troubleshoot issues. These builds often contain a plethora of addons so any number of things could go wrong. Keep in mind this skin was designed exclusively for use with **FEN**.
@@ -122,4 +122,4 @@ If you encounter any issues while using FENtastic, please follow these guideline
 - Error related Issues **MUST** include a log file. Your Issue will be closed immediately if you fail to include a log file.
 - Make sure to check all open Issues to see if your problem is being addressed already.
 - **DO NOT** hijack an open Issue with unrelated problems. Open a new Issue.
-- Do your best to **monitor** the Issue you have opened. If I need additional information and it is not supplied within 7 days, I will close the Issue.
+- Do your best to **monitor** the Issue you have opened. If I need additional information and it is not supplied within 7 days, I will close the Issue. -->
