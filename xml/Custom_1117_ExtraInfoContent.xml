@@ -4,7 +4,6 @@
     <label>[B][COLOR accent_color]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
 - Updated skin for Kodi Omega
 - Added Search support for POV and Seren
-- Speed improvements when reloading skin after updating
 - Other small fixes
 
 [B][COLOR accent_color]Version 1.0.23[/COLOR][/B]
