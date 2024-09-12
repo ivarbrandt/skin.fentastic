@@ -2,6 +2,9 @@
 <includes>
   <include name="Changelog">
     <label>[B][COLOR accent_color]Version $INFO[System.AddonVersion(skin.fentastic)][/COLOR][/B]
+- Quick fix for landscape artwork
+
+[B][COLOR accent_color]Version 1.0.24[/COLOR][/B]
 - Updated skin for Kodi Omega
 - Added Search support for POV and Seren
 - Other small fixes
